@@ -32,7 +32,8 @@ const landmarks = [{
       "coordinates": "40°42′52″N 74°00′16″W"
     },
     "county": "New York",
-    "description": "Dedicated as National Monument on October 5, 2007; burial site in Lower Manhattan of over 419 Africans from 1690s to 1794"
+    "description": "Dedicated as National Monument on October 5, 2007; burial site in Lower Manhattan of over 419 Africans from 1690s to 1794",
+    "link": "https://www.nps.gov/afbg/index.htm",
   },
   {
     "id": 4,

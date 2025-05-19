@@ -120,13 +120,13 @@ const Map = () => {
         // Add popups on click
         map.on('click', 'landmark-points', (e) => {
           const coordinates = e.features[0].geometry.coordinates.slice();
-          const { name, description, date } = e.features[0].properties;
+          const { name, description, date, link } = e.features[0].properties;
           
           // Create popup HTML
           const popupContent = `
             <h3 style="margin: 0 0 8px 0; font-size: 16px;">${name}</h3>
+            <a href=${link} target="_blank">${name}</a>
             <p style="margin: 0 0 6px 0; font-size: 14px;">${description}</p>
-            <p style="margin: 0; font-size: 12px; color: #666; font-style: italic;">Designated: ${date}</p>
           `;
           
           new mapboxgl.Popup()
@@ -156,8 +156,11 @@ const Map = () => {
   
   return (
     <div className={styles.container}>
-      <h1>National Historic Landmarks</h1>
-      <div ref={mapContainer} style={{ height: '100vh', width: '100%' }}  />
+      <h1 className={styles.header}>
+        National Historic Landmarks
+        <span className={styles.span}>of NYC</span>
+      </h1>
+      <div ref={mapContainer} style={{ height: '100vh', width: '75%' }}  />
     </div>
   
   )
