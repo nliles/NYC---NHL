@@ -1,21 +1,21 @@
 .container {
-    width: 100%;
+  width: 100%;
 }
 
 .header {
-    position: absolute;
-    padding: 2rem;
-    max-width: 500px;
-    border: 2px solid black;
-    top: 0;
-    left: 100px;
-    z-index: 1;
-    background-color: white;
-    font-family: "Roboto", sans-serif;
-    font-family: "Montserrat", sans-serif;
+  position: absolute;
+  padding: 2rem;
+  max-width: 500px;
+  border: 2px solid black;
+  top: 0;
+  left: 100px;
+  z-index: 1;
+  background-color: white;
+  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .span {
-    font-size: 2rem;
-    display: block;
+  font-size: 2rem;
+  display: block;
 }
