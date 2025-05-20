@@ -1,11 +1,8 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import { patchCssModules } from 'vite-css-modules'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import { patchCssModules } from "vite-css-modules";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    patchCssModules(),
-    react()
-  ],
-})
+  plugins: [patchCssModules(), react()],
+});
