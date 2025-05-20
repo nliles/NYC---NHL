@@ -38,14 +38,14 @@ const landmarks = [
     properties: {
       id: 3,
       name: "African Burial Ground",
-      description: "African Burial Ground is the nation's earliest and largest known African American cemetery. It was a burial site in Lower Manhattan of over 419 Africans from 1690s to 1794",
+      description: "The African Burial Ground is the nation's earliest and largest known African American cemetery, serving as a burial site in Lower Manhattan for over 419 Africans from the 1690s to 1794.",
       county: "New York",
       area: "Manhattan",
       date_designated: "April 19, 1993",
       link: "https://www.nps.gov/afbg/index.htm",
       quote: "For all those who were lost, for all those who were stolen, for all those who were left behind, for all those who were not forgotten.",
       quote_author: "Memorial inscription, African Burial Ground",
-      image_caption: "Map showing the location of the burial ground"
+      image_caption: "Map showing the location of the burial ground outside the northern boundary of the city"
     },
   },
   {

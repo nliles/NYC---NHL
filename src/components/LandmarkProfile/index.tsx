@@ -40,11 +40,12 @@ const LandmarkProfile = ({
         <div className={styles.info}>
           <h2 className={styles.header}>{landmark.name}</h2>
           <img
-            src={`landmark-${landmark.id}.jpeg`} // Update this path to your actual image path
+            src={`landmark-${landmark.id}.jpg`} // Update this path to your actual image path
             alt={landmark.name}
             className={styles.img}
           />
           {landmark.image_caption && <span className={styles.caption}>{landmark.image_caption}</span>}
+          <p>{landmark.description}</p>
           {landmark.quote && (
             <div className={styles.quote}>
               <blockquote>"{landmark.quote}"</blockquote>
@@ -52,23 +53,26 @@ const LandmarkProfile = ({
             </div>
           )}
           <div className={styles.details}>
-          <span>Designated: {landmark.date_designated}</span>
-          <span>
-            {landmark.location?.area}, {landmark.county}
-          </span>
-          <h3>Description</h3>
-          <p>{landmark.description}</p>
+          <div>Designated: {landmark.date_designated}</div>
+          <div className={styles.location}>
+            <img src="location.png" width="20px" height="20px" alt="location.png"/>
+            {landmark.area}
+          </div>
           </div>
         </div>
 
         <div className={styles.visited}>
+          <label className={styles.label} htmlFor="visited">
           <input
+            className={styles.checkbox}
             type="checkbox"
             id="visited"
             checked={visited}
             onChange={handleVisitedChange}
           />
-          <label htmlFor="visited">I've visited this landmark</label>
+          <span className={styles.customCheckbox}></span>
+            I've visited this landmark
+          </label>
         </div>
       </div>
 

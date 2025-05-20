@@ -10,7 +10,7 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  padding: 0 1rem;
+  padding: 0 2rem;
 }
 
 .header {
@@ -54,7 +54,18 @@
 }
 
 .details {
+  display: flex;
   margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
 }
 
 .learnMore {
@@ -80,4 +91,53 @@
       padding-left: 5px;
     }
   }
+}
+
+.details {
+  align-self: flex-start;
+}
+
+.checkbox {
+  display: none;
+}
+
+
+/* Hide the native checkbox */
+.native-checkbox {
+  display: none;
+}
+
+/* Style the custom checkbox */
+.label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.customCheckbox {
+  width: 20px;
+  height: 20px;
+  border: 2px solid black;
+  border-radius: 3px;
+  margin-right: 8px;
+  display: inline-block;
+  position: relative;
+}
+
+/* Checked state styling */
+.checkbox:checked + .customCheckbox {
+  background-color: black;
+  border-color: black;
+}
+
+.checkbox:checked + .customCheckbox::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 7px;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
 }
