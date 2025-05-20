@@ -755,7 +755,6 @@ const landmarks = [
       name: "James Weldon Johnson Residence",
       description:
         "Harlem home of African-American artist-activist James Weldon Johnson",
-      county: "New York",
       area: "Manhattan",
       date_designated: "May 11, 1976",
     },
@@ -771,7 +770,6 @@ const landmarks = [
       name: "Lettie G. Howard (schooner)",
       description:
         "Last remaining Fredonia-type schooner (once the standard for American fishing boats) at the South Street Seaport",
-      county: "New York",
       area: "Manhattan",
       date_designated: "April 11, 1989",
     },
@@ -801,7 +799,7 @@ const landmarks = [
       name: "Low Memorial Library",
       description:
         "First building on Morningside Heights campus; capped by largest freestanding granite dome in U.S.",
-      area: "Columbia University",
+      area: "Columbia University, Manhattan",
       date_designated: "December 23, 1987",
     },
   },
@@ -952,7 +950,6 @@ const landmarks = [
       name: "New York Botanical Garden",
       description:
         "One of the world's leading botanical gardens, with the largest herbarium in the U.S. and second largest in the world after the French National Museum of Natural History and home to many plant laboratories",
-      county: "Bronx",
       area: "Bronx",
       date_designated: "May 28, 1967",
       link: "https://www.nybg.org/",
@@ -999,6 +996,7 @@ const landmarks = [
         "One of the largest and most important libraries in the U.S.; listing is for main branch building.",
       area: "Manhattan",
       date_designated: "December 21, 1965",
+      link: "https://www.nypl.org/locations/schwarzman",
     },
   },
   {
@@ -1075,6 +1073,7 @@ const landmarks = [
         "Only surviving 17th-century ecclesiastical frame building in New York; in almost continuous use since 1696",
       area: "Flushing, Queens",
       date_designated: "December 24, 1967",
+      link: "https://nylandmarks.org/celebrate-50-at-50/flushing-friends-meeting-house/",
     },
   },
   {
@@ -1088,7 +1087,7 @@ const landmarks = [
       name: "Philosophy Hall",
       description:
         "Edwin Armstrong developed FM radio in this Columbia University building",
-      area: "Columbia University, New York",
+      area: "Manhattan",
       date_designated: "July 21, 2003",
     },
   },
@@ -1136,6 +1135,7 @@ const landmarks = [
         "Important station on Underground Railroad when Henry Ward Beecher was pastor",
       area: "Brooklyn",
       date_designated: "July 4, 1961",
+      link: "https://www.plymouthchurch.org/#main",
     },
   },
   {
@@ -1180,6 +1180,7 @@ const landmarks = [
         "Home of legendary African-American actor and activist Paul Robeson",
       area: "Manhattan",
       date_designated: "December 8, 1976",
+      link: "https://www.nps.gov/places/new-york-paul-robeson-home.htm",
     },
   },
   {
