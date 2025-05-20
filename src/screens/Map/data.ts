@@ -261,6 +261,7 @@ const landmarks = [
         "Home of Andrew Carnegie, now the Cooper-Hewitt, National Design Museum",
       area: "Manhattan",
       date_designated: "November 13, 1966",
+      link: "https://www.cooperhewitt.org/about-the-carnegie-mansion-2/",
     },
   },
   {
