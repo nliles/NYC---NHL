@@ -49,7 +49,7 @@ const landmarks = [
     date_designated: "April 11, 1989",
     location: {
       area: "Manhattan",
-      coordinates: { lat: 40.704722, lng: -74.002500 },
+      coordinates: { lat: 40.704722, lng: -74.0025 },
     },
     county: "New York",
     description:
@@ -62,7 +62,7 @@ const landmarks = [
     date_designated: "June 6, 1978",
     location: {
       area: "Manhattan",
-      coordinates: { lat: 40.708889, lng: -74.012500 },
+      coordinates: { lat: 40.708889, lng: -74.0125 },
     },
     county: "New York",
     description: "Former headquarters of the American Stock Exchange",
@@ -78,7 +78,8 @@ const landmarks = [
     },
     county: "Queens",
     description: "Home of jazz legend Louis Armstrong for 28 years",
-    quote: "There's so much in 'Wonderful World' that brings me back to my neighborhood where I live in Corona, New York.",
+    quote:
+      "There's so much in 'Wonderful World' that brings me back to my neighborhood where I live in Corona, New York.",
     quote_author: "Louis Armstrong",
     link: "https://www.louisarmstronghouse.org/",
   },
@@ -102,7 +103,7 @@ const landmarks = [
     date_designated: "April 19, 1993 (#70000925)",
     location: {
       area: "Rosebank",
-      coordinates: { lat: 40.615000, lng: -74.063056 },
+      coordinates: { lat: 40.615, lng: -74.063056 },
     },
     county: "Richmond",
     description: "Home of photographer Alice Austen, now a museum",
@@ -140,7 +141,7 @@ const landmarks = [
     date_designated: "May 15, 1975 (#75001202)",
     location: {
       area: "Manhattan",
-      coordinates: { lat: 40.737500, lng: -74.010000 },
+      coordinates: { lat: 40.7375, lng: -74.01 },
     },
     county: "New York",
     description:
@@ -153,7 +154,7 @@ const landmarks = [
     date_designated: "January 29, 1964 (#66000523)",
     location: {
       area: "Brooklyn and Manhattan",
-      coordinates: { lat: 40.706389, lng: -73.997500 },
+      coordinates: { lat: 40.706389, lng: -73.9975 },
     },
     county: "Kings and New York",
     description:
@@ -192,7 +193,7 @@ const landmarks = [
     date_designated: "May 11, 1976 (#76001266)",
     location: {
       area: "Kew Gardens",
-      coordinates: { lat: 40.706389, lng: -73.837500 },
+      coordinates: { lat: 40.706389, lng: -73.8375 },
     },
     county: "Queens",
     description:
@@ -205,7 +206,7 @@ const landmarks = [
     date_designated: "December 29, 1962 (#66000535)",
     location: {
       area: "Manhattan",
-      coordinates: { lat: 40.765000, lng: -73.980278 },
+      coordinates: { lat: 40.765, lng: -73.980278 },
     },
     county: "New York",
     description: "One of the most famous music venues in the world",
@@ -256,7 +257,7 @@ const landmarks = [
     date_designated: "December 22, 1977 (#73001214)",
     location: {
       area: "Manhattan",
-      coordinates: { lat: 40.709444, lng: -74.010000 },
+      coordinates: { lat: 40.709444, lng: -74.01 },
     },
     county: "New York",
     description:
@@ -373,7 +374,7 @@ const landmarks = [
     date_designated: "December 24, 1967 (#67000014)",
     location: {
       area: "Manhattan",
-      coordinates: { lat: 40.867500, lng: -73.923333 },
+      coordinates: { lat: 40.8675, lng: -73.923333 },
     },
     county: "New York",
     description: "Only remaining farmhouse in Manhattan",
@@ -385,7 +386,7 @@ const landmarks = [
     date_designated: "June 19, 1996 (#80002687)",
     location: {
       area: "Manhattan",
-      coordinates: { lat: 40.715000, lng: -73.993889 },
+      coordinates: { lat: 40.715, lng: -73.993889 },
     },
     county: "New York",
     description:
@@ -437,7 +438,7 @@ const landmarks = [
     date_designated: "May 15, 1975 (#72001456)",
     location: {
       area: "Manhattan",
-      coordinates: { lat: 40.730000, lng: -73.988611 },
+      coordinates: { lat: 40.73, lng: -73.988611 },
     },
     county: "New York",
     description:
@@ -462,7 +463,7 @@ const landmarks = [
     date_designated: "May 30, 1974 (#74001269)",
     location: {
       area: "Manhattan",
-      coordinates: { lat: 40.762500, lng: -73.955000 },
+      coordinates: { lat: 40.7625, lng: -73.955 },
     },
     county: "New York",
     description:
@@ -604,7 +605,7 @@ const landmarks = [
     date_designated: "November 4, 1993",
     location: {
       area: "Manhattan",
-      coordinates: { lat: 40.727500, lng: -74.021389 },
+      coordinates: { lat: 40.7275, lng: -74.021389 },
     },
     county: "New York",
     description:
@@ -732,7 +733,7 @@ const landmarks = [
     date_designated: "June 2, 1978 (#78001874)",
     location: {
       area: "Manhattan",
-      coordinates: { lat: 40.741111, lng: -73.987500 },
+      coordinates: { lat: 40.741111, lng: -73.9875 },
     },
     county: "New York",
     description:
@@ -797,7 +798,7 @@ const landmarks = [
     date_designated: "May 11, 1976 (#76001247)",
     location: {
       area: "Manhattan",
-      coordinates: { lat: 40.815000, lng: -73.944722 },
+      coordinates: { lat: 40.815, lng: -73.944722 },
     },
     county: "New York",
     description:
@@ -899,7 +900,7 @@ const landmarks = [
     date_designated: "June 23, 1965",
     location: {
       area: "Manhattan",
-      coordinates: { lat: 40.727500, lng: -73.992500 },
+      coordinates: { lat: 40.7275, lng: -73.9925 },
     },
     county: "New York",
     description: "Nineteenth-century family home; preserved inside and out",
@@ -925,7 +926,7 @@ const landmarks = [
     date_designated: "July 21, 2003 (#03001046)",
     location: {
       area: "Columbia University",
-      coordinates: { lat: 40.806111, lng: -73.962500 },
+      coordinates: { lat: 40.806111, lng: -73.9625 },
     },
     county: "New York",
     description:
@@ -938,7 +939,7 @@ const landmarks = [
     date_designated: "December 19, 1962 (#66000549)",
     location: {
       area: "Manhattan",
-      coordinates: { lat: 40.737500, lng: -73.986944 },
+      coordinates: { lat: 40.7375, lng: -73.986944 },
     },
     county: "New York",
     description:
@@ -977,7 +978,7 @@ const landmarks = [
     date_designated: "December 21, 1965 (#66000550)",
     location: {
       area: "Columbia University",
-      coordinates: { lat: 40.810000, lng: -73.961667 },
+      coordinates: { lat: 40.81, lng: -73.961667 },
     },
     county: "New York",
     description:
@@ -990,7 +991,7 @@ const landmarks = [
     date_designated: "May 30, 1974",
     location: {
       area: "Brooklyn",
-      coordinates: { lat: 40.702500, lng: -73.981111 },
+      coordinates: { lat: 40.7025, lng: -73.981111 },
     },
     county: "Kings",
     description: "Home to Matthew Perry at the time of his opening of Japan",
@@ -1015,7 +1016,7 @@ const landmarks = [
     date_designated: "May 11, 1976",
     location: {
       area: "Brooklyn",
-      coordinates: { lat: 40.648333, lng: -73.915000 },
+      coordinates: { lat: 40.648333, lng: -73.915 },
     },
     county: "Kings",
     description: "Home of baseball great Jackie Robinson",
@@ -1040,7 +1041,7 @@ const landmarks = [
     date_designated: "December 8, 1976",
     location: {
       area: "Sailors' Snug Harbor",
-      coordinates: { lat: 40.642500, lng: -74.102778 },
+      coordinates: { lat: 40.6425, lng: -74.102778 },
     },
     county: "Richmond",
     description: "First and only home for retired merchant seamen in U.S.",
@@ -1052,7 +1053,7 @@ const landmarks = [
     date_designated: "December 23, 1987",
     location: {
       area: "Brooklyn",
-      coordinates: { lat: 40.694444, lng: -73.992500 },
+      coordinates: { lat: 40.694444, lng: -73.9925 },
     },
     county: "Kings",
     description: "Site of first figural stained-glass windows in U.S.",
@@ -1064,7 +1065,7 @@ const landmarks = [
     date_designated: "December 8, 1976",
     location: {
       area: "Manhattan",
-      coordinates: { lat: 40.734444, lng: -73.985000 },
+      coordinates: { lat: 40.734444, lng: -73.985 },
     },
     county: "New York",
     description:
@@ -1089,7 +1090,7 @@ const landmarks = [
     date_designated: "October 9, 1960",
     location: {
       area: "Manhattan",
-      coordinates: { lat: 40.711389, lng: -74.010000 },
+      coordinates: { lat: 40.711389, lng: -74.01 },
     },
     county: "New York",
     description:
@@ -1127,7 +1128,7 @@ const landmarks = [
     date_designated: "November 7, 1973",
     location: {
       area: "Manhattan",
-      coordinates: { lat: 40.735000, lng: -73.995833 },
+      coordinates: { lat: 40.735, lng: -73.995833 },
     },
     county: "New York",
     description:
@@ -1140,7 +1141,7 @@ const landmarks = [
     date_designated: "February 24, 1986 (#75001208)",
     location: {
       area: "Manhattan",
-      coordinates: { lat: 40.767500, lng: -73.966111 },
+      coordinates: { lat: 40.7675, lng: -73.966111 },
     },
     county: "New York",
     description:
@@ -1166,7 +1167,7 @@ const landmarks = [
     date_designated: "November 28, 1972 (#72000882)",
     location: {
       area: "Manhattan",
-      coordinates: { lat: 40.713333, lng: -73.997500 },
+      coordinates: { lat: 40.713333, lng: -73.9975 },
     },
     county: "New York",
     description:
@@ -1269,7 +1270,7 @@ const landmarks = [
     date_designated: "June 2, 1978",
     location: {
       area: "Manhattan",
-      coordinates: { lat: 40.750000, lng: -73.981389 },
+      coordinates: { lat: 40.75, lng: -73.981389 },
     },
     county: "New York",
     description:
@@ -1282,7 +1283,7 @@ const landmarks = [
     date_designated: "May 11, 1976",
     location: {
       area: "Manhattan",
-      coordinates: { lat: 40.737500, lng: -73.986944 },
+      coordinates: { lat: 40.7375, lng: -73.986944 },
     },
     county: "New York",
     description:
@@ -1308,7 +1309,7 @@ const landmarks = [
     date_designated: "July 17, 1971",
     location: {
       area: "Manhattan",
-      coordinates: { lat: 40.730000, lng: -73.995833 },
+      coordinates: { lat: 40.73, lng: -73.995833 },
     },
     county: "New York",
     description:
@@ -1412,7 +1413,7 @@ const landmarks = [
     date_designated: "December 24, 1976",
     location: {
       area: "Van Cortlandt Park",
-      coordinates: { lat: 40.890000, lng: -73.896389 },
+      coordinates: { lat: 40.89, lng: -73.896389 },
     },
     county: "Bronx",
     description:
@@ -1426,7 +1427,7 @@ const landmarks = [
     date_designated: "November 5, 1961",
     location: {
       area: "Richmondtown",
-      coordinates: { lat: 40.571389, lng: -74.147500 },
+      coordinates: { lat: 40.571389, lng: -74.1475 },
     },
     county: "Richmond",
     description:

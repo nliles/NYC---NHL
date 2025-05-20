@@ -20,7 +20,6 @@ const Map = ({
   }
 
   useEffect(() => {
-
     if (mapboxgl && !mapInstance.current) {
       mapboxgl.accessToken =
         "pk.eyJ1Ijoibm1saWxlczE2IiwiYSI6ImNtYW44dGR6MDBybnMyam9iYWNwdGM4MGsifQ.b0_OYdIxyitezCgWIR25sg";
@@ -132,22 +131,21 @@ const Map = ({
     };
   }, [setSelectedLocation]);
 
-    // EFFECT 2: Update colors when visitedLandmarks changes
-    useEffect(() => {
-      if (mapInstance.current && mapInstance.current.isStyleLoaded() && mapInstance.current.getLayer('landmark-points')) {
-        mapInstance.current.setPaintProperty(
-          'landmark-points',
-          'circle-color',
-          [
-            'case',
-            ['in', ['get', 'id'], ['literal', visitedLandmarks || []]],
-            '#E63946', // visited - red
-            '#8BC34A'  // not visited - green
-          ]
-        );
-      }
-    }, [visitedLandmarks]);
-  
+  // EFFECT 2: Update colors when visitedLandmarks changes
+  useEffect(() => {
+    if (
+      mapInstance.current &&
+      mapInstance.current.isStyleLoaded() &&
+      mapInstance.current.getLayer("landmark-points")
+    ) {
+      mapInstance.current.setPaintProperty("landmark-points", "circle-color", [
+        "case",
+        ["in", ["get", "id"], ["literal", visitedLandmarks || []]],
+        "#E63946", // visited - red
+        "#8BC34A", // not visited - green
+      ]);
+    }
+  }, [visitedLandmarks]);
 
   return (
     <div className={styles.container}>
