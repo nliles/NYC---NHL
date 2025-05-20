@@ -384,7 +384,6 @@ const landmarks = [
       name: "Will Marion Cook House",
       description:
         "Home of the leading black composer and musician Will Marion Cook",
-      county: "New York",
       area: "Manhattan",
       date_designated: "May 11, 1976",
     },
@@ -400,9 +399,9 @@ const landmarks = [
       name: "Cooper Union",
       description:
         "Pioneering adult education center; site of famous anti-slavery speech by Abraham Lincoln",
-      county: "New York",
       area: "Manhattan",
       date_designated: "July 4, 1961",
+      link: "https://cooper.edu/",
     },
   },
   {
@@ -416,7 +415,6 @@ const landmarks = [
       name: "Daily News Building",
       description:
         "First modern free-standing skyscraper designed by Raymond Hood",
-      county: "New York",
       area: "Manhattan",
       date_designated: "June 29, 1989",
     },
@@ -432,7 +430,6 @@ const landmarks = [
       name: "Dakota Apartments",
       description:
         "Combination of Renaissance architectural styles by Henry Hardenbergh; setting for Rosemary's Baby and the shooting death of John Lennon",
-      county: "New York",
       area: "Manhattan",
       date_designated: "December 8, 1976",
     },
@@ -584,7 +581,6 @@ const landmarks = [
       name: "Governors Island",
       description:
         "Island in NY Harbor which served various branches of the US Military from 1783 until the late 1990s; now a park",
-      county: "New York",
       area: "Manhattan",
       date_designated: "February 4, 1985",
       link: "https://www.nps.gov/gois/index.htm",
@@ -664,7 +660,6 @@ const landmarks = [
       id: 43,
       name: "Solomon R. Guggenheim Museum",
       description: "The only museum designed by Frank Lloyd Wright",
-      county: "New York",
       area: "Manhattan",
       date_designated: "October 6, 2008",
       link: "https://www.guggenheim.org/",
