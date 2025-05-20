@@ -289,6 +289,7 @@ const landmarks = [
         "Oldest synagogue continuously in use by a New York City Jewish congregation; built in a Moorish Revival style to recognize importance of that period in Jewish history",
       area: "Manhattan",
       date_designated: "May 15, 1975",
+      link: "https://www.centralsynagogue.org/",
     },
   },
   {
@@ -334,6 +335,7 @@ const landmarks = [
         "Early church design by Richard Upjohn; valuable interior artwork",
       area: "Manhattan",
       date_designated: "December 23, 1987",
+      link: "https://ascensionnyc.org/",
     },
   },
   {
@@ -349,7 +351,6 @@ const landmarks = [
         "Oldest city hall in U.S. still in use as main municipal government building",
       area: "Manhattan",
       date_designated: "December 19, 1960",
-      link: "https://www.nps.gov/gois/index.htm",
     },
   },
   {
