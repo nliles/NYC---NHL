@@ -215,6 +215,7 @@ const landmarks = [
         "One of the few remaining buildings by George B. Post; innovative structural system",
       area: "Brooklyn",
       date_designated: "July 17, 1991",
+      link: "https://www.bklynlibrary.org/center-for-brooklyn-history",
     },
   },
   {
