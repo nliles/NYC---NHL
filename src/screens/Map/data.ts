@@ -490,9 +490,9 @@ const landmarks = [
       name: "Empire State Building",
       description:
         "World's tallest building from 1931 to 1972 and internationally recognized symbol of New York City",
-      county: "New York",
       area: "Manhattan",
       date_designated: "June 24, 1986",
+      link: "https://www.esbnyc.com/",
     },
   },
   {
@@ -537,7 +537,6 @@ const landmarks = [
       id: 35,
       name: "Flatiron Building",
       description: "Distinctive triangular building at Madison Square.",
-      county: "New York",
       area: "Manhattan",
       date_designated: "June 29, 1989",
     },
@@ -553,7 +552,6 @@ const landmarks = [
       name: "Founder's Hall, The Rockefeller University",
       description:
         "Building marked the start of John D. Rockefeller Jr.'s putting the vast family fortune to philanthropic purposes",
-      county: "New York",
       area: "Manhattan",
       date_designated: "May 30, 1974",
     },
@@ -568,9 +566,9 @@ const landmarks = [
       id: 37,
       name: "The Frick Collection and Frick Art Reference Library Building",
       description: "",
-      county: "New York",
       area: "Manhattan",
       date_designated: "October 6, 2008",
+      link: "https://www.frick.org/",
     },
   },
   {
@@ -634,6 +632,7 @@ const landmarks = [
         "Popular tourist attraction in the 1850s; most famous New Yorkers who died during the second half of the nineteenth century buried here",
       area: "Brooklyn",
       date_designated: "September 20, 2006",
+      link: "https://www.green-wood.com/",
     },
   },
   {
