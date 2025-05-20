@@ -1,4 +1,5 @@
-import { Dispatch, SetStateAction, useEffect, useRef } from "react";
+// In your React component
+import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react";
 import mapboxgl from "mapbox-gl/dist/mapbox-gl";
 import landmarks from "./data.ts";
 import styles from "./Map.module.css";
@@ -15,39 +16,11 @@ const Map = ({
 
   // Convert DMS coordinates to decimal degrees
   function dmsToDecimal(dms: any) {
-    // Handle DMS format like 40°44′30″N 73°59′01″W
-    const parts = dms.split(" ");
-
-    if (parts.length !== 2) return null;
-
-    function parseDMSPart(part: any) {
-      const regex = /(\d+)°(\d+)′(\d+)″([NSEW])/;
-      const match = part.match(regex);
-
-      if (!match) return null;
-
-      const degrees = parseInt(match[1]);
-      const minutes = parseInt(match[2]);
-      const seconds = parseInt(match[3]);
-      const direction = match[4];
-
-      let decimal = degrees + minutes / 60 + seconds / 3600;
-
-      if (direction === "S" || direction === "W") {
-        decimal = -decimal;
-      }
-
-      return decimal;
-    }
-
-    const lat = parseDMSPart(parts[0]);
-    const lng = parseDMSPart(parts[1]);
-
-    return [lng, lat]; // GeoJSON uses [longitude, latitude]
+    return [dms.lng, dms.lat]; // GeoJSON uses [longitude, latitude]
   }
 
-  // EFFECT 1: Initialize the map (only once)
   useEffect(() => {
+
     if (mapboxgl && !mapInstance.current) {
       mapboxgl.accessToken =
         "pk.eyJ1Ijoibm1saWxlczE2IiwiYSI6ImNtYW44dGR6MDBybnMyam9iYWNwdGM4MGsifQ.b0_OYdIxyitezCgWIR25sg";
@@ -109,8 +82,8 @@ const Map = ({
             "circle-color": [
               "case",
               ["in", ["get", "id"], ["literal", visitedLandmarks || []]],
-              "#E63946", // Color if ID is in visitedLandmarks (visited)
-              "#8BC34A", // Color if not in visitedLandmarks (not visited)
+              "#E63946", // Color if ID is in storedLandmarks (visited)
+              "#8BC34A", // Color if not in storedLandmarks (not visited)
             ],
             "circle-stroke-width": 2,
             "circle-stroke-color": "#ffffff",
@@ -157,23 +130,24 @@ const Map = ({
         mapInstance.current = null;
       }
     };
-  }, [setSelectedLocation]); // Remove visitedLandmarks from dependencies
+  }, [setSelectedLocation]);
 
-  // EFFECT 2: Update colors when visitedLandmarks changes
-  useEffect(() => {
-    if (
-      mapInstance.current &&
-      mapInstance.current.isStyleLoaded() &&
-      mapInstance.current.getLayer("landmark-points")
-    ) {
-      mapInstance.current.setPaintProperty("landmark-points", "circle-color", [
-        "case",
-        ["in", ["get", "id"], ["literal", visitedLandmarks || []]],
-        "#E63946", // visited - red
-        "#8BC34A", // not visited - green
-      ]);
-    }
-  }, [visitedLandmarks]);
+    // EFFECT 2: Update colors when visitedLandmarks changes
+    useEffect(() => {
+      if (mapInstance.current && mapInstance.current.isStyleLoaded() && mapInstance.current.getLayer('landmark-points')) {
+        mapInstance.current.setPaintProperty(
+          'landmark-points',
+          'circle-color',
+          [
+            'case',
+            ['in', ['get', 'id'], ['literal', visitedLandmarks || []]],
+            '#E63946', // visited - red
+            '#8BC34A'  // not visited - green
+          ]
+        );
+      }
+    }, [visitedLandmarks]);
+  
 
   return (
     <div className={styles.container}>

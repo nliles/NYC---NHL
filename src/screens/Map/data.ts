@@ -3,10 +3,10 @@ const landmarks = [
     id: 1,
     name: "69th Regiment Armory",
     image: "69th Regiment Armory",
-    date_designated: "June 19, 1996 (#93001538)",
+    date_designated: "June 19, 1996",
     location: {
       area: "Manhattan",
-      coordinates: "40°44′30″N 73°59′01″W",
+      coordinates: { lat: 40.741667, lng: -73.983611 },
     },
     county: "New York",
     description:
@@ -16,10 +16,10 @@ const landmarks = [
     id: 2,
     name: "Admiral David Glasgow Farragut Gravesite",
     image: "Admiral David Glasgow Farragut Gravesite",
-    date_designated: "October 17, 2012 (#12001008)",
+    date_designated: "October 17, 2012",
     location: {
       area: "Bronx",
-      coordinates: "40°53′32″N 73°51′57″W",
+      coordinates: { lat: 40.892222, lng: -73.865833 },
     },
     county: "Bronx",
     description:
@@ -29,14 +29,14 @@ const landmarks = [
     id: 3,
     name: "African Burial Ground",
     image: "African Burial Ground",
-    date_designated: "April 19, 1993 (#93001597)",
+    date_designated: "April 19, 1993",
     location: {
       area: "Manhattan",
-      coordinates: "40°42′52″N 74°00′16″W",
+      coordinates: { lat: 40.714444, lng: -74.004444 },
     },
     county: "New York",
     description:
-      "African Burial Ground is the nation's earliest and largest known African American cemetery. It was a burial site in Lower Manhattan of over 419 Africans from 1690s to 1794",
+      "African Burial Ground is the nation's earliest and largest known African American cemetery. It was a burial site in Lower Manhattan of over 419 Africans from 1690s to 1794",
     link: "https://www.nps.gov/afbg/index.htm",
     quote:
       "For all those who were lost, for all those who were stolen, for all those who were left behind, for all those who were not forgotten.",
@@ -46,10 +46,10 @@ const landmarks = [
     id: 4,
     name: "Ambrose (lightship)",
     image: "Ambrose (lightship)",
-    date_designated: "April 11, 1989 (#84002758)",
+    date_designated: "April 11, 1989",
     location: {
       area: "Manhattan",
-      coordinates: "40°42′17″N 74°00′09″W",
+      coordinates: { lat: 40.704722, lng: -74.002500 },
     },
     county: "New York",
     description:
@@ -59,10 +59,10 @@ const landmarks = [
     id: 5,
     name: "American Stock Exchange",
     image: "American Stock Exchange",
-    date_designated: "June 6, 1978 (#78001867)",
+    date_designated: "June 6, 1978",
     location: {
       area: "Manhattan",
-      coordinates: "40°42′32″N 74°00′45″W",
+      coordinates: { lat: 40.708889, lng: -74.012500 },
     },
     county: "New York",
     description: "Former headquarters of the American Stock Exchange",
@@ -71,22 +71,25 @@ const landmarks = [
     id: 6,
     name: "Louis Armstrong House",
     image: "Louis Armstrong House",
-    date_designated: "May 11, 1976 (#76001265)",
+    date_designated: "May 11, 1976",
     location: {
       area: "Corona",
-      coordinates: "40°45′16″N 73°51′42″W",
+      coordinates: { lat: 40.754444, lng: -73.861667 },
     },
     county: "Queens",
     description: "Home of jazz legend Louis Armstrong for 28 years",
+    quote: "There's so much in 'Wonderful World' that brings me back to my neighborhood where I live in Corona, New York.",
+    quote_author: "Louis Armstrong",
+    link: "https://www.louisarmstronghouse.org/",
   },
   {
     id: 7,
     name: "Chester A. Arthur House",
     image: "Chester A. Arthur House",
-    date_designated: "December 12, 1965 (#66000534)",
+    date_designated: "December 12, 1965",
     location: {
       area: "Manhattan",
-      coordinates: "40°44′34″N 73°58′56″W",
+      coordinates: { lat: 40.742778, lng: -73.982222 },
     },
     county: "New York",
     description:
@@ -99,7 +102,7 @@ const landmarks = [
     date_designated: "April 19, 1993 (#70000925)",
     location: {
       area: "Rosebank",
-      coordinates: "40°36′54″N 74°03′47″W",
+      coordinates: { lat: 40.615000, lng: -74.063056 },
     },
     county: "Richmond",
     description: "Home of photographer Alice Austen, now a museum",
@@ -112,7 +115,7 @@ const landmarks = [
     date_designated: "December 8, 1976 (#74001220)",
     location: {
       area: "Pelham Bay Park",
-      coordinates: "40°52′18″N 73°48′20″W",
+      coordinates: { lat: 40.871667, lng: -73.805556 },
     },
     county: "Bronx",
     description: "19th-century mansion in largest New York City park",
@@ -124,7 +127,7 @@ const landmarks = [
     date_designated: "December 8, 1976 (#76001236)",
     location: {
       area: "Manhattan",
-      coordinates: "40°43′35″N 73°59′44″W",
+      coordinates: { lat: 40.726389, lng: -73.995556 },
     },
     county: "New York",
     description:
@@ -137,7 +140,7 @@ const landmarks = [
     date_designated: "May 15, 1975 (#75001202)",
     location: {
       area: "Manhattan",
-      coordinates: "40°44′13″N 74°00′36″W",
+      coordinates: { lat: 40.737500, lng: -74.010000 },
     },
     county: "New York",
     description:
@@ -150,7 +153,7 @@ const landmarks = [
     date_designated: "January 29, 1964 (#66000523)",
     location: {
       area: "Brooklyn and Manhattan",
-      coordinates: "40°42′23″N 73°59′51″W",
+      coordinates: { lat: 40.706389, lng: -73.997500 },
     },
     county: "Kings and New York",
     description:
@@ -163,7 +166,7 @@ const landmarks = [
     date_designated: "January 12, 1965 (#66000524)",
     location: {
       area: "Brooklyn",
-      coordinates: "40°41′48″N 73°59′48″W",
+      coordinates: { lat: 40.696667, lng: -73.996667 },
     },
     county: "Kings",
     description:
@@ -176,7 +179,7 @@ const landmarks = [
     date_designated: "July 17, 1991 (#91002054)",
     location: {
       area: "Brooklyn",
-      coordinates: "40°41′41″N 73°59′34″W",
+      coordinates: { lat: 40.694722, lng: -73.992778 },
     },
     county: "Kings",
     description:
@@ -189,7 +192,7 @@ const landmarks = [
     date_designated: "May 11, 1976 (#76001266)",
     location: {
       area: "Kew Gardens",
-      coordinates: "40°42′23″N 73°50′13″W",
+      coordinates: { lat: 40.706389, lng: -73.837500 },
     },
     county: "Queens",
     description:
@@ -202,7 +205,7 @@ const landmarks = [
     date_designated: "December 29, 1962 (#66000535)",
     location: {
       area: "Manhattan",
-      coordinates: "40°45′54″N 73°58′49″W",
+      coordinates: { lat: 40.765000, lng: -73.980278 },
     },
     county: "New York",
     description: "One of the most famous music venues in the world",
@@ -214,7 +217,7 @@ const landmarks = [
     date_designated: "November 13, 1966 (#66000536)",
     location: {
       area: "Manhattan",
-      coordinates: "40°47′04″N 73°57′28″W",
+      coordinates: { lat: 40.784444, lng: -73.957778 },
     },
     county: "New York",
     description:
@@ -227,7 +230,7 @@ const landmarks = [
     date_designated: "May 23, 1963 (#66000538)",
     location: {
       area: "Manhattan",
-      coordinates: "40°46′55″N 73°57′58″W",
+      coordinates: { lat: 40.781944, lng: -73.966111 },
     },
     county: "New York",
     description:
@@ -240,7 +243,7 @@ const landmarks = [
     date_designated: "May 15, 1975 (#70000423)",
     location: {
       area: "Manhattan",
-      coordinates: "40°45′35″N 73°58′14″W",
+      coordinates: { lat: 40.759722, lng: -73.970556 },
     },
     county: "New York",
     description:
@@ -253,7 +256,7 @@ const landmarks = [
     date_designated: "December 22, 1977 (#73001214)",
     location: {
       area: "Manhattan",
-      coordinates: "40°42′34″N 74°00′36″W",
+      coordinates: { lat: 40.709444, lng: -74.010000 },
     },
     county: "New York",
     description:
@@ -266,7 +269,7 @@ const landmarks = [
     date_designated: "December 8, 1976 (#76001237)",
     location: {
       area: "Manhattan",
-      coordinates: "40°45′06″N 73°58′31″W",
+      coordinates: { lat: 40.751667, lng: -73.975278 },
     },
     county: "New York",
     description:
@@ -279,7 +282,7 @@ const landmarks = [
     date_designated: "December 23, 1987 (#87002593)",
     location: {
       area: "Manhattan",
-      coordinates: "40°44′01″N 73°59′44″W",
+      coordinates: { lat: 40.733611, lng: -73.995556 },
     },
     county: "New York",
     description:
@@ -292,7 +295,7 @@ const landmarks = [
     date_designated: "December 19, 1960 (#66000539)",
     location: {
       area: "Manhattan",
-      coordinates: "40°42′46″N 74°00′21″W",
+      coordinates: { lat: 40.712778, lng: -74.005833 },
     },
     county: "New York",
     description:
@@ -305,7 +308,7 @@ const landmarks = [
     date_designated: "May 23, 1966 (#66000566)",
     location: {
       area: "Tottenville",
-      coordinates: "40°30′11″N 74°15′11″W",
+      coordinates: { lat: 40.503056, lng: -74.253056 },
     },
     county: "Richmond",
     description:
@@ -318,7 +321,7 @@ const landmarks = [
     date_designated: "May 11, 1976 (#76001238)",
     location: {
       area: "Manhattan",
-      coordinates: "40°49′05″N 73°56′35″W",
+      coordinates: { lat: 40.818056, lng: -73.943056 },
     },
     county: "New York",
     description:
@@ -331,7 +334,7 @@ const landmarks = [
     date_designated: "July 4, 1961 (#66000540)",
     location: {
       area: "Manhattan",
-      coordinates: "40°43′46″N 73°59′26″W",
+      coordinates: { lat: 40.729444, lng: -73.990556 },
     },
     county: "New York",
     description:
@@ -344,7 +347,7 @@ const landmarks = [
     date_designated: "June 29, 1989 (#82001191)",
     location: {
       area: "Manhattan",
-      coordinates: "40°44′58″N 73°58′25″W",
+      coordinates: { lat: 40.749444, lng: -73.973611 },
     },
     county: "New York",
     description:
@@ -357,7 +360,7 @@ const landmarks = [
     date_designated: "December 8, 1976 (#72000869)",
     location: {
       area: "Manhattan",
-      coordinates: "40°46′36″N 73°58′35″W",
+      coordinates: { lat: 40.776667, lng: -73.976389 },
     },
     county: "New York",
     description:
@@ -370,7 +373,7 @@ const landmarks = [
     date_designated: "December 24, 1967 (#67000014)",
     location: {
       area: "Manhattan",
-      coordinates: "40°52′03″N 73°55′24″W",
+      coordinates: { lat: 40.867500, lng: -73.923333 },
     },
     county: "New York",
     description: "Only remaining farmhouse in Manhattan",
@@ -382,7 +385,7 @@ const landmarks = [
     date_designated: "June 19, 1996 (#80002687)",
     location: {
       area: "Manhattan",
-      coordinates: "40°42′54″N 73°59′38″W",
+      coordinates: { lat: 40.715000, lng: -73.993889 },
     },
     county: "New York",
     description:
@@ -395,7 +398,7 @@ const landmarks = [
     date_designated: "May 11, 1976 (#76001239)",
     location: {
       area: "Manhattan",
-      coordinates: "40°49′56″N 73°56′27″W",
+      coordinates: { lat: 40.832222, lng: -73.940833 },
     },
     county: "New York",
     description:
@@ -408,7 +411,7 @@ const landmarks = [
     date_designated: "June 24, 1986 (#82001192)",
     location: {
       area: "Manhattan",
-      coordinates: "40°44′54″N 73°59′08″W",
+      coordinates: { lat: 40.748333, lng: -73.985556 },
     },
     county: "New York",
     description:
@@ -421,7 +424,7 @@ const landmarks = [
     date_designated: "June 2, 1978 (#78001869)",
     location: {
       area: "Manhattan",
-      coordinates: "40°42′35″N 74°00′40″W",
+      coordinates: { lat: 40.709722, lng: -74.011111 },
     },
     county: "New York",
     description:
@@ -434,7 +437,7 @@ const landmarks = [
     date_designated: "May 15, 1975 (#72001456)",
     location: {
       area: "Manhattan",
-      coordinates: "40°43′48″N 73°59′19″W",
+      coordinates: { lat: 40.730000, lng: -73.988611 },
     },
     county: "New York",
     description:
@@ -447,7 +450,7 @@ const landmarks = [
     date_designated: "June 29, 1989 (#79001603)",
     location: {
       area: "Manhattan",
-      coordinates: "40°44′28″N 73°59′23″W",
+      coordinates: { lat: 40.741111, lng: -73.989722 },
     },
     county: "New York",
     description: "Distinctive triangular building at Madison Square.",
@@ -459,7 +462,7 @@ const landmarks = [
     date_designated: "May 30, 1974 (#74001269)",
     location: {
       area: "Manhattan",
-      coordinates: "40°45′45″N 73°57′18″W",
+      coordinates: { lat: 40.762500, lng: -73.955000 },
     },
     county: "New York",
     description:
@@ -472,7 +475,7 @@ const landmarks = [
     date_designated: "October 6, 2008 (#08001091)",
     location: {
       area: "Manhattan",
-      coordinates: "40°46′17″N 73°58′02″W",
+      coordinates: { lat: 40.771389, lng: -73.967222 },
     },
     county: "New York",
     description: "",
@@ -484,7 +487,7 @@ const landmarks = [
     date_designated: "February 4, 1985",
     location: {
       area: "Manhattan",
-      coordinates: "40°41′29″N 74°00′58″W",
+      coordinates: { lat: 40.691389, lng: -74.016111 },
     },
     county: "New York",
     description:
@@ -497,11 +500,11 @@ const landmarks = [
     date_designated: "December 22, 1977",
     location: {
       area: "Manhattan",
-      coordinates: "40°43′54″N 73°59′31″W",
+      coordinates: { lat: 40.731667, lng: -73.991944 },
     },
     county: "New York",
     description: "Gothic Revival masterpiece designed by James Renwick Jr.",
-    url: "https://gracechurchnyc.org/",
+    link: "https://gracechurchnyc.org/",
   },
   {
     id: 40,
@@ -510,7 +513,7 @@ const landmarks = [
     date_designated: "December 8, 1976",
     location: {
       area: "Manhattan",
-      coordinates: "40°45′10″N 73°58′35″W",
+      coordinates: { lat: 40.752778, lng: -73.976389 },
     },
     county: "New York",
     description:
@@ -520,10 +523,10 @@ const landmarks = [
     id: 41,
     name: "Green-Wood Cemetery",
     image: "Green-Wood Cemetery",
-    date_designated: "September 20, 2006 (#97000228)",
+    date_designated: "September 20, 2006",
     location: {
       area: "Brooklyn",
-      coordinates: "40°39′08″N 73°59′28″W",
+      coordinates: { lat: 40.652222, lng: -73.991111 },
     },
     county: "Kings",
     description:
@@ -533,26 +536,28 @@ const landmarks = [
     id: 42,
     name: "Hamilton Grange National Memorial",
     image: "Hamilton Grange National Memorial",
-    date_designated: "December 19, 1960 (#66000097)",
+    date_designated: "December 19, 1960",
     location: {
       area: "Manhattan",
-      coordinates: "40°49′17″N 73°56′50″W",
+      coordinates: { lat: 40.821389, lng: -73.947222 },
     },
     county: "New York",
     description:
       "Home of Alexander Hamilton: military officer, lawyer, member of the United States Constitutional Convention, American statesman, first United States Secretary of the Treasury, and Founding Father",
+    link: "https://www.nps.gov/hagr/index.htm",
   },
   {
     id: 43,
     name: "Solomon R. Guggenheim Museum",
     image: "Solomon R. Guggenheim Museum",
-    date_designated: "October 6, 2008 (#05000443)",
+    date_designated: "October 6, 2008",
     location: {
       area: "Manhattan",
-      coordinates: "40°46′58″N 73°57′32″W",
+      coordinates: { lat: 40.782778, lng: -73.958889 },
     },
     county: "New York",
     description: "The only museum designed by Frank Lloyd Wright",
+    link: "https://www.guggenheim.org/",
   },
   {
     id: 44,
@@ -561,7 +566,7 @@ const landmarks = [
     date_designated: "May 30, 1974 (#74001272)",
     location: {
       area: "Manhattan",
-      coordinates: "40°42′50″N 73°59′07″W",
+      coordinates: { lat: 40.713889, lng: -73.985278 },
     },
     county: "New York",
     description:
@@ -571,10 +576,10 @@ const landmarks = [
     id: 45,
     name: "Matthew Henson Residence",
     image: "Matthew Henson Residence",
-    date_designated: "May 15, 1975 (#75001207)",
+    date_designated: "May 15, 1975",
     location: {
       area: "Manhattan",
-      coordinates: "40°49′32″N 73°56′20″W",
+      coordinates: { lat: 40.825556, lng: -73.938889 },
     },
     county: "New York",
     description:
@@ -584,10 +589,10 @@ const landmarks = [
     id: 46,
     name: "Hispanic Society of America",
     image: "Hispanic Society of America",
-    date_designated: "October 17, 2012 (#12001009)",
+    date_designated: "October 17, 2012",
     location: {
       area: "Manhattan",
-      coordinates: "40°50′01″N 73°56′47″W",
+      coordinates: { lat: 40.833611, lng: -73.946389 },
     },
     county: "New York",
     description: "Museum of Iberian Art",
@@ -596,10 +601,10 @@ const landmarks = [
     id: 47,
     name: "Holland Tunnel",
     image: "Holland Tunnel",
-    date_designated: "November 4, 1993 (#93001619)",
+    date_designated: "November 4, 1993",
     location: {
       area: "Manhattan",
-      coordinates: "40°43′39″N 74°01′17″W",
+      coordinates: { lat: 40.727500, lng: -74.021389 },
     },
     county: "New York",
     description:
@@ -609,10 +614,10 @@ const landmarks = [
     id: 48,
     name: "USS Intrepid",
     image: "USS Intrepid",
-    date_designated: "January 14, 1986 (#86000082)",
+    date_designated: "January 14, 1986",
     location: {
       area: "Manhattan",
-      coordinates: "40°45′53″N 74°00′04″W",
+      coordinates: { lat: 40.764722, lng: -74.001111 },
     },
     county: "New York",
     description:
@@ -625,7 +630,7 @@ const landmarks = [
     date_designated: "May 11, 1976 (#76001241)",
     location: {
       area: "Manhattan",
-      coordinates: "40°48′55″N 73°56′35″W",
+      coordinates: { lat: 40.815278, lng: -73.943056 },
     },
     county: "New York",
     description:
@@ -638,7 +643,7 @@ const landmarks = [
     date_designated: "December 2, 1974 (#74001295)",
     location: {
       area: "Jamaica",
-      coordinates: "40°42′11″N 73°48′14″W",
+      coordinates: { lat: 40.703056, lng: -73.803889 },
     },
     county: "Queens",
     description:
@@ -651,7 +656,7 @@ const landmarks = [
     date_designated: "April 11, 1989 (#84002779)",
     location: {
       area: "Manhattan",
-      coordinates: "40°42′22″N 74°00′12″W",
+      coordinates: { lat: 40.706111, lng: -74.003333 },
     },
     county: "New York",
     description:
@@ -664,7 +669,7 @@ const landmarks = [
     date_designated: "December 22, 1977 (#77000935)",
     location: {
       area: "New York Botanical Garden",
-      coordinates: "40°51′35″N 73°52′34″W",
+      coordinates: { lat: 40.859722, lng: -73.876111 },
     },
     county: "Bronx",
     description: "Oldest existing tobacco-manufacturing facility in U.S.",
@@ -676,7 +681,7 @@ const landmarks = [
     date_designated: "December 23, 1987 (#87002599)",
     location: {
       area: "Columbia University",
-      coordinates: "40°48′30″N 73°57′43″W",
+      coordinates: { lat: 40.808333, lng: -73.961944 },
     },
     county: "New York",
     description:
@@ -689,7 +694,7 @@ const landmarks = [
     date_designated: "June 2, 1978 (#78001873)",
     location: {
       area: "Manhattan",
-      coordinates: "40°45′01″N 73°59′18″W",
+      coordinates: { lat: 40.750278, lng: -73.988333 },
     },
     county: "New York",
     description: "Largest department store in world for many years",
@@ -701,7 +706,7 @@ const landmarks = [
     date_designated: "June 29, 1989 (#80002701)",
     location: {
       area: "Manhattan",
-      coordinates: "40°45′26″N 73°59′28″W",
+      coordinates: { lat: 40.757222, lng: -73.991111 },
     },
     county: "New York",
     description:
@@ -714,7 +719,7 @@ const landmarks = [
     date_designated: "December 8, 1976 (#76002143)",
     location: {
       area: "Manhattan",
-      coordinates: "40°48′51″N 73°56′30″W",
+      coordinates: { lat: 40.814167, lng: -73.938333 },
     },
     county: "New York",
     description:
@@ -727,7 +732,7 @@ const landmarks = [
     date_designated: "June 2, 1978 (#78001874)",
     location: {
       area: "Manhattan",
-      coordinates: "40°44′28″N 73°59′15″W",
+      coordinates: { lat: 40.741111, lng: -73.987500 },
     },
     county: "New York",
     description:
@@ -740,7 +745,7 @@ const landmarks = [
     date_designated: "June 24, 1986 (#86003556)",
     location: {
       area: "Manhattan",
-      coordinates: "40°46′44″N 73°57′49″W",
+      coordinates: { lat: 40.778889, lng: -73.963611 },
     },
     county: "New York",
     description:
@@ -753,7 +758,7 @@ const landmarks = [
     date_designated: "November 13, 1966 (#66000544)",
     location: {
       area: "Manhattan",
-      coordinates: "40°44′56″N 73°58′54″W",
+      coordinates: { lat: 40.749444, lng: -73.981667 },
     },
     county: "New York",
     description:
@@ -766,10 +771,11 @@ const landmarks = [
     date_designated: "January 20, 1961 (#66000545)",
     location: {
       area: "Manhattan",
-      coordinates: "40°50′04″N 73°56′19″W",
+      coordinates: { lat: 40.834444, lng: -73.938611 },
     },
     county: "New York",
     description: "Oldest residential building in Manhattan",
+    link: "https://morrisjumel.org/",
   },
   {
     id: 61,
@@ -778,7 +784,7 @@ const landmarks = [
     date_designated: "June 2, 1978 (#78001875)",
     location: {
       area: "Manhattan",
-      coordinates: "40°42′22″N 74°00′33″W",
+      coordinates: { lat: 40.706111, lng: -74.009167 },
     },
     county: "New York",
     description:
@@ -791,7 +797,7 @@ const landmarks = [
     date_designated: "May 11, 1976 (#76001247)",
     location: {
       area: "Manhattan",
-      coordinates: "40°48′54″N 73°56′41″W",
+      coordinates: { lat: 40.815000, lng: -73.944722 },
     },
     county: "New York",
     description:
@@ -804,7 +810,7 @@ const landmarks = [
     date_designated: "May 28, 1967 (#67000009)",
     location: {
       area: "Bronx",
-      coordinates: "40°51′49″N 73°52′42″W",
+      coordinates: { lat: 40.863611, lng: -73.878333 },
     },
     county: "Bronx",
     description:
@@ -817,7 +823,7 @@ const landmarks = [
     date_designated: "December 22, 1977 (#72001586)",
     location: {
       area: "Manhattan",
-      coordinates: "40°42′16″N 74°00′37″W",
+      coordinates: { lat: 40.704444, lng: -74.010278 },
     },
     county: "New York",
     description: "First commodity market in the U.S.; now 1 Hanover Square",
@@ -829,7 +835,7 @@ const landmarks = [
     date_designated: "June 2, 1978 (#78001876)",
     location: {
       area: "Manhattan",
-      coordinates: "40°44′34″N 73°59′08″W",
+      coordinates: { lat: 40.742778, lng: -73.985556 },
     },
     county: "New York",
     description: "Last significant Cass Gilbert skyscraper in Manhattan",
@@ -841,7 +847,7 @@ const landmarks = [
     date_designated: "December 21, 1965 (#66000546)",
     location: {
       area: "Manhattan",
-      coordinates: "40°45′12″N 73°58′56″W",
+      coordinates: { lat: 40.753333, lng: -73.982222 },
     },
     county: "New York",
     description:
@@ -851,10 +857,10 @@ const landmarks = [
     id: 67,
     name: "New York Stock Exchange",
     image: "New York Stock Exchange",
-    date_designated: "June 2, 1978 (#78001877)",
+    date_designated: "June 2, 1978",
     location: {
       area: "Manhattan",
-      coordinates: "40°42′25″N 74°00′40″W",
+      coordinates: { lat: 40.706944, lng: -74.011111 },
     },
     county: "New York",
     description:
@@ -867,7 +873,7 @@ const landmarks = [
     date_designated: "April 27, 1992 (#92001877)",
     location: {
       area: "Manhattan",
-      coordinates: "40°43′59″N 73°59′54″W",
+      coordinates: { lat: 40.733056, lng: -73.998333 },
     },
     county: "New York",
     description:
@@ -880,7 +886,7 @@ const landmarks = [
     date_designated: "May 28, 1987 (#82001203)",
     location: {
       area: "Manhattan",
-      coordinates: "40°45′20″N 73°58′54″W",
+      coordinates: { lat: 40.755556, lng: -73.981667 },
     },
     county: "New York",
     description:
@@ -890,13 +896,14 @@ const landmarks = [
     id: 70,
     name: "Old Merchant's House",
     image: "Old Merchant's House",
-    date_designated: "June 23, 1965 (#66000548)",
+    date_designated: "June 23, 1965",
     location: {
       area: "Manhattan",
-      coordinates: "40°43′39″N 73°59′33″W",
+      coordinates: { lat: 40.727500, lng: -73.992500 },
     },
     county: "New York",
     description: "Nineteenth-century family home; preserved inside and out",
+    link: "https://merchantshouse.org/",
   },
   {
     id: 71,
@@ -905,7 +912,7 @@ const landmarks = [
     date_designated: "December 24, 1967 (#67000015)",
     location: {
       area: "Flushing",
-      coordinates: "40°45′47″N 73°49′49″W",
+      coordinates: { lat: 40.763056, lng: -73.830278 },
     },
     county: "Queens",
     description:
@@ -918,7 +925,7 @@ const landmarks = [
     date_designated: "July 21, 2003 (#03001046)",
     location: {
       area: "Columbia University",
-      coordinates: "40°48′22″N 73°57′45″W",
+      coordinates: { lat: 40.806111, lng: -73.962500 },
     },
     county: "New York",
     description:
@@ -931,7 +938,7 @@ const landmarks = [
     date_designated: "December 19, 1962 (#66000549)",
     location: {
       area: "Manhattan",
-      coordinates: "40°44′15″N 73°59′13″W",
+      coordinates: { lat: 40.737500, lng: -73.986944 },
     },
     county: "New York",
     description:
@@ -941,10 +948,10 @@ const landmarks = [
     id: 74,
     name: "Plaza Hotel",
     image: "Plaza Hotel",
-    date_designated: "June 24, 1986 (#78001878)",
+    date_designated: "June 24, 1986",
     location: {
       area: "Manhattan",
-      coordinates: "40°45′53″N 73°58′28″W",
+      coordinates: { lat: 40.764722, lng: -73.974444 },
     },
     county: "New York",
     description:
@@ -954,10 +961,10 @@ const landmarks = [
     id: 75,
     name: "Plymouth Church of the Pilgrims",
     image: "Plymouth Church of the Pilgrims",
-    date_designated: "July 4, 1961 (#66000525)",
+    date_designated: "July 4, 1961",
     location: {
       area: "Brooklyn",
-      coordinates: "40°41′57″N 73°59′37″W",
+      coordinates: { lat: 40.699167, lng: -73.993611 },
     },
     county: "Kings",
     description:
@@ -970,7 +977,7 @@ const landmarks = [
     date_designated: "December 21, 1965 (#66000550)",
     location: {
       area: "Columbia University",
-      coordinates: "40°48′36″N 73°57′42″W",
+      coordinates: { lat: 40.810000, lng: -73.961667 },
     },
     county: "New York",
     description:
@@ -980,10 +987,10 @@ const landmarks = [
     id: 77,
     name: "Quarters A, Brooklyn Navy Yard",
     image: "Quarters A, Brooklyn Navy Yard",
-    date_designated: "May 30, 1974 (#74001252)",
+    date_designated: "May 30, 1974",
     location: {
       area: "Brooklyn",
-      coordinates: "40°42′09″N 73°58′52″W",
+      coordinates: { lat: 40.702500, lng: -73.981111 },
     },
     county: "Kings",
     description: "Home to Matthew Perry at the time of his opening of Japan",
@@ -992,10 +999,10 @@ const landmarks = [
     id: 78,
     name: "Paul Robeson Home",
     image: "Paul Robeson Home",
-    date_designated: "December 8, 1976 (#76001248)",
+    date_designated: "December 8, 1976",
     location: {
       area: "Manhattan",
-      coordinates: "40°50′04″N 73°56′20″W",
+      coordinates: { lat: 40.834444, lng: -73.938889 },
     },
     county: "New York",
     description:
@@ -1005,10 +1012,10 @@ const landmarks = [
     id: 79,
     name: "Jackie Robinson House",
     image: "Jackie Robinson House",
-    date_designated: "May 11, 1976 (#76001226)",
+    date_designated: "May 11, 1976",
     location: {
       area: "Brooklyn",
-      coordinates: "40°38′54″N 73°54′54″W",
+      coordinates: { lat: 40.648333, lng: -73.915000 },
     },
     county: "Kings",
     description: "Home of baseball great Jackie Robinson",
@@ -1017,10 +1024,10 @@ const landmarks = [
     id: 80,
     name: "Rockefeller Center",
     image: "Radio City Music Hall",
-    date_designated: "December 23, 1987 (#87002591)",
+    date_designated: "December 23, 1987",
     location: {
       area: "Manhattan",
-      coordinates: "40°45′31″N 73°58′45″W",
+      coordinates: { lat: 40.758611, lng: -73.979167 },
     },
     county: "New York",
     description:
@@ -1030,10 +1037,10 @@ const landmarks = [
     id: 81,
     name: "Sailors' Snug Harbor",
     image: "Sailors' Snug Harbor",
-    date_designated: "December 8, 1976 (#72000909)",
+    date_designated: "December 8, 1976",
     location: {
       area: "Sailors' Snug Harbor",
-      coordinates: "40°38′33″N 74°06′10″W",
+      coordinates: { lat: 40.642500, lng: -74.102778 },
     },
     county: "Richmond",
     description: "First and only home for retired merchant seamen in U.S.",
@@ -1042,10 +1049,10 @@ const landmarks = [
     id: 82,
     name: "St. Ann and the Holy Trinity Church",
     image: "St. Ann and the Holy Trinity Church",
-    date_designated: "December 23, 1987 (#87002590)",
+    date_designated: "December 23, 1987",
     location: {
       area: "Brooklyn",
-      coordinates: "40°41′40″N 73°59′35″W",
+      coordinates: { lat: 40.694444, lng: -73.992500 },
     },
     county: "Kings",
     description: "Site of first figural stained-glass windows in U.S.",
@@ -1054,10 +1061,10 @@ const landmarks = [
     id: 83,
     name: "St. George's Episcopal Church",
     image: "St. George's Episcopal Church",
-    date_designated: "December 8, 1976 (#76001249)",
+    date_designated: "December 8, 1976",
     location: {
       area: "Manhattan",
-      coordinates: "40°44′04″N 73°59′06″W",
+      coordinates: { lat: 40.734444, lng: -73.985000 },
     },
     county: "New York",
     description:
@@ -1070,7 +1077,7 @@ const landmarks = [
     date_designated: "December 8, 1976 (#76001250)",
     location: {
       area: "Manhattan",
-      coordinates: "40°45′31″N 73°58′35″W",
+      coordinates: { lat: 40.758611, lng: -73.976389 },
     },
     county: "New York",
     description: "First large-scale medieval-style church built in U.S.",
@@ -1079,10 +1086,10 @@ const landmarks = [
     id: 85,
     name: "St. Paul's Chapel",
     image: "St. Paul's Chapel",
-    date_designated: "October 9, 1960 (#66000551)",
+    date_designated: "October 9, 1960",
     location: {
       area: "Manhattan",
-      coordinates: "40°42′41″N 74°00′36″W",
+      coordinates: { lat: 40.711389, lng: -74.010000 },
     },
     county: "New York",
     description:
@@ -1092,10 +1099,10 @@ const landmarks = [
     id: 86,
     name: "Margaret Sanger Clinic",
     image: "Margaret Sanger Clinic",
-    date_designated: "September 14, 1993 (#93001599)",
+    date_designated: "September 14, 1993",
     location: {
       area: "Manhattan",
-      coordinates: "40°44′17″N 73°59′39″W",
+      coordinates: { lat: 40.738056, lng: -73.993889 },
     },
     county: "New York",
     description: "Clinic where Margaret Sanger dispensed birth control",
@@ -1104,10 +1111,10 @@ const landmarks = [
     id: 87,
     name: "Schomburg Center for Research in Black Culture",
     image: "Schomburg Center for Research in Black Culture",
-    date_designated: "December 23, 2016 (#100000798)",
+    date_designated: "December 23, 2016",
     location: {
       area: "Harlem",
-      coordinates: "40°48′52″N 73°56′29″W",
+      coordinates: { lat: 40.814444, lng: -73.941389 },
     },
     county: "New York",
     description:
@@ -1117,10 +1124,10 @@ const landmarks = [
     id: 88,
     name: "Gen. Winfield Scott House",
     image: "Gen. Winfield Scott House",
-    date_designated: "November 7, 1973 (#73001222)",
+    date_designated: "November 7, 1973",
     location: {
       area: "Manhattan",
-      coordinates: "40°44′06″N 73°59′45″W",
+      coordinates: { lat: 40.735000, lng: -73.995833 },
     },
     county: "New York",
     description:
@@ -1133,7 +1140,7 @@ const landmarks = [
     date_designated: "February 24, 1986 (#75001208)",
     location: {
       area: "Manhattan",
-      coordinates: "40°46′03″N 73°57′58″W",
+      coordinates: { lat: 40.767500, lng: -73.966111 },
     },
     county: "New York",
     description:
@@ -1146,7 +1153,7 @@ const landmarks = [
     date_designated: "June 2, 1978 (#78001882)",
     location: {
       area: "Manhattan",
-      coordinates: "40°46′36″N 73°57′49″W",
+      coordinates: { lat: 40.776667, lng: -73.963611 },
     },
     county: "New York",
     description:
@@ -1159,7 +1166,7 @@ const landmarks = [
     date_designated: "November 28, 1972 (#72000882)",
     location: {
       area: "Manhattan",
-      coordinates: "40°42′48″N 73°59′53″W",
+      coordinates: { lat: 40.713333, lng: -73.997500 },
     },
     county: "New York",
     description:
@@ -1172,7 +1179,7 @@ const landmarks = [
     date_designated: "June 2, 1978 (#78001883)",
     location: {
       area: "Manhattan",
-      coordinates: "40°43′28″N 74°00′05″W",
+      coordinates: { lat: 40.724444, lng: -74.001389 },
     },
     county: "New York",
     description:
@@ -1185,7 +1192,7 @@ const landmarks = [
     date_designated: "June 2, 1978 (#78001885)",
     location: {
       area: "Manhattan",
-      coordinates: "40°42′51″N 74°00′22″W",
+      coordinates: { lat: 40.714167, lng: -74.006111 },
     },
     county: "New York",
     description:
@@ -1198,7 +1205,7 @@ const landmarks = [
     date_designated: "February 16, 2000 (#99000562)",
     location: {
       area: "Manhattan",
-      coordinates: "40°44′02″N 74°00′08″W",
+      coordinates: { lat: 40.733889, lng: -74.002222 },
     },
     county: "New York",
     description: "Site of 1969 Stonewall riots which began gay rights movement",
@@ -1210,7 +1217,7 @@ const landmarks = [
     date_designated: "October 31, 2016 (#80002719)",
     location: {
       area: "Midtown Manhattan",
-      coordinates: "40°45′26″N 73°58′25″W",
+      coordinates: { lat: 40.757222, lng: -73.973611 },
     },
     county: "New York",
     description:
@@ -1223,7 +1230,7 @@ const landmarks = [
     date_designated: "December 22, 1977 (#72000888)",
     location: {
       area: "Manhattan",
-      coordinates: "40°42′49″N 74°00′17″W",
+      coordinates: { lat: 40.713611, lng: -74.004722 },
     },
     county: "New York",
     description: "Probate Courthouse across from City Hall",
@@ -1232,23 +1239,24 @@ const landmarks = [
     id: 97,
     name: "Tenement Building at 97 Orchard Street",
     image: "Tenement Building at 97 Orchard Street",
-    date_designated: "April 19, 1994 (#92000556)",
+    date_designated: "April 19, 1994",
     location: {
       area: "Manhattan",
-      coordinates: "40°43′07″N 73°59′25″W",
+      coordinates: { lat: 40.718611, lng: -73.990278 },
     },
     county: "New York",
     description:
       "Preserved tenement building that housed hundreds of immigrants; now the heart of the Lower East Side Tenement Museum.",
+    link: "https://www.tenement.org/",
   },
   {
     id: 98,
     name: "Third Judicial District Courthouse",
     image: "Third Judicial District Courthouse",
-    date_designated: "December 22, 1977 (#72000875)",
+    date_designated: "December 22, 1977",
     location: {
       area: "Manhattan",
-      coordinates: "40°44′05″N 73°59′57″W",
+      coordinates: { lat: 40.734722, lng: -73.999167 },
     },
     county: "New York",
     description:
@@ -1258,10 +1266,10 @@ const landmarks = [
     id: 99,
     name: "Tiffany and Company Building",
     image: "Tiffany and Company Building",
-    date_designated: "June 2, 1978 (#78001886)",
+    date_designated: "June 2, 1978",
     location: {
       area: "Manhattan",
-      coordinates: "40°45′00″N 73°58′53″W",
+      coordinates: { lat: 40.750000, lng: -73.981389 },
     },
     county: "New York",
     description:
@@ -1271,10 +1279,10 @@ const landmarks = [
     id: 100,
     name: "Samuel J. Tilden House",
     image: "Samuel J. Tilden House",
-    date_designated: "May 11, 1976 (#76001251)",
+    date_designated: "May 11, 1976",
     location: {
       area: "Manhattan",
-      coordinates: "40°44′15″N 73°59′14″W",
+      coordinates: { lat: 40.737500, lng: -73.986944 },
     },
     county: "New York",
     description:
@@ -1284,10 +1292,10 @@ const landmarks = [
     id: 101,
     name: "The Town Hall",
     image: "The Town Hall",
-    date_designated: "March 2, 2012 (#80002724)",
+    date_designated: "March 2, 2012",
     location: {
       area: "Manhattan",
-      coordinates: "40°45′22″N 73°59′05″W",
+      coordinates: { lat: 40.756111, lng: -73.984722 },
     },
     county: "New York",
     description:
@@ -1297,10 +1305,10 @@ const landmarks = [
     id: 102,
     name: "Triangle Shirtwaist Factory",
     image: "Triangle Shirtwaist Factory",
-    date_designated: "July 17, 1971 (#91002050)",
+    date_designated: "July 17, 1971",
     location: {
       area: "Manhattan",
-      coordinates: "40°43′48″N 73°59′45″W",
+      coordinates: { lat: 40.730000, lng: -73.995833 },
     },
     county: "New York",
     description:
@@ -1310,10 +1318,10 @@ const landmarks = [
     id: 103,
     name: "Trinity Church",
     image: "Trinity Church",
-    date_designated: "December 8, 1976 (#76001252)",
+    date_designated: "December 8, 1976",
     location: {
       area: "Manhattan",
-      coordinates: "40°42′29″N 74°00′44″W",
+      coordinates: { lat: 40.708056, lng: -74.012222 },
     },
     county: "New York",
     description: "Historic church which looks down Wall Street",
@@ -1322,10 +1330,10 @@ const landmarks = [
     id: 104,
     name: "Old New York County Courthouse",
     image: "Old New York County Courthouse",
-    date_designated: "May 11, 1976 (#74001277)",
+    date_designated: "May 11, 1976",
     location: {
       area: "Manhattan",
-      coordinates: "40°42′47″N 74°00′22″W",
+      coordinates: { lat: 40.713056, lng: -74.006111 },
     },
     county: "New York",
     description:
@@ -1335,10 +1343,10 @@ const landmarks = [
     id: 105,
     name: "Union Square",
     image: "Union Square",
-    date_designated: "December 9, 1997 (#97001678)",
+    date_designated: "December 9, 1997",
     location: {
       area: "Manhattan",
-      coordinates: "40°44′08″N 73°59′26″W",
+      coordinates: { lat: 40.735556, lng: -73.990556 },
     },
     county: "New York",
     description:
@@ -1348,10 +1356,10 @@ const landmarks = [
     id: 106,
     name: "United Charities Building",
     image: "United Charities Building",
-    date_designated: "July 17, 1991 (#85000661)",
+    date_designated: "July 17, 1991",
     location: {
       area: "Manhattan",
-      coordinates: "40°44′22″N 73°59′11″W",
+      coordinates: { lat: 40.739444, lng: -73.986389 },
     },
     county: "New York",
     description:
@@ -1361,10 +1369,10 @@ const landmarks = [
     id: 107,
     name: "United Workers Cooperatives",
     image: "United Workers Cooperatives",
-    date_designated: "July 17, 1991 (#86002518)",
+    date_designated: "July 17, 1991",
     location: {
       area: "Bronx",
-      coordinates: "40°51′59″N 73°52′11″W",
+      coordinates: { lat: 40.866389, lng: -73.869722 },
     },
     county: "Bronx",
     description:
@@ -1374,10 +1382,10 @@ const landmarks = [
     id: 108,
     name: "U.S. Customhouse",
     image: "U.S. Customhouse",
-    date_designated: "December 8, 1976 (#72000889)",
+    date_designated: "December 8, 1976",
     location: {
       area: "Manhattan",
-      coordinates: "40°42′15″N 74°00′50″W",
+      coordinates: { lat: 40.704167, lng: -74.013889 },
     },
     county: "New York",
     description:
@@ -1388,10 +1396,10 @@ const landmarks = [
     name: "University Heights Campus (Bronx Community College of the City University of New York)",
     image:
       "University Heights Campus (Bronx Community College of the City University of New York)",
-    date_designated: "October 17, 2012 (#12001013)",
+    date_designated: "October 17, 2012",
     location: {
       area: "Bronx",
-      coordinates: "40°51′28″N 73°54′44″W",
+      coordinates: { lat: 40.857778, lng: -73.912222 },
     },
     county: "Bronx",
     description:
@@ -1401,23 +1409,24 @@ const landmarks = [
     id: 110,
     name: "Van Cortlandt House",
     image: "Van Cortlandt House",
-    date_designated: "December 24, 1976 (#67000010)",
+    date_designated: "December 24, 1976",
     location: {
       area: "Van Cortlandt Park",
-      coordinates: "40°53′24″N 73°53′47″W",
+      coordinates: { lat: 40.890000, lng: -73.896389 },
     },
     county: "Bronx",
     description:
       "Mansion for the Van Cortlandt family built in 1748 and used during the American Revolution",
+    link: "https://www.vchm.org/",
   },
   {
     id: 111,
     name: "Voorlezer's House",
     image: "Voorlezer's House",
-    date_designated: "November 5, 1961 (#66000565)",
+    date_designated: "November 5, 1961",
     location: {
       area: "Richmondtown",
-      coordinates: "40°34′17″N 74°08′51″W",
+      coordinates: { lat: 40.571389, lng: -74.147500 },
     },
     county: "Richmond",
     description:
@@ -1427,10 +1436,10 @@ const landmarks = [
     id: 112,
     name: "Wards Point Archeological Site",
     image: "Wards Point Archeological Site",
-    date_designated: "April 19, 1993 (#93000609)",
+    date_designated: "April 19, 1993",
     location: {
       area: "Tottenville",
-      coordinates: "40°29′56″N 74°15′07″W",
+      coordinates: { lat: 40.498889, lng: -74.251944 },
     },
     county: "Richmond",
     description:
@@ -1440,10 +1449,10 @@ const landmarks = [
     id: 113,
     name: "Woodlawn Cemetery",
     image: "Woodlawn Cemetery",
-    date_designated: "June 23, 2011 (#11000563)",
+    date_designated: "June 23, 2011",
     location: {
       area: "Bronx",
-      coordinates: "40°53′21″N 73°52′24″W",
+      coordinates: { lat: 40.889167, lng: -73.873333 },
     },
     county: "Bronx",
     description:
@@ -1453,10 +1462,10 @@ const landmarks = [
     id: 114,
     name: "Woolworth Building",
     image: "Woolworth Building",
-    date_designated: "November 13, 1966 (#66000554)",
+    date_designated: "November 13, 1966",
     location: {
       area: "Manhattan",
-      coordinates: "40°42′44″N 74°00′29″W",
+      coordinates: { lat: 40.712222, lng: -74.008056 },
     },
     county: "New York",
     description:
@@ -1466,10 +1475,10 @@ const landmarks = [
     id: 115,
     name: "Wyckoff House",
     image: "Wyckoff House",
-    date_designated: "December 24, 1967 (#67000013)",
+    date_designated: "December 24, 1967",
     location: {
       area: "Brooklyn",
-      coordinates: "40°38′40″N 73°55′15″W",
+      coordinates: { lat: 40.644444, lng: -73.920833 },
     },
     county: "Kings",
     description: "Oldest surviving Dutch saltbox frame house in America",
@@ -1478,10 +1487,10 @@ const landmarks = [
     id: 116,
     name: "Wyckoff-Bennett Homestead",
     image: "Wyckoff-Bennett Homestead",
-    date_designated: "December 24, 1976 (#74001253)",
+    date_designated: "December 24, 1976",
     location: {
       area: "Brooklyn",
-      coordinates: "40°36′39″N 73°57′05″W",
+      coordinates: { lat: 40.610833, lng: -73.951389 },
     },
     county: "Kings",
     description: "Housed Hessian soldiers during the American Revolution",

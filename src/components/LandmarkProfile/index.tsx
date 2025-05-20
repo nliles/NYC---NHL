@@ -33,50 +33,30 @@ const LandmarkProfile = ({
   };
 
   return (
-    <div>
-      <div className="h-full overflow-y-auto">
-        {/* Header */}
-        <div className="relative h-48 bg-gray-800">
-          <h2 className={styles.header}>{landmark.name}</h2>
+    <div className={styles.container}>
+       <div className={styles.content}>
+           <h2 className={styles.header}>{landmark.name}</h2>
           <img
-            src="map3.jpeg" // Update this path to your actual image path
+            src="grace.jpg" // Update this path to your actual image path
             alt={landmark.name}
             width="100%"
             className="w-full h-full object-cover opacity-80"
           />
-        </div>
-        {landmark.quote && (
+          {landmark.quote && (
           <div className={styles.quote}>
             <blockquote>"{landmark.quote}"</blockquote>
             <div className={styles.author}>— {landmark.quote_author}</div>
           </div>
         )}
-        {/* Content */}
-        <div className="p-4">
-          {/* Info section */}
-          <div className="space-y-3 mb-6">
-            <div className="flex items-center text-gray-600">
-              <span className="mr-2">📅</span> {/* Calendar icon */}
-              <span className="text-sm">
+                      <span className="text-sm">
                 Designated: {landmark.date_designated}
               </span>
-            </div>
-
-            <div className="flex items-center text-gray-600">
-              <span className="mr-2">📍</span> {/* Pin icon */}
               <span className="text-sm">
                 {landmark.location?.area}, {landmark.county}
               </span>
-            </div>
-          </div>
+          <h3 className="text-lg font-semibold mb-2">Description</h3>
+          <p className="text-gray-700">{landmark.description}</p>
 
-          {/* Description */}
-          <div className="mb-6">
-            <h3 className="text-lg font-semibold mb-2">Description</h3>
-            <p className="text-gray-700">{landmark.description}</p>
-          </div>
-
-          {/* Visited checkbox */}
           <div className="flex items-center mb-6">
             <input
               type="checkbox"
@@ -90,18 +70,19 @@ const LandmarkProfile = ({
             </label>
             {visited && <span className="ml-2 text-green-600">✓</span>}
           </div>
+        </div>
 
-          {/* Link */}
+          <div className={styles.learnMore}>
           <a
             href={landmark.link}
             className={styles.link}
             target="_blank"
             rel="noopener noreferrer"
           >
-            Visit Official Website
+           Learn More
+           <img src="arrow.png" width="20px" height="20px"/>
           </a>
-        </div>
-      </div>
+          </div>
     </div>
   );
 };
