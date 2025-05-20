@@ -21,12 +21,19 @@ const App = () => {
               isOpen={true}
               onClose={() => setSelectedLocation(undefined)}
             >
-              <ParkProfile landmark={selectedLocation} setVisitedLandmarks={setVisitedLandmarks} visitedLandmarks={visitedLandmarks}/>
+              <ParkProfile
+                landmark={selectedLocation}
+                setVisitedLandmarks={setVisitedLandmarks}
+                visitedLandmarks={visitedLandmarks}
+              />
             </SidePanel>
           )}
         </Portal>
       </div>
-      <Map setSelectedLocation={setSelectedLocation} visitedLandmarks={visitedLandmarks}/>
+      <Map
+        setSelectedLocation={setSelectedLocation}
+        visitedLandmarks={visitedLandmarks}
+      />
     </>
   );
 };

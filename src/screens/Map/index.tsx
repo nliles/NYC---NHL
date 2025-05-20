@@ -161,17 +161,17 @@ const Map = ({
 
   // EFFECT 2: Update colors when visitedLandmarks changes
   useEffect(() => {
-    if (mapInstance.current && mapInstance.current.isStyleLoaded() && mapInstance.current.getLayer('landmark-points')) {
-      mapInstance.current.setPaintProperty(
-        'landmark-points',
-        'circle-color',
-        [
-          'case',
-          ['in', ['get', 'id'], ['literal', visitedLandmarks || []]],
-          '#E63946', // visited - red
-          '#8BC34A'  // not visited - green
-        ]
-      );
+    if (
+      mapInstance.current &&
+      mapInstance.current.isStyleLoaded() &&
+      mapInstance.current.getLayer("landmark-points")
+    ) {
+      mapInstance.current.setPaintProperty("landmark-points", "circle-color", [
+        "case",
+        ["in", ["get", "id"], ["literal", visitedLandmarks || []]],
+        "#E63946", // visited - red
+        "#8BC34A", // not visited - green
+      ]);
     }
   }, [visitedLandmarks]);
 

@@ -1,7 +1,10 @@
 import styles from "./LandmarkProfile.module.css";
 
-const LandmarkProfile = ({ landmark, setVisitedLandmarks, visitedLandmarks }: any) => {
-
+const LandmarkProfile = ({
+  landmark,
+  setVisitedLandmarks,
+  visitedLandmarks,
+}: any) => {
   // State for visited checkbox
   const visited = visitedLandmarks.includes(landmark.id);
 
