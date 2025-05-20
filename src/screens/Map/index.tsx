@@ -39,32 +39,7 @@ const Map = ({
         // Convert landmarks to GeoJSON
         const geojson = {
           type: "FeatureCollection",
-          features: landmarks
-            .map((landmark) => {
-              const coordinates = dmsToDecimal(landmark.location.coordinates);
-              if (!coordinates) return null;
-
-              return {
-                type: "Feature",
-                geometry: {
-                  type: "Point",
-                  coordinates: coordinates,
-                },
-                properties: {
-                  id: landmark.id,
-                  name: landmark.name,
-                  description: landmark.description,
-                  date: landmark.date_designated,
-                  county: landmark.county,
-                  area: landmark.location.area,
-                  link: landmark.link,
-                  quote: landmark.quote,
-                  quote_author: landmark.quote_author,
-                  date_designated: landmark.date_designated,
-                },
-              };
-            })
-            .filter((feature) => feature !== null),
+          features: landmarks,
         };
 
         // Add landmarks as a source

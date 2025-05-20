@@ -1,4 +1,5 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import axios from 'axios';
 import styles from "./LandmarkProfile.module.css";
 
 const LandmarkProfile = ({
@@ -8,31 +9,6 @@ const LandmarkProfile = ({
 }: any) => {
   // State for visited checkbox
   const visited = visitedLandmarks.includes(landmark.id);
-
-  useEffect(() => {
-      // NYPL Digital Collections API endpoint
-  const corsProxy = 'https://cors-anywhere.herokuapp.com/';
-  const uuid = "a26acee0-99d7-0132-70ae-58d385a7bbd0";
-  const apiUrl = `${corsProxy}https://api.repo.nypl.org/api/v2/items/${uuid}`;
-  const token = '8q4vmb5drompvcmq';
-
-    const fetchImage = async () => {
-      try {
-        const response = await fetch(apiUrl, {
-          method: 'GET',
-          headers: {
-            'Authorization': `Token token=${token}`,
-            'Accept': 'application/json'
-          }
-        });
-        console.log(response)
-      } catch (error) {
-
-      }
-    }
-
-    fetchImage();
-  }, [])
 
   // Save visited status to localStorage when changed
   const handleVisitedChange = (e: any) => {
@@ -61,25 +37,28 @@ const LandmarkProfile = ({
   return (
     <div className={styles.container}>
       <div className={styles.content}>
-        <div>
+        <div className={styles.info}>
           <h2 className={styles.header}>{landmark.name}</h2>
           <img
-            src="grace.jpg" // Update this path to your actual image path
+            src={`landmark-${landmark.id}.jpeg`} // Update this path to your actual image path
             alt={landmark.name}
-            width="100%"
+            className={styles.img}
           />
+          {landmark.image_caption && <span className={styles.caption}>{landmark.image_caption}</span>}
           {landmark.quote && (
             <div className={styles.quote}>
               <blockquote>"{landmark.quote}"</blockquote>
               <div className={styles.author}>— {landmark.quote_author}</div>
             </div>
           )}
+          <div className={styles.details}>
           <span>Designated: {landmark.date_designated}</span>
           <span>
             {landmark.location?.area}, {landmark.county}
           </span>
           <h3>Description</h3>
           <p>{landmark.description}</p>
+          </div>
         </div>
 
         <div className={styles.visited}>
