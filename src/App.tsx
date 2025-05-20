@@ -31,6 +31,7 @@ const App = () => {
         </Portal>
       </div>
       <Map
+        selectedLocation={selectedLocation}
         setSelectedLocation={setSelectedLocation}
         visitedLandmarks={visitedLandmarks}
       />

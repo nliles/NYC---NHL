@@ -36,24 +36,24 @@ const LandmarkProfile = ({
     <div className={styles.container}>
       <div className={styles.content}>
         <div>
-        <h2 className={styles.header}>{landmark.name}</h2>
-        <img
-          src="grace.jpg" // Update this path to your actual image path
-          alt={landmark.name}
-          width="100%"
-        />
-        {landmark.quote && (
-          <div className={styles.quote}>
-            <blockquote>"{landmark.quote}"</blockquote>
-            <div className={styles.author}>— {landmark.quote_author}</div>
-          </div>
-        )}
-        <span>Designated: {landmark.date_designated}</span>
-        <span>
-          {landmark.location?.area}, {landmark.county}
-        </span>
-        <h3>Description</h3>
-        <p>{landmark.description}</p>
+          <h2 className={styles.header}>{landmark.name}</h2>
+          <img
+            src="grace.jpg" // Update this path to your actual image path
+            alt={landmark.name}
+            width="100%"
+          />
+          {landmark.quote && (
+            <div className={styles.quote}>
+              <blockquote>"{landmark.quote}"</blockquote>
+              <div className={styles.author}>— {landmark.quote_author}</div>
+            </div>
+          )}
+          <span>Designated: {landmark.date_designated}</span>
+          <span>
+            {landmark.location?.area}, {landmark.county}
+          </span>
+          <h3>Description</h3>
+          <p>{landmark.description}</p>
         </div>
 
         <div className={styles.visited}>
@@ -63,9 +63,7 @@ const LandmarkProfile = ({
             checked={visited}
             onChange={handleVisitedChange}
           />
-          <label htmlFor="visited">
-            I've visited this landmark
-          </label>
+          <label htmlFor="visited">I've visited this landmark</label>
         </div>
       </div>
 

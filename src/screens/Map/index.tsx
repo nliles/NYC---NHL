@@ -5,9 +5,11 @@ import landmarks from "./data.ts";
 import styles from "./Map.module.css";
 
 const Map = ({
+  selectedLocation,
   setSelectedLocation,
   visitedLandmarks,
 }: {
+  selectedLocation: any;
   setSelectedLocation: Dispatch<SetStateAction<undefined>>;
   visitedLandmarks: string[];
 }) => {
@@ -20,10 +22,9 @@ const Map = ({
   }
 
   useEffect(() => {
-
     if (mapboxgl && !mapInstance.current) {
       mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_TOKEN;
-        // "pk.eyJ1Ijoibm1saWxlczE2IiwiYSI6ImNtYW44dGR6MDBybnMyam9iYWNwdGM4MGsifQ.b0_OYdIxyitezCgWIR25sg";
+      // "pk.eyJ1Ijoibm1saWxlczE2IiwiYSI6ImNtYW44dGR6MDBybnMyam9iYWNwdGM4MGsifQ.b0_OYdIxyitezCgWIR25sg";
 
       const map = new mapboxgl.Map({
         container: mapContainer.current,
@@ -132,22 +133,31 @@ const Map = ({
     };
   }, [setSelectedLocation]);
 
-    // EFFECT 2: Update colors when visitedLandmarks changes
-    useEffect(() => {
-      if (mapInstance.current && mapInstance.current.isStyleLoaded() && mapInstance.current.getLayer('landmark-points')) {
-        mapInstance.current.setPaintProperty(
-          'landmark-points',
-          'circle-color',
-          [
-            'case',
-            ['in', ['get', 'id'], ['literal', visitedLandmarks || []]],
-            '#E63946', // visited - red
-            '#8BC34A'  // not visited - green
-          ]
-        );
-      }
-    }, [visitedLandmarks]);
-  
+  // EFFECT 2: Update colors when visitedLandmarks changes
+  useEffect(() => {
+    if (
+      mapInstance.current &&
+      mapInstance.current.isStyleLoaded() &&
+      mapInstance.current.getLayer("landmark-points")
+    ) {
+      mapInstance.current.setPaintProperty("landmark-points", "circle-color", [
+        "case",
+        ["in", ["get", "id"], ["literal", visitedLandmarks || []]],
+        "#E63946", // visited - red
+        "#8BC34A", // not visited - green
+      ]);
+      mapInstance.current.setPaintProperty(
+        "landmark-points",
+        "circle-stroke-color", // This is the "halo" property for points
+        [
+          "case",
+          ["==", ["get", "id"], selectedLocation?.id || null], // Check if this point is selected
+          "#ff0000", // Use this color for the selected point's halo (red in this example)
+          "#ffffff", // Default halo color for unselected points (white)
+        ],
+      );
+    }
+  }, [visitedLandmarks, selectedLocation]);
 
   return (
     <div className={styles.container}>
