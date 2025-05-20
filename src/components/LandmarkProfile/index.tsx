@@ -35,12 +35,12 @@ const LandmarkProfile = ({
   return (
     <div className={styles.container}>
       <div className={styles.content}>
+        <div>
         <h2 className={styles.header}>{landmark.name}</h2>
         <img
           src="grace.jpg" // Update this path to your actual image path
           alt={landmark.name}
           width="100%"
-          className="w-full h-full object-cover opacity-80"
         />
         {landmark.quote && (
           <div className={styles.quote}>
@@ -48,25 +48,24 @@ const LandmarkProfile = ({
             <div className={styles.author}>— {landmark.quote_author}</div>
           </div>
         )}
-        <span className="text-sm">Designated: {landmark.date_designated}</span>
-        <span className="text-sm">
+        <span>Designated: {landmark.date_designated}</span>
+        <span>
           {landmark.location?.area}, {landmark.county}
         </span>
-        <h3 className="text-lg font-semibold mb-2">Description</h3>
-        <p className="text-gray-700">{landmark.description}</p>
+        <h3>Description</h3>
+        <p>{landmark.description}</p>
+        </div>
 
-        <div className="flex items-center mb-6">
+        <div className={styles.visited}>
           <input
             type="checkbox"
             id="visited"
             checked={visited}
             onChange={handleVisitedChange}
-            className="h-5 w-5 text-blue-600 rounded border-gray-300 focus:ring-blue-500"
           />
-          <label htmlFor="visited" className="ml-2 text-gray-700">
+          <label htmlFor="visited">
             I've visited this landmark
           </label>
-          {visited && <span className="ml-2 text-green-600">✓</span>}
         </div>
       </div>
 
