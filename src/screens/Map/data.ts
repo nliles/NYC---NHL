@@ -1690,9 +1690,9 @@ const landmarks = [
       name: "Woodlawn Cemetery",
       description:
         "Illustrates transition from rural cemetery to 20th-century styles; notable dead buried here include Robert Moses and R.H. Macy",
-      county: "Bronx",
       area: "Bronx",
       date_designated: "June 23, 2011",
+      link: "https://www.woodlawn.org/",
     },
   },
   {
