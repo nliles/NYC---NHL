@@ -445,9 +445,9 @@ const landmarks = [
       id: 29,
       name: "Dyckman House",
       description: "Only remaining farmhouse in Manhattan",
-      county: "New York",
       area: "Manhattan",
       date_designated: "December 24, 1967",
+      link: "https://dyckmanfarmhouse.org/",
     },
   },
   {
@@ -461,9 +461,9 @@ const landmarks = [
       name: "Eldridge Street Synagogue",
       description:
         "One of the oldest synagogues in the U.S.; first built by Jews from Eastern Europe",
-      county: "New York",
       area: "Manhattan",
       date_designated: "June 19, 1996",
+      link: "https://www.eldridgestreet.org/",
     },
   },
   {
@@ -477,7 +477,6 @@ const landmarks = [
       name: "Duke Ellington House",
       description:
         "Ellington, the legendary jazz composer and bandleader, lived in Apartment 4A from 1939 to 1961",
-      county: "New York",
       area: "Manhattan",
       date_designated: "May 11, 1976",
     },
@@ -509,7 +508,6 @@ const landmarks = [
       name: "Equitable Building",
       description:
         "One of the earliest skyscrapers in Manhattan; profoundly influenced later skyscraper design",
-      county: "New York",
       area: "Manhattan",
       date_designated: "June 2, 1978",
     },
@@ -525,7 +523,6 @@ const landmarks = [
       name: "Hamilton Fish House",
       description:
         "Home of Hamilton Fish, future Governor and Senator of New York",
-      county: "New York",
       area: "Manhattan",
       date_designated: "May 15, 1975",
     },
@@ -620,6 +617,7 @@ const landmarks = [
         "Beaux-Arts architecture; historic rail gateway to New York City; largest train station in the world by number of platforms",
       area: "Manhattan",
       date_designated: "December 8, 1976",
+      link: "https://grandcentralterminal.com/",
     },
   },
   {
@@ -681,7 +679,6 @@ const landmarks = [
       name: "Henry Street Settlement and Neighborhood Playhouse",
       description:
         "One of the nation's first settlement homes where new immigrants and the poor could find assistance",
-      county: "New York",
       area: "Manhattan",
       date_designated: "May 30, 1974",
     },
