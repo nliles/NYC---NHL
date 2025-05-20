@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import styles from "./LandmarkProfile.module.css";
 
 const LandmarkProfile = ({
@@ -7,6 +8,31 @@ const LandmarkProfile = ({
 }: any) => {
   // State for visited checkbox
   const visited = visitedLandmarks.includes(landmark.id);
+
+  useEffect(() => {
+      // NYPL Digital Collections API endpoint
+  const corsProxy = 'https://cors-anywhere.herokuapp.com/';
+  const uuid = "a26acee0-99d7-0132-70ae-58d385a7bbd0";
+  const apiUrl = `${corsProxy}https://api.repo.nypl.org/api/v2/items/${uuid}`;
+  const token = '8q4vmb5drompvcmq';
+
+    const fetchImage = async () => {
+      try {
+        const response = await fetch(apiUrl, {
+          method: 'GET',
+          headers: {
+            'Authorization': `Token token=${token}`,
+            'Accept': 'application/json'
+          }
+        });
+        console.log(response)
+      } catch (error) {
+
+      }
+    }
+
+    fetchImage();
+  }, [])
 
   // Save visited status to localStorage when changed
   const handleVisitedChange = (e: any) => {
