@@ -1,18 +1,9 @@
-import React, { useState, useEffect } from "react";
-import styles from "./ParkProfile.module.css";
+import styles from "./LandmarkProfile.module.css";
 
-const LandmarkSidePanel = ({ landmark }) => {
-  const [visitedLandmarks, setVisitedLandmarks] = useState(() => {
-    const storedLandmarks = localStorage.getItem("visitedLandmarks");
-    return storedLandmarks ? JSON.parse(storedLandmarks) : [];
-  });
+const LandmarkProfile = ({ landmark, setVisitedLandmarks, visitedLandmarks }: any) => {
 
   // State for visited checkbox
   const visited = visitedLandmarks.includes(landmark.id);
-
-  console.log(visited);
-
-  console.log(localStorage.getItem("visitedLandmarks"));
 
   // Save visited status to localStorage when changed
   const handleVisitedChange = (e: any) => {
@@ -112,4 +103,4 @@ const LandmarkSidePanel = ({ landmark }) => {
   );
 };
 
-export default LandmarkSidePanel;
+export default LandmarkProfile;

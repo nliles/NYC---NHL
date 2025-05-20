@@ -3,10 +3,14 @@ import "./App.css";
 import Portal from "./components/Portal";
 import SidePanel from "./components/SidePanel";
 import Map from "./screens/Map";
-import ParkProfile from "./components/ParkProfile";
+import ParkProfile from "./components/LandmarkProfile";
 
 const App = () => {
   const [selectedLocation, setSelectedLocation] = useState();
+  const [visitedLandmarks, setVisitedLandmarks] = useState(() => {
+    const storedLandmarks = localStorage.getItem("visitedLandmarks");
+    return storedLandmarks ? JSON.parse(storedLandmarks) : [];
+  });
 
   return (
     <>
@@ -17,12 +21,12 @@ const App = () => {
               isOpen={true}
               onClose={() => setSelectedLocation(undefined)}
             >
-              <ParkProfile landmark={selectedLocation} />
+              <ParkProfile landmark={selectedLocation} setVisitedLandmarks={setVisitedLandmarks} visitedLandmarks={visitedLandmarks}/>
             </SidePanel>
           )}
         </Portal>
       </div>
-      <Map setSelectedLocation={setSelectedLocation} />
+      <Map setSelectedLocation={setSelectedLocation} visitedLandmarks={visitedLandmarks}/>
     </>
   );
 };

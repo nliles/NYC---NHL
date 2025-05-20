@@ -1,4 +1,3 @@
-// In your React component
 import { Dispatch, SetStateAction, useEffect, useRef } from "react";
 import mapboxgl from "mapbox-gl/dist/mapbox-gl";
 import landmarks from "./data.ts";
@@ -6,8 +5,10 @@ import styles from "./Map.module.css";
 
 const Map = ({
   setSelectedLocation,
+  visitedLandmarks,
 }: {
   setSelectedLocation: Dispatch<SetStateAction<undefined>>;
+  visitedLandmarks: string[];
 }) => {
   const mapContainer = useRef(null);
   const mapInstance = useRef(null);
@@ -45,9 +46,8 @@ const Map = ({
     return [lng, lat]; // GeoJSON uses [longitude, latitude]
   }
 
+  // EFFECT 1: Initialize the map (only once)
   useEffect(() => {
-    const storedLandmarks = localStorage.getItem("visitedLandmarks");
-
     if (mapboxgl && !mapInstance.current) {
       mapboxgl.accessToken =
         "pk.eyJ1Ijoibm1saWxlczE2IiwiYSI6ImNtYW44dGR6MDBybnMyam9iYWNwdGM4MGsifQ.b0_OYdIxyitezCgWIR25sg";
@@ -108,9 +108,9 @@ const Map = ({
             "circle-radius": 8,
             "circle-color": [
               "case",
-              ["in", ["get", "id"], ["literal", storedLandmarks || []]],
-              "#E63946", // Color if ID is in storedLandmarks (visited)
-              "#8BC34A", // Color if not in storedLandmarks (not visited)
+              ["in", ["get", "id"], ["literal", visitedLandmarks || []]],
+              "#E63946", // Color if ID is in visitedLandmarks (visited)
+              "#8BC34A", // Color if not in visitedLandmarks (not visited)
             ],
             "circle-stroke-width": 2,
             "circle-stroke-color": "#ffffff",
@@ -157,7 +157,23 @@ const Map = ({
         mapInstance.current = null;
       }
     };
-  }, [setSelectedLocation]);
+  }, [setSelectedLocation]); // Remove visitedLandmarks from dependencies
+
+  // EFFECT 2: Update colors when visitedLandmarks changes
+  useEffect(() => {
+    if (mapInstance.current && mapInstance.current.isStyleLoaded() && mapInstance.current.getLayer('landmark-points')) {
+      mapInstance.current.setPaintProperty(
+        'landmark-points',
+        'circle-color',
+        [
+          'case',
+          ['in', ['get', 'id'], ['literal', visitedLandmarks || []]],
+          '#E63946', // visited - red
+          '#8BC34A'  // not visited - green
+        ]
+      );
+    }
+  }, [visitedLandmarks]);
 
   return (
     <div className={styles.container}>
