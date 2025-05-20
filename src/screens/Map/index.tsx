@@ -1,23 +1,25 @@
 // In your React component
-import { useEffect, useRef, useState } from "react";
+import { Dispatch, SetStateAction, useEffect, useRef } from "react";
 import mapboxgl from "mapbox-gl/dist/mapbox-gl";
 import landmarks from "./data.ts";
 import styles from "./Map.module.css";
-import SidePanel from "../../components/SidePanel/index.tsx";
-import Portal from "../../components/Portal/index.tsx";
 
-const Map = () => {
+const Map = ({
+  setSelectedLocation,
+}: {
+  setSelectedLocation: Dispatch<SetStateAction<undefined>>;
+}) => {
   const mapContainer = useRef(null);
   const mapInstance = useRef(null);
 
   // Convert DMS coordinates to decimal degrees
-  function dmsToDecimal(dms) {
+  function dmsToDecimal(dms: any) {
     // Handle DMS format like 40°44′30″N 73°59′01″W
     const parts = dms.split(" ");
 
     if (parts.length !== 2) return null;
 
-    function parseDMSPart(part) {
+    function parseDMSPart(part: any) {
       const regex = /(\d+)°(\d+)′(\d+)″([NSEW])/;
       const match = part.match(regex);
 
@@ -44,6 +46,8 @@ const Map = () => {
   }
 
   useEffect(() => {
+    const storedLandmarks = localStorage.getItem("visitedLandmarks");
+
     if (mapboxgl && !mapInstance.current) {
       mapboxgl.accessToken =
         "pk.eyJ1Ijoibm1saWxlczE2IiwiYSI6ImNtYW44dGR6MDBybnMyam9iYWNwdGM4MGsifQ.b0_OYdIxyitezCgWIR25sg";
@@ -79,6 +83,10 @@ const Map = () => {
                   date: landmark.date_designated,
                   county: landmark.county,
                   area: landmark.location.area,
+                  link: landmark.link,
+                  quote: landmark.quote,
+                  quote_author: landmark.quote_author,
+                  date_designated: landmark.date_designated,
                 },
               };
             })
@@ -98,7 +106,12 @@ const Map = () => {
           source: "landmarks",
           paint: {
             "circle-radius": 8,
-            "circle-color": "#E63946",
+            "circle-color": [
+              "case",
+              ["in", ["get", "id"], ["literal", storedLandmarks || []]],
+              "#E63946", // Color if ID is in storedLandmarks (visited)
+              "#8BC34A", // Color if not in storedLandmarks (not visited)
+            ],
             "circle-stroke-width": 2,
             "circle-stroke-color": "#ffffff",
           },
@@ -124,24 +137,7 @@ const Map = () => {
 
         // Add popups on click
         map.on("click", "landmark-points", (e) => {
-          const coordinates = e.features[0].geometry.coordinates.slice();
-          const { name, description, date, link } = e.features[0].properties;
-          const link2 =
-            "https://digitalcollections.nypl.org/items/510d47dd-27c0-a3d9-e040-e00a18064a99";
-
-          // Create popup HTML
-          const popupContent = `
-            <div>
-              <h3 style="margin: 0 0 8px 0; font-size: 16px;">${name}</h3>
-              <a href=${link} target="_blank">${name}</a>
-              <p style="margin: 0 0 6px 0; font-size: 14px;">${description}</p>
-              <img src="${link2}"/>
-            </div>`;
-
-          new mapboxgl.Popup()
-            .setLngLat(coordinates)
-            .setHTML(popupContent)
-            .addTo(map);
+          setSelectedLocation(e.features[0].properties);
         });
 
         // Change cursor to pointer when hovering landmarks
@@ -161,11 +157,11 @@ const Map = () => {
         mapInstance.current = null;
       }
     };
-  }, []);
+  }, [setSelectedLocation]);
 
   return (
     <div className={styles.container}>
-      <div ref={mapContainer} style={{ height: "100vh", width: "75%" }} />
+      <div ref={mapContainer} style={{ height: "100vh", width: "100%" }} />
     </div>
   );
 };

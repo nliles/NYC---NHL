@@ -6,29 +6,23 @@ import Map from "./screens/Map";
 import ParkProfile from "./components/ParkProfile";
 
 const App = () => {
-  const [isSidePanelOpen, setIsSidePanelOpen] = useState(false);
-
-  const handleOpenSidePanel = () => {
-    setIsSidePanelOpen(true);
-  };
-
-  const handleCloseSidePanel = () => {
-    setIsSidePanelOpen(false);
-  };
+  const [selectedLocation, setSelectedLocation] = useState();
 
   return (
     <>
       <div>
-        <button onClick={handleOpenSidePanel}>Open Side Panel</button>
         <Portal containerId="portal-root">
-          {isSidePanelOpen && (
-            <SidePanel isOpen={isSidePanelOpen} onClose={handleCloseSidePanel}>
-              <ParkProfile />
+          {selectedLocation && (
+            <SidePanel
+              isOpen={true}
+              onClose={() => setSelectedLocation(undefined)}
+            >
+              <ParkProfile landmark={selectedLocation} />
             </SidePanel>
           )}
         </Portal>
       </div>
-      <Map />
+      <Map setSelectedLocation={setSelectedLocation} />
     </>
   );
 };

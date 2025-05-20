@@ -1,0 +1,13 @@
+.header {
+  margin: 0.5rem;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+
+.quote {
+  font-style: italic;
+}
+
+.author {
+  text-align: center;
+}

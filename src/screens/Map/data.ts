@@ -38,6 +38,9 @@ const landmarks = [
     description:
       "African Burial Ground is the nation's earliest and largest known African American cemetery. It was a burial site in Lower Manhattan of over 419 Africans from 1690s to 1794",
     link: "https://www.nps.gov/afbg/index.htm",
+    quote:
+      "For all those who were lost, for all those who were stolen, for all those who were left behind, for all those who were not forgotten.",
+    quote_author: "Memorial inscription, African Burial Ground",
   },
   {
     id: 4,
@@ -100,6 +103,7 @@ const landmarks = [
     },
     county: "Richmond",
     description: "Home of photographer Alice Austen, now a museum",
+    link: "https://aliceausten.org/",
   },
   {
     id: 9,
@@ -477,7 +481,7 @@ const landmarks = [
     id: 38,
     name: "Governors Island",
     image: "Castle Williams",
-    date_designated: "February 4, 1985 (#85002435)",
+    date_designated: "February 4, 1985",
     location: {
       area: "Manhattan",
       coordinates: "40°41′29″N 74°00′58″W",
@@ -490,19 +494,20 @@ const landmarks = [
     id: 39,
     name: "Grace Church",
     image: "Grace Church",
-    date_designated: "December 22, 1977 (#74001270)",
+    date_designated: "December 22, 1977",
     location: {
       area: "Manhattan",
       coordinates: "40°43′54″N 73°59′31″W",
     },
     county: "New York",
     description: "Gothic Revival masterpiece designed by James Renwick Jr.",
+    url: "https://gracechurchnyc.org/",
   },
   {
     id: 40,
     name: "Grand Central Terminal",
     image: "Grand Central Terminal",
-    date_designated: "December 8, 1976 (#75001206)",
+    date_designated: "December 8, 1976",
     location: {
       area: "Manhattan",
       coordinates: "40°45′10″N 73°58′35″W",
