@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  font-family: "Montserrat", sans-serif;
 }
 
 .content {
@@ -15,8 +16,6 @@
 
 .header {
   margin: 0.5rem;
-  font-family: "Montserrat", sans-serif;
-  text-align: center;
 }
 
 .info {
@@ -65,7 +64,7 @@
 .location {
   display: flex;
   align-items: center;
-  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .learnMore {
@@ -101,7 +100,6 @@
   display: none;
 }
 
-
 /* Hide the native checkbox */
 .native-checkbox {
   display: none;
@@ -131,7 +129,7 @@
 }
 
 .checkbox:checked + .customCheckbox::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 3px;
   left: 7px;

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import axios from 'axios';
+import axios from "axios";
 import styles from "./LandmarkProfile.module.css";
 
 const LandmarkProfile = ({
@@ -44,7 +44,9 @@ const LandmarkProfile = ({
             alt={landmark.name}
             className={styles.img}
           />
-          {landmark.image_caption && <span className={styles.caption}>{landmark.image_caption}</span>}
+          {landmark.image_caption && (
+            <span className={styles.caption}>{landmark.image_caption}</span>
+          )}
           <p>{landmark.description}</p>
           {landmark.quote && (
             <div className={styles.quote}>
@@ -53,24 +55,29 @@ const LandmarkProfile = ({
             </div>
           )}
           <div className={styles.details}>
-          <div>Designated: {landmark.date_designated}</div>
-          <div className={styles.location}>
-            <img src="location.png" width="20px" height="20px" alt="location.png"/>
-            {landmark.area}
-          </div>
+            <div className={styles.location}>
+              <img
+                src="location.png"
+                width="20px"
+                height="20px"
+                alt="location.png"
+              />
+              {landmark.area}
+            </div>
+            <div>Designated: {landmark.date_designated}</div>
           </div>
         </div>
 
         <div className={styles.visited}>
           <label className={styles.label} htmlFor="visited">
-          <input
-            className={styles.checkbox}
-            type="checkbox"
-            id="visited"
-            checked={visited}
-            onChange={handleVisitedChange}
-          />
-          <span className={styles.customCheckbox}></span>
+            <input
+              className={styles.checkbox}
+              type="checkbox"
+              id="visited"
+              checked={visited}
+              onChange={handleVisitedChange}
+            />
+            <span className={styles.customCheckbox}></span>
             I've visited this landmark
           </label>
         </div>

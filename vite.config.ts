@@ -7,12 +7,12 @@ export default defineConfig({
   plugins: [patchCssModules(), react()],
   server: {
     proxy: {
-      '/api/nypl': {
-        target: 'https://api.repo.nypl.org',
+      "/api/nypl": {
+        target: "https://api.repo.nypl.org",
         changeOrigin: true,
         secure: false,
-        rewrite: (path) => path.replace(/^\/api\/nypl/, ''),
-      }
-    }
-  }
+        rewrite: (path) => path.replace(/^\/api\/nypl/, ""),
+      },
+    },
+  },
 });
