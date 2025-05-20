@@ -244,6 +244,7 @@ const landmarks = [
       description: "One of the most famous music venues in the world",
       area: "Manhattan",
       date_designated: "December 29, 1962",
+      link: "https://www.carnegiehall.org/",
     },
   },
   {
@@ -274,6 +275,7 @@ const landmarks = [
         "The Green Lung of the city; one of the most visited city parks in the world; designed by Frederick Law Olmsted and Calvert Vaux.",
       area: "Manhattan",
       date_designated: "May 23, 1963",
+      link: "https://www.centralparknyc.org/",
     },
   },
   {
