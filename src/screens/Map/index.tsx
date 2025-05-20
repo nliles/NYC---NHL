@@ -16,15 +16,9 @@ const Map = ({
   const mapContainer = useRef(null);
   const mapInstance = useRef(null);
 
-  // Convert DMS coordinates to decimal degrees
-  function dmsToDecimal(dms: any) {
-    return [dms.lng, dms.lat]; // GeoJSON uses [longitude, latitude]
-  }
-
   useEffect(() => {
     if (mapboxgl && !mapInstance.current) {
       mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_TOKEN;
-      // "pk.eyJ1Ijoibm1saWxlczE2IiwiYSI6ImNtYW44dGR6MDBybnMyam9iYWNwdGM4MGsifQ.b0_OYdIxyitezCgWIR25sg";
 
       const map = new mapboxgl.Map({
         container: mapContainer.current,
