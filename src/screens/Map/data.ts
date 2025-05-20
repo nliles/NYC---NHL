@@ -804,7 +804,6 @@ const landmarks = [
       name: "Low Memorial Library",
       description:
         "First building on Morningside Heights campus; capped by largest freestanding granite dome in U.S.",
-      county: "New York",
       area: "Columbia University",
       date_designated: "December 23, 1987",
     },
@@ -819,7 +818,6 @@ const landmarks = [
       id: 54,
       name: "R. H. Macy and Company Store (Macy's)",
       description: "Largest department store in world for many years",
-      county: "New York",
       area: "Manhattan",
       date_designated: "June 2, 1978",
     },
@@ -835,7 +833,6 @@ const landmarks = [
       name: "McGraw-Hill Building",
       description:
         "Early Art Deco building; first U.S. building in International Style",
-      county: "New York",
       area: "Manhattan",
       date_designated: "June 29, 1989",
     },
@@ -851,7 +848,6 @@ const landmarks = [
       name: "Claude McKay Residence",
       description:
         "The Harlem YMCA, whose residents included African-American writer Claude McKay",
-      county: "New York",
       area: "Manhattan",
       date_designated: "December 8, 1976",
     },
@@ -867,7 +863,6 @@ const landmarks = [
       name: "Metropolitan Life Insurance Company Tower",
       description:
         "Tallest building in the world 1909-13; still part of the skyline a century later",
-      county: "New York",
       area: "Manhattan",
       date_designated: "June 2, 1978",
     },
@@ -883,9 +878,9 @@ const landmarks = [
       name: "Metropolitan Museum of Art",
       description:
         "The Fifth Avenue building of the Metropolitan Museum of Art, one of the world's most important and prestigious art museums",
-      county: "New York",
       area: "Manhattan",
       date_designated: "June 24, 1986",
+      link: "https://www.metmuseum.org/",
     },
   },
   {
@@ -899,7 +894,6 @@ const landmarks = [
       name: "J. Pierpont Morgan Library",
       description:
         "Office, Library, and now Museum of J. P. Morgan; the Panic of 1907 ended in the Library",
-      county: "New York",
       area: "Manhattan",
       date_designated: "November 13, 1966",
       link: "https://www.themorgan.org/",
@@ -915,7 +909,6 @@ const landmarks = [
       id: 60,
       name: "Morris-Jumel Mansion",
       description: "Oldest residential building in Manhattan",
-      county: "New York",
       area: "Manhattan",
       date_designated: "January 20, 1961",
       link: "https://morrisjumel.org/",
@@ -932,7 +925,6 @@ const landmarks = [
       name: "National City Bank Building",
       description:
         "Home to one of the country's largest and most important banks since 1908",
-      county: "New York",
       area: "Manhattan",
       date_designated: "June 2, 1978",
     },
@@ -948,7 +940,6 @@ const landmarks = [
       name: "New York Amsterdam News Building",
       description:
         "Influential black newspaper the New York Amsterdam News was published here 1916-38",
-      county: "New York",
       area: "Manhattan",
       date_designated: "May 11, 1976",
     },
@@ -980,7 +971,6 @@ const landmarks = [
       id: 64,
       name: "New York Cotton Exchange",
       description: "First commodity market in the U.S.; now 1 Hanover Square",
-      county: "New York",
       area: "Manhattan",
       date_designated: "December 22, 1977",
     },
@@ -995,7 +985,6 @@ const landmarks = [
       id: 65,
       name: "New York Life Building",
       description: "Last significant Cass Gilbert skyscraper in Manhattan",
-      county: "New York",
       area: "Manhattan",
       date_designated: "June 2, 1978",
     },
@@ -1011,7 +1000,6 @@ const landmarks = [
       name: "New York Public Library",
       description:
         "One of the largest and most important libraries in the U.S.; listing is for main branch building.",
-      county: "New York",
       area: "Manhattan",
       date_designated: "December 21, 1965",
     },
@@ -1027,7 +1015,6 @@ const landmarks = [
       name: "New York Stock Exchange",
       description:
         "One of the first securities markets in the U.S.; still the world's largest",
-      county: "New York",
       area: "Manhattan",
       date_designated: "June 2, 1978",
     },
@@ -1043,7 +1030,6 @@ const landmarks = [
       name: "New York Studio School of Drawing, Painting and Sculpture",
       description:
         "Original home of the Whitney Museum, the first devoted to 20th-century American art",
-      county: "New York",
       area: "Manhattan",
       date_designated: "April 27, 1992",
     },
@@ -1059,9 +1045,9 @@ const landmarks = [
       name: "New York Yacht Club",
       description:
         "Oldest yachting club in U.S.; longtime home of the America's Cup",
-      county: "New York",
       area: "Manhattan",
       date_designated: "May 28, 1987",
+      link: "https://nyyc.org/",
     },
   },
   {
@@ -1074,7 +1060,6 @@ const landmarks = [
       id: 70,
       name: "Old Merchant's House",
       description: "Nineteenth-century family home; preserved inside and out",
-      county: "New York",
       area: "Manhattan",
       date_designated: "June 23, 1965",
       link: "https://merchantshouse.org/",
@@ -1091,8 +1076,7 @@ const landmarks = [
       name: "Old Quaker Meeting House",
       description:
         "Only surviving 17th-century ecclesiastical frame building in New York; in almost continuous use since 1696",
-      county: "Queens",
-      area: "Flushing",
+      area: "Flushing, Queens",
       date_designated: "December 24, 1967",
     },
   },
@@ -1107,8 +1091,7 @@ const landmarks = [
       name: "Philosophy Hall",
       description:
         "Edwin Armstrong developed FM radio in this Columbia University building",
-      county: "New York",
-      area: "Columbia University",
+      area: "Columbia University, New York",
       date_designated: "July 21, 2003",
     },
   },
@@ -1123,7 +1106,6 @@ const landmarks = [
       name: "Players Club",
       description:
         "Extensive collection of art and theater memorabilia; interior redone by Stanford White",
-      county: "New York",
       area: "Manhattan",
       date_designated: "December 19, 1962",
     },
@@ -1139,9 +1121,9 @@ const landmarks = [
       name: "Plaza Hotel",
       description:
         "French Renaissance-style building; outstanding example of American hotel architecture; symbol of elegance; visible from much of lower Central Park; setting for Kay Thompson's popular Eloise series of children's books",
-      county: "New York",
       area: "Manhattan",
       date_designated: "June 24, 1986",
+      link: "https://www.theplazany.com/",
     },
   },
   {
@@ -1155,7 +1137,6 @@ const landmarks = [
       name: "Plymouth Church of the Pilgrims",
       description:
         "Important station on Underground Railroad when Henry Ward Beecher was pastor",
-      county: "Kings",
       area: "Brooklyn",
       date_designated: "July 4, 1961",
     },
@@ -1171,8 +1152,7 @@ const landmarks = [
       name: "Pupin Physics Laboratory, Columbia University",
       description:
         "Columbia University building; site of first splitting of uranium atom in U.S. and other milestones in development of atomic bomb",
-      county: "New York",
-      area: "Columbia University",
+      area: "Manhattan",
       date_designated: "December 21, 1965",
     },
   },
@@ -1186,7 +1166,6 @@ const landmarks = [
       id: 77,
       name: "Quarters A, Brooklyn Navy Yard",
       description: "Home to Matthew Perry at the time of his opening of Japan",
-      county: "Kings",
       area: "Brooklyn",
       date_designated: "May 30, 1974",
     },
@@ -1202,7 +1181,6 @@ const landmarks = [
       name: "Paul Robeson Home",
       description:
         "Home of legendary African-American actor and activist Paul Robeson",
-      county: "New York",
       area: "Manhattan",
       date_designated: "December 8, 1976",
     },
@@ -1217,7 +1195,6 @@ const landmarks = [
       id: 79,
       name: "Jackie Robinson House",
       description: "Home of baseball great Jackie Robinson",
-      county: "Kings",
       area: "Brooklyn",
       date_designated: "May 11, 1976",
     },
@@ -1249,6 +1226,7 @@ const landmarks = [
       description: "Site of first figural stained-glass windows in U.S.",
       area: "Brooklyn",
       date_designated: "December 23, 1987",
+      link: "https://www.stannholytrinity.org/",
     },
   },
   {
@@ -1262,7 +1240,6 @@ const landmarks = [
       name: "St. George's Episcopal Church",
       description:
         "Home church of Harry Thacker Burleigh, African-American singer who helped establish the spiritual in the liturgy of many American faiths",
-      county: "New York",
       area: "Manhattan",
       date_designated: "December 8, 1976",
     },
@@ -1293,7 +1270,6 @@ const landmarks = [
       name: "St. Paul's Chapel",
       description:
         "One of the few surviving colonial-era churches in city; George Washington worshipped here following his inauguration; site of informal memorials following September 11 attacks",
-      county: "New York",
       area: "Manhattan",
       date_designated: "October 9, 1960",
     },
@@ -1308,7 +1284,6 @@ const landmarks = [
       id: 86,
       name: "Margaret Sanger Clinic",
       description: "Clinic where Margaret Sanger dispensed birth control",
-      county: "New York",
       area: "Manhattan",
       date_designated: "September 14, 1993",
     },
@@ -1324,8 +1299,7 @@ const landmarks = [
       name: "Schomburg Center for Research in Black Culture",
       description:
         "Research library of the New York Public Library (NYPL) and an archive repository for information on people of African descent worldwide.",
-      county: "New York",
-      area: "Harlem",
+      area: "Harlem, Manhattan",
       date_designated: "December 23, 2016",
     },
   },
@@ -1340,7 +1314,6 @@ const landmarks = [
       name: "Gen. Winfield Scott House",
       description:
         "Home of Winfield Scott, heroic general in the U.S.-Mexican War and later presidential candidate",
-      county: "New York",
       area: "Manhattan",
       date_designated: "November 7, 1973",
     },
@@ -1356,7 +1329,6 @@ const landmarks = [
       name: "Seventh Regiment Armory",
       description:
         "One of the most impressive collections of 1880s interior decoration outside of a museum; only armory actually owned by the unit for which it was constructed",
-      county: "New York",
       area: "Manhattan",
       date_designated: "February 24, 1986",
     },
@@ -1372,7 +1344,6 @@ const landmarks = [
       name: "Harry F. Sinclair House",
       description:
         "Harry F. Sinclair, the oil industrialist, lived here from 1918 to 1930; now part of the Ukrainian Institute; often used in filmmaking and television production",
-      county: "New York",
       area: "Manhattan",
       date_designated: "June 2, 1978",
     },
@@ -1388,7 +1359,6 @@ const landmarks = [
       name: "Alfred E. Smith House",
       description:
         "Home of four-time New York State governor Alfred E. Smith (and later presidential candidate) from 1907 to 1923",
-      county: "New York",
       area: "Manhattan",
       date_designated: "November 28, 1972",
     },
@@ -1404,7 +1374,6 @@ const landmarks = [
       name: "SoHo-Cast Iron Historic District",
       description:
         "Believed to be the largest existing collection of late 19th-century cast iron facades in the world",
-      county: "New York",
       area: "Manhattan",
       date_designated: "June 2, 1978",
     },
@@ -1420,7 +1389,6 @@ const landmarks = [
       name: "A. T. Stewart Company Store",
       description:
         'Site of the first American department store (now known as the "New York Sun Building")',
-      county: "New York",
       area: "Manhattan",
       date_designated: "June 2, 1978",
     },
@@ -1436,7 +1404,6 @@ const landmarks = [
       name: "Stonewall",
       description:
         "Site of 1969 Stonewall riots which began gay rights movement",
-      county: "New York",
       area: "Manhattan",
       date_designated: "February 16, 2000",
       link: "https://www.nps.gov/ston/index.htm",
@@ -1453,7 +1420,6 @@ const landmarks = [
       name: "St. Bartholomew's Church and Community House",
       description:
         "A pivotal example of the work of Bertram Grosvenor Goodhue and an outstanding example of early 20th-century ecclesiastical architecture.",
-      county: "New York",
       area: "Midtown Manhattan",
       date_designated: "October 31, 2016",
     },
@@ -1468,7 +1434,6 @@ const landmarks = [
       id: 96,
       name: "Surrogate's Court",
       description: "Probate Courthouse across from City Hall",
-      county: "New York",
       area: "Manhattan",
       date_designated: "December 22, 1977",
     },
@@ -1484,7 +1449,6 @@ const landmarks = [
       name: "Tenement Building at 97 Orchard Street",
       description:
         "Preserved tenement building that housed hundreds of immigrants; now the heart of the Lower East Side Tenement Museum.",
-      county: "New York",
       area: "Manhattan",
       date_designated: "April 19, 1994",
       link: "https://www.tenement.org/",
@@ -1501,7 +1465,6 @@ const landmarks = [
       name: "Third Judicial District Courthouse",
       description:
         "Originally built as the Third Judicial District Courthouse; faced with demolition, public outcry led to its reuse as a branch of the New York Public Library",
-      county: "New York",
       area: "Manhattan",
       date_designated: "December 22, 1977",
     },
@@ -1517,7 +1480,6 @@ const landmarks = [
       name: "Tiffany and Company Building",
       description:
         "Served as the home of Tiffany and Company from 1905 through 1940",
-      county: "New York",
       area: "Manhattan",
       date_designated: "June 2, 1978",
     },
@@ -1533,7 +1495,6 @@ const landmarks = [
       name: "Samuel J. Tilden House",
       description:
         "Home of Samuel J. Tilden, former New York State governor and loser of the bitter 1876 presidential election",
-      county: "New York",
       area: "Manhattan",
       date_designated: "May 11, 1976",
     },
@@ -1549,7 +1510,6 @@ const landmarks = [
       name: "The Town Hall",
       description:
         '"America\'s Town Meetings of the Air" radio programs from here in the 1930s created public-affairs media.',
-      county: "New York",
       area: "Manhattan",
       date_designated: "March 2, 2012",
     },
@@ -1565,7 +1525,6 @@ const landmarks = [
       name: "Triangle Shirtwaist Factory",
       description:
         "Site of the Triangle Shirtwaist Factory fire, one of the worst industrial disasters in the U.S., which led to many workplace reforms",
-      county: "New York",
       area: "Manhattan",
       date_designated: "July 17, 1971",
     },
@@ -1580,9 +1539,9 @@ const landmarks = [
       id: 103,
       name: "Trinity Church",
       description: "Historic church which looks down Wall Street",
-      county: "New York",
       area: "Manhattan",
       date_designated: "December 8, 1976",
+      link: "https://trinitychurchnyc.org/",
     },
   },
   {
@@ -1596,7 +1555,6 @@ const landmarks = [
       name: "Old New York County Courthouse",
       description:
         "Historic courthouse, more commonly known as the Tweed Courthouse, connected to Tammany Hall, now used by NYC's Department of Education",
-      county: "New York",
       area: "Manhattan",
       date_designated: "May 11, 1976",
     },
@@ -1612,7 +1570,6 @@ const landmarks = [
       name: "Union Square",
       description:
         "The political heart of Manhattan; many protests begin or end here",
-      county: "New York",
       area: "Manhattan",
       date_designated: "December 9, 1997",
     },
@@ -1628,7 +1585,6 @@ const landmarks = [
       name: "United Charities Building",
       description:
         "Built in 1893 by a wealthy businessman in order to provide his favorite charities a low cost location for their operations",
-      county: "New York",
       area: "Manhattan",
       date_designated: "July 17, 1991",
     },
@@ -1644,7 +1600,6 @@ const landmarks = [
       name: "United Workers Cooperatives",
       description:
         "Built in 1926 by the United Workers' Association to improve the living standards of its members, many of whom lived in squalid conditions in the tenements of the Lower East Side",
-      county: "Bronx",
       area: "Bronx",
       date_designated: "July 17, 1991",
     },
@@ -1660,7 +1615,6 @@ const landmarks = [
       name: "U.S. Customhouse",
       description:
         "Cass Gilbert designed Customhouse for New York Harbor; now part of the Smithsonian Institution",
-      county: "New York",
       area: "Manhattan",
       date_designated: "December 8, 1976",
     },
@@ -1676,7 +1630,6 @@ const landmarks = [
       name: "University Heights Campus (Bronx Community College of the City University of New York)",
       description:
         "Collection of Beaux Arts buildings by Stanford White is one of the best examples of that style anywhere.",
-      county: "Bronx",
       area: "Bronx",
       date_designated: "October 17, 2012",
     },
@@ -1755,7 +1708,6 @@ const landmarks = [
       name: "Woolworth Building",
       description:
         "One of the oldest — and most famous — skyscrapers in New York City; still one of the tallest buildings in New York City",
-      county: "New York",
       area: "Manhattan",
       date_designated: "November 13, 1966",
     },
@@ -1770,9 +1722,9 @@ const landmarks = [
       id: 115,
       name: "Wyckoff House",
       description: "Oldest surviving Dutch saltbox frame house in America",
-      county: "Kings",
       area: "Brooklyn",
       date_designated: "December 24, 1967",
+      link: "https://wyckoffmuseum.org/",
     },
   },
   {
@@ -1785,7 +1737,6 @@ const landmarks = [
       id: 116,
       name: "Wyckoff-Bennett Homestead",
       description: "Housed Hessian soldiers during the American Revolution",
-      county: "Kings",
       area: "Brooklyn",
       date_designated: "December 24, 1976",
     },
