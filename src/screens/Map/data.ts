@@ -345,7 +345,7 @@ const landmarks = [
     id: 27,
     name: "Daily News Building",
     image: "Daily News Building",
-    date_designated: "June 29, 1989 (#82001191)",
+    date_designated: "June 29, 1989",
     location: {
       area: "Manhattan",
       coordinates: { lat: 40.749444, lng: -73.973611 },
@@ -358,7 +358,7 @@ const landmarks = [
     id: 28,
     name: "Dakota Apartments",
     image: "Dakota Apartments",
-    date_designated: "December 8, 1976 (#72000869)",
+    date_designated: "December 8, 1976",
     location: {
       area: "Manhattan",
       coordinates: { lat: 40.776667, lng: -73.976389 },
@@ -371,7 +371,7 @@ const landmarks = [
     id: 29,
     name: "Dyckman House",
     image: "Dyckman House",
-    date_designated: "December 24, 1967 (#67000014)",
+    date_designated: "December 24, 1967",
     location: {
       area: "Manhattan",
       coordinates: { lat: 40.8675, lng: -73.923333 },
@@ -383,7 +383,7 @@ const landmarks = [
     id: 30,
     name: "Eldridge Street Synagogue",
     image: "Eldridge Street Synagogue",
-    date_designated: "June 19, 1996 (#80002687)",
+    date_designated: "June 19, 1996",
     location: {
       area: "Manhattan",
       coordinates: { lat: 40.715, lng: -73.993889 },
@@ -396,7 +396,7 @@ const landmarks = [
     id: 31,
     name: "Duke Ellington House",
     image: "Duke Ellington House",
-    date_designated: "May 11, 1976 (#76001239)",
+    date_designated: "May 11, 1976",
     location: {
       area: "Manhattan",
       coordinates: { lat: 40.832222, lng: -73.940833 },
@@ -409,7 +409,7 @@ const landmarks = [
     id: 32,
     name: "Empire State Building",
     image: "Empire State Building",
-    date_designated: "June 24, 1986 (#82001192)",
+    date_designated: "June 24, 1986",
     location: {
       area: "Manhattan",
       coordinates: { lat: 40.748333, lng: -73.985556 },
@@ -422,7 +422,7 @@ const landmarks = [
     id: 33,
     name: "Equitable Building",
     image: "Equitable Building",
-    date_designated: "June 2, 1978 (#78001869)",
+    date_designated: "June 2, 1978",
     location: {
       area: "Manhattan",
       coordinates: { lat: 40.709722, lng: -74.011111 },
@@ -435,7 +435,7 @@ const landmarks = [
     id: 34,
     name: "Hamilton Fish House",
     image: "Hamilton Fish House",
-    date_designated: "May 15, 1975 (#72001456)",
+    date_designated: "May 15, 1975",
     location: {
       area: "Manhattan",
       coordinates: { lat: 40.73, lng: -73.988611 },
@@ -448,7 +448,7 @@ const landmarks = [
     id: 35,
     name: "Flatiron Building",
     image: "Flatiron Building",
-    date_designated: "June 29, 1989 (#79001603)",
+    date_designated: "June 29, 1989",
     location: {
       area: "Manhattan",
       coordinates: { lat: 40.741111, lng: -73.989722 },
@@ -460,7 +460,7 @@ const landmarks = [
     id: 36,
     name: "Founder's Hall, The Rockefeller University",
     image: "Founder's Hall, The Rockefeller University",
-    date_designated: "May 30, 1974 (#74001269)",
+    date_designated: "May 30, 1974",
     location: {
       area: "Manhattan",
       coordinates: { lat: 40.7625, lng: -73.955 },
@@ -473,7 +473,7 @@ const landmarks = [
     id: 37,
     name: "The Frick Collection and Frick Art Reference Library Building",
     image: "The Frick Collection and Frick Art Reference Library Building",
-    date_designated: "October 6, 2008 (#08001091)",
+    date_designated: "October 6, 2008",
     location: {
       area: "Manhattan",
       coordinates: { lat: 40.771389, lng: -73.967222 },
@@ -628,7 +628,7 @@ const landmarks = [
     id: 49,
     name: "James Weldon Johnson Residence",
     image: "James Weldon Johnson Residence",
-    date_designated: "May 11, 1976 (#76001241)",
+    date_designated: "May 11, 1976",
     location: {
       area: "Manhattan",
       coordinates: { lat: 40.815278, lng: -73.943056 },
@@ -641,7 +641,7 @@ const landmarks = [
     id: 50,
     name: "King Manor",
     image: "King Manor",
-    date_designated: "December 2, 1974 (#74001295)",
+    date_designated: "December 2, 1974",
     location: {
       area: "Jamaica",
       coordinates: { lat: 40.703056, lng: -73.803889 },
@@ -654,7 +654,7 @@ const landmarks = [
     id: 51,
     name: "Lettie G. Howard (schooner)",
     image: "100 px",
-    date_designated: "April 11, 1989 (#84002779)",
+    date_designated: "April 11, 1989",
     location: {
       area: "Manhattan",
       coordinates: { lat: 40.706111, lng: -74.003333 },
@@ -667,7 +667,7 @@ const landmarks = [
     id: 52,
     name: "Lorillard Snuff Mill",
     image: "100 px",
-    date_designated: "December 22, 1977 (#77000935)",
+    date_designated: "December 22, 1977",
     location: {
       area: "New York Botanical Garden",
       coordinates: { lat: 40.859722, lng: -73.876111 },
@@ -679,7 +679,7 @@ const landmarks = [
     id: 53,
     name: "Low Memorial Library",
     image: "Low Memorial Library",
-    date_designated: "December 23, 1987 (#87002599)",
+    date_designated: "December 23, 1987",
     location: {
       area: "Columbia University",
       coordinates: { lat: 40.808333, lng: -73.961944 },
@@ -692,7 +692,7 @@ const landmarks = [
     id: 54,
     name: "R. H. Macy and Company Store (Macy's)",
     image: "R. H. Macy and Company Store (Macy's)",
-    date_designated: "June 2, 1978 (#78001873)",
+    date_designated: "June 2, 1978",
     location: {
       area: "Manhattan",
       coordinates: { lat: 40.750278, lng: -73.988333 },
@@ -704,7 +704,7 @@ const landmarks = [
     id: 55,
     name: "McGraw-Hill Building",
     image: "McGraw-Hill Building",
-    date_designated: "June 29, 1989 (#80002701)",
+    date_designated: "June 29, 1989",
     location: {
       area: "Manhattan",
       coordinates: { lat: 40.757222, lng: -73.991111 },
@@ -717,7 +717,7 @@ const landmarks = [
     id: 56,
     name: "Claude McKay Residence",
     image: "Claude McKay Residence",
-    date_designated: "December 8, 1976 (#76002143)",
+    date_designated: "December 8, 1976",
     location: {
       area: "Manhattan",
       coordinates: { lat: 40.814167, lng: -73.938333 },
@@ -730,7 +730,7 @@ const landmarks = [
     id: 57,
     name: "Metropolitan Life Insurance Company Tower",
     image: "Metropolitan Life Insurance Company Tower",
-    date_designated: "June 2, 1978 (#78001874)",
+    date_designated: "June 2, 1978",
     location: {
       area: "Manhattan",
       coordinates: { lat: 40.741111, lng: -73.9875 },
@@ -743,7 +743,7 @@ const landmarks = [
     id: 58,
     name: "Metropolitan Museum of Art",
     image: "Metropolitan Museum of Art",
-    date_designated: "June 24, 1986 (#86003556)",
+    date_designated: "June 24, 1986",
     location: {
       area: "Manhattan",
       coordinates: { lat: 40.778889, lng: -73.963611 },
@@ -756,7 +756,7 @@ const landmarks = [
     id: 59,
     name: "J. Pierpont Morgan Library",
     image: "J. Pierpont Morgan Library",
-    date_designated: "November 13, 1966 (#66000544)",
+    date_designated: "November 13, 1966",
     location: {
       area: "Manhattan",
       coordinates: { lat: 40.749444, lng: -73.981667 },
@@ -769,7 +769,7 @@ const landmarks = [
     id: 60,
     name: "Morris-Jumel Mansion",
     image: "Morris-Jumel Mansion",
-    date_designated: "January 20, 1961 (#66000545)",
+    date_designated: "January 20, 1961",
     location: {
       area: "Manhattan",
       coordinates: { lat: 40.834444, lng: -73.938611 },
@@ -782,7 +782,7 @@ const landmarks = [
     id: 61,
     name: "National City Bank Building",
     image: "National City Bank Building",
-    date_designated: "June 2, 1978 (#78001875)",
+    date_designated: "June 2, 1978",
     location: {
       area: "Manhattan",
       coordinates: { lat: 40.706111, lng: -74.009167 },
@@ -795,7 +795,7 @@ const landmarks = [
     id: 62,
     name: "New York Amsterdam News Building",
     image: "New York Amsterdam News Building",
-    date_designated: "May 11, 1976 (#76001247)",
+    date_designated: "May 11, 1976",
     location: {
       area: "Manhattan",
       coordinates: { lat: 40.815, lng: -73.944722 },
@@ -808,7 +808,7 @@ const landmarks = [
     id: 63,
     name: "New York Botanical Garden",
     image: "New York Botanical Garden",
-    date_designated: "May 28, 1967 (#67000009)",
+    date_designated: "May 28, 1967",
     location: {
       area: "Bronx",
       coordinates: { lat: 40.863611, lng: -73.878333 },
@@ -821,7 +821,7 @@ const landmarks = [
     id: 64,
     name: "New York Cotton Exchange",
     image: "New York Cotton Exchange",
-    date_designated: "December 22, 1977 (#72001586)",
+    date_designated: "December 22, 1977",
     location: {
       area: "Manhattan",
       coordinates: { lat: 40.704444, lng: -74.010278 },
@@ -833,7 +833,7 @@ const landmarks = [
     id: 65,
     name: "New York Life Building",
     image: "New York Life Building",
-    date_designated: "June 2, 1978 (#78001876)",
+    date_designated: "June 2, 1978",
     location: {
       area: "Manhattan",
       coordinates: { lat: 40.742778, lng: -73.985556 },
@@ -845,7 +845,7 @@ const landmarks = [
     id: 66,
     name: "New York Public Library",
     image: "New York Public Library",
-    date_designated: "December 21, 1965 (#66000546)",
+    date_designated: "December 21, 1965",
     location: {
       area: "Manhattan",
       coordinates: { lat: 40.753333, lng: -73.982222 },
@@ -871,7 +871,7 @@ const landmarks = [
     id: 68,
     name: "New York Studio School of Drawing, Painting and Sculpture",
     image: "New York Studio School of Drawing, Painting and Sculpture",
-    date_designated: "April 27, 1992 (#92001877)",
+    date_designated: "April 27, 1992",
     location: {
       area: "Manhattan",
       coordinates: { lat: 40.733056, lng: -73.998333 },
@@ -884,7 +884,7 @@ const landmarks = [
     id: 69,
     name: "New York Yacht Club",
     image: "New York Yacht Club",
-    date_designated: "May 28, 1987 (#82001203)",
+    date_designated: "May 28, 1987",
     location: {
       area: "Manhattan",
       coordinates: { lat: 40.755556, lng: -73.981667 },
@@ -910,7 +910,7 @@ const landmarks = [
     id: 71,
     name: "Old Quaker Meeting House",
     image: "Old Quaker Meeting House",
-    date_designated: "December 24, 1967 (#67000015)",
+    date_designated: "December 24, 1967",
     location: {
       area: "Flushing",
       coordinates: { lat: 40.763056, lng: -73.830278 },
@@ -923,7 +923,7 @@ const landmarks = [
     id: 72,
     name: "Philosophy Hall",
     image: "Philosophy Hall",
-    date_designated: "July 21, 2003 (#03001046)",
+    date_designated: "July 21, 2003",
     location: {
       area: "Columbia University",
       coordinates: { lat: 40.806111, lng: -73.9625 },
@@ -936,7 +936,7 @@ const landmarks = [
     id: 73,
     name: "Players Club",
     image: "Players Club",
-    date_designated: "December 19, 1962 (#66000549)",
+    date_designated: "December 19, 1962",
     location: {
       area: "Manhattan",
       coordinates: { lat: 40.7375, lng: -73.986944 },
@@ -975,7 +975,7 @@ const landmarks = [
     id: 76,
     name: "Pupin Physics Laboratory, Columbia University",
     image: "Pupin Physics Laboratory, Columbia University",
-    date_designated: "December 21, 1965 (#66000550)",
+    date_designated: "December 21, 1965",
     location: {
       area: "Columbia University",
       coordinates: { lat: 40.81, lng: -73.961667 },
