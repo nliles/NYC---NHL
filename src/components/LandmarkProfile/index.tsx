@@ -67,7 +67,9 @@ const LandmarkProfile = ({
             <div>Designated: {landmark.date_designated}</div>
           </div>
         </div>
+      </div>
 
+      <div className={styles.learnMore}>
         <div className={styles.visited}>
           <label className={styles.label} htmlFor="visited">
             <input
@@ -81,9 +83,6 @@ const LandmarkProfile = ({
             I've visited this landmark
           </label>
         </div>
-      </div>
-
-      <div className={styles.learnMore}>
         <a
           href={landmark.link}
           className={styles.link}
