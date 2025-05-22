@@ -160,7 +160,7 @@ const landmarks = [
       name: "Bell Laboratories Building",
       description:
         "Bell Labs work here included experimental phonograph record, vacuum tubes, talking movies (1923), black and white and color TV, radar, and early commercial remote broadcasts. Today home to the Westbeth Artists Community (listed separately on the National Register of Historic Places).",
-      
+
       date_designated: "May 15, 1975",
     },
   },
@@ -189,7 +189,7 @@ const landmarks = [
       name: "Brooklyn Heights Historic District",
       description:
         "Exemplary collection of 19th-century architectural styles; first historic district in New York City",
-      
+
       date_designated: "January 12, 1965",
     },
   },
@@ -204,7 +204,7 @@ const landmarks = [
       name: "Center for Brooklyn History",
       description:
         "One of the few remaining buildings by George B. Post; innovative structural system",
-      
+
       date_designated: "July 17, 1991",
       link: "https://www.bklynlibrary.org/center-for-brooklyn-history",
     },
@@ -233,7 +233,7 @@ const landmarks = [
       id: 16,
       name: "Carnegie Hall",
       description: "One of the most famous music venues in the world",
-      
+
       date_designated: "December 29, 1962",
       link: "https://www.carnegiehall.org/",
       image_caption: "Carnegie Hall circa early 1900s",
@@ -250,7 +250,7 @@ const landmarks = [
       name: "Andrew Carnegie Mansion",
       description:
         "Home of Andrew Carnegie, now the Cooper-Hewitt, National Design Museum",
-      
+
       date_designated: "November 13, 1966",
       link: "https://www.cooperhewitt.org/about-the-carnegie-mansion-2/",
     },
@@ -266,7 +266,7 @@ const landmarks = [
       name: "Central Park",
       description:
         "The Green Lung of the city; one of the most visited city parks in the world; designed by Frederick Law Olmsted and Calvert Vaux.",
-      
+
       date_designated: "May 23, 1963",
       link: "https://www.centralparknyc.org/",
     },
@@ -282,7 +282,7 @@ const landmarks = [
       name: "Central Synagogue",
       description:
         "Oldest synagogue continuously in use by a New York City Jewish congregation; built in a Moorish Revival style to recognize importance of that period in Jewish history",
-      
+
       date_designated: "May 15, 1975",
       link: "https://www.centralsynagogue.org/",
     },
@@ -298,7 +298,7 @@ const landmarks = [
       name: "Chamber of Commerce Building",
       description:
         "Former home of the Chamber of Commerce of the State of New York, established in 1768; prototype for the chamber of commerce",
-      
+
       date_designated: "December 22, 1977",
     },
   },
@@ -313,7 +313,7 @@ const landmarks = [
       name: "Chrysler Building",
       description:
         "Art Deco skyscraper; distinctive feature of Manhattan skyline; at one point world's tallest building",
-      
+
       date_designated: "December 8, 1976",
     },
   },
@@ -328,7 +328,7 @@ const landmarks = [
       name: "Church of the Ascension",
       description:
         "Early church design by Richard Upjohn; valuable interior artwork",
-      
+
       date_designated: "December 23, 1987",
       link: "https://ascensionnyc.org/",
     },
@@ -344,7 +344,7 @@ const landmarks = [
       name: "City Hall",
       description:
         "Oldest city hall in U.S. still in use as main municipal government building",
-      
+
       date_designated: "December 19, 1960",
     },
   },
@@ -419,7 +419,7 @@ const landmarks = [
       name: "Dakota Apartments",
       description:
         "Combination of Renaissance architectural styles by Henry Hardenbergh; setting for Rosemary's Baby and the shooting death of John Lennon",
-      
+
       date_designated: "December 8, 1976",
     },
   },
@@ -433,7 +433,7 @@ const landmarks = [
       id: 29,
       name: "Dyckman House",
       description: "Only remaining farmhouse in Manhattan",
-      
+
       date_designated: "December 24, 1967",
       link: "https://dyckmanfarmhouse.org/",
     },
@@ -449,7 +449,7 @@ const landmarks = [
       name: "Eldridge Street Synagogue",
       description:
         "One of the oldest synagogues in the U.S.; first built by Jews from Eastern Europe",
-      
+
       date_designated: "June 19, 1996",
       link: "https://www.eldridgestreet.org/",
     },
@@ -465,7 +465,7 @@ const landmarks = [
       name: "Duke Ellington House",
       description:
         "Ellington, the legendary jazz composer and bandleader, lived in Apartment 4A from 1939 to 1961",
-      
+
       date_designated: "May 11, 1976",
     },
   },
@@ -480,7 +480,7 @@ const landmarks = [
       name: "Empire State Building",
       description:
         "World's tallest building from 1931 to 1972 and internationally recognized symbol of New York City",
-      
+
       date_designated: "June 24, 1986",
       link: "https://www.esbnyc.com/",
     },
@@ -496,7 +496,7 @@ const landmarks = [
       name: "Equitable Building",
       description:
         "One of the earliest skyscrapers in Manhattan; profoundly influenced later skyscraper design",
-      
+
       date_designated: "June 2, 1978",
     },
   },
@@ -511,7 +511,7 @@ const landmarks = [
       name: "Hamilton Fish House",
       description:
         "Home of Hamilton Fish, future Governor and Senator of New York",
-      
+
       date_designated: "May 15, 1975",
     },
   },
@@ -525,7 +525,7 @@ const landmarks = [
       id: 35,
       name: "Flatiron Building",
       description: "Distinctive triangular building at Madison Square.",
-      
+
       date_designated: "June 29, 1989",
       image_caption: "The Flatiron Building circa 1902",
     },
@@ -541,7 +541,7 @@ const landmarks = [
       name: "Founder's Hall, The Rockefeller University",
       description:
         "Building marked the start of John D. Rockefeller Jr.'s putting the vast family fortune to philanthropic purposes",
-      
+
       date_designated: "May 30, 1974",
     },
   },
@@ -555,7 +555,7 @@ const landmarks = [
       id: 37,
       name: "The Frick Collection and Frick Art Reference Library Building",
       description: "",
-      
+
       date_designated: "October 6, 2008",
       link: "https://www.frick.org/",
       image_caption: "The Frick Collection, 1920",
@@ -585,7 +585,8 @@ const landmarks = [
     properties: {
       id: 39,
       name: "Grace Church",
-      description: "Designed by James Renwick Jr., Grace Church on Broadway is New York City's earliest Gothic Revival structure. Since 1846, this historic Episcopal parish has been a fixture in Greenwich Village, serving the City and its people.",
+      description:
+        "Designed by James Renwick Jr., Grace Church on Broadway is New York City's earliest Gothic Revival structure. Since 1846, this historic Episcopal parish has been a fixture in Greenwich Village, serving the City and its people.",
       date_designated: "December 22, 1977",
       link: "https://gracechurchnyc.org/",
       image_caption: "A view of Grace Church from Broadway",
@@ -604,7 +605,7 @@ const landmarks = [
       name: "Grand Central Terminal",
       description:
         "Beaux-Arts architecture; historic rail gateway to New York City; largest train station in the world by number of platforms",
-      
+
       date_designated: "December 8, 1976",
       link: "https://grandcentralterminal.com/",
     },
@@ -620,7 +621,7 @@ const landmarks = [
       name: "Green-Wood Cemetery",
       description:
         "Popular tourist attraction in the 1850s; most famous New Yorkers who died during the second half of the nineteenth century buried here",
-      
+
       date_designated: "September 20, 2006",
       link: "https://www.green-wood.com/",
     },
@@ -636,7 +637,7 @@ const landmarks = [
       name: "Hamilton Grange National Memorial",
       description:
         "Home of Alexander Hamilton: military officer, lawyer, member of the United States Constitutional Convention, American statesman, first United States Secretary of the Treasury, and Founding Father",
-      
+
       date_designated: "December 19, 1960",
       link: "https://www.nps.gov/hagr/index.htm",
     },
@@ -651,7 +652,7 @@ const landmarks = [
       id: 43,
       name: "Solomon R. Guggenheim Museum",
       description: "The only museum designed by Frank Lloyd Wright",
-      
+
       date_designated: "October 6, 2008",
       link: "https://www.guggenheim.org/",
     },
@@ -667,7 +668,7 @@ const landmarks = [
       name: "Henry Street Settlement and Neighborhood Playhouse",
       description:
         "One of the nation's first settlement homes where new immigrants and the poor could find assistance",
-      
+
       date_designated: "May 30, 1974",
     },
   },
@@ -682,7 +683,7 @@ const landmarks = [
       name: "Matthew Henson Residence",
       description:
         "Home of Matthew Henson, African-American polar explorer who may have been the first to reach the North Pole",
-      
+
       date_designated: "May 15, 1975",
     },
   },
@@ -696,7 +697,7 @@ const landmarks = [
       id: 46,
       name: "Hispanic Society of America",
       description: "Museum of Iberian Art",
-      
+
       date_designated: "October 17, 2012",
       link: "https://hispanicsociety.org/",
     },
@@ -712,7 +713,7 @@ const landmarks = [
       name: "Holland Tunnel",
       description:
         "Tunnel underneath the Hudson River, connecting Manhattan and New Jersey; civil engineering landmark; one of the earliest ventilated tunnels",
-      
+
       date_designated: "November 4, 1993",
       image_caption: "Holland Tunnel vehicular traffic, 1927",
     },
@@ -728,7 +729,7 @@ const landmarks = [
       name: "USS Intrepid",
       description:
         "One of the most active U.S. ships during World War II; today the Intrepid Museum moored along the West Side",
-      
+
       date_designated: "January 14, 1986",
       link: "https://intrepidmuseum.org/",
     },
@@ -744,7 +745,7 @@ const landmarks = [
       name: "James Weldon Johnson Residence",
       description:
         "Harlem home of African-American artist-activist James Weldon Johnson",
-      
+
       date_designated: "May 11, 1976",
     },
   },
@@ -759,7 +760,7 @@ const landmarks = [
       name: "Lettie G. Howard (schooner)",
       description:
         "Last remaining Fredonia-type schooner (once the standard for American fishing boats) at the South Street Seaport",
-      
+
       date_designated: "April 11, 1989",
     },
   },
@@ -773,7 +774,7 @@ const landmarks = [
       id: 52,
       name: "Lorillard Snuff Mill",
       description: "Oldest existing tobacco-manufacturing facility in U.S.",
-      
+
       date_designated: "December 22, 1977",
     },
   },
@@ -801,7 +802,7 @@ const landmarks = [
       id: 54,
       name: "R. H. Macy and Company Store (Macy's)",
       description: "Largest department store in world for many years",
-      
+
       date_designated: "June 2, 1978",
     },
   },
@@ -816,7 +817,7 @@ const landmarks = [
       name: "McGraw-Hill Building",
       description:
         "Early Art Deco building; first U.S. building in International Style",
-      
+
       date_designated: "June 29, 1989",
     },
   },
@@ -831,7 +832,7 @@ const landmarks = [
       name: "Claude McKay Residence",
       description:
         "The Harlem YMCA, whose residents included African-American writer Claude McKay",
-      
+
       date_designated: "December 8, 1976",
     },
   },
@@ -846,7 +847,7 @@ const landmarks = [
       name: "Metropolitan Life Insurance Company Tower",
       description:
         "Tallest building in the world 1909-13; still part of the skyline a century later",
-      
+
       date_designated: "June 2, 1978",
     },
   },
@@ -861,7 +862,7 @@ const landmarks = [
       name: "Metropolitan Museum of Art",
       description:
         "The Fifth Avenue building of the Metropolitan Museum of Art, one of the world's most important and prestigious art museums",
-      
+
       date_designated: "June 24, 1986",
       link: "https://www.metmuseum.org/",
       image_caption: "Hall of sculpture",
@@ -878,7 +879,7 @@ const landmarks = [
       name: "J. Pierpont Morgan Library",
       description:
         "Office, Library, and now Museum of J. P. Morgan; the Panic of 1907 ended in the Library",
-      
+
       date_designated: "November 13, 1966",
       link: "https://www.themorgan.org/",
     },
@@ -893,7 +894,7 @@ const landmarks = [
       id: 60,
       name: "Morris-Jumel Mansion",
       description: "Oldest residential building in Manhattan",
-      
+
       date_designated: "January 20, 1961",
       link: "https://morrisjumel.org/",
       image_caption: "The Morris-Jumel Mansion circa 1890",
@@ -910,7 +911,7 @@ const landmarks = [
       name: "National City Bank Building",
       description:
         "Home to one of the country's largest and most important banks since 1908",
-      
+
       date_designated: "June 2, 1978",
     },
   },
@@ -925,7 +926,7 @@ const landmarks = [
       name: "New York Amsterdam News Building",
       description:
         "Influential black newspaper the New York Amsterdam News was published here 1916-38",
-      
+
       date_designated: "May 11, 1976",
     },
   },
@@ -940,7 +941,7 @@ const landmarks = [
       name: "New York Botanical Garden",
       description:
         "One of the world's leading botanical gardens, with the largest herbarium in the U.S. and second largest in the world after the French National Museum of Natural History and home to many plant laboratories",
-      
+
       date_designated: "May 28, 1967",
       link: "https://www.nybg.org/",
     },
@@ -955,7 +956,7 @@ const landmarks = [
       id: 64,
       name: "New York Cotton Exchange",
       description: "First commodity market in the U.S.; now 1 Hanover Square",
-      
+
       date_designated: "December 22, 1977",
       image_caption: "The New York Cotton Exchange in 1885",
     },
@@ -970,7 +971,7 @@ const landmarks = [
       id: 65,
       name: "New York Life Building",
       description: "Last significant Cass Gilbert skyscraper in Manhattan",
-      
+
       date_designated: "June 2, 1978",
     },
   },
@@ -985,7 +986,7 @@ const landmarks = [
       name: "New York Public Library",
       description:
         "One of the largest and most important libraries in the U.S.; listing is for main branch building.",
-      
+
       date_designated: "December 21, 1965",
       link: "https://www.nypl.org/locations/schwarzman",
     },
@@ -1001,7 +1002,7 @@ const landmarks = [
       name: "New York Stock Exchange",
       description:
         "One of the first securities markets in the U.S.; still the world's largest",
-      
+
       date_designated: "June 2, 1978",
       image_caption: "New York Stock Exchange Trading floor, 1903",
       link: "https://www.nyse.com/index",
@@ -1018,7 +1019,7 @@ const landmarks = [
       name: "New York Studio School of Drawing, Painting and Sculpture",
       description:
         "Original home of the Whitney Museum, the first devoted to 20th-century American art",
-      
+
       date_designated: "April 27, 1992",
     },
   },
@@ -1033,7 +1034,7 @@ const landmarks = [
       name: "New York Yacht Club",
       description:
         "Oldest yachting club in U.S.; longtime home of the America's Cup",
-      
+
       date_designated: "May 28, 1987",
       link: "https://nyyc.org/",
     },
@@ -1048,7 +1049,7 @@ const landmarks = [
       id: 70,
       name: "Old Merchant's House",
       description: "Nineteenth-century family home; preserved inside and out",
-      
+
       date_designated: "June 23, 1965",
       link: "https://merchantshouse.org/",
       image_caption: "The Merchant's House circa 1936",
@@ -1080,7 +1081,7 @@ const landmarks = [
       name: "Philosophy Hall",
       description:
         "Edwin Armstrong developed FM radio in this Columbia University building",
-      
+
       date_designated: "July 21, 2003",
     },
   },
@@ -1095,7 +1096,7 @@ const landmarks = [
       name: "Players Club",
       description:
         "Extensive collection of art and theater memorabilia; interior redone by Stanford White",
-      
+
       date_designated: "December 19, 1962",
     },
   },
@@ -1110,7 +1111,7 @@ const landmarks = [
       name: "Plaza Hotel",
       description:
         "French Renaissance-style building; outstanding example of American hotel architecture; symbol of elegance; visible from much of lower Central Park; setting for Kay Thompson's popular Eloise series of children's books",
-      
+
       date_designated: "June 24, 1986",
       link: "https://www.theplazany.com/",
     },
@@ -1126,7 +1127,7 @@ const landmarks = [
       name: "Plymouth Church of the Pilgrims",
       description:
         "Important station on Underground Railroad when Henry Ward Beecher was pastor",
-      
+
       date_designated: "July 4, 1961",
       link: "https://www.plymouthchurch.org/#main",
     },
@@ -1142,7 +1143,7 @@ const landmarks = [
       name: "Pupin Physics Laboratory, Columbia University",
       description:
         "Columbia University building; site of first splitting of uranium atom in U.S. and other milestones in development of atomic bomb",
-      
+
       date_designated: "December 21, 1965",
     },
   },
@@ -1156,7 +1157,7 @@ const landmarks = [
       id: 77,
       name: "Quarters A, Brooklyn Navy Yard",
       description: "Home to Matthew Perry at the time of his opening of Japan",
-      
+
       date_designated: "May 30, 1974",
     },
   },
@@ -1185,7 +1186,7 @@ const landmarks = [
       id: 79,
       name: "Jackie Robinson House",
       description: "Home of baseball great Jackie Robinson",
-      
+
       date_designated: "May 11, 1976",
     },
   },
@@ -1229,7 +1230,7 @@ const landmarks = [
       name: "St. George's Episcopal Church",
       description:
         "Home church of Harry Thacker Burleigh, African-American singer who helped establish the spiritual in the liturgy of many American faiths",
-      
+
       date_designated: "December 8, 1976",
     },
   },
@@ -1300,7 +1301,7 @@ const landmarks = [
       name: "Gen. Winfield Scott House",
       description:
         "Home of Winfield Scott, heroic general in the U.S.-Mexican War and later presidential candidate",
-      
+
       date_designated: "November 7, 1973",
     },
   },
@@ -1315,7 +1316,7 @@ const landmarks = [
       name: "Seventh Regiment Armory",
       description:
         "One of the most impressive collections of 1880s interior decoration outside of a museum; only armory actually owned by the unit for which it was constructed",
-      
+
       date_designated: "February 24, 1986",
     },
   },
@@ -1330,7 +1331,7 @@ const landmarks = [
       name: "Harry F. Sinclair House",
       description:
         "Harry F. Sinclair, the oil industrialist, lived here from 1918 to 1930; now part of the Ukrainian Institute; often used in filmmaking and television production",
-      
+
       date_designated: "June 2, 1978",
     },
   },
@@ -1345,7 +1346,7 @@ const landmarks = [
       name: "Alfred E. Smith House",
       description:
         "Home of four-time New York State governor Alfred E. Smith (and later presidential candidate) from 1907 to 1923",
-      
+
       date_designated: "November 28, 1972",
     },
   },
@@ -1360,7 +1361,7 @@ const landmarks = [
       name: "SoHo-Cast Iron Historic District",
       description:
         "Believed to be the largest existing collection of late 19th-century cast iron facades in the world",
-      
+
       date_designated: "June 2, 1978",
     },
   },
@@ -1375,7 +1376,7 @@ const landmarks = [
       name: "A. T. Stewart Company Store",
       description:
         'Site of the first American department store (now known as the "New York Sun Building")',
-      
+
       date_designated: "June 2, 1978",
     },
   },
@@ -1390,7 +1391,7 @@ const landmarks = [
       name: "Stonewall",
       description:
         "Site of 1969 Stonewall riots which began gay rights movement",
-      
+
       date_designated: "February 16, 2000",
       link: "https://www.nps.gov/ston/index.htm",
       image_caption: "The Stonewall Inn circa 1969",
@@ -1420,7 +1421,7 @@ const landmarks = [
       id: 96,
       name: "Surrogate's Court",
       description: "Probate Courthouse across from City Hall",
-      
+
       date_designated: "December 22, 1977",
     },
   },
@@ -1428,14 +1429,15 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.99010, 40.71853],
+      coordinates: [-73.9901, 40.71853],
     },
     properties: {
       id: 97,
       name: "Tenement Building at 97 Orchard Street",
       description:
         "Between 1863 and 1935, Orchard Street became the epicenter of immigrant life in America. By 1900, the street was the most densely populated place on earth. The five-story tenement building at 97 Orchard Street was home to an estimated 7,000 people from over 20 nations during this time.",
-      description2: "Today, 97 Orchard Street is a National Historic Landmark and serves as the Tenement Museum, bringing to life the stories of the immigrant families who once called this building home.",
+      description2:
+        "Today, 97 Orchard Street is a National Historic Landmark and serves as the Tenement Museum, bringing to life the stories of the immigrant families who once called this building home.",
       date_designated: "April 19, 1994",
       link: "https://www.tenement.org/",
       image_caption: "A view of Orchard Street in the early 1900s",
@@ -1452,7 +1454,7 @@ const landmarks = [
       name: "Third Judicial District Courthouse",
       description:
         "Originally built as the Third Judicial District Courthouse; faced with demolition, public outcry led to its reuse as a branch of the New York Public Library",
-      
+
       date_designated: "December 22, 1977",
     },
   },
@@ -1467,7 +1469,7 @@ const landmarks = [
       name: "Tiffany and Company Building",
       description:
         "Served as the home of Tiffany and Company from 1905 through 1940",
-      
+
       date_designated: "June 2, 1978",
     },
   },
@@ -1482,7 +1484,7 @@ const landmarks = [
       name: "Samuel J. Tilden House",
       description:
         "Home of Samuel J. Tilden, former New York State governor and loser of the bitter 1876 presidential election",
-      
+
       date_designated: "May 11, 1976",
     },
   },
@@ -1497,7 +1499,7 @@ const landmarks = [
       name: "The Town Hall",
       description:
         '"America\'s Town Meetings of the Air" radio programs from here in the 1930s created public-affairs media.',
-      
+
       date_designated: "March 2, 2012",
     },
   },
@@ -1512,7 +1514,7 @@ const landmarks = [
       name: "Triangle Shirtwaist Factory",
       description:
         "Site of the Triangle Shirtwaist Factory fire, one of the worst industrial disasters in the U.S., which led to many workplace reforms",
-      
+
       date_designated: "July 17, 1971",
     },
   },
@@ -1525,7 +1527,8 @@ const landmarks = [
     properties: {
       id: 103,
       name: "Trinity Church",
-      description: "Founded in 1697, Trinity Church has served New York for over 300 years. The current building was designed by Richard Upjohn and consecrated in 1846, and is considered one of the first and finest examples of Neo-Gothic architecture in the country. Notable parishioners such as Alexander Hamilton are buried in the historic churchyard.",
+      description:
+        "Founded in 1697, Trinity Church has served New York for over 300 years. The current building was designed by Richard Upjohn and consecrated in 1846, and is considered one of the first and finest examples of Neo-Gothic architecture in the country. Notable parishioners such as Alexander Hamilton are buried in the historic churchyard.",
       link: "https://trinitychurchnyc.org/",
       image_caption: "View of Trinity Church, 1895",
     },
@@ -1541,7 +1544,7 @@ const landmarks = [
       name: "Old New York County Courthouse",
       description:
         "Historic courthouse, more commonly known as the Tweed Courthouse, connected to Tammany Hall, now used by NYC's Department of Education",
-      
+
       date_designated: "May 11, 1976",
     },
   },
@@ -1556,7 +1559,7 @@ const landmarks = [
       name: "Union Square",
       description:
         "The political heart of Manhattan; many protests begin or end here",
-      
+
       date_designated: "December 9, 1997",
       image_caption: "Union Square Park, 1936",
     },
@@ -1572,7 +1575,7 @@ const landmarks = [
       name: "United Charities Building",
       description:
         "Built in 1893 by a wealthy businessman in order to provide his favorite charities a low cost location for their operations",
-      
+
       date_designated: "July 17, 1991",
     },
   },
@@ -1587,7 +1590,7 @@ const landmarks = [
       name: "United Workers Cooperatives",
       description:
         "Built in 1926 by the United Workers' Association to improve the living standards of its members, many of whom lived in squalid conditions in the tenements of the Lower East Side",
-      
+
       date_designated: "July 17, 1991",
     },
   },
@@ -1602,7 +1605,7 @@ const landmarks = [
       name: "U.S. Customhouse",
       description:
         "Cass Gilbert designed Customhouse for New York Harbor; now part of the Smithsonian Institution",
-      
+
       date_designated: "December 8, 1976",
     },
   },
@@ -1617,7 +1620,7 @@ const landmarks = [
       name: "University Heights Campus (Bronx Community College of the City University of New York)",
       description:
         "Collection of Beaux Arts buildings by Stanford White is one of the best examples of that style anywhere.",
-      
+
       date_designated: "October 17, 2012",
     },
   },
@@ -1677,7 +1680,7 @@ const landmarks = [
       name: "Woodlawn Cemetery",
       description:
         "Illustrates transition from rural cemetery to 20th-century styles; notable dead buried here include Robert Moses and R.H. Macy",
-      
+
       date_designated: "June 23, 2011",
       link: "https://www.woodlawn.org/",
       image_caption: "Map of Woodlawn Cemetery, 1870",
@@ -1694,7 +1697,7 @@ const landmarks = [
       name: "Woolworth Building",
       description:
         "One of the oldest — and most famous — skyscrapers in New York City; still one of the tallest buildings in New York City",
-      
+
       date_designated: "November 13, 1966",
     },
   },
@@ -1708,7 +1711,7 @@ const landmarks = [
       id: 115,
       name: "Wyckoff House",
       description: "Oldest surviving Dutch saltbox frame house in America",
-      
+
       date_designated: "December 24, 1967",
       link: "https://wyckoffmuseum.org/",
       image_caption: "The Wyckoff House circa early 1900s",
@@ -1724,7 +1727,7 @@ const landmarks = [
       id: 116,
       name: "Wyckoff-Bennett Homestead",
       description: "Housed Hessian soldiers during the American Revolution",
-      
+
       date_designated: "December 24, 1976",
     },
   },
