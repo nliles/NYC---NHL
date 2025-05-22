@@ -5,25 +5,20 @@ import landmarks from "./data.ts";
 import styles from "./Map.module.css";
 
 const Map = ({
+  selectedLocation,
   setSelectedLocation,
   visitedLandmarks,
 }: {
+  selectedLocation: any;
   setSelectedLocation: Dispatch<SetStateAction<undefined>>;
   visitedLandmarks: string[];
 }) => {
   const mapContainer = useRef(null);
   const mapInstance = useRef(null);
 
-  // Convert DMS coordinates to decimal degrees
-  function dmsToDecimal(dms: any) {
-    return [dms.lng, dms.lat]; // GeoJSON uses [longitude, latitude]
-  }
-
   useEffect(() => {
-
     if (mapboxgl && !mapInstance.current) {
       mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_TOKEN;
-        // "pk.eyJ1Ijoibm1saWxlczE2IiwiYSI6ImNtYW44dGR6MDBybnMyam9iYWNwdGM4MGsifQ.b0_OYdIxyitezCgWIR25sg";
 
       const map = new mapboxgl.Map({
         container: mapContainer.current,
@@ -38,32 +33,7 @@ const Map = ({
         // Convert landmarks to GeoJSON
         const geojson = {
           type: "FeatureCollection",
-          features: landmarks
-            .map((landmark) => {
-              const coordinates = dmsToDecimal(landmark.location.coordinates);
-              if (!coordinates) return null;
-
-              return {
-                type: "Feature",
-                geometry: {
-                  type: "Point",
-                  coordinates: coordinates,
-                },
-                properties: {
-                  id: landmark.id,
-                  name: landmark.name,
-                  description: landmark.description,
-                  date: landmark.date_designated,
-                  county: landmark.county,
-                  area: landmark.location.area,
-                  link: landmark.link,
-                  quote: landmark.quote,
-                  quote_author: landmark.quote_author,
-                  date_designated: landmark.date_designated,
-                },
-              };
-            })
-            .filter((feature) => feature !== null),
+          features: landmarks,
         };
 
         // Add landmarks as a source
@@ -132,22 +102,31 @@ const Map = ({
     };
   }, [setSelectedLocation]);
 
-    // EFFECT 2: Update colors when visitedLandmarks changes
-    useEffect(() => {
-      if (mapInstance.current && mapInstance.current.isStyleLoaded() && mapInstance.current.getLayer('landmark-points')) {
-        mapInstance.current.setPaintProperty(
-          'landmark-points',
-          'circle-color',
-          [
-            'case',
-            ['in', ['get', 'id'], ['literal', visitedLandmarks || []]],
-            '#E63946', // visited - red
-            '#8BC34A'  // not visited - green
-          ]
-        );
-      }
-    }, [visitedLandmarks]);
-  
+  // EFFECT 2: Update colors when visitedLandmarks changes
+  useEffect(() => {
+    if (
+      mapInstance.current &&
+      mapInstance.current.isStyleLoaded() &&
+      mapInstance.current.getLayer("landmark-points")
+    ) {
+      mapInstance.current.setPaintProperty("landmark-points", "circle-color", [
+        "case",
+        ["in", ["get", "id"], ["literal", visitedLandmarks || []]],
+        "#E63946", // visited - red
+        "#8BC34A", // not visited - green
+      ]);
+      mapInstance.current.setPaintProperty(
+        "landmark-points",
+        "circle-stroke-color", // This is the "halo" property for points
+        [
+          "case",
+          ["==", ["get", "id"], selectedLocation?.id || null], // Check if this point is selected
+          "#ff0000", // Use this color for the selected point's halo (red in this example)
+          "#ffffff", // Default halo color for unselected points (white)
+        ],
+      );
+    }
+  }, [visitedLandmarks, selectedLocation]);
 
   return (
     <div className={styles.container}>

@@ -1,6 +1,12 @@
 import styles from "./SidePanel.module.css";
 
-const SidePanel = ({ isOpen, onClose, children }) => {
+const SidePanel = ({
+  onClose,
+  children,
+}: {
+  onClose: () => void;
+  children: React.ReactNode;
+}) => {
   return (
     <div className={styles.container}>
       <button className={styles.button} onClick={onClose}>

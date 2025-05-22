@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+import axios from "axios";
 import styles from "./LandmarkProfile.module.css";
 
 const LandmarkProfile = ({
@@ -35,42 +37,41 @@ const LandmarkProfile = ({
   return (
     <div className={styles.container}>
       <div className={styles.content}>
-        <h2 className={styles.header}>{landmark.name}</h2>
-        <img
-          src="grace.jpg" // Update this path to your actual image path
-          alt={landmark.name}
-          width="100%"
-          className="w-full h-full object-cover opacity-80"
-        />
-        {landmark.quote && (
-          <div className={styles.quote}>
-            <blockquote>"{landmark.quote}"</blockquote>
-            <div className={styles.author}>— {landmark.quote_author}</div>
-          </div>
-        )}
-        <span className="text-sm">Designated: {landmark.date_designated}</span>
-        <span className="text-sm">
-          {landmark.location?.area}, {landmark.county}
-        </span>
-        <h3 className="text-lg font-semibold mb-2">Description</h3>
-        <p className="text-gray-700">{landmark.description}</p>
-
-        <div className="flex items-center mb-6">
-          <input
-            type="checkbox"
-            id="visited"
-            checked={visited}
-            onChange={handleVisitedChange}
-            className="h-5 w-5 text-blue-600 rounded border-gray-300 focus:ring-blue-500"
+        <div className={styles.info}>
+          <h2 className={styles.header}>{landmark.name}</h2>
+          <img
+            src={`landmark-${landmark.id}.jpg`} // Update this path to your actual image path
+            alt={landmark.name}
+            className={styles.img}
           />
-          <label htmlFor="visited" className="ml-2 text-gray-700">
-            I've visited this landmark
-          </label>
-          {visited && <span className="ml-2 text-green-600">✓</span>}
+          {landmark.image_caption && (
+            <span className={styles.caption}>{landmark.image_caption}</span>
+          )}
+          <p>{landmark.description}</p>
+          {landmark.description2 && <p>{landmark.description2}</p>}
+          {landmark.quote && (
+            <div className={styles.quote}>
+              <blockquote>"{landmark.quote}"</blockquote>
+              <div className={styles.author}>— {landmark.quote_author}</div>
+            </div>
+          )}
         </div>
       </div>
 
       <div className={styles.learnMore}>
+        <div className={styles.visited}>
+          <label className={styles.label} htmlFor="visited">
+            <input
+              className={styles.checkbox}
+              type="checkbox"
+              id="visited"
+              checked={visited}
+              onChange={handleVisitedChange}
+            />
+            <span className={styles.customCheckbox}></span>
+            I've visited this landmark
+          </label>
+        </div>
         <a
           href={landmark.link}
           className={styles.link}
