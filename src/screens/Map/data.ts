@@ -110,12 +110,13 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-74.0630, 40.6151],
+      coordinates: [-74.063, 40.6151],
     },
     properties: {
       id: 8,
       name: "Alice Austen House",
-      description: "Alice Austen (1866-1952) was a pioneering American photographer who captured over 7,000 images of Victorian life from her Staten Island home, Clear Comfort. She lived there for 30 years with her partner Gertrude Tate. Today, her home is a National Historic Landmark, designated LGBTQ+ history site, and museum dedicated to her legacy.",
+      description:
+        "Alice Austen (1866-1952) was a pioneering American photographer who captured over 7,000 images of Victorian life from her Staten Island home, Clear Comfort. She lived there for 30 years with her partner Gertrude Tate. Today, her home is a National Historic Landmark, designated LGBTQ+ history site, and museum dedicated to her legacy.",
       link: "https://aliceausten.org/",
       image_caption:
         "The Austen House, with the photographer's grandfather. (taken by Alice Austen)",
