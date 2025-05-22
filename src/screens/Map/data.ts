@@ -42,7 +42,7 @@ const landmarks = [
       link: "https://www.nps.gov/afbg/index.htm",
       quote:
         "For all those who were lost, for all those who were stolen, for all those who were left behind, for all those who were not forgotten.",
-      quote_author: "Memorial inscription, African Burial Ground",
+      quote_author: "Memorial inscription",
       image_caption:
         "Map showing the location of the burial ground outside the northern boundary of the city",
     },
@@ -266,11 +266,11 @@ const landmarks = [
     properties: {
       id: 18,
       name: "Central Park",
-      description:
-        "The Green Lung of the city; one of the most visited city parks in the world; designed by Frederick Law Olmsted and Calvert Vaux.",
-
-      date_designated: "May 23, 1963",
+      description: "Central Park was created in response to rapid mid-19th century urbanization to provide all social classes with access to nature and fresh air. In 1857, the city held a public design competition, which Frederick Law Olmsted and Calvert Vaux won with their 'Greensward Plan.' Construction began in 1858, and the 843-acre park was completed in 1873.",
       link: "https://www.centralparknyc.org/",
+      image_caption: "Stereograph, 1870",
+      quote: "The Lungs of the City",
+      quote_author: "Nickname dubbed in 1858",
     },
   },
   {
@@ -328,11 +328,10 @@ const landmarks = [
     properties: {
       id: 22,
       name: "Church of the Ascension",
-      description:
-        "Early church design by Richard Upjohn; valuable interior artwork",
-
-      date_designated: "December 23, 1987",
+      description: "The Church of the Ascension was founded in 1827. The current Gothic Revival building designed by Richard Upjohn was completed in 1841. It's considered one of New York's most important 19th-century religious buildings due to its interior features such as John La Farge's altar mural 'The Ascension' and Louis Saint-Gaudens' marble altar.",
       link: "https://ascensionnyc.org/",
+      image_caption: "Stereograph from the late 1800s",
+      quote: "The Church of the Open Door.",
     },
   },
   {
@@ -588,7 +587,7 @@ const landmarks = [
       id: 39,
       name: "Grace Church",
       description:
-        "Designed by James Renwick Jr., Grace Church on Broadway is New York City's earliest Gothic Revival structure. Since 1846, this historic Episcopal parish has been a fixture in Greenwich Village, serving the City and its people.",
+        "Designed by James Renwick Jr., Grace Church on Broadway is one of New York City's finest Gothic Revival structures. Since 1846, this historic Episcopal parish has been a fixture in Greenwich Village, serving the City and its people.",
       date_designated: "December 22, 1977",
       link: "https://gracechurchnyc.org/",
       image_caption: "A view of Grace Church from Broadway",
@@ -1270,12 +1269,14 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.993889, 40.738056],
+      coordinates: [-73.99407196082029, 40.738225356181886],
     },
     properties: {
       id: 86,
       name: "Margaret Sanger Clinic",
       description: "Clinic where Margaret Sanger dispensed birth control",
+      quote: "No woman can call herself free who does not own and control her body. No woman can call herself free until she can choose consciously whether she will or will not be a mother.",
+      quote_author: "Margaret Sanger",
     },
   },
   {
@@ -1437,7 +1438,7 @@ const landmarks = [
       id: 97,
       name: "Tenement Building at 97 Orchard Street",
       description:
-        "Between 1863 and 1935, Orchard Street became the epicenter of immigrant life in America. By 1900, the street was the most densely populated place on earth. The five-story tenement building at 97 Orchard Street was home to an estimated 7,000 people from over 20 nations during this time.",
+        "Between 1863 and 1935, Orchard Street became the epicenter of immigrant life in America. By 1903, the block around 97 Orchard Street was the most densely populated place on earth. The five-story tenement buildingt was home to an estimated 7,000 people from over 20 nations during this time.",
       description2:
         "Today, 97 Orchard Street is a National Historic Landmark and serves as the Tenement Museum, bringing to life the stories of the immigrant families who once called this building home.",
       date_designated: "April 19, 1994",
@@ -1501,23 +1502,23 @@ const landmarks = [
       name: "The Town Hall",
       description:
         '"America\'s Town Meetings of the Air" radio programs from here in the 1930s created public-affairs media.',
-
-      date_designated: "March 2, 2012",
     },
   },
   {
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.995833, 40.73],
+      coordinates: [-73.99548896096587, 40.730189231632515],
     },
     properties: {
       id: 102,
       name: "Triangle Shirtwaist Factory",
       description:
-        "Site of the Triangle Shirtwaist Factory fire, one of the worst industrial disasters in the U.S., which led to many workplace reforms",
-
-      date_designated: "July 17, 1971",
+        "On March 25, 1911, a fire at the Triangle Shirtwaist Factory killed 146 workers, mostly young immigrant women. Weak regulations and industry corruption allowed for dangerous working conditions. The tragedy led to landmark workplace safety laws.",
+      quote: "There was a stricken conscience of public guilt and we all felt that we had been wrong, that something was wrong with that building which we had accepted or the tragedy never would have happened. Moved by this sense of stricken guilt, we banded ourselves together to find a way by law to prevent this kind of disaster.",
+      quote_author: "Frances Perkins, Secretary of Labor",
+      link: "https://www.mcny.org/story/triangle-shirtwaist-fire",
+      image_caption: "Trade parade in memory of the victims",
     },
   },
   {
