@@ -24,7 +24,6 @@ const landmarks = [
       name: "Admiral David Glasgow Farragut Gravesite",
       description:
         "Only intact known property directly associated with Admiral David Farragut",
-      
       date_designated: "October 17, 2012",
     },
   },
@@ -39,7 +38,6 @@ const landmarks = [
       name: "African Burial Ground",
       description:
         "The African Burial Ground is the nation's largest and earliest known African American cemetery, serving as a burial site in Lower Manhattan for enslaved Africans from the 1690s to 1794. Rediscovered during 1991 construction, the site became a National Historic Landmark in 1993 and a National Monument in 2007.",
-      
       date_designated: "April 19, 1993",
       link: "https://www.nps.gov/afbg/index.htm",
       quote:
@@ -60,7 +58,6 @@ const landmarks = [
       name: "Ambrose (lightship)",
       description:
         "Lightship, several miles offshore, that marked Ambrose Channel into New York Harbor, now at South Street Seaport Museum.",
-      
       date_designated: "April 11, 1989",
       link: "https://museumships.us/coast-guard/ambrose",
     },
@@ -75,7 +72,6 @@ const landmarks = [
       id: 5,
       name: "American Stock Exchange",
       description: "Former headquarters of the American Stock Exchange",
-      
       date_designated: "June 6, 1978",
     },
   },
@@ -89,7 +85,6 @@ const landmarks = [
       id: 6,
       name: "Louis Armstrong House",
       description: "Home of jazz legend Louis Armstrong for 28 years",
-      area: "Corona, Queens",
       date_designated: "May 11, 1976",
       link: "https://www.louisarmstronghouse.org/",
       quote:
@@ -108,7 +103,6 @@ const landmarks = [
       name: "Chester A. Arthur House",
       description:
         "Home of President Chester A. Arthur; site of his inaugural oath",
-      
       date_designated: "December 12, 1965",
     },
   },
@@ -152,7 +146,6 @@ const landmarks = [
       name: "Bayard-Condict Building",
       description:
         "Only Louis Sullivan building in New York City; one of the first steel skeleton skyscrapers.",
-      
       date_designated: "December 8, 1976",
     },
   },
@@ -175,14 +168,13 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.9975, 40.706389],
+      coordinates: [-73.9969, 40.7061],
     },
     properties: {
       id: 12,
       name: "Brooklyn Bridge",
       description:
-        "The first steel wire suspension bridge; at one point the largest in the world",
-      area: "Brooklyn and Manhattan",
+        "Completed in 1883, the Brooklyn Bridge was the first steel-wire suspension bridge connecting Manhattan and Brooklyn. Designed by John Augustus Roebling and completed under his son Washington and daughter-in-law Emily Warren Roebling after John's death, it became the world's longest suspension bridge. It remains a National Historic Landmark and iconic New York City symbol.",
       date_designated: "January 29, 1964",
     },
   },
@@ -228,7 +220,6 @@ const landmarks = [
       name: "Ralph Johnson Bunche House",
       description:
         "Home of Ralph Johnson Bunche, eminent African-American diplomat and Undersecretary General of United Nations",
-      area: "Kew Gardens",
       date_designated: "May 11, 1976",
     },
   },
@@ -368,7 +359,6 @@ const landmarks = [
       name: "Conference House",
       description:
         "Only surviving pre-Revolutionary War manor house in New York City; site of unsuccessful peace conference in 1776",
-      area: "Historic Richmond, Staten Island",
       date_designated: "May 23, 1966",
       link: "https://conferencehouse.org/",
     },
@@ -384,7 +374,6 @@ const landmarks = [
       name: "Will Marion Cook House",
       description:
         "Home of the leading black composer and musician Will Marion Cook",
-      
       date_designated: "May 11, 1976",
     },
   },
@@ -399,7 +388,6 @@ const landmarks = [
       name: "Cooper Union",
       description:
         "Pioneering adult education center; site of famous anti-slavery speech by Abraham Lincoln",
-      
       date_designated: "July 4, 1961",
       link: "https://cooper.edu/",
     },
@@ -415,7 +403,6 @@ const landmarks = [
       name: "Daily News Building",
       description:
         "First modern free-standing skyscraper designed by Raymond Hood",
-      
       date_designated: "June 29, 1989",
       image_caption:
         "Daily News Building, 42nd Street between 2nd and 3rd Avenues, 1935",
@@ -801,7 +788,6 @@ const landmarks = [
       name: "Low Memorial Library",
       description:
         "First building on Morningside Heights campus; capped by largest freestanding granite dome in U.S.",
-      area: "Columbia University, Manhattan",
       date_designated: "December 23, 1987",
     },
   },
@@ -1079,7 +1065,6 @@ const landmarks = [
       name: "Old Quaker Meeting House",
       description:
         "Only surviving 17th-century ecclesiastical frame building in New York; in almost continuous use since 1696",
-      area: "Flushing, Queens",
       date_designated: "December 24, 1967",
       link: "https://nylandmarks.org/celebrate-50-at-50/flushing-friends-meeting-house/",
     },
@@ -1186,7 +1171,6 @@ const landmarks = [
       name: "Paul Robeson Home",
       description:
         "Home of legendary African-American actor and activist Paul Robeson",
-      
       date_designated: "December 8, 1976",
       link: "https://www.nps.gov/places/new-york-paul-robeson-home.htm",
     },
@@ -1216,7 +1200,6 @@ const landmarks = [
       name: "Sailors' Snug Harbor",
       description: "First and only home for retired merchant seamen in U.S.",
       county: "Richmond",
-      area: "Sailors' Snug Harbor",
       date_designated: "December 8, 1976",
     },
   },
@@ -1230,7 +1213,6 @@ const landmarks = [
       id: 82,
       name: "St. Ann and the Holy Trinity Church",
       description: "Site of first figural stained-glass windows in U.S.",
-      
       date_designated: "December 23, 1987",
       link: "https://www.stannholytrinity.org/",
     },
@@ -1261,8 +1243,6 @@ const landmarks = [
       id: 84,
       name: "St. Patrick's Cathedral",
       description: "First large-scale medieval-style church built in U.S.",
-      
-      date_designated: "December 8, 1976",
       link: "https://saintpatrickscathedral.org/",
     },
   },
@@ -1270,16 +1250,17 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-74.01, 40.711389],
+      coordinates: [-74.00968, 40.71178],
     },
     properties: {
       id: 85,
       name: "St. Paul's Chapel",
       description:
-        "One of the few surviving colonial-era churches in city; George Washington worshipped here following his inauguration; site of informal memorials following September 11 attacks",
-      
-      date_designated: "October 9, 1960",
+        "St. Paul's Chapel opened in 1766 as an outreach center for Trinity Church's expanding congregation and remained a place of worship for the community as the city grew. Today it remains Manhattan's oldest surviving church building. After September 11, 2001, it served as a refuge for recovery workers at Ground Zero.",
       image_caption: "St. Paul's Chapel circa early 1900s",
+      link: "https://trinitychurchnyc.org/visit-history/places/st-pauls-chapel",
+      quote: "The Little Chapel That Stood",
+      quote_author: "Dubbed nickname after 9/11",
     },
   },
   {
@@ -1292,8 +1273,6 @@ const landmarks = [
       id: 86,
       name: "Margaret Sanger Clinic",
       description: "Clinic where Margaret Sanger dispensed birth control",
-      
-      date_designated: "September 14, 1993",
     },
   },
   {
@@ -1307,7 +1286,6 @@ const landmarks = [
       name: "Schomburg Center for Research in Black Culture",
       description:
         "Research library of the New York Public Library (NYPL) and an archive repository for information on people of African descent worldwide.",
-      area: "Harlem, Manhattan",
       date_designated: "December 23, 2016",
     },
   },
@@ -1429,7 +1407,6 @@ const landmarks = [
       name: "St. Bartholomew's Church and Community House",
       description:
         "A pivotal example of the work of Bertram Grosvenor Goodhue and an outstanding example of early 20th-century ecclesiastical architecture.",
-      area: "Midtown Manhattan",
       date_designated: "October 31, 2016",
     },
   },
@@ -1451,14 +1428,14 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.990278, 40.718611],
+      coordinates: [-73.99010, 40.71853],
     },
     properties: {
       id: 97,
       name: "Tenement Building at 97 Orchard Street",
       description:
-        "Preserved tenement building that housed hundreds of immigrants; now the heart of the Lower East Side Tenement Museum.",
-      
+        "Between 1863 and 1935, Orchard Street became the epicenter of immigrant life in America. By 1900, the street was the most densely populated place on earth. The five-story tenement building at 97 Orchard Street was home to an estimated 7,000 people from over 20 nations during this time.",
+      description2: "Today, 97 Orchard Street is a National Historic Landmark and serves as the Tenement Museum, bringing to life the stories of the immigrant families who once called this building home.",
       date_designated: "April 19, 1994",
       link: "https://www.tenement.org/",
       image_caption: "A view of Orchard Street in the early 1900s",
@@ -1548,9 +1525,7 @@ const landmarks = [
     properties: {
       id: 103,
       name: "Trinity Church",
-      description: "Historic church which looks down Wall Street",
-      
-      date_designated: "December 8, 1976",
+      description: "Founded in 1697, Trinity Church has served New York for over 300 years. The current building was designed by Richard Upjohn and consecrated in 1846, and is considered one of the first and finest examples of Neo-Gothic architecture in the country. Notable parishioners such as Alexander Hamilton are buried in the historic churchyard.",
       link: "https://trinitychurchnyc.org/",
       image_caption: "View of Trinity Church, 1895",
     },
@@ -1657,7 +1632,6 @@ const landmarks = [
       name: "Van Cortlandt House",
       description:
         "Mansion for the Van Cortlandt family built in 1748 and used during the American Revolution",
-      area: "Van Cortlandt Park, Bronx",
       date_designated: "December 24, 1976",
       link: "https://www.vchm.org/",
     },
@@ -1673,7 +1647,6 @@ const landmarks = [
       name: "Voorlezer's House",
       description:
         "Oldest known surviving schoolhouse in America; owned by the Staten Island Historical Society",
-      area: "Historic Richmond Town, Staten Island",
       date_designated: "November 5, 1961",
       link: "https://www.nps.gov/parkhistory/online_books/explorers/sitec50.htm",
     },
@@ -1690,7 +1663,6 @@ const landmarks = [
       description:
         "Archaeological site in Conference House Park containing prehistoric remains.",
       county: "Richmond",
-      area: "Tottenville",
       date_designated: "April 19, 1993",
     },
   },
