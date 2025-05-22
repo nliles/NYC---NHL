@@ -1227,7 +1227,6 @@ const landmarks = [
     },
     properties: {
       id: 83,
-      architect: "Leopold Eidlitz",
       name: "St. George's Episcopal Church",
       description:
         "The Parish of Calvary-St. George's dates back to 1749 when Trinity Church established the Chapel of St. George's on Beekman Street. It later joined with Calvary Church (1832) and the Church of the Holy Communion (1844). St. George's current building was designed by Charles Otto Blesch and Leopold Eidlitz in 1846. Notable contributions include founding St. Luke's Hospital and community programs including health clinics and soup kitchens. In 1975, the three congregations merged to form the current parish, continuing their mission of service in New York City.",
