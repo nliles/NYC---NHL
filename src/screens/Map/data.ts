@@ -798,7 +798,8 @@ const landmarks = [
       id: 54,
       name: "R. H. Macy and Company Store (Macy's)",
       description: "Largest department store in world for many years",
-      image_caption: "Macy's during the week of Christmas, 1942 (Library of Congress)"
+      image_caption:
+        "Macy's during the week of Christmas, 1942 (Library of Congress)",
     },
   },
   {
@@ -859,7 +860,8 @@ const landmarks = [
         "Founded in 1870, the Met moved to its current Fifth Avenue location in 1880. Richard Morris Hunt designed the current building's iconic Beaux-Arts facade in 1902. The museum rapidly expanded, acquiring European masterpieces by Manet, Renoir, and Matisse, plus one of the world's largest Egyptian collections outside Cairo.",
       link: "https://www.metmuseum.org/about-the-met/history",
       image_caption: "The Met, 1903 (Library of Congress)",
-      quote: "One of the finest in the world, and the only public building in recent years which approaches in dignity and grandeur the museums of the old world.",
+      quote:
+        "One of the finest in the world, and the only public building in recent years which approaches in dignity and grandeur the museums of the old world.",
       quote_author: "Evening Post, 1902",
     },
   },
@@ -1192,7 +1194,7 @@ const landmarks = [
       name: "Sailors' Snug Harbor",
       description: "First and only home for retired merchant seamen in U.S.",
       link: "https://snug-harbor.org/",
-      image_caption: "Library of Congress"
+      image_caption: "Library of Congress",
     },
   },
   {
@@ -1219,8 +1221,10 @@ const landmarks = [
       name: "St. George's Episcopal Church",
       description:
         "The Parish of Calvary-St. George's dates back to 1749 when Trinity Church established St. George's Chapel. It later joined Calvary Church (1832) and Holy Communion Church (1844). The current building was designed by Charles Otto Blesch and Leopold Eidlitz in 1846. In 1975, three congregations merged.",
-      quote: "Deep river, my home is over Jordan. Deep river, Lord, I want to cross over into campground.",
-      quote_author: "Arranged by church member Harry T. Burleigh, the 'savior of spirituals'",
+      quote:
+        "Deep river, my home is over Jordan. Deep river, Lord, I want to cross over into campground.",
+      quote_author:
+        "Arranged by church member Harry T. Burleigh, the 'savior of spirituals'",
     },
   },
   {
@@ -1262,11 +1266,13 @@ const landmarks = [
     properties: {
       id: 86,
       name: "Margaret Sanger Clinic",
-      description: "The Margaret Sanger Clinic housed the Birth Control Clinical Research Bureau from 1930 to 1973. After opening in Brooklyn in 1916, Sanger moved to this permanent location in 1930. From here, she reshaped attitudes toward reproductive health and sexuality.",
+      description:
+        "The Margaret Sanger Clinic housed the Birth Control Clinical Research Bureau from 1930 to 1973. After opening in Brooklyn in 1916, Sanger moved to this permanent location in 1930. From here, she reshaped attitudes toward reproductive health and sexuality.",
       quote:
         "No woman can call herself free who does not own and control her body. No woman can call herself free until she can choose consciously whether she will or will not be a mother.",
       quote_author: "Margaret Sanger",
-      image_caption: "Outside The Sanger Brownsville clinic in Brooklyn (Library of Congress)",
+      image_caption:
+        "Outside The Sanger Brownsville clinic in Brooklyn (Library of Congress)",
       link: "https://www.pbs.org/wgbh/americanexperience/features/pill-margaret-sanger-1879-1966/",
     },
   },
@@ -1368,9 +1374,11 @@ const landmarks = [
     properties: {
       id: 93,
       name: "A. T. Stewart Company Store",
-      description: "The A.T. Stewart Store, built in 1845-46 and dubbed the 'Marble Palace,' was a commercial structure that housed America's first department store and introduced the Italian Renaissance architectural style to the United States. The store’s namesake, Alexander Turney Stewart, was an Irish immigrant who became a business legend and one of the wealthiest men in America through his dry-goods business. The building is now known as the Sun Building from its days as headquarters for The Sun newspaper.",
+      description:
+        "The A.T. Stewart Store, built in 1845-46 and dubbed the 'Marble Palace,' was a commercial structure that housed America's first department store and introduced the Italian Renaissance architectural style to the United States. The store’s namesake, Alexander Turney Stewart, was an Irish immigrant who became a business legend and one of the wealthiest men in America through his dry-goods business. The building is now known as the Sun Building from its days as headquarters for The Sun newspaper.",
       quote: "The Sun... It Shines for All.",
-      quote_author: "Inscription on a non-working clock from the building's Sun newspaper era",
+      quote_author:
+        "Inscription on a non-working clock from the building's Sun newspaper era",
       link: "https://www.villagepreservation.org/2020/09/21/beyond-the-village-and-back-the-marble-palace-a-t-stewart-store-at-280-broadway/",
     },
   },
