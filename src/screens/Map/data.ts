@@ -921,8 +921,7 @@ const landmarks = [
       name: "New York Amsterdam News Building",
       description:
         "Influential black newspaper the New York Amsterdam News was published here 1916-38",
-
-      date_designated: "May 11, 1976",
+      image_caption: "Second building from left (Library of Congress)",
     },
   },
   {
