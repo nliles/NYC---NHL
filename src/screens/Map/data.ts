@@ -134,7 +134,7 @@ const landmarks = [
       id: 9,
       name: "Bartow–Pell Mansion",
       description: "19th-century mansion in largest New York City park",
-      date_designated: "December 8, 1976",
+      link: "https://www.bartowpellmansionmuseum.org/",
     },
   },
   {
@@ -148,7 +148,6 @@ const landmarks = [
       name: "Bayard-Condict Building",
       description:
         "Only Louis Sullivan building in New York City; one of the first steel skeleton skyscrapers.",
-      date_designated: "December 8, 1976",
     },
   },
   {
@@ -162,8 +161,6 @@ const landmarks = [
       name: "Bell Laboratories Building",
       description:
         "Bell Labs work here included experimental phonograph record, vacuum tubes, talking movies (1923), black and white and color TV, radar, and early commercial remote broadcasts. Today home to the Westbeth Artists Community (listed separately on the National Register of Historic Places).",
-
-      date_designated: "May 15, 1975",
     },
   },
   {
@@ -552,14 +549,12 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.967222, 40.771389],
+      coordinates: [-73.96742903600129, 40.771520295066075],
     },
     properties: {
       id: 37,
       name: "The Frick Collection and Frick Art Reference Library Building",
       description: "",
-
-      date_designated: "October 6, 2008",
       link: "https://www.frick.org/",
       image_caption: "The Frick Collection, 1920",
     },
@@ -589,7 +584,7 @@ const landmarks = [
       id: 39,
       name: "Grace Church",
       description:
-        "Designed by James Renwick Jr., Grace Church on Broadway is one of New York City's finest Gothic Revival structures. Since 1846, this historic Episcopal parish has been a fixture in Greenwich Village, serving the City and its people.",
+        "Designed by James Renwick Jr., Grace Church on Broadway is one of New York City's finest Gothic Revival structures. Since 1846, this historic Episcopal parish has been a fixture in Greenwich Village, and for generations was considered 'the most fashionable church in New York.' It continues to serve the city and its people.",
       date_designated: "December 22, 1977",
       link: "https://gracechurchnyc.org/",
       image_caption: "A view of Grace Church from Broadway",
@@ -700,8 +695,6 @@ const landmarks = [
       id: 46,
       name: "Hispanic Society of America",
       description: "Museum of Iberian Art",
-
-      date_designated: "October 17, 2012",
       link: "https://hispanicsociety.org/",
     },
   },
@@ -805,8 +798,7 @@ const landmarks = [
       id: 54,
       name: "R. H. Macy and Company Store (Macy's)",
       description: "Largest department store in world for many years",
-
-      date_designated: "June 2, 1978",
+      image_caption: "Macy's during the week of Christmas, 1942 (Library of Congress)"
     },
   },
   {
@@ -858,17 +850,17 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.963611, 40.778889],
+      coordinates: [-73.963201087946421, 40.77967623459204],
     },
     properties: {
       id: 58,
       name: "Metropolitan Museum of Art",
       description:
-        "The Fifth Avenue building of the Metropolitan Museum of Art, one of the world's most important and prestigious art museums",
-
-      date_designated: "June 24, 1986",
-      link: "https://www.metmuseum.org/",
-      image_caption: "Hall of sculpture",
+        "Founded in 1870, the Met moved to its current Fifth Avenue location in 1880. Richard Morris Hunt designed the current building's iconic Beaux-Arts facade in 1902. The museum rapidly expanded, acquiring European masterpieces by Manet, Renoir, and Matisse, plus one of the world's largest Egyptian collections outside Cairo.",
+      link: "https://www.metmuseum.org/about-the-met/history",
+      image_caption: "The Met, 1903 (Library of Congress)",
+      quote: "One of the finest in the world, and the only public building in recent years which approaches in dignity and grandeur the museums of the old world.",
+      quote_author: "Evening Post, 1902",
     },
   },
   {
@@ -914,8 +906,6 @@ const landmarks = [
       name: "National City Bank Building",
       description:
         "Home to one of the country's largest and most important banks since 1908",
-
-      date_designated: "June 2, 1978",
     },
   },
   {
@@ -1037,9 +1027,8 @@ const landmarks = [
       name: "New York Yacht Club",
       description:
         "Oldest yachting club in U.S.; longtime home of the America's Cup",
-
-      date_designated: "May 28, 1987",
       link: "https://nyyc.org/",
+      image_caption: "The New York Yacht Club circa 1900 (Library of Congress)",
     },
   },
   {
@@ -1069,7 +1058,6 @@ const landmarks = [
       name: "Old Quaker Meeting House",
       description:
         "Only surviving 17th-century ecclesiastical frame building in New York; in almost continuous use since 1696",
-      date_designated: "December 24, 1967",
       link: "https://nylandmarks.org/celebrate-50-at-50/flushing-friends-meeting-house/",
     },
   },
@@ -1203,8 +1191,8 @@ const landmarks = [
       id: 81,
       name: "Sailors' Snug Harbor",
       description: "First and only home for retired merchant seamen in U.S.",
-      county: "Richmond",
-      date_designated: "December 8, 1976",
+      link: "https://snug-harbor.org/",
+      image_caption: "Library of Congress"
     },
   },
   {
@@ -1217,7 +1205,6 @@ const landmarks = [
       id: 82,
       name: "St. Ann and the Holy Trinity Church",
       description: "Site of first figural stained-glass windows in U.S.",
-      date_designated: "December 23, 1987",
       link: "https://www.stannholytrinity.org/",
     },
   },
@@ -1231,9 +1218,9 @@ const landmarks = [
       id: 83,
       name: "St. George's Episcopal Church",
       description:
-        "The Parish of Calvary-St. George's dates back to 1749 when Trinity Church established the Chapel of St. George's on Beekman Street. It later joined with Calvary Church (1832) and the Church of the Holy Communion (1844). St. George's current building was designed by Charles Otto Blesch and Leopold Eidlitz in 1846. Notable contributions include founding St. Luke's Hospital and community programs including health clinics and soup kitchens.",
-      description2: "The parish is also known for Harry T. Burleigh (born 1866), an African American musician called one of the saviors of spirituals, who sang in St. George's choir for over 50 years and whose spiritual arrangements influenced Dvorak's 'New World' Symphony. In 1975, the three congregations merged to form the current parish, continuing their mission of service in New York City.",
-      county: "New York",
+        "The Parish of Calvary-St. George's dates back to 1749 when Trinity Church established St. George's Chapel. It later joined Calvary Church (1832) and Holy Communion Church (1844). The current building was designed by Charles Otto Blesch and Leopold Eidlitz in 1846. In 1975, three congregations merged.",
+      quote: "Deep river, my home is over Jordan. Deep river, Lord, I want to cross over into campground.",
+      quote_author: "Arranged by church member Harry T. Burleigh, the 'savior of spirituals'",
     },
   },
   {
@@ -1270,15 +1257,17 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.99407196082029, 40.738225356181886],
+      coordinates: [-73.99396467260372, 40.73828632536973],
     },
     properties: {
       id: 86,
       name: "Margaret Sanger Clinic",
-      description: "Clinic where Margaret Sanger dispensed birth control",
+      description: "The Margaret Sanger Clinic housed the Birth Control Clinical Research Bureau from 1930 to 1973. After opening in Brooklyn in 1916, Sanger moved to this permanent location in 1930. From here, she reshaped attitudes toward reproductive health and sexuality.",
       quote:
         "No woman can call herself free who does not own and control her body. No woman can call herself free until she can choose consciously whether she will or will not be a mother.",
       quote_author: "Margaret Sanger",
+      image_caption: "Outside The Sanger Brownsville clinic in Brooklyn (Library of Congress)",
+      link: "https://www.pbs.org/wgbh/americanexperience/features/pill-margaret-sanger-1879-1966/",
     },
   },
   {
@@ -1374,15 +1363,15 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-74.006111, 40.714167],
+      coordinates: [-74.00565543416522, 40.71452937605111],
     },
     properties: {
       id: 93,
       name: "A. T. Stewart Company Store",
-      description:
-        'Site of the first American department store (now known as the "New York Sun Building")',
-
-      date_designated: "June 2, 1978",
+      description: "The A.T. Stewart Store, built in 1845-46 and dubbed the 'Marble Palace,' was a commercial structure that housed America's first department store and introduced the Italian Renaissance architectural style to the United States. The store’s namesake, Alexander Turney Stewart, was an Irish immigrant who became a business legend and one of the wealthiest men in America through his dry-goods business. The building is now known as the Sun Building from its days as headquarters for The Sun newspaper.",
+      quote: "The Sun... It Shines for All.",
+      quote_author: "Inscription on a non-working clock from the building's Sun newspaper era",
+      link: "https://www.villagepreservation.org/2020/09/21/beyond-the-village-and-back-the-marble-palace-a-t-stewart-store-at-280-broadway/",
     },
   },
   {
@@ -1426,8 +1415,7 @@ const landmarks = [
       id: 96,
       name: "Surrogate's Court",
       description: "Probate Courthouse across from City Hall",
-
-      date_designated: "December 22, 1977",
+      link: "https://ww2.nycourts.gov/courts/1jd/surrogates/historical.shtml",
     },
   },
   {
@@ -1467,15 +1455,14 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.981389, 40.75],
+      coordinates: [-73.98296160308524, 40.750140782637565],
     },
     properties: {
       id: 99,
       name: "Tiffany and Company Building",
       description:
         "Served as the home of Tiffany and Company from 1905 through 1940",
-
-      date_designated: "June 2, 1978",
+      image_caption: "Tiffany and Company Building (Library of Congress)",
     },
   },
   {
@@ -1565,9 +1552,6 @@ const landmarks = [
       name: "Union Square",
       description:
         "The political heart of Manhattan; many protests begin or end here",
-
-      date_designated: "December 9, 1997",
-      image_caption: "Union Square Park, 1936",
     },
   },
   {
@@ -1612,7 +1596,7 @@ const landmarks = [
       description:
         "Cass Gilbert designed Customhouse for New York Harbor; now part of the Smithsonian Institution",
 
-      date_designated: "December 8, 1976",
+      link: "https://americanindian.si.edu/visit/ny",
     },
   },
   {
