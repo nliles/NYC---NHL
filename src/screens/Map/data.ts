@@ -872,7 +872,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.944722, 40.815],
+      coordinates: [-73.94309891636964, 40.82055949701559],
     },
     properties: {
       id: 62,
@@ -886,15 +886,13 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.878333, 40.863611],
+      coordinates: [-73.87691278133622, 40.86782862626632],
     },
     properties: {
       id: 63,
       name: "New York Botanical Garden",
       description:
         "One of the world's leading botanical gardens, with the largest herbarium in the U.S. and second largest in the world after the French National Museum of Natural History and home to many plant laboratories",
-
-      date_designated: "May 28, 1967",
       link: "https://www.nybg.org/",
     },
   },
@@ -902,14 +900,12 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-74.010278, 40.704444],
+      coordinates: [-74.00971074635791, 40.70489846764529],
     },
     properties: {
       id: 64,
       name: "New York Cotton Exchange",
       description: "First commodity market in the U.S.; now 1 Hanover Square",
-
-      date_designated: "December 22, 1977",
       image_caption: "The New York Cotton Exchange in 1885",
     },
   },
@@ -917,14 +913,12 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.985556, 40.742778],
+      coordinates: [-74.01288018382186, 40.714148749295504],
     },
     properties: {
       id: 65,
       name: "New York Life Building",
       description: "Last significant Cass Gilbert skyscraper in Manhattan",
-
-      date_designated: "June 2, 1978",
     },
   },
   {
@@ -947,15 +941,13 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-74.011111, 40.706944],
+      coordinates: [-74.01115689366821, 40.70798057241238],
     },
     properties: {
       id: 67,
       name: "New York Stock Exchange",
       description:
         "One of the first securities markets in the U.S.; still the world's largest",
-
-      date_designated: "June 2, 1978",
       image_caption: "New York Stock Exchange Trading floor, 1903",
       link: "https://www.nyse.com/index",
     },
@@ -964,22 +956,20 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.998333, 40.733056],
+      coordinates: [-73.99728308843622, 40.7341148100732],
     },
     properties: {
       id: 68,
       name: "New York Studio School of Drawing, Painting and Sculpture",
       description:
         "Original home of the Whitney Museum, the first devoted to 20th-century American art",
-
-      date_designated: "April 27, 1992",
     },
   },
   {
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.981667, 40.755556],
+      coordinates: [-73.98127165117859, 40.756956036902025],
     },
     properties: {
       id: 69,
@@ -994,14 +984,12 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.9925, 40.7275],
+      coordinates: [-73.99231966775397, 40.72924378026664],
     },
     properties: {
       id: 70,
-      name: "New York Yacht Club",
+      name: "Old Merchant House",
       description: "Nineteenth-century family home; preserved inside and out",
-
-      date_designated: "June 23, 1965",
       link: "https://merchantshouse.org/",
       image_caption: "The Merchant's House circa 1936",
     },
@@ -1024,15 +1012,13 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.9625, 40.806111],
+      coordinates: [-73.96095577448307, 40.810675903013674],
     },
     properties: {
       id: 72,
       name: "Philosophy Hall",
       description:
         "Edwin Armstrong developed FM radio in this Columbia University building",
-
-      date_designated: "July 21, 2003",
     },
   },
   {
@@ -1046,23 +1032,19 @@ const landmarks = [
       name: "Players Club",
       description:
         "Extensive collection of art and theater memorabilia; interior redone by Stanford White",
-
-      date_designated: "December 19, 1962",
     },
   },
   {
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.974444, 40.764722],
+      coordinates: [-73.97412833393817, 40.766267510352264],
     },
     properties: {
       id: 74,
       name: "Plaza Hotel",
       description:
         "French Renaissance-style building; outstanding example of American hotel architecture; symbol of elegance; visible from much of lower Central Park; setting for Kay Thompson's popular Eloise series of children's books",
-
-      date_designated: "June 24, 1986",
       link: "https://www.theplazany.com/",
     },
   },
@@ -1070,15 +1052,13 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.993611, 40.699167],
+      coordinates: [-73.99322795432722, 40.700495250857045],
     },
     properties: {
       id: 75,
       name: "Plymouth Church of the Pilgrims",
       description:
         "Important station on Underground Railroad when Henry Ward Beecher was pastor",
-
-      date_designated: "July 4, 1961",
       link: "https://www.plymouthchurch.org/#main",
     },
   },
@@ -1086,43 +1066,38 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.961667, 40.81],
+      coordinates: [-73.96158518519576, 40.81578886136246],
     },
     properties: {
       id: 76,
       name: "Pupin Physics Laboratory, Columbia University",
       description:
         "Columbia University building; site of first splitting of uranium atom in U.S. and other milestones in development of atomic bomb",
-
-      date_designated: "December 21, 1965",
     },
   },
   {
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.981111, 40.7025],
+      coordinates: [-73.97164095440718, 40.69971427632216],
     },
     properties: {
       id: 77,
       name: "Quarters A, Brooklyn Navy Yard",
       description: "Home to Matthew Perry at the time of his opening of Japan",
-
-      date_designated: "May 30, 1974",
     },
   },
   {
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.938889, 40.834444],
+      coordinates: [-73.93877677455183, 40.84015073991667],
     },
     properties: {
       id: 78,
       name: "Paul Robeson Home",
       description:
         "Home of legendary African-American actor and activist Paul Robeson",
-      date_designated: "December 8, 1976",
       link: "https://www.nps.gov/places/new-york-paul-robeson-home.htm",
     },
   },
@@ -1130,21 +1105,19 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.915, 40.648333],
+      coordinates: [-73.92708078397834, 40.651075049688934], 
     },
     properties: {
       id: 79,
       name: "Jackie Robinson House",
       description: "Home of baseball great Jackie Robinson",
-
-      date_designated: "May 11, 1976",
     },
   },
   {
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-74.102778, 40.6425],
+      coordinates: [-74.10490674927986, 40.64801187986866],
     },
     properties: {
       id: 81,
@@ -1158,7 +1131,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.9925, 40.694444],
+      coordinates: [-73.99263618502333, 40.69597508184234],
     },
     properties: {
       id: 82,
@@ -1171,7 +1144,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.985, 40.734444],
+      coordinates: [-73.98488197879576, 40.73574443715123],
     },
     properties: {
       id: 83,
@@ -1188,7 +1161,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.976389, 40.758611],
+      coordinates: [-73.97604368128681, 40.76132405923972],
     },
     properties: {
       id: 84,
@@ -1305,15 +1278,13 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-74.001389, 40.724444],
+      coordinates: [-74.00004582946308, 40.72549470153905],
     },
     properties: {
       id: 92,
       name: "SoHo-Cast Iron Historic District",
       description:
         "Believed to be the largest existing collection of late 19th-century cast iron facades in the world",
-
-      date_designated: "June 2, 1978",
     },
   },
   {
@@ -1522,29 +1493,26 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.869722, 40.866389],
+      coordinates: [-73.86999817621367, 40.871982542092695],
     },
     properties: {
       id: 107,
       name: "United Workers Cooperatives",
       description:
         "Built in 1926 by the United Workers' Association to improve the living standards of its members, many of whom lived in squalid conditions in the tenements of the Lower East Side",
-
-      date_designated: "July 17, 1991",
     },
   },
   {
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-74.013889, 40.704167],
+      coordinates: [-74.01356682936074, 40.70467473567295],
     },
     properties: {
       id: 108,
       name: "U.S. Customhouse",
       description:
         "Cass Gilbert designed Customhouse for New York Harbor; now part of the Smithsonian Institution",
-
       link: "https://americanindian.si.edu/visit/ny",
     },
   },
@@ -1552,15 +1520,13 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.912222, 40.857778],
+      coordinates: [-73.91379176998373, 40.864618874950175],
     },
     properties: {
       id: 109,
       name: "University Heights Campus (Bronx Community College of the City University of New York)",
       description:
         "Collection of Beaux Arts buildings by Stanford White is one of the best examples of that style anywhere.",
-
-      date_designated: "October 17, 2012",
     },
   },
   {
@@ -1625,15 +1591,13 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-74.008056, 40.712222],
+      coordinates: [-74.00839725969281, 40.71329704082626],
     },
     properties: {
       id: 114,
       name: "Woolworth Building",
       description:
         "One of the oldest — and most famous — skyscrapers in New York City; still one of the tallest buildings in New York City",
-
-      date_designated: "November 13, 1966",
     },
   },
   {
@@ -1660,6 +1624,7 @@ const landmarks = [
       id: 116,
       name: "Wyckoff-Bennett Homestead",
       description: "Housed Hessian soldiers during the American Revolution",
+      link: "https://hdc.org/buildings/wyckoff-bennett-homestead/",
     },
   },
 ];
