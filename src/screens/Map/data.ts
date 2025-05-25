@@ -715,7 +715,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.87621004746785, 40.859829701401026], 
+      coordinates: [-73.87621004746785, 40.859829701401026],
     },
     properties: {
       id: 52,
@@ -734,6 +734,9 @@ const landmarks = [
       name: "Low Memorial Library",
       description:
         "First building on Morningside Heights campus; capped by largest freestanding granite dome in U.S.",
+      link: "https://www.nps.gov/places/low-memorial-library.htm",
+      image_caption:
+        "Low Memorial Library, Columbia University, 1904 (Library of Congress)",
     },
   },
   {
@@ -774,7 +777,7 @@ const landmarks = [
       name: "Claude McKay Residence",
       description:
         "The Harlem YMCA, whose residents included African-American writer Claude McKay",
-      link: "https://africanamericanheritagesites.stqry.app/en/story/44226"
+      link: "https://africanamericanheritagesites.stqry.app/en/story/44226",
     },
   },
   {
@@ -944,6 +947,7 @@ const landmarks = [
       name: "New York Studio School of Drawing, Painting and Sculpture",
       description:
         "Original home of the Whitney Museum, the first devoted to 20th-century American art",
+      link: "https://nyss.org/about/history-of-the-school/",
     },
   },
   {
@@ -1192,7 +1196,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.94138230258297, 40.82159874130362], 
+      coordinates: [-73.94138230258297, 40.82159874130362],
     },
     properties: {
       id: 87,
@@ -1205,7 +1209,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [73.99581075758525, 40.735343209954536],
+      coordinates: [-73.99581075758525, 40.735343209954536],
     },
     properties: {
       id: 88,
