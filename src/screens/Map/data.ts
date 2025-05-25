@@ -3,14 +3,15 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.983611, 40.741667],
+      coordinates: [-73.9838913321291, 40.741412299402526],
     },
     properties: {
       id: 1,
       name: "69th Regiment Armory",
       description:
         "Home of the watershed Armory Show in 1913, which introduced America to modern art",
-      date_designated: "June 19, 1996",
+      link: "https://sixtyninth.net/",
+      image_caption: "Library of Congress"
     },
   },
   {
@@ -51,14 +52,13 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-74.0025, 40.704722],
+      coordinates: [-74.002397187950055, 40.70550383599932],
     },
     properties: {
       id: 4,
       name: "Ambrose (lightship)",
       description:
         "Lightship, several miles offshore, that marked Ambrose Channel into New York Harbor, now at South Street Seaport Museum.",
-      date_designated: "April 11, 1989",
       link: "https://museumships.us/coast-guard/ambrose",
     },
   },
@@ -79,13 +79,12 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.861667, 40.754444],
+      coordinates: [-73.86159410500049, 40.754798806256034],
     },
     properties: {
       id: 6,
       name: "Louis Armstrong House",
       description: "Home of jazz legend Louis Armstrong for 28 years",
-      date_designated: "May 11, 1976",
       link: "https://www.louisarmstronghouse.org/",
       quote:
         "There's so much in 'Wonderful World' that brings me back to my neighborhood where I live in Corona, New York.",
@@ -96,14 +95,13 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.982222, 40.742778],
+      coordinates: [-73.98219046669921, 40.742991557490654],
     },
     properties: {
       id: 7,
       name: "Chester A. Arthur House",
       description:
         "Home of President Chester A. Arthur; site of his inaugural oath",
-      date_designated: "December 12, 1965",
     },
   },
   {
@@ -204,7 +202,6 @@ const landmarks = [
       description:
         "One of the few remaining buildings by George B. Post; innovative structural system",
 
-      date_designated: "July 17, 1991",
       link: "https://www.bklynlibrary.org/center-for-brooklyn-history",
     },
   },
@@ -219,7 +216,6 @@ const landmarks = [
       name: "Ralph Johnson Bunche House",
       description:
         "Home of Ralph Johnson Bunche, eminent African-American diplomat and Undersecretary General of United Nations",
-      date_designated: "May 11, 1976",
     },
   },
   {
@@ -232,8 +228,6 @@ const landmarks = [
       id: 16,
       name: "Carnegie Hall",
       description: "One of the most famous music venues in the world",
-
-      date_designated: "December 29, 1962",
       link: "https://www.carnegiehall.org/",
       image_caption: "Carnegie Hall circa early 1900s",
     },
@@ -249,8 +243,6 @@ const landmarks = [
       name: "Andrew Carnegie Mansion",
       description:
         "Home of Andrew Carnegie, now the Cooper-Hewitt, National Design Museum",
-
-      date_designated: "November 13, 1966",
       link: "https://www.cooperhewitt.org/about-the-carnegie-mansion-2/",
     },
   },
@@ -282,8 +274,6 @@ const landmarks = [
       name: "Central Synagogue",
       description:
         "Oldest synagogue continuously in use by a New York City Jewish congregation; built in a Moorish Revival style to recognize importance of that period in Jewish history",
-
-      date_designated: "May 15, 1975",
       link: "https://www.centralsynagogue.org/",
     },
   },
@@ -298,8 +288,6 @@ const landmarks = [
       name: "Chamber of Commerce Building",
       description:
         "Former home of the Chamber of Commerce of the State of New York, established in 1768; prototype for the chamber of commerce",
-
-      date_designated: "December 22, 1977",
     },
   },
   {
@@ -313,8 +301,6 @@ const landmarks = [
       name: "Chrysler Building",
       description:
         "Art Deco skyscraper; distinctive feature of Manhattan skyline; at one point world's tallest building",
-
-      date_designated: "December 8, 1976",
     },
   },
   {
@@ -344,8 +330,6 @@ const landmarks = [
       name: "City Hall",
       description:
         "Oldest city hall in U.S. still in use as main municipal government building",
-
-      date_designated: "December 19, 1960",
     },
   },
   {
@@ -359,7 +343,6 @@ const landmarks = [
       name: "Conference House",
       description:
         "Only surviving pre-Revolutionary War manor house in New York City; site of unsuccessful peace conference in 1776",
-      date_designated: "May 23, 1966",
       link: "https://conferencehouse.org/",
     },
   },
@@ -374,7 +357,6 @@ const landmarks = [
       name: "Will Marion Cook House",
       description:
         "Home of the leading black composer and musician Will Marion Cook",
-      date_designated: "May 11, 1976",
     },
   },
   {
@@ -388,7 +370,6 @@ const landmarks = [
       name: "Cooper Union",
       description:
         "Pioneering adult education center; site of famous anti-slavery speech by Abraham Lincoln",
-      date_designated: "July 4, 1961",
       link: "https://cooper.edu/",
     },
   },
@@ -403,7 +384,6 @@ const landmarks = [
       name: "Daily News Building",
       description:
         "First modern free-standing skyscraper designed by Raymond Hood",
-      date_designated: "June 29, 1989",
       image_caption:
         "Daily News Building, 42nd Street between 2nd and 3rd Avenues, 1935",
     },
@@ -412,15 +392,13 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.976389, 40.776667],
+      coordinates: [-73.97607643036788, 40.776761382835126],
     },
     properties: {
       id: 28,
       name: "Dakota Apartments",
-      description:
-        "Combination of Renaissance architectural styles by Henry Hardenbergh; setting for Rosemary's Baby and the shooting death of John Lennon",
-
-      date_designated: "December 8, 1976",
+      description: "The Dakota was designed by Henry Janeway Hardenbergh in 1884 in the German Renaissance style and was the first luxury apartment building in New York City.",
+      description2: "The building is widely known as John Lennon's former home, who was killed outside the building's entrance in 1980, and as the setting for 'Rosemary's Baby.' It remains one of New York's most prestigious residential addresses.",
     },
   },
   {
@@ -433,8 +411,6 @@ const landmarks = [
       id: 29,
       name: "Dyckman House",
       description: "Only remaining farmhouse in Manhattan",
-
-      date_designated: "December 24, 1967",
       link: "https://dyckmanfarmhouse.org/",
     },
   },
@@ -442,15 +418,13 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.993889, 40.715],
+      coordinates: [-73.99349173013195, 40.71492727730689],
     },
     properties: {
       id: 30,
       name: "Eldridge Street Synagogue",
       description:
         "One of the oldest synagogues in the U.S.; first built by Jews from Eastern Europe",
-
-      date_designated: "June 19, 1996",
       link: "https://www.eldridgestreet.org/",
     },
   },
@@ -465,23 +439,19 @@ const landmarks = [
       name: "Duke Ellington House",
       description:
         "Ellington, the legendary jazz composer and bandleader, lived in Apartment 4A from 1939 to 1961",
-
-      date_designated: "May 11, 1976",
     },
   },
   {
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.985556, 40.748333],
+      coordinates: [-73.98571806484425, 40.74861921297347],
     },
     properties: {
       id: 32,
       name: "Empire State Building",
       description:
         "World's tallest building from 1931 to 1972 and internationally recognized symbol of New York City",
-
-      date_designated: "June 24, 1986",
       link: "https://www.esbnyc.com/",
     },
   },
@@ -489,44 +459,38 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-74.011111, 40.709722],
+      coordinates: [-74.01073033198543, 40.70865579275487],
     },
     properties: {
       id: 33,
       name: "Equitable Building",
       description:
         "One of the earliest skyscrapers in Manhattan; profoundly influenced later skyscraper design",
-
-      date_designated: "June 2, 1978",
     },
   },
   {
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.988611, 40.73],
+      coordinates: [-73.98843428595049, 40.73025375702247],
     },
     properties: {
       id: 34,
       name: "Hamilton Fish House",
       description:
         "Home of Hamilton Fish, future Governor and Senator of New York",
-
-      date_designated: "May 15, 1975",
     },
   },
   {
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.989722, 40.741111],
+      coordinates: [-73.9897522473287, 40.74127182201542],
     },
     properties: {
       id: 35,
       name: "Flatiron Building",
       description: "Distinctive triangular building at Madison Square.",
-
-      date_designated: "June 29, 1989",
       image_caption: "The Flatiron Building circa 1902",
     },
   },
@@ -534,15 +498,13 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.955, 40.7625],
+      coordinates: [-73.95533993600401, 40.762716327570274],
     },
     properties: {
       id: 36,
       name: "Founder's Hall, The Rockefeller University",
       description:
         "Building marked the start of John D. Rockefeller Jr.'s putting the vast family fortune to philanthropic purposes",
-
-      date_designated: "May 30, 1974",
     },
   },
   {
@@ -554,7 +516,8 @@ const landmarks = [
     properties: {
       id: 37,
       name: "The Frick Collection and Frick Art Reference Library Building",
-      description: "",
+      description: "The Frick Collection was established in 1935 to preserve the art collection of businessman Henry Clay Frick (1849-1919), who made his fortune in coke and steel. Frick was an avid art collector and designed his Beaux-Arts mansion on Fifth Avenue specifically to accommodate his paintings and art.",
+      description2: "His collection includes masterpieces by Vermeer, Rembrandt, and other Old Masters, displayed alongside period furniture and decorative arts.",
       link: "https://www.frick.org/",
       image_caption: "The Frick Collection, 1920",
     },
@@ -578,14 +541,13 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.991304, 40.732369],
+      coordinates: [-73.99092609204504, 40.73223104616723],
     },
     properties: {
       id: 39,
       name: "Grace Church",
       description:
         "Designed by James Renwick Jr., Grace Church on Broadway is one of New York City's finest Gothic Revival structures. Since 1846, this historic Episcopal parish has been a fixture in Greenwich Village, and for generations was considered 'the most fashionable church in New York.' It continues to serve the city and its people.",
-      date_designated: "December 22, 1977",
       link: "https://gracechurchnyc.org/",
       image_caption: "A view of Grace Church from Broadway",
       quote: "All Are Welcome to Enter, Rest, Pray.",
@@ -596,15 +558,13 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.976389, 40.752778],
+      coordinates: [-73.97677441594048, 40.75349694576785],
     },
     properties: {
       id: 40,
       name: "Grand Central Terminal",
       description:
         "Beaux-Arts architecture; historic rail gateway to New York City; largest train station in the world by number of platforms",
-
-      date_designated: "December 8, 1976",
       link: "https://grandcentralterminal.com/",
     },
   },
@@ -612,7 +572,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.991111, 40.652222],
+      coordinates: [-73.99193153837216, 40.65551284502183],
     },
     properties: {
       id: 41,
@@ -628,7 +588,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.947222, 40.821389],
+      coordinates: [-73.94732069674879, 40.82156901416235],
     },
     properties: {
       id: 42,
@@ -644,7 +604,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.958889, 40.782778],
+      coordinates: [-73.9586783859235, 40.78530675801299], 
     },
     properties: {
       id: 43,
@@ -689,7 +649,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.946389, 40.833611],
+      coordinates: [-73.94716562936767, 40.839111786360924],
     },
     properties: {
       id: 46,
@@ -718,7 +678,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-74.001111, 40.764722],
+      coordinates: [-74.00083333870815, 40.7664228487397],
     },
     properties: {
       id: 48,
@@ -734,7 +694,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.943056, 40.815278],
+      coordinates: [-73.94226095545702, 40.79667153193912],
     },
     properties: {
       id: 49,
@@ -792,7 +752,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.988333, 40.750278],
+      coordinates: [-73.98909304729705, 40.75105203894551],
     },
     properties: {
       id: 54,
@@ -813,8 +773,6 @@ const landmarks = [
       name: "McGraw-Hill Building",
       description:
         "Early Art Deco building; first U.S. building in International Style",
-
-      date_designated: "June 29, 1989",
     },
   },
   {
@@ -836,7 +794,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.9875, 40.741111],
+      coordinates: [-73.97676690314741, 40.753521628315966],
     },
     properties: {
       id: 57,
@@ -869,15 +827,13 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.981667, 40.749444],
+      coordinates: [-73.98142928965595, 40.74939645675879],
     },
     properties: {
       id: 59,
       name: "J. Pierpont Morgan Library",
       description:
         "Office, Library, and now Museum of J. P. Morgan; the Panic of 1907 ended in the Library",
-
-      date_designated: "November 13, 1966",
       link: "https://www.themorgan.org/",
     },
   },
@@ -885,14 +841,12 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.938611, 40.834444],
+      coordinates: [-73.93863709365453, 40.83485651056482], 
     },
     properties: {
       id: 60,
       name: "Morris-Jumel Mansion",
       description: "Oldest residential building in Manhattan",
-
-      date_designated: "January 20, 1961",
       link: "https://morrisjumel.org/",
       image_caption: "The Morris-Jumel Mansion circa 1890",
     },
@@ -973,7 +927,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.982222, 40.753333],
+      coordinates: [-73.98271166392648, 40.754355365216426],
     },
     properties: {
       id: 66,

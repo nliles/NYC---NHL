@@ -1,4 +1,3 @@
-// In your React component
 import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react";
 import mapboxgl from "mapbox-gl/dist/mapbox-gl";
 import landmarks from "./data.ts";
@@ -22,8 +21,8 @@ const Map = ({
 
       const map = new mapboxgl.Map({
         container: mapContainer.current,
-        style: "mapbox://styles/nmliles16/cmauev02t00li01r2c9lg9fi8",
-        center: [-74.0199, 40.7528], // NYC coordinates
+        style: "mapbox://styles/nmliles16/cmb1it4xl009501qv942bdhxu",
+        center: [-74.0199, 40.7528], // NYC coordinates (initial, will be adjusted)
         zoom: 12,
       });
 
@@ -77,6 +76,33 @@ const Map = ({
             "text-halo-width": 1,
           },
         });
+
+        map.getStyle().layers.forEach(layer => {
+          console.log(layer)
+      });
+
+        // Fit map to show all landmarks
+        if (landmarks && landmarks.length > 0) {
+          // Calculate bounds from all landmark coordinates
+          const bounds = new mapboxgl.LngLatBounds();
+          
+          landmarks.forEach(landmark => {
+            if (landmark.geometry && landmark.geometry.coordinates) {
+              bounds.extend(landmark.geometry.coordinates);
+            }
+          });
+
+          // Fit the map to the bounds with some padding
+          map.fitBounds(bounds, {
+            padding: {
+              top: 50,
+              bottom: 50,
+              left: 50,
+              right: 50
+            },
+            maxZoom: 15 // Optional: prevent zooming in too close
+          });
+        }
 
         // Add popups on click
         map.on("click", "landmark-points", (e) => {
