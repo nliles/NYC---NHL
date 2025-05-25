@@ -47,12 +47,18 @@ const LandmarkProfile = ({
           {landmark.image_caption && (
             <span className={styles.caption}>{landmark.image_caption}</span>
           )}
-          <p>{landmark.description}</p>
+          <p className={styles.description}>{landmark.description}</p>
           {landmark.description2 && <p>{landmark.description2}</p>}
           {landmark.quote && (
             <div className={styles.quote}>
-              <blockquote>"{landmark.quote}"</blockquote>
-              <div className={styles.author}>— {landmark.quote_author}</div>
+              <blockquote className={styles.quote}>
+                <p>"{landmark.quote}"</p>
+                {landmark.quote_author && (
+                  <span className={styles.author}>
+                    — {landmark.quote_author}
+                  </span>
+                )}
+              </blockquote>
             </div>
           )}
         </div>
