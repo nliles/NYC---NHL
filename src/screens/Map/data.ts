@@ -32,7 +32,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-74.00444, 40.71444],
+      coordinates: [-74.00446645484749, 40.7146503844196],
     },
     properties: {
       id: 3,
@@ -66,7 +66,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-74.0125, 40.708889],
+      coordinates: [-74.01262269175398, 40.70950764894071],
     },
     properties: {
       id: 5,
@@ -108,7 +108,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-74.063, 40.6151],
+      coordinates: [-74.06305915271307, 40.62187426099858],
     },
     properties: {
       id: 8,
@@ -126,7 +126,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.805556, 40.871667],
+      coordinates: [-73.80512386424425, 40.87743416052029],
     },
     properties: {
       id: 9,
@@ -139,7 +139,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.995556, 40.726389],
+      coordinates: [-73.99480151671527, 40.727812827347826],
     },
     properties: {
       id: 10,
@@ -179,29 +179,26 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.996667, 40.696667],
+      coordinates: [-73.99554538294456, 40.69727809705566],
     },
     properties: {
       id: 13,
       name: "Brooklyn Heights Historic District",
       description:
         "Exemplary collection of 19th-century architectural styles; first historic district in New York City",
-
-      date_designated: "January 12, 1965",
     },
   },
   {
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.992778, 40.694722],
+      coordinates: [-73.99246452364471, 40.696300456659756],
     },
     properties: {
       id: 14,
       name: "Center for Brooklyn History",
       description:
         "One of the few remaining buildings by George B. Post; innovative structural system",
-
       link: "https://www.bklynlibrary.org/center-for-brooklyn-history",
     },
   },
@@ -209,7 +206,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.8375, 40.706389],
+      coordinates: [-73.8360894792926, 40.711835039669324],
     },
     properties: {
       id: 15,
@@ -222,7 +219,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.980278, 40.765],
+      coordinates: [-73.97990774772423, 40.76648679428812],
     },
     properties: {
       id: 16,
@@ -236,7 +233,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.957778, 40.784444],
+      coordinates: [-73.95768576158865, 40.78678847896561],
     },
     properties: {
       id: 17,
@@ -250,7 +247,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.966111, 40.781944],
+      coordinates: [-73.96563821905383, 40.78528724053565],
     },
     properties: {
       id: 18,
@@ -267,7 +264,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.970556, 40.759722],
+      coordinates: [-73.96992326956551, 40.762684747265716],
     },
     properties: {
       id: 19,
@@ -281,7 +278,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-74.01, 40.709444],
+      coordinates: [-74.00976581315388, 40.70971575480329],
     },
     properties: {
       id: 20,
@@ -294,7 +291,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.975278, 40.751667],
+      coordinates: [-73.97535703577218, 40.75521272097183],
     },
     properties: {
       id: 21,
@@ -307,7 +304,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.995788, 40.733812],
+      coordinates: [-73.99559223497673, 40.73519475201767],
     },
     properties: {
       id: 22,
@@ -377,7 +374,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.973611, 40.749444],
+      coordinates: [-73.97338796268983, 40.75176100846712],
     },
     properties: {
       id: 27,
@@ -407,7 +404,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.923333, 40.8675],
+      coordinates: [-73.92327429218855, 40.87064008389203],
     },
     properties: {
       id: 29,
@@ -434,7 +431,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.940833, 40.832222],
+      coordinates: [-73.94113324530916, 40.83288713413452],
     },
     properties: {
       id: 31,
@@ -530,14 +527,13 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-74.016111, 40.691389],
+      coordinates: [-74.01678130056479, 40.68963731021006],
     },
     properties: {
       id: 38,
       name: "Governors Island",
       description:
         "Island in NY Harbor which served various branches of the US Military from 1783 until the late 1990s; now a park",
-      date_designated: "February 4, 1985",
       link: "https://www.nps.gov/gois/index.htm",
     },
   },
@@ -614,8 +610,6 @@ const landmarks = [
       id: 43,
       name: "Solomon R. Guggenheim Museum",
       description: "The only museum designed by Frank Lloyd Wright",
-
-      date_designated: "October 6, 2008",
       link: "https://www.guggenheim.org/",
     },
   },
@@ -623,30 +617,26 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.985278, 40.713889],
+      coordinates: [-73.9652940534302, 40.76041258963953],
     },
     properties: {
       id: 44,
       name: "Henry Street Settlement and Neighborhood Playhouse",
       description:
         "One of the nation's first settlement homes where new immigrants and the poor could find assistance",
-
-      date_designated: "May 30, 1974",
     },
   },
   {
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.938889, 40.825556],
+      coordinates: [-73.94234223811146, 40.81851397217359],
     },
     properties: {
       id: 45,
       name: "Matthew Henson Residence",
       description:
         "Home of Matthew Henson, African-American polar explorer who may have been the first to reach the North Pole",
-
-      date_designated: "May 15, 1975",
     },
   },
   {
@@ -705,8 +695,6 @@ const landmarks = [
       name: "James Weldon Johnson Residence",
       description:
         "Harlem home of African-American artist-activist James Weldon Johnson",
-
-      date_designated: "May 11, 1976",
     },
   },
   {
@@ -720,36 +708,32 @@ const landmarks = [
       name: "Lettie G. Howard (schooner)",
       description:
         "Last remaining Fredonia-type schooner (once the standard for American fishing boats) at the South Street Seaport",
-
-      date_designated: "April 11, 1989",
+      link: "https://southstreetseaportmuseum.org/about-lettie/",
     },
   },
   {
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.876111, 40.859722],
+      coordinates: [-73.87621004746785, 40.859829701401026], 
     },
     properties: {
       id: 52,
       name: "Lorillard Snuff Mill",
       description: "Oldest existing tobacco-manufacturing facility in U.S.",
-
-      date_designated: "December 22, 1977",
     },
   },
   {
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.961944, 40.808333],
+      coordinates: [-73.96185654280083, 40.811407040563495],
     },
     properties: {
       id: 53,
       name: "Low Memorial Library",
       description:
         "First building on Morningside Heights campus; capped by largest freestanding granite dome in U.S.",
-      date_designated: "December 23, 1987",
     },
   },
   {
@@ -783,15 +767,14 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.938333, 40.814167],
+      coordinates: [-73.94309891636958, 40.82081930961414],
     },
     properties: {
       id: 56,
       name: "Claude McKay Residence",
       description:
         "The Harlem YMCA, whose residents included African-American writer Claude McKay",
-
-      date_designated: "December 8, 1976",
+      link: "https://africanamericanheritagesites.stqry.app/en/story/44226"
     },
   },
   {
@@ -805,8 +788,6 @@ const landmarks = [
       name: "Metropolitan Life Insurance Company Tower",
       description:
         "Tallest building in the world 1909-13; still part of the skyline a century later",
-
-      date_designated: "June 2, 1978",
     },
   },
   {
@@ -859,7 +840,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-74.009167, 40.706111],
+      coordinates: [-74.00908405739305, 40.707926681253575],
     },
     properties: {
       id: 61,
@@ -998,7 +979,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.830278, 40.763056],
+      coordinates: [-73.83088985072715, 40.76957619717524],
     },
     properties: {
       id: 71,
@@ -1025,13 +1006,14 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.986944, 40.7375],
+      coordinates: [-73.98672406636635, 40.73942893544875],
     },
     properties: {
       id: 73,
       name: "Players Club",
       description:
         "Extensive collection of art and theater memorabilia; interior redone by Stanford White",
+      link: "https://theplayersnyc.org/",
     },
   },
   {
@@ -1174,7 +1156,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-74.00968, 40.71178],
+      coordinates: [-74.00919021031146, 40.71173786457011],
     },
     properties: {
       id: 85,
@@ -1210,29 +1192,26 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.941389, 40.814444],
+      coordinates: [-73.94138230258297, 40.82159874130362], 
     },
     properties: {
       id: 87,
       name: "Schomburg Center for Research in Black Culture",
       description:
         "Research library of the New York Public Library (NYPL) and an archive repository for information on people of African descent worldwide.",
-      date_designated: "December 23, 2016",
     },
   },
   {
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.995833, 40.735],
+      coordinates: [73.99581075758525, 40.735343209954536],
     },
     properties: {
       id: 88,
-      name: "Gen. Winfield Scott House",
+      name: "Winfield Scott House",
       description:
         "Home of Winfield Scott, heroic general in the U.S.-Mexican War and later presidential candidate",
-
-      date_designated: "November 7, 1973",
     },
   },
   {
@@ -1336,7 +1315,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-74.004722, 40.713611],
+      coordinates: [-74.0043648299379, 40.71370368081325],
     },
     properties: {
       id: 96,
@@ -1366,7 +1345,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.999167, 40.734722],
+      coordinates: [-73.99891966463146, 40.736518218606015],
     },
     properties: {
       id: 98,
@@ -1393,28 +1372,27 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.986944, 40.7375],
+      coordinates: [-73.98652652429836, 40.73936390275819],
     },
     properties: {
       id: 100,
       name: "Samuel J. Tilden House",
       description:
         "Home of Samuel J. Tilden, former New York State governor and loser of the bitter 1876 presidential election",
-
-      date_designated: "May 11, 1976",
     },
   },
   {
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.984722, 40.756111],
+      coordinates: [-73.98443606841184, 40.75760618892735],
     },
     properties: {
       id: 101,
       name: "The Town Hall",
       description:
         '"America\'s Town Meetings of the Air" radio programs from here in the 1930s created public-affairs media.',
+      link: "https://www.thetownhall.org/",
     },
   },
   {
@@ -1454,7 +1432,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-74.006111, 40.713056],
+      coordinates: [-74.0054841093619, 40.714259827923584],
     },
     properties: {
       id: 104,
@@ -1480,7 +1458,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.986389, 40.739444],
+      coordinates: [-73.98646147445683, 40.73967064979796],
     },
     properties: {
       id: 106,
