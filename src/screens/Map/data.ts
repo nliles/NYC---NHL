@@ -994,7 +994,7 @@ const landmarks = [
     },
     properties: {
       id: 70,
-      name: "Old Merchant's House",
+      name: "New York Yacht Club",
       description: "Nineteenth-century family home; preserved inside and out",
 
       date_designated: "June 23, 1965",
@@ -1262,45 +1262,39 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.966111, 40.7675],
+      coordinates: [-73.96553661712986, 40.770145884521895],
     },
     properties: {
       id: 89,
       name: "Seventh Regiment Armory",
       description:
         "One of the most impressive collections of 1880s interior decoration outside of a museum; only armory actually owned by the unit for which it was constructed",
-
-      date_designated: "February 24, 1986",
     },
   },
   {
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.963611, 40.776667],
+      coordinates: [-73.96372071563547, 40.77907159122789],
     },
     properties: {
       id: 90,
       name: "Harry F. Sinclair House",
       description:
         "Harry F. Sinclair, the oil industrialist, lived here from 1918 to 1930; now part of the Ukrainian Institute; often used in filmmaking and television production",
-
-      date_designated: "June 2, 1978",
     },
   },
   {
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.9975, 40.713333],
+      coordinates: [-73.99788823396004, 40.7139586251084], 
     },
     properties: {
       id: 91,
       name: "Alfred E. Smith House",
       description:
         "Home of four-time New York State governor Alfred E. Smith (and later presidential candidate) from 1907 to 1923",
-
-      date_designated: "November 28, 1972",
     },
   },
   {
@@ -1339,15 +1333,13 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-74.002222, 40.733889],
+      coordinates: [-74.00236497737959, 40.73508661659227],
     },
     properties: {
       id: 94,
       name: "Stonewall",
       description:
         "Site of 1969 Stonewall riots which began gay rights movement",
-
-      date_designated: "February 16, 2000",
       link: "https://www.nps.gov/ston/index.htm",
       image_caption: "The Stonewall Inn circa 1969",
     },
@@ -1356,14 +1348,13 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.973611, 40.757222],
+      coordinates: [-73.97354438336424, 40.76041389553095],
     },
     properties: {
       id: 95,
       name: "St. Bartholomew's Church and Community House",
       description:
         "A pivotal example of the work of Bertram Grosvenor Goodhue and an outstanding example of early 20th-century ecclesiastical architecture.",
-      date_designated: "October 31, 2016",
     },
   },
   {
@@ -1383,7 +1374,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.9901, 40.71853],
+      coordinates: [-73.99008030767298, 40.71904370680578],
     },
     properties: {
       id: 97,
@@ -1392,7 +1383,6 @@ const landmarks = [
         "Between 1863 and 1935, Orchard Street became the epicenter of immigrant life in America. By 1903, the block around 97 Orchard Street was the most densely populated place on earth. The five-story tenement buildingt was home to an estimated 7,000 people from over 20 nations during this time.",
       description2:
         "Today, 97 Orchard Street is a National Historic Landmark and serves as the Tenement Museum, bringing to life the stories of the immigrant families who once called this building home.",
-      date_designated: "April 19, 1994",
       link: "https://www.tenement.org/",
       image_caption: "A view of Orchard Street in the early 1900s",
     },
@@ -1408,8 +1398,6 @@ const landmarks = [
       name: "Third Judicial District Courthouse",
       description:
         "Originally built as the Third Judicial District Courthouse; faced with demolition, public outcry led to its reuse as a branch of the New York Public Library",
-
-      date_designated: "December 22, 1977",
     },
   },
   {
@@ -1476,7 +1464,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-74.012222, 40.708056],
+      coordinates: [-74.0118367122406, 40.70823058091367],
     },
     properties: {
       id: 103,
@@ -1498,15 +1486,13 @@ const landmarks = [
       name: "Old New York County Courthouse",
       description:
         "Historic courthouse, more commonly known as the Tweed Courthouse, connected to Tammany Hall, now used by NYC's Department of Education",
-
-      date_designated: "May 11, 1976",
     },
   },
   {
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.990556, 40.735556],
+      coordinates: [-73.99084607222422, 40.73721281970653],
     },
     properties: {
       id: 105,
@@ -1526,8 +1512,6 @@ const landmarks = [
       name: "United Charities Building",
       description:
         "Built in 1893 by a wealthy businessman in order to provide his favorite charities a low cost location for their operations",
-
-      date_designated: "July 17, 1991",
     },
   },
   {
@@ -1579,14 +1563,13 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.896389, 40.89],
+      coordinates: [-73.89502051718058, 40.89655049433883],
     },
     properties: {
       id: 110,
       name: "Van Cortlandt House",
       description:
         "Mansion for the Van Cortlandt family built in 1748 and used during the American Revolution",
-      date_designated: "December 24, 1976",
       link: "https://www.vchm.org/",
     },
   },
@@ -1601,7 +1584,6 @@ const landmarks = [
       name: "Voorlezer's House",
       description:
         "Oldest known surviving schoolhouse in America; owned by the Staten Island Historical Society",
-      date_designated: "November 5, 1961",
       link: "https://www.nps.gov/parkhistory/online_books/explorers/sitec50.htm",
     },
   },
@@ -1609,7 +1591,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-74.251944, 40.498889],
+      coordinates: [ -74.25462752145414, 40.50763942250119],
     },
     properties: {
       id: 112,
@@ -1624,15 +1606,13 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.873333, 40.889167],
+      coordinates: [-73.87179963622965, 40.890836356657815],
     },
     properties: {
       id: 113,
       name: "Woodlawn Cemetery",
       description:
         "Illustrates transition from rural cemetery to 20th-century styles; notable dead buried here include Robert Moses and R.H. Macy",
-
-      date_designated: "June 23, 2011",
       link: "https://www.woodlawn.org/",
       image_caption: "Map of Woodlawn Cemetery, 1870",
     },
@@ -1656,14 +1636,12 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.920833, 40.644444],
+      coordinates: [-73.9212462132942, 40.65103285175784],
     },
     properties: {
       id: 115,
       name: "Wyckoff House",
       description: "Oldest surviving Dutch saltbox frame house in America",
-
-      date_designated: "December 24, 1967",
       link: "https://wyckoffmuseum.org/",
       image_caption: "The Wyckoff House circa early 1900s",
     },
@@ -1678,8 +1656,6 @@ const landmarks = [
       id: 116,
       name: "Wyckoff-Bennett Homestead",
       description: "Housed Hessian soldiers during the American Revolution",
-
-      date_designated: "December 24, 1976",
     },
   },
 ];

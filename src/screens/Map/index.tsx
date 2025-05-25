@@ -77,16 +77,16 @@ const Map = ({
           },
         });
 
-        map.getStyle().layers.forEach(layer => {
-          console.log(layer)
-      });
+        map.getStyle().layers.forEach((layer) => {
+          console.log(layer);
+        });
 
         // Fit map to show all landmarks
         if (landmarks && landmarks.length > 0) {
           // Calculate bounds from all landmark coordinates
           const bounds = new mapboxgl.LngLatBounds();
-          
-          landmarks.forEach(landmark => {
+
+          landmarks.forEach((landmark) => {
             if (landmark.geometry && landmark.geometry.coordinates) {
               bounds.extend(landmark.geometry.coordinates);
             }
@@ -98,9 +98,9 @@ const Map = ({
               top: 50,
               bottom: 50,
               left: 50,
-              right: 50
+              right: 50,
             },
-            maxZoom: 15 // Optional: prevent zooming in too close
+            maxZoom: 15, // Optional: prevent zooming in too close
           });
         }
 
