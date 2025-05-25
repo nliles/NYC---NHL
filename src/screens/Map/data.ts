@@ -579,8 +579,6 @@ const landmarks = [
       name: "Green-Wood Cemetery",
       description:
         "Popular tourist attraction in the 1850s; most famous New Yorkers who died during the second half of the nineteenth century buried here",
-
-      date_designated: "September 20, 2006",
       link: "https://www.green-wood.com/",
     },
   },
@@ -595,8 +593,6 @@ const landmarks = [
       name: "Hamilton Grange National Memorial",
       description:
         "Home of Alexander Hamilton: military officer, lawyer, member of the United States Constitutional Convention, American statesman, first United States Secretary of the Treasury, and Founding Father",
-
-      date_designated: "December 19, 1960",
       link: "https://www.nps.gov/hagr/index.htm",
     },
   },
