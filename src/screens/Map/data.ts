@@ -11,7 +11,7 @@ const landmarks = [
       description:
         "Home of the watershed Armory Show in 1913, which introduced America to modern art",
       link: "https://sixtyninth.net/",
-      image_caption: "Library of Congress"
+      image_caption: "Library of Congress",
     },
   },
   {
@@ -397,8 +397,10 @@ const landmarks = [
     properties: {
       id: 28,
       name: "Dakota Apartments",
-      description: "The Dakota was designed by Henry Janeway Hardenbergh in 1884 in the German Renaissance style and was the first luxury apartment building in New York City.",
-      description2: "The building is widely known as John Lennon's former home, who was killed outside the building's entrance in 1980, and as the setting for 'Rosemary's Baby.' It remains one of New York's most prestigious residential addresses.",
+      description:
+        "The Dakota was designed by Henry Janeway Hardenbergh in 1884 in the German Renaissance style and was the first luxury apartment building in New York City.",
+      description2:
+        "The building is widely known as John Lennon's former home, who was killed outside the building's entrance in 1980, and as the setting for 'Rosemary's Baby.' It remains one of New York's most prestigious residential addresses.",
     },
   },
   {
@@ -516,8 +518,10 @@ const landmarks = [
     properties: {
       id: 37,
       name: "The Frick Collection and Frick Art Reference Library Building",
-      description: "The Frick Collection was established in 1935 to preserve the art collection of businessman Henry Clay Frick (1849-1919), who made his fortune in coke and steel. Frick was an avid art collector and designed his Beaux-Arts mansion on Fifth Avenue specifically to accommodate his paintings and art.",
-      description2: "His collection includes masterpieces by Vermeer, Rembrandt, and other Old Masters, displayed alongside period furniture and decorative arts.",
+      description:
+        "The Frick Collection was established in 1935 to preserve the art collection of businessman Henry Clay Frick (1849-1919), who made his fortune in coke and steel. Frick was an avid art collector and designed his Beaux-Arts mansion on Fifth Avenue specifically to accommodate his paintings and art.",
+      description2:
+        "His collection includes masterpieces by Vermeer, Rembrandt, and other Old Masters, displayed alongside period furniture and decorative arts.",
       link: "https://www.frick.org/",
       image_caption: "The Frick Collection, 1920",
     },
@@ -604,7 +608,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.9586783859235, 40.78530675801299], 
+      coordinates: [-73.9586783859235, 40.78530675801299],
     },
     properties: {
       id: 43,
@@ -841,7 +845,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.93863709365453, 40.83485651056482], 
+      coordinates: [-73.93863709365453, 40.83485651056482],
     },
     properties: {
       id: 60,
@@ -1288,7 +1292,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.99788823396004, 40.7139586251084], 
+      coordinates: [-73.99788823396004, 40.7139586251084],
     },
     properties: {
       id: 91,
@@ -1591,7 +1595,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [ -74.25462752145414, 40.50763942250119],
+      coordinates: [-74.25462752145414, 40.50763942250119],
     },
     properties: {
       id: 112,
