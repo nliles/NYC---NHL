@@ -145,7 +145,7 @@ const landmarks = [
       id: 10,
       name: "Bayard-Condict Building",
       description:
-        "Only Louis Sullivan building in New York City; one of the first steel skeleton skyscrapers.",
+        "Completed in 1899, the Bayard–Condict Building stands as the sole New York City work of Louis H. Sullivan, the acclaimed 'father of skyscrapers.' Designed in collaboration with architect Lyndon P. Smith in the Chicago School of architecture style, it is recognized as New York's first truly modern skyscraper.",
     },
   },
   {
@@ -736,7 +736,7 @@ const landmarks = [
         "First building on Morningside Heights campus; capped by largest freestanding granite dome in U.S.",
       link: "https://www.nps.gov/places/low-memorial-library.htm",
       image_caption:
-        "Low Memorial Library, Columbia University, 1904 (Library of Congress)",
+        "Stereograph of the Low Memorial Library, 1904 (Library of Congress)",
     },
   },
   {
@@ -989,8 +989,12 @@ const landmarks = [
       id: 71,
       name: "Old Quaker Meeting House",
       description:
-        "Only surviving 17th-century ecclesiastical frame building in New York; in almost continuous use since 1696",
+        "Built in 1694, the Quaker meetinghouse is believed to be the oldest house of worship in New York State. The structure's design embodies Quaker principles and reflects Flushing's origins as a Dutch village within New Amsterdam. In 1657, the community produced the Flushing Remonstrance, which helped lay the groundwork for the Bill of Rights protection of freedom of religion. The Quaker community still gathers here for Sunday services.",
       link: "https://nylandmarks.org/celebrate-50-at-50/flushing-friends-meeting-house/",
+      quote:
+        "We desire therefore in this case not to judge least we be judged, neither to condemn least we be condemned, but rather let every man stand and fall to his own Master",
+      quote_author: "Excerpt from the Flushing Remonstrance",
+      image_caption: "The Flushing Quaker Meetinghouse (Library of Congress)",
     },
   },
   {
@@ -1077,7 +1081,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.93877677455183, 40.84015073991667],
+      coordinates: [-73.93886022285386, 40.83377895351661],
     },
     properties: {
       id: 78,
