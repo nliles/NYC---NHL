@@ -1231,6 +1231,7 @@ const landmarks = [
       name: "Seventh Regiment Armory",
       description:
         "One of the most impressive collections of 1880s interior decoration outside of a museum; only armory actually owned by the unit for which it was constructed",
+      image_caption: "(Library of Congress)",
     },
   },
   {
@@ -1452,7 +1453,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.99084607222422, 40.73721281970653],
+      coordinates: [-73.99030335932528, 40.735972304113076],
     },
     properties: {
       id: 105,
