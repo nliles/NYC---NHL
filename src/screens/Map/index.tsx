@@ -44,7 +44,7 @@ const Map = ({
           data: geojson,
         });
 
-        // Add a circle layer for the landmarks
+        // Add a circle layer for the landmarks with vintage colors
         map.addLayer({
           id: "landmark-points",
           type: "circle",
@@ -54,15 +54,15 @@ const Map = ({
             "circle-color": [
               "case",
               ["in", ["get", "id"], ["literal", visitedLandmarks || []]],
-              "#E63946", // Color if ID is in storedLandmarks (visited)
-              "#8BC34A", // Color if not in storedLandmarks (not visited)
+              "#8b5a2b", // Vintage brown for visited (matches your road colors)
+              "#6b8a7a", // Muted green for not visited (complements your water)
             ],
             "circle-stroke-width": 2,
-            "circle-stroke-color": "#ffffff",
+            "circle-stroke-color": "#f5f0e8", // Cream color matching your background
           },
         });
 
-        // Add a text layer for landmark names
+        // Add a text layer for landmark names with vintage styling
         map.addLayer({
           id: "landmark-labels",
           type: "symbol",
@@ -74,8 +74,8 @@ const Map = ({
             "text-anchor": "top",
           },
           paint: {
-            "text-color": "#333",
-            "text-halo-color": "#fff",
+            "text-color": "#5a4d3f", // Vintage brown text
+            "text-halo-color": "#f5f0e8", // Cream halo matching your background
             "text-halo-width": 1,
           },
         });
@@ -114,17 +114,17 @@ const Map = ({
       mapInstance.current.setPaintProperty("landmark-points", "circle-color", [
         "case",
         ["in", ["get", "id"], ["literal", visitedLandmarks || []]],
-        "#E63946", // visited - red
-        "#8BC34A", // not visited - green
+        "#8b5a2b", // visited - vintage brown
+        "#6b8a7a", // not visited - muted green
       ]);
       mapInstance.current.setPaintProperty(
         "landmark-points",
-        "circle-stroke-color", // This is the "halo" property for points
+        "circle-stroke-color",
         [
           "case",
-          ["==", ["get", "id"], selectedLocation?.id || null], // Check if this point is selected
-          "#ff0000", // Use this color for the selected point's halo (red in this example)
-          "#ffffff", // Default halo color for unselected points (white)
+          ["==", ["get", "id"], selectedLocation?.id || null],
+          "#d4924a", // Highlighted outline for selected point
+          "#f5f0e8", // Default cream outline
         ],
       );
     }

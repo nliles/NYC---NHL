@@ -7,7 +7,9 @@
 }
 
 .header {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .content {
@@ -48,7 +50,7 @@
 }
 
 .caption {
-  color: gray;
+  color: #9b9186;
   font-size: 12px;
   font-style: italic;
 }
@@ -81,7 +83,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 1rem 0;
-  background-color: #f1f1f1;
+  background-color: #ecdbc1;
   width: 100%;
 
   a {

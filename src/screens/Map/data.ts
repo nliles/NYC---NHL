@@ -1026,7 +1026,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.97412833393817, 40.766267510352264],
+      coordinates: [-73.97434656096412, 40.76481460617099],
     },
     properties: {
       id: 74,
