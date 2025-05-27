@@ -38,7 +38,7 @@ const landmarks = [
       id: 3,
       name: "African Burial Ground",
       description:
-        "The African Burial Ground is the nation's largest and earliest known African American cemetery, serving as a burial site in Lower Manhattan for enslaved Africans from the 1690s to 1794. Rediscovered during 1991 construction, the site became a National Historic Landmark in 1993 and a National Monument in 2007.",
+        "The African Burial Ground is the nation's largest and earliest known African American cemetery, serving as a burial site for enslaved Africans from the 1690s to 1794. Rediscovered during 1991 construction, the site became a National Historic Landmark in 1993 and a National Monument in 2007.",
       date_designated: "April 19, 1993",
       link: "https://www.nps.gov/afbg/index.htm",
       quote:
@@ -108,7 +108,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-74.06305915271307, 40.62187426099858],
+      coordinates: [-74.06310373384242, 40.61536311009658],
     },
     properties: {
       id: 8,
@@ -535,6 +535,7 @@ const landmarks = [
       description:
         "Island in NY Harbor which served various branches of the US Military from 1783 until the late 1990s; now a park",
       link: "https://www.nps.gov/gois/index.htm",
+      image_caption: "Castle Williams, Governors Island (Library of Congress)",
     },
   },
   {
@@ -547,7 +548,7 @@ const landmarks = [
       id: 39,
       name: "Grace Church",
       description:
-        "Designed by James Renwick Jr., Grace Church on Broadway is one of New York City's finest Gothic Revival structures. Since 1846, this historic Episcopal parish has been a fixture in Greenwich Village, and for generations was considered 'the most fashionable church in New York.' It continues to serve the city and its people.",
+        "Designed by James Renwick Jr., Grace Church on Broadway is one of New York City's finest Gothic Revival structures. Since 1846, this historic Episcopal parish has been a fixture in Greenwich Village, and for generations was considered the most fashionable church in New York. It continues to serve the city and its people.",
       link: "https://gracechurchnyc.org/",
       image_caption: "A view of Grace Church from Broadway",
       quote: "All Are Welcome to Enter, Rest, Pray.",
@@ -607,6 +608,7 @@ const landmarks = [
       name: "Solomon R. Guggenheim Museum",
       description: "The only museum designed by Frank Lloyd Wright",
       link: "https://www.guggenheim.org/",
+      image_caption: "Guggenheim Museum interior, 1955 (Library of Congress)",
     },
   },
   {
@@ -1103,7 +1105,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-74.10490674927986, 40.64801187986866],
+      coordinates: [-74.1047291206947, 40.644927029007455],
     },
     properties: {
       id: 81,
@@ -1356,6 +1358,7 @@ const landmarks = [
       name: "Third Judicial District Courthouse",
       description:
         "Originally built as the Third Judicial District Courthouse; faced with demolition, public outcry led to its reuse as a branch of the New York Public Library",
+      image_caption: "Third Judicial District Courthouse (Library of Congress)",
     },
   },
   {
@@ -1593,7 +1596,7 @@ const landmarks = [
       name: "Wyckoff House",
       description: "Oldest surviving Dutch saltbox frame house in America",
       link: "https://wyckoffmuseum.org/",
-      image_caption: "The Wyckoff House circa early 1900s",
+      image_caption: "The Wyckoff House early 1900s (NYPL Digital Collections)",
     },
   },
   {
@@ -1607,6 +1610,7 @@ const landmarks = [
       name: "Wyckoff-Bennett Homestead",
       description: "Housed Hessian soldiers during the American Revolution",
       link: "https://hdc.org/buildings/wyckoff-bennett-homestead/",
+      image_caption: "Wyckoff-Bennett Homestead (Library of Congress)",
     },
   },
 ];
