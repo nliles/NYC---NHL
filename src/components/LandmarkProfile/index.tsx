@@ -52,7 +52,7 @@ const LandmarkProfile = ({
           {landmark.quote && (
             <div className={styles.quote}>
               <blockquote className={styles.quote}>
-                <p>"{landmark.quote}"</p>
+                <p className={styles.quote}>&ldquo;{landmark.quote}&rdquo;</p>
                 {landmark.quote_author && (
                   <span className={styles.author}>
                     — {landmark.quote_author}

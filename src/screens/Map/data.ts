@@ -595,6 +595,7 @@ const landmarks = [
       description:
         "Home of Alexander Hamilton: military officer, lawyer, member of the United States Constitutional Convention, American statesman, first United States Secretary of the Treasury, and Founding Father",
       link: "https://www.nps.gov/hagr/index.htm",
+      image_caption: "Hamilton Grange at its second location site (NYPL Digital Collections)",
     },
   },
   {
@@ -990,7 +991,7 @@ const landmarks = [
         "Built in 1694, the Quaker meetinghouse is believed to be the oldest house of worship in New York State. The structure's design embodies Quaker principles and reflects Flushing's origins as a Dutch village within New Amsterdam. In 1657, the community produced the Flushing Remonstrance, which helped lay the groundwork for the Bill of Rights protection of freedom of religion. The Quaker community still gathers here for Sunday services.",
       link: "https://nylandmarks.org/celebrate-50-at-50/flushing-friends-meeting-house/",
       quote:
-        "We desire therefore in this case not to judge least we be judged, neither to condemn least we be condemned, but rather let every man stand and fall to his own Master",
+        "We desire therefore in this case not to judge least we be judged, neither to condemn least we be condemned, but rather let every man stand and fall to his own Master.",
       quote_author: "Excerpt from the Flushing Remonstrance",
       image_caption: "The Flushing Quaker Meetinghouse (Library of Congress)",
     },
@@ -1048,6 +1049,7 @@ const landmarks = [
       description:
         "Important station on Underground Railroad when Henry Ward Beecher was pastor",
       link: "https://www.plymouthchurch.org/#main",
+      image_caption: "Plymouth Church, 1904 (NYPL Digital Collections)",
     },
   },
   {
@@ -1126,6 +1128,7 @@ const landmarks = [
       name: "St. Ann and the Holy Trinity Church",
       description: "Site of first figural stained-glass windows in U.S.",
       link: "https://www.stannholytrinity.org/",
+      image_caption: "Stereograph of St Ann's Church, early 1900s (NYPL Digital Collections)",
     },
   },
   {
@@ -1232,6 +1235,7 @@ const landmarks = [
       description:
         "One of the most impressive collections of 1880s interior decoration outside of a museum; only armory actually owned by the unit for which it was constructed",
       image_caption: "(Library of Congress)",
+      link: "https://www.armoryonpark.org/about_us/history",
     },
   },
   {
@@ -1316,6 +1320,7 @@ const landmarks = [
       name: "St. Bartholomew's Church and Community House",
       description:
         "A pivotal example of the work of Bertram Grosvenor Goodhue and an outstanding example of early 20th-century ecclesiastical architecture.",
+      image_caption: "St. Bartholomew's on Park Avenue, 1931 (NYPL Digital Collections)",
     },
   },
   {
@@ -1473,6 +1478,7 @@ const landmarks = [
       name: "United Charities Building",
       description:
         "Built in 1893 by a wealthy businessman in order to provide his favorite charities a low cost location for their operations",
+      image_caption: "United Charities Building drawing, 1891 (NYPL Digital Collections)",
     },
   },
   {
