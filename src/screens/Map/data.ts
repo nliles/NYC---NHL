@@ -116,8 +116,12 @@ const landmarks = [
     properties: {
       id: 8,
       name: "Alice Austen House",
-      description:
-        "Alice Austen (1866-1952) was a pioneering American photographer who captured over 7,000 images of Victorian life from her Staten Island home, Clear Comfort. She lived there for 30 years with her partner Gertrude Tate. Today, her home is a National Historic Landmark, designated LGBTQ+ history site, and museum dedicated to her legacy.",
+      bullets: [
+        "Home of pioneering photographer Alice Austen (1866-1952)",
+        "Captured over 7,000 images of Victorian life", 
+        "Designated National Historic Landmark and LGBTQ+ history site"
+      ],
+      description: "Alice lived here for 30 years with her partner Gertrude Tate. Today, the house serves as a museum dedicated to her photographic legacy.",
       link: "https://aliceausten.org/",
       image_caption:
         "Clear Comfort, the Austen House, with the photographer's grandfather. Photo by Alice Austen., Digital Collections, The New York Public Library",
@@ -562,7 +566,7 @@ const landmarks = [
         "Once New York's most fashionable church where \"to be married or buried within its walls has been ever considered the height of felicity\"",
       ],
       link: "https://gracechurchnyc.org/",
-      image_caption: "The Miriam and Ira D. Wallach Division of Art, Prints and Photographs: Photography Collection, The New York Public Library. \"Grace Church, New York\" The New York Public Library Digital Collections. 1860 - 1920.",
+      image_caption: '"Grace Church, New York." The New York Public Library Digital Collections, The Miriam and Ira D. Wallach Division of Art, Prints and Photographs: Photography Collection, 1860 - 1920.',
       quote: "All Are Welcome to Enter, Rest, Pray.",
       quote_author: "Grace Church",
     },
@@ -1129,9 +1133,14 @@ const landmarks = [
     properties: {
       id: 81,
       name: "Sailors' Snug Harbor",
+      bullets: [
+        "Founded by Robert Richard Randall's 1801 will as a haven for \"aged, decrepit, and worn-out sailors\"",
+        "Greek Revival buildings became NYC's first designated landmark structures (1960s)",
+        "Once America's richest charitable institution with 50 buildings and 900 residents"
+      ],
       description: "First and only home for retired merchant seamen in U.S.",
       link: "https://snug-harbor.org/",
-      image_caption: "Library of Congress",
+      image_caption: "Historic American Buildings Survey, Creator. Sailors' Snug Harbor, Richmond Terrace, Staten Island, New Brighton, Richmond County, NY. 1933."
     },
   },
   {
@@ -1192,7 +1201,7 @@ const landmarks = [
         "Designed by Thomas McBean in Georgian style", 
         "Served as refuge for Ground Zero recovery workers after 9/11"
       ],
-      image_caption: "\"St. Paul's Chapel (front).\" The New York Public Library Digital Collections, Irma and Paul Milstein Division of United States History, Local History and Genealogy, 1905.",
+      image_caption: '"St. Paul\'s Chapel (front)." The New York Public Library Digital Collections, Irma and Paul Milstein Division of United States History, Local History and Genealogy, 1905.'
       link: "https://trinitychurchnyc.org/visit-history/places/st-pauls-chapel",
       quote: "The Little Chapel That Stood",
       quote_author: "Dubbed nickname after 9/11",
@@ -1369,13 +1378,13 @@ const landmarks = [
       name: "Tenement Building at 97 Orchard Street",
       bullets: [
         "Located on Orchard Street, epicenter of immigrant life in America (1863-1935)",
-        "Part of the most densely populated place on earth by 1903",
+        "Part of the most densely populated block on earth by 1903",
         "Five-story building which was home to 7,000 people from over 20 nations - now the Tenement Museum tells their stories",
       ],
       quote: "I walked toward the Lower East Side - where you walked 50 years ago, little girl - from Russia, eating the first poisonous tomatoes of America - frightened on the dock - then struggling in the crowds of Orchard Street toward what?",
       quote_author: "Allen Ginsberg, 'Kaddish'",
       link: "https://www.tenement.org/",
-      image_caption: 'Irma and Paul Milstein Division of United States History, Local History and Genealogy, The New York Public Library. "Orchard Street Scene" The New York Public Library Digital Collections. 1902 - 1914.'
+      image_caption: '"Orchard Street Scene." The New York Public Library Digital Collections, Irma and Paul Milstein Division of United States History, Local History and Genealogy, 1902 - 1914.',
     },
   },
   {
@@ -1588,10 +1597,12 @@ const landmarks = [
     properties: {
       id: 112,
       name: "Wards Point Archeological Site",
+      bullets: [
+        "Largest pre-European burial ground in New York City",
+        "Used by Lenape people for over 7,000 years until Dutch colonization", 
+      ],
       description:
         "Archaeological site in Conference House Park containing prehistoric remains.",
-      image_caption: "Skeletons of three warriors pierced by arrows uncovered at Burial Ridge, a Lenape burial ground on Staten Island, 1909",
-      link: "https://heritagetrails.tottenvillehistory.com/inside-beach-trail/site-5.html",
     },
   },
   {
