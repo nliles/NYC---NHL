@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import Portal from "./components/Portal";
 import SidePanel from "./components/SidePanel";
@@ -9,9 +9,23 @@ import NavBar from "./components/NavBar";
 const App = () => {
   const [selectedLocation, setSelectedLocation] = useState();
   const [visitedLandmarks, setVisitedLandmarks] = useState(() => {
-    const storedLandmarks = localStorage.getItem("visitedLandmarks");
-    return storedLandmarks ? JSON.parse(storedLandmarks) : [];
+    try {
+      const storedLandmarks = localStorage.getItem("visitedLandmarks");
+      return storedLandmarks ? JSON.parse(storedLandmarks) : [];
+    } catch (error) {
+      console.warn("Failed to load visited landmarks from localStorage:", error);
+      return [];
+    }
   });
+
+  // Save to localStorage whenever visitedLandmarks changes
+  useEffect(() => {
+    try {
+      localStorage.setItem("visitedLandmarks", JSON.stringify(visitedLandmarks));
+    } catch (error) {
+      console.warn("Failed to save visited landmarks to localStorage:", error);
+    }
+  }, [visitedLandmarks]);
 
   return (
     <>
@@ -20,7 +34,6 @@ const App = () => {
         <Portal containerId="portal-root">
           {selectedLocation && (
             <SidePanel
-              isOpen={true}
               onClose={() => setSelectedLocation(undefined)}
             >
               <ParkProfile

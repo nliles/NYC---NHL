@@ -37,8 +37,9 @@ const landmarks = [
     properties: {
       id: 3,
       name: "African Burial Ground",
+      bullets: ["Nation's largest and earliest African American cemetery (1690s-1794)", "Designated National Historic Landmark (1993) and National Monument (2007)"],
       description:
-        "The African Burial Ground is the nation's largest and earliest known African American cemetery, serving as a burial site for enslaved Africans from the 1690s to 1794. Rediscovered during 1991 construction, the site became a National Historic Landmark in 1993 and a National Monument in 2007.",
+        "Rediscovered during construction in 1991, this sacred site honors the memory of thousands of enslaved Africans who helped build early New York City.",
       date_designated: "April 19, 1993",
       link: "https://www.nps.gov/afbg/index.htm",
       quote:
@@ -60,6 +61,7 @@ const landmarks = [
       description:
         "Lightship, several miles offshore, that marked Ambrose Channel into New York Harbor, now at South Street Seaport Museum.",
       link: "https://museumships.us/coast-guard/ambrose",
+      image_caption: "United States Lightship WLV-613, USCG photograph"
     },
   },
   {
@@ -72,7 +74,7 @@ const landmarks = [
       id: 5,
       name: "American Stock Exchange",
       description: "Former headquarters of the American Stock Exchange",
-      date_designated: "June 6, 1978",
+      image_caption: "Greenwich Street facade (right), 1921 (Library of Congress)"
     },
   },
   {
@@ -102,6 +104,7 @@ const landmarks = [
       name: "Chester A. Arthur House",
       description:
         "Home of President Chester A. Arthur; site of his inaugural oath",
+      image_description: "James Grant Wilson, ed., The Presidents of the United States, 1914",
     },
   },
   {
@@ -117,7 +120,7 @@ const landmarks = [
         "Alice Austen (1866-1952) was a pioneering American photographer who captured over 7,000 images of Victorian life from her Staten Island home, Clear Comfort. She lived there for 30 years with her partner Gertrude Tate. Today, her home is a National Historic Landmark, designated LGBTQ+ history site, and museum dedicated to her legacy.",
       link: "https://aliceausten.org/",
       image_caption:
-        "The Austen House, with the photographer's grandfather. (taken by Alice Austen)",
+        "Clear Comfort, the Austen House, with the photographer's grandfather. Photo by Alice Austen., Digital Collections, The New York Public Library",
       quote: "I guess I was too good to get married.",
       quote_author: "Alice Austen, on why she never married",
     },
@@ -159,6 +162,7 @@ const landmarks = [
       name: "Bell Laboratories Building",
       description:
         "Bell Labs work here included experimental phonograph record, vacuum tubes, talking movies (1923), black and white and color TV, radar, and early commercial remote broadcasts. Today home to the Westbeth Artists Community (listed separately on the National Register of Historic Places).",
+      image_caption: "The Western Electric complex, now called Westbeth, seen from Washington Street, with train on High Line in 1936, unknown author",
     },
   },
   {
@@ -172,7 +176,6 @@ const landmarks = [
       name: "Brooklyn Bridge",
       description:
         "Completed in 1883, the Brooklyn Bridge was the first steel-wire suspension bridge connecting Manhattan and Brooklyn. Designed by John Augustus Roebling and completed under his son Washington and daughter-in-law Emily Warren Roebling after John's death, it became the world's longest suspension bridge. It remains a National Historic Landmark and iconic New York City symbol.",
-      date_designated: "January 29, 1964",
     },
   },
   {
@@ -186,6 +189,7 @@ const landmarks = [
       name: "Brooklyn Heights Historic District",
       description:
         "Exemplary collection of 19th-century architectural styles; first historic district in New York City",
+      image_caption: "Brooklyn Daily Eagle photographs, Brooklyn Public Library, Center for Brooklyn History, 1939",
     },
   },
   {
@@ -199,6 +203,7 @@ const landmarks = [
       name: "Center for Brooklyn History",
       description:
         "One of the few remaining buildings by George B. Post; innovative structural system",
+      image_caption: "Irving I. Herzberg photograph collection, Brooklyn Public Library, Center for Brooklyn History, 1963",
       link: "https://www.bklynlibrary.org/center-for-brooklyn-history",
     },
   },
@@ -226,7 +231,7 @@ const landmarks = [
       name: "Carnegie Hall",
       description: "One of the most famous music venues in the world",
       link: "https://www.carnegiehall.org/",
-      image_caption: "Carnegie Hall circa early 1900s",
+      image_caption: "Carnegie Hall, early 1900s",
     },
   },
   {
@@ -264,7 +269,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.96992326956551, 40.762684747265716],
+      coordinates: [-73.97041535460829, 40.762753972611996],
     },
     properties: {
       id: 19,
@@ -341,6 +346,7 @@ const landmarks = [
       description:
         "Only surviving pre-Revolutionary War manor house in New York City; site of unsuccessful peace conference in 1776",
       link: "https://conferencehouse.org/",
+      image_caption: "Conference House postcard, 1900 (NYPL Digital Collection)",
     },
   },
   {
@@ -354,6 +360,7 @@ const landmarks = [
       name: "Will Marion Cook House",
       description:
         "Home of the leading black composer and musician Will Marion Cook",
+      image_caption: "Will Marion Cook House, (Library of Congress)",
     },
   },
   {
@@ -490,7 +497,7 @@ const landmarks = [
       id: 35,
       name: "Flatiron Building",
       description: "Distinctive triangular building at Madison Square.",
-      image_caption: "The Flatiron Building circa 1902",
+      image_caption: "The Flatiron Building ca. 1902",
     },
   },
   {
@@ -504,6 +511,8 @@ const landmarks = [
       name: "Founder's Hall, The Rockefeller University",
       description:
         "Building marked the start of John D. Rockefeller Jr.'s putting the vast family fortune to philanthropic purposes",
+      image_caption: "Founder's Hall, ca. 1916, 1930 (Digital Commons @ RU)",
+      link: "https://www.rockefeller.edu/about/history/",
     },
   },
   {
@@ -547,10 +556,13 @@ const landmarks = [
     properties: {
       id: 39,
       name: "Grace Church",
-      description:
-        "Designed by James Renwick Jr., Grace Church on Broadway is one of New York City's finest Gothic Revival structures. Since 1846, this historic Episcopal parish has been a fixture in Greenwich Village, and for generations was considered the most fashionable church in New York. It continues to serve the city and its people.",
+      bullets: [
+        "One of NYC's finest Gothic Revival structures (1846)",
+        "Designed by James Renwick Jr.",
+        "Once New York's most fashionable church where \"to be married or buried within its walls has been ever considered the height of felicity\"",
+      ],
       link: "https://gracechurchnyc.org/",
-      image_caption: "A view of Grace Church from Broadway",
+      image_caption: "The Miriam and Ira D. Wallach Division of Art, Prints and Photographs: Photography Collection, The New York Public Library. \"Grace Church, New York\" The New York Public Library Digital Collections. 1860 - 1920.",
       quote: "All Are Welcome to Enter, Rest, Pray.",
       quote_author: "Grace Church",
     },
@@ -581,6 +593,7 @@ const landmarks = [
       description:
         "Popular tourist attraction in the 1850s; most famous New Yorkers who died during the second half of the nineteenth century buried here",
       link: "https://www.green-wood.com/",
+      image_caption: "Cemetery entrance (NYPL Digital Collection)"
     },
   },
   {
@@ -595,7 +608,7 @@ const landmarks = [
       description:
         "Home of Alexander Hamilton: military officer, lawyer, member of the United States Constitutional Convention, American statesman, first United States Secretary of the Treasury, and Founding Father",
       link: "https://www.nps.gov/hagr/index.htm",
-      image_caption: "Hamilton Grange at its second location site (NYPL Digital Collections)",
+      image_caption: "Hamilton Grange at its second location site, 1912 (NYPL Digital Collection)",
     },
   },
   {
@@ -623,6 +636,7 @@ const landmarks = [
       name: "Henry Street Settlement and Neighborhood Playhouse",
       description:
         "One of the nation's first settlement homes where new immigrants and the poor could find assistance",
+      image_caption: "Backyard playground in Henry Street Settlement (NYPL Digital Collection)",
     },
   },
   {
@@ -708,6 +722,7 @@ const landmarks = [
       description:
         "Last remaining Fredonia-type schooner (once the standard for American fishing boats) at the South Street Seaport",
       link: "https://southstreetseaportmuseum.org/about-lettie/",
+      image_caption: "Lettie G. Howard (Library of Congress)"
     },
   },
   {
@@ -835,7 +850,7 @@ const landmarks = [
       name: "Morris-Jumel Mansion",
       description: "Oldest residential building in Manhattan",
       link: "https://morrisjumel.org/",
-      image_caption: "The Morris-Jumel Mansion circa 1890",
+      image_caption: "The Morris-Jumel Mansion ca. 1890",
     },
   },
   {
@@ -961,7 +976,7 @@ const landmarks = [
       description:
         "Oldest yachting club in U.S.; longtime home of the America's Cup",
       link: "https://nyyc.org/",
-      image_caption: "The New York Yacht Club circa 1900 (Library of Congress)",
+      image_caption: "The New York Yacht Club ca. 1900 (Library of Congress)",
     },
   },
   {
@@ -975,7 +990,7 @@ const landmarks = [
       name: "Old Merchant House",
       description: "Nineteenth-century family home; preserved inside and out",
       link: "https://merchantshouse.org/",
-      image_caption: "The Merchant's House circa 1936",
+      image_caption: "The Merchant's House ca. 1936",
     },
   },
   {
@@ -1007,6 +1022,7 @@ const landmarks = [
       name: "Philosophy Hall",
       description:
         "Edwin Armstrong developed FM radio in this Columbia University building",
+      image_caption: "Edwin Armstrong's laboratory in 102 Philosophy, Columbia University,"
     },
   },
   {
@@ -1020,7 +1036,7 @@ const landmarks = [
       name: "Players Club",
       description:
         "Extensive collection of art and theater memorabilia; interior redone by Stanford White",
-      link: "https://theplayersnyc.org/",
+      link: "https://theplayersnyc.org/web/pages/history",
     },
   },
   {
@@ -1048,8 +1064,8 @@ const landmarks = [
       name: "Plymouth Church of the Pilgrims",
       description:
         "Important station on Underground Railroad when Henry Ward Beecher was pastor",
+      image_caption: "Plymouth Church, 1904 (NYPL Digital Collection)",
       link: "https://www.plymouthchurch.org/#main",
-      image_caption: "Plymouth Church, 1904 (NYPL Digital Collections)",
     },
   },
   {
@@ -1061,8 +1077,8 @@ const landmarks = [
     properties: {
       id: 76,
       name: "Pupin Physics Laboratory, Columbia University",
-      description:
-        "Columbia University building; site of first splitting of uranium atom in U.S. and other milestones in development of atomic bomb",
+      description: "Columbia University building; site of first splitting of uranium atom in U.S. and other milestones in development of atomic bomb",
+      link: 'https://quantum.columbia.edu/videos/tour-columbia-physics-design-laboratory',
     },
   },
   {
@@ -1075,6 +1091,7 @@ const landmarks = [
       id: 77,
       name: "Quarters A, Brooklyn Navy Yard",
       description: "Home to Matthew Perry at the time of his opening of Japan",
+      image_caption: "Quarters A, 1935 (Brooklyn Public Library Digital Collection)",
     },
   },
   {
@@ -1128,7 +1145,7 @@ const landmarks = [
       name: "St. Ann and the Holy Trinity Church",
       description: "Site of first figural stained-glass windows in U.S.",
       link: "https://www.stannholytrinity.org/",
-      image_caption: "Stereograph of St Ann's Church, early 1900s (NYPL Digital Collections)",
+      image_caption: "Stereograph of St Ann's Church, early 1900s (NYPL Digital Collection)",
     },
   },
   {
@@ -1170,9 +1187,12 @@ const landmarks = [
     properties: {
       id: 85,
       name: "St. Paul's Chapel",
-      description:
-        "St. Paul's Chapel opened in 1766 as an outreach center for Trinity Church's expanding congregation and remained a place of worship for the community as the city grew. Today it remains Manhattan's oldest surviving church building. After September 11, 2001, it served as a refuge for recovery workers at Ground Zero.",
-      image_caption: "St. Paul's Chapel circa early 1900s",
+      bullets: [
+        "Manhattan's oldest surviving church building (1766)",
+        "Designed by Thomas McBean in Georgian style", 
+        "Served as refuge for Ground Zero recovery workers after 9/11"
+      ],
+      image_caption: "\"St. Paul's Chapel (front).\" The New York Public Library Digital Collections, Irma and Paul Milstein Division of United States History, Local History and Genealogy, 1905.",
       link: "https://trinitychurchnyc.org/visit-history/places/st-pauls-chapel",
       quote: "The Little Chapel That Stood",
       quote_author: "Dubbed nickname after 9/11",
@@ -1275,6 +1295,8 @@ const landmarks = [
       name: "SoHo-Cast Iron Historic District",
       description:
         "Believed to be the largest existing collection of late 19th-century cast iron facades in the world",
+      link: "https://www.nypap.org/preservation-history/soho-cast-iron-historic-district/",
+      image_caption: "Haughwout Building (NYPL Digital Collection)",
     },
   },
   {
@@ -1306,7 +1328,7 @@ const landmarks = [
       description:
         "Site of 1969 Stonewall riots which began gay rights movement",
       link: "https://www.nps.gov/ston/index.htm",
-      image_caption: "The Stonewall Inn circa 1969",
+      image_caption: "The Stonewall Inn ca. 1969",
     },
   },
   {
@@ -1320,7 +1342,7 @@ const landmarks = [
       name: "St. Bartholomew's Church and Community House",
       description:
         "A pivotal example of the work of Bertram Grosvenor Goodhue and an outstanding example of early 20th-century ecclesiastical architecture.",
-      image_caption: "St. Bartholomew's on Park Avenue, 1931 (NYPL Digital Collections)",
+      image_caption: "St. Bartholomew's on Park Avenue, 1931 (NYPL Digital Collection)",
     },
   },
   {
@@ -1345,12 +1367,15 @@ const landmarks = [
     properties: {
       id: 97,
       name: "Tenement Building at 97 Orchard Street",
-      description:
-        "Between 1863 and 1935, Orchard Street became the epicenter of immigrant life in America. By 1903, the block around 97 Orchard Street was the most densely populated place on earth. The five-story tenement buildingt was home to an estimated 7,000 people from over 20 nations during this time.",
-      description2:
-        "Today, 97 Orchard Street is a National Historic Landmark and serves as the Tenement Museum, bringing to life the stories of the immigrant families who once called this building home.",
+      bullets: [
+        "Located on Orchard Street, epicenter of immigrant life in America (1863-1935)",
+        "Part of the most densely populated place on earth by 1903",
+        "Five-story building which was home to 7,000 people from over 20 nations - now the Tenement Museum tells their stories",
+      ],
+      quote: "I walked toward the Lower East Side - where you walked 50 years ago, little girl - from Russia, eating the first poisonous tomatoes of America - frightened on the dock - then struggling in the crowds of Orchard Street toward what?",
+      quote_author: "Allen Ginsberg, 'Kaddish'",
       link: "https://www.tenement.org/",
-      image_caption: "A view of Orchard Street in the early 1900s",
+      image_caption: 'Irma and Paul Milstein Division of United States History, Local History and Genealogy, The New York Public Library. "Orchard Street Scene" The New York Public Library Digital Collections. 1902 - 1914.'
     },
   },
   {
@@ -1392,6 +1417,7 @@ const landmarks = [
       name: "Samuel J. Tilden House",
       description:
         "Home of Samuel J. Tilden, former New York State governor and loser of the bitter 1876 presidential election",
+      image_caption: "Albert Levy - 'L'Architecture Americaine', photo album, 1872",
     },
   },
   {
@@ -1406,6 +1432,7 @@ const landmarks = [
       description:
         '"America\'s Town Meetings of the Air" radio programs from here in the 1930s created public-affairs media.',
       link: "https://www.thetownhall.org/",
+      image_caption: "The Town Hall (NYPL Digital Collection)",
     },
   },
   {
@@ -1417,13 +1444,15 @@ const landmarks = [
     properties: {
       id: 102,
       name: "Triangle Shirtwaist Factory",
-      description:
-        "On March 25, 1911, a fire at the Triangle Shirtwaist Factory killed 146 workers, mostly young immigrant women. Weak regulations and industry corruption allowed for dangerous working conditions. The tragedy led to landmark workplace safety laws.",
+      bullets: [
+        "Site of tragic factory fire that killed 146 workers, mostly young immigrant women (March 25, 1911)",
+        "Led to landmark workplace safety laws and labor reforms"
+      ],
       quote:
         "There was a stricken conscience of public guilt and we all felt that we had been wrong, that something was wrong with that building which we had accepted or the tragedy never would have happened. Moved by this sense of stricken guilt, we banded ourselves together to find a way by law to prevent this kind of disaster.",
       quote_author: "Frances Perkins, Secretary of Labor",
       link: "https://www.mcny.org/story/triangle-shirtwaist-fire",
-      image_caption: "Trade parade in memory of the victims",
+      image_caption: '"Trade Parade in Memory of Fire Victims. [April or May]" Photograph. Library of Congress.'
     },
   },
   {
@@ -1478,7 +1507,7 @@ const landmarks = [
       name: "United Charities Building",
       description:
         "Built in 1893 by a wealthy businessman in order to provide his favorite charities a low cost location for their operations",
-      image_caption: "United Charities Building drawing, 1891 (NYPL Digital Collections)",
+      image_caption: "United Charities Building drawing, 1891 (NYPL Digital Collection)",
     },
   },
   {
@@ -1505,6 +1534,7 @@ const landmarks = [
       name: "U.S. Customhouse",
       description:
         "Cass Gilbert designed Customhouse for New York Harbor; now part of the Smithsonian Institution",
+      image_caption: "US Customs House, New York of to-day, Seymour B. Durst, 1912",
       link: "https://americanindian.si.edu/visit/ny",
     },
   },
@@ -1560,8 +1590,8 @@ const landmarks = [
       name: "Wards Point Archeological Site",
       description:
         "Archaeological site in Conference House Park containing prehistoric remains.",
-      county: "Richmond",
-      date_designated: "April 19, 1993",
+      image_caption: "Skeletons of three warriors pierced by arrows uncovered at Burial Ridge, a Lenape burial ground on Staten Island, 1909",
+      link: "https://heritagetrails.tottenvillehistory.com/inside-beach-trail/site-5.html",
     },
   },
   {
@@ -1603,7 +1633,7 @@ const landmarks = [
       name: "Wyckoff House",
       description: "Oldest surviving Dutch saltbox frame house in America",
       link: "https://wyckoffmuseum.org/",
-      image_caption: "The Wyckoff House early 1900s (NYPL Digital Collections)",
+      image_caption: "The Wyckoff House early 1900s (NYPL Digital Collection)",
     },
   },
   {

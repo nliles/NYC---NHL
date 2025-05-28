@@ -8,7 +8,8 @@
 }
 
 .header {
-  font-family: "Playfair Display", serif;
+  /* font-family: "Playfair Display", serif; */
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -152,3 +153,30 @@
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
 }
+
+.quoteBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #fafaf9;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border-left: 4px solid #5e4b3c;
+}
+
+.quoteText {
+  font-family: Georgia, 'Times New Roman', serif; /* Elegant serif */
+  font-size: 14px;
+  font-style: italic;
+  color: #57534e;
+  margin-bottom: 4px;
+}
+
+.quoteAttribution {
+  font-size: 12px;
+  color: #68645e;
+}
+
