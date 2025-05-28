@@ -233,6 +233,8 @@ const landmarks = [
     properties: {
       id: 16,
       name: "Carnegie Hall",
+      quote: "Everywhere in the world, music enhances a hall, with one exception: Carnegie Hall enhances the music.",
+      quote_author: "Isaac Stern, violinist",
       description: "One of the most famous music venues in the world",
       link: "https://www.carnegiehall.org/",
       image_caption: "Carnegie Hall, early 1900s",
@@ -680,8 +682,6 @@ const landmarks = [
       name: "Holland Tunnel",
       description:
         "Tunnel underneath the Hudson River, connecting Manhattan and New Jersey; civil engineering landmark; one of the earliest ventilated tunnels",
-
-      date_designated: "November 4, 1993",
       image_caption: "Holland Tunnel vehicular traffic, 1927",
     },
   },
@@ -696,8 +696,6 @@ const landmarks = [
       name: "USS Intrepid",
       description:
         "One of the most active U.S. ships during World War II; today the Intrepid Museum moored along the West Side",
-
-      date_designated: "January 14, 1986",
       link: "https://intrepidmuseum.org/",
     },
   },
@@ -934,8 +932,6 @@ const landmarks = [
       name: "New York Public Library",
       description:
         "One of the largest and most important libraries in the U.S.; listing is for main branch building.",
-
-      date_designated: "December 21, 1965",
       link: "https://www.nypl.org/locations/schwarzman",
     },
   },
@@ -1201,7 +1197,7 @@ const landmarks = [
         "Designed by Thomas McBean in Georgian style", 
         "Served as refuge for Ground Zero recovery workers after 9/11"
       ],
-      image_caption: '"St. Paul\'s Chapel (front)." The New York Public Library Digital Collections, Irma and Paul Milstein Division of United States History, Local History and Genealogy, 1905.'
+      image_caption: '"St. Paul\'s Chapel (front)." The New York Public Library Digital Collections, Irma and Paul Milstein Division of United States History, Local History and Genealogy, 1905.',
       link: "https://trinitychurchnyc.org/visit-history/places/st-pauls-chapel",
       quote: "The Little Chapel That Stood",
       quote_author: "Dubbed nickname after 9/11",
