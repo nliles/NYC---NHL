@@ -764,6 +764,8 @@ const landmarks = [
     properties: {
       id: 54,
       name: "R. H. Macy and Company Store (Macy's)",
+      quote: "If you haven't seen Macy's, you haven't seen New York.",
+      quote_author: "Macy's advertisement, 1960s",
       description: "Largest department store in world for many years",
       image_caption:
         "Macy's during the week of Christmas, 1942 (Library of Congress)",
