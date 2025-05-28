@@ -11,7 +11,7 @@ const landmarks = [
       description:
         "Home of the watershed Armory Show in 1913, which introduced America to modern art",
       link: "https://sixtyninth.net/",
-      image_caption: "Library of Congress",
+      image_caption: '"69th Regiment, New York National Guard, marching past armory entrance, New York City." Photograph. Library of Congress, 1916.'
     },
   },
   {
@@ -74,7 +74,7 @@ const landmarks = [
       id: 5,
       name: "American Stock Exchange",
       description: "Former headquarters of the American Stock Exchange",
-      image_caption: "Greenwich Street facade (right), 1921 (Library of Congress)"
+      image_caption: '"New York Curb Market Bldg." Underhill, Irving, -1960, photographer. Photograph. Library of Congress, 1921.',
     },
   },
   {
