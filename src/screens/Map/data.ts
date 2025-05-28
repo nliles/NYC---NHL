@@ -644,7 +644,7 @@ const landmarks = [
       quote_author: "Lillian Wald, after helping a hemorrhaging new mother whose doctor had abandoned her because she could not pay, 1893",
       description:
         "One of the nation's first settlement homes where new immigrants and the poor could find assistance",
-        image_caption: '"Backyard playground in nurse\'s settlement, Henry Street." Riis, Jacob A, photographer. [Printed ca. 1950] Photograph. Library of Congress, 1890.',
+      image_caption: "Backyard playground in nurse's settlement, Henry Street. New York, ca. 1890. [, Printed Ca. 1950] [Photograph] Retrieved from the Library of Congress"
     },
   },
   {
