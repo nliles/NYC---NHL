@@ -564,9 +564,10 @@ const landmarks = [
       name: "Grace Church",
       bullets: [
         "One of NYC's finest Gothic Revival structures (1846)",
-        "Designed by James Renwick Jr.",
-        "Once New York's most fashionable church where \"to be married or buried within its walls has been ever considered the height of felicity\"",
+        "James Renwick Jr.'s first major commission at age 23",
+        "Once New York's most fashionable church",
       ],
+      description: "This historic Episcopal parish in Greenwich Village has served as an architectural landmark and social center since 1846, continuing its ministry to the city today.",
       link: "https://gracechurchnyc.org/",
       image_caption: '"Grace Church, New York." The New York Public Library Digital Collections, The Miriam and Ira D. Wallach Division of Art, Prints and Photographs: Photography Collection, 1860 - 1920.',
       quote: "All Are Welcome to Enter, Rest, Pray.",
@@ -640,11 +641,15 @@ const landmarks = [
     properties: {
       id: 44,
       name: "Henry Street Settlement and Neighborhood Playhouse",
+      bullets: [
+        "Founded in 1893 by nurse Lillian Wald to serve Lower East Side immigrants",
+        "Transformed social services by providing healthcare, education, and support directly in the community",
+        "Still operating today, serving 50,000 New Yorkers annually"
+      ],
       quote: "That morning's experience was a baptism of fire. Deserted were the laboratory and academic work of college. I never returned to them. I rejoiced that I had a training in the care of the sick.",
       quote_author: "Lillian Wald, after helping a hemorrhaging new mother whose doctor had abandoned her because she could not pay, 1893",
-      description:
-        "One of the nation's first settlement homes where new immigrants and the poor could find assistance",
-      image_caption: "Backyard playground in nurse's settlement, Henry Street. New York, ca. 1890. [, Printed Ca. 1950] [Photograph] Retrieved from the Library of Congress"
+      image_caption: "Backyard playground in nurse's settlement, Henry Street. New York, [Printed Ca. 1950] [Photograph] Retrieved from the Library of Congress",
+      link: "https://www.henrystreet.org/",
     },
   },
   {
@@ -822,8 +827,11 @@ const landmarks = [
     properties: {
       id: 58,
       name: "Metropolitan Museum of Art",
-      description:
-        "Founded in 1870, the Met moved to its current Fifth Avenue location in 1880. Richard Morris Hunt designed the current building's iconic Beaux-Arts facade in 1902. The museum rapidly expanded, acquiring European masterpieces by Manet, Renoir, and Matisse, plus one of the world's largest Egyptian collections outside Cairo.",
+      bullets: [
+        "Founded in 1870, moved to Fifth Avenue location in 1880",
+        "Iconic Beaux-Arts facade designed by Richard Morris Hunt in 1902",
+        "Houses European masterpieces and one of the world's largest Egyptian collections outside Cairo"
+      ],
       link: "https://www.metmuseum.org/about-the-met/history",
       image_caption: "The Met, 1903 (Library of Congress)",
       quote:
@@ -1334,6 +1342,12 @@ const landmarks = [
     properties: {
       id: 94,
       name: "Stonewall",
+      bullets: [
+        "Site of the June 28, 1969 uprising that sparked the modern LGBTQ+ rights movement",
+        "Police raid turned into six days of protests and demonstrations", 
+        "Led to the first Gay Pride marches and formation of LGBTQ+ advocacy groups"
+      ],
+      description: "This Greenwich Village bar became a symbol of resistance when patrons and community members fought back against routine police harassment, transforming a local confrontation into a watershed moment for civil rights in America.",
       quote: "Gay power! Isn't that great! It's about time we did something to assert ourselves.",
       quote_author: "Allen Ginsberg, poet and Greenwich Village resident",
       description:

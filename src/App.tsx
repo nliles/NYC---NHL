@@ -4,7 +4,6 @@ import Portal from "./components/Portal";
 import SidePanel from "./components/SidePanel";
 import Map from "./screens/Map";
 import ParkProfile from "./components/LandmarkProfile";
-import NavBar from "./components/NavBar";
 
 const App = () => {
   const [selectedLocation, setSelectedLocation] = useState();
@@ -29,7 +28,6 @@ const App = () => {
 
   return (
     <>
-      <NavBar count={visitedLandmarks.length} total={116} />
       <div>
         <Portal containerId="portal-root">
           {selectedLocation && (

@@ -133,6 +133,13 @@ const Map = ({
 
   return (
     <div className={styles.container}>
+      <div className={styles.title}>
+      <h1>National Historic Landmarks of NYC</h1>
+      <span className={styles.progress}>
+          <img src="progress.svg" />
+          <span>{`${visitedLandmarks.length} out of ${landmarks.length}`}</span>
+        </span>
+      </div>
       <div ref={mapContainer} style={{ height: "100vh", width: "100%" }} />
     </div>
   );

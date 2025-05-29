@@ -1,10 +1,32 @@
 .container {
   width: 100%;
+  position: relative;
 }
+
+.title {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 1rem;
+  left: 50%;
+  z-index: 1;
+  font-family: "Montserrat", sans-serif;
+  background-color: #ecdbc1;
+  border: 5px solid #5e4b3c;
+  transform: translateX(-50%);
+}
+
+.progress {
+  display: flex;
+  align-items: center;
+  margin-right: 2rem;
+}
+
 
 .header {
   position: absolute;
-  padding: 2rem;
+  /* padding: 2rem; */
   max-width: 500px;
   border: 2px solid black;
   top: 0;
@@ -14,7 +36,8 @@
   font-family: "Montserrat", sans-serif;
 }
 
-.span {
+/* .span {
   font-size: 2rem;
   display: block;
-}
+} */
+
