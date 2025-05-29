@@ -181,17 +181,36 @@
 }
 
 .bulletList {
-  li {
-    list-style-type: none;
-  }
+  padding: 0;
+  list-style: none;
 }
 
-.key {
-  text-transform: uppercase;
-  font-weight: 600;
+.bulletItem {
+  display: flex;
+  align-items: flex-start;
+  padding: 12px 0;
+  margin-top: 0;
   margin-bottom: 0;
 }
 
+.bulletItem:last-child {
+  border-bottom: none;
+}
+
+.key {
+  min-width: 160px;
+  margin-right: 12px;
+  font-size: 14px;
+  flex-shrink: 0;
+  margin: 0;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
 .value {
-  margin-top: 0;
+  color: #555;
+  font-size: 14px;
+  line-height: 1.4;
+  flex: 1;
+  margin: 0;
 }

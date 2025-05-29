@@ -50,8 +50,7 @@ const landmarks = [
         { key: 'Used', value: '1690s-1794'},
         { key: 'Rediscovered', value: '1991 during construction'},
         { key: 'Designated', value: 'National Historic Landmark (1993), National Monument (2007)'},
-        { key: 'Significance', value: "Nation's largest and earliest African American cemetery"},
-        { key: 'Impact', value: "Honors thousands of enslaved Africans who built early NYC"},
+        { key: 'Significance', value: "The nation's largest and earliest African American cemetery. Today, it is a monument honoring the thousands of enslaved Africans who built early NYC." },
       ],
       link: "https://www.nps.gov/afbg/index.htm",
       quote:
@@ -283,10 +282,11 @@ const landmarks = [
         { key: 'Built', value: '1899-1902' },
         { key: 'Architect', value: 'Babb, Cook & Willard' },
         { key: 'Architecture Style', value: 'Georgian Revival' },
-        { key: 'Owner', value: 'Andrew Carnegie, steel industrialist and philanthropist' },
-        { key: 'Current Use', value: 'Cooper Hewitt, Smithsonian Design Museum' },
-        { key: 'Notable', value: 'Largest private residence ever built in NYC, now prominent design museum with 215,000+ objects' }
+        { key: 'Significance', value: 'The first private residence in the U.S. with a steel frame and technological innovations like an early Otis elevator, central heating, and air-conditioning, plus one of Manhattan’s rare private gardens.' },
       ],
+      image_caption: "Carnegie House. Bain News Service, Publisher. [Between and Ca. 1920] Photograph. Retrieved from the Library of Congress.",
+      quote: "The most modest, plainest, and most roomy house in New York.",
+      quote_author: "Andrew Carnegie, directing the construction of his mansion",
       link: "https://www.cooperhewitt.org/about-the-carnegie-mansion-2/",
     },
   },
@@ -294,21 +294,20 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.96563821905383, 40.78528724053565],
+      coordinates: [-73.96554048803918, 40.78276589010319],
     },
     properties: {
       id: 18,
       name: "Central Park",
       bullets: [
-        { key: 'Created', value: '1857 design competition, construction 1858-1873' },
+        { key: 'Built', value: '1857-1873' },
         { key: 'Designers', value: 'Frederick Law Olmsted and Calvert Vaux' },
         { key: 'Design Plan', value: 'Greensward Plan' },
         { key: 'Size', value: '843 acres' },
-        { key: 'Purpose', value: 'Provide all social classes access to nature amid rapid urbanization' },
-        { key: 'Notable', value: 'First major landscaped public park in America' }
+        { key: 'Significance', value: 'Created to provide all social classes access to nature amid rapid urbanization. Recognized as the first major landscaped public park in America.' },
       ],
       link: "https://www.centralparknyc.org/",
-      image_caption: "Stereograph, 1870",
+      image_caption: "Outdoor Life and Sport in Central Park, N.Y. The Miriam and Ira D. Wallach Division of Art, Prints and Photographs: Photography Collection, The New York Public Library. The New York Public Library Digital Collections, 1870.",
       quote: "The Lungs of the City",
       quote_author: "Nickname dubbed in 1858",
     },
@@ -355,9 +354,10 @@ const landmarks = [
         { key: 'Architecture Style', value: 'Art Deco' },
         { key: 'Commissioner', value: 'Walter P. Chrysler, automotive magnate' },
         { key: 'Height', value: '1,046 feet (77 floors)' },
-        { key: 'Famous For', value: 'Secretly-built spire revealed to win "tallest building" competition' },
-        { key: 'Notable', value: 'Epitome of Art Deco architecture, world\'s tallest building for 11 months (1930-1931)' }
+        { key: 'Significance', value: 'Celebrated as the epitome of Art Deco architecture, and held the title of the world’s tallest building for 11 months (1930–1931).' },
       ],
+      link: "https://chryslerbuilding.com/",
+      image_caption: 'Lexington Avenue - East 43rd Street. Irma and Paul Milstein Division of United States History, Local History and Genealogy, The New York Public Library. The New York Public Library Digital Collections, 1930.',
     },
   },
   {
@@ -472,8 +472,12 @@ const landmarks = [
         { key: 'Architect', value: 'Henry Janeway Hardenbergh' },
         { key: 'Architecture Style', value: 'German Renaissance' },
         { key: 'Significance', value: 'First luxury apartment building in New York City' },
-        { key: 'Notable', value: 'John Lennon\'s former home, setting for \'Rosemary\'s Baby\', remains one of NYC\'s most prestigious addresses' }
-      ]
+        { key: 'Notable', value: 'Notable as John Lennon\'s former home and site of his 1980 murder. Remains one of NYC\'s most prestigious addresses.' }
+      ],
+      image_caption: "Splendid Example of Early Apartment Design. The Miriam and Ira D. Wallach Division of Art, Prints and Photographs: Photography Collection, The New York Public Library. The New York Public Library Digital Collections, 1860–1920.",
+      link: "https://classicnewyorkhistory.com/the-dakota-building-new-yorks-most-exclusive-address/",
+      quote: "One of the most perfect apartment houses in the world.",
+      quote_author: "described in The New York Times upon completion"
     },
   },
   {
@@ -721,15 +725,11 @@ const landmarks = [
       id: 44,
       name: "Henry Street Settlement and Neighborhood Playhouse",
       bullets: [
-        { key: 'Founded', value: '1893'},
-        { key: 'Founder', value: 'Lillian Wald, nurse'},
-        { key: 'Mission', value: 'Serve Lower East Side immigrants'},
-        { key: 'Innovation', value: 'Transformed social services with community-based healthcare and education'},
-        { key: 'Current', value: 'Still operating, serving 50,000 New Yorkers annually'},
-        { key: 'Notable', value: 'Pioneering model for community-based social services'},
+        { key: 'Founded', value: '1893 by Lillian Wald'},
+        { key: 'Significance', value: 'Pioneered community-based social services for Lower East Side immigrants. Still operating today.'},
       ],
-      quote: "That morning's experience was a baptism of fire. Deserted were the laboratory and academic work of college. I never returned to them. I rejoiced that I had a training in the care of the sick.",
-      quote_author: "Lillian Wald, after helping a hemorrhaging new mother whose doctor had abandoned her because she could not pay, 1893",
+      quote: "That morning's experience was a baptism of fire. Deserted were the laboratory and academic work of college. I never returned to them...I rejoiced that I had a training in the care of the sick.",
+      quote_author: "Nurse Lillian Wald, after helping a hemorrhaging new mother whose doctor had abandoned her because she could not pay, 1893",
       image_caption: "Backyard playground in nurse's settlement, Henry Street. New York, [Printed Ca. 1950] [Photograph] Retrieved from the Library of Congress",
       link: "https://www.henrystreet.org/",
     },
@@ -918,7 +918,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.963201087946421, 40.77967623459204],
+      coordinates: [-73.96326546075547, 40.779647800019205],
     },
     properties: {
       id: 58,
@@ -930,7 +930,7 @@ const landmarks = [
         { key: 'Notable', value: 'One of the world\'s premier encyclopedic art museums, housing European masterpieces and world\'s largest Egyptian collection outside Cairo' }
       ],
       link: "https://www.metmuseum.org/about-the-met/history",
-      image_caption: "The Met, 1903 (Library of Congress)",
+      image_caption: "Metropolitan Museum of Art, New York. Detroit Publishing Co., Copyright Claimant and Publisher. Photograph. Retrieved from the Library of Congress.",
       quote:
         "One of the finest in the world, and the only public building in recent years which approaches in dignity and grandeur the museums of the old world.",
       quote_author: "Evening Post, 1902",
@@ -1415,7 +1415,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.96372071563547, 40.77907159122789],
+      coordinates: [-73.96353624541244, 40.77705914955267],
     },
     properties: {
       id: 90,
@@ -1536,11 +1536,9 @@ const landmarks = [
       id: 97,
       name: "Tenement Building at 97 Orchard Street",
       bullets: [
-        { key: 'Built', value: '1863' },
-        { key: 'Active', value: '1863-1935' },
-        { key: 'Location', value: 'Orchard Street, epicenter of immigrant life in America' },
+        { key: 'Built', value: '1863 (active 1863-1935)' },
         { key: 'Residents', value: '7,000 people from 20+ nations' },
-        { key: 'Notable', value: 'Preserving and interpreting the history of immigration to America' },
+        { key: 'Significance', value: 'Located on Orchard Street, the epicenter of immigrant life in NYC. Today, it serves as a museum dedicated to preserving and interpreting the history of immigration in America.' },
       ],
       quote: "I walked toward the Lower East Side - where you walked 50 years ago, little girl - from Russia, eating the first poisonous tomatoes of America - frightened on the dock - then struggling in the crowds of Orchard Street toward what?",
       quote_author: "Allen Ginsberg, 'Kaddish'",
@@ -1616,7 +1614,7 @@ const landmarks = [
       name: "Triangle Shirtwaist Factory",
       bullets: [
         { key: 'Date', value: 'March 25, 1911' },
-        { key: 'Event', value: 'Site of factory fire that killed 146 workers (mostly young immigrant women)' },
+        { key: 'Event', value: 'Site of factory fire that killed 146 workers (mostly young, immigrant women)' },
         { key: 'Significance', value: 'Led to landmark workplace safety laws and labor reforms' },
       ],
       quote:
