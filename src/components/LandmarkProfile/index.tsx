@@ -34,6 +34,8 @@ const LandmarkProfile = ({
     }
   };
 
+  console.log(landmark.bullets, typeof landmark.bullets)
+
   return (
     <div className={styles.container}>
       <div className={styles.content}>
@@ -47,23 +49,27 @@ const LandmarkProfile = ({
           {landmark.image_caption && (
             <span className={styles.caption}>{landmark.image_caption}</span>
           )}
+          {landmark?.bullets && (
+          <ul className={styles.bulletList}>
+          {JSON.parse(landmark.bullets).map((item: string, index: number) => (
+            <li key={index} className={styles.bulletItem}>
+              {item}
+            </li>
+          ))}
+        </ul>
+          )}
+          {landmark.quote && (
+          <blockquote className={styles.quoteBlock}>
+            <p className={styles.quoteText}>
+            &ldquo;{landmark.quote}&rdquo;
+            </p>
+            <p className={styles.quoteAttribution}>— {landmark.quote_author}</p>
+          </blockquote>
+          )}
           <p className={styles.description}>{landmark.description}</p>
           {landmark.description2 && <p>{landmark.description2}</p>}
-          {landmark.quote && (
-            <div className={styles.quote}>
-              <blockquote className={styles.quote}>
-                <p>"{landmark.quote}"</p>
-                {landmark.quote_author && (
-                  <span className={styles.author}>
-                    — {landmark.quote_author}
-                  </span>
-                )}
-              </blockquote>
-            </div>
-          )}
         </div>
       </div>
-
       <div className={styles.learnMore}>
         <div className={styles.visited}>
           <label className={styles.label} htmlFor="visited">
