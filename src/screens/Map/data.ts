@@ -194,8 +194,15 @@ const landmarks = [
     properties: {
       id: 12,
       name: "Brooklyn Bridge",
-      description:
-        "Completed in 1883, the Brooklyn Bridge was the first steel-wire suspension bridge connecting Manhattan and Brooklyn. Designed by John Augustus Roebling and completed under his son Washington and daughter-in-law Emily Warren Roebling after John's death, it became the world's longest suspension bridge. It remains a National Historic Landmark and iconic New York City symbol.",
+      bullets: [
+        { key: 'Built', value: '1869–1883' },
+        { key: 'Engineer', value: 'John A. Roebling; completed by Washington Roebling and Emily Warren Roebling.' },
+        { key: 'Significance', value: 'The first steel-wire suspension bridge connecting Manhattan and Brooklyn. It was the longest suspension bridge worldwide at completion and a landmark feat of 19th-century engineering.' },
+      ],
+      image_caption: "Brooklyn Bridge. Irma and Paul Milstein Division of United States History, Local History and Genealogy, The New York Public Library. The New York Public Library Digital Collections, 1950–1969.",
+      link: "https://www.history.com/this-day-in-history/may-24/brooklyn-bridge-opens",
+      quote: "Man is after all a finite being in capacities and powers of doing actual work. But when it comes to planning, one mind can in a few hours think out enough work to keep a thousand men employed for years.",
+      quote_author: "Washington Roebling",
     },
   },
   {
@@ -606,14 +613,13 @@ const landmarks = [
       id: 37,
       name: "The Frick Collection and Frick Art Reference Library Building",
       bullets: [
-        { key: 'Established', value: '1935' },
-        { key: 'Collector', value: 'Henry Clay Frick (1849-1919), steel and coke industrialist' },
+        { key: 'Built', value: '1935' },
+        { key: 'Architect', value: 'Thomas Hastings of Carrère and Hastings' },
         { key: 'Architecture Style', value: 'Beaux-Arts' },
-        { key: 'Collection', value: 'Masterpieces by Vermeer, Rembrandt, and other Old Masters' },
-        { key: 'Notable', value: 'Mansion designed specifically to accommodate art collection, displayed with period furniture and decorative arts' }
+        { key: 'Significance', value: "Preserves and exhibits Henry Clay Frick's high-quality collection of European art—including paintings, sculpture, and decorative arts—from the Renaissance to the early 20th century." },
       ],
-      link: "https://www.frick.org/",
-      image_caption: "The Frick Collection, 1920",
+      link: "https://www.frick.org/about/history",
+      image_caption: '"East 71st Street - Fifth Avenue." Irma and Paul Milstein Division of United States History, Local History and Genealogy, The New York Public Library Digital Collections.',
     },
   },
   {
@@ -925,9 +931,9 @@ const landmarks = [
       name: "Metropolitan Museum of Art",
       bullets: [
         { key: 'Founded', value: '1870' },
-        { key: 'Architect', value: 'Richard Morris Hunt (1902)' },
+        { key: 'Architect', value: 'Richard Morris Hunt' },
         { key: 'Architecture Style', value: 'Beaux-Arts' },
-        { key: 'Notable', value: 'One of the world\'s premier encyclopedic art museums, housing European masterpieces and world\'s largest Egyptian collection outside Cairo' }
+        { key: 'Significance', value: 'One of the world’s largest art museums. Its collection spans 5,000 years of global culture and includes all art mediums, from painting and sculpture to textiles and decorative arts.' }
       ],
       link: "https://www.metmuseum.org/about-the-met/history",
       image_caption: "Metropolitan Museum of Art, New York. Detroit Publishing Co., Copyright Claimant and Publisher. Photograph. Retrieved from the Library of Congress.",
@@ -1628,7 +1634,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-74.0118367122406, 40.70823058091367],
+      coordinates: [-74.01178837267045, 40.70811906885632],
     },
     properties: {
       id: 103,
@@ -1638,11 +1644,10 @@ const landmarks = [
         { key: 'Built', value: '1846 (current building)' },
         { key: 'Architect', value: 'Richard Upjohn' },
         { key: 'Architecture Style', value: 'Neo-Gothic' },
-        { key: 'Significance', value: 'One of the first and finest examples of Neo-Gothic architecture in the country' },
-        { key: 'Notable', value: 'Alexander Hamilton and other notable parishioners buried in historic churchyard, served New York for over 300 years' }
+        { key: 'Significance', value: 'One of the earliest and finest examples of Neo-Gothic architecture in the U.S. Resting place of Alexander Hamilton and other notable figures.' },
       ],
-      link: "https://trinitychurchnyc.org/",
-      image_caption: "View of Trinity Church, 1895",
+      link: "https://trinitychurchnyc.org/visit-history",
+      image_caption: '"Wall Street, N.Y." The New York Public Library Digital Collections. The New York Public Library, 1895.',
     },
   },
   {
