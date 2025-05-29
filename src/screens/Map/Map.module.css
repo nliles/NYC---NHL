@@ -12,9 +12,14 @@
   left: 50%;
   z-index: 1;
   font-family: "Montserrat", sans-serif;
-  background-color: #ecdbc1;
+  background-color: #f8f3e8;
   border: 5px solid #5e4b3c;
   transform: translateX(-50%);
+}
+
+.header {
+  margin: 0;
+  padding: 0;
 }
 
 .progress {
@@ -22,22 +27,3 @@
   align-items: center;
   margin-right: 2rem;
 }
-
-
-.header {
-  position: absolute;
-  /* padding: 2rem; */
-  max-width: 500px;
-  border: 2px solid black;
-  top: 0;
-  left: 100px;
-  z-index: 1;
-  background-color: white;
-  font-family: "Montserrat", sans-serif;
-}
-
-/* .span {
-  font-size: 2rem;
-  display: block;
-} */
-

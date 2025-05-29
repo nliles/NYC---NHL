@@ -723,6 +723,20 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
+      coordinates: [-73.80749410001921, 40.71271516439934],
+    },
+    properties: {
+      id: 50,
+      name: "King Manor",
+      description:
+        "Home of Rufus King, a signer of Declaration of Independence and early U.S. Senator from New York",
+      link: "https://www.kingmanor.org/",
+    },
+  },
+  {
+    type: "Feature",
+    geometry: {
+      type: "Point",
       coordinates: [-74.003333, 40.706111],
     },
     properties: {
@@ -1130,6 +1144,18 @@ const landmarks = [
       id: 79,
       name: "Jackie Robinson House",
       description: "Home of baseball great Jackie Robinson",
+    },
+  },
+  {
+    type: "Feature",
+    geometry: {
+      type: "Point",
+      coordinates: [-73.9786233989848, 40.76028797735893],
+    },
+    properties: {
+      id: 80,
+      name: "Rockefeller Center",
+      description: "Successful urban planning project of 20th-century America; changed Midtown Manhattan; originating site of popular NBC television programs Today and Saturday Night Live",
     },
   },
   {

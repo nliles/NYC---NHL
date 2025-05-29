@@ -15,6 +15,8 @@ const Map = ({
   const mapContainer = useRef(null);
   const mapInstance = useRef(null);
 
+  console.log(landmarks.length, typeof landmarks)
+
   useEffect(() => {
     if (mapboxgl && !mapInstance.current) {
       mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_TOKEN;
@@ -134,7 +136,7 @@ const Map = ({
   return (
     <div className={styles.container}>
       <div className={styles.title}>
-      <h1>National Historic Landmarks of NYC</h1>
+      <h1 className={styles.header}>National Historic Landmarks of NYC</h1>
       <span className={styles.progress}>
           <img src="progress.svg" />
           <span>{`${visitedLandmarks.length} out of ${landmarks.length}`}</span>
