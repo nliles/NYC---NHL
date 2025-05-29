@@ -180,3 +180,18 @@
   color: #68645e;
 }
 
+.bulletList {
+  li {
+    list-style-type: none;
+  }
+}
+
+.key {
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.value {
+  margin-top: 0;
+}

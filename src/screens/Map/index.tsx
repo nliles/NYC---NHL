@@ -25,7 +25,7 @@ const Map = ({
         container: mapContainer.current,
         style: "mapbox://styles/nmliles16/cmb4gmtey00bh01qv7evy8qr0",
         center: [-74.0199, 40.7528], // NYC coordinates (initial, will be adjusted)
-        zoom: 10,
+        zoom: 12,
         minZoom: 9.5,
       });
 

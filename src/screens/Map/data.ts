@@ -8,8 +8,13 @@ const landmarks = [
     properties: {
       id: 1,
       name: "69th Regiment Armory",
-      description:
-        "Home of the watershed Armory Show in 1913, which introduced America to modern art",
+      bullets: [
+        { key: 'Built', value: '1904-1906' },
+        { key: 'Architect', value: 'Hunt & Hunt (sons of Richard Morris Hunt)' },
+        { key: 'Architecture Style', value: 'Beaux-Arts' },
+        { key: 'Historic Event', value: 'Armory Show (1913)' },
+        { key: 'Notable', value: 'First NYC armory not modeled on medieval fortress, introduced America to modern art' }
+      ],
       link: "https://sixtyninth.net/",
       image_caption: '"69th Regiment, New York National Guard, marching past armory entrance, New York City." Photograph. Library of Congress, 1916.'
     },
@@ -23,9 +28,13 @@ const landmarks = [
     properties: {
       id: 2,
       name: "Admiral David Glasgow Farragut Gravesite",
-      description:
-        "Only intact known property directly associated with Admiral David Farragut",
-      date_designated: "October 17, 2012",
+      bullets: [
+        { key: 'Admiral', value: 'David Glasgow Farragut (1801-1870)' },
+        { key: 'Significance', value: 'First rear admiral, vice admiral, and admiral in U.S. Navy history' },
+        { key: 'Famous For', value: 'Battle of Mobile Bay (1864) - "Damn the torpedoes, full speed ahead!"' },
+        { key: 'Major Victory', value: 'Captured New Orleans (1862), crucial Union Civil War victory' },
+        { key: 'Notable', value: 'Only intact known property directly associated with Admiral Farragut' }
+      ],
     },
   },
   {
@@ -37,10 +46,13 @@ const landmarks = [
     properties: {
       id: 3,
       name: "African Burial Ground",
-      bullets: ["Nation's largest and earliest African American cemetery (1690s-1794)", "Designated National Historic Landmark (1993) and National Monument (2007)"],
-      description:
-        "Rediscovered during construction in 1991, this sacred site honors the memory of thousands of enslaved Africans who helped build early New York City.",
-      date_designated: "April 19, 1993",
+      bullets: [
+        { key: 'Used', value: '1690s-1794'},
+        { key: 'Rediscovered', value: '1991 during construction'},
+        { key: 'Designated', value: 'National Historic Landmark (1993), National Monument (2007)'},
+        { key: 'Significance', value: "Nation's largest and earliest African American cemetery"},
+        { key: 'Impact', value: "Honors thousands of enslaved Africans who built early NYC"},
+      ],
       link: "https://www.nps.gov/afbg/index.htm",
       quote:
         "For all those who were lost, for all those who were stolen, for all those who were left behind, for all those who were not forgotten.",
@@ -117,9 +129,9 @@ const landmarks = [
       id: 8,
       name: "Alice Austen House",
       bullets: [
-        "Home of pioneering photographer Alice Austen (1866-1952)",
-        "Captured over 7,000 images of Victorian life", 
-        "Designated National Historic Landmark and LGBTQ+ history site"
+        { key: 'Resident', value: ' Alice Austen (1866-1952), pioneering photographer'},
+        { key: 'Significance', value: 'Captured over 7,000 images of Victorian life'},
+        { key: 'Impact', value: 'Preserving pioneering photography and LGBTQ+ history'},
       ],
       description: "Alice lived here for 30 years with her partner Gertrude Tate. Today, the house serves as a museum dedicated to her photographic legacy.",
       link: "https://aliceausten.org/",
@@ -151,8 +163,13 @@ const landmarks = [
     properties: {
       id: 10,
       name: "Bayard-Condict Building",
-      description:
-        "Completed in 1899, the Bayard–Condict Building stands as the sole New York City work of Louis H. Sullivan, the acclaimed 'father of skyscrapers.' Designed in collaboration with architect Lyndon P. Smith in the Chicago School of architecture style, it is recognized as New York's first truly modern skyscraper.",
+      bullets: [
+        { key: 'Built', value: '1899' },
+        { key: 'Architect', value: 'Louis H. Sullivan with Lyndon P. Smith' },
+        { key: 'Architecture Style', value: 'Chicago School' },
+        { key: 'Significance', value: 'Sullivan\'s only NYC work - the acclaimed "father of skyscrapers"' },
+        { key: 'Notable', value: 'New York\'s first truly modern skyscraper' }
+      ],
     },
   },
   {
@@ -220,8 +237,14 @@ const landmarks = [
     properties: {
       id: 15,
       name: "Ralph Johnson Bunche House",
-      description:
-        "Home of Ralph Johnson Bunche, eminent African-American diplomat and Undersecretary General of United Nations",
+      bullet: [
+        { key: 'Resident', value: 'Ralph Johnson Bunche (1904-1971)' },
+        { key: 'Achievement', value: 'First African American to win Nobel Peace Prize (1950)' },
+        { key: 'UN Role', value: 'Undersecretary-General for Special Political Affairs' },
+        { key: 'Famous For', value: 'Negotiated 1949 Arab-Israeli armistice agreements in Palestine' },
+        { key: 'Education', value: 'First African American to earn PhD in Political Science (Harvard, 1934)' },
+        { key: 'Notable', value: 'Pioneering diplomat who shaped UN peacekeeping and decolonization efforts worldwide' }
+      ],
     },
   },
   {
@@ -235,7 +258,14 @@ const landmarks = [
       name: "Carnegie Hall",
       quote: "Everywhere in the world, music enhances a hall, with one exception: Carnegie Hall enhances the music.",
       quote_author: "Isaac Stern, violinist",
-      description: "One of the most famous music venues in the world",
+      bullets: [
+        { key: 'Built', value: '1889-1891' },
+        { key: 'Architect', value: 'William Burnet Tuthill (with Richard Morris Hunt and Adler & Sullivan)' },
+        { key: 'Architecture Style', value: 'Neo-Italian Renaissance' },
+        { key: 'Opened', value: 'May 5, 1891 (Tchaikovsky conducted opening night)' },
+        { key: 'Benefactor', value: 'Andrew Carnegie, steel industrialist ($2 million investment)' },
+        { key: 'Notable', value: 'One of the world\'s most prestigious music venues, saved from demolition in 1960s by Isaac Stern' }
+      ],
       link: "https://www.carnegiehall.org/",
       image_caption: "Carnegie Hall, early 1900s",
     },
@@ -249,8 +279,14 @@ const landmarks = [
     properties: {
       id: 17,
       name: "Andrew Carnegie Mansion",
-      description:
-        "Home of Andrew Carnegie, now the Cooper-Hewitt, National Design Museum",
+      bullets: [
+        { key: 'Built', value: '1899-1902' },
+        { key: 'Architect', value: 'Babb, Cook & Willard' },
+        { key: 'Architecture Style', value: 'Georgian Revival' },
+        { key: 'Owner', value: 'Andrew Carnegie, steel industrialist and philanthropist' },
+        { key: 'Current Use', value: 'Cooper Hewitt, Smithsonian Design Museum' },
+        { key: 'Notable', value: 'Largest private residence ever built in NYC, now prominent design museum with 215,000+ objects' }
+      ],
       link: "https://www.cooperhewitt.org/about-the-carnegie-mansion-2/",
     },
   },
@@ -263,8 +299,14 @@ const landmarks = [
     properties: {
       id: 18,
       name: "Central Park",
-      description:
-        "Central Park was created in response to rapid mid-19th century urbanization to provide all social classes with access to nature and fresh air. In 1857, the city held a public design competition, which Frederick Law Olmsted and Calvert Vaux won with their 'Greensward Plan.' Construction began in 1858, and the 843-acre park was completed in 1873.",
+      bullets: [
+        { key: 'Created', value: '1857 design competition, construction 1858-1873' },
+        { key: 'Designers', value: 'Frederick Law Olmsted and Calvert Vaux' },
+        { key: 'Design Plan', value: 'Greensward Plan' },
+        { key: 'Size', value: '843 acres' },
+        { key: 'Purpose', value: 'Provide all social classes access to nature amid rapid urbanization' },
+        { key: 'Notable', value: 'First major landscaped public park in America' }
+      ],
       link: "https://www.centralparknyc.org/",
       image_caption: "Stereograph, 1870",
       quote: "The Lungs of the City",
@@ -307,8 +349,15 @@ const landmarks = [
     properties: {
       id: 21,
       name: "Chrysler Building",
-      description:
-        "Art Deco skyscraper; distinctive feature of Manhattan skyline; at one point world's tallest building",
+      bullets: [
+        { key: 'Built', value: '1928-1930' },
+        { key: 'Architect', value: 'William Van Alen' },
+        { key: 'Architecture Style', value: 'Art Deco' },
+        { key: 'Commissioner', value: 'Walter P. Chrysler, automotive magnate' },
+        { key: 'Height', value: '1,046 feet (77 floors)' },
+        { key: 'Famous For', value: 'Secretly-built spire revealed to win "tallest building" competition' },
+        { key: 'Notable', value: 'Epitome of Art Deco architecture, world\'s tallest building for 11 months (1930-1931)' }
+      ],
     },
   },
   {
@@ -320,8 +369,14 @@ const landmarks = [
     properties: {
       id: 22,
       name: "Church of the Ascension",
-      description:
-        "The Church of the Ascension was founded in 1827. The current Gothic Revival building designed by Richard Upjohn was completed in 1841. It's considered one of New York's most important 19th-century religious buildings due to its interior features such as John La Farge's altar mural 'The Ascension' and Louis Saint-Gaudens' marble altar.",
+      bullets: [
+        { key: 'Founded', value: '1827' },
+        { key: 'Built', value: '1841' },
+        { key: 'Architect', value: 'Richard Upjohn' },
+        { key: 'Architecture Style', value: 'Gothic Revival' },
+        { key: 'Interior Features', value: 'John La Farge\'s altar mural "The Ascension" and Louis Saint-Gaudens\' marble altar' },
+        { key: 'Notable', value: 'One of New York\'s most important 19th-century religious buildings' }
+      ],
       link: "https://ascensionnyc.org/",
       image_caption: "Stereograph from the late 1800s",
       quote: "The Church of the Open Door.",
@@ -392,8 +447,13 @@ const landmarks = [
     properties: {
       id: 27,
       name: "Daily News Building",
-      description:
-        "First modern free-standing skyscraper designed by Raymond Hood",
+      bullets: [
+        { key: 'Built', value: '1930' },
+        { key: 'Architect', value: 'Raymond Hood' },
+        { key: 'Architecture Style', value: 'Art Deco' },
+        { key: 'Significance', value: 'First modern free-standing skyscraper' },
+        { key: 'Notable', value: 'Pioneering example of modernist skyscraper design' }
+      ],
       image_caption:
         "Daily News Building, 42nd Street between 2nd and 3rd Avenues, 1935",
     },
@@ -407,10 +467,13 @@ const landmarks = [
     properties: {
       id: 28,
       name: "Dakota Apartments",
-      description:
-        "The Dakota was designed by Henry Janeway Hardenbergh in 1884 in the German Renaissance style and was the first luxury apartment building in New York City.",
-      description2:
-        "The building is widely known as John Lennon's former home, who was killed outside the building's entrance in 1980, and as the setting for 'Rosemary's Baby.' It remains one of New York's most prestigious residential addresses.",
+      bullets: [
+        { key: 'Built', value: '1884' },
+        { key: 'Architect', value: 'Henry Janeway Hardenbergh' },
+        { key: 'Architecture Style', value: 'German Renaissance' },
+        { key: 'Significance', value: 'First luxury apartment building in New York City' },
+        { key: 'Notable', value: 'John Lennon\'s former home, setting for \'Rosemary\'s Baby\', remains one of NYC\'s most prestigious addresses' }
+      ]
     },
   },
   {
@@ -422,7 +485,15 @@ const landmarks = [
     properties: {
       id: 29,
       name: "Dyckman House",
-      description: "Only remaining farmhouse in Manhattan",
+      bullets: [
+        { key: 'Built', value: 'c. 1784-1785' },
+        { key: 'Builder', value: 'William Dyckman' },
+        { key: 'Architecture Style', value: 'Dutch Colonial' },
+        { key: 'Original Site', value: '250+ acre farm in northern Manhattan' },
+        { key: 'Materials', value: 'Fieldstone, brick, and white clapboard with gambrel roof' },
+        { key: 'Significance', value: 'Built to replace family home destroyed in Revolutionary War' },
+        { key: 'Notable', value: 'Only remaining farmhouse in Manhattan, museum since 1916' }
+      ],
       link: "https://dyckmanfarmhouse.org/",
     },
   },
@@ -530,10 +601,13 @@ const landmarks = [
     properties: {
       id: 37,
       name: "The Frick Collection and Frick Art Reference Library Building",
-      description:
-        "The Frick Collection was established in 1935 to preserve the art collection of businessman Henry Clay Frick (1849-1919), who made his fortune in coke and steel. Frick was an avid art collector and designed his Beaux-Arts mansion on Fifth Avenue specifically to accommodate his paintings and art.",
-      description2:
-        "His collection includes masterpieces by Vermeer, Rembrandt, and other Old Masters, displayed alongside period furniture and decorative arts.",
+      bullets: [
+        { key: 'Established', value: '1935' },
+        { key: 'Collector', value: 'Henry Clay Frick (1849-1919), steel and coke industrialist' },
+        { key: 'Architecture Style', value: 'Beaux-Arts' },
+        { key: 'Collection', value: 'Masterpieces by Vermeer, Rembrandt, and other Old Masters' },
+        { key: 'Notable', value: 'Mansion designed specifically to accommodate art collection, displayed with period furniture and decorative arts' }
+      ],
       link: "https://www.frick.org/",
       image_caption: "The Frick Collection, 1920",
     },
@@ -563,11 +637,11 @@ const landmarks = [
       id: 39,
       name: "Grace Church",
       bullets: [
-        "One of NYC's finest Gothic Revival structures (1846)",
-        "James Renwick Jr.'s first major commission at age 23",
-        "Once New York's most fashionable church",
+        { key: 'Built', value: '1846' },
+        { key: 'Architect', value: 'James Renwick Jr. (his first major commission at age 23)' },
+        { key: 'Architecture Style', value: 'Gothic Revival' },
+        { key: 'Significance', value: 'One of NYC\'s finest Gothic Revival structures. Once the most fashionable church in the city.' }
       ],
-      description: "This historic Episcopal parish in Greenwich Village has served as an architectural landmark and social center since 1846, continuing its ministry to the city today.",
       link: "https://gracechurchnyc.org/",
       image_caption: '"Grace Church, New York." The New York Public Library Digital Collections, The Miriam and Ira D. Wallach Division of Art, Prints and Photographs: Photography Collection, 1860 - 1920.',
       quote: "All Are Welcome to Enter, Rest, Pray.",
@@ -583,8 +657,13 @@ const landmarks = [
     properties: {
       id: 40,
       name: "Grand Central Terminal",
-      description:
-        "Beaux-Arts architecture; historic rail gateway to New York City; largest train station in the world by number of platforms",
+      bullets: [
+        { key: 'Built', value: '1913' },
+        { key: 'Architect', value: 'Reed and Stem, Warren and Wetmore' },
+        { key: 'Architecture Style', value: 'Beaux-Arts' },
+        { key: 'Significance', value: 'Historic rail gateway to New York City' },
+        { key: 'Notable', value: 'Largest train station in the world by number of platforms' }
+      ],
       link: "https://grandcentralterminal.com/",
     },
   },
@@ -642,9 +721,12 @@ const landmarks = [
       id: 44,
       name: "Henry Street Settlement and Neighborhood Playhouse",
       bullets: [
-        "Founded in 1893 by nurse Lillian Wald to serve Lower East Side immigrants",
-        "Transformed social services by providing healthcare, education, and support directly in the community",
-        "Still operating today, serving 50,000 New Yorkers annually"
+        { key: 'Founded', value: '1893'},
+        { key: 'Founder', value: 'Lillian Wald, nurse'},
+        { key: 'Mission', value: 'Serve Lower East Side immigrants'},
+        { key: 'Innovation', value: 'Transformed social services with community-based healthcare and education'},
+        { key: 'Current', value: 'Still operating, serving 50,000 New Yorkers annually'},
+        { key: 'Notable', value: 'Pioneering model for community-based social services'},
       ],
       quote: "That morning's experience was a baptism of fire. Deserted were the laboratory and academic work of college. I never returned to them. I rejoiced that I had a training in the care of the sick.",
       quote_author: "Lillian Wald, after helping a hemorrhaging new mother whose doctor had abandoned her because she could not pay, 1893",
@@ -842,9 +924,10 @@ const landmarks = [
       id: 58,
       name: "Metropolitan Museum of Art",
       bullets: [
-        "Founded in 1870, moved to Fifth Avenue location in 1880",
-        "Iconic Beaux-Arts facade designed by Richard Morris Hunt in 1902",
-        "Houses European masterpieces and one of the world's largest Egyptian collections outside Cairo"
+        { key: 'Founded', value: '1870' },
+        { key: 'Architect', value: 'Richard Morris Hunt (1902)' },
+        { key: 'Architecture Style', value: 'Beaux-Arts' },
+        { key: 'Notable', value: 'One of the world\'s premier encyclopedic art museums, housing European masterpieces and world\'s largest Egyptian collection outside Cairo' }
       ],
       link: "https://www.metmuseum.org/about-the-met/history",
       image_caption: "The Met, 1903 (Library of Congress)",
@@ -1028,8 +1111,14 @@ const landmarks = [
     properties: {
       id: 71,
       name: "Old Quaker Meeting House",
-      description:
-        "Built in 1694, the Quaker meetinghouse is believed to be the oldest house of worship in New York State. The structure's design embodies Quaker principles and reflects Flushing's origins as a Dutch village within New Amsterdam. In 1657, the community produced the Flushing Remonstrance, which helped lay the groundwork for the Bill of Rights protection of freedom of religion. The Quaker community still gathers here for Sunday services.",
+      bullets: [
+        { key: 'Built', value: '1694' },
+        { key: 'Architecture Style', value: 'Dutch Colonial, embodying Quaker principles' },
+        { key: 'Historic Document', value: 'Community produced Flushing Remonstrance (1657)' },
+        { key: 'Significance', value: 'Reputed to be oldest house of worship in New York State' },
+        { key: 'Legacy', value: 'Helped lay groundwork for Bill of Rights religious freedom protection' },
+        { key: 'Notable', value: 'Quaker community still gathers here for Sunday services after 330+ years' }
+      ],
       link: "https://nylandmarks.org/celebrate-50-at-50/flushing-friends-meeting-house/",
       quote:
         "We desire therefore in this case not to judge least we be judged, neither to condemn least we be condemned, but rather let every man stand and fall to his own Master.",
@@ -1168,11 +1257,12 @@ const landmarks = [
       id: 81,
       name: "Sailors' Snug Harbor",
       bullets: [
-        "Founded by Robert Richard Randall's 1801 will as a haven for \"aged, decrepit, and worn-out sailors\"",
-        "Greek Revival buildings became NYC's first designated landmark structures (1960s)",
-        "Once America's richest charitable institution with 50 buildings and 900 residents"
+        { key: 'Founded', value: '1801' },
+        { key: 'Purpose', value: 'Haven for "aged, decrepit, and worn-out sailors"' },
+        { key: 'Architecture Style', value: 'Greek Revival' },
+        { key: 'Historic Significance', value: 'NYC\'s first designated landmark structures (1960s)' },
+        { key: 'Notable', value: 'Once America\'s richest charitable institution with 50 buildings and 900 residents' }
       ],
-      description: "First and only home for retired merchant seamen in U.S.",
       link: "https://snug-harbor.org/",
       image_caption: "Historic American Buildings Survey, Creator. Sailors' Snug Harbor, Richmond Terrace, Staten Island, New Brighton, Richmond County, NY. 1933."
     },
@@ -1200,8 +1290,14 @@ const landmarks = [
     properties: {
       id: 83,
       name: "St. George's Episcopal Church",
-      description:
-        "The Parish of Calvary-St. George's dates back to 1749 when Trinity Church established St. George's Chapel. It later joined Calvary Church (1832) and Holy Communion Church (1844). The current building was designed by Charles Otto Blesch and Leopold Eidlitz in 1846. In 1975, three congregations merged.",
+      bullets: [
+        { key: 'Founded', value: '1749 as St. George\'s Chapel by Trinity Church' },
+        { key: 'Built', value: '1846' },
+        { key: 'Architects', value: 'Charles Otto Blesch and Leopold Eidlitz' },
+        { key: 'Architecture Style', value: 'Romanesque Revival' },
+        { key: 'Parish History', value: 'Joined with Calvary Church (1832) and Holy Communion Church (1844), three congregations merged in 1975' },
+        { key: 'Notable', value: 'Home to Harry T. Burleigh, the "savior of spirituals" who arranged African American spirituals' }
+      ],
       quote:
         "Deep river, my home is over Jordan. Deep river, Lord, I want to cross over into campground.",
       quote_author:
@@ -1217,7 +1313,13 @@ const landmarks = [
     properties: {
       id: 84,
       name: "St. Patrick's Cathedral",
-      description: "First large-scale medieval-style church built in U.S.",
+      bullets: [
+        { key: 'Built', value: '1858-1878 (dedicated 1879)' },
+        { key: 'Architect', value: 'James Renwick Jr.' },
+        { key: 'Architecture Style', value: 'Gothic Revival' },
+        { key: 'Purpose', value: 'Built to replace Old St. Patrick\'s Cathedral and accommodate growing Catholic population' },
+        { key: 'Notable', value: 'First large-scale medieval-style church built in U.S., largest Gothic Revival Catholic cathedral in North America' }
+      ],
       link: "https://saintpatrickscathedral.org/",
     },
   },
@@ -1231,9 +1333,11 @@ const landmarks = [
       id: 85,
       name: "St. Paul's Chapel",
       bullets: [
-        "Manhattan's oldest surviving church building (1766)",
-        "Designed by Thomas McBean in Georgian style", 
-        "Served as refuge for Ground Zero recovery workers after 9/11"
+        { key: 'Built', value: '1766' },
+        { key: 'Architect', value: 'Thomas McBean' },
+        { key: 'Architecture Style', value: 'Georgian' },
+        { key: 'Significance', value: "Manhattan's oldest surviving church building" },
+        { key: 'Notable', value: "Served as refuge for Ground Zero recovery workers after 9/11" },
       ],
       image_caption: '"St. Paul\'s Chapel (front)." The New York Public Library Digital Collections, Irma and Paul Milstein Division of United States History, Local History and Genealogy, 1905.',
       link: "https://trinitychurchnyc.org/visit-history/places/st-pauls-chapel",
@@ -1250,8 +1354,14 @@ const landmarks = [
     properties: {
       id: 86,
       name: "Margaret Sanger Clinic",
-      description:
-        "The Margaret Sanger Clinic housed the Birth Control Clinical Research Bureau from 1930 to 1973. After opening in Brooklyn in 1916, Sanger moved to this permanent location in 1930. From here, she reshaped attitudes toward reproductive health and sexuality.",
+      bullets: [
+        { key: 'Founded', value: '1916 in Brooklyn, moved to permanent location 1930' },
+        { key: 'Operated', value: '1930-1973' },
+        { key: 'Founder', value: 'Margaret Sanger, birth control advocate' },
+        { key: 'Housed', value: 'Birth Control Clinical Research Bureau' },
+        { key: 'Significance', value: 'Reshaped attitudes toward reproductive health and sexuality' },
+        { key: 'Notable', value: 'Pioneering center for reproductive rights and family planning research' }
+      ],
       quote:
         "No woman can call herself free who does not own and control her body. No woman can call herself free until she can choose consciously whether she will or will not be a mother.",
       quote_author: "Margaret Sanger",
@@ -1351,8 +1461,16 @@ const landmarks = [
     properties: {
       id: 93,
       name: "A. T. Stewart Company Store",
-      description:
-        "The A.T. Stewart Store, built in 1845-46 and dubbed the 'Marble Palace,' was a commercial structure that housed America's first department store and introduced the Italian Renaissance architectural style to the United States. The store’s namesake, Alexander Turney Stewart, was an Irish immigrant who became a business legend and one of the wealthiest men in America through his dry-goods business. The building is now known as the Sun Building from its days as headquarters for The Sun newspaper.",
+      bullets: [
+        { key: 'Built', value: '1845-1846' },
+        { key: 'Architects', value: 'Joseph Trench and John B. Snook' },
+        { key: 'Architecture Style', value: 'Italian Renaissance' },
+        { key: 'Nickname', value: '"Marble Palace"' },
+        { key: 'Owner', value: 'Alexander Turney Stewart, Irish immigrant and business legend' },
+        { key: 'Significance', value: 'America\'s first department store' },
+        { key: 'Legacy', value: 'Introduced Italian Renaissance architectural style to the United States' },
+        { key: 'Notable', value: 'Now known as Sun Building, former headquarters of The Sun newspaper' }
+      ],
       quote: "The Sun... It Shines for All.",
       quote_author:
         "Inscription on a non-working clock from the building's Sun newspaper era",
@@ -1369,15 +1487,14 @@ const landmarks = [
       id: 94,
       name: "Stonewall",
       bullets: [
-        "Site of the June 28, 1969 uprising that sparked the modern LGBTQ+ rights movement",
-        "Police raid turned into six days of protests and demonstrations", 
-        "Led to the first Gay Pride marches and formation of LGBTQ+ advocacy groups"
+        { key: 'Date', value: 'June 28, 1969' },
+        { key: 'Event', value: 'Police raid turned into six days of protests and demonstrations' },
+        { key: 'Impact', value: 'Sparked the modern LGBTQ+ rights movement' },
+        { key: 'Notable', value: 'Led to the first Gay Pride marches and formation of LGBTQ+ advocacy groups' }
       ],
       description: "This Greenwich Village bar became a symbol of resistance when patrons and community members fought back against routine police harassment, transforming a local confrontation into a watershed moment for civil rights in America.",
       quote: "Gay power! Isn't that great! It's about time we did something to assert ourselves.",
       quote_author: "Allen Ginsberg, poet and Greenwich Village resident",
-      description:
-        "Site of 1969 Stonewall riots which began gay rights movement",
       link: "https://www.nps.gov/ston/index.htm",
       image_caption: "The Stonewall Inn ca. 1969",
     },
@@ -1419,9 +1536,11 @@ const landmarks = [
       id: 97,
       name: "Tenement Building at 97 Orchard Street",
       bullets: [
-        "Located on Orchard Street, epicenter of immigrant life in America (1863-1935)",
-        "Part of the most densely populated block on earth by 1903",
-        "Five-story building which was home to 7,000 people from over 20 nations - now the Tenement Museum tells their stories",
+        { key: 'Built', value: '1863' },
+        { key: 'Active', value: '1863-1935' },
+        { key: 'Location', value: 'Orchard Street, epicenter of immigrant life in America' },
+        { key: 'Residents', value: '7,000 people from 20+ nations' },
+        { key: 'Notable', value: 'Preserving and interpreting the history of immigration to America' },
       ],
       quote: "I walked toward the Lower East Side - where you walked 50 years ago, little girl - from Russia, eating the first poisonous tomatoes of America - frightened on the dock - then struggling in the crowds of Orchard Street toward what?",
       quote_author: "Allen Ginsberg, 'Kaddish'",
@@ -1496,8 +1615,9 @@ const landmarks = [
       id: 102,
       name: "Triangle Shirtwaist Factory",
       bullets: [
-        "Site of tragic factory fire that killed 146 workers, mostly young immigrant women (March 25, 1911)",
-        "Led to landmark workplace safety laws and labor reforms"
+        { key: 'Date', value: 'March 25, 1911' },
+        { key: 'Event', value: 'Site of factory fire that killed 146 workers (mostly young immigrant women)' },
+        { key: 'Significance', value: 'Led to landmark workplace safety laws and labor reforms' },
       ],
       quote:
         "There was a stricken conscience of public guilt and we all felt that we had been wrong, that something was wrong with that building which we had accepted or the tragedy never would have happened. Moved by this sense of stricken guilt, we banded ourselves together to find a way by law to prevent this kind of disaster.",
@@ -1515,8 +1635,14 @@ const landmarks = [
     properties: {
       id: 103,
       name: "Trinity Church",
-      description:
-        "Founded in 1697, Trinity Church has served New York for over 300 years. The current building was designed by Richard Upjohn and consecrated in 1846, and is considered one of the first and finest examples of Neo-Gothic architecture in the country. Notable parishioners such as Alexander Hamilton are buried in the historic churchyard.",
+      bullets: [
+        { key: 'Founded', value: '1697' },
+        { key: 'Built', value: '1846 (current building)' },
+        { key: 'Architect', value: 'Richard Upjohn' },
+        { key: 'Architecture Style', value: 'Neo-Gothic' },
+        { key: 'Significance', value: 'One of the first and finest examples of Neo-Gothic architecture in the country' },
+        { key: 'Notable', value: 'Alexander Hamilton and other notable parishioners buried in historic churchyard, served New York for over 300 years' }
+      ],
       link: "https://trinitychurchnyc.org/",
       image_caption: "View of Trinity Church, 1895",
     },
@@ -1556,8 +1682,14 @@ const landmarks = [
     properties: {
       id: 106,
       name: "United Charities Building",
-      description:
-        "Built in 1893 by a wealthy businessman in order to provide his favorite charities a low cost location for their operations",
+      bullets: [
+        { key: 'Built', value: '1893' },
+        { key: 'Architect', value: 'Robert H. Robertson (assisted by Rowe & Baker)' },
+        { key: 'Architecture Style', value: 'Renaissance Revival' },
+        { key: 'Patron', value: 'John Stewart Kennedy, wealthy banker and philanthropist' },
+        { key: 'Purpose', value: 'House the Charity Organization Society and multiple charitable organizations' },
+        { key: 'Significance', value: 'Pioneer headquarters for nonprofit organizations providing social services' }
+      ],
       image_caption: "United Charities Building drawing, 1891 (NYPL Digital Collection)",
     },
   },
@@ -1639,10 +1771,6 @@ const landmarks = [
     properties: {
       id: 112,
       name: "Wards Point Archeological Site",
-      bullets: [
-        "Largest pre-European burial ground in New York City",
-        "Used by Lenape people for over 7,000 years until Dutch colonization", 
-      ],
       description:
         "Archaeological site in Conference House Park containing prehistoric remains.",
     },
