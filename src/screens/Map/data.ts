@@ -58,7 +58,8 @@ const landmarks = [
         "For all those who were lost, for all those who were stolen, for all those who were left behind, for all those who were not forgotten.",
       quote_author: "Memorial inscription",
       image_caption:
-        "Map showing the location of the burial ground outside the northern boundary of the city",
+        "Map showing the location of the burial ground outside the northern boundary of the city. A plan of the city of New-York. New York Public Library Digital Collections. 1763.",
+      image_link: "https://digitalcollections.nypl.org/items/3949a160-c5ed-012f-fd0b-58d385a7bc34#/?uuid=510d47d9-7ac7-a3d9-e040-e00a18064a99",
     },
   },
   {
@@ -422,7 +423,7 @@ const landmarks = [
       name: "City Hall",
       description:
         "Oldest city hall in U.S. still in use as main municipal government building",
-      image_caption: "City Hall, N.Y.C. Library of Congress. 1900.",
+      image_caption: "City Hall. N.Y.C. Library of Congress. 1900.",
       image_link: "https://www.loc.gov/resource/ggbain.08578/",
     },
   },
@@ -438,7 +439,8 @@ const landmarks = [
       description:
         "Only surviving pre-Revolutionary War manor house in New York City; site of unsuccessful peace conference in 1776",
       link: "https://conferencehouse.org/",
-      image_caption: "Conference House postcard, 1900 (NYPL Digital Collection)",
+      image_caption: "Conference House. New York Public Library Digital Collections. 1990 - 1999",
+      image_link: "https://digitalcollections.nypl.org/items/71e71110-c5ee-012f-176c-58d385a7bc34#/?uuid=510d47d9-cc32-a3d9-e040-e00a18064a99",
     },
   },
   {
@@ -452,7 +454,7 @@ const landmarks = [
       name: "Will Marion Cook House",
       description:
         "Home of the leading black composer and musician Will Marion Cook",
-      image_caption: "Will Marion Cook House, 221 West 138th Street, New York County, NY. Library of Congress. 1933.",
+      image_caption: "Will Marion Cook House. Library of Congress. 1933.",
       image_link: "https://www.loc.gov/item/ny1334/",
     },
   },
@@ -467,7 +469,7 @@ const landmarks = [
       name: "Cooper Union",
       description:
         "Pioneering adult education center; site of famous anti-slavery speech by Abraham Lincoln",
-      image_caption: "Cooper Union, New York Public Library Digital Collections, 1887 - 1964",
+      image_caption: "Cooper Union. New York Public Library Digital Collections. 1887 - 1964",
       image_link: "https://digitalcollections.nypl.org/items/31a5e160-c5ed-012f-bd93-58d385a7bc34#/?uuid=510d47e2-ef01-a3d9-e040-e00a18064a99",
       link: "https://cooper.edu/",
     },
@@ -488,7 +490,7 @@ const landmarks = [
         { key: 'Significance', value: 'First modern free-standing skyscraper' },
         { key: 'Notable', value: 'Pioneering example of modernist skyscraper design' }
       ],
-      image_caption: "Daily News Building, 42nd Street between Second and Third Avenues, New York Public Library Digital Collections, 1935",
+      image_caption: "Daily News Building, 42nd Street between Second and Third Avenues. New York Public Library Digital Collections. 1935",
       image_link: 'https://digitalcollections.nypl.org/items/f99a0a60-86cc-013a-7f01-0242ac110003#/?uuid=63a82990-86d0-013a-061c-0242ac110002',
     },
   },
@@ -508,7 +510,7 @@ const landmarks = [
         { key: 'Significance', value: 'First luxury apartment building in NYC' },
         { key: 'Notable', value: 'Notable as John Lennon\'s former home and site of his 1980 murder. Remains one of NYC\'s most prestigious addresses.' }
       ],
-      image_caption: 'Splendid Example of Early Apartment Design, New York Public Library Digital Collections, 1860–1920.',
+      image_caption: 'Splendid Example of Early Apartment Design. New York Public Library Digital Collections. 1860–1920.',
       image_link: 'https://digitalcollections.nypl.org/items/dceaad70-c617-012f-78a8-58d385a7bc34#/?uuid=510d47d9-b133-a3d9-e040-e00a18064a99',
       link: "https://classicnewyorkhistory.com/the-dakota-building-new-yorks-most-exclusive-address/",
       quote: "One of the most perfect apartment houses in the world.",
