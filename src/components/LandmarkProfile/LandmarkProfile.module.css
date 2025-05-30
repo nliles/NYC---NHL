@@ -55,6 +55,11 @@
   color: #9b9186;
   font-size: 12px;
   font-style: italic;
+
+  &:hover {
+    color: #9b9186;
+    text-decoration: underline;
+  }
 }
 
 .img {

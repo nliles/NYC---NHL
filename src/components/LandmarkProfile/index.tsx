@@ -47,7 +47,7 @@ const LandmarkProfile = ({
             className={styles.img}
           />
           {landmark.image_caption && (
-            <span className={styles.caption}>{landmark.image_caption}</span>
+            <a className={styles.caption} href={landmark.image_link} target="_blank" rel="noopener noreferrer">{landmark.image_caption}</a>
           )}
           {landmark?.bullets && (
           <ul className={styles.bulletList}>

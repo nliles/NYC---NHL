@@ -36,6 +36,7 @@ const landmarks = [
         { key: 'Major Victory', value: 'Captured New Orleans (1862), crucial Union Civil War victory' },
         { key: 'Notable', value: 'Only intact known property directly associated with Admiral Farragut' }
       ],
+      image_link: "https://en.wikipedia.org/wiki/Admiral_David_Glasgow_Farragut_Gravesite#/media/File:Admiral_David_Farragut_Monument_1024.jpg",
     },
   },
   {
@@ -535,6 +536,8 @@ const landmarks = [
         { key: 'Significance', value: 'Built to replace family home destroyed in Revolutionary War' },
         { key: 'Notable', value: 'Only remaining farmhouse in Manhattan, museum since 1916' }
       ],
+      image_caption: "Broadway - 204th Street, northwest corner. The New York Public Library Digital Collections. 1887 - 1986.",
+      image_link: "https://digitalcollections.nypl.org/items/f01d7e90-c5cd-012f-0645-58d385a7bc34#/?uuid=510d47e2-0326-a3d9-e040-e00a18064a99",
       link: "https://dyckmanfarmhouse.org/",
     },
   },
@@ -907,8 +910,8 @@ const landmarks = [
     properties: {
       id: 50,
       name: "King Manor",
-      description:
-        "Home of Rufus King, a signer of Declaration of Independence and early U.S. Senator from New York",
+      image_caption: "Rufus King House. Library of Congress. 1933.",
+      image_link: "https://www.loc.gov/resource/hhh.ny2046.photos/?sp=1&st=image",
       link: "https://www.kingmanor.org/",
     },
   },
@@ -1001,7 +1004,7 @@ const landmarks = [
         { key: 'Architectural Style', value: 'International Style/Art Deco/Art Moderne' },
         { key: 'Significance', value: 'Transitional skyscraper bridging Art Deco and International Style, featured in MoMA\'s influential 1932 exhibition, birthplace of Marvel Comics' }
       ],
-      image_caption: "McGraw Hill Building, from 42nd Street and Ninth Avenue looking east. The New York Public Library Digital Collections. 1936.",
+      image_caption: "McGraw Hill Building. The New York Public Library Digital Collections. 1936.",
       image_link: "https://digitalcollections.nypl.org/items/689c3020-a48d-013a-8d98-0242ac110003#/?uuid=4f3d4120-a48e-013a-7a4f-0242ac110002,"
     },
   },
@@ -2067,8 +2070,8 @@ const landmarks = [
       id: 115,
       name: "Wyckoff House",
       description: "Oldest surviving Dutch saltbox frame house in America",
-      image_caption: "Wyckoff home. The New York Public Library Digital Collections. 1885 - 1914.",
-      image_link: "https://digitalcollections.nypl.org/items/b540d4c0-c637-012f-69ea-58d385a7bc34#/?uuid=5e66b3e8-e3f3-d471-e040-e00a180654d7",
+      image_caption: "Wyckoff home. Library of Congress. 1933.",
+      image_link: "https://www.loc.gov/item/ny0257/",
       link: "https://wyckoffmuseum.org/",
     },
   },
