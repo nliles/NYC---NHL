@@ -25,7 +25,7 @@ const Map = ({
         container: mapContainer.current,
         style: "mapbox://styles/nmliles16/cmb4gmtey00bh01qv7evy8qr0",
         center: [-74.0199, 40.7528], // NYC coordinates (initial, will be adjusted)
-        zoom: 10,
+        zoom: 12,
         minZoom: 9.5,
       });
 
@@ -136,7 +136,8 @@ const Map = ({
   return (
     <div className={styles.container}>
       <div className={styles.title}>
-      <h1 className={styles.header}>National Historic Landmarks of NYC</h1>
+      <h1 className={styles.header}>National Historic Landmarks</h1>
+      <p className={styles.subText}>of NYC</p>
       <span className={styles.progress}>
           <img src="progress.svg" />
           <span>{`${visitedLandmarks.length} out of ${landmarks.length}`}</span>

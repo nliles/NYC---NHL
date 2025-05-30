@@ -8,10 +8,16 @@ const landmarks = [
     properties: {
       id: 1,
       name: "69th Regiment Armory",
-      description:
-        "Home of the watershed Armory Show in 1913, which introduced America to modern art",
+      bullets: [
+        { key: 'Built', value: '1904-1906' },
+        { key: 'Architect', value: 'Hunt & Hunt (sons of Richard Morris Hunt)' },
+        { key: 'Architectural style', value: 'Beaux-Arts' },
+        { key: 'Historic Event', value: 'Armory Show (1913)' },
+        { key: 'Notable', value: 'First NYC armory not modeled on medieval fortress, introduced America to modern art' }
+      ],
       link: "https://sixtyninth.net/",
-      image_caption: '"69th Regiment, New York National Guard, marching past armory entrance, New York City." Photograph. Library of Congress, 1916.'
+      image_caption: "69th Regiment, New York National Guard, marching past armory entrance, Library of Congress, 1916",
+      image_link: "https://www.loc.gov/item/2016651305/",
     },
   },
   {
@@ -23,9 +29,14 @@ const landmarks = [
     properties: {
       id: 2,
       name: "Admiral David Glasgow Farragut Gravesite",
-      description:
-        "Only intact known property directly associated with Admiral David Farragut",
-      date_designated: "October 17, 2012",
+      bullets: [
+        { key: 'Admiral', value: 'David Glasgow Farragut (1801-1870)' },
+        { key: 'Significance', value: 'First rear admiral, vice admiral, and admiral in U.S. Navy history' },
+        { key: 'Famous For', value: 'Battle of Mobile Bay (1864) - "Damn the torpedoes, full speed ahead!"' },
+        { key: 'Major Victory', value: 'Captured New Orleans (1862), crucial Union Civil War victory' },
+        { key: 'Notable', value: 'Only intact known property directly associated with Admiral Farragut' }
+      ],
+      image_link: "https://en.wikipedia.org/wiki/Admiral_David_Glasgow_Farragut_Gravesite#/media/File:Admiral_David_Farragut_Monument_1024.jpg",
     },
   },
   {
@@ -37,16 +48,19 @@ const landmarks = [
     properties: {
       id: 3,
       name: "African Burial Ground",
-      bullets: ["Nation's largest and earliest African American cemetery (1690s-1794)", "Designated National Historic Landmark (1993) and National Monument (2007)"],
-      description:
-        "Rediscovered during construction in 1991, this sacred site honors the memory of thousands of enslaved Africans who helped build early New York City.",
-      date_designated: "April 19, 1993",
+      bullets: [
+        { key: 'Used', value: '1690s-1794'},
+        { key: 'Rediscovered', value: '1991 during construction'},
+        { key: 'Designated', value: 'National Historic Landmark (1993), National Monument (2007)'},
+        { key: 'Significance', value: "The nation's largest and earliest African American cemetery. Today, it is a monument honoring the thousands of enslaved Africans who built early NYC." },
+      ],
       link: "https://www.nps.gov/afbg/index.htm",
       quote:
         "For all those who were lost, for all those who were stolen, for all those who were left behind, for all those who were not forgotten.",
       quote_author: "Memorial inscription",
       image_caption:
-        "Map showing the location of the burial ground outside the northern boundary of the city",
+        "Map showing the location of the burial ground outside the northern boundary of the city. A plan of the city of New-York. New York Public Library Digital Collections. 1763.",
+      image_link: "https://digitalcollections.nypl.org/items/3949a160-c5ed-012f-fd0b-58d385a7bc34#/?uuid=510d47d9-7ac7-a3d9-e040-e00a18064a99",
     },
   },
   {
@@ -58,10 +72,15 @@ const landmarks = [
     properties: {
       id: 4,
       name: "Ambrose (lightship)",
-      description:
-        "Lightship, several miles offshore, that marked Ambrose Channel into New York Harbor, now at South Street Seaport Museum.",
+      bullets: [
+        { key: 'Built', value: '1907' },
+        { key: 'Builder', value: 'New York Shipbuilding Company, Camden, New Jersey' },
+        { key: 'Type', value: 'Riveted steel lightship (LV-87/WAL-512)' },
+        { key: 'Significance', value: 'First lightship to bear "AMBROSE" name, served Ambrose Channel 1908-1932, first radio beacon in US (1921), last steam-powered vessel at station, guided over 6 million immigrants into New York Harbor, National Historic Landmark (1989)' }
+      ],
       link: "https://museumships.us/coast-guard/ambrose",
-      image_caption: "United States Lightship WLV-613, USCG photograph"
+      image_caption: "United States Lightship WLV-613. Wikimedia Commons, U.S. Coast Guard, n.d.",
+      image_link: "https://en.wikipedia.org/wiki/Lightship_Ambrose#/media/File:Ambrose_Lightship.jpg",
     },
   },
   {
@@ -74,7 +93,8 @@ const landmarks = [
       id: 5,
       name: "American Stock Exchange",
       description: "Former headquarters of the American Stock Exchange",
-      image_caption: '"New York Curb Market Bldg." Underhill, Irving, -1960, photographer. Photograph. Library of Congress, 1921.',
+      image_caption: 'New York Curb Market Building. Library of Congress. 1921.',
+      image_link: "https://www.loc.gov/item/00650323/",
     },
   },
   {
@@ -104,7 +124,8 @@ const landmarks = [
       name: "Chester A. Arthur House",
       description:
         "Home of President Chester A. Arthur; site of his inaugural oath",
-      image_description: "James Grant Wilson, ed., The Presidents of the United States, 1914",
+      image_description: "Home of President Chester A. Arthur, 123 Lexington Avenue. Wikimedia Commons.",
+      image_link: "https://commons.wikimedia.org/wiki/File:Presidents_Chester_A_Arthur_123_Lexington_Ave.jpg",
     },
   },
   {
@@ -117,14 +138,14 @@ const landmarks = [
       id: 8,
       name: "Alice Austen House",
       bullets: [
-        "Home of pioneering photographer Alice Austen (1866-1952)",
-        "Captured over 7,000 images of Victorian life", 
-        "Designated National Historic Landmark and LGBTQ+ history site"
+        { key: 'Resident', value: ' Alice Austen (1866-1952), pioneering photographer'},
+        { key: 'Significance', value: 'Captured over 7,000 images of Victorian life'},
+        { key: 'Impact', value: 'Preserving pioneering photography and LGBTQ+ history'},
       ],
       description: "Alice lived here for 30 years with her partner Gertrude Tate. Today, the house serves as a museum dedicated to her photographic legacy.",
       link: "https://aliceausten.org/",
-      image_caption:
-        "Clear Comfort, the Austen House, with the photographer's grandfather. Photo by Alice Austen., Digital Collections, The New York Public Library",
+      image_caption: "Clear Comfort, the Austen House, with the photographer's grandfather, photo by Alice Austen. The New York Public Library Digital Collections. 1990–1999.",
+      image_link: "https://digitalcollections.nypl.org/items/64b4df40-c5ef-012f-3d82-58d385a7bc34#/?uuid=510d47d9-c9ce-a3d9-e040-e00a18064a99",
       quote: "I guess I was too good to get married.",
       quote_author: "Alice Austen, on why she never married",
     },
@@ -139,6 +160,8 @@ const landmarks = [
       id: 9,
       name: "Bartow–Pell Mansion",
       description: "19th-century mansion in largest New York City park",
+      image_caption: "Bartow-Pell Mansion, Shore Road, Pelham Bay Park, Bronx, Bronx County, NY. Library of Congress. 1933.",
+      image_link: "https://www.loc.gov/item/ny0099/",
       link: "https://www.bartowpellmansionmuseum.org/",
     },
   },
@@ -146,13 +169,21 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.99480151671527, 40.727812827347826],
+      coordinates: [-73.99508089602588, 40.72636741908031],
     },
     properties: {
       id: 10,
       name: "Bayard-Condict Building",
-      description:
-        "Completed in 1899, the Bayard–Condict Building stands as the sole New York City work of Louis H. Sullivan, the acclaimed 'father of skyscrapers.' Designed in collaboration with architect Lyndon P. Smith in the Chicago School of architecture style, it is recognized as New York's first truly modern skyscraper.",
+      bullets: [
+        { key: 'Built', value: '1899' },
+        { key: 'Architect', value: 'Louis H. Sullivan with Lyndon P. Smith' },
+        { key: 'Architectural style', value: 'Chicago School' },
+        { key: 'Significance', value: 'Sullivan\'s only NYC work - the acclaimed "father of skyscrapers"' },
+        { key: 'Notable', value: 'New York\'s first truly modern skyscraper' }
+      ],
+      image_caption: 'Bleeker Street #65-69. The New York Public Library Digital Collections. 1934.',
+      image_link: "https://digitalcollections.nypl.org/items/d2425b30-c5cd-012f-1554-58d385a7bc34#/?uuid=510d47e2-027e-a3d9-e040-e00a18064a99",
+      link: "https://hdc.org/buildings/bayard-condict-building/",
     },
   },
   {
@@ -166,7 +197,8 @@ const landmarks = [
       name: "Bell Laboratories Building",
       description:
         "Bell Labs work here included experimental phonograph record, vacuum tubes, talking movies (1923), black and white and color TV, radar, and early commercial remote broadcasts. Today home to the Westbeth Artists Community (listed separately on the National Register of Historic Places).",
-      image_caption: "The Western Electric complex, now called Westbeth, seen from Washington Street, with train on High Line in 1936, unknown author",
+      image_caption: "Bell Laboratories Building, Wikimedia Commons, 1936",
+      image_link: "https://en.wikipedia.org/wiki/Bell_Laboratories_Building#/media/File:Western_Electric_complex_NYC_1936.jpg",
     },
   },
   {
@@ -178,8 +210,16 @@ const landmarks = [
     properties: {
       id: 12,
       name: "Brooklyn Bridge",
-      description:
-        "Completed in 1883, the Brooklyn Bridge was the first steel-wire suspension bridge connecting Manhattan and Brooklyn. Designed by John Augustus Roebling and completed under his son Washington and daughter-in-law Emily Warren Roebling after John's death, it became the world's longest suspension bridge. It remains a National Historic Landmark and iconic New York City symbol.",
+      bullets: [
+        { key: 'Built', value: '1869–1883' },
+        { key: 'Engineer', value: 'John A. Roebling; completed by Washington Roebling and Emily Warren Roebling.' },
+        { key: 'Significance', value: 'The first steel-wire suspension bridge connecting Manhattan and Brooklyn. It was the longest suspension bridge worldwide at completion and a landmark feat of 19th-century engineering.' },
+      ],
+      image_caption: 'Brooklyn Bridge, The New York Public Library Digital Collections, 1950–1969',
+      image_link: 'https://digitalcollections.nypl.org/items/729657b0-6ba8-0133-82ba-00505686a51c#/?uuid=bfbd7450-a740-0133-6bbc-00505686d14e',
+      link: "https://www.history.com/this-day-in-history/may-24/brooklyn-bridge-opens",
+      quote: "Man is after all a finite being in capacities and powers of doing actual work. But when it comes to planning, one mind can in a few hours think out enough work to keep a thousand men employed for years.",
+      quote_author: "Washington Roebling",
     },
   },
   {
@@ -220,8 +260,14 @@ const landmarks = [
     properties: {
       id: 15,
       name: "Ralph Johnson Bunche House",
-      description:
-        "Home of Ralph Johnson Bunche, eminent African-American diplomat and Undersecretary General of United Nations",
+      bullet: [
+        { key: 'Resident', value: 'Ralph Johnson Bunche (1904-1971)' },
+        { key: 'Achievement', value: 'First African American to win Nobel Peace Prize (1950)' },
+        { key: 'UN Role', value: 'Undersecretary-General for Special Political Affairs' },
+        { key: 'Famous For', value: 'Negotiated 1949 Arab-Israeli armistice agreements in Palestine' },
+        { key: 'Education', value: 'First African American to earn PhD in Political Science (Harvard, 1934)' },
+        { key: 'Notable', value: 'Pioneering diplomat who shaped UN peacekeeping and decolonization efforts worldwide' }
+      ],
     },
   },
   {
@@ -235,9 +281,17 @@ const landmarks = [
       name: "Carnegie Hall",
       quote: "Everywhere in the world, music enhances a hall, with one exception: Carnegie Hall enhances the music.",
       quote_author: "Isaac Stern, violinist",
-      description: "One of the most famous music venues in the world",
+      bullets: [
+        { key: 'Built', value: '1889-1891' },
+        { key: 'Architect', value: 'William Burnet Tuthill (with Richard Morris Hunt and Adler & Sullivan)' },
+        { key: 'Architectural style', value: 'Neo-Italian Renaissance' },
+        { key: 'Opened', value: 'May 5, 1891 (Tchaikovsky conducted opening night)' },
+        { key: 'Benefactor', value: 'Andrew Carnegie, steel industrialist ($2 million investment)' },
+        { key: 'Significance', value: 'One of the world\'s most prestigious music venues, saved from demolition in 1960s by Isaac Stern' }
+      ],
       link: "https://www.carnegiehall.org/",
-      image_caption: "Carnegie Hall, early 1900s",
+      image_caption: 'Carnegie Music Hall, The New York Public Library Digital Collections, 1908',
+      image_link: "https://digitalcollections.nypl.org/items/99d82cb0-c615-012f-0cf6-58d385a7bc34#/?uuid=510d47de-0fef-a3d9-e040-e00a18064a99",
     },
   },
   {
@@ -249,8 +303,16 @@ const landmarks = [
     properties: {
       id: 17,
       name: "Andrew Carnegie Mansion",
-      description:
-        "Home of Andrew Carnegie, now the Cooper-Hewitt, National Design Museum",
+      bullets: [
+        { key: 'Built', value: '1899-1902' },
+        { key: 'Architect', value: 'Babb, Cook & Willard' },
+        { key: 'Architectural style', value: 'Georgian Revival' },
+        { key: 'Significance', value: 'The first private residence in the U.S. with a steel frame and technological innovations like an early Otis elevator, central heating, and air-conditioning, plus one of Manhattan’s rare private gardens.' },
+      ],
+      image_caption: "Carnegie House, Library of Congress, ca. 1920",
+      image_link: "https://www.loc.gov/item/2014703975/",
+      quote: "The most modest, plainest, and most roomy house in New York.",
+      quote_author: "Andrew Carnegie, directing the construction of his mansion",
       link: "https://www.cooperhewitt.org/about-the-carnegie-mansion-2/",
     },
   },
@@ -258,15 +320,21 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.96563821905383, 40.78528724053565],
+      coordinates: [-73.96554048803918, 40.78276589010319],
     },
     properties: {
       id: 18,
       name: "Central Park",
-      description:
-        "Central Park was created in response to rapid mid-19th century urbanization to provide all social classes with access to nature and fresh air. In 1857, the city held a public design competition, which Frederick Law Olmsted and Calvert Vaux won with their 'Greensward Plan.' Construction began in 1858, and the 843-acre park was completed in 1873.",
+      bullets: [
+        { key: 'Built', value: '1857-1873' },
+        { key: 'Designers', value: 'Frederick Law Olmsted and Calvert Vaux' },
+        { key: 'Design Plan', value: 'Greensward Plan' },
+        { key: 'Size', value: '843 acres' },
+        { key: 'Significance', value: 'Created to provide all social classes access to nature amid rapid urbanization. Recognized as the first major landscaped public park in America.' },
+      ],
       link: "https://www.centralparknyc.org/",
-      image_caption: "Stereograph, 1870",
+      image_caption: "Outdoor Life and Sport in Central Park, New York Public Library Digital Collections, 1870",
+      image_link: "https://digitalcollections.nypl.org/items/b12f9b80-c559-012f-387e-58d385a7bc34#/?uuid=510d47e1-ae3c-a3d9-e040-e00a18064a99",
       quote: "The Lungs of the City",
       quote_author: "Nickname dubbed in 1858",
     },
@@ -296,6 +364,8 @@ const landmarks = [
       name: "Chamber of Commerce Building",
       description:
         "Former home of the Chamber of Commerce of the State of New York, established in 1768; prototype for the chamber of commerce",
+      image_caption: "66 Liberty Street (Broadway - Nassau Street). The New York Public Library Digital Collections. 1887 - 1964.",
+      image_link: "https://digitalcollections.nypl.org/items/3fe2d080-c5ed-012f-1ce9-58d385a7bc34#/?uuid=510d47e2-ef4b-a3d9-e040-e00a18064a99",
     },
   },
   {
@@ -307,24 +377,40 @@ const landmarks = [
     properties: {
       id: 21,
       name: "Chrysler Building",
-      description:
-        "Art Deco skyscraper; distinctive feature of Manhattan skyline; at one point world's tallest building",
+      bullets: [
+        { key: 'Built', value: '1928-1930' },
+        { key: 'Architect', value: 'William Van Alen' },
+        { key: 'Architectural style', value: 'Art Deco' },
+        { key: 'Commissioner', value: 'Walter P. Chrysler, automotive magnate' },
+        { key: 'Height', value: '1,046 feet (77 floors)' },
+        { key: 'Significance', value: 'Celebrated as the epitome of Art Deco architecture, and held the title of the world’s tallest building for 11 months (1930–1931).' },
+      ],
+      link: "https://chryslerbuilding.com/",
+      image_caption: 'Lexington Avenue – East 43rd Street, New York Public Library Digital Collections, 1930',
+      image_link: 'https://digitalcollections.nypl.org/items/3c7893f0-c5ed-012f-7347-58d385a7bc34#/?uuid=510d47e2-ef42-a3d9-e040-e00a18064a99',
     },
   },
   {
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.99559223497673, 40.73519475201767],
+      coordinates: [-73.99568628774288, 40.734229796686215],
     },
     properties: {
       id: 22,
       name: "Church of the Ascension",
-      description:
-        "The Church of the Ascension was founded in 1827. The current Gothic Revival building designed by Richard Upjohn was completed in 1841. It's considered one of New York's most important 19th-century religious buildings due to its interior features such as John La Farge's altar mural 'The Ascension' and Louis Saint-Gaudens' marble altar.",
+      bullets: [
+        { key: 'Founded', value: '1827' },
+        { key: 'Built', value: '1841 (current location)' },
+        { key: 'Architect', value: 'Richard Upjohn' },
+        { key: 'Architectural style', value: 'Gothic Revival' },
+        { key: 'Significance', value: 'First church built on Fifth Avenue and an outstanding example of Gothic Revival architecture. Also significant for its interior elements including John La Farge\'s altar mural "The Ascension" and Louis Saint-Gaudens\' marble altar.' },
+      ],
+      image_caption: 'Church of the Ascension, 10th St. and 5th Ave, New York Public Library Digital Collections, 1858–1925',
+      image_link: 'https://digitalcollections.nypl.org/items/cd6f0300-c557-012f-d9e7-58d385a7bc34#/?uuid=510d47e0-1eca-a3d9-e040-e00a18064a99',
       link: "https://ascensionnyc.org/",
-      image_caption: "Stereograph from the late 1800s",
       quote: "The Church of the Open Door.",
+      quote_author: "Nickname given after the Wall Street Crash of 1929, when the church opened its doors 24 hours a day.",
     },
   },
   {
@@ -338,6 +424,8 @@ const landmarks = [
       name: "City Hall",
       description:
         "Oldest city hall in U.S. still in use as main municipal government building",
+      image_caption: "City Hall. N.Y.C. Library of Congress. 1900.",
+      image_link: "https://www.loc.gov/resource/ggbain.08578/",
     },
   },
   {
@@ -352,7 +440,8 @@ const landmarks = [
       description:
         "Only surviving pre-Revolutionary War manor house in New York City; site of unsuccessful peace conference in 1776",
       link: "https://conferencehouse.org/",
-      image_caption: "Conference House postcard, 1900 (NYPL Digital Collection)",
+      image_caption: "Conference House. New York Public Library Digital Collections. 1990 - 1999",
+      image_link: "https://digitalcollections.nypl.org/items/71e71110-c5ee-012f-176c-58d385a7bc34#/?uuid=510d47d9-cc32-a3d9-e040-e00a18064a99",
     },
   },
   {
@@ -366,7 +455,8 @@ const landmarks = [
       name: "Will Marion Cook House",
       description:
         "Home of the leading black composer and musician Will Marion Cook",
-      image_caption: "Will Marion Cook House, (Library of Congress)",
+      image_caption: "Will Marion Cook House. Library of Congress. 1933.",
+      image_link: "https://www.loc.gov/item/ny1334/",
     },
   },
   {
@@ -380,6 +470,8 @@ const landmarks = [
       name: "Cooper Union",
       description:
         "Pioneering adult education center; site of famous anti-slavery speech by Abraham Lincoln",
+      image_caption: "Cooper Union. New York Public Library Digital Collections. 1887 - 1964",
+      image_link: "https://digitalcollections.nypl.org/items/31a5e160-c5ed-012f-bd93-58d385a7bc34#/?uuid=510d47e2-ef01-a3d9-e040-e00a18064a99",
       link: "https://cooper.edu/",
     },
   },
@@ -392,10 +484,15 @@ const landmarks = [
     properties: {
       id: 27,
       name: "Daily News Building",
-      description:
-        "First modern free-standing skyscraper designed by Raymond Hood",
-      image_caption:
-        "Daily News Building, 42nd Street between 2nd and 3rd Avenues, 1935",
+      bullets: [
+        { key: 'Built', value: '1930' },
+        { key: 'Architect', value: 'Raymond Hood' },
+        { key: 'Architectural style', value: 'Art Deco' },
+        { key: 'Significance', value: 'First modern free-standing skyscraper' },
+        { key: 'Notable', value: 'Pioneering example of modernist skyscraper design' }
+      ],
+      image_caption: "Daily News Building, 42nd Street between Second and Third Avenues. New York Public Library Digital Collections. 1935",
+      image_link: 'https://digitalcollections.nypl.org/items/f99a0a60-86cc-013a-7f01-0242ac110003#/?uuid=63a82990-86d0-013a-061c-0242ac110002',
     },
   },
   {
@@ -407,10 +504,18 @@ const landmarks = [
     properties: {
       id: 28,
       name: "Dakota Apartments",
-      description:
-        "The Dakota was designed by Henry Janeway Hardenbergh in 1884 in the German Renaissance style and was the first luxury apartment building in New York City.",
-      description2:
-        "The building is widely known as John Lennon's former home, who was killed outside the building's entrance in 1980, and as the setting for 'Rosemary's Baby.' It remains one of New York's most prestigious residential addresses.",
+      bullets: [
+        { key: 'Built', value: '1884' },
+        { key: 'Architect', value: 'Henry Janeway Hardenbergh' },
+        { key: 'Architectural style', value: 'German Renaissance' },
+        { key: 'Significance', value: 'First luxury apartment building in NYC' },
+        { key: 'Notable', value: 'Notable as John Lennon\'s former home and site of his 1980 murder. Remains one of NYC\'s most prestigious addresses.' }
+      ],
+      image_caption: 'Splendid Example of Early Apartment Design. New York Public Library Digital Collections. 1860–1920.',
+      image_link: 'https://digitalcollections.nypl.org/items/dceaad70-c617-012f-78a8-58d385a7bc34#/?uuid=510d47d9-b133-a3d9-e040-e00a18064a99',
+      link: "https://classicnewyorkhistory.com/the-dakota-building-new-yorks-most-exclusive-address/",
+      quote: "One of the most perfect apartment houses in the world.",
+      quote_author: "described in The New York Times, 1884"
     },
   },
   {
@@ -422,7 +527,17 @@ const landmarks = [
     properties: {
       id: 29,
       name: "Dyckman House",
-      description: "Only remaining farmhouse in Manhattan",
+      bullets: [
+        { key: 'Built', value: 'c. 1784-1785' },
+        { key: 'Builder', value: 'William Dyckman' },
+        { key: 'Architectural style', value: 'Dutch Colonial' },
+        { key: 'Original Site', value: '250+ acre farm in northern Manhattan' },
+        { key: 'Materials', value: 'Fieldstone, brick, and white clapboard with gambrel roof' },
+        { key: 'Significance', value: 'Built to replace family home destroyed in Revolutionary War' },
+        { key: 'Notable', value: 'Only remaining farmhouse in Manhattan, museum since 1916' }
+      ],
+      image_caption: "Broadway - 204th Street, northwest corner. The New York Public Library Digital Collections. 1887 - 1986.",
+      image_link: "https://digitalcollections.nypl.org/items/f01d7e90-c5cd-012f-0645-58d385a7bc34#/?uuid=510d47e2-0326-a3d9-e040-e00a18064a99",
       link: "https://dyckmanfarmhouse.org/",
     },
   },
@@ -462,8 +577,16 @@ const landmarks = [
     properties: {
       id: 32,
       name: "Empire State Building",
-      description:
-        "World's tallest building from 1931 to 1972 and internationally recognized symbol of New York City",
+      bullets: [
+        { key: 'Built', value: '1930-1931' },
+        { key: 'Architect', value: 'Shreve, Lamb & Harmon' },
+        { key: 'Architectural Style', value: 'Art Deco' },
+        { key: 'Significance', value: 'World\'s tallest building from 1931-1971 and iconic symbol of American ambition during the Great Depression.' }
+      ],
+      image_caption: 'The Empire State Building, Library of Congress, 1952.',
+      image_link: 'https://www.loc.gov/item/2020635807/',
+      quote: "caught at the exact moment of transition—caught between metal and stone, between the idea of 'monumental mass' and that of airy volume, between handicraft and machine design, and in the swing from what was essentially handicraft to what will be essentially industrial methods of fabrication.",
+      quote_author: "Douglas Haskell",
       link: "https://www.esbnyc.com/",
     },
   },
@@ -478,6 +601,8 @@ const landmarks = [
       name: "Equitable Building",
       description:
         "One of the earliest skyscrapers in Manhattan; profoundly influenced later skyscraper design",
+      image_caption: "Broadway - Wall Street - Cedar Street. The New York Public Library Digital Collections. 1887 - 1986.",
+      image_link: "https://digitalcollections.nypl.org/items/e31f72e0-c5cd-012f-267a-58d385a7bc34#/?uuid=510d47e2-02e2-a3d9-e040-e00a18064a99",
     },
   },
   {
@@ -491,6 +616,8 @@ const landmarks = [
       name: "Hamilton Fish House",
       description:
         "Home of Hamilton Fish, future Governor and Senator of New York",
+      image_caption: "Hamilton Fish House, 21 Stuyvesant Street, New York County, NY. Library of Congress. 1933.",
+      image_link: "https://www.loc.gov/item/ny1278/",
     },
   },
   {
@@ -502,8 +629,14 @@ const landmarks = [
     properties: {
       id: 35,
       name: "Flatiron Building",
-      description: "Distinctive triangular building at Madison Square.",
-      image_caption: "The Flatiron Building ca. 1902",
+      bullets: [
+        { key: 'Built', value: '1902' },
+        { key: 'Architect', value: 'Daniel Burnham (with Frederick P. Dinkelberg)' },
+        { key: 'Architectural Style', value: 'Beaux-Arts' },
+        { key: 'Significance', value: 'One of NYC\'s first steel-frame skyscrapers, iconic triangular shape filling wedge-shaped site, originally Fuller Building headquarters, nicknamed "Burnham\'s Folly," NYC Landmark (1966), National Historic Landmark (1989)' }
+      ],
+      image_caption: "Flatiron Building, New York Public Library Digital Collections, 1911.",
+      image_link: 'https://digitalcollections.nypl.org/items/e250e7e0-c55a-012f-50e6-58d385a7bc34#/?uuid=510d47e0-ce72-a3d9-e040-e00a18064a99',
     },
   },
   {
@@ -515,9 +648,14 @@ const landmarks = [
     properties: {
       id: 36,
       name: "Founder's Hall, The Rockefeller University",
-      description:
-        "Building marked the start of John D. Rockefeller Jr.'s putting the vast family fortune to philanthropic purposes",
-      image_caption: "Founder's Hall, ca. 1916, 1930 (Digital Commons @ RU)",
+      bullets: [
+        { key: 'Built', value: '1903-1906' },
+        { key: 'Architect', value: 'Shepley, Rutan & Coolidge' },
+        { key: 'Architectural Style', value: 'Classical Revival' },
+        { key: 'Significance', value: 'First building of Rockefeller Institute for Medical Research, housed nation\'s first major biomedical research laboratory, represents John D. Rockefeller\'s major philanthropic effort, National Historic Landmark (1974)' }
+      ],
+      image_caption: "Founder's Hall, Digital Commons @ RU, ca. 1916–1930.",
+      image_link: 'https://digitalcommons.rockefeller.edu/founders-hall/8/',
       link: "https://www.rockefeller.edu/about/history/",
     },
   },
@@ -530,12 +668,15 @@ const landmarks = [
     properties: {
       id: 37,
       name: "The Frick Collection and Frick Art Reference Library Building",
-      description:
-        "The Frick Collection was established in 1935 to preserve the art collection of businessman Henry Clay Frick (1849-1919), who made his fortune in coke and steel. Frick was an avid art collector and designed his Beaux-Arts mansion on Fifth Avenue specifically to accommodate his paintings and art.",
-      description2:
-        "His collection includes masterpieces by Vermeer, Rembrandt, and other Old Masters, displayed alongside period furniture and decorative arts.",
-      link: "https://www.frick.org/",
-      image_caption: "The Frick Collection, 1920",
+      bullets: [
+        { key: 'Built', value: '1935' },
+        { key: 'Architect', value: 'Thomas Hastings of Carrère and Hastings' },
+        { key: 'Architectural style', value: 'Beaux-Arts' },
+        { key: 'Significance', value: "Preserves and exhibits Henry Clay Frick's high-quality collection of European art—including paintings, sculpture, and decorative arts—from the Renaissance to the early 20th century." },
+      ],
+      link: "https://www.frick.org/about/history",
+      image_caption: 'East 71st Street – Fifth Avenue, The New York Public Library Digital Collections.',
+      image_link: 'https://digitalcollections.nypl.org/items/ef75fe30-c5ec-012f-0df7-58d385a7bc34#/?uuid=510d47e2-cfa3-a3d9-e040-e00a18064a99',
     },
   },
   {
@@ -547,10 +688,15 @@ const landmarks = [
     properties: {
       id: 38,
       name: "Governors Island",
-      description:
-        "Island in NY Harbor which served various branches of the US Military from 1783 until the late 1990s; now a park",
+      bullets: [
+        { key: 'Built', value: '1794-1813 (fortifications), 1900s expansion (McKim plan)' },
+        { key: 'Architect', value: 'Various; Charles Follen McKim (Beaux-Arts redesign, early 1900s)' },
+        { key: 'Architectural Style', value: 'Military fortifications, Beaux-Arts (McKim buildings)' },
+        { key: 'Significance', value: 'Military outpost protecting NYC Harbor (1794-1996), includes Fort Jay and Castle Williams (National Monument), 50+ historic buildings, Army headquarters, Coast Guard installation, now public park and cultural destination' }
+      ],
       link: "https://www.nps.gov/gois/index.htm",
-      image_caption: "Castle Williams, Governors Island (Library of Congress)",
+      image_caption: "Governor's Island, Castle Williams, from hydro-aeroplane, Library of Congress, ca. 1902.",
+      image_link: "https://www.loc.gov/item/98505905/",
     },
   },
   {
@@ -563,13 +709,14 @@ const landmarks = [
       id: 39,
       name: "Grace Church",
       bullets: [
-        "One of NYC's finest Gothic Revival structures (1846)",
-        "James Renwick Jr.'s first major commission at age 23",
-        "Once New York's most fashionable church",
+        { key: 'Built', value: '1846' },
+        { key: 'Architect', value: 'James Renwick Jr. (his first major commission at age 23)' },
+        { key: 'Architectural style', value: 'Gothic Revival' },
+        { key: 'Significance', value: 'One of NYC\'s finest Gothic Revival structures. Once the most fashionable church in the city.' }
       ],
-      description: "This historic Episcopal parish in Greenwich Village has served as an architectural landmark and social center since 1846, continuing its ministry to the city today.",
       link: "https://gracechurchnyc.org/",
-      image_caption: '"Grace Church, New York." The New York Public Library Digital Collections, The Miriam and Ira D. Wallach Division of Art, Prints and Photographs: Photography Collection, 1860 - 1920.',
+      image_caption: 'Grace Church, New York. The New York Public Library Digital Collections. 1860–1920.',
+      image_link: 'https://digitalcollections.nypl.org/items/f12cea10-c617-012f-dafa-58d385a7bc34#/?uuid=510d47d9-b180-a3d9-e040-e00a18064a99',
       quote: "All Are Welcome to Enter, Rest, Pray.",
       quote_author: "Grace Church",
     },
@@ -583,8 +730,15 @@ const landmarks = [
     properties: {
       id: 40,
       name: "Grand Central Terminal",
-      description:
-        "Beaux-Arts architecture; historic rail gateway to New York City; largest train station in the world by number of platforms",
+      bullets: [
+        { key: 'Built', value: '1913' },
+        { key: 'Architect', value: 'Reed and Stem, Warren and Wetmore' },
+        { key: 'Architectural style', value: 'Beaux-Arts' },
+        { key: 'Significance', value: 'Historic rail gateway to New York City' },
+        { key: 'Notable', value: 'Largest train station in the world by number of platforms' }
+      ],
+      image_caption: 'Grand Central Terminal. The New York Public Library Digital Collections. 1860–1920.',
+      image_link: 'https://digitalcollections.nypl.org/items/9a3d4560-c612-012f-5050-58d385a7bc34#/?uuid=510d47d9-b19e-a3d9-e040-e00a18064a99',
       link: "https://grandcentralterminal.com/",
     },
   },
@@ -597,10 +751,15 @@ const landmarks = [
     properties: {
       id: 41,
       name: "Green-Wood Cemetery",
-      description:
-        "Popular tourist attraction in the 1850s; most famous New Yorkers who died during the second half of the nineteenth century buried here",
+      bullets: [
+        { key: 'Founded', value: '1838' },
+        { key: 'Designer', value: 'David Bates Douglass' },
+        { key: 'Design Style', value: 'Rural Cemetery Movement' },
+        { key: 'Significance', value: 'One of America\'s first rural cemeteries and "Brooklyn\'s first public park by default" before Prospect Park existed. Pioneering naturalistic landscape design that inspired the competition to design Central Park and influenced the American parks movement. Spans 478 acres with over 600,000 graves, featuring Gothic Revival entrance gates by Richard Upjohn (1861) and notable architecture throughout its glacially-formed terrain.' }
+      ],
       link: "https://www.green-wood.com/",
-      image_caption: "Cemetery entrance (NYPL Digital Collection)"
+      image_caption: 'Entrance Green-Wood Cemetery, The New York Public Library Digital Collections, 1900–1999.',
+      image_link: 'https://digitalcollections.nypl.org/items/bf685160-c6be-012f-19bd-58d385a7bc34#/?uuid=a44288b4-9c0c-b31f-e040-e00a18060314',
     },
   },
   {
@@ -615,7 +774,8 @@ const landmarks = [
       description:
         "Home of Alexander Hamilton: military officer, lawyer, member of the United States Constitutional Convention, American statesman, first United States Secretary of the Treasury, and Founding Father",
       link: "https://www.nps.gov/hagr/index.htm",
-      image_caption: "Hamilton Grange at its second location site, 1912 (NYPL Digital Collection)",
+      image_caption: "Hamilton Grange, Moved From 237 West 141 Street to 141st Street & Amsterdam, New York County, NY. Library of Congress. 1933.",
+      image_link: "https://www.loc.gov/resource/hhh.ny1721.photos/?sp=8",
     },
   },
   {
@@ -627,9 +787,17 @@ const landmarks = [
     properties: {
       id: 43,
       name: "Solomon R. Guggenheim Museum",
-      description: "The only museum designed by Frank Lloyd Wright",
+      bullets:[
+        { key: 'Built', value: '1943-1959' },
+        { key: 'Architect', value: 'Frank Lloyd Wright' },
+        { key: 'Architectural Style', value: 'Modern/Organic Architecture' },
+        { key: 'Collection Focus', value: 'Modern and contemporary art, Impressionist and Post-Impressionist works' },
+        { key: 'Founder', value: 'Solomon R. Guggenheim, mining magnate and art collector' },
+        { key: 'Significance', value: 'Revolutionary museum design that challenged traditional gallery spaces' }
+      ],
       link: "https://www.guggenheim.org/",
-      image_caption: "Guggenheim Museum interior, 1955 (Library of Congress)",
+      image_caption: "Solomon R. Guggenheim Museum, New York, New York. Interior. View of skylight. Library of Congress, 1955–2007.",
+      image_link: "https://www.loc.gov/item/2020714526/",
     },
   },
   {
@@ -642,13 +810,13 @@ const landmarks = [
       id: 44,
       name: "Henry Street Settlement and Neighborhood Playhouse",
       bullets: [
-        "Founded in 1893 by nurse Lillian Wald to serve Lower East Side immigrants",
-        "Transformed social services by providing healthcare, education, and support directly in the community",
-        "Still operating today, serving 50,000 New Yorkers annually"
+        { key: 'Founded', value: '1893 by Lillian Wald'},
+        { key: 'Significance', value: 'Pioneered community-based social services for Lower East Side immigrants. Still operating today.'},
       ],
-      quote: "That morning's experience was a baptism of fire. Deserted were the laboratory and academic work of college. I never returned to them. I rejoiced that I had a training in the care of the sick.",
-      quote_author: "Lillian Wald, after helping a hemorrhaging new mother whose doctor had abandoned her because she could not pay, 1893",
-      image_caption: "Backyard playground in nurse's settlement, Henry Street. New York, [Printed Ca. 1950] [Photograph] Retrieved from the Library of Congress",
+      quote: "That morning's experience was a baptism of fire. Deserted were the laboratory and academic work of college. I never returned to them...I rejoiced that I had a training in the care of the sick.",
+      quote_author: "Nurse Lillian Wald, after helping a hemorrhaging new mother whose doctor had abandoned her because she could not pay, 1893",
+      image_caption: "Backyard playground in nurse's settlement, Henry Street. Library of Congress, ca. 1950.",
+      image_link: "https://www.loc.gov/item/2002710290/",
       link: "https://www.henrystreet.org/",
     },
   },
@@ -674,7 +842,14 @@ const landmarks = [
     properties: {
       id: 46,
       name: "Hispanic Society of America",
-      description: "Museum of Iberian Art",
+      bullets: [
+        { key: 'Built', value: '1905-1908' },
+        { key: 'Architect', value: 'Charles Pratt Huntington' },
+        { key: 'Architectural Style', value: 'Beaux-Arts' },
+        { key: 'Significance', value: 'Founded by Archer M. Huntington in 1904, houses world-renowned collection of Hispanic art and literature, National Historic Landmark (2012), located on Audubon Terrace in Washington Heights, features works by Velázquez, Goya, El Greco, and Sorolla murals' }
+      ],
+      image_caption: "Manhattan: Broadway - 155th Street (West). The New York Public Library Digital Collections, 1929.",
+      image_link: "https://digitalcollections.nypl.org/search/index?q=Hispanic%20Society%20of%20America",
       link: "https://hispanicsociety.org/",
     },
   },
@@ -687,9 +862,16 @@ const landmarks = [
     properties: {
       id: 47,
       name: "Holland Tunnel",
-      description:
-        "Tunnel underneath the Hudson River, connecting Manhattan and New Jersey; civil engineering landmark; one of the earliest ventilated tunnels",
-      image_caption: "Holland Tunnel vehicular traffic, 1927",
+      bullets: [
+        { key: 'Built', value: '1920-1927' },
+        { key: 'Chief Engineer', value: 'Clifford Milburn Holland (completed by Ole Singstad after Holland\'s death in 1924)' },
+        { key: 'Engineering Type', value: 'Underwater Vehicular Tunnel' },
+        { key: 'Significance', value: 'World\'s first mechanically ventilated underwater vehicular tunnel and longest underwater vehicular tunnel at time of completion. Revolutionary ventilation system designed by Norwegian architect Erling Owre became the standard for all subsequent vehicular tunnels. Engineering marvel that solved the problem of carbon monoxide evacuation, replacing tunnel air every 90 seconds with 84 massive fans.' }
+      ],
+      image_caption:
+        "Transportation - Motor vehicles - Holland Tunnel vehicular traffic. The New York Public Library Digital Collections, 1927.",
+      image_link: "https://digitalcollections.nypl.org/items/a77a9f50-c562-012f-ce59-58d385a7bc34#/?uuid=510d47dd-a5c7-a3d9-e040-e00a18064a99",
+      link: "https://www.panynj.gov/bridges-tunnels/en/holland-tunnel/history.html",
     },
   },
   {
@@ -728,8 +910,8 @@ const landmarks = [
     properties: {
       id: 50,
       name: "King Manor",
-      description:
-        "Home of Rufus King, a signer of Declaration of Independence and early U.S. Senator from New York",
+      image_caption: "Rufus King House. Library of Congress. 1933.",
+      image_link: "https://www.loc.gov/resource/hhh.ny2046.photos/?sp=1&st=image",
       link: "https://www.kingmanor.org/",
     },
   },
@@ -742,10 +924,15 @@ const landmarks = [
     properties: {
       id: 51,
       name: "Lettie G. Howard (schooner)",
-      description:
-        "Last remaining Fredonia-type schooner (once the standard for American fishing boats) at the South Street Seaport",
+      bullets: [
+        { key: 'Built', value: '1893' },
+        { key: 'Builder', value: 'Arthur D. Story shipyard, Essex, Massachusetts' },
+        { key: 'Type', value: 'Fredonia-type fishing schooner' },
+        { key: 'Significance', value: 'Last surviving example of Georges Bank fishing schooner, National Historic Landmark (1989), built for Captain Fred Howard and named for his daughter Letticia Gould Howard, exemplifies 19th-century offshore fishing vessels' }
+      ],
       link: "https://southstreetseaportmuseum.org/about-lettie/",
-      image_caption: "Lettie G. Howard (Library of Congress)"
+      image_caption: 'Schooner Lettie G. Howard, South Street Seaport Museum, New York County, NY. Library of Congress.',
+      image_link: "https://www.loc.gov/resource/hhh.ny1621.photos/?sp=4"
     },
   },
   {
@@ -758,6 +945,8 @@ const landmarks = [
       id: 52,
       name: "Lorillard Snuff Mill",
       description: "Oldest existing tobacco-manufacturing facility in U.S.",
+      image_caption: "Lorillard Snuff Mill, Botanical Gardens, Bronx Park, Bronx, Bronx County, NY. Library of Congress. 1933.",
+      image_link: "https://www.loc.gov/resource/hhh.ny0101.photos/?sp=1",
     },
   },
   {
@@ -773,7 +962,8 @@ const landmarks = [
         "First building on Morningside Heights campus; capped by largest freestanding granite dome in U.S.",
       link: "https://www.nps.gov/places/low-memorial-library.htm",
       image_caption:
-        "Stereograph of the Low Memorial Library, 1904 (Library of Congress)",
+        "Low Memorial Library of Columbia University. Library of Congress. 1904.",
+      image_link: "https://www.loc.gov/item/2017657433/",
     },
   },
   {
@@ -785,11 +975,18 @@ const landmarks = [
     properties: {
       id: 54,
       name: "R. H. Macy and Company Store (Macy's)",
+      bullets: [
+        { key: 'Built', value: '1902 (with additions 1924, 1928, 1931)' },
+        { key: 'Architect', value: 'Theodore de Lemos and A.W. Cordes (original 1902), Robert D. Kohn (additions)' },
+        { key: 'Architectural Style', value: 'Palladian (original), Art Deco (later additions)' },
+        { key: 'Significance', value: 'Flagship store of America\'s largest department store chain and one of the world\'s largest department stores. Historic retail landmark spanning 2.5 million square feet that pioneered the uptown movement of major retailers to Herald Square. Famous for its Thanksgiving Day Parade, holiday windows, and preservation of original wooden escalators.' }
+      ],
+      image_caption:
+        "R. H. Macy and Company department store during the week before Christmas. Library of Congress.",
+      image_link: "https://www.loc.gov/item/2017841498/",
+      link: "https://www.macys.com/s/brand-heritage/history/",
       quote: "If you haven't seen Macy's, you haven't seen New York.",
       quote_author: "Macy's advertisement, 1960s",
-      description: "Largest department store in world for many years",
-      image_caption:
-        "Macy's during the week of Christmas, 1942 (Library of Congress)",
     },
   },
   {
@@ -801,8 +998,14 @@ const landmarks = [
     properties: {
       id: 55,
       name: "McGraw-Hill Building",
-      description:
-        "Early Art Deco building; first U.S. building in International Style",
+      bullets: [
+        { key: 'Built', value: '1931' },
+        { key: 'Architect', value: 'Raymond Hood (Hood, Godley, and Fouilhoux)' },
+        { key: 'Architectural Style', value: 'International Style/Art Deco/Art Moderne' },
+        { key: 'Significance', value: 'Transitional skyscraper bridging Art Deco and International Style, featured in MoMA\'s influential 1932 exhibition, birthplace of Marvel Comics' }
+      ],
+      image_caption: "McGraw Hill Building. The New York Public Library Digital Collections. 1936.",
+      image_link: "https://digitalcollections.nypl.org/items/689c3020-a48d-013a-8d98-0242ac110003#/?uuid=4f3d4120-a48e-013a-7a4f-0242ac110002,"
     },
   },
   {
@@ -823,31 +1026,35 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.97676690314741, 40.753521628315966],
+      coordinates: [-73.98774990079487, 40.74104223853738],
     },
     properties: {
       id: 57,
       name: "Metropolitan Life Insurance Company Tower",
       description:
         "Tallest building in the world 1909-13; still part of the skyline a century later",
+      image_caption: "Metropolitan Life Ins. Bldg.. Library of Congress. 1912.",
+      image_link: "https://www.loc.gov/item/00650139/",
     },
   },
   {
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.963201087946421, 40.77967623459204],
+      coordinates: [-73.96326546075547, 40.779647800019205],
     },
     properties: {
       id: 58,
       name: "Metropolitan Museum of Art",
       bullets: [
-        "Founded in 1870, moved to Fifth Avenue location in 1880",
-        "Iconic Beaux-Arts facade designed by Richard Morris Hunt in 1902",
-        "Houses European masterpieces and one of the world's largest Egyptian collections outside Cairo"
+        { key: 'Founded', value: '1870' },
+        { key: 'Architect', value: 'Richard Morris Hunt' },
+        { key: 'Architectural style', value: 'Beaux-Arts' },
+        { key: 'Significance', value: 'One of the world’s largest art museums. Its collection spans 5,000 years of global culture and includes all art mediums, from painting and sculpture to textiles and decorative arts.' }
       ],
       link: "https://www.metmuseum.org/about-the-met/history",
-      image_caption: "The Met, 1903 (Library of Congress)",
+      image_caption: "Metropolitan Museum of Art. Library of Congress. ca. 1903.",
+      image_link: "https://www.loc.gov/item/2016812025/",
       quote:
         "One of the finest in the world, and the only public building in recent years which approaches in dignity and grandeur the museums of the old world.",
       quote_author: "Evening Post, 1902",
@@ -862,8 +1069,14 @@ const landmarks = [
     properties: {
       id: 59,
       name: "J. Pierpont Morgan Library",
-      description:
-        "Office, Library, and now Museum of J. P. Morgan; the Panic of 1907 ended in the Library",
+      bullets: [
+        { key: 'Built', value: '1902-1906' },
+        { key: 'Architect', value: 'Charles McKim (McKim, Mead & White)' },
+        { key: 'Architectural Style', value: 'American Renaissance/Classical Revival' },
+        { key: 'Significance', value: 'Private library of J.P. Morgan, considered McKim\'s masterpiece, National Historic Landmark (1966), Tennessee pink marble construction using classical Greek anathyrosis method, became public institution in 1924' }
+      ],
+      image_caption: "East 37th Street - Madison Avenue. The New York Public Library Digital Collections. 1887–1964.",
+      image_link: "https://digitalcollections.nypl.org/items/bee9e610-c5ec-012f-a476-58d385a7bc34#/?uuid=510d47e2-c30c-a3d9-e040-e00a18064a99",
       link: "https://www.themorgan.org/",
     },
   },
@@ -878,7 +1091,8 @@ const landmarks = [
       name: "Morris-Jumel Mansion",
       description: "Oldest residential building in Manhattan",
       link: "https://morrisjumel.org/",
-      image_caption: "The Morris-Jumel Mansion ca. 1890",
+      image_caption: "Morris-Jumel Mansion with people on benches. The New York Public Library Digital Collections. 1890.",
+      image_link: "https://digitalcollections.nypl.org/items/110b3f20-af04-0132-eead-58d385a7bbd0#/?uuid=11c25970-af04-0132-a5fa-58d385a7bbd0",
     },
   },
   {
@@ -892,6 +1106,8 @@ const landmarks = [
       name: "National City Bank Building",
       description:
         "Home to one of the country's largest and most important banks since 1908",
+      image_caption: "National City Bank, Wall St. Library of Congress. ca. 1909.",
+      image_link: "https://www.loc.gov/item/00650318/",
     },
   },
   {
@@ -905,7 +1121,8 @@ const landmarks = [
       name: "New York Amsterdam News Building",
       description:
         "Influential black newspaper the New York Amsterdam News was published here 1916-38",
-      image_caption: "Second building from left (Library of Congress)",
+      image_caption: "New York Amsterdam News Building, Seventh Avenue. Library of Congress. 1933",
+      image_link: "https://www.loc.gov/resource/hhh.ny0406.photos/?sp=6",
     },
   },
   {
@@ -919,6 +1136,8 @@ const landmarks = [
       name: "New York Botanical Garden",
       description:
         "One of the world's leading botanical gardens, with the largest herbarium in the U.S. and second largest in the world after the French National Museum of Natural History and home to many plant laboratories",
+      image_caption: "Bronx Park - Central Dome - Botanical Garden. The New York Public Library Digital Collections. 1938.",
+      image_link: "https://digitalcollections.nypl.org/items/8456e240-c52f-012f-d9ec-58d385a7bc34#/?uuid=510d47dc-a537-a3d9-e040-e00a18064a99",
       link: "https://www.nybg.org/",
     },
   },
@@ -932,7 +1151,8 @@ const landmarks = [
       id: 64,
       name: "New York Cotton Exchange",
       description: "First commodity market in the U.S.; now 1 Hanover Square",
-      image_caption: "The New York Cotton Exchange in 1885",
+      image_caption: "1 Hanover Square when it was occupied by the New York Cotton Exchange. Wikimedia Commons. 1900",
+      image_link: "https://en.wikipedia.org/wiki/1_Hanover_Square#/media/File:1_Hanover_Square_006.JPG",
     },
   },
   {
@@ -945,6 +1165,8 @@ const landmarks = [
       id: 65,
       name: "New York Life Building",
       description: "Last significant Cass Gilbert skyscraper in Manhattan",
+      image_caption: "West 25th Street - Broadway. The New York Public Library Digital Collections. 1952.",
+      image_link: "https://digitalcollections.nypl.org/items/b6763c10-c5ec-012f-5f14-58d385a7bc34#/?uuid=510d47e2-f28e-a3d9-e040-e00a18064a99",
     },
   },
   {
@@ -956,8 +1178,14 @@ const landmarks = [
     properties: {
       id: 66,
       name: "New York Public Library",
-      description:
-        "One of the largest and most important libraries in the U.S.; listing is for main branch building.",
+      bullets: [
+        { key: 'Built', value: '1901-1911' },
+        { key: 'Architect', value: 'Carrère & Hastings (John Merven Carrère and Thomas Hastings)' },
+        { key: 'Architectural Style', value: 'Beaux-Arts' },
+        { key: 'Significance', value: 'Flagship research library of NYPL system, National Historic Landmark (1965), one of largest marble buildings in US, features famous lions "Patience and Fortitude," contains Rose Main Reading Room (one of world\'s largest uncolumned interior spaces)' }
+      ],
+      image_caption: 'Stephen A. Schwarzman Building, interior, Rose Main Reading Room. The New York Public Library Digital Collections. 1999.',
+      image_link: 'https://digitalcollections.nypl.org/items/974cb990-c6be-012f-d6bc-3c075448cc4b#/?uuid=b153a765-7dca-f909-e040-e00a18062ff0',
       link: "https://www.nypl.org/locations/schwarzman",
     },
   },
@@ -972,7 +1200,8 @@ const landmarks = [
       name: "New York Stock Exchange",
       description:
         "One of the first securities markets in the U.S.; still the world's largest",
-      image_caption: "New York Stock Exchange Trading floor, 1903",
+      image_caption: "New York Stock Exchange (1903) Trading floor. The New York Public Library Digital Collections. 1903.",
+      image_link: "https://digitalcollections.nypl.org/items/18ac7210-9daa-0132-f116-58d385a7b928#/?uuid=1966cf50-9daa-0132-e13e-58d385a7b928",
       link: "https://www.nyse.com/index",
     },
   },
@@ -999,10 +1228,15 @@ const landmarks = [
     properties: {
       id: 69,
       name: "New York Yacht Club",
-      description:
-        "Oldest yachting club in U.S.; longtime home of the America's Cup",
+      bullets: [
+        { key: 'Built', value: '1901' },
+        { key: 'Architect', value: 'Warren and Wetmore (Whitney Warren)' },
+        { key: 'Architectural Style', value: 'Beaux-Arts' },
+        { key: 'Significance', value: 'Headquarters of NYYC (founded 1844), held America\'s Cup for 132 years, National Historic Landmark (1987), features famous Model Room with yacht collection' }
+      ],
+      image_caption: "New York Yacht Club: Exterior facade. The New York Public Library Digital Collections. 1901.",
+      image_link: "https://www.loc.gov/item/2003662070/",
       link: "https://nyyc.org/",
-      image_caption: "The New York Yacht Club ca. 1900 (Library of Congress)",
     },
   },
   {
@@ -1014,9 +1248,15 @@ const landmarks = [
     properties: {
       id: 70,
       name: "Old Merchant House",
-      description: "Nineteenth-century family home; preserved inside and out",
+      bullets: [
+        { key: 'Built', value: '1832' },
+        { key: 'Architect', value: 'Joseph Brewster (builder/developer), design based on pattern books by Minard Lafever' },
+        { key: 'Architectural Style', value: 'Late Federal/Greek Revival' },
+        { key: 'Significance', value: 'NYC\'s only 19th-century family home preserved intact inside and out, first Manhattan building designated NYC landmark (1965), occupied by Tredwell family for nearly 100 years (1835-1933), National Historic Landmark' }
+      ],
       link: "https://merchantshouse.org/",
-      image_caption: "The Merchant's House ca. 1936",
+      image_caption: "Doorway - Treadwell House (Old Merchants House), 29 East 4th Street. The New York Public Library Digital Collections. 1936.",
+      image_link: "https://digitalcollections.nypl.org/items/96c36480-998a-013a-a209-0242ac110003#/?uuid=1e14d1a0-9993-013a-51c6-0242ac110003",
     },
   },
   {
@@ -1028,13 +1268,20 @@ const landmarks = [
     properties: {
       id: 71,
       name: "Old Quaker Meeting House",
-      description:
-        "Built in 1694, the Quaker meetinghouse is believed to be the oldest house of worship in New York State. The structure's design embodies Quaker principles and reflects Flushing's origins as a Dutch village within New Amsterdam. In 1657, the community produced the Flushing Remonstrance, which helped lay the groundwork for the Bill of Rights protection of freedom of religion. The Quaker community still gathers here for Sunday services.",
-      link: "https://nylandmarks.org/celebrate-50-at-50/flushing-friends-meeting-house/",
+      bullets: [
+        { key: 'Built', value: '1694' },
+        { key: 'Architectural style', value: 'Dutch Colonial, embodying Quaker principles' },
+        { key: 'Historic Document', value: 'Community produced Flushing Remonstrance (1657)' },
+        { key: 'Significance', value: 'Reputed to be oldest house of worship in New York State' },
+        { key: 'Legacy', value: 'Helped lay groundwork for Bill of Rights religious freedom protection' },
+        { key: 'Notable', value: 'Quaker community still gathers here for Sunday services after 330+ years' }
+      ],
+      link: "https://flushingfriends.org/",
       quote:
         "We desire therefore in this case not to judge least we be judged, neither to condemn least we be condemned, but rather let every man stand and fall to his own Master.",
       quote_author: "Excerpt from the Flushing Remonstrance",
-      image_caption: "The Flushing Quaker Meetinghouse (Library of Congress)",
+      image_caption: "Society of Friends Meetinghouse. Library of Congress. 1933.",
+      image_link: 'https://www.loc.gov/resource/hhh.ny0888.photos/?sp=11',
     },
   },
   {
@@ -1048,7 +1295,8 @@ const landmarks = [
       name: "Philosophy Hall",
       description:
         "Edwin Armstrong developed FM radio in this Columbia University building",
-      image_caption: "Edwin Armstrong's laboratory in 102 Philosophy, Columbia University,"
+      image_caption: "Edwin Armstrong's laboratory in 102 Philosophy, Columbia University. Wikimedia Commons. 1930.",
+      image_link: "https://en.wikipedia.org/wiki/Philosophy_Hall#/media/File:102Philosophy.jpg",
     },
   },
   {
@@ -1060,8 +1308,14 @@ const landmarks = [
     properties: {
       id: 73,
       name: "Players Club",
-      description:
-        "Extensive collection of art and theater memorabilia; interior redone by Stanford White",
+      bullets: [
+        { key: 'Built', value: '1847 (house), 1888 (clubhouse conversion)' },
+        { key: 'Architect', value: 'Stanford White (McKim, Mead & White) - renovation and interior design' },
+        { key: 'Architectural Style', value: 'Greek Revival' },
+        { key: 'Significance', value: 'Founded by Edwin Booth in 1888, oldest NYC membership club still in original home, National Historic Landmark (1962), repository of American theater history and memorabilia, located at 16 Gramercy Park South' }
+      ],
+      image_caption: 'The Players Club at No. 17 Gramercy Park. The New York Public Library Digital Collections. 1905–1907.',
+      image_link: "https://digitalcollections.nypl.org/items/902e86a0-c55c-012f-c4ca-58d385a7bc34#/?uuid=510d47e0-cc21-a3d9-e040-e00a18064a99",
       link: "https://theplayersnyc.org/web/pages/history",
     },
   },
@@ -1077,6 +1331,8 @@ const landmarks = [
       description:
         "French Renaissance-style building; outstanding example of American hotel architecture; symbol of elegance; visible from much of lower Central Park; setting for Kay Thompson's popular Eloise series of children's books",
       link: "https://www.theplazany.com/",
+      image_caption: "Plaza Hotel, New York, N.Y. Library of Congress. [Between 1910 and 1920].",
+      image_link: "https://www.loc.gov/item/2016815530/"
     },
   },
   {
@@ -1090,7 +1346,8 @@ const landmarks = [
       name: "Plymouth Church of the Pilgrims",
       description:
         "Important station on Underground Railroad when Henry Ward Beecher was pastor",
-      image_caption: "Plymouth Church, 1904 (NYPL Digital Collection)",
+      image_caption: "Plymouth Church. The New York Public Library Digital Collections. 1905–1907.",
+      image_link: 'https://digitalcollections.nypl.org/items/e2c37db0-c559-012f-d02f-58d385a7bc34#/?uuid=510d47e1-0ef3-a3d9-e040-e00a18064a99',
       link: "https://www.plymouthchurch.org/#main",
     },
   },
@@ -1155,7 +1412,15 @@ const landmarks = [
     properties: {
       id: 80,
       name: "Rockefeller Center",
-      description: "Successful urban planning project of 20th-century America; changed Midtown Manhattan; originating site of popular NBC television programs Today and Saturday Night Live",
+      bullets: [
+        { key: 'Built', value: '1930-1939' },
+        { key: 'Architect', value: 'Raymond Hood, Harvey Wiley Corbett, Wallace Harrison (Associated Architects)' },
+        { key: 'Architectural Style', value: 'Art Deco' },
+        { key: 'Significance', value: 'Iconic commercial complex featuring NBC studios, Radio City Music Hall, and renowned public spaces including the famous Christmas tree and ice rink' }
+      ],
+      image_caption: '30 Rockefeller Center Plaza, The New York Public Library Digital Collections, 1887–1964',
+      image_link: "https://digitalcollections.nypl.org/items/5b8a1e00-c5ed-012f-a5ae-58d385a7bc34#/?uuid=510d47e2-f267-a3d9-e040-e00a18064a99",
+      link: 'https://www.rockefellercenter.com/'
     },
   },
   {
@@ -1168,13 +1433,16 @@ const landmarks = [
       id: 81,
       name: "Sailors' Snug Harbor",
       bullets: [
-        "Founded by Robert Richard Randall's 1801 will as a haven for \"aged, decrepit, and worn-out sailors\"",
-        "Greek Revival buildings became NYC's first designated landmark structures (1960s)",
-        "Once America's richest charitable institution with 50 buildings and 900 residents"
+        { key: 'Founded', value: '1801' },
+        { key: 'Purpose', value: 'Haven for "aged, decrepit, and worn-out sailors"' },
+        { key: 'Architect', value: '	Martin E. Thompson; Minard Lafever' },
+        { key: 'Architectural style', value: 'Greek Revival, Late Victorian' },
+        { key: 'Significance', value: 'NYC\'s first designated landmark structures (1960s)' },
+        { key: 'Notable', value: 'Once America\'s richest charitable institution with 50 buildings and 900 residents' }
       ],
-      description: "First and only home for retired merchant seamen in U.S.",
       link: "https://snug-harbor.org/",
-      image_caption: "Historic American Buildings Survey, Creator. Sailors' Snug Harbor, Richmond Terrace, Staten Island, New Brighton, Richmond County, NY. 1933."
+      image_caption: "Sailors' Snug Harbor, Richmond Terrace, Staten Island, New Brighton, Richmond County, NY. Library of Congress. 1933",
+      image_link: "https://www.loc.gov/resource/hhh.ny1086.photos/?sp=1",
     },
   },
   {
@@ -1188,24 +1456,29 @@ const landmarks = [
       name: "St. Ann and the Holy Trinity Church",
       description: "Site of first figural stained-glass windows in U.S.",
       link: "https://www.stannholytrinity.org/",
-      image_caption: "Stereograph of St Ann's Church, early 1900s (NYPL Digital Collection)",
+      image_caption: "St. Ann's Church, Brooklyn. The New York Public Library Digital Collections. 1850 - 1930.",
+      image_link: 'https://digitalcollections.nypl.org/items/74ab40c0-c555-012f-748d-58d385a7bc34#/?uuid=510d47e1-e2a4-a3d9-e040-e00a18064a99',
     },
   },
   {
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.98488197879576, 40.73574443715123],
+      coordinates: [-73.98477828062018, 40.734254862868085],
     },
     properties: {
       id: 83,
       name: "St. George's Episcopal Church",
-      description:
-        "The Parish of Calvary-St. George's dates back to 1749 when Trinity Church established St. George's Chapel. It later joined Calvary Church (1832) and Holy Communion Church (1844). The current building was designed by Charles Otto Blesch and Leopold Eidlitz in 1846. In 1975, three congregations merged.",
-      quote:
-        "Deep river, my home is over Jordan. Deep river, Lord, I want to cross over into campground.",
-      quote_author:
-        "Arranged by church member Harry T. Burleigh, the 'savior of spirituals'",
+      bullets: [
+        { key: 'Founded', value: '1749 as St. George\'s Chapel of Trinity Church' },
+        { key: 'Built', value: '1846–1856 (current building)' },
+        { key: 'Architects', value: 'Charles Otto Blesch and Leopold Eidlitz' },
+        { key: 'Architectural style', value: 'Romanesque Revival' },
+        { key: 'Significance', value: 'Among the earliest Romanesque Revival churches in the United States, known for its long-standing commitment to serving the urban poor through outreach and community programs.' },
+      ],
+      link: "https://www.calvarystgeorges.org/full-parish-history",
+      image_caption: "St. George's Church, N.Y.C. The New York Public Library. 1911–1921",
+      image_link: "https://digitalcollections.nypl.org/items/6597dae0-c55c-012f-4d68-58d385a7bc34#/?uuid=510d47e2-8bb9-a3d9-e040-e00a18064a99",
     },
   },
   {
@@ -1217,7 +1490,15 @@ const landmarks = [
     properties: {
       id: 84,
       name: "St. Patrick's Cathedral",
-      description: "First large-scale medieval-style church built in U.S.",
+      bullets: [
+        { key: 'Built', value: '1858-1878 (dedicated 1879)' },
+        { key: 'Architect', value: 'James Renwick Jr.' },
+        { key: 'Architectural style', value: 'Gothic Revival' },
+        { key: 'Purpose', value: 'Built to replace Old St. Patrick\'s Cathedral and accommodate growing Catholic population' },
+        { key: 'Notable', value: 'First large-scale medieval-style church built in U.S., largest Gothic Revival Catholic cathedral in North America' }
+      ],
+      image_caption: "St. Patrick's Cathedral, N.Y., Library of Congress, ca. 1890",
+      image_link: "https://www.loc.gov/item/91784416/",
       link: "https://saintpatrickscathedral.org/",
     },
   },
@@ -1225,17 +1506,20 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-74.00919021031146, 40.71173786457011],
+      coordinates: [-74.00918891126764, 40.711358761723424],
     },
     properties: {
       id: 85,
       name: "St. Paul's Chapel",
       bullets: [
-        "Manhattan's oldest surviving church building (1766)",
-        "Designed by Thomas McBean in Georgian style", 
-        "Served as refuge for Ground Zero recovery workers after 9/11"
+        { key: 'Built', value: '1766' },
+        { key: 'Architect', value: 'Thomas McBean' },
+        { key: 'Architectural style', value: 'Georgian' },
+        { key: 'Significance', value: "Manhattan's oldest surviving church building" },
+        { key: 'Notable', value: "Served as refuge for Ground Zero recovery workers after 9/11" },
       ],
-      image_caption: '"St. Paul\'s Chapel (front)." The New York Public Library Digital Collections, Irma and Paul Milstein Division of United States History, Local History and Genealogy, 1905.',
+      image_caption: "St. Paul's Chapel (front). The New York Public Library Digital Collections. 1905",
+      image_link: "https://digitalcollections.nypl.org/items/643e3df0-8ad6-0132-17a4-58d385a7bbd0#/?uuid=650b0e30-8ad6-0132-8653-58d385a7bbd0",
       link: "https://trinitychurchnyc.org/visit-history/places/st-pauls-chapel",
       quote: "The Little Chapel That Stood",
       quote_author: "Dubbed nickname after 9/11",
@@ -1250,8 +1534,12 @@ const landmarks = [
     properties: {
       id: 86,
       name: "Margaret Sanger Clinic",
-      description:
-        "The Margaret Sanger Clinic housed the Birth Control Clinical Research Bureau from 1930 to 1973. After opening in Brooklyn in 1916, Sanger moved to this permanent location in 1930. From here, she reshaped attitudes toward reproductive health and sexuality.",
+      bullets: [
+        { key: 'Founded', value: '1916 in Brooklyn, moved to permanent location 1930' },
+        { key: 'Operated', value: '1930-1973' },
+        { key: 'Founder', value: 'Margaret Sanger' },
+        { key: 'Significance', value: 'Pioneering center for reproductive rights and family planning research that reshaped attitudes toward reproductive health and sexuality.' },
+      ],
       quote:
         "No woman can call herself free who does not own and control her body. No woman can call herself free until she can choose consciously whether she will or will not be a mother.",
       quote_author: "Margaret Sanger",
@@ -1284,6 +1572,8 @@ const landmarks = [
       name: "Winfield Scott House",
       description:
         "Home of Winfield Scott, heroic general in the U.S.-Mexican War and later presidential candidate",
+      image_caption: "Manhattan: 12th Street (West). The New York Public Library Digital Collections. 1870 - 1980.",
+      image_link: "https://digitalcollections.nypl.org/items/d7f72c70-c53f-012f-db8d-58d385a7bc34#/?uuid=510d47dc-f796-a3d9-e040-e00a18064a99",
     },
   },
   {
@@ -1295,9 +1585,14 @@ const landmarks = [
     properties: {
       id: 89,
       name: "Seventh Regiment Armory",
-      description:
-        "One of the most impressive collections of 1880s interior decoration outside of a museum; only armory actually owned by the unit for which it was constructed",
-      image_caption: "(Library of Congress)",
+      bullets: [
+        { key: 'Built', value: '1877-1880' },
+        { key: 'Architect', value: 'Charles W. Clinton' },
+        { key: 'Architectural Style', value: 'Gothic Revival' },
+        { key: 'Significance', value: 'Only privately-funded armory in US, built for elite "Silk Stocking Regiment," interiors by Louis Comfort Tiffany and Stanford White, National Historic Landmark (1986), houses largest unobstructed space in NYC' }
+      ],
+      image_caption: "Seventh Regiment Armory, 643 Park Avenue, New York County, NY. Library of Congress. 1933.",
+      image_link: "https://www.loc.gov/resource/hhh.ny1581.photos/?sp=18",
       link: "https://www.armoryonpark.org/about_us/history",
     },
   },
@@ -1305,13 +1600,20 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.96372071563547, 40.77907159122789],
+      coordinates: [-73.96353624541244, 40.77705914955267],
     },
     properties: {
       id: 90,
       name: "Harry F. Sinclair House",
-      description:
-        "Harry F. Sinclair, the oil industrialist, lived here from 1918 to 1930; now part of the Ukrainian Institute; often used in filmmaking and television production",
+      bullets: [
+        { key: 'Built', value: '1897-1899' },
+        { key: 'Architect', value: 'C.P.H. Gilbert' },
+        { key: 'Architectural Style', value: 'French Gothic' },
+        { key: 'Significance', value: 'Gilded Age mansion that housed prominent figures including oil magnate Harry F. Sinclair (involved in the Teapot Dome scandal) and descendants of Peter Stuyvesant. Now serves as the Ukrainian Institute of America, promoting Ukrainian culture and arts since 1955.' }
+      ],
+      image_caption: "Harry F. Sinclair House, 2 East Seventy-ninth Street, New York County, NY. Library of Congress. 1930s",
+      image_link: "https://www.loc.gov/item/ny1276/",
+      link: "https://ukrainianinstitute.org/",
     },
   },
   {
@@ -1336,10 +1638,22 @@ const landmarks = [
     properties: {
       id: 92,
       name: "SoHo-Cast Iron Historic District",
-      description:
-        "Believed to be the largest existing collection of late 19th-century cast iron facades in the world",
+      bullets: [
+        { key: 'Location', value: 'Lower Manhattan, bounded by Houston St, West Broadway, Crosby St, and Canal St' },
+        { key: 'Historic Designation', value: 'NYC Historic District (1973), National Register of Historic Places' },
+        { key: 'Architectural Significance', value: 'World\'s largest collection of cast-iron architecture with 250+ buildings' },
+        { key: 'Original Purpose', value: 'Manufacturing district for textiles and light industrial goods (1800s)' },
+        { key: 'Construction Period', value: 'Mid-to-late 19th century' },
+        { key: 'Cast-Iron Benefits', value: 'Cheaper than stone, fire-resistant, allowed large windows and open floor plans' },
+        { key: 'Architectural Styles', value: 'Italianate and Second Empire cast-iron facades' },
+        { key: 'Transformation', value: 'Industrial → Artist lofts (1960s-70s) → Upscale residential/commercial' },
+        { key: 'Notable Building', value: 'Haughwout Building (1857)' },
+        { key: 'Current Character', value: 'High-end boutiques, galleries, restaurants, and luxury residences' },
+        { key: 'Legacy', value: 'Model for historic preservation and adaptive reuse worldwide' }
+      ],
+      image_caption:"E. V. Haughwout & Company Building, 488-492 Broadway, New York County, NY. Library of Congress. 1930s",
+      image_link: "https://www.loc.gov/resource/hhh.ny0379.photos/?sp=3",
       link: "https://www.nypap.org/preservation-history/soho-cast-iron-historic-district/",
-      image_caption: "Haughwout Building (NYPL Digital Collection)",
     },
   },
   {
@@ -1351,8 +1665,18 @@ const landmarks = [
     properties: {
       id: 93,
       name: "A. T. Stewart Company Store",
-      description:
-        "The A.T. Stewart Store, built in 1845-46 and dubbed the 'Marble Palace,' was a commercial structure that housed America's first department store and introduced the Italian Renaissance architectural style to the United States. The store’s namesake, Alexander Turney Stewart, was an Irish immigrant who became a business legend and one of the wealthiest men in America through his dry-goods business. The building is now known as the Sun Building from its days as headquarters for The Sun newspaper.",
+      bullets: [
+        { key: 'Built', value: '1845-1846' },
+        { key: 'Architects', value: 'Joseph Trench and John B. Snook' },
+        { key: 'Architectural style', value: 'Italian Renaissance' },
+        { key: 'Nickname', value: '"Marble Palace"' },
+        { key: 'Owner', value: 'Alexander Turney Stewart, Irish immigrant and business legend' },
+        { key: 'Significance', value: 'America\'s first department store' },
+        { key: 'Legacy', value: 'Introduced Italian Renaissance architectural style to the United States' },
+        { key: 'Notable', value: 'Now known as Sun Building, former headquarters of The Sun newspaper' }
+      ],
+      image_caption: "Stuart's Marble Palace. Library of Congress. The New York Public Library Digital Collections. 1851.",
+      image_link: "https://digitalcollections.nypl.org/items/30af6670-c55f-012f-f765-58d385a7bc34#/?uuid=510d47e0-dae7-a3d9-e040-e00a18064a99",
       quote: "The Sun... It Shines for All.",
       quote_author:
         "Inscription on a non-working clock from the building's Sun newspaper era",
@@ -1369,17 +1693,17 @@ const landmarks = [
       id: 94,
       name: "Stonewall",
       bullets: [
-        "Site of the June 28, 1969 uprising that sparked the modern LGBTQ+ rights movement",
-        "Police raid turned into six days of protests and demonstrations", 
-        "Led to the first Gay Pride marches and formation of LGBTQ+ advocacy groups"
+        { key: 'Date', value: 'June 28, 1969' },
+        { key: 'Event', value: 'Police raid turned into six days of protests and demonstrations' },
+        { key: 'Significance', value: 'Sparked the modern LGBTQ+ rights movement' },
+        { key: 'Notable', value: 'Led to the first Gay Pride marches and formation of LGBTQ+ advocacy groups' }
       ],
       description: "This Greenwich Village bar became a symbol of resistance when patrons and community members fought back against routine police harassment, transforming a local confrontation into a watershed moment for civil rights in America.",
       quote: "Gay power! Isn't that great! It's about time we did something to assert ourselves.",
       quote_author: "Allen Ginsberg, poet and Greenwich Village resident",
-      description:
-        "Site of 1969 Stonewall riots which began gay rights movement",
       link: "https://www.nps.gov/ston/index.htm",
-      image_caption: "The Stonewall Inn ca. 1969",
+      image_caption: "Stonewall Inn. The New York Public Library Digital Collections. 1969",
+      image_link: "https://digitalcollections.nypl.org/items/29ebdc90-c5b1-012f-08e3-58d385a7bc34#/?uuid=510d47e3-57e3-a3d9-e040-e00a18064a99",
     },
   },
   {
@@ -1393,7 +1717,8 @@ const landmarks = [
       name: "St. Bartholomew's Church and Community House",
       description:
         "A pivotal example of the work of Bertram Grosvenor Goodhue and an outstanding example of early 20th-century ecclesiastical architecture.",
-      image_caption: "St. Bartholomew's on Park Avenue, 1931 (NYPL Digital Collection)",
+      image_caption: "St. Bartholomew's on Park Avenue. The New York Public Library Digital Collections. 1931",
+      image_link: "https://digitalcollections.nypl.org/items/2186af80-980e-013a-2ba1-0242ac110003#/?uuid=7ace51b0-9810-013a-e254-0242ac110003"
     },
   },
   {
@@ -1407,6 +1732,8 @@ const landmarks = [
       name: "Surrogate's Court",
       description: "Probate Courthouse across from City Hall",
       link: "https://ww2.nycourts.gov/courts/1jd/surrogates/historical.shtml",
+      image_caption: "31 Chambers Street - Centre Street. The New York Public Library Digital Collections. 1887 - 1964.",
+      image_link: "https://digitalcollections.nypl.org/items/2e6caaa0-c5ed-012f-1470-58d385a7bc34#/?uuid=510d47e2-eef9-a3d9-e040-e00a18064a99",
     },
   },
   {
@@ -1419,14 +1746,15 @@ const landmarks = [
       id: 97,
       name: "Tenement Building at 97 Orchard Street",
       bullets: [
-        "Located on Orchard Street, epicenter of immigrant life in America (1863-1935)",
-        "Part of the most densely populated block on earth by 1903",
-        "Five-story building which was home to 7,000 people from over 20 nations - now the Tenement Museum tells their stories",
+        { key: 'Built', value: '1863 (active 1863-1935)' },
+        { key: 'Residents', value: '7,000 people from 20+ nations' },
+        { key: 'Significance', value: 'Located on Orchard Street, the epicenter of immigrant life in NYC. Today, it serves as a museum dedicated to preserving and interpreting the history of immigration in America.' },
       ],
       quote: "I walked toward the Lower East Side - where you walked 50 years ago, little girl - from Russia, eating the first poisonous tomatoes of America - frightened on the dock - then struggling in the crowds of Orchard Street toward what?",
       quote_author: "Allen Ginsberg, 'Kaddish'",
       link: "https://www.tenement.org/",
-      image_caption: '"Orchard Street Scene." The New York Public Library Digital Collections, Irma and Paul Milstein Division of United States History, Local History and Genealogy, 1902 - 1914.',
+      image_caption: "Orchard Street Scene. The New York Public Library Digital Collections. 1902–1914.",
+      image_link: "https://digitalcollections.nypl.org/items/17d33910-c6e9-012f-7616-58d385a7bc34#/?uuid=510d47e3-4c92-a3d9-e040-e00a18064a99",
     },
   },
   {
@@ -1440,7 +1768,8 @@ const landmarks = [
       name: "Third Judicial District Courthouse",
       description:
         "Originally built as the Third Judicial District Courthouse; faced with demolition, public outcry led to its reuse as a branch of the New York Public Library",
-      image_caption: "Third Judicial District Courthouse (Library of Congress)",
+      image_caption: "Third Judicial District Courthouse. Library of Congress. 1933.",
+      image_link: "https://www.loc.gov/item/ny0431/",
     },
   },
   {
@@ -1452,9 +1781,14 @@ const landmarks = [
     properties: {
       id: 99,
       name: "Tiffany and Company Building",
-      description:
-        "Served as the home of Tiffany and Company from 1905 through 1940",
-      image_caption: "Tiffany and Company Building (Library of Congress)",
+      bullets: [
+        { key: 'Built', value: '1903-1905' },
+        { key: 'Architect', value: 'Stanford White of McKim, Mead & White' },
+        { key: 'Architectural Style', value: 'Renaissance Revival' },
+        { key: 'Significance', value: 'Magnificent white marble "palace" based on Venice\'s Palazzo Grimani that helped establish Fifth Avenue as America\'s premier luxury shopping thoroughfare. Served as Tiffany\'s flagship store until 1940 and remains one of Stanford White\'s most celebrated designs.' }
+      ],
+      image_caption: "Tiffany Building, New York, N.Y., Library of Congress, 1900–1906.",
+      image_link: "https://www.loc.gov/item/2016805833/",
     },
   },
   {
@@ -1468,7 +1802,8 @@ const landmarks = [
       name: "Samuel J. Tilden House",
       description:
         "Home of Samuel J. Tilden, former New York State governor and loser of the bitter 1876 presidential election",
-      image_caption: "Albert Levy - 'L'Architecture Americaine', photo album, 1872",
+      image_caption: "Samuel J. Tilden Residence. Wikimedia Commons. 1872",
+      image_link: "https://en.wikipedia.org/wiki/Samuel_J._Tilden_House#/media/File:C.Vaux_-_Samuel_J.Tilden_residence_-_NY_-_Albert_Levy.jpg"
     },
   },
   {
@@ -1480,10 +1815,15 @@ const landmarks = [
     properties: {
       id: 101,
       name: "The Town Hall",
-      description:
-        '"America\'s Town Meetings of the Air" radio programs from here in the 1930s created public-affairs media.',
+      bullets: [
+        { key: 'Built', value: '1919-1921' },
+        { key: 'Architect', value: 'McKim, Mead & White' },
+        { key: 'Architectural Style', value: 'Georgian Revival' },
+        { key: 'Significance', value: 'Built for the League for Political Education by suffragists as a venue for free speech and civic discourse. Historic performance space with exceptional acoustics that has hosted over a century of landmark cultural and political events, including the pioneering radio program "America\'s Town Meeting of the Air" (1935-1956). Designated National Historic Landmark in 2012.' }
+      ],
       link: "https://www.thetownhall.org/",
-      image_caption: "The Town Hall (NYPL Digital Collection)",
+      image_caption: "Exterior view of The Town Hall. The New York Public Library Digital Collections, 1840–2020.",
+      image_link: "https://digitalcollections.nypl.org/items/59a524e0-3849-0131-5911-58d385a7bbd0#/?uuid=a7a79de0-3849-0131-e876-58d385a7bbd0",
     },
   },
   {
@@ -1496,29 +1836,37 @@ const landmarks = [
       id: 102,
       name: "Triangle Shirtwaist Factory",
       bullets: [
-        "Site of tragic factory fire that killed 146 workers, mostly young immigrant women (March 25, 1911)",
-        "Led to landmark workplace safety laws and labor reforms"
+        { key: 'Date', value: 'March 25, 1911' },
+        { key: 'Event', value: 'Site of factory fire that killed 146 workers (mostly young, immigrant women)' },
+        { key: 'Significance', value: 'Led to landmark workplace safety laws and labor reforms' },
       ],
       quote:
         "There was a stricken conscience of public guilt and we all felt that we had been wrong, that something was wrong with that building which we had accepted or the tragedy never would have happened. Moved by this sense of stricken guilt, we banded ourselves together to find a way by law to prevent this kind of disaster.",
       quote_author: "Frances Perkins, Secretary of Labor",
       link: "https://www.mcny.org/story/triangle-shirtwaist-fire",
-      image_caption: '"Trade Parade in Memory of Fire Victims. [April or May]" Photograph. Library of Congress.'
+      image_caption: 'Trade Parade in Memory of Fire Victims, Library of Congress, April or May 1911',
+      image_link: "https://www.loc.gov/item/2002709196/",
     },
   },
   {
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-74.0118367122406, 40.70823058091367],
+      coordinates: [-74.012216, 40.708041],
     },
     properties: {
       id: 103,
       name: "Trinity Church",
-      description:
-        "Founded in 1697, Trinity Church has served New York for over 300 years. The current building was designed by Richard Upjohn and consecrated in 1846, and is considered one of the first and finest examples of Neo-Gothic architecture in the country. Notable parishioners such as Alexander Hamilton are buried in the historic churchyard.",
-      link: "https://trinitychurchnyc.org/",
-      image_caption: "View of Trinity Church, 1895",
+      bullets: [
+        { key: 'Founded', value: '1697' },
+        { key: 'Built', value: '1846 (current building)' },
+        { key: 'Architect', value: 'Richard Upjohn' },
+        { key: 'Architectural style', value: 'Neo-Gothic' },
+        { key: 'Significance', value: 'One of the earliest and finest examples of Neo-Gothic architecture in the U.S. Resting place of Alexander Hamilton and other notable figures.' },
+      ],
+      image_caption: 'Wall Street, N.Y., The New York Public Library Digital Collections, 1895',
+      image_link: 'https://digitalcollections.nypl.org/items/9fa0b400-c55b-012f-e7f0-58d385a7bc34#/?uuid=510d47e1-06da-a3d9-e040-e00a18064a99',
+      link: "https://trinitychurchnyc.org/visit-history",
     },
   },
   {
@@ -1532,6 +1880,8 @@ const landmarks = [
       name: "Old New York County Courthouse",
       description:
         "Historic courthouse, more commonly known as the Tweed Courthouse, connected to Tammany Hall, now used by NYC's Department of Education",
+      image_caption: "New York County Courthouse, 52 Chambers Street, New York County, NY. Library of Congress. 1933.",
+      image_link: "https://www.loc.gov/item/ny0926/"
     },
   },
   {
@@ -1543,8 +1893,15 @@ const landmarks = [
     properties: {
       id: 105,
       name: "Union Square",
-      description:
-        "The political heart of Manhattan; many protests begin or end here",
+      bullets: [
+        { key: 'Established', value: '1833 (opened 1839)' },
+        { key: 'Designer', value: 'Frederick Law Olmsted and Calvert Vaux (1872 redesign)' },
+        { key: 'Design Style', value: 'Public Square/Landscape Architecture' },
+        { key: 'Significance', value: 'Historic intersection and public square named for the "union" of two principal thoroughfares (Broadway and Fourth Avenue). Site of the first Labor Day parade in 1882, making it a cornerstone of American labor history. Redesigned by the creators of Central Park to serve as an open forum for public gatherings, political rallies, and civic engagement. Designated National Historic Landmark in 1997.' }
+      ],
+      image_caption: "Union Square Looking North, Library of Congress, 1919",
+      image_link: "https://www.loc.gov/item/2021644846/",
+      link: "https://www.unionsquarenyc.org/",
     },
   },
   {
@@ -1556,9 +1913,16 @@ const landmarks = [
     properties: {
       id: 106,
       name: "United Charities Building",
-      description:
-        "Built in 1893 by a wealthy businessman in order to provide his favorite charities a low cost location for their operations",
-      image_caption: "United Charities Building drawing, 1891 (NYPL Digital Collection)",
+      bullets: [
+        { key: 'Built', value: '1893' },
+        { key: 'Architect', value: 'Robert H. Robertson (assisted by Rowe & Baker)' },
+        { key: 'Architectural style', value: 'Renaissance Revival' },
+        { key: 'Patron', value: 'John Stewart Kennedy, wealthy banker and philanthropist' },
+        { key: 'Purpose', value: 'House the Charity Organization Society and multiple charitable organizations' },
+        { key: 'Significance', value: 'Pioneer headquarters for nonprofit organizations providing social services' }
+      ],
+      image_caption: "The New building for the United Charities of New York City, corner Twenty-Second Street and Fourth Avenue / drawn by Hughson Hawley .The New York Public Library Digital Collections, 1895",
+      image_link: "https://www.loc.gov/item/93509656/"
     },
   },
   {
@@ -1570,8 +1934,12 @@ const landmarks = [
     properties: {
       id: 107,
       name: "United Workers Cooperatives",
-      description:
-        "Built in 1926 by the United Workers' Association to improve the living standards of its members, many of whom lived in squalid conditions in the tenements of the Lower East Side",
+      bullets: [
+        { key: 'Built', value: '1926-1929' },
+        { key: 'Architect', value: 'Springsteen & Goldhammer (1926-1927), Herman Jessor (1927-1929)' },
+        { key: 'Architectural Style', value: 'Tudor Revival' },
+        { key: 'Significance', value: 'Pioneering example of cooperative housing for working-class people, built by the United Workers\' Association (part of the Industrial Workers of the World). Known as "The Coops" or "Allerton Coops," it housed primarily secular Jewish Communist workers from the needle trades. Featured innovative amenities including classrooms, library, and non-eviction policies, representing early 20th-century experiments in socialist cooperative living and workers\' housing.' }
+      ],
     },
   },
   {
@@ -1585,7 +1953,8 @@ const landmarks = [
       name: "U.S. Customhouse",
       description:
         "Cass Gilbert designed Customhouse for New York Harbor; now part of the Smithsonian Institution",
-      image_caption: "US Customs House, New York of to-day, Seymour B. Durst, 1912",
+      image_caption: "U.S. Custom House, New York, N.Y. The New York Public Library Digital Collections. 1908.",
+      image_link: "https://digitalcollections.nypl.org/items/d46f7870-c55c-012f-dd3c-58d385a7bc34#/?uuid=510d47e0-ccce-a3d9-e040-e00a18064a99",
       link: "https://americanindian.si.edu/visit/ny",
     },
   },
@@ -1599,7 +1968,8 @@ const landmarks = [
       id: 109,
       name: "University Heights Campus (Bronx Community College of the City University of New York)",
       description:
-        "Collection of Beaux Arts buildings by Stanford White is one of the best examples of that style anywhere.",
+        "Bronx - University Heights Campus. The New York Public Library Digital Collections. 1887 - 1964.",
+      image_link: "https://digitalcollections.nypl.org/items/609c3240-c5ec-012f-5204-58d385a7bc34#/?uuid=510d47e2-c3e5-a3d9-e040-e00a18064a99",
     },
   },
   {
@@ -1611,8 +1981,14 @@ const landmarks = [
     properties: {
       id: 110,
       name: "Van Cortlandt House",
-      description:
-        "Mansion for the Van Cortlandt family built in 1748 and used during the American Revolution",
+      bullets: [
+        { key: 'Built', value: '1748-1749' },
+        { key: 'Builder', value: 'Frederick Van Cortlandt' },
+        { key: 'Architectural Style', value: 'Georgian' },
+        { key: 'Significance', value: 'Oldest surviving house in the Bronx and NYC\'s first historic house museum (opened 1897). Served as George Washington\'s headquarters during the Revolutionary War and witnessed key strategic meetings. Built of local fieldstone with brick trim, it represents colonial Dutch-American heritage and the Van Cortlandt family\'s 140-year residence on their Yonkers plantation.' }
+      ],
+      image_caption: "The Van Cortlandt Mansion, New York. The New York Public Library Digital Collections. 1860 - 1920.",
+      image_url: "https://digitalcollections.nypl.org/items/607674e0-c617-012f-f6e4-58d385a7bc34#/?uuid=510d47d9-adf4-a3d9-e040-e00a18064a99",
       link: "https://www.vchm.org/",
     },
   },
@@ -1627,6 +2003,8 @@ const landmarks = [
       name: "Voorlezer's House",
       description:
         "Oldest known surviving schoolhouse in America; owned by the Staten Island Historical Society",
+      image_caption: "Voorlezer's House. The New York Public Library Digital Collections. 1990 - 1999.",
+      image_link: "https://digitalcollections.nypl.org/items/7253fe10-c5ee-012f-c56a-58d385a7bc34#/?uuid=510d47d9-cc33-a3d9-e040-e00a18064a99",
       link: "https://www.nps.gov/parkhistory/online_books/explorers/sitec50.htm",
     },
   },
@@ -1639,10 +2017,6 @@ const landmarks = [
     properties: {
       id: 112,
       name: "Wards Point Archeological Site",
-      bullets: [
-        "Largest pre-European burial ground in New York City",
-        "Used by Lenape people for over 7,000 years until Dutch colonization", 
-      ],
       description:
         "Archaeological site in Conference House Park containing prehistoric remains.",
     },
@@ -1656,10 +2030,15 @@ const landmarks = [
     properties: {
       id: 113,
       name: "Woodlawn Cemetery",
-      description:
-        "Illustrates transition from rural cemetery to 20th-century styles; notable dead buried here include Robert Moses and R.H. Macy",
+      bullets: [
+        { key: 'Founded', value: '1863' },
+        { key: 'Designer', value: 'James C. Sidney (original layout), with later contributions by McKim, Mead & White, John Russell Pope, Cass Gilbert, Carrère & Hastings, and Olmsted Brothers' },
+        { key: 'Architectural Style', value: 'Rural Cemetery Movement, later transitioning to Lawn Cemetery style' },
+        { key: 'Significance', value: 'National Historic Landmark showcasing the evolution from 19th-century rural cemetery design to modern cemetery planning. Final resting place of over 300,000 people including numerous notable Americans, featuring the nation\'s finest collection of memorial architecture and funerary art across 400 acres of rolling landscape.' }
+      ],
       link: "https://www.woodlawn.org/",
-      image_caption: "Map of Woodlawn Cemetery, 1870",
+      image_caption: "Map of the Woodlawn Cemetery. The New York Public Library Digital Collections. 1870.",
+      image_link: "https://digitalcollections.nypl.org/items/9a98d280-f948-0130-fd87-58d385a7b928#/?uuid=a6a42f20-f94a-0130-073e-58d385a7bbd0",
     },
   },
   {
@@ -1671,8 +2050,14 @@ const landmarks = [
     properties: {
       id: 114,
       name: "Woolworth Building",
-      description:
-        "One of the oldest — and most famous — skyscrapers in New York City; still one of the tallest buildings in New York City",
+      bullets: [
+        { key: 'Built', value: '1913' },
+        { key: 'Architect', value: 'Cass Gilbert' },
+        { key: 'Architectural Style', value: 'Neo-Gothic' },
+        { key: 'Significance', value: 'World\'s tallest building from 1913-1930 at 792 feet, dubbed the "Cathedral of Commerce." Revolutionary steel-frame skyscraper with Gothic Revival styling that became the model for early 20th-century tower design. Commissioned by five-and-dime magnate Frank W. Woolworth as both corporate headquarters and monument to American commercial success.' }
+      ],
+      image_caption: 'Woolworth Building. New York City. Library of Congress. 1912.',
+      image_link: 'https://www.loc.gov/resource/ppmsca.54245/',
     },
   },
   {
@@ -1685,8 +2070,9 @@ const landmarks = [
       id: 115,
       name: "Wyckoff House",
       description: "Oldest surviving Dutch saltbox frame house in America",
+      image_caption: "Wyckoff home. Library of Congress. 1933.",
+      image_link: "https://www.loc.gov/item/ny0257/",
       link: "https://wyckoffmuseum.org/",
-      image_caption: "The Wyckoff House early 1900s (NYPL Digital Collection)",
     },
   },
   {
@@ -1699,8 +2085,9 @@ const landmarks = [
       id: 116,
       name: "Wyckoff-Bennett Homestead",
       description: "Housed Hessian soldiers during the American Revolution",
+      image_caption: "Wyckoff-Bennett House. Library of Congress. 1933.",
+      image_link: "https://www.loc.gov/item/ny0256/",
       link: "https://hdc.org/buildings/wyckoff-bennett-homestead/",
-      image_caption: "Wyckoff-Bennett Homestead (Library of Congress)",
     },
   },
 ];

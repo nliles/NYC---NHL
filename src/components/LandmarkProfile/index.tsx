@@ -47,13 +47,14 @@ const LandmarkProfile = ({
             className={styles.img}
           />
           {landmark.image_caption && (
-            <span className={styles.caption}>{landmark.image_caption}</span>
+            <a className={styles.caption} href={landmark.image_link} target="_blank" rel="noopener noreferrer">{landmark.image_caption}</a>
           )}
           {landmark?.bullets && (
           <ul className={styles.bulletList}>
-          {JSON.parse(landmark.bullets).map((item: string, index: number) => (
+          {JSON.parse(landmark.bullets).map((item: any, index: number) => (
             <li key={index} className={styles.bulletItem}>
-              {item}
+              <p className={styles.key}>{item.key}</p>
+              <p className={styles.value}>{item.value}</p>
             </li>
           ))}
         </ul>
@@ -66,8 +67,6 @@ const LandmarkProfile = ({
             <p className={styles.quoteAttribution}>— {landmark.quote_author}</p>
           </blockquote>
           )}
-          <p className={styles.description}>{landmark.description}</p>
-          {landmark.description2 && <p>{landmark.description2}</p>}
         </div>
       </div>
       <div className={styles.learnMore}>
