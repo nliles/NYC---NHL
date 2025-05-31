@@ -1191,7 +1191,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-74.01288018382186, 40.714148749295504],
+      coordinates: [-73.98619151351224, 40.743017801087944],
     },
     properties: {
       id: 65,
@@ -1201,10 +1201,11 @@ const landmarks = [
         { key: 'Architect', value: 'Cass Gilbert' },
         { key: 'Architectural style', value: 'Gothic Revival' },
         { key: 'Height', value: '615 feet (40 stories)' },
-        { key: 'Significance', value: 'Built on the site of Madison Square Garden, features distinctive golden pyramidal roof, represents transition from historic revival to Art Deco period architecture, and serves as a powerful example of corporate architecture symbolizing financial strength.' }
+        { key: 'Significance', value: 'One of the finest examples of Gothic Revival architecture, distinguished by its iconic golden pyramid crown; exemplifies the pinnacle of 1920s skyscraper design.' }
       ],
       image_caption: "West 25th Street - Broadway. The New York Public Library Digital Collections. 1952.",
       image_link: "https://digitalcollections.nypl.org/items/b6763c10-c5ec-012f-5f14-58d385a7bc34#/?uuid=510d47e2-f28e-a3d9-e040-e00a18064a99",
+      link: "https://www.newyorklife.com/newsroom/history-of-51madison-home-office",
     },
   },
   {
