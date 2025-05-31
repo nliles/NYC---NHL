@@ -195,10 +195,14 @@ const landmarks = [
     properties: {
       id: 11,
       name: "Bell Laboratories Building",
-      description:
-        "Bell Labs work here included experimental phonograph record, vacuum tubes, talking movies (1923), black and white and color TV, radar, and early commercial remote broadcasts. Today home to the Westbeth Artists Community (listed separately on the National Register of Historic Places).",
-      image_caption: "Bell Laboratories Building, Wikimedia Commons, 1936",
+      bullets: [
+        { key: 'Bell Labs Period', value: '1898-1966' },
+        { key: 'Significance', value: "Site of one of the world's most prestigious telecommunications research organizations, where groundbreaking innovations and inventions were conducted." },
+        { key: 'Current', value: "Home to Westbeth Artists Community since 1970." }
+      ],
+      image_caption: "Bell Laboratories Building. Wikimedia Commons. 1936",
       image_link: "https://en.wikipedia.org/wiki/Bell_Laboratories_Building#/media/File:Western_Electric_complex_NYC_1936.jpg",
+      link: "https://westbeth.org/about/history/",
     },
   },
   {
@@ -215,8 +219,8 @@ const landmarks = [
         { key: 'Engineer', value: 'John A. Roebling; completed by Washington Roebling and Emily Warren Roebling.' },
         { key: 'Significance', value: 'The first steel-wire suspension bridge connecting Manhattan and Brooklyn. It was the longest suspension bridge worldwide at completion and a landmark feat of 19th-century engineering.' },
       ],
-      image_caption: 'Brooklyn Bridge, The New York Public Library Digital Collections, 1950–1969',
-      image_link: 'https://digitalcollections.nypl.org/items/729657b0-6ba8-0133-82ba-00505686a51c#/?uuid=bfbd7450-a740-0133-6bbc-00505686d14e',
+      image_caption: 'Brooklyn Bridge, Library of Congress. 1915.',
+      image_link: 'https://www.loc.gov/resource/cph.3b21874/',
       link: "https://www.history.com/this-day-in-history/may-24/brooklyn-bridge-opens",
       quote: "Man is after all a finite being in capacities and powers of doing actual work. But when it comes to planning, one mind can in a few hours think out enough work to keep a thousand men employed for years.",
       quote_author: "Washington Roebling",
@@ -285,9 +289,8 @@ const landmarks = [
         { key: 'Built', value: '1889-1891' },
         { key: 'Architect', value: 'William Burnet Tuthill (with Richard Morris Hunt and Adler & Sullivan)' },
         { key: 'Architectural style', value: 'Neo-Italian Renaissance' },
-        { key: 'Opened', value: 'May 5, 1891 (Tchaikovsky conducted opening night)' },
         { key: 'Benefactor', value: 'Andrew Carnegie, steel industrialist ($2 million investment)' },
-        { key: 'Significance', value: 'One of the world\'s most prestigious music venues, saved from demolition in 1960s by Isaac Stern' }
+        { key: 'Significance', value: 'One of the world\'s most prestigious music venues, known for its stunning acoustics and a rich history of hosting legendary performers' }
       ],
       link: "https://www.carnegiehall.org/",
       image_caption: 'Carnegie Music Hall, The New York Public Library Digital Collections, 1908',
@@ -372,7 +375,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.97535703577218, 40.75521272097183],
+      coordinates: [-73.97549771851176, 40.751835172003624],
     },
     properties: {
       id: 21,
@@ -383,11 +386,11 @@ const landmarks = [
         { key: 'Architectural style', value: 'Art Deco' },
         { key: 'Commissioner', value: 'Walter P. Chrysler, automotive magnate' },
         { key: 'Height', value: '1,046 feet (77 floors)' },
-        { key: 'Significance', value: 'Celebrated as the epitome of Art Deco architecture, and held the title of the world’s tallest building for 11 months (1930–1931).' },
+        { key: 'Significance', value: 'Celebrated as one of the finest examples of Art Deco architecture; held the title of the world’s tallest building for 11 months (1930–1931).' },
       ],
       link: "https://chryslerbuilding.com/",
-      image_caption: 'Lexington Avenue – East 43rd Street, New York Public Library Digital Collections, 1930',
-      image_link: 'https://digitalcollections.nypl.org/items/3c7893f0-c5ed-012f-7347-58d385a7bc34#/?uuid=510d47e2-ef42-a3d9-e040-e00a18064a99',
+      image_caption: 'Stages in the design for the Chrysler building. New York Public Library Digital Collections. 1930',
+      image_link: 'https://digitalcollections.nypl.org/items/a6675350-a066-0130-c348-58d385a7b928#/?uuid=b5b54270-a066-0130-466b-58d385a7b928',
     },
   },
   {
@@ -404,9 +407,9 @@ const landmarks = [
         { key: 'Built', value: '1841 (current location)' },
         { key: 'Architect', value: 'Richard Upjohn' },
         { key: 'Architectural style', value: 'Gothic Revival' },
-        { key: 'Significance', value: 'First church built on Fifth Avenue and an outstanding example of Gothic Revival architecture. Also significant for its interior elements including John La Farge\'s altar mural "The Ascension" and Louis Saint-Gaudens\' marble altar.' },
+        { key: 'Significance', value: "First church built on Fifth Avenue and an outstanding example of Gothic Revival architecture. Notable for its interior elements including John La Farge\'s altar mural 'The Ascension' and Louis Saint-Gaudens' marble altar." },
       ],
-      image_caption: 'Church of the Ascension, 10th St. and 5th Ave, New York Public Library Digital Collections, 1858–1925',
+      image_caption: 'Church of the Ascension. New York Public Library Digital Collections. 1858–1925',
       image_link: 'https://digitalcollections.nypl.org/items/cd6f0300-c557-012f-d9e7-58d385a7bc34#/?uuid=510d47e0-1eca-a3d9-e040-e00a18064a99',
       link: "https://ascensionnyc.org/",
       quote: "The Church of the Open Door.",
@@ -437,8 +440,11 @@ const landmarks = [
     properties: {
       id: 24,
       name: "Conference House",
-      description:
-        "Only surviving pre-Revolutionary War manor house in New York City; site of unsuccessful peace conference in 1776",
+      bullets: [
+        { key: 'Built', value: "ca. 1670s" },
+        { key: 'Architectural Style', value: "Colonial stone manor house with Dutch and English influences" },
+        { key: 'Significance', value: "Site of the failed 1776 peace conference between British Lord Howe and American delegates Benjamin Franklin, John Adams, and Edward Rutledge during the Revolutionary War; one of Staten Island's most historically significant buildings." }
+      ],
       link: "https://conferencehouse.org/",
       image_caption: "Conference House. New York Public Library Digital Collections. 1990 - 1999",
       image_link: "https://digitalcollections.nypl.org/items/71e71110-c5ee-012f-176c-58d385a7bc34#/?uuid=510d47d9-cc32-a3d9-e040-e00a18064a99",
@@ -486,13 +492,14 @@ const landmarks = [
       name: "Daily News Building",
       bullets: [
         { key: 'Built', value: '1930' },
-        { key: 'Architect', value: 'Raymond Hood' },
+        { key: 'Architect', value: 'Raymond Hood and John Mead Howells' },
         { key: 'Architectural style', value: 'Art Deco' },
-        { key: 'Significance', value: 'First modern free-standing skyscraper' },
-        { key: 'Notable', value: 'Pioneering example of modernist skyscraper design' }
+        { key: 'Height', value: '476 ft (36 floors)' },
+        { key: 'Significance', value: 'First modern free-standing skyscraper and pioneering example of Art Deco architecture.' },
       ],
-      image_caption: "Daily News Building, 42nd Street between Second and Third Avenues. New York Public Library Digital Collections. 1935",
+      image_caption: "Daily News Building. New York Public Library Digital Collections. 1935",
       image_link: 'https://digitalcollections.nypl.org/items/f99a0a60-86cc-013a-7f01-0242ac110003#/?uuid=63a82990-86d0-013a-061c-0242ac110002',
+      link: "https://slgreen.com/properties/220-east-42nd-street/",
     },
   },
   {
@@ -532,11 +539,10 @@ const landmarks = [
         { key: 'Builder', value: 'William Dyckman' },
         { key: 'Architectural style', value: 'Dutch Colonial' },
         { key: 'Original Site', value: '250+ acre farm in northern Manhattan' },
-        { key: 'Materials', value: 'Fieldstone, brick, and white clapboard with gambrel roof' },
-        { key: 'Significance', value: 'Built to replace family home destroyed in Revolutionary War' },
-        { key: 'Notable', value: 'Only remaining farmhouse in Manhattan, museum since 1916' }
+
+        { key: 'Notable', value: "Oldest remaining farmhouse on Manhattan island, a vestige of New York City's rural past" }
       ],
-      image_caption: "Broadway - 204th Street, northwest corner. The New York Public Library Digital Collections. 1887 - 1986.",
+      image_caption: "Dyckman House. The New York Public Library Digital Collections. 1887 - 1986.",
       image_link: "https://digitalcollections.nypl.org/items/f01d7e90-c5cd-012f-0645-58d385a7bc34#/?uuid=510d47e2-0326-a3d9-e040-e00a18064a99",
       link: "https://dyckmanfarmhouse.org/",
     },
@@ -581,11 +587,12 @@ const landmarks = [
         { key: 'Built', value: '1930-1931' },
         { key: 'Architect', value: 'Shreve, Lamb & Harmon' },
         { key: 'Architectural Style', value: 'Art Deco' },
-        { key: 'Significance', value: 'World\'s tallest building from 1931-1971 and iconic symbol of American ambition during the Great Depression.' }
+        { key: 'Height', value: '1,250 feet (102 floors)' },
+        { key: 'Significance', value: "World's tallest building from 1931-1970; iconic symbol of American ambition during the Great Depression." }
       ],
       image_caption: 'The Empire State Building, Library of Congress, 1952.',
       image_link: 'https://www.loc.gov/item/2020635807/',
-      quote: "caught at the exact moment of transition—caught between metal and stone, between the idea of 'monumental mass' and that of airy volume, between handicraft and machine design, and in the swing from what was essentially handicraft to what will be essentially industrial methods of fabrication.",
+      quote: "caught at the exact moment of transition—caught between metal and stone, between the idea of 'monumental mass' and that of airy volume.",
       quote_author: "Douglas Haskell",
       link: "https://www.esbnyc.com/",
     },
@@ -633,10 +640,11 @@ const landmarks = [
         { key: 'Built', value: '1902' },
         { key: 'Architect', value: 'Daniel Burnham (with Frederick P. Dinkelberg)' },
         { key: 'Architectural Style', value: 'Beaux-Arts' },
-        { key: 'Significance', value: 'One of NYC\'s first steel-frame skyscrapers, iconic triangular shape filling wedge-shaped site, originally Fuller Building headquarters, nicknamed "Burnham\'s Folly," NYC Landmark (1966), National Historic Landmark (1989)' }
+        { key: 'Significance', value: "Pioneering steel-frame skyscraper renowned for its distinctive triangular design. Built as Fuller Building headquarters and initially dubbed 'Burnham's Folly,' it became an enduring architectural icon." }
       ],
       image_caption: "Flatiron Building, New York Public Library Digital Collections, 1911.",
       image_link: 'https://digitalcollections.nypl.org/items/e250e7e0-c55a-012f-50e6-58d385a7bc34#/?uuid=510d47e0-ce72-a3d9-e040-e00a18064a99',
+      link: "https://www.history.com/articles/flatiron-building",
     },
   },
   {
@@ -652,7 +660,7 @@ const landmarks = [
         { key: 'Built', value: '1903-1906' },
         { key: 'Architect', value: 'Shepley, Rutan & Coolidge' },
         { key: 'Architectural Style', value: 'Classical Revival' },
-        { key: 'Significance', value: 'First building of Rockefeller Institute for Medical Research, housed nation\'s first major biomedical research laboratory, represents John D. Rockefeller\'s major philanthropic effort, National Historic Landmark (1974)' }
+        { key: 'Significance', value: "First building of the Rockefeller Institute for Medical Research, establishing America's first major biomedical research laboratory and representing John D. Rockefeller's revolutionary vision for medical philanthropy." }
       ],
       image_caption: "Founder's Hall, Digital Commons @ RU, ca. 1916–1930.",
       image_link: 'https://digitalcommons.rockefeller.edu/founders-hall/8/',
@@ -691,8 +699,8 @@ const landmarks = [
       bullets: [
         { key: 'Built', value: '1794-1813 (fortifications), 1900s expansion (McKim plan)' },
         { key: 'Architect', value: 'Various; Charles Follen McKim (Beaux-Arts redesign, early 1900s)' },
-        { key: 'Architectural Style', value: 'Military fortifications, Beaux-Arts (McKim buildings)' },
-        { key: 'Significance', value: 'Military outpost protecting NYC Harbor (1794-1996), includes Fort Jay and Castle Williams (National Monument), 50+ historic buildings, Army headquarters, Coast Guard installation, now public park and cultural destination' }
+        { key: 'Architectural Style', value: 'Beaux-Arts (McKim buildings)' },
+        { key: 'Significance', value: 'Historic military fortress protecting New York Harbor for 200+ years (1794-1996); home to Fort Jay and Castle Williams National Monuments and over 50 historic buildings.' }
       ],
       link: "https://www.nps.gov/gois/index.htm",
       image_caption: "Governor's Island, Castle Williams, from hydro-aeroplane, Library of Congress, ca. 1902.",
@@ -715,7 +723,7 @@ const landmarks = [
         { key: 'Significance', value: 'One of NYC\'s finest Gothic Revival structures. Once the most fashionable church in the city.' }
       ],
       link: "https://gracechurchnyc.org/",
-      image_caption: 'Grace Church, New York. The New York Public Library Digital Collections. 1860–1920.',
+      image_caption: 'Grace Church. The New York Public Library Digital Collections. 1860–1920.',
       image_link: 'https://digitalcollections.nypl.org/items/f12cea10-c617-012f-dafa-58d385a7bc34#/?uuid=510d47d9-b180-a3d9-e040-e00a18064a99',
       quote: "All Are Welcome to Enter, Rest, Pray.",
       quote_author: "Grace Church",
@@ -771,10 +779,14 @@ const landmarks = [
     properties: {
       id: 42,
       name: "Hamilton Grange National Memorial",
-      description:
-        "Home of Alexander Hamilton: military officer, lawyer, member of the United States Constitutional Convention, American statesman, first United States Secretary of the Treasury, and Founding Father",
+      bullets: [
+      { key: 'Built', value: '1802' },
+      { key: 'Architect', value: 'John McComb Jr.' },
+      { key: 'Architectural Style', value: 'Federal' },
+      { key: 'Significance', value: "Alexander Hamilton's only owned home and country retreat where he lived until his death in the 1804 duel with Aaron Burr." },
+    ],
       link: "https://www.nps.gov/hagr/index.htm",
-      image_caption: "Hamilton Grange, Moved From 237 West 141 Street to 141st Street & Amsterdam, New York County, NY. Library of Congress. 1933.",
+      image_caption: "Hamilton Grange, (second location). Library of Congress. 1933.",
       image_link: "https://www.loc.gov/resource/hhh.ny1721.photos/?sp=8",
     },
   },
@@ -1002,10 +1014,12 @@ const landmarks = [
         { key: 'Built', value: '1931' },
         { key: 'Architect', value: 'Raymond Hood (Hood, Godley, and Fouilhoux)' },
         { key: 'Architectural Style', value: 'International Style/Art Deco/Art Moderne' },
-        { key: 'Significance', value: 'Transitional skyscraper bridging Art Deco and International Style, featured in MoMA\'s influential 1932 exhibition, birthplace of Marvel Comics' }
+        { key: 'Height', value: '485 feet (33 stories)' },
+        { key: 'Significance', value: "Transitional skyscraper bridging Art Deco and International Style" }
       ],
       image_caption: "McGraw Hill Building. The New York Public Library Digital Collections. 1936.",
-      image_link: "https://digitalcollections.nypl.org/items/689c3020-a48d-013a-8d98-0242ac110003#/?uuid=4f3d4120-a48e-013a-7a4f-0242ac110002,"
+      image_link: "https://digitalcollections.nypl.org/items/689c3020-a48d-013a-8d98-0242ac110003#/?uuid=4f3d4120-a48e-013a-7a4f-0242ac110002,",
+      link: "https://archsb.com/projects/mcgraw-hill-building-archstone-builders/",
     },
   },
   {
@@ -1089,7 +1103,12 @@ const landmarks = [
     properties: {
       id: 60,
       name: "Morris-Jumel Mansion",
-      description: "Oldest residential building in Manhattan",
+      bullets: [
+        { key: 'Built', value: '1765' },
+        { key: 'Architect', value: 'Unknown' },
+        { key: 'Architectural Style', value: 'Georgian Colonial with Federal period modifications' },
+        { key: 'Significance', value: 'Manhattan\'s oldest surviving house; served as George Washington\'s headquarters during the Revolutionary War in 1776; later home to Eliza Jumel, who married Aaron Burr; now a historic house museum in Washington Heights' }
+      ],
       link: "https://morrisjumel.org/",
       image_caption: "Morris-Jumel Mansion with people on benches. The New York Public Library Digital Collections. 1890.",
       image_link: "https://digitalcollections.nypl.org/items/110b3f20-af04-0132-eead-58d385a7bbd0#/?uuid=11c25970-af04-0132-a5fa-58d385a7bbd0",
@@ -1250,12 +1269,12 @@ const landmarks = [
       name: "Old Merchant House",
       bullets: [
         { key: 'Built', value: '1832' },
-        { key: 'Architect', value: 'Joseph Brewster (builder/developer), design based on pattern books by Minard Lafever' },
+        { key: 'Architect', value: 'Joseph Brewster (builder/developer)' },
         { key: 'Architectural Style', value: 'Late Federal/Greek Revival' },
-        { key: 'Significance', value: 'NYC\'s only 19th-century family home preserved intact inside and out, first Manhattan building designated NYC landmark (1965), occupied by Tredwell family for nearly 100 years (1835-1933), National Historic Landmark' }
+        { key: 'Significance', value: " NYC's only fully preserved 19th-century family home; continuously occupied by the Tredwell family for nearly 100 years (1835-1933)." }
       ],
       link: "https://merchantshouse.org/",
-      image_caption: "Doorway - Treadwell House (Old Merchants House), 29 East 4th Street. The New York Public Library Digital Collections. 1936.",
+      image_caption: "Doorway - Treadwell House (Old Merchants House). The New York Public Library Digital Collections. 1936.",
       image_link: "https://digitalcollections.nypl.org/items/96c36480-998a-013a-a209-0242ac110003#/?uuid=1e14d1a0-9993-013a-51c6-0242ac110003",
     },
   },
@@ -1328,8 +1347,12 @@ const landmarks = [
     properties: {
       id: 74,
       name: "Plaza Hotel",
-      description:
-        "French Renaissance-style building; outstanding example of American hotel architecture; symbol of elegance; visible from much of lower Central Park; setting for Kay Thompson's popular Eloise series of children's books",
+      bullets: [
+        { key: 'Built', value: '1907' },
+        { key: 'Architect', value: 'Henry Janeway Hardenbergh' },
+        { key: 'Architectural Style', value: 'French Renaissance château style with white brick and limestone facade' },
+        { key: 'Significance', value: 'Iconic luxury hotel at Fifth Avenue and Central Park South; designated New York City landmark in 1969; cultural landmark featured in numerous films, books, and as symbol of New York elegance and high society' }
+      ],
       link: "https://www.theplazany.com/",
       image_caption: "Plaza Hotel, New York, N.Y. Library of Congress. [Between 1910 and 1920].",
       image_link: "https://www.loc.gov/item/2016815530/"
@@ -1416,6 +1439,7 @@ const landmarks = [
         { key: 'Built', value: '1930-1939' },
         { key: 'Architect', value: 'Raymond Hood, Harvey Wiley Corbett, Wallace Harrison (Associated Architects)' },
         { key: 'Architectural Style', value: 'Art Deco' },
+        { key: 'Height', value: '850 feet (70 stories)' },
         { key: 'Significance', value: 'Iconic commercial complex featuring NBC studios, Radio City Music Hall, and renowned public spaces including the famous Christmas tree and ice rink' }
       ],
       image_caption: '30 Rockefeller Center Plaza, The New York Public Library Digital Collections, 1887–1964',
@@ -1434,11 +1458,10 @@ const landmarks = [
       name: "Sailors' Snug Harbor",
       bullets: [
         { key: 'Founded', value: '1801' },
-        { key: 'Purpose', value: 'Haven for "aged, decrepit, and worn-out sailors"' },
+        { key: 'Founder', value: 'Robert Richard Randall, wealthy merchant who left his fortune to establish the institution' },
         { key: 'Architect', value: '	Martin E. Thompson; Minard Lafever' },
         { key: 'Architectural style', value: 'Greek Revival, Late Victorian' },
-        { key: 'Significance', value: 'NYC\'s first designated landmark structures (1960s)' },
-        { key: 'Notable', value: 'Once America\'s richest charitable institution with 50 buildings and 900 residents' }
+        { key: 'Significance', value: "A pioneering philanthropic institution that served thousands of retired merchant sailors and established America's first model for occupational retirement care." }
       ],
       link: "https://snug-harbor.org/",
       image_caption: "Sailors' Snug Harbor, Richmond Terrace, Staten Island, New Brighton, Richmond County, NY. Library of Congress. 1933",
@@ -1535,7 +1558,7 @@ const landmarks = [
       id: 86,
       name: "Margaret Sanger Clinic",
       bullets: [
-        { key: 'Founded', value: '1916 in Brooklyn, moved to permanent location 1930' },
+        { key: 'Founded', value: '1916 in Brooklyn, moved to Manhattan location 1930' },
         { key: 'Operated', value: '1930-1973' },
         { key: 'Founder', value: 'Margaret Sanger' },
         { key: 'Significance', value: 'Pioneering center for reproductive rights and family planning research that reshaped attitudes toward reproductive health and sexuality.' },
@@ -1545,6 +1568,7 @@ const landmarks = [
       quote_author: "Margaret Sanger",
       image_caption:
         "Outside The Sanger Brownsville clinic in Brooklyn (Library of Congress)",
+      image_link: "https://www.loc.gov/item/2010645731/",
       link: "https://www.pbs.org/wgbh/americanexperience/features/pill-margaret-sanger-1879-1966/",
     },
   },
@@ -1589,9 +1613,9 @@ const landmarks = [
         { key: 'Built', value: '1877-1880' },
         { key: 'Architect', value: 'Charles W. Clinton' },
         { key: 'Architectural Style', value: 'Gothic Revival' },
-        { key: 'Significance', value: 'Only privately-funded armory in US, built for elite "Silk Stocking Regiment," interiors by Louis Comfort Tiffany and Stanford White, National Historic Landmark (1986), houses largest unobstructed space in NYC' }
+        { key: 'Significance', value: "First true armory built in Manhattan, home to the elite 'Silk Stocking' Regiment whose members included prominent Gilded Age families like the Vanderbilts and Roosevelts. Features exceptional interior spaces designed by Louis Comfort Tiffany, Stanford White, and other leading artists of the American Aesthetic Movement." },
       ],
-      image_caption: "Seventh Regiment Armory, 643 Park Avenue, New York County, NY. Library of Congress. 1933.",
+      image_caption: "Seventh Regiment Armory. Library of Congress. 1933.",
       image_link: "https://www.loc.gov/resource/hhh.ny1581.photos/?sp=18",
       link: "https://www.armoryonpark.org/about_us/history",
     },
@@ -1715,10 +1739,15 @@ const landmarks = [
     properties: {
       id: 95,
       name: "St. Bartholomew's Church and Community House",
-      description:
-        "A pivotal example of the work of Bertram Grosvenor Goodhue and an outstanding example of early 20th-century ecclesiastical architecture.",
+      bullets: [
+        { key: 'Built', value: '1918-1930' },
+        { key: 'Architect', value: 'Bertram Goodhue (with later additions by Mayers, Murray & Phillip)' },
+        { key: 'Architectural Style', value: 'Byzantine Revival with Romanesque influences, featuring salmon-colored brick and limestone trim' },
+        { key: 'Significance', value: 'Landmark Manhattan church known for its distinctive dome and architectural beauty; famous for its music program and as a cultural venue; survived a major redevelopment controversy in the 1980s that helped strengthen historic preservation laws' }
+      ],
       image_caption: "St. Bartholomew's on Park Avenue. The New York Public Library Digital Collections. 1931",
-      image_link: "https://digitalcollections.nypl.org/items/2186af80-980e-013a-2ba1-0242ac110003#/?uuid=7ace51b0-9810-013a-e254-0242ac110003"
+      image_link: "https://digitalcollections.nypl.org/items/2186af80-980e-013a-2ba1-0242ac110003#/?uuid=7ace51b0-9810-013a-e254-0242ac110003",
+      link: "https://stbarts.org/",
     },
   },
   {
@@ -1843,9 +1872,9 @@ const landmarks = [
       quote:
         "There was a stricken conscience of public guilt and we all felt that we had been wrong, that something was wrong with that building which we had accepted or the tragedy never would have happened. Moved by this sense of stricken guilt, we banded ourselves together to find a way by law to prevent this kind of disaster.",
       quote_author: "Frances Perkins, Secretary of Labor",
-      link: "https://www.mcny.org/story/triangle-shirtwaist-fire",
       image_caption: 'Trade Parade in Memory of Fire Victims, Library of Congress, April or May 1911',
       image_link: "https://www.loc.gov/item/2002709196/",
+      link: "https://www.history.com/articles/triangle-shirtwaist-fire",
     },
   },
   {
@@ -1896,12 +1925,13 @@ const landmarks = [
       bullets: [
         { key: 'Established', value: '1833 (opened 1839)' },
         { key: 'Designer', value: 'Frederick Law Olmsted and Calvert Vaux (1872 redesign)' },
-        { key: 'Design Style', value: 'Public Square/Landscape Architecture' },
-        { key: 'Significance', value: 'Historic intersection and public square named for the "union" of two principal thoroughfares (Broadway and Fourth Avenue). Site of the first Labor Day parade in 1882, making it a cornerstone of American labor history. Redesigned by the creators of Central Park to serve as an open forum for public gatherings, political rallies, and civic engagement. Designated National Historic Landmark in 1997.' }
+        { key: 'Significance', value: "Site of America's first Labor Day parade in 1882, establishing its significance in labor history. Redesigned as an open forum for public gatherings, political rallies, and civic engagement." }
       ],
       image_caption: "Union Square Looking North, Library of Congress, 1919",
       image_link: "https://www.loc.gov/item/2021644846/",
-      link: "https://www.unionsquarenyc.org/",
+      link: "https://www.nps.gov/places/union-square.htm",
+      quote: "This is Labor Day in earnest, Uncle Dick.",
+      quote_author: "Robert Price to the General Worthy Foreman of the Knights of Labor"
     },
   },
   {
@@ -2001,11 +2031,14 @@ const landmarks = [
     properties: {
       id: 111,
       name: "Voorlezer's House",
-      description:
-        "Oldest known surviving schoolhouse in America; owned by the Staten Island Historical Society",
+      bullets: [
+        { key: 'Built', value: "ca. 1695" },
+        { key: 'Architectural Style', value: "Dutch Colonial vernacular with steep-pitched roof, stone construction, and simple rectangular form" },
+        { key: 'Significance', value: "Oldest known elementary school building in the United States and one of the most important surviving relics of 17th-century Dutch settlement in New York." },
+      ],
       image_caption: "Voorlezer's House. The New York Public Library Digital Collections. 1990 - 1999.",
       image_link: "https://digitalcollections.nypl.org/items/7253fe10-c5ee-012f-c56a-58d385a7bc34#/?uuid=510d47d9-cc33-a3d9-e040-e00a18064a99",
-      link: "https://www.nps.gov/parkhistory/online_books/explorers/sitec50.htm",
+      link: "https://www.historicrichmondtown.org/historic-houses/2018/7/26/voorlezer",
     },
   },
   {
