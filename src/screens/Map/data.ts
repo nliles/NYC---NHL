@@ -474,8 +474,12 @@ const landmarks = [
     properties: {
       id: 26,
       name: "Cooper Union",
-      description:
-        "Pioneering adult education center; site of famous anti-slavery speech by Abraham Lincoln",
+      bullets: [
+        { key: 'Built', value: '1859' },
+        { key: 'Architect', value: 'Frederick A. Petersen' },
+        { key: 'Architectural style', value: 'Italianate' },
+        { key: 'Significance', value: "First building in New York City to use rolled-iron I-beams and include an elevator shaft. Was the tallest building in NYC in 1859. National Historic Landmark and NYC Landmark. Site of Abraham Lincoln's famous Cooper Union Address in 1860." }
+      ],
       image_caption: "Cooper Union. New York Public Library Digital Collections. 1887 - 1964",
       image_link: "https://digitalcollections.nypl.org/items/31a5e160-c5ed-012f-bd93-58d385a7bc34#/?uuid=510d47e2-ef01-a3d9-e040-e00a18064a99",
       link: "https://cooper.edu/",
@@ -716,7 +720,8 @@ const landmarks = [
       id: 39,
       name: "Grace Church",
       bullets: [
-        { key: 'Built', value: '1846' },
+        { key: 'Founded', value: '1805' },
+        { key: 'Built', value: '1846 (current location)' },
         { key: 'Architect', value: 'James Renwick Jr. (his first major commission at age 23)' },
         { key: 'Architectural style', value: 'Gothic Revival' },
         { key: 'Significance', value: 'One of NYC\'s finest Gothic Revival structures. Once the most fashionable church in the city.' }
@@ -990,7 +995,7 @@ const landmarks = [
         { key: 'Built', value: '1902 (with additions 1924, 1928, 1931)' },
         { key: 'Architect', value: 'Theodore de Lemos and A.W. Cordes (original 1902), Robert D. Kohn (additions)' },
         { key: 'Architectural Style', value: 'Palladian (original), Art Deco (later additions)' },
-        { key: 'Significance', value: 'Flagship store of America\'s largest department store chain and one of the world\'s largest department stores. Historic retail landmark spanning 2.5 million square feet that pioneered the uptown movement of major retailers to Herald Square. Famous for its Thanksgiving Day Parade, holiday windows, and preservation of original wooden escalators.' }
+        { key: 'Significance', value: "Flagship store of America's largest department store chain and historic retail landmark, famous for its Thanksgiving Day Parade, holiday windows; spans 2.5 million square feet in Herald Square." }
       ],
       image_caption:
         "R. H. Macy and Company department store during the week before Christmas. Library of Congress.",
@@ -1182,7 +1187,13 @@ const landmarks = [
     properties: {
       id: 65,
       name: "New York Life Building",
-      description: "Last significant Cass Gilbert skyscraper in Manhattan",
+      bullets: [
+        { key: 'Built', value: '1926-1928' },
+        { key: 'Architect', value: 'Cass Gilbert' },
+        { key: 'Architectural style', value: 'Gothic Revival' },
+        { key: 'Height', value: '615 feet (40 stories)' },
+        { key: 'Significance', value: 'Built on the site of Madison Square Garden, features distinctive golden pyramidal roof, represents transition from historic revival to Art Deco period architecture, and serves as a powerful example of corporate architecture symbolizing financial strength.' }
+      ],
       image_caption: "West 25th Street - Broadway. The New York Public Library Digital Collections. 1952.",
       image_link: "https://digitalcollections.nypl.org/items/b6763c10-c5ec-012f-5f14-58d385a7bc34#/?uuid=510d47e2-f28e-a3d9-e040-e00a18064a99",
     },
@@ -1694,12 +1705,11 @@ const landmarks = [
         { key: 'Architectural style', value: 'Italian Renaissance' },
         { key: 'Nickname', value: '"Marble Palace"' },
         { key: 'Owner', value: 'Alexander Turney Stewart, Irish immigrant and business legend' },
-        { key: 'Significance', value: 'America\'s first department store' },
-        { key: 'Legacy', value: 'Introduced Italian Renaissance architectural style to the United States' },
+        { key: 'Significance', value: "America's first department store; introduced Italian Renaissance architectural style to the United States" },
         { key: 'Notable', value: 'Now known as Sun Building, former headquarters of The Sun newspaper' }
       ],
-      image_caption: "Stuart's Marble Palace. Library of Congress. The New York Public Library Digital Collections. 1851.",
-      image_link: "https://digitalcollections.nypl.org/items/30af6670-c55f-012f-f765-58d385a7bc34#/?uuid=510d47e0-dae7-a3d9-e040-e00a18064a99",
+      image_caption: "Grace Church and Stewart's Store. The New York Public Library Digital Collections. 1858 - 1925.",
+      image_link: "https://digitalcollections.nypl.org/items/d3487520-c557-012f-0c37-58d385a7bc34#/?uuid=510d47e0-1eee-a3d9-e040-e00a18064a99",
       quote: "The Sun... It Shines for All.",
       quote_author:
         "Inscription on a non-working clock from the building's Sun newspaper era",
