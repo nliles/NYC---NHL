@@ -609,8 +609,13 @@ const landmarks = [
     properties: {
       id: 33,
       name: "Equitable Building",
-      description:
-        "One of the earliest skyscrapers in Manhattan; profoundly influenced later skyscraper design",
+      bullets: [
+        { key: 'Built', value: '1913-1915' },
+        { key: 'Architect', value: 'Ernest R. Graham with Peirce Anderson' },
+        { key: 'Architectural style', value: 'Neoclassical' },
+        { key: 'Height', value: '555 feet (38 stories)' },
+        { key: 'Significance', value: 'One of the first skyscrapers and first office building with passenger elevators. It cut off direct sunlight from Broadway, leading to NYC\'s 1916 Zoning Resolution regulating building heights and shapes.' }
+      ],
       image_caption: "Broadway - Wall Street - Cedar Street. The New York Public Library Digital Collections. 1887 - 1986.",
       image_link: "https://digitalcollections.nypl.org/items/e31f72e0-c5cd-012f-267a-58d385a7bc34#/?uuid=510d47e2-02e2-a3d9-e040-e00a18064a99",
     },
