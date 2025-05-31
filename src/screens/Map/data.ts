@@ -43,7 +43,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-74.00446645484749, 40.7146503844196],
+      coordinates: [-74.00446407977192, 40.714547623459026],
     },
     properties: {
       id: 3,
@@ -51,8 +51,7 @@ const landmarks = [
       bullets: [
         { key: 'Used', value: '1690s-1794'},
         { key: 'Rediscovered', value: '1991 during construction'},
-        { key: 'Designated', value: 'National Historic Landmark (1993), National Monument (2007)'},
-        { key: 'Significance', value: "The nation's largest and earliest African American cemetery. Today, it is a monument honoring the thousands of enslaved Africans who built early NYC." },
+        { key: 'Significance', value: "The nation's oldest and largest known excavated burial ground for free and enslaved Africans. Today, it serves as a monument honoring the thousands who built early NYC." },
       ],
       link: "https://www.nps.gov/afbg/index.htm",
       quote:
@@ -138,13 +137,12 @@ const landmarks = [
       id: 8,
       name: "Alice Austen House",
       bullets: [
-        { key: 'Resident', value: ' Alice Austen (1866-1952), pioneering photographer'},
-        { key: 'Significance', value: 'Captured over 7,000 images of Victorian life'},
-        { key: 'Impact', value: 'Preserving pioneering photography and LGBTQ+ history'},
+        { key: 'Residents', value: ' Alice Austen and her partner Gertrude Tate (1866-1952)'},
+        { key: 'Significance', value: "One of the first women photographers to work outside the confines of a studio, capturing over 8,000 images of everyday life in Victorian society."},
+        { key: 'Current', value: "Now the site of the Alice Austen House Museum, preserving her photographic legacy and serving as a nationally designated site of LGBTQ+ history." },
       ],
-      description: "Alice lived here for 30 years with her partner Gertrude Tate. Today, the house serves as a museum dedicated to her photographic legacy.",
       link: "https://aliceausten.org/",
-      image_caption: "Clear Comfort, the Austen House, with the photographer's grandfather, photo by Alice Austen. The New York Public Library Digital Collections. 1990–1999.",
+      image_caption: "Clear Comfort, the Austen House, with the photographer's grandfather, photo by Alice Austen. The New York Public Library Digital Collections.",
       image_link: "https://digitalcollections.nypl.org/items/64b4df40-c5ef-012f-3d82-58d385a7bc34#/?uuid=510d47d9-c9ce-a3d9-e040-e00a18064a99",
       quote: "I guess I was too good to get married.",
       quote_author: "Alice Austen, on why she never married",
@@ -176,14 +174,16 @@ const landmarks = [
       name: "Bayard-Condict Building",
       bullets: [
         { key: 'Built', value: '1899' },
-        { key: 'Architect', value: 'Louis H. Sullivan with Lyndon P. Smith' },
+        { key: 'Architect', value: 'Louis H. Sullivan' },
         { key: 'Architectural style', value: 'Chicago School' },
         { key: 'Height', value: '167 feet feet (13 floors)' },
-        { key: 'Significance', value: "Considered New York's first modern skyscraper and an important example of early skyscraper design, featuring Sullivan's characteristic ornate terra cotta facade." }
+        { key: 'Significance', value: "New York's first modern skyscraper, showcasing Sullivan's characteristic ornate terra cotta facade." }
       ],
-      image_caption: 'ayard-Condict Building. Library of Congress. 1933.',
+      image_caption: 'Bayard-Condict Building. Library of Congress. 1933.',
       image_link: "https://www.loc.gov/resource/hhh.ny0350.photos/?sp=1",
       link: "https://hdc.org/buildings/bayard-condict-building/",
+      quote: "An architect, to be a true exponent of his time, must possess first, last and always the sympathy, the intuition of a poet.",
+      quote_author: "Louis H. Sullivan",
     },
   },
   {
@@ -196,8 +196,8 @@ const landmarks = [
       id: 11,
       name: "Bell Laboratories Building",
       bullets: [
-        { key: 'Bell Labs Period', value: '1898-1966' },
-        { key: 'Significance', value: "Site of one of the world's most prestigious telecommunications research organizations, where groundbreaking innovations and inventions were conducted." },
+        { key: 'Period', value: '1898-1966' },
+        { key: 'Significance', value: "Site of one of the world's most prestigious telecommunications research organizations; later became the artists housing project in the United States." },
         { key: 'Current', value: "Home to Westbeth Artists Community since 1970." }
       ],
       image_caption: "Bell Laboratories Building. Wikimedia Commons. 1936",
@@ -588,10 +588,10 @@ const landmarks = [
       name: "Empire State Building",
       bullets: [
         { key: 'Built', value: '1930-1931' },
-        { key: 'Architect', value: 'Shreve, Lamb & Harmon' },
+        { key: 'Architect', value: 'William F. Lamb' },
         { key: 'Architectural Style', value: 'Art Deco' },
         { key: 'Height', value: '1,250 feet (102 floors)' },
-        { key: 'Significance', value: "World's tallest building from 1931-1970; iconic symbol of American ambition during the Great Depression." }
+        { key: 'Significance', value: "World's tallest building from 1931-1970; symbol of American resilience during the Great Depression." }
       ],
       image_caption: 'The Empire State Building, Library of Congress, 1952.',
       image_link: 'https://www.loc.gov/item/2020635807/',
@@ -659,7 +659,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.95533993600401, 40.762716327570274],
+      coordinates: [-73.95523352343463, 40.762988762154954],
     },
     properties: {
       id: 36,
@@ -668,11 +668,13 @@ const landmarks = [
         { key: 'Built', value: '1903-1906' },
         { key: 'Architect', value: 'Shepley, Rutan & Coolidge' },
         { key: 'Architectural Style', value: 'Classical Revival' },
-        { key: 'Significance', value: "First building of the Rockefeller Institute for Medical Research, establishing America's first major biomedical research laboratory and representing John D. Rockefeller's revolutionary vision for medical philanthropy." }
+        { key: 'Significance', value: "The founding building of Rockefeller University's campus, housing the nation's first major biomedical research laboratory." }
       ],
       image_caption: "Founder's Hall, Digital Commons @ RU, ca. 1916–1930.",
       image_link: 'https://digitalcommons.rockefeller.edu/founders-hall/8/',
       link: "https://www.rockefeller.edu/about/history/",
+      quote: "Science for the Benefit of Humanity",
+      quote_author: "Mission statement",
     },
   },
   {
@@ -727,7 +729,7 @@ const landmarks = [
       bullets: [
         { key: 'Founded', value: '1805' },
         { key: 'Built', value: '1846 (current location)' },
-        { key: 'Architect', value: 'James Renwick Jr. (his first major commission at age 23)' },
+        { key: 'Architect', value: 'James Renwick Jr. (first major commission at age 23)' },
         { key: 'Architectural style', value: 'Gothic Revival' },
         { key: 'Significance', value: 'One of NYC\'s finest Gothic Revival structures. Once the most fashionable church in the city.' }
       ],
@@ -810,10 +812,10 @@ const landmarks = [
       name: "Solomon R. Guggenheim Museum",
       bullets:[
         { key: 'Built', value: '1943-1959' },
+        { key: 'Founder', value: 'Solomon R. Guggenheim' },
         { key: 'Architect', value: 'Frank Lloyd Wright' },
         { key: 'Architectural Style', value: 'Modern/Organic Architecture' },
         { key: 'Collection Focus', value: 'Modern and contemporary art, Impressionist and Post-Impressionist works' },
-        { key: 'Founder', value: 'Solomon R. Guggenheim' },
         { key: 'Significance', value: 'Revolutionary museum design that challenged traditional gallery spaces' }
       ],
       link: "https://www.guggenheim.org/",
@@ -825,17 +827,18 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.9652940534302, 40.76041258963953],
+      coordinates: [-73.98378743776944, 40.71544536786666],
     },
     properties: {
       id: 44,
       name: "Henry Street Settlement and Neighborhood Playhouse",
       bullets: [
-        { key: 'Founded', value: '1893 by Lillian Wald'},
+        { key: 'Founded', value: '1893'},
+        { key: 'Founder', value: 'Lillian Wald, nurse and humanitarian'},
         { key: 'Significance', value: 'Pioneered community-based social services for Lower East Side immigrants. Still operating today.'},
       ],
       quote: "That morning's experience was a baptism of fire. Deserted were the laboratory and academic work of college. I never returned to them...I rejoiced that I had a training in the care of the sick.",
-      quote_author: "Nurse Lillian Wald, after helping a hemorrhaging new mother whose doctor had abandoned her because she could not pay, 1893",
+      quote_author: "Lillian Wald, after helping a hemorrhaging new mother",
       image_caption: "Backyard playground in nurse's settlement, Henry Street. Library of Congress, ca. 1950.",
       image_link: "https://www.loc.gov/item/2002710290/",
       link: "https://www.henrystreet.org/",
@@ -1014,21 +1017,23 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.991111, 40.757222],
+      coordinates: [-73.98222767810792, 40.759444025009714],
     },
     properties: {
       id: 55,
       name: "McGraw-Hill Building",
       bullets: [
         { key: 'Built', value: '1931' },
-        { key: 'Architect', value: 'Raymond Hood (Hood, Godley, and Fouilhoux)' },
-        { key: 'Architectural Style', value: 'International Style/Art Deco/Art Moderne' },
+        { key: 'Architect', value: 'Raymond Hood' },
+        { key: 'Architectural Style', value: 'Art Deco, International Style' },
         { key: 'Height', value: '485 feet (33 stories)' },
-        { key: 'Significance', value: "Transitional skyscraper bridging Art Deco and International Style" }
+        { key: 'Significance', value: 'One of the first International Style buildings, marking the transition from Art Deco to modern skyscraper design.' }
       ],
       image_caption: "McGraw Hill Building. The New York Public Library Digital Collections. 1936.",
       image_link: "https://digitalcollections.nypl.org/items/689c3020-a48d-013a-8d98-0242ac110003#/?uuid=4f3d4120-a48e-013a-7a4f-0242ac110002,",
       link: "https://archsb.com/projects/mcgraw-hill-building-archstone-builders/",
+      quote: "The most beautiful building in New York City",
+      quote_author: "Ayn Rand",
     },
   },
   {
@@ -1304,10 +1309,8 @@ const landmarks = [
       bullets: [
         { key: 'Built', value: '1694' },
         { key: 'Architectural style', value: 'Dutch Colonial' },
-        { key: 'Historic Document', value: 'Community produced Flushing Remonstrance (1657)' },
-        { key: 'Significance', value: 'Reputed to be oldest house of worship in New York State' },
-        { key: 'Legacy', value: 'Helped lay groundwork for Bill of Rights religious freedom protection' },
-        { key: 'Notable', value: 'Quaker community still gathers here for Sunday services after 330+ years' }
+        { key: 'Significance', value: 'Reputed to be the oldest house of worship in New York State, where Quakers have gathered continuously for Sunday services for more than 330 years.' },
+        { key: 'Legacy', value: 'The early community produced the Flushing Remonstrance (1657), which laid the groundwork for Bill of Rights religious freedom protections.' },
       ],
       link: "https://flushingfriends.org/",
       quote:
@@ -1426,6 +1429,8 @@ const landmarks = [
       description:
         "Home of legendary African-American actor and activist Paul Robeson",
       link: "https://www.nps.gov/places/new-york-paul-robeson-home.htm",
+      quote: "To be free . . . to walk the good American earth as equal citizens, to live without fear, to enjoy the fruits of our toil, to give our children every opportunity in life–that dream which we have held so long in our hearts is today the destiny that we hold in our hands.",
+      quote_author: 'Paul Robeson, "Here I Stand"',
     },
   },
   {
@@ -1514,7 +1519,7 @@ const landmarks = [
         { key: 'Significance', value: 'Among the earliest Romanesque Revival churches in the United States, known for its long-standing commitment to serving the urban poor through outreach and community programs.' },
       ],
       link: "https://www.calvarystgeorges.org/full-parish-history",
-      image_caption: "St. George's Church, N.Y.C. The New York Public Library. 1911–1921",
+      image_caption: "St. George's Church. The New York Public Library. 1911–1921",
       image_link: "https://digitalcollections.nypl.org/items/6597dae0-c55c-012f-4d68-58d385a7bc34#/?uuid=510d47e2-8bb9-a3d9-e040-e00a18064a99",
     },
   },
@@ -1573,8 +1578,8 @@ const landmarks = [
       name: "Margaret Sanger Clinic",
       bullets: [
         { key: 'Founded', value: '1916 in Brooklyn, moved to Manhattan location 1930' },
-        { key: 'Operated', value: '1930-1973' },
         { key: 'Founder', value: 'Margaret Sanger' },
+        { key: 'Operated', value: '1930-1973' },
         { key: 'Significance', value: 'Pioneering center for reproductive rights and family planning research that reshaped attitudes toward reproductive health and sexuality.' },
       ],
       quote:
@@ -1700,7 +1705,7 @@ const landmarks = [
         { key: 'Built', value: '1845-1846' },
         { key: 'Architects', value: 'Joseph Trench and John B. Snook' },
         { key: 'Architectural style', value: 'Italian Renaissance' },
-        { key: 'Nickname', value: '"Marble Palace"' },
+        { key: 'Nickname', value: 'Marble Palace' },
         { key: 'Owner', value: 'Alexander Turney Stewart, Irish immigrant and business legend' },
         { key: 'Significance', value: "America's first department store; introduced Italian Renaissance architectural style to the United States" },
         { key: 'Notable', value: 'Now known as Sun Building, former headquarters of The Sun newspaper' }
@@ -1748,7 +1753,7 @@ const landmarks = [
       bullets: [
         { key: 'Built', value: '1918-1930' },
         { key: 'Architect', value: 'Bertram Goodhue (with later additions by Mayers, Murray & Phillip)' },
-        { key: 'Architectural Style', value: 'Byzantine Revival with Romanesque influences, featuring salmon-colored brick and limestone trim' },
+        { key: 'Architectural Style', value: 'Byzantine Revival with Romanesque influences' },
         { key: 'Significance', value: 'Landmark Manhattan church known for its distinctive dome and architectural beauty; famous for its music program and as a cultural venue; survived a major redevelopment controversy in the 1980s that helped strengthen historic preservation laws' }
       ],
       image_caption: "St. Bartholomew's on Park Avenue. The New York Public Library Digital Collections. 1931",
@@ -1930,7 +1935,7 @@ const landmarks = [
       name: "Union Square",
       bullets: [
         { key: 'Established', value: '1833 (opened 1839)' },
-        { key: 'Designer', value: 'Frederick Law Olmsted and Calvert Vaux (1872 redesign)' },
+        { key: 'Designer', value: 'Frederick Law Olmsted and Calvert Vaux' },
         { key: 'Significance', value: "Site of America's first Labor Day parade in 1882, establishing its significance in labor history. Redesigned as an open forum for public gatherings, political rallies, and civic engagement." }
       ],
       image_caption: "Union Square Looking North, Library of Congress, 1919",
@@ -2084,19 +2089,24 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-74.00839725969281, 40.71329704082626],
+      coordinates: [-74.0083556135951, 40.712469825250466],
     },
     properties: {
       id: 114,
       name: "Woolworth Building",
       bullets: [
-        { key: 'Built', value: '1913' },
+        { key: 'Built', value: '1910 - 1913' },
+        { key: 'Commissioner', value: 'Frank W. Woolworth' },
         { key: 'Architect', value: 'Cass Gilbert' },
         { key: 'Architectural Style', value: 'Neo-Gothic' },
-        { key: 'Significance', value: 'World\'s tallest building from 1913-1930 at 792 feet, dubbed the "Cathedral of Commerce." Revolutionary steel-frame skyscraper with Gothic Revival styling that became the model for early 20th-century tower design. Commissioned by five-and-dime magnate Frank W. Woolworth as both corporate headquarters and monument to American commercial success.' }
+        { key: 'Height', value: '792 feet (57 floors)' },
+        { key: 'Significance', value: "World's tallest building from 1913-1930 and a showcase for modern technology." }
       ],
       image_caption: 'Woolworth Building. New York City. Library of Congress. 1912.',
       image_link: 'https://www.loc.gov/resource/ppmsca.54245/',
+      link: "https://www.woolworthbuilding.com/",
+      quote: "Cathedral of Commerce",
+      quote_author: "Dubbed nickname for its neo-Gothic architecture and height",
     },
   },
   {
