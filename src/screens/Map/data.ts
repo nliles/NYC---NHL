@@ -1114,7 +1114,6 @@ const landmarks = [
       name: "Morris-Jumel Mansion",
       bullets: [
         { key: 'Built', value: '1765' },
-        { key: 'Architect', value: 'Unknown' },
         { key: 'Architectural Style', value: 'Georgian Colonial with Federal period modifications' },
         { key: 'Significance', value: 'Manhattan\'s oldest surviving house; served as George Washington\'s headquarters during the Revolutionary War in 1776; later home to Eliza Jumel, who married Aaron Burr; now a historic house museum in Washington Heights' }
       ],
@@ -1678,17 +1677,10 @@ const landmarks = [
       id: 92,
       name: "SoHo-Cast Iron Historic District",
       bullets: [
-        { key: 'Location', value: 'Lower Manhattan, bounded by Houston St, West Broadway, Crosby St, and Canal St' },
-        { key: 'Historic Designation', value: 'NYC Historic District (1973), National Register of Historic Places' },
-        { key: 'Architectural Significance', value: 'World\'s largest collection of cast-iron architecture with 250+ buildings' },
         { key: 'Original Purpose', value: 'Manufacturing district for textiles and light industrial goods (1800s)' },
-        { key: 'Construction Period', value: 'Mid-to-late 19th century' },
         { key: 'Cast-Iron Benefits', value: 'Cheaper than stone, fire-resistant, allowed large windows and open floor plans' },
         { key: 'Architectural Styles', value: 'Italianate and Second Empire cast-iron facades' },
-        { key: 'Transformation', value: 'Industrial → Artist lofts (1960s-70s) → Upscale residential/commercial' },
-        { key: 'Notable Building', value: 'Haughwout Building (1857)' },
-        { key: 'Current Character', value: 'High-end boutiques, galleries, restaurants, and luxury residences' },
-        { key: 'Legacy', value: 'Model for historic preservation and adaptive reuse worldwide' }
+        { key: 'Significance', value: 'World\'s largest collection of cast-iron architecture with 250+ buildings' },
       ],
       image_caption:"E. V. Haughwout & Company Building, 488-492 Broadway, New York County, NY. Library of Congress. 1930s",
       image_link: "https://www.loc.gov/resource/hhh.ny0379.photos/?sp=3",
@@ -2029,7 +2021,7 @@ const landmarks = [
         { key: 'Built', value: '1748-1749' },
         { key: 'Builder', value: 'Frederick Van Cortlandt' },
         { key: 'Architectural Style', value: 'Georgian' },
-        { key: 'Significance', value: 'Oldest surviving house in the Bronx and NYC\'s first historic house museum (opened 1897). Served as George Washington\'s headquarters during the Revolutionary War and witnessed key strategic meetings. Built of local fieldstone with brick trim, it represents colonial Dutch-American heritage and the Van Cortlandt family\'s 140-year residence on their Yonkers plantation.' }
+        { key: 'Significance', value: "Oldest surviving house in the Bronx, this home served as George Washington's headquarters during the Revolutionary War and represents 140 years of Van Cortlandt family heritage." }
       ],
       image_caption: "The Van Cortlandt Mansion, New York. The New York Public Library Digital Collections. 1860 - 1920.",
       image_url: "https://digitalcollections.nypl.org/items/607674e0-c617-012f-f6e4-58d385a7bc34#/?uuid=510d47d9-adf4-a3d9-e040-e00a18064a99",
