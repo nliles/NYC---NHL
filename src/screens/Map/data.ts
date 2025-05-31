@@ -178,11 +178,11 @@ const landmarks = [
         { key: 'Built', value: '1899' },
         { key: 'Architect', value: 'Louis H. Sullivan with Lyndon P. Smith' },
         { key: 'Architectural style', value: 'Chicago School' },
-        { key: 'Significance', value: 'Sullivan\'s only NYC work - the acclaimed "father of skyscrapers"' },
-        { key: 'Notable', value: 'New York\'s first truly modern skyscraper' }
+        { key: 'Height', value: '167 feet feet (13 floors)' },
+        { key: 'Significance', value: "Considered New York's first modern skyscraper and an important example of early skyscraper design, featuring Sullivan's characteristic ornate terra cotta facade." }
       ],
-      image_caption: 'Bleeker Street #65-69. The New York Public Library Digital Collections. 1934.',
-      image_link: "https://digitalcollections.nypl.org/items/d2425b30-c5cd-012f-1554-58d385a7bc34#/?uuid=510d47e2-027e-a3d9-e040-e00a18064a99",
+      image_caption: 'ayard-Condict Building. Library of Congress. 1933.',
+      image_link: "https://www.loc.gov/resource/hhh.ny0350.photos/?sp=1",
       link: "https://hdc.org/buildings/bayard-condict-building/",
     },
   },
@@ -535,12 +535,11 @@ const landmarks = [
       id: 29,
       name: "Dyckman House",
       bullets: [
-        { key: 'Built', value: 'c. 1784-1785' },
+        { key: 'Built', value: 'ca. 1784-1785' },
         { key: 'Builder', value: 'William Dyckman' },
         { key: 'Architectural style', value: 'Dutch Colonial' },
         { key: 'Original Site', value: '250+ acre farm in northern Manhattan' },
-
-        { key: 'Notable', value: "Oldest remaining farmhouse on Manhattan island, a vestige of New York City's rural past" }
+        { key: 'Significance', value: "Oldest remaining farmhouse on Manhattan island, a vestige of New York City's rural past" }
       ],
       image_caption: "Dyckman House. The New York Public Library Digital Collections. 1887 - 1986.",
       image_link: "https://digitalcollections.nypl.org/items/f01d7e90-c5cd-012f-0645-58d385a7bc34#/?uuid=510d47e2-0326-a3d9-e040-e00a18064a99",
@@ -804,7 +803,7 @@ const landmarks = [
         { key: 'Architect', value: 'Frank Lloyd Wright' },
         { key: 'Architectural Style', value: 'Modern/Organic Architecture' },
         { key: 'Collection Focus', value: 'Modern and contemporary art, Impressionist and Post-Impressionist works' },
-        { key: 'Founder', value: 'Solomon R. Guggenheim, mining magnate and art collector' },
+        { key: 'Founder', value: 'Solomon R. Guggenheim' },
         { key: 'Significance', value: 'Revolutionary museum design that challenged traditional gallery spaces' }
       ],
       link: "https://www.guggenheim.org/",
@@ -1289,7 +1288,7 @@ const landmarks = [
       name: "Old Quaker Meeting House",
       bullets: [
         { key: 'Built', value: '1694' },
-        { key: 'Architectural style', value: 'Dutch Colonial, embodying Quaker principles' },
+        { key: 'Architectural style', value: 'Dutch Colonial' },
         { key: 'Historic Document', value: 'Community produced Flushing Remonstrance (1657)' },
         { key: 'Significance', value: 'Reputed to be oldest house of worship in New York State' },
         { key: 'Legacy', value: 'Helped lay groundwork for Bill of Rights religious freedom protection' },
