@@ -29,7 +29,7 @@ const Map = ({
         minZoom: 9.5,
       });
 
-      mapInstance?.current as any = map;
+      mapInstance.current = map as any;
 
       const coord = (mapInstance?.current as any)?.getCenter();
       (mapInstance?.current as any)?.setCenter([coord.lng, coord.lat]);
