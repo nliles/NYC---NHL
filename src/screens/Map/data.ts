@@ -310,7 +310,7 @@ const landmarks = [
         { key: 'Built', value: '1899-1902' },
         { key: 'Architect', value: 'Babb, Cook & Willard' },
         { key: 'Architectural style', value: 'Georgian Revival' },
-        { key: 'Significance', value: 'The first private residence in the U.S. with a steel frame and technological innovations like an early Otis elevator, central heating, and air-conditioning, plus one of Manhattan’s rare private gardens.' },
+        { key: 'Significance', value: "The first private residence in the U.S. with a steel frame and technological innovations like an early Otis elevator, central heating, and air-conditioning. It also featured one of Manhattan's rare private gardens." },
       ],
       image_caption: "Carnegie House, Library of Congress, ca. 1920",
       image_link: "https://www.loc.gov/item/2014703975/",
@@ -611,7 +611,7 @@ const landmarks = [
       name: "Equitable Building",
       bullets: [
         { key: 'Built', value: '1913-1915' },
-        { key: 'Architect', value: 'Ernest R. Graham with Peirce Anderson' },
+        { key: 'Architect', value: 'Ernest R. Graham' },
         { key: 'Architectural style', value: 'Neoclassical' },
         { key: 'Height', value: '555 feet (38 stories)' },
         { key: 'Significance', value: 'One of the first skyscrapers and first office building with passenger elevators. It cut off direct sunlight from Broadway, leading to NYC\'s 1916 Zoning Resolution regulating building heights and shapes.' }
@@ -1707,15 +1707,14 @@ const landmarks = [
         { key: 'Architectural style', value: 'Italian Renaissance' },
         { key: 'Nickname', value: 'Marble Palace' },
         { key: 'Owner', value: 'Alexander Turney Stewart, Irish immigrant and business legend' },
-        { key: 'Significance', value: "America's first department store; introduced Italian Renaissance architectural style to the United States" },
-        { key: 'Notable', value: 'Now known as Sun Building, former headquarters of The Sun newspaper' }
+        { key: 'Significance', value: "America's first department store which transformed the retail landscape and became the model for modern department stores." },
       ],
       image_caption: "Grace Church and Stewart's Store. The New York Public Library Digital Collections. 1858 - 1925.",
       image_link: "https://digitalcollections.nypl.org/items/d3487520-c557-012f-0c37-58d385a7bc34#/?uuid=510d47e0-1eee-a3d9-e040-e00a18064a99",
       quote: "The Sun... It Shines for All.",
       quote_author:
-        "Inscription on a non-working clock from the building's Sun newspaper era",
-      link: "https://www.villagepreservation.org/2020/09/21/beyond-the-village-and-back-the-marble-palace-a-t-stewart-store-at-280-broadway/",
+        "Inscription on a non-working clock from the building's time as The Sun newspaper headquarters",
+      link: "https://www.nyc.gov/site/dcas/business/dcasmanagedbuildings/sun-building.page",
     },
   },
   {
