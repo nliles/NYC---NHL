@@ -178,11 +178,11 @@ const landmarks = [
         { key: 'Built', value: '1899' },
         { key: 'Architect', value: 'Louis H. Sullivan with Lyndon P. Smith' },
         { key: 'Architectural style', value: 'Chicago School' },
-        { key: 'Significance', value: 'Sullivan\'s only NYC work - the acclaimed "father of skyscrapers"' },
-        { key: 'Notable', value: 'New York\'s first truly modern skyscraper' }
+        { key: 'Height', value: '167 feet feet (13 floors)' },
+        { key: 'Significance', value: "Considered New York's first modern skyscraper and an important example of early skyscraper design, featuring Sullivan's characteristic ornate terra cotta facade." }
       ],
-      image_caption: 'Bleeker Street #65-69. The New York Public Library Digital Collections. 1934.',
-      image_link: "https://digitalcollections.nypl.org/items/d2425b30-c5cd-012f-1554-58d385a7bc34#/?uuid=510d47e2-027e-a3d9-e040-e00a18064a99",
+      image_caption: 'ayard-Condict Building. Library of Congress. 1933.',
+      image_link: "https://www.loc.gov/resource/hhh.ny0350.photos/?sp=1",
       link: "https://hdc.org/buildings/bayard-condict-building/",
     },
   },
@@ -474,8 +474,12 @@ const landmarks = [
     properties: {
       id: 26,
       name: "Cooper Union",
-      description:
-        "Pioneering adult education center; site of famous anti-slavery speech by Abraham Lincoln",
+      bullets: [
+        { key: 'Built', value: '1859' },
+        { key: 'Architect', value: 'Frederick A. Petersen' },
+        { key: 'Architectural style', value: 'Italianate' },
+        { key: 'Significance', value: "First building in New York City to use rolled-iron I-beams and include an elevator shaft. Was the tallest building in NYC in 1859. National Historic Landmark and NYC Landmark. Site of Abraham Lincoln's famous Cooper Union Address in 1860." }
+      ],
       image_caption: "Cooper Union. New York Public Library Digital Collections. 1887 - 1964",
       image_link: "https://digitalcollections.nypl.org/items/31a5e160-c5ed-012f-bd93-58d385a7bc34#/?uuid=510d47e2-ef01-a3d9-e040-e00a18064a99",
       link: "https://cooper.edu/",
@@ -535,12 +539,11 @@ const landmarks = [
       id: 29,
       name: "Dyckman House",
       bullets: [
-        { key: 'Built', value: 'c. 1784-1785' },
+        { key: 'Built', value: 'ca. 1784-1785' },
         { key: 'Builder', value: 'William Dyckman' },
         { key: 'Architectural style', value: 'Dutch Colonial' },
         { key: 'Original Site', value: '250+ acre farm in northern Manhattan' },
-
-        { key: 'Notable', value: "Oldest remaining farmhouse on Manhattan island, a vestige of New York City's rural past" }
+        { key: 'Significance', value: "Oldest remaining farmhouse on Manhattan island, a vestige of New York City's rural past" }
       ],
       image_caption: "Dyckman House. The New York Public Library Digital Collections. 1887 - 1986.",
       image_link: "https://digitalcollections.nypl.org/items/f01d7e90-c5cd-012f-0645-58d385a7bc34#/?uuid=510d47e2-0326-a3d9-e040-e00a18064a99",
@@ -606,8 +609,13 @@ const landmarks = [
     properties: {
       id: 33,
       name: "Equitable Building",
-      description:
-        "One of the earliest skyscrapers in Manhattan; profoundly influenced later skyscraper design",
+      bullets: [
+        { key: 'Built', value: '1913-1915' },
+        { key: 'Architect', value: 'Ernest R. Graham with Peirce Anderson' },
+        { key: 'Architectural style', value: 'Neoclassical' },
+        { key: 'Height', value: '555 feet (38 stories)' },
+        { key: 'Significance', value: 'One of the first skyscrapers and first office building with passenger elevators. It cut off direct sunlight from Broadway, leading to NYC\'s 1916 Zoning Resolution regulating building heights and shapes.' }
+      ],
       image_caption: "Broadway - Wall Street - Cedar Street. The New York Public Library Digital Collections. 1887 - 1986.",
       image_link: "https://digitalcollections.nypl.org/items/e31f72e0-c5cd-012f-267a-58d385a7bc34#/?uuid=510d47e2-02e2-a3d9-e040-e00a18064a99",
     },
@@ -717,7 +725,8 @@ const landmarks = [
       id: 39,
       name: "Grace Church",
       bullets: [
-        { key: 'Built', value: '1846' },
+        { key: 'Founded', value: '1805' },
+        { key: 'Built', value: '1846 (current location)' },
         { key: 'Architect', value: 'James Renwick Jr. (his first major commission at age 23)' },
         { key: 'Architectural style', value: 'Gothic Revival' },
         { key: 'Significance', value: 'One of NYC\'s finest Gothic Revival structures. Once the most fashionable church in the city.' }
@@ -804,7 +813,7 @@ const landmarks = [
         { key: 'Architect', value: 'Frank Lloyd Wright' },
         { key: 'Architectural Style', value: 'Modern/Organic Architecture' },
         { key: 'Collection Focus', value: 'Modern and contemporary art, Impressionist and Post-Impressionist works' },
-        { key: 'Founder', value: 'Solomon R. Guggenheim, mining magnate and art collector' },
+        { key: 'Founder', value: 'Solomon R. Guggenheim' },
         { key: 'Significance', value: 'Revolutionary museum design that challenged traditional gallery spaces' }
       ],
       link: "https://www.guggenheim.org/",
@@ -991,7 +1000,7 @@ const landmarks = [
         { key: 'Built', value: '1902 (with additions 1924, 1928, 1931)' },
         { key: 'Architect', value: 'Theodore de Lemos and A.W. Cordes (original 1902), Robert D. Kohn (additions)' },
         { key: 'Architectural Style', value: 'Palladian (original), Art Deco (later additions)' },
-        { key: 'Significance', value: 'Flagship store of America\'s largest department store chain and one of the world\'s largest department stores. Historic retail landmark spanning 2.5 million square feet that pioneered the uptown movement of major retailers to Herald Square. Famous for its Thanksgiving Day Parade, holiday windows, and preservation of original wooden escalators.' }
+        { key: 'Significance', value: "Flagship store of America's largest department store chain and historic retail landmark, famous for its Thanksgiving Day Parade, holiday windows; spans 2.5 million square feet in Herald Square." }
       ],
       image_caption:
         "R. H. Macy and Company department store during the week before Christmas. Library of Congress.",
@@ -1105,7 +1114,6 @@ const landmarks = [
       name: "Morris-Jumel Mansion",
       bullets: [
         { key: 'Built', value: '1765' },
-        { key: 'Architect', value: 'Unknown' },
         { key: 'Architectural Style', value: 'Georgian Colonial with Federal period modifications' },
         { key: 'Significance', value: 'Manhattan\'s oldest surviving house; served as George Washington\'s headquarters during the Revolutionary War in 1776; later home to Eliza Jumel, who married Aaron Burr; now a historic house museum in Washington Heights' }
       ],
@@ -1183,7 +1191,13 @@ const landmarks = [
     properties: {
       id: 65,
       name: "New York Life Building",
-      description: "Last significant Cass Gilbert skyscraper in Manhattan",
+      bullets: [
+        { key: 'Built', value: '1926-1928' },
+        { key: 'Architect', value: 'Cass Gilbert' },
+        { key: 'Architectural style', value: 'Gothic Revival' },
+        { key: 'Height', value: '615 feet (40 stories)' },
+        { key: 'Significance', value: 'Built on the site of Madison Square Garden, features distinctive golden pyramidal roof, represents transition from historic revival to Art Deco period architecture, and serves as a powerful example of corporate architecture symbolizing financial strength.' }
+      ],
       image_caption: "West 25th Street - Broadway. The New York Public Library Digital Collections. 1952.",
       image_link: "https://digitalcollections.nypl.org/items/b6763c10-c5ec-012f-5f14-58d385a7bc34#/?uuid=510d47e2-f28e-a3d9-e040-e00a18064a99",
     },
@@ -1289,7 +1303,7 @@ const landmarks = [
       name: "Old Quaker Meeting House",
       bullets: [
         { key: 'Built', value: '1694' },
-        { key: 'Architectural style', value: 'Dutch Colonial, embodying Quaker principles' },
+        { key: 'Architectural style', value: 'Dutch Colonial' },
         { key: 'Historic Document', value: 'Community produced Flushing Remonstrance (1657)' },
         { key: 'Significance', value: 'Reputed to be oldest house of worship in New York State' },
         { key: 'Legacy', value: 'Helped lay groundwork for Bill of Rights religious freedom protection' },
@@ -1663,17 +1677,10 @@ const landmarks = [
       id: 92,
       name: "SoHo-Cast Iron Historic District",
       bullets: [
-        { key: 'Location', value: 'Lower Manhattan, bounded by Houston St, West Broadway, Crosby St, and Canal St' },
-        { key: 'Historic Designation', value: 'NYC Historic District (1973), National Register of Historic Places' },
-        { key: 'Architectural Significance', value: 'World\'s largest collection of cast-iron architecture with 250+ buildings' },
         { key: 'Original Purpose', value: 'Manufacturing district for textiles and light industrial goods (1800s)' },
-        { key: 'Construction Period', value: 'Mid-to-late 19th century' },
         { key: 'Cast-Iron Benefits', value: 'Cheaper than stone, fire-resistant, allowed large windows and open floor plans' },
         { key: 'Architectural Styles', value: 'Italianate and Second Empire cast-iron facades' },
-        { key: 'Transformation', value: 'Industrial → Artist lofts (1960s-70s) → Upscale residential/commercial' },
-        { key: 'Notable Building', value: 'Haughwout Building (1857)' },
-        { key: 'Current Character', value: 'High-end boutiques, galleries, restaurants, and luxury residences' },
-        { key: 'Legacy', value: 'Model for historic preservation and adaptive reuse worldwide' }
+        { key: 'Significance', value: 'World\'s largest collection of cast-iron architecture with 250+ buildings' },
       ],
       image_caption:"E. V. Haughwout & Company Building, 488-492 Broadway, New York County, NY. Library of Congress. 1930s",
       image_link: "https://www.loc.gov/resource/hhh.ny0379.photos/?sp=3",
@@ -1695,12 +1702,11 @@ const landmarks = [
         { key: 'Architectural style', value: 'Italian Renaissance' },
         { key: 'Nickname', value: '"Marble Palace"' },
         { key: 'Owner', value: 'Alexander Turney Stewart, Irish immigrant and business legend' },
-        { key: 'Significance', value: 'America\'s first department store' },
-        { key: 'Legacy', value: 'Introduced Italian Renaissance architectural style to the United States' },
+        { key: 'Significance', value: "America's first department store; introduced Italian Renaissance architectural style to the United States" },
         { key: 'Notable', value: 'Now known as Sun Building, former headquarters of The Sun newspaper' }
       ],
-      image_caption: "Stuart's Marble Palace. Library of Congress. The New York Public Library Digital Collections. 1851.",
-      image_link: "https://digitalcollections.nypl.org/items/30af6670-c55f-012f-f765-58d385a7bc34#/?uuid=510d47e0-dae7-a3d9-e040-e00a18064a99",
+      image_caption: "Grace Church and Stewart's Store. The New York Public Library Digital Collections. 1858 - 1925.",
+      image_link: "https://digitalcollections.nypl.org/items/d3487520-c557-012f-0c37-58d385a7bc34#/?uuid=510d47e0-1eee-a3d9-e040-e00a18064a99",
       quote: "The Sun... It Shines for All.",
       quote_author:
         "Inscription on a non-working clock from the building's Sun newspaper era",
@@ -2015,7 +2021,7 @@ const landmarks = [
         { key: 'Built', value: '1748-1749' },
         { key: 'Builder', value: 'Frederick Van Cortlandt' },
         { key: 'Architectural Style', value: 'Georgian' },
-        { key: 'Significance', value: 'Oldest surviving house in the Bronx and NYC\'s first historic house museum (opened 1897). Served as George Washington\'s headquarters during the Revolutionary War and witnessed key strategic meetings. Built of local fieldstone with brick trim, it represents colonial Dutch-American heritage and the Van Cortlandt family\'s 140-year residence on their Yonkers plantation.' }
+        { key: 'Significance', value: "Oldest surviving house in the Bronx, this home served as George Washington's headquarters during the Revolutionary War and represents 140 years of Van Cortlandt family heritage." }
       ],
       image_caption: "The Van Cortlandt Mansion, New York. The New York Public Library Digital Collections. 1860 - 1920.",
       image_url: "https://digitalcollections.nypl.org/items/607674e0-c617-012f-f6e4-58d385a7bc34#/?uuid=510d47d9-adf4-a3d9-e040-e00a18064a99",
