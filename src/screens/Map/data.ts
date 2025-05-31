@@ -496,7 +496,7 @@ const landmarks = [
       name: "Daily News Building",
       bullets: [
         { key: 'Built', value: '1930' },
-        { key: 'Architect', value: 'Raymond Hood and John Mead Howells' },
+        { key: 'Architect', value: 'Raymond Hood' },
         { key: 'Architectural style', value: 'Art Deco' },
         { key: 'Height', value: '476 ft (36 floors)' },
         { key: 'Significance', value: 'First modern free-standing skyscraper and pioneering example of Art Deco architecture.' },
