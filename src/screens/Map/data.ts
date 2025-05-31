@@ -138,13 +138,12 @@ const landmarks = [
       id: 8,
       name: "Alice Austen House",
       bullets: [
-        { key: 'Resident', value: ' Alice Austen (1866-1952), pioneering photographer'},
-        { key: 'Significance', value: 'Captured over 7,000 images of Victorian life'},
-        { key: 'Impact', value: 'Preserving pioneering photography and LGBTQ+ history'},
+        { key: 'Residents', value: ' Alice Austen and her partner Gertrude Tate (1866-1952)'},
+        { key: 'Significance', value: "One of the first women photographers to work outside the confines of a studio, capturing over 8,000 images of everyday life in Victorian society."},
+        { key: 'Current', value: "Now the site of the Alice Austen House Museum, preserving her photographic legacy and serving as a nationally designated site of LGBTQ+ history." },
       ],
-      description: "Alice lived here for 30 years with her partner Gertrude Tate. Today, the house serves as a museum dedicated to her photographic legacy.",
       link: "https://aliceausten.org/",
-      image_caption: "Clear Comfort, the Austen House, with the photographer's grandfather, photo by Alice Austen. The New York Public Library Digital Collections. 1990–1999.",
+      image_caption: "Clear Comfort, the Austen House, with the photographer's grandfather, photo by Alice Austen. The New York Public Library Digital Collections.",
       image_link: "https://digitalcollections.nypl.org/items/64b4df40-c5ef-012f-3d82-58d385a7bc34#/?uuid=510d47d9-c9ce-a3d9-e040-e00a18064a99",
       quote: "I guess I was too good to get married.",
       quote_author: "Alice Austen, on why she never married",
@@ -176,14 +175,16 @@ const landmarks = [
       name: "Bayard-Condict Building",
       bullets: [
         { key: 'Built', value: '1899' },
-        { key: 'Architect', value: 'Louis H. Sullivan with Lyndon P. Smith' },
+        { key: 'Architect', value: 'Louis H. Sullivan' },
         { key: 'Architectural style', value: 'Chicago School' },
         { key: 'Height', value: '167 feet feet (13 floors)' },
-        { key: 'Significance', value: "Considered New York's first modern skyscraper and an important example of early skyscraper design, featuring Sullivan's characteristic ornate terra cotta facade." }
+        { key: 'Significance', value: "New York's first modern skyscraper, showcasing Sullivan's characteristic ornate terra cotta facade." }
       ],
-      image_caption: 'ayard-Condict Building. Library of Congress. 1933.',
+      image_caption: 'Bayard-Condict Building. Library of Congress. 1933.',
       image_link: "https://www.loc.gov/resource/hhh.ny0350.photos/?sp=1",
       link: "https://hdc.org/buildings/bayard-condict-building/",
+      quote: "An architect, to be a true exponent of his time, must possess first, last and always the sympathy, the intuition of a poet.",
+      quote_author: "Louis H. Sullivan",
     },
   },
   {
@@ -196,8 +197,8 @@ const landmarks = [
       id: 11,
       name: "Bell Laboratories Building",
       bullets: [
-        { key: 'Bell Labs Period', value: '1898-1966' },
-        { key: 'Significance', value: "Site of one of the world's most prestigious telecommunications research organizations, where groundbreaking innovations and inventions were conducted." },
+        { key: 'Period', value: '1898-1966' },
+        { key: 'Significance', value: "Site of one of the world's most prestigious telecommunications research organizations; later became the artists housing project in the United States." },
         { key: 'Current', value: "Home to Westbeth Artists Community since 1970." }
       ],
       image_caption: "Bell Laboratories Building. Wikimedia Commons. 1936",
@@ -659,7 +660,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.95533993600401, 40.762716327570274],
+      coordinates: [-73.95523352343463, 40.762988762154954],
     },
     properties: {
       id: 36,
@@ -668,11 +669,13 @@ const landmarks = [
         { key: 'Built', value: '1903-1906' },
         { key: 'Architect', value: 'Shepley, Rutan & Coolidge' },
         { key: 'Architectural Style', value: 'Classical Revival' },
-        { key: 'Significance', value: "First building of the Rockefeller Institute for Medical Research, establishing America's first major biomedical research laboratory and representing John D. Rockefeller's revolutionary vision for medical philanthropy." }
+        { key: 'Significance', value: "The founding building of Rockefeller University's campus, housing the nation's first major biomedical research laboratory." }
       ],
       image_caption: "Founder's Hall, Digital Commons @ RU, ca. 1916–1930.",
       image_link: 'https://digitalcommons.rockefeller.edu/founders-hall/8/',
       link: "https://www.rockefeller.edu/about/history/",
+      quote: "Science for the Benefit of Humanity",
+      quote_author: "Mission statement",
     },
   },
   {
@@ -810,10 +813,10 @@ const landmarks = [
       name: "Solomon R. Guggenheim Museum",
       bullets:[
         { key: 'Built', value: '1943-1959' },
+        { key: 'Founder', value: 'Solomon R. Guggenheim' },
         { key: 'Architect', value: 'Frank Lloyd Wright' },
         { key: 'Architectural Style', value: 'Modern/Organic Architecture' },
         { key: 'Collection Focus', value: 'Modern and contemporary art, Impressionist and Post-Impressionist works' },
-        { key: 'Founder', value: 'Solomon R. Guggenheim' },
         { key: 'Significance', value: 'Revolutionary museum design that challenged traditional gallery spaces' }
       ],
       link: "https://www.guggenheim.org/",
@@ -825,17 +828,18 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.9652940534302, 40.76041258963953],
+      coordinates: [-73.98378743776944, 40.71544536786666],
     },
     properties: {
       id: 44,
       name: "Henry Street Settlement and Neighborhood Playhouse",
       bullets: [
-        { key: 'Founded', value: '1893 by Lillian Wald'},
+        { key: 'Founded', value: '1893'},
+        { key: 'Founder', value: 'Lillian Wald, nurse and humanitarian'},
         { key: 'Significance', value: 'Pioneered community-based social services for Lower East Side immigrants. Still operating today.'},
       ],
       quote: "That morning's experience was a baptism of fire. Deserted were the laboratory and academic work of college. I never returned to them...I rejoiced that I had a training in the care of the sick.",
-      quote_author: "Nurse Lillian Wald, after helping a hemorrhaging new mother whose doctor had abandoned her because she could not pay, 1893",
+      quote_author: "Lillian Wald, after helping a hemorrhaging new mother",
       image_caption: "Backyard playground in nurse's settlement, Henry Street. Library of Congress, ca. 1950.",
       image_link: "https://www.loc.gov/item/2002710290/",
       link: "https://www.henrystreet.org/",
@@ -1426,6 +1430,8 @@ const landmarks = [
       description:
         "Home of legendary African-American actor and activist Paul Robeson",
       link: "https://www.nps.gov/places/new-york-paul-robeson-home.htm",
+      quote: "To be free . . . to walk the good American earth as equal citizens, to live without fear, to enjoy the fruits of our toil, to give our children every opportunity in life–that dream which we have held so long in our hearts is today the destiny that we hold in our hands.",
+      quote_author: 'Paul Robeson, "Here I Stand"',
     },
   },
   {
@@ -1514,7 +1520,7 @@ const landmarks = [
         { key: 'Significance', value: 'Among the earliest Romanesque Revival churches in the United States, known for its long-standing commitment to serving the urban poor through outreach and community programs.' },
       ],
       link: "https://www.calvarystgeorges.org/full-parish-history",
-      image_caption: "St. George's Church, N.Y.C. The New York Public Library. 1911–1921",
+      image_caption: "St. George's Church. The New York Public Library. 1911–1921",
       image_link: "https://digitalcollections.nypl.org/items/6597dae0-c55c-012f-4d68-58d385a7bc34#/?uuid=510d47e2-8bb9-a3d9-e040-e00a18064a99",
     },
   },
@@ -1573,8 +1579,8 @@ const landmarks = [
       name: "Margaret Sanger Clinic",
       bullets: [
         { key: 'Founded', value: '1916 in Brooklyn, moved to Manhattan location 1930' },
-        { key: 'Operated', value: '1930-1973' },
         { key: 'Founder', value: 'Margaret Sanger' },
+        { key: 'Operated', value: '1930-1973' },
         { key: 'Significance', value: 'Pioneering center for reproductive rights and family planning research that reshaped attitudes toward reproductive health and sexuality.' },
       ],
       quote:
