@@ -713,8 +713,8 @@ const landmarks = [
         { key: 'Significance', value: 'Historic military fortress protecting New York Harbor for 200+ years (1794-1996); home to Fort Jay and Castle Williams National Monuments and over 50 historic buildings.' }
       ],
       link: "https://www.nps.gov/gois/index.htm",
-      image_caption: "Governor's Island, Castle Williams, from hydro-aeroplane, Library of Congress, ca. 1902.",
-      image_link: "https://www.loc.gov/item/98505905/",
+      image_caption: "Governers Island & The Narrows Library of Congress, ca. 1901.",
+      image_link: "https://www.loc.gov/resource/cph.3c35431/",
     },
   },
   {
