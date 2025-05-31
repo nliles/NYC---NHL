@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
 import styles from "./LandmarkProfile.module.css";
 
 const LandmarkProfile = ({

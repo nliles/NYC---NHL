@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react";
+import { Dispatch, SetStateAction, useEffect, useRef } from "react";
 import mapboxgl from "mapbox-gl/dist/mapbox-gl";
 import landmarks from "./data.ts";
 import styles from "./Map.module.css";
@@ -22,17 +22,17 @@ const Map = ({
       mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_TOKEN;
 
       const map = new mapboxgl.Map({
-        container: mapContainer.current,
+        container: mapContainer.current as any,
         style: "mapbox://styles/nmliles16/cmb4gmtey00bh01qv7evy8qr0",
         center: [-74.0199, 40.7528], // NYC coordinates (initial, will be adjusted)
         zoom: 12,
         minZoom: 9.5,
       });
 
-      mapInstance.current = map;
+      mapInstance?.current as any = map;
 
-      const coord = mapInstance.current.getCenter();
-      mapInstance.current.setCenter([coord.lng, coord.lat]);
+      const coord = (mapInstance?.current as any)?.getCenter();
+      (mapInstance?.current as any)?.setCenter([coord.lng, coord.lat]);
 
       map.on("load", () => {
         // Convert landmarks to GeoJSON
@@ -44,7 +44,7 @@ const Map = ({
         // Add landmarks as a source
         map.addSource("landmarks", {
           type: "geojson",
-          data: geojson,
+          data: geojson as any,
         });
 
         // Add a circle layer for the landmarks with vintage colors
@@ -85,7 +85,7 @@ const Map = ({
 
         // Add popups on click
         map.on("click", "landmark-points", (e) => {
-          setSelectedLocation(e.features[0].properties);
+          setSelectedLocation((e?.features?.[0] as any).properties);
         });
 
         // Change cursor to pointer when hovering landmarks
@@ -101,7 +101,7 @@ const Map = ({
 
     return () => {
       if (mapInstance.current) {
-        mapInstance.current.remove();
+        (mapInstance.current as any).remove();
         mapInstance.current = null;
       }
     };
@@ -111,16 +111,16 @@ const Map = ({
   useEffect(() => {
     if (
       mapInstance.current &&
-      mapInstance.current.isStyleLoaded() &&
-      mapInstance.current.getLayer("landmark-points")
+      (mapInstance.current as any).isStyleLoaded() &&
+      (mapInstance.current as any).getLayer("landmark-points")
     ) {
-      mapInstance.current.setPaintProperty("landmark-points", "circle-color", [
+      (mapInstance.current as any).setPaintProperty("landmark-points", "circle-color", [
         "case",
         ["in", ["get", "id"], ["literal", visitedLandmarks || []]],
         "#8b5a2b", // visited - vintage brown
         "#6b8a7a", // not visited - muted green
       ]);
-      mapInstance.current.setPaintProperty(
+      (mapInstance.current as any).setPaintProperty(
         "landmark-points",
         "circle-stroke-color",
         [
