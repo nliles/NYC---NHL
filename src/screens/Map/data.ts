@@ -43,7 +43,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-74.00446645484749, 40.7146503844196],
+      coordinates: [-74.00446407977192, 40.714547623459026],
     },
     properties: {
       id: 3,
@@ -51,8 +51,7 @@ const landmarks = [
       bullets: [
         { key: 'Used', value: '1690s-1794'},
         { key: 'Rediscovered', value: '1991 during construction'},
-        { key: 'Designated', value: 'National Historic Landmark (1993), National Monument (2007)'},
-        { key: 'Significance', value: "The nation's largest and earliest African American cemetery. Today, it is a monument honoring the thousands of enslaved Africans who built early NYC." },
+        { key: 'Significance', value: "The nation's oldest and largest known excavated burial ground for free and enslaved Africans. Today, it serves as a monument honoring the thousands who built early NYC." },
       ],
       link: "https://www.nps.gov/afbg/index.htm",
       quote:
@@ -589,10 +588,10 @@ const landmarks = [
       name: "Empire State Building",
       bullets: [
         { key: 'Built', value: '1930-1931' },
-        { key: 'Architect', value: 'Shreve, Lamb & Harmon' },
+        { key: 'Architect', value: 'William F. Lamb' },
         { key: 'Architectural Style', value: 'Art Deco' },
         { key: 'Height', value: '1,250 feet (102 floors)' },
-        { key: 'Significance', value: "World's tallest building from 1931-1970; iconic symbol of American ambition during the Great Depression." }
+        { key: 'Significance', value: "World's tallest building from 1931-1970; symbol of American resilience during the Great Depression." }
       ],
       image_caption: 'The Empire State Building, Library of Congress, 1952.',
       image_link: 'https://www.loc.gov/item/2020635807/',
@@ -730,7 +729,7 @@ const landmarks = [
       bullets: [
         { key: 'Founded', value: '1805' },
         { key: 'Built', value: '1846 (current location)' },
-        { key: 'Architect', value: 'James Renwick Jr. (his first major commission at age 23)' },
+        { key: 'Architect', value: 'James Renwick Jr. (first major commission at age 23)' },
         { key: 'Architectural style', value: 'Gothic Revival' },
         { key: 'Significance', value: 'One of NYC\'s finest Gothic Revival structures. Once the most fashionable church in the city.' }
       ],
@@ -1018,21 +1017,23 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.991111, 40.757222],
+      coordinates: [-73.98222767810792, 40.759444025009714],
     },
     properties: {
       id: 55,
       name: "McGraw-Hill Building",
       bullets: [
         { key: 'Built', value: '1931' },
-        { key: 'Architect', value: 'Raymond Hood (Hood, Godley, and Fouilhoux)' },
-        { key: 'Architectural Style', value: 'International Style/Art Deco/Art Moderne' },
+        { key: 'Architect', value: 'Raymond Hood' },
+        { key: 'Architectural Style', value: 'Art Deco, International Style' },
         { key: 'Height', value: '485 feet (33 stories)' },
-        { key: 'Significance', value: "Transitional skyscraper bridging Art Deco and International Style" }
+        { key: 'Significance', value: 'One of the first International Style buildings, marking the transition from Art Deco to modern skyscraper design.' }
       ],
       image_caption: "McGraw Hill Building. The New York Public Library Digital Collections. 1936.",
       image_link: "https://digitalcollections.nypl.org/items/689c3020-a48d-013a-8d98-0242ac110003#/?uuid=4f3d4120-a48e-013a-7a4f-0242ac110002,",
       link: "https://archsb.com/projects/mcgraw-hill-building-archstone-builders/",
+      quote: "The most beautiful building in New York City",
+      quote_author: "Ayn Rand",
     },
   },
   {
@@ -1308,10 +1309,8 @@ const landmarks = [
       bullets: [
         { key: 'Built', value: '1694' },
         { key: 'Architectural style', value: 'Dutch Colonial' },
-        { key: 'Historic Document', value: 'Community produced Flushing Remonstrance (1657)' },
-        { key: 'Significance', value: 'Reputed to be oldest house of worship in New York State' },
-        { key: 'Legacy', value: 'Helped lay groundwork for Bill of Rights religious freedom protection' },
-        { key: 'Notable', value: 'Quaker community still gathers here for Sunday services after 330+ years' }
+        { key: 'Significance', value: 'Reputed to be the oldest house of worship in New York State, where Quakers have gathered continuously for Sunday services for more than 330 years.' },
+        { key: 'Legacy', value: 'The early community produced the Flushing Remonstrance (1657), which laid the groundwork for Bill of Rights religious freedom protections.' },
       ],
       link: "https://flushingfriends.org/",
       quote:
@@ -1706,7 +1705,7 @@ const landmarks = [
         { key: 'Built', value: '1845-1846' },
         { key: 'Architects', value: 'Joseph Trench and John B. Snook' },
         { key: 'Architectural style', value: 'Italian Renaissance' },
-        { key: 'Nickname', value: '"Marble Palace"' },
+        { key: 'Nickname', value: 'Marble Palace' },
         { key: 'Owner', value: 'Alexander Turney Stewart, Irish immigrant and business legend' },
         { key: 'Significance', value: "America's first department store; introduced Italian Renaissance architectural style to the United States" },
         { key: 'Notable', value: 'Now known as Sun Building, former headquarters of The Sun newspaper' }
@@ -1754,7 +1753,7 @@ const landmarks = [
       bullets: [
         { key: 'Built', value: '1918-1930' },
         { key: 'Architect', value: 'Bertram Goodhue (with later additions by Mayers, Murray & Phillip)' },
-        { key: 'Architectural Style', value: 'Byzantine Revival with Romanesque influences, featuring salmon-colored brick and limestone trim' },
+        { key: 'Architectural Style', value: 'Byzantine Revival with Romanesque influences' },
         { key: 'Significance', value: 'Landmark Manhattan church known for its distinctive dome and architectural beauty; famous for its music program and as a cultural venue; survived a major redevelopment controversy in the 1980s that helped strengthen historic preservation laws' }
       ],
       image_caption: "St. Bartholomew's on Park Avenue. The New York Public Library Digital Collections. 1931",
@@ -1936,7 +1935,7 @@ const landmarks = [
       name: "Union Square",
       bullets: [
         { key: 'Established', value: '1833 (opened 1839)' },
-        { key: 'Designer', value: 'Frederick Law Olmsted and Calvert Vaux (1872 redesign)' },
+        { key: 'Designer', value: 'Frederick Law Olmsted and Calvert Vaux' },
         { key: 'Significance', value: "Site of America's first Labor Day parade in 1882, establishing its significance in labor history. Redesigned as an open forum for public gatherings, political rallies, and civic engagement." }
       ],
       image_caption: "Union Square Looking North, Library of Congress, 1919",
@@ -2090,19 +2089,24 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-74.00839725969281, 40.71329704082626],
+      coordinates: [-74.0083556135951, 40.712469825250466],
     },
     properties: {
       id: 114,
       name: "Woolworth Building",
       bullets: [
-        { key: 'Built', value: '1913' },
+        { key: 'Built', value: '1910 - 1913' },
+        { key: 'Commissioner', value: 'Frank W. Woolworth' },
         { key: 'Architect', value: 'Cass Gilbert' },
         { key: 'Architectural Style', value: 'Neo-Gothic' },
-        { key: 'Significance', value: 'World\'s tallest building from 1913-1930 at 792 feet, dubbed the "Cathedral of Commerce." Revolutionary steel-frame skyscraper with Gothic Revival styling that became the model for early 20th-century tower design. Commissioned by five-and-dime magnate Frank W. Woolworth as both corporate headquarters and monument to American commercial success.' }
+        { key: 'Height', value: '792 feet (57 floors)' },
+        { key: 'Significance', value: "World's tallest building from 1913-1930 and a showcase for modern technology." }
       ],
       image_caption: 'Woolworth Building. New York City. Library of Congress. 1912.',
       image_link: 'https://www.loc.gov/resource/ppmsca.54245/',
+      link: "https://www.woolworthbuilding.com/",
+      quote: "Cathedral of Commerce",
+      quote_author: "Dubbed nickname for its neo-Gothic architecture and height",
     },
   },
   {
