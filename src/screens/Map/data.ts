@@ -310,7 +310,7 @@ const landmarks = [
         { key: 'Built', value: '1899-1902' },
         { key: 'Architect', value: 'Babb, Cook & Willard' },
         { key: 'Architectural style', value: 'Georgian Revival' },
-        { key: 'Significance', value: 'The first private residence in the U.S. with a steel frame and technological innovations like an early Otis elevator, central heating, and air-conditioning, plus one of Manhattan’s rare private gardens.' },
+        { key: 'Significance', value: "The first private residence in the U.S. with a steel frame and technological innovations like an early Otis elevator, central heating, and air-conditioning. It also featured one of Manhattan's rare private gardens." },
       ],
       image_caption: "Carnegie House, Library of Congress, ca. 1920",
       image_link: "https://www.loc.gov/item/2014703975/",
@@ -443,7 +443,7 @@ const landmarks = [
       bullets: [
         { key: 'Built', value: "ca. 1670s" },
         { key: 'Architectural Style', value: "Colonial stone manor house with Dutch and English influences" },
-        { key: 'Significance', value: "Site of the failed 1776 peace conference between British Lord Howe and American delegates Benjamin Franklin, John Adams, and Edward Rutledge during the Revolutionary War; one of Staten Island's most historically significant buildings." }
+        { key: 'Significance', value: "Site of the failed September 1776 peace conference between British Admiral Lord Howe and American delegates Benjamin Franklin, John Adams, and Edward Rutledge; one of Staten Island's most historically significant buildings." }
       ],
       link: "https://conferencehouse.org/",
       image_caption: "Conference House. New York Public Library Digital Collections. 1990 - 1999",
@@ -496,7 +496,7 @@ const landmarks = [
       name: "Daily News Building",
       bullets: [
         { key: 'Built', value: '1930' },
-        { key: 'Architect', value: 'Raymond Hood and John Mead Howells' },
+        { key: 'Architect', value: 'Raymond Hood' },
         { key: 'Architectural style', value: 'Art Deco' },
         { key: 'Height', value: '476 ft (36 floors)' },
         { key: 'Significance', value: 'First modern free-standing skyscraper and pioneering example of Art Deco architecture.' },
@@ -611,7 +611,7 @@ const landmarks = [
       name: "Equitable Building",
       bullets: [
         { key: 'Built', value: '1913-1915' },
-        { key: 'Architect', value: 'Ernest R. Graham with Peirce Anderson' },
+        { key: 'Architect', value: 'Ernest R. Graham' },
         { key: 'Architectural style', value: 'Neoclassical' },
         { key: 'Height', value: '555 feet (38 stories)' },
         { key: 'Significance', value: 'One of the first skyscrapers and first office building with passenger elevators. It cut off direct sunlight from Broadway, leading to NYC\'s 1916 Zoning Resolution regulating building heights and shapes.' }
@@ -1000,9 +1000,9 @@ const landmarks = [
       id: 54,
       name: "R. H. Macy and Company Store (Macy's)",
       bullets: [
-        { key: 'Built', value: '1902 (with additions 1924, 1928, 1931)' },
-        { key: 'Architect', value: 'Theodore de Lemos and A.W. Cordes (original 1902), Robert D. Kohn (additions)' },
-        { key: 'Architectural Style', value: 'Palladian (original), Art Deco (later additions)' },
+        { key: 'Built', value: '1902 (with later expansions)' },
+        { key: 'Architects', value: 'De Lemos & Cordes (1902), Robert D. Kohn (1924-1931)' },
+        { key: 'Architectural Style', value: 'Palladian, Art Deco' },
         { key: 'Significance', value: "Flagship store of America's largest department store chain and historic retail landmark, famous for its Thanksgiving Day Parade, holiday windows; spans 2.5 million square feet in Herald Square." }
       ],
       image_caption:
@@ -1099,7 +1099,7 @@ const landmarks = [
       name: "J. Pierpont Morgan Library",
       bullets: [
         { key: 'Built', value: '1902-1906' },
-        { key: 'Architect', value: 'Charles McKim (McKim, Mead & White)' },
+        { key: 'Architect', value: 'Charles McKim' },
         { key: 'Architectural Style', value: 'American Renaissance/Classical Revival' },
         { key: 'Significance', value: 'Private library of J.P. Morgan, considered McKim\'s masterpiece, National Historic Landmark (1966), Tennessee pink marble construction using classical Greek anathyrosis method, became public institution in 1924' }
       ],
@@ -1218,7 +1218,7 @@ const landmarks = [
       name: "New York Public Library",
       bullets: [
         { key: 'Built', value: '1901-1911' },
-        { key: 'Architect', value: 'Carrère & Hastings (John Merven Carrère and Thomas Hastings)' },
+        { key: 'Architects', value: 'John Merven Carrère and Thomas Hastings' },
         { key: 'Architectural Style', value: 'Beaux-Arts' },
         { key: 'Significance', value: 'Flagship research library of NYPL system, National Historic Landmark (1965), one of largest marble buildings in US, features famous lions "Patience and Fortitude," contains Rose Main Reading Room (one of world\'s largest uncolumned interior spaces)' }
       ],
@@ -1268,7 +1268,7 @@ const landmarks = [
       name: "New York Yacht Club",
       bullets: [
         { key: 'Built', value: '1901' },
-        { key: 'Architect', value: 'Warren and Wetmore (Whitney Warren)' },
+        { key: 'Architect', value: 'Whitney Warren' },
         { key: 'Architectural Style', value: 'Beaux-Arts' },
         { key: 'Significance', value: 'Headquarters of NYYC (founded 1844), held America\'s Cup for 132 years, National Historic Landmark (1987), features famous Model Room with yacht collection' }
       ],
@@ -1456,7 +1456,7 @@ const landmarks = [
       name: "Rockefeller Center",
       bullets: [
         { key: 'Built', value: '1930-1939' },
-        { key: 'Architect', value: 'Raymond Hood, Harvey Wiley Corbett, Wallace Harrison (Associated Architects)' },
+        { key: 'Architect', value: 'Raymond Hood' },
         { key: 'Architectural Style', value: 'Art Deco' },
         { key: 'Height', value: '850 feet (70 stories)' },
         { key: 'Significance', value: 'Iconic commercial complex featuring NBC studios, Radio City Music Hall, and renowned public spaces including the famous Christmas tree and ice rink' }
@@ -1478,7 +1478,7 @@ const landmarks = [
       bullets: [
         { key: 'Founded', value: '1801' },
         { key: 'Founder', value: 'Robert Richard Randall, wealthy merchant who left his fortune to establish the institution' },
-        { key: 'Architect', value: '	Martin E. Thompson; Minard Lafever' },
+        { key: 'Architects', value: '	Martin E. Thompson, Minard Lafever' },
         { key: 'Architectural style', value: 'Greek Revival, Late Victorian' },
         { key: 'Significance', value: "A pioneering philanthropic institution that served thousands of retired merchant sailors and established America's first model for occupational retirement care." }
       ],
@@ -1707,15 +1707,14 @@ const landmarks = [
         { key: 'Architectural style', value: 'Italian Renaissance' },
         { key: 'Nickname', value: 'Marble Palace' },
         { key: 'Owner', value: 'Alexander Turney Stewart, Irish immigrant and business legend' },
-        { key: 'Significance', value: "America's first department store; introduced Italian Renaissance architectural style to the United States" },
-        { key: 'Notable', value: 'Now known as Sun Building, former headquarters of The Sun newspaper' }
+        { key: 'Significance', value: "America's first department store which transformed the retail landscape and became the model for modern department stores." },
       ],
       image_caption: "Grace Church and Stewart's Store. The New York Public Library Digital Collections. 1858 - 1925.",
       image_link: "https://digitalcollections.nypl.org/items/d3487520-c557-012f-0c37-58d385a7bc34#/?uuid=510d47e0-1eee-a3d9-e040-e00a18064a99",
       quote: "The Sun... It Shines for All.",
       quote_author:
-        "Inscription on a non-working clock from the building's Sun newspaper era",
-      link: "https://www.villagepreservation.org/2020/09/21/beyond-the-village-and-back-the-marble-palace-a-t-stewart-store-at-280-broadway/",
+        "Inscription on a non-working clock from the building's time as The Sun newspaper headquarters",
+      link: "https://www.nyc.gov/site/dcas/business/dcasmanagedbuildings/sun-building.page",
     },
   },
   {
