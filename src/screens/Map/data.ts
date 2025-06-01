@@ -91,9 +91,16 @@ const landmarks = [
     properties: {
       id: 5,
       name: "American Stock Exchange",
-      description: "Former headquarters of the American Stock Exchange",
+      bullets: [
+        { key: 'Built', value: '1921 (original structure), enlarged 1929-1931' },
+        { key: 'Period', value: '1953-2008' },
+        { key: 'Architect', value: 'Starrett & van Vleck' },
+        { key: 'Architectural style', value: 'Renaissance Revival (original), Art Deco (expansion)' },
+        { key: 'Significance', value: 'Built to elevate the New York Curb Exchange from a curbside market which took place outdoors  "on the curb" to a formal trading floor.' }
+      ],
       image_caption: 'New York Curb Market Building. Library of Congress. 1921.',
       image_link: "https://www.loc.gov/item/00650323/",
+      link: "https://www.nyse.com/publicdocs/American_Stock_Exchange_Historical_Timeline.pdf",
     },
   },
   {
