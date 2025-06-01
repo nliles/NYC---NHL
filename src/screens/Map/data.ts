@@ -625,6 +625,7 @@ const landmarks = [
       ],
       image_caption: "Broadway - Wall Street - Cedar Street. The New York Public Library Digital Collections. 1887 - 1986.",
       image_link: "https://digitalcollections.nypl.org/items/e31f72e0-c5cd-012f-267a-58d385a7bc34#/?uuid=510d47e2-02e2-a3d9-e040-e00a18064a99",
+      link: "https://www.nyc.gov/assets/lpc/downloads/pdf/presentation-materials/20230502/120-Broadway.pdf",
     },
   },
   {
@@ -1007,9 +1008,10 @@ const landmarks = [
       name: "R. H. Macy and Company Store (Macy's)",
       bullets: [
         { key: 'Built', value: '1902 (with later expansions)' },
-        { key: 'Architects', value: 'De Lemos & Cordes (1902), Robert D. Kohn (1924-1931)' },
+        { key: 'Architects', value: 'De Lemos & Cordes, Robert D. Kohn' },
         { key: 'Architectural Style', value: 'Palladian, Art Deco' },
-        { key: 'Significance', value: "Flagship store of America's largest department store chain and historic retail landmark, famous for its Thanksgiving Day Parade, holiday windows; spans 2.5 million square feet in Herald Square." }
+        { key: 'Size', value: '2.5 million square feet' },
+        { key: 'Significance', value: "Flagship store of America's largest department store chain and historic retail landmark, famous for its Thanksgiving Day Parade and holiday windows." }
       ],
       image_caption:
         "R. H. Macy and Company department store during the week before Christmas. Library of Congress.",
@@ -1247,8 +1249,12 @@ const landmarks = [
     properties: {
       id: 67,
       name: "New York Stock Exchange",
-      description:
-        "One of the first securities markets in the U.S.; still the world's largest",
+      bullets: [
+        { key: 'Built', value: '1903' },
+        { key: 'Architect', value: 'George B. Post' },
+        { key: 'Architectural style', value: 'Neoclassical' },
+        { key: 'Significance', value: "Headquarters of the world's largest stock exchange and iconic symbol of American capitalism" }
+      ],
       image_caption: "New York Stock Exchange (1903) Trading floor. The New York Public Library Digital Collections. 1903.",
       image_link: "https://digitalcollections.nypl.org/items/18ac7210-9daa-0132-f116-58d385a7b928#/?uuid=1966cf50-9daa-0132-e13e-58d385a7b928",
       link: "https://www.nyse.com/index",
@@ -1912,10 +1918,10 @@ const landmarks = [
         { key: 'Built', value: '1846 (current building)' },
         { key: 'Architect', value: 'Richard Upjohn' },
         { key: 'Architectural style', value: 'Neo-Gothic' },
-        { key: 'Significance', value: 'One of the earliest and finest examples of Neo-Gothic architecture in the U.S. Resting place of Alexander Hamilton and other notable figures.' },
+        { key: 'Significance', value: 'One of the earliest and finest examples of Neo-Gothic architecture in the U.S. Serves as the resting place of Alexander Hamilton and other notable figures.' },
       ],
-      image_caption: 'Wall Street, N.Y., The New York Public Library Digital Collections, 1895',
-      image_link: 'https://digitalcollections.nypl.org/items/9fa0b400-c55b-012f-e7f0-58d385a7bc34#/?uuid=510d47e1-06da-a3d9-e040-e00a18064a99',
+      image_caption: 'Trinity Church from Wall St. The New York Public Library Digital Collections. ca. 1895',
+      image_link: 'https://www.loc.gov/resource/stereo.1s07224/',
       link: "https://trinitychurchnyc.org/visit-history",
     },
   },
@@ -1997,13 +2003,19 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-74.01356682936074, 40.70467473567295],
+      coordinates: [-74.0136885728153, 40.70400052117526],
     },
     properties: {
       id: 108,
       name: "U.S. Customhouse",
-      description:
-        "Cass Gilbert designed Customhouse for New York Harbor; now part of the Smithsonian Institution",
+      bullets: [
+        { key: 'Built', value: '1902-1907' },
+        { key: 'Period', value: '1907-1974' },
+        { key: 'Architect', value: 'Cass Gilbert' },
+        { key: 'Architectural style', value: 'Beaux-Arts' },
+        { key: 'Significance', value: 'Headquarters for Port of New York duty collection operations and one of the finest examples of government architecture in the U.S.' },
+        { key: 'Current', value: 'National Museum of the American Indian' }
+      ],
       image_caption: "U.S. Custom House, New York, N.Y. The New York Public Library Digital Collections. 1908.",
       image_link: "https://digitalcollections.nypl.org/items/d46f7870-c55c-012f-dd3c-58d385a7bc34#/?uuid=510d47e0-ccce-a3d9-e040-e00a18064a99",
       link: "https://americanindian.si.edu/visit/ny",
