@@ -10,14 +10,13 @@ const landmarks = [
       name: "69th Regiment Armory",
       bullets: [
         { key: 'Built', value: '1904-1906' },
-        { key: 'Architect', value: 'Hunt & Hunt (sons of Richard Morris Hunt)' },
+        { key: 'Architect', value: 'Hunt & Hunt' },
         { key: 'Architectural style', value: 'Beaux-Arts' },
-        { key: 'Historic Event', value: 'Armory Show (1913)' },
-        { key: 'Notable', value: 'First NYC armory not modeled on medieval fortress, introduced America to modern art' }
+        { key: 'Significant', value: 'First armory in NYC built without medieval fortress design and site of the historic 1913 Armory Show that introduced modern art to America.' }
       ],
-      link: "https://sixtyninth.net/",
       image_caption: "69th Regiment, New York National Guard, marching past armory entrance, Library of Congress, 1916",
       image_link: "https://www.loc.gov/item/2016651305/",
+      link: "https://sixtyninth.net/",
     },
   },
   {
