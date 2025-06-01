@@ -555,7 +555,7 @@ const landmarks = [
         { key: 'Builder', value: 'William Dyckman' },
         { key: 'Architectural style', value: 'Dutch Colonial' },
         { key: 'Original Site', value: '250+ acre farm in northern Manhattan' },
-        { key: 'Significance', value: "Oldest remaining farmhouse on Manhattan island, a vestige of New York City's rural past" }
+        { key: 'Significance', value: "Oldest remaining farmhouse on Manhattan island and a vestige of New York City's rural past" }
       ],
       image_caption: "Dyckman House. The New York Public Library Digital Collections. 1887 - 1986.",
       image_link: "https://digitalcollections.nypl.org/items/f01d7e90-c5cd-012f-0645-58d385a7bc34#/?uuid=510d47e2-0326-a3d9-e040-e00a18064a99",
@@ -1116,8 +1116,8 @@ const landmarks = [
         { key: 'Architectural Style', value: 'American Renaissance/Classical Revival' },
         { key: 'Significance', value: "Originally the private collection of financier J.P. Morgan, it was gifted to New York and opened to the public in 1924. It is home to Morgan's  renowned book collections and historic documents." }
       ],
-      image_caption: "East 37th Street - Madison Avenue. The New York Public Library Digital Collections. 1887–1964.",
-      image_link: "https://digitalcollections.nypl.org/items/bee9e610-c5ec-012f-a476-58d385a7bc34#/?uuid=510d47e2-c30c-a3d9-e040-e00a18064a99",
+      image_caption: "J.P. Morgan art gallery. Library of Congress. 1910.",
+      image_link: "https://www.loc.gov/item/2014692840/",
       link: "https://www.themorgan.org/",
       quote: "Mr. Morgan buys books as some financiers buy a thousand shares of stock",
       quote_author: "The Wall Street Journal, 1911"
@@ -1661,7 +1661,7 @@ const landmarks = [
         { key: 'Built', value: '1877-1880' },
         { key: 'Architect', value: 'Charles W. Clinton' },
         { key: 'Architectural Style', value: 'Gothic Revival' },
-        { key: 'Significance', value: "First true armory built in Manhattan, home to the elite 'Silk Stocking' Regiment whose members included prominent Gilded Age families like the Vanderbilts and Roosevelts. Features exceptional interior spaces designed by Louis Comfort Tiffany, Stanford White, and other leading artists of the American Aesthetic Movement." },
+        { key: 'Significance', value: "Manhattan's first true armory, home to the elite 'Silk Stocking' Regiment of prominent Gilded Age families; features exceptional interiors by Louis Comfort Tiffany and leading artists of the American Aesthetic Movement." },
       ],
       image_caption: "Seventh Regiment Armory. Library of Congress. 1933.",
       image_link: "https://www.loc.gov/resource/hhh.ny1581.photos/?sp=18",
@@ -1949,11 +1949,13 @@ const landmarks = [
       bullets: [
         { key: 'Built', value: '1861-1881' },
         { key: 'Architect', value: 'John Kellum (1861-1871), Leopold Eidlitz (1876-1881)' },
-        { key: 'Architectural style', value: 'Italianate with Romanesque Revival interiors' },
-        { key: 'Significance', value: 'Second-oldest city government building after City Hall; symbol of Boss Tweed political corruption scandal;' }
+        { key: 'Architectural style', value: 'American Victorian, a neo-classical style popular in the U.S. during the 19th century' },
+        { key: 'Significance', value: "One of the city's grandest civic monuments and legacy of legendary Tammany Hall boss William M. Tweed." },
+        { key: 'Current', value: 'Department of Education' }
       ],
-      image_caption: "New York County Courthouse, 52 Chambers Street, New York County, NY. Library of Congress. 1933.",
-      image_link: "https://www.loc.gov/item/ny0926/"
+      image_caption: "New York County Courthouse. Library of Congress. 1933.",
+      image_link: "https://www.loc.gov/item/ny0926/",
+      link: "https://www.nyc.gov/site/dcas/business/dcasmanagedbuildings/tweed-courthouse.page",
     },
   },
   {
