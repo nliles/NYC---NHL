@@ -432,10 +432,15 @@ const landmarks = [
     properties: {
       id: 23,
       name: "City Hall",
-      description:
-        "Oldest city hall in U.S. still in use as main municipal government building",
+      bullets: [
+        { key: 'Built', value: '1803-1812' },
+        { key: 'Architect', value: 'Joseph François Mangin and John McComb Jr.' },
+        { key: 'Architectural style', value: 'Federal with French influences' },
+        { key: 'Significance', value: 'Oldest city hall in continuous use in the country' }
+      ],
       image_caption: "City Hall. N.Y.C. Library of Congress. 1900.",
       image_link: "https://www.loc.gov/resource/ggbain.08578/",
+      link: "https://www.nyc.gov/site/designcommission/tours-events/city-hall-tours/city-hall.page",
     },
   },
   {
@@ -1189,14 +1194,21 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-74.00971074635791, 40.70489846764529],
+      coordinates: [-74.00974498798847, 40.70463700220222],
     },
     properties: {
       id: 64,
       name: "New York Cotton Exchange",
-      description: "First commodity market in the U.S.; now 1 Hanover Square",
+      bullets: [
+        { key: 'Built', value: '1854' },
+        { key: 'NYCE Period', value: '1872 to 1885' },
+        { key: 'Architect', value: 'Ebenezer L. Roberts' },
+        { key: 'Architectural style', value: 'Italian Renaissance' },
+        { key: 'Significance', value: 'First permanent headquarters of the New York Cotton Exchange and site of the first cotton futures exchange in the United States.' },
+      ],
       image_caption: "1 Hanover Square when it was occupied by the New York Cotton Exchange. Wikimedia Commons. 1900",
       image_link: "https://en.wikipedia.org/wiki/1_Hanover_Square#/media/File:1_Hanover_Square_006.JPG",
+      link: "https://www.onehanoverevents.com/history.html",
     },
   },
   {
@@ -1253,7 +1265,7 @@ const landmarks = [
         { key: 'Built', value: '1903' },
         { key: 'Architect', value: 'George B. Post' },
         { key: 'Architectural style', value: 'Neoclassical' },
-        { key: 'Significance', value: "Headquarters of the world's largest stock exchange and iconic symbol of American capitalism" }
+        { key: 'Significance', value: "Headquarters of the world's largest stock exchange and iconic symbol of American capitalism." }
       ],
       image_caption: "New York Stock Exchange (1903) Trading floor. The New York Public Library Digital Collections. 1903.",
       image_link: "https://digitalcollections.nypl.org/items/18ac7210-9daa-0132-f116-58d385a7b928#/?uuid=1966cf50-9daa-0132-e13e-58d385a7b928",
@@ -1934,8 +1946,12 @@ const landmarks = [
     properties: {
       id: 104,
       name: "Old New York County Courthouse",
-      description:
-        "Historic courthouse, more commonly known as the Tweed Courthouse, connected to Tammany Hall, now used by NYC's Department of Education",
+      bullets: [
+        { key: 'Built', value: '1861-1881' },
+        { key: 'Architect', value: 'John Kellum (1861-1871), Leopold Eidlitz (1876-1881)' },
+        { key: 'Architectural style', value: 'Italianate with Romanesque Revival interiors' },
+        { key: 'Significance', value: 'Second-oldest city government building after City Hall; symbol of Boss Tweed political corruption scandal;' }
+      ],
       image_caption: "New York County Courthouse, 52 Chambers Street, New York County, NY. Library of Congress. 1933.",
       image_link: "https://www.loc.gov/item/ny0926/"
     },
