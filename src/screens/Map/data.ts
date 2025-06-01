@@ -10,14 +10,13 @@ const landmarks = [
       name: "69th Regiment Armory",
       bullets: [
         { key: 'Built', value: '1904-1906' },
-        { key: 'Architect', value: 'Hunt & Hunt (sons of Richard Morris Hunt)' },
+        { key: 'Architect', value: 'Hunt & Hunt' },
         { key: 'Architectural style', value: 'Beaux-Arts' },
-        { key: 'Historic Event', value: 'Armory Show (1913)' },
-        { key: 'Notable', value: 'First NYC armory not modeled on medieval fortress, introduced America to modern art' }
+        { key: 'Significant', value: 'First armory in NYC built without medieval fortress design and site of the historic 1913 Armory Show that introduced modern art to America.' }
       ],
-      link: "https://sixtyninth.net/",
       image_caption: "69th Regiment, New York National Guard, marching past armory entrance, Library of Congress, 1916",
       image_link: "https://www.loc.gov/item/2016651305/",
+      link: "https://sixtyninth.net/",
     },
   },
   {
@@ -91,9 +90,16 @@ const landmarks = [
     properties: {
       id: 5,
       name: "American Stock Exchange",
-      description: "Former headquarters of the American Stock Exchange",
+      bullets: [
+        { key: 'Built', value: '1921 (original structure), enlarged 1929-1931' },
+        { key: 'Period', value: '1953-2008' },
+        { key: 'Architect', value: 'Starrett & van Vleck' },
+        { key: 'Architectural style', value: 'Renaissance Revival (original), Art Deco (expansion)' },
+        { key: 'Significance', value: 'Built to elevate the New York Curb Exchange from a curbside market which took place outdoors  "on the curb" to a formal trading floor.' }
+      ],
       image_caption: 'New York Curb Market Building. Library of Congress. 1921.',
       image_link: "https://www.loc.gov/item/00650323/",
+      link: "https://www.nyse.com/publicdocs/American_Stock_Exchange_Historical_Timeline.pdf",
     },
   },
   {
@@ -425,10 +431,15 @@ const landmarks = [
     properties: {
       id: 23,
       name: "City Hall",
-      description:
-        "Oldest city hall in U.S. still in use as main municipal government building",
+      bullets: [
+        { key: 'Built', value: '1803-1812' },
+        { key: 'Architect', value: 'Joseph François Mangin and John McComb Jr.' },
+        { key: 'Architectural style', value: 'Federal with French influences' },
+        { key: 'Significance', value: 'Oldest city hall in continuous use in the country' }
+      ],
       image_caption: "City Hall. N.Y.C. Library of Congress. 1900.",
       image_link: "https://www.loc.gov/resource/ggbain.08578/",
+      link: "https://www.nyc.gov/site/designcommission/tours-events/city-hall-tours/city-hall.page",
     },
   },
   {
@@ -543,7 +554,7 @@ const landmarks = [
         { key: 'Builder', value: 'William Dyckman' },
         { key: 'Architectural style', value: 'Dutch Colonial' },
         { key: 'Original Site', value: '250+ acre farm in northern Manhattan' },
-        { key: 'Significance', value: "Oldest remaining farmhouse on Manhattan island, a vestige of New York City's rural past" }
+        { key: 'Significance', value: "Oldest remaining farmhouse on Manhattan island and a vestige of New York City's rural past" }
       ],
       image_caption: "Dyckman House. The New York Public Library Digital Collections. 1887 - 1986.",
       image_link: "https://digitalcollections.nypl.org/items/f01d7e90-c5cd-012f-0645-58d385a7bc34#/?uuid=510d47e2-0326-a3d9-e040-e00a18064a99",
@@ -618,6 +629,7 @@ const landmarks = [
       ],
       image_caption: "Broadway - Wall Street - Cedar Street. The New York Public Library Digital Collections. 1887 - 1986.",
       image_link: "https://digitalcollections.nypl.org/items/e31f72e0-c5cd-012f-267a-58d385a7bc34#/?uuid=510d47e2-02e2-a3d9-e040-e00a18064a99",
+      link: "https://www.nyc.gov/assets/lpc/downloads/pdf/presentation-materials/20230502/120-Broadway.pdf",
     },
   },
   {
@@ -1000,9 +1012,10 @@ const landmarks = [
       name: "R. H. Macy and Company Store (Macy's)",
       bullets: [
         { key: 'Built', value: '1902 (with later expansions)' },
-        { key: 'Architects', value: 'De Lemos & Cordes (1902), Robert D. Kohn (1924-1931)' },
+        { key: 'Architects', value: 'De Lemos & Cordes, Robert D. Kohn' },
         { key: 'Architectural Style', value: 'Palladian, Art Deco' },
-        { key: 'Significance', value: "Flagship store of America's largest department store chain and historic retail landmark, famous for its Thanksgiving Day Parade, holiday windows; spans 2.5 million square feet in Herald Square." }
+        { key: 'Size', value: '2.5 million square feet' },
+        { key: 'Significance', value: "Flagship store of America's largest department store chain and historic retail landmark, famous for its Thanksgiving Day Parade and holiday windows." }
       ],
       image_caption:
         "R. H. Macy and Company department store during the week before Christmas. Library of Congress.",
@@ -1102,8 +1115,8 @@ const landmarks = [
         { key: 'Architectural Style', value: 'American Renaissance/Classical Revival' },
         { key: 'Significance', value: "Originally the private collection of financier J.P. Morgan, it was gifted to New York and opened to the public in 1924. It is home to Morgan's  renowned book collections and historic documents." }
       ],
-      image_caption: "East 37th Street - Madison Avenue. The New York Public Library Digital Collections. 1887–1964.",
-      image_link: "https://digitalcollections.nypl.org/items/bee9e610-c5ec-012f-a476-58d385a7bc34#/?uuid=510d47e2-c30c-a3d9-e040-e00a18064a99",
+      image_caption: "J.P. Morgan art gallery. Library of Congress. 1910.",
+      image_link: "https://www.loc.gov/item/2014692840/",
       link: "https://www.themorgan.org/",
       quote: "Mr. Morgan buys books as some financiers buy a thousand shares of stock",
       quote_author: "The Wall Street Journal, 1911"
@@ -1180,14 +1193,21 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-74.00971074635791, 40.70489846764529],
+      coordinates: [-74.00974498798847, 40.70463700220222],
     },
     properties: {
       id: 64,
       name: "New York Cotton Exchange",
-      description: "First commodity market in the U.S.; now 1 Hanover Square",
+      bullets: [
+        { key: 'Built', value: '1854' },
+        { key: 'NYCE Period', value: '1872 to 1885' },
+        { key: 'Architect', value: 'Ebenezer L. Roberts' },
+        { key: 'Architectural style', value: 'Italian Renaissance' },
+        { key: 'Significance', value: 'First permanent headquarters of the New York Cotton Exchange and site of the first cotton futures exchange in the United States.' },
+      ],
       image_caption: "1 Hanover Square when it was occupied by the New York Cotton Exchange. Wikimedia Commons. 1900",
       image_link: "https://en.wikipedia.org/wiki/1_Hanover_Square#/media/File:1_Hanover_Square_006.JPG",
+      link: "https://www.onehanoverevents.com/history.html",
     },
   },
   {
@@ -1240,8 +1260,12 @@ const landmarks = [
     properties: {
       id: 67,
       name: "New York Stock Exchange",
-      description:
-        "One of the first securities markets in the U.S.; still the world's largest",
+      bullets: [
+        { key: 'Built', value: '1903' },
+        { key: 'Architect', value: 'George B. Post' },
+        { key: 'Architectural style', value: 'Neoclassical' },
+        { key: 'Significance', value: "Headquarters of the world's largest stock exchange and iconic symbol of American capitalism." }
+      ],
       image_caption: "New York Stock Exchange (1903) Trading floor. The New York Public Library Digital Collections. 1903.",
       image_link: "https://digitalcollections.nypl.org/items/18ac7210-9daa-0132-f116-58d385a7b928#/?uuid=1966cf50-9daa-0132-e13e-58d385a7b928",
       link: "https://www.nyse.com/index",
@@ -1636,7 +1660,7 @@ const landmarks = [
         { key: 'Built', value: '1877-1880' },
         { key: 'Architect', value: 'Charles W. Clinton' },
         { key: 'Architectural Style', value: 'Gothic Revival' },
-        { key: 'Significance', value: "First true armory built in Manhattan, home to the elite 'Silk Stocking' Regiment whose members included prominent Gilded Age families like the Vanderbilts and Roosevelts. Features exceptional interior spaces designed by Louis Comfort Tiffany, Stanford White, and other leading artists of the American Aesthetic Movement." },
+        { key: 'Significance', value: "Manhattan's first true armory, home to the elite 'Silk Stocking' Regiment of prominent Gilded Age families; features exceptional interiors by Louis Comfort Tiffany and leading artists of the American Aesthetic Movement." },
       ],
       image_caption: "Seventh Regiment Armory. Library of Congress. 1933.",
       image_link: "https://www.loc.gov/resource/hhh.ny1581.photos/?sp=18",
@@ -1905,10 +1929,10 @@ const landmarks = [
         { key: 'Built', value: '1846 (current building)' },
         { key: 'Architect', value: 'Richard Upjohn' },
         { key: 'Architectural style', value: 'Neo-Gothic' },
-        { key: 'Significance', value: 'One of the earliest and finest examples of Neo-Gothic architecture in the U.S. Resting place of Alexander Hamilton and other notable figures.' },
+        { key: 'Significance', value: 'One of the earliest and finest examples of Neo-Gothic architecture in the U.S. Serves as the resting place of Alexander Hamilton and other notable figures.' },
       ],
-      image_caption: 'Wall Street, N.Y., The New York Public Library Digital Collections, 1895',
-      image_link: 'https://digitalcollections.nypl.org/items/9fa0b400-c55b-012f-e7f0-58d385a7bc34#/?uuid=510d47e1-06da-a3d9-e040-e00a18064a99',
+      image_caption: 'Trinity Church from Wall St. The New York Public Library Digital Collections. ca. 1895',
+      image_link: 'https://www.loc.gov/resource/stereo.1s07224/',
       link: "https://trinitychurchnyc.org/visit-history",
     },
   },
@@ -1921,10 +1945,16 @@ const landmarks = [
     properties: {
       id: 104,
       name: "Old New York County Courthouse",
-      description:
-        "Historic courthouse, more commonly known as the Tweed Courthouse, connected to Tammany Hall, now used by NYC's Department of Education",
-      image_caption: "New York County Courthouse, 52 Chambers Street, New York County, NY. Library of Congress. 1933.",
-      image_link: "https://www.loc.gov/item/ny0926/"
+      bullets: [
+        { key: 'Built', value: '1861-1881' },
+        { key: 'Architect', value: 'John Kellum (1861-1871), Leopold Eidlitz (1876-1881)' },
+        { key: 'Architectural style', value: 'American Victorian, a neo-classical style popular in the U.S. during the 19th century' },
+        { key: 'Significance', value: "One of the city's grandest civic monuments and legacy of legendary Tammany Hall boss William M. Tweed." },
+        { key: 'Current', value: 'Department of Education' }
+      ],
+      image_caption: "New York County Courthouse. Library of Congress. 1933.",
+      image_link: "https://www.loc.gov/item/ny0926/",
+      link: "https://www.nyc.gov/site/dcas/business/dcasmanagedbuildings/tweed-courthouse.page",
     },
   },
   {
@@ -1990,13 +2020,19 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-74.01356682936074, 40.70467473567295],
+      coordinates: [-74.0136885728153, 40.70400052117526],
     },
     properties: {
       id: 108,
       name: "U.S. Customhouse",
-      description:
-        "Cass Gilbert designed Customhouse for New York Harbor; now part of the Smithsonian Institution",
+      bullets: [
+        { key: 'Built', value: '1902-1907' },
+        { key: 'Period', value: '1907-1974' },
+        { key: 'Architect', value: 'Cass Gilbert' },
+        { key: 'Architectural style', value: 'Beaux-Arts' },
+        { key: 'Significance', value: 'Headquarters for Port of New York duty collection operations and one of the finest examples of government architecture in the U.S.' },
+        { key: 'Current', value: 'National Museum of the American Indian' }
+      ],
       image_caption: "U.S. Custom House, New York, N.Y. The New York Public Library Digital Collections. 1908.",
       image_link: "https://digitalcollections.nypl.org/items/d46f7870-c55c-012f-dd3c-58d385a7bc34#/?uuid=510d47e0-ccce-a3d9-e040-e00a18064a99",
       link: "https://americanindian.si.edu/visit/ny",
