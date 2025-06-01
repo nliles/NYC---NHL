@@ -708,9 +708,8 @@ const landmarks = [
       name: "Governors Island",
       bullets: [
         { key: 'Built', value: '1794-1813 (fortifications), 1900s expansion (McKim plan)' },
-        { key: 'Architect', value: 'Various; Charles Follen McKim (Beaux-Arts redesign, early 1900s)' },
-        { key: 'Architectural Style', value: 'Beaux-Arts (McKim buildings)' },
-        { key: 'Significance', value: 'Historic military fortress protecting New York Harbor for 200+ years (1794-1996); home to Fort Jay and Castle Williams National Monuments and over 50 historic buildings.' }
+        { key: 'Significance', value: 'Historic military fortress protecting New York Harbor for 200+ years (1794-1996); home to Fort Jay and Castle Williams National Monuments and over 50 historic buildings.' },
+        { key: 'Current', value: "Public park and cultural and historic destination" },
       ],
       link: "https://www.nps.gov/gois/index.htm",
       image_caption: "Governers Island & The Narrows Library of Congress, ca. 1901.",
@@ -1101,11 +1100,13 @@ const landmarks = [
         { key: 'Built', value: '1902-1906' },
         { key: 'Architect', value: 'Charles McKim' },
         { key: 'Architectural Style', value: 'American Renaissance/Classical Revival' },
-        { key: 'Significance', value: 'Private library of J.P. Morgan, considered McKim\'s masterpiece, National Historic Landmark (1966), Tennessee pink marble construction using classical Greek anathyrosis method, became public institution in 1924' }
+        { key: 'Significance', value: "Originally the private collection of financier J.P. Morgan, it was gifted to New York and opened to the public in 1924. It is home to Morgan's  renowned book collections and historic documents." }
       ],
       image_caption: "East 37th Street - Madison Avenue. The New York Public Library Digital Collections. 1887–1964.",
       image_link: "https://digitalcollections.nypl.org/items/bee9e610-c5ec-012f-a476-58d385a7bc34#/?uuid=510d47e2-c30c-a3d9-e040-e00a18064a99",
       link: "https://www.themorgan.org/",
+      quote: "Mr. Morgan buys books as some financiers buy a thousand shares of stock",
+      quote_author: "The Wall Street Journal, 1911"
     },
   },
   {
@@ -1120,11 +1121,13 @@ const landmarks = [
       bullets: [
         { key: 'Built', value: '1765' },
         { key: 'Architectural Style', value: 'Georgian Colonial with Federal period modifications' },
-        { key: 'Significance', value: 'Manhattan\'s oldest surviving house; served as George Washington\'s headquarters during the Revolutionary War in 1776; later home to Eliza Jumel, who married Aaron Burr; now a historic house museum in Washington Heights' }
+        { key: 'Significance', value: "Manhattan's oldest surviving house; served as George Washington's Revolutionary War headquarters in 1776 and later became home to socialite Eliza Jumel, who famously married former Vice President Aaron Burr." }
       ],
       link: "https://morrisjumel.org/",
       image_caption: "Morris-Jumel Mansion with people on benches. The New York Public Library Digital Collections. 1890.",
       image_link: "https://digitalcollections.nypl.org/items/110b3f20-af04-0132-eead-58d385a7bbd0#/?uuid=11c25970-af04-0132-a5fa-58d385a7bbd0",
+      quote: "The Crown of Sugar Hill",
+      quote_author: "Duke Ellington, who lived in the area",
     },
   },
   {
@@ -1273,7 +1276,7 @@ const landmarks = [
         { key: 'Architectural Style', value: 'Beaux-Arts' },
         { key: 'Significance', value: 'Headquarters of NYYC (founded 1844), held America\'s Cup for 132 years, National Historic Landmark (1987), features famous Model Room with yacht collection' }
       ],
-      image_caption: "New York Yacht Club: Exterior facade. The New York Public Library Digital Collections. 1901.",
+      image_caption: "New York Yacht Club: Exterior facade. Library of Congress. 1901.",
       image_link: "https://www.loc.gov/item/2003662070/",
       link: "https://nyyc.org/",
     },
