@@ -41,7 +41,9 @@ const App = () => {
             <div className={styles.panelHeader}>
                 <div className={styles.searchContainer}>
                     <input type="text" className={styles.searchInput} placeholder="Search landmarks..." id="searchInput"/>
-                    <div className={styles.searchIcon}>🔍</div>
+                    <button className={styles.searchBtn} onClick={() => {}}>
+                      <img className={styles.searchIcon} src="search.png" alt="Search" width={30} height={30}/>
+                    </button>
                 </div>
             </div>
                 <div className={styles.landmarksList}>
