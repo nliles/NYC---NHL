@@ -32,8 +32,6 @@ const LandmarkProfile = ({
     }
   };
 
-  console.log(landmark.bullets, typeof landmark.bullets)
-
   return (
     <div className={styles.container}>
       <div className={styles.content}>
@@ -49,7 +47,7 @@ const LandmarkProfile = ({
           )}
           {landmark?.bullets && (
           <ul className={styles.bulletList}>
-          {JSON.parse(landmark.bullets).map((item: any, index: number) => (
+          {(typeof landmark.bullets === 'string' ? JSON.parse(landmark.bullets): landmark.bullets).map((item: any, index: number) => (
             <li key={index} className={styles.bulletItem}>
               <p className={styles.key}>{item.key}</p>
               <p className={styles.value}>{item.value}</p>

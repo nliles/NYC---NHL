@@ -15,8 +15,6 @@ const Map = ({
   const mapContainer = useRef(null);
   const mapInstance = useRef(null);
 
-  console.log(landmarks.length, typeof landmarks)
-
   useEffect(() => {
     if (mapboxgl && !mapInstance.current) {
       mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_TOKEN;
