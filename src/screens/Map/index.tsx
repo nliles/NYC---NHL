@@ -26,16 +26,13 @@ const Map = ({
       const map = new mapboxgl.Map({
         container: mapContainer.current as any,
         style: "mapbox://styles/nmliles16/cmb4gmtey00bh01qv7evy8qr0",
-        center: [-74.0199, 40.7528], // NYC coordinates (initial, will be adjusted)
+        center: [-74.0199, 40.7528],
         zoom: 12,
         minZoom: 9.5,
       });
 
       // @ts-ignore
       mapInstance.current = map;
-
-      const coord = (mapInstance?.current as any)?.getCenter();
-      (mapInstance?.current as any)?.setCenter([coord.lng, coord.lat]);
 
       map.on("load", () => {
         // Convert landmarks to GeoJSON
