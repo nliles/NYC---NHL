@@ -2338,11 +2338,11 @@ const landmarks = [
       name: "Wyckoff House",
       borough: "Brooklyn",
       bullets: [
-        { key: 'Built', value: 'c. 1652 (original section); enlarged 1750s; remodeled 1819' },
-        { key: 'Architect', value: 'Unknown (vernacular Dutch Colonial construction)' },
+        { key: 'ca. 1652' },
+        { key: 'Built', value: 'ca. 1652 with later expansions' },
+        { key: 'Commissioned', value: 'Wouter van Twiller, director general of New Netherland' },
         { key: 'Architectural style', value: 'Dutch Colonial with Flemish Medieval Survival elements; features H-frame structure, shingled walls, steep sloping roof, split Dutch doors, and deep flared "spring" eaves' },
-        { key: 'Significance', value: 'Oldest structure in New York City and New York State. First building designated as a NYC landmark (1965). Built by Pieter Claesen Wyckoff, indentured servant who became successful farmer. National Historic Landmark exemplifying Dutch-American farmhouse architecture.' },
-        { key: 'Current', value: 'Wyckoff House Museum, operated by Wyckoff House & Association' }
+        { key: 'Significance', value: 'One of the oldest surviving examples of a Dutch frame house in America, and among the first structures built by settlers on Long Island, where Pieter Claesen Wyckoff and his family lived from around 1652.' },
       ],
       image_caption: "Wyckoff home. Library of Congress. 1933.",
       image_link: "https://www.loc.gov/item/ny0257/",
@@ -2360,15 +2360,15 @@ const landmarks = [
       name: "Wyckoff-Bennett Homestead",
       borough: "Brooklyn",
       bullets: [
-        { key: 'Built', value: 'c. 1766 (confirmed by inscription in barn beam)' },
-        { key: 'Architect', value: 'Unknown (vernacular Dutch Colonial construction)' },
-        { key: 'Architectural style', value: 'Dutch Colonial; one-and-a-half-story frame dwelling with white-shingled walls, curved Dutch Colonial porch roof, split Dutch doors, and traditional Dutch farmhouse features' },
-        { key: 'Significance', value: 'National Historic Landmark (1976) considered "the best preserved and most beautiful example of Dutch Colonial architecture in Brooklyn." Built by Hendrick H. Wyckoff, descendant of Pieter Wyckoff. During Revolutionary War, housed Hessian soldiers who etched names on windowpanes (preserved). One of last privately owned 18th-century Dutch Colonial houses in NYC.' },
-        { key: 'Current', value: 'Private residence (owned by Mont family 1983-2022, sold to 22nd Street Investors LLC in 2022)' }
+        { key: 'Built', value: 'ca. 1766' },
+        { key: 'Builder', value: 'Hendrick H. Wyckoff, son of Pieter Claesen Wyckoff' },
+        { key: 'Architectural style', value: 'Dutch Colonial' },
+        { key: 'Significance', value: 'The best preserved and most beautiful example of Dutch Colonial architecture in Brooklyn;" during the Revolutionary War, housed Hessian soldiers who etched their names on windowpanes that remain preserved today.' },
+        { key: 'Current', value: 'Private residence' }
       ],
       image_caption: "Wyckoff-Bennett House. Library of Congress. 1933.",
       image_link: "https://www.loc.gov/item/ny0256/",
-      link: "https://hdc.org/buildings/wyckoff-bennett-homestead/",
+      link: "https://vimeo.com/51563990",
     },
   },
 ];
