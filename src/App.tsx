@@ -47,7 +47,7 @@ const App = () => {
                 <div className={styles.landmarksList}>
                   {landmarks.map((landmark) => (
                     <button className={styles.item} onClick={() => handleClick(landmark)} key={landmark.properties.id}>
-                        <p className={styles.landmarkName}>{landmark.properties.name}</p>
+                        <p className={styles.name}>{landmark.properties.name}</p>
                         <div className={styles.landmarkDetails}>
                           {landmark.properties.borough.split(',').map((borough) => <span className={styles.borough}>{borough}</span>)}
                           </div>
