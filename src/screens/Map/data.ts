@@ -1039,13 +1039,14 @@ const landmarks = [
       name: "Lorillard Snuff Mill",
       borough: "Bronx",
       bullets: [
-        { key: 'Built', value: 'ca. 1840 (third mill on the site; replaced earlier wooden mills from 1792 and c. 1800)' },
+        { key: 'Built', value: 'ca. 1840' },
         { key: 'Period', value: '1840-1870' },
-        { key: 'Significance', value: 'Oldest existing tobacco manufacturing building in the United States. Built by the Lorillard family for grinding tobacco into snuff using water-powered stone wheels. America\'s first major tobacco manufacturing enterprises.' },
+        { key: 'Significance', value: "Oldest surviving tobacco manufacturing building in the United States, built by the Lorillard family to grind tobacco into snuff using water-powered stone wheels. It represents one of America's first major tobacco manufacturing enterprises." },
         { key: 'Current', value: 'Lillian and Amy Goldman Stone Mill, event venue within New York Botanical Garden' }
       ],
       image_caption: "Lorillard Snuff Mill, Botanical Gardens, Bronx Park, Bronx, Bronx County, NY. Library of Congress. 1933.",
       image_link: "https://www.loc.gov/resource/hhh.ny0101.photos/?sp=1",
+      link: "https://hdc.org/buildings/lorillard-snuff-mill-at-the-new-york-botanical-garden/",
     },
   },
   {
@@ -2338,11 +2339,10 @@ const landmarks = [
       name: "Wyckoff House",
       borough: "Brooklyn",
       bullets: [
-        { key: 'ca. 1652' },
-        { key: 'Built', value: 'ca. 1652 with later expansions' },
+        { key: 'Built', value: 'ca. 1652, with later expansions' },
         { key: 'Commissioned', value: 'Wouter van Twiller, director general of New Netherland' },
-        { key: 'Architectural style', value: 'Dutch Colonial with Flemish Medieval Survival elements; features H-frame structure, shingled walls, steep sloping roof, split Dutch doors, and deep flared "spring" eaves' },
-        { key: 'Significance', value: 'One of the oldest surviving examples of a Dutch frame house in America, and among the first structures built by settlers on Long Island, where Pieter Claesen Wyckoff and his family lived from around 1652.' },
+        { key: 'Architectural style', value: 'Dutch Colonial' },
+        { key: 'Significance', value: 'One of the oldest surviving examples of a Dutch frame house in America; Among the first structures built by settlers on Long Island, where Pieter Claesen Wyckoff and his family lived from around 1652.' },
       ],
       image_caption: "Wyckoff home. Library of Congress. 1933.",
       image_link: "https://www.loc.gov/item/ny0257/",
@@ -2363,7 +2363,7 @@ const landmarks = [
         { key: 'Built', value: 'ca. 1766' },
         { key: 'Builder', value: 'Hendrick H. Wyckoff, son of Pieter Claesen Wyckoff' },
         { key: 'Architectural style', value: 'Dutch Colonial' },
-        { key: 'Significance', value: 'The best preserved and most beautiful example of Dutch Colonial architecture in Brooklyn;" during the Revolutionary War, housed Hessian soldiers who etched their names on windowpanes that remain preserved today.' },
+        { key: 'Significance', value: 'The best preserved and most beautiful example of Dutch Colonial architecture in Brooklyn; housed Hessian soldiers during the Revolutionary War who etched their names on windowpanes that remain preserved today.' },
         { key: 'Current', value: 'Private residence' }
       ],
       image_caption: "Wyckoff-Bennett House. Library of Congress. 1933.",
