@@ -1,3 +1,4 @@
+import { saveToStorage } from "../../helpers/localStorage";
 import styles from "./LandmarkProfile.module.css";
 
 const LandmarkProfile = ({
@@ -15,20 +16,11 @@ const LandmarkProfile = ({
     // Save to localStorage
     if (isVisited) {
       setVisitedLandmarks([...visitedLandmarks, landmark.id]);
-      localStorage.setItem(
-        "visitedLandmarks",
-        JSON.stringify([...visitedLandmarks, landmark.id]),
-      );
+      saveToStorage([...visitedLandmarks, landmark.id]);
     } else {
-      setVisitedLandmarks(
-        visitedLandmarks.filter((id: any) => id !== landmark.id),
-      );
-      localStorage.setItem(
-        "visitedLandmarks",
-        JSON.stringify(
-          visitedLandmarks.filter((id: any) => id !== landmark.id),
-        ),
-      );
+      const filtered = visitedLandmarks.filter((id: any) => id !== landmark.id);
+      setVisitedLandmarks(filtered);
+      saveToStorage(JSON.stringify(filtered));
     }
   };
 
