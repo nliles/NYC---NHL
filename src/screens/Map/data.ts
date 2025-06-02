@@ -193,7 +193,7 @@ const landmarks = [
         { key: 'Built', value: '1899' },
         { key: 'Architect', value: 'Louis H. Sullivan' },
         { key: 'Architectural style', value: 'Chicago School' },
-        { key: 'Height', value: '167 feet feet (13 floors)' },
+        { key: 'Height', value: '167 ft. ft. (13 floors)' },
         { key: 'Significance', value: "New York's first modern skyscraper, showcasing Sullivan's characteristic ornate terra cotta facade." }
       ],
       image_caption: 'Bayard-Condict Building. Library of Congress. 1933.',
@@ -413,7 +413,7 @@ const landmarks = [
         { key: 'Architect', value: 'William Van Alen' },
         { key: 'Architectural style', value: 'Art Deco' },
         { key: 'Commissioner', value: 'Walter P. Chrysler, automotive magnate' },
-        { key: 'Height', value: '1,046 feet (77 floors)' },
+        { key: 'Height', value: '1,046 ft. (77 floors)' },
         { key: 'Significance', value: 'Celebrated as one of the finest examples of Art Deco architecture; held the title of the world’s tallest building for 11 months (1930–1931).' },
       ],
       link: "https://chryslerbuilding.com/",
@@ -632,7 +632,7 @@ const landmarks = [
         { key: 'Built', value: '1930-1931' },
         { key: 'Architect', value: 'William F. Lamb' },
         { key: 'Architectural Style', value: 'Art Deco' },
-        { key: 'Height', value: '1,250 feet (102 floors)' },
+        { key: 'Height', value: '1,250 ft. (102 floors)' },
         { key: 'Significance', value: "World's tallest building from 1931-1970; symbol of American resilience during the Great Depression." }
       ],
       image_caption: 'The Empire State Building, Library of Congress, 1952.',
@@ -656,7 +656,7 @@ const landmarks = [
         { key: 'Built', value: '1913-1915' },
         { key: 'Architect', value: 'Ernest R. Graham' },
         { key: 'Architectural style', value: 'Neoclassical' },
-        { key: 'Height', value: '555 feet (38 stories)' },
+        { key: 'Height', value: '555 ft. (38 stories)' },
         { key: 'Significance', value: 'One of the first skyscrapers and first office building with passenger elevators. It cut off direct sunlight from Broadway, leading to NYC\'s 1916 Zoning Resolution regulating building heights and shapes.' }
       ],
       image_caption: "Broadway - Wall Street - Cedar Street. The New York Public Library Digital Collections. 1887 - 1986.",
@@ -973,7 +973,7 @@ const landmarks = [
       bullets: [
         { key: 'Built', value: '1941-1943 (keel laid December 1, 1941; launched April 26, 1943; commissioned August 16, 1943)' },
         { key: 'Architect', value: 'Newport News Shipbuilding & Dry Dock Company, Virginia (shipbuilder)' },
-        { key: 'Architectural style', value: 'Essex-class aircraft carrier design; 872 feet overall length, 147.5-foot beam, displacement of 27,100 tonnes' },
+        { key: 'Architectural style', value: 'Essex-class aircraft carrier design; 872 ft. overall length, 147.5-foot beam, displacement of 27,100 tonnes' },
         { key: 'Significance', value: 'WWII Pacific Theater veteran, surviving torpedo strike and five kamikaze attacks. Nicknamed "The Fighting I" and "Ghost Ship" by Japanese forces. Served in Cold War, Vietnam War, and as NASA recovery vessel for Mercury and Gemini missions. National Historic Landmark since 1986.' },
         { key: 'Current', value: 'Intrepid Sea, Air & Space Museum at Pier 86, Hudson River (since 1982)' }
       ],
@@ -1086,7 +1086,7 @@ const landmarks = [
         { key: 'Built', value: '1902 (with later expansions)' },
         { key: 'Architects', value: 'De Lemos & Cordes, Robert D. Kohn' },
         { key: 'Architectural Style', value: 'Palladian, Art Deco' },
-        { key: 'Size', value: '2.5 million square feet' },
+        { key: 'Size', value: '2.5 million square ft.' },
         { key: 'Significance', value: "Flagship store of America's largest department store chain and historic retail landmark, famous for its Thanksgiving Day Parade and holiday windows." }
       ],
       image_caption:
@@ -1111,7 +1111,7 @@ const landmarks = [
         { key: 'Built', value: '1931' },
         { key: 'Architect', value: 'Raymond Hood' },
         { key: 'Architectural Style', value: 'Art Deco, International Style' },
-        { key: 'Height', value: '485 feet (33 stories)' },
+        { key: 'Height', value: '485 ft. (33 stories)' },
         { key: 'Significance', value: 'One of the first International Style buildings, marking the transition from Art Deco to modern skyscraper design.' }
       ],
       image_caption: "McGraw Hill Building. The New York Public Library Digital Collections. 1936.",
@@ -1153,10 +1153,10 @@ const landmarks = [
       borough: "Manhattan",
       bullets: [
         { key: 'Built', value: '1905-1909 (tower); 1893-1905 (original east wing base)' },
-        { key: 'Architect', value: 'Napoleon LeBrun & Sons (Pierre LeBrun and Michel LeBrun as lead architects)' },
-        { key: 'Architectural style', value: 'Neoclassical with Italian Renaissance motifs; modeled after the Campanile di San Marco in Venice' },
-        { key: 'Significance', value: 'World\'s tallest building from 1909-1913 at 700 feet tall. Features four monumental 26.5-foot diameter clocks on the tower faces. Built as headquarters for Metropolitan Life Insurance Company, then the nation\'s largest life insurer. NYC Landmark (1989).' },
-        { key: 'Current', value: 'Mixed-use commercial and residential building (converted to condominiums and hotel)' }
+        { key: 'Architect', value: 'Napoleon LeBrun' },
+        { key: 'Architectural style', value: 'Gothic Revival, Renaissance Revival' },
+        { key: 'Height', value: '700 ft. (50 stories)' },
+        { key: 'Significance', value: 'World\'s tallest building from 1909-1913. Features four monumental 26.5-foot diameter clocks on the tower faces. Built as headquarters for Metropolitan Life Insurance Company, then the nation\'s largest life insurer.' },
       ],
       image_caption: "Metropolitan Life Ins. Bldg.. Library of Congress. 1912.",
       image_link: "https://www.loc.gov/item/00650139/",
@@ -1316,7 +1316,7 @@ const landmarks = [
         { key: 'Built', value: '1926-1928' },
         { key: 'Architect', value: 'Cass Gilbert' },
         { key: 'Architectural style', value: 'Gothic Revival' },
-        { key: 'Height', value: '615 feet (40 stories)' },
+        { key: 'Height', value: '615 ft. (40 stories)' },
         { key: 'Significance', value: 'One of the finest examples of Gothic Revival architecture, distinguished by its iconic golden pyramid crown; exemplifies the pinnacle of 1920s skyscraper design.' }
       ],
       image_caption: "West 25th Street - Broadway. The New York Public Library Digital Collections. 1952.",
@@ -1594,7 +1594,7 @@ const landmarks = [
         { key: 'Built', value: '1930-1939' },
         { key: 'Architect', value: 'Raymond Hood' },
         { key: 'Architectural Style', value: 'Art Deco' },
-        { key: 'Height', value: '850 feet (70 stories)' },
+        { key: 'Height', value: '850 ft. (70 stories)' },
         { key: 'Significance', value: 'Iconic commercial complex featuring NBC studios, Radio City Music Hall, and renowned public spaces including the famous Christmas tree and ice rink' }
       ],
       image_caption: '30 Rockefeller Center Plaza, The New York Public Library Digital Collections, 1887–1964',
@@ -2318,7 +2318,7 @@ const landmarks = [
         { key: 'Commissioner', value: 'Frank W. Woolworth' },
         { key: 'Architect', value: 'Cass Gilbert' },
         { key: 'Architectural Style', value: 'Neo-Gothic' },
-        { key: 'Height', value: '792 feet (57 floors)' },
+        { key: 'Height', value: '792 ft. (57 stories)' },
         { key: 'Significance', value: "World's tallest building from 1913-1930 and a showcase for modern technology." }
       ],
       image_caption: 'Woolworth Building. New York City. Library of Congress. 1912.',
