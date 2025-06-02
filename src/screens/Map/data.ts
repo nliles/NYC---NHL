@@ -1905,7 +1905,7 @@ const landmarks = [
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [-73.97354438336424, 40.76041389553095],
+      coordinates: [-73.97332826941016, 40.75749169778962],
     },
     properties: {
       id: 95,
@@ -1915,7 +1915,7 @@ const landmarks = [
         { key: 'Built', value: '1918-1930' },
         { key: 'Architect', value: 'Bertram Goodhue (with later additions by Mayers, Murray & Phillip)' },
         { key: 'Architectural Style', value: 'Byzantine Revival with Romanesque influences' },
-        { key: 'Significance', value: 'Landmark Manhattan church known for its distinctive dome and architectural beauty; famous for its music program and as a cultural venue; survived a major redevelopment controversy in the 1980s that helped strengthen historic preservation laws' }
+        { key: 'Significance', value: 'Represents innovative early 20th-century ecclesiastical design that that successfully departed from prevailing Gothic Revival traditions; known for its distinctive dome and beautiful combination of Romanesque and Byzantine styles.' }
       ],
       image_caption: "St. Bartholomew's on Park Avenue. The New York Public Library Digital Collections. 1931",
       image_link: "https://digitalcollections.nypl.org/items/2186af80-980e-013a-2ba1-0242ac110003#/?uuid=7ace51b0-9810-013a-e254-0242ac110003",
