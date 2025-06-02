@@ -1,6 +1,6 @@
 import { Dispatch, SetStateAction, useEffect, useRef } from "react";
 import mapboxgl from "mapbox-gl/dist/mapbox-gl";
-import landmarks from "./data.ts";
+import landmarks from "../../data.ts";
 import styles from "./Map.module.css";
 
 const Map = ({
@@ -60,8 +60,8 @@ const Map = ({
             "circle-color": [
               "case",
               ["in", ["get", "id"], ["literal", visitedLandmarks || []]],
-              "#8b5a2b", // Vintage brown for visited (matches your road colors)
-              "#6b8a7a", // Muted green for not visited (complements your water)
+              "#2F4F4F", // visited
+              "#C0C0C0", // not visited
             ],
             "circle-stroke-width": 2,
             "circle-stroke-color": "#f5f0e8", // Cream color matching your background
@@ -88,7 +88,11 @@ const Map = ({
 
         // Add popups on click
         map.on("click", "landmark-points", (e) => {
-          setSelectedLocation((e?.features?.[0] as any).properties);
+          const props = (e?.features?.[0] as any).properties;
+          setSelectedLocation({
+            ...props,
+            bullets: JSON.parse(props.bullets || "[]"),
+          });
         });
 
         // Change cursor to pointer when hovering landmarks
@@ -123,8 +127,8 @@ const Map = ({
         [
           "case",
           ["in", ["get", "id"], ["literal", visitedLandmarks || []]],
-          "#8b5a2b", // visited - vintage brown
-          "#6b8a7a", // not visited - muted green
+          "#2F4F4F", // visited
+          "#C0C0C0", // not visited
         ],
       );
       (mapInstance.current as any).setPaintProperty(

@@ -3192,13 +3192,15 @@ const landmarks = [
         {
           key: "Significance",
           value:
-            "The best preserved and most beautiful example of Dutch Colonial architecture in Brooklyn; housed Hessian soldiers during the Revolutionary War who etched their names on windowpanes that remain preserved today.",
+            "The best preserved Dutch Colonial architecture in Brooklyn; housed Hessian soldiers during the Revolutionary War who etched their names on windowpanes that remain preserved today.",
         },
-        { key: "Current", value: "Private residence" },
       ],
       image_caption: "Wyckoff-Bennett House. Library of Congress. 1933.",
       image_link: "https://www.loc.gov/item/ny0256/",
       link: "https://vimeo.com/51563990",
+      quote:
+        "I often wonder about the future of our house...and pray that those after us will will love it as we do and respect it for its own personality.",
+      quote_author: "Gertrude Ryder Bennet (1900 - 1982), former resident",
     },
   },
 ];
