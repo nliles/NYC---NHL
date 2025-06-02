@@ -21,6 +21,11 @@ const LandmarkList = ({ handleClick }: { handleClick: (landmark: any) => void })
     }
   };
 
+  const handleClearSearch = () => {
+    inputRef.current!.value = "";
+    handleOnChange();
+  }
+
   return (
         <div className={styles.leftPanel}>
           <div className={styles.panelHeader}>
@@ -32,6 +37,16 @@ const LandmarkList = ({ handleClick }: { handleClick: (landmark: any) => void })
                 ref={inputRef}
                 onChange={handleOnChange}
               />
+                {inputRef.current?.value && (
+                <button onClick={handleClearSearch} className={styles.clearIcon}>
+                    <img
+                    src="close.png"
+                    alt="Clear search"
+                    width={10}
+                    height={10}
+                    />
+                </button>
+                )}
               <img
                 className={styles.searchIcon}
                 src="search.png"
