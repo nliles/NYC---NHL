@@ -2,7 +2,13 @@ import { ReactNode } from "react";
 import ReactDOM from "react-dom";
 import { useEffect, useState } from "react";
 
-const Portal = ({ children, containerId }: { children: ReactNode; containerId: string }) => {
+const Portal = ({
+  children,
+  containerId,
+}: {
+  children: ReactNode;
+  containerId: string;
+}) => {
   const [container, setContainer] = useState(null);
 
   useEffect(() => {
