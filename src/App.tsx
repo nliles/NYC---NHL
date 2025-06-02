@@ -5,6 +5,7 @@ import SidePanel from "./components/SidePanel";
 import Map from "./screens/Map";
 import landmarks from "./screens/Map/data.ts";
 import ParkProfile from "./components/LandmarkProfile";
+import { getLocalStorage } from "./helpers/localStorage";
 import NavBar from "./components/NavBar";
 import styles from "./App.module.css";
 
@@ -12,31 +13,8 @@ const App = () => {
   const [selectedLocation, setSelectedLocation] = useState();
   const [shouldZoom, setShouldZoom] = useState(false);
   const [filteredLandmarks, setFilteredLandmarks] = useState(landmarks);
-  const [visitedLandmarks, setVisitedLandmarks] = useState(() => {
-    try {
-      const storedLandmarks = localStorage.getItem("visitedLandmarks");
-      return storedLandmarks ? JSON.parse(storedLandmarks) : [];
-    } catch (error) {
-      console.warn(
-        "Failed to load visited landmarks from localStorage:",
-        error,
-      );
-      return [];
-    }
-  });
+  const [visitedLandmarks, setVisitedLandmarks] = useState(() => getLocalStorage());
   const inputRef = useRef<HTMLInputElement>(null);
-
-  // Save to localStorage whenever visitedLandmarks changes
-  useEffect(() => {
-    try {
-      localStorage.setItem(
-        "visitedLandmarks",
-        JSON.stringify(visitedLandmarks),
-      );
-    } catch (error) {
-      console.warn("Failed to save visited landmarks to localStorage:", error);
-    }
-  }, [visitedLandmarks]);
 
   const handleClick = (item: any) => {
     setSelectedLocation(item.properties);
@@ -86,7 +64,7 @@ const App = () => {
               <button
                 className={styles.item}
                 onClick={() => handleClick(landmark)}
-                key={landmark.properties.id}
+                key={landmark.properties.name}
               >
                 <p className={styles.name}>{landmark.properties.name}</p>
                 <div className={styles.landmarkDetails}>

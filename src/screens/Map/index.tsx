@@ -88,7 +88,11 @@ const Map = ({
 
         // Add popups on click
         map.on("click", "landmark-points", (e) => {
-          setSelectedLocation((e?.features?.[0] as any).properties);
+          const props = (e?.features?.[0] as any).properties;
+          setSelectedLocation({
+            ...props,
+            bullets: JSON.parse(props.bullets || "[]"),
+          });
         });
 
         // Change cursor to pointer when hovering landmarks
