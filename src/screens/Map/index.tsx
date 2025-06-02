@@ -147,11 +147,11 @@ const Map = ({
       );
       (mapInstance?.current as any).flyTo({
         center: found?.geometry.coordinates,
-        essential: true // this animation is considered essential with respect to prefers-reduced-motion
-    });
-    setShouldZoom?.(false); // Reset zoom state after flying
+        essential: true, // this animation is considered essential with respect to prefers-reduced-motion
+      });
+      setShouldZoom?.(false); // Reset zoom state after flying
     }
-  }, [selectedLocation, shouldZoom, setShouldZoom])
+  }, [selectedLocation, shouldZoom, setShouldZoom]);
 
   return (
     <div className={styles.container}>
