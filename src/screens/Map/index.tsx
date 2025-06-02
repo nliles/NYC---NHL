@@ -1,6 +1,6 @@
 import { Dispatch, SetStateAction, useEffect, useRef } from "react";
 import mapboxgl from "mapbox-gl/dist/mapbox-gl";
-import landmarks from "./data.ts";
+import landmarks from "../../data.ts";
 import styles from "./Map.module.css";
 
 const Map = ({
