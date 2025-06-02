@@ -76,9 +76,9 @@ const landmarks = [
       borough: "Manhattan",
       bullets: [
         { key: 'Built', value: '1907' },
-        { key: 'Builder', value: 'New York Shipbuilding Company, Camden, New Jersey' },
+        { key: 'Builder', value: 'New York Shipbuilding Company' },
         { key: 'Type', value: 'Riveted steel lightship (LV-87/WAL-512)' },
-        { key: 'Significance', value: 'First lightship to bear "AMBROSE" name, served Ambrose Channel 1908-1932, first radio beacon in US (1921), last steam-powered vessel at station, guided over 6 million immigrants into New York Harbor, National Historic Landmark (1989)' }
+        { key: 'Significance', value: 'The very first lightship to guard Ambrose Channel, the largest shipping channel in and out of the ports of New York and New Jersey' }
       ],
       link: "https://museumships.us/coast-guard/ambrose",
       image_caption: "United States Lightship WLV-613. Wikimedia Commons, U.S. Coast Guard, n.d.",
