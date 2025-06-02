@@ -25,9 +25,7 @@ const App = () => {
     <>
       <NavBar count={visitedLandmarks.length} total={116} />
       <div className={styles.container}>
-        <LandmarkList
-          handleClick={handleClick}
-        />
+        <LandmarkList handleClick={handleClick} />
         <Map
           selectedLocation={selectedLocation}
           setSelectedLocation={setSelectedLocation}
