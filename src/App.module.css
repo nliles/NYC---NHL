@@ -3,14 +3,13 @@
     margin-top: 50px;
     height: calc(100vh - 50px);
     overflow: scroll;
-    width: 350px;
+    width: 425px;
     background: white;
     border-right: 1px solid #e0e0e0;
     display: flex;
     flex-direction: column;
-    transition: transform 0.3s ease;
-    z-index: 1000;
     box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    font-family: "Roboto", sans-serif;
 }
 
 .panelHeader {
