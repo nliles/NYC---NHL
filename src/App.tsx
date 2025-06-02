@@ -13,7 +13,9 @@ const App = () => {
   const [selectedLocation, setSelectedLocation] = useState();
   const [shouldZoom, setShouldZoom] = useState(false);
   const [filteredLandmarks, setFilteredLandmarks] = useState(landmarks);
-  const [visitedLandmarks, setVisitedLandmarks] = useState(() => getLocalStorage());
+  const [visitedLandmarks, setVisitedLandmarks] = useState(() =>
+    getLocalStorage(),
+  );
   const inputRef = useRef<HTMLInputElement>(null);
 
   const handleClick = (item: any) => {
