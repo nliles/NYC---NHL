@@ -20,7 +20,7 @@ const LandmarkProfile = ({
     } else {
       const filtered = visitedLandmarks.filter((id: any) => id !== landmark.id);
       setVisitedLandmarks(filtered);
-      saveToStorage(JSON.stringify(filtered));
+      saveToStorage(filtered);
     }
   };
 
