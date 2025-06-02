@@ -76,9 +76,10 @@ const landmarks = [
       borough: "Manhattan",
       bullets: [
         { key: 'Built', value: '1907' },
+        { key: 'Period', value: 'Served the Ambrose Channel from 1908 to 1932' },
         { key: 'Builder', value: 'New York Shipbuilding Company' },
         { key: 'Type', value: 'Riveted steel lightship (LV-87/WAL-512)' },
-        { key: 'Significance', value: 'The very first lightship to guard Ambrose Channel, the largest shipping channel in and out of the ports of New York and New Jersey' }
+        { key: 'Significance', value: 'The very first lightship to guard Ambrose Channel, the largest shipping channel in and out of the ports of New York and New Jersey; served as a symbol of hope and arrival for over six million immigrants into New York Harbor.' }
       ],
       link: "https://museumships.us/coast-guard/ambrose",
       image_caption: "United States Lightship WLV-613. Wikimedia Commons, U.S. Coast Guard, n.d.",
@@ -1020,7 +1021,7 @@ const landmarks = [
         { key: 'Built', value: '1893' },
         { key: 'Builder', value: 'Arthur D. Story shipyard, Essex, Massachusetts' },
         { key: 'Type', value: 'Fredonia-type fishing schooner' },
-        { key: 'Significance', value: 'Last surviving example of Georges Bank fishing schooner, National Historic Landmark (1989), built for Captain Fred Howard and named for his daughter Letticia Gould Howard, exemplifies 19th-century offshore fishing vessels' }
+        { key: 'Significance', value: 'The sole surviving Georges Bank fishing schooner and the only remaining example of the Fredonia-model fishing schooners that were widely used along the entire Eastern seaboard from Maine to the Gulf Coast.' }
       ],
       link: "https://southstreetseaportmuseum.org/about-lettie/",
       image_caption: 'Schooner Lettie G. Howard, South Street Seaport Museum, New York County, NY. Library of Congress.',
