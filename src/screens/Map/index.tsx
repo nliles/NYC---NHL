@@ -113,12 +113,16 @@ const Map = ({
       (mapInstance.current as any).isStyleLoaded() &&
       (mapInstance.current as any).getLayer("landmark-points")
     ) {
-      (mapInstance.current as any).setPaintProperty("landmark-points", "circle-color", [
-        "case",
-        ["in", ["get", "id"], ["literal", visitedLandmarks || []]],
-        "#8b5a2b", // visited - vintage brown
-        "#6b8a7a", // not visited - muted green
-      ]);
+      (mapInstance.current as any).setPaintProperty(
+        "landmark-points",
+        "circle-color",
+        [
+          "case",
+          ["in", ["get", "id"], ["literal", visitedLandmarks || []]],
+          "#8b5a2b", // visited - vintage brown
+          "#6b8a7a", // not visited - muted green
+        ],
+      );
       (mapInstance.current as any).setPaintProperty(
         "landmark-points",
         "circle-stroke-color",

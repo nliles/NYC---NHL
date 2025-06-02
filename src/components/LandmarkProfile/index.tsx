@@ -43,25 +43,35 @@ const LandmarkProfile = ({
             className={styles.img}
           />
           {landmark.image_caption && (
-            <a className={styles.caption} href={landmark.image_link} target="_blank" rel="noopener noreferrer">{landmark.image_caption}</a>
+            <a
+              className={styles.caption}
+              href={landmark.image_link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {landmark.image_caption}
+            </a>
           )}
           {landmark?.bullets && (
-          <ul className={styles.bulletList}>
-          {(typeof landmark.bullets === 'string' ? JSON.parse(landmark.bullets): landmark.bullets).map((item: any, index: number) => (
-            <li key={index} className={styles.bulletItem}>
-              <p className={styles.key}>{item.key}</p>
-              <p className={styles.value}>{item.value}</p>
-            </li>
-          ))}
-        </ul>
+            <ul className={styles.bulletList}>
+              {(typeof landmark.bullets === "string"
+                ? JSON.parse(landmark.bullets)
+                : landmark.bullets
+              ).map((item: any, index: number) => (
+                <li key={index} className={styles.bulletItem}>
+                  <p className={styles.key}>{item.key}</p>
+                  <p className={styles.value}>{item.value}</p>
+                </li>
+              ))}
+            </ul>
           )}
           {landmark.quote && (
-          <blockquote className={styles.quoteBlock}>
-            <p className={styles.quoteText}>
-            &ldquo;{landmark.quote}&rdquo;
-            </p>
-            <p className={styles.quoteAttribution}>— {landmark.quote_author}</p>
-          </blockquote>
+            <blockquote className={styles.quoteBlock}>
+              <p className={styles.quoteText}>&ldquo;{landmark.quote}&rdquo;</p>
+              <p className={styles.quoteAttribution}>
+                — {landmark.quote_author}
+              </p>
+            </blockquote>
           )}
         </div>
       </div>
