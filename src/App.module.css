@@ -31,44 +31,30 @@
 }
 
 .searchContainer {
-    display: flex;
-    align-items: center;
-    box-sizing: border-box;
     position: relative;
     width: 100%;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-}
-
-.searchContainer:focus-within {
-    border-color: #007AFF;
-    box-shadow: 0 0 0 3px rgba(0,122,255,0.1);
 }
 
 .searchInput {
     box-sizing: border-box;
+    width: 100%;
+    padding: 10px 40px 10px 12px;
+    border: 1px solid #ddd;
     border-radius: 6px;
-    width: 90%;
-    height: 100%;
-    padding: 10px 0;
-    padding-left: 5px;
     font-size: 14px;
     outline: none;
-    border: none;
 }
 
-.searchBtn {
-    all: unset;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-top-right-radius: 6px;
-    border-bottom-right-radius: 6px;
-    width: 10%;
+.searchInput:focus {
+    border-color: #007AFF;
+    box-shadow: 0 0 0 3px rgba(0,122,255,0.1);
 }
 
 .searchIcon {
+    position: absolute;
     right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .landmarksList {
