@@ -10,6 +10,7 @@ import styles from "./App.module.css";
 
 const App = () => {
   const [selectedLocation, setSelectedLocation] = useState();
+  const [shouldZoom, setShouldZoom] = useState(false);
   const [filteredLandmarks, setFilteredLandmarks] = useState(landmarks);
   const [visitedLandmarks, setVisitedLandmarks] = useState(() => {
     try {
@@ -39,6 +40,7 @@ const App = () => {
 
   const handleClick = (item: any) => {
     setSelectedLocation(item.properties);
+    setShouldZoom(true);
   };
 
   const handleOnChange = () => {
@@ -100,6 +102,8 @@ const App = () => {
           selectedLocation={selectedLocation}
           setSelectedLocation={setSelectedLocation}
           visitedLandmarks={visitedLandmarks}
+          shouldZoom={shouldZoom}
+          setShouldZoom={setShouldZoom}
         />
       </div>
       <div>
