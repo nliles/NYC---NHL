@@ -7,10 +7,14 @@ const Map = ({
   selectedLocation,
   setSelectedLocation,
   visitedLandmarks,
+  shouldZoom,
+  setShouldZoom,
 }: {
   selectedLocation: any;
   setSelectedLocation: Dispatch<SetStateAction<undefined>>;
   visitedLandmarks: string[];
+  shouldZoom?: boolean;
+  setShouldZoom?: (value: boolean) => void;
 }) => {
   const mapContainer = useRef(null);
   const mapInstance = useRef(null);
@@ -135,6 +139,19 @@ const Map = ({
       );
     }
   }, [visitedLandmarks, selectedLocation]);
+
+  useEffect(() => {
+    if (selectedLocation && shouldZoom) {
+      const found = landmarks.find(
+        (landmark) => landmark.properties.id === selectedLocation.id,
+      );
+      (mapInstance?.current as any).flyTo({
+        center: found?.geometry.coordinates,
+        essential: true // this animation is considered essential with respect to prefers-reduced-motion
+    });
+    setShouldZoom?.(false); // Reset zoom state after flying
+    }
+  }, [selectedLocation, shouldZoom, setShouldZoom])
 
   return (
     <div className={styles.container}>
