@@ -8,6 +8,7 @@ const landmarks = [
     properties: {
       id: 1,
       name: "69th Regiment Armory",
+      borough: "Manhattan",
       bullets: [
         { key: 'Built', value: '1904-1906' },
         { key: 'Architect', value: 'Hunt & Hunt' },
@@ -28,6 +29,7 @@ const landmarks = [
     properties: {
       id: 2,
       name: "Admiral David Glasgow Farragut Gravesite",
+      borough: "Bronx",
       bullets: [
         { key: 'Admiral', value: 'David Glasgow Farragut (1801-1870)' },
         { key: 'Significance', value: 'First rear admiral, vice admiral, and admiral in U.S. Navy history' },
@@ -47,6 +49,7 @@ const landmarks = [
     properties: {
       id: 3,
       name: "African Burial Ground",
+      borough: "Manhattan",
       bullets: [
         { key: 'Used', value: '1690s-1794'},
         { key: 'Rediscovered', value: '1991 during construction'},
@@ -70,6 +73,7 @@ const landmarks = [
     properties: {
       id: 4,
       name: "Ambrose (lightship)",
+      borough: "Manhattan",
       bullets: [
         { key: 'Built', value: '1907' },
         { key: 'Builder', value: 'New York Shipbuilding Company, Camden, New Jersey' },
@@ -90,6 +94,7 @@ const landmarks = [
     properties: {
       id: 5,
       name: "American Stock Exchange",
+      borough: "Manhattan",
       bullets: [
         { key: 'Built', value: '1921 (original structure), enlarged 1929-1931' },
         { key: 'Period', value: '1953-2008' },
@@ -111,6 +116,7 @@ const landmarks = [
     properties: {
       id: 6,
       name: "Louis Armstrong House",
+      borough: "Queens",
       description: "Home of jazz legend Louis Armstrong for 28 years",
       link: "https://www.louisarmstronghouse.org/",
       quote:
@@ -127,6 +133,7 @@ const landmarks = [
     properties: {
       id: 7,
       name: "Chester A. Arthur House",
+      borough: "Manhattan",
       description:
         "Home of President Chester A. Arthur; site of his inaugural oath",
       image_description: "Home of President Chester A. Arthur, 123 Lexington Avenue. Wikimedia Commons.",
@@ -142,6 +149,7 @@ const landmarks = [
     properties: {
       id: 8,
       name: "Alice Austen House",
+      borough: "Staten Island",
       bullets: [
         { key: 'Residents', value: ' Alice Austen and her partner Gertrude Tate (1866-1952)'},
         { key: 'Significance', value: "One of the first women photographers to work outside the confines of a studio, capturing over 8,000 images of everyday life in Victorian society."},
@@ -163,6 +171,7 @@ const landmarks = [
     properties: {
       id: 9,
       name: "Bartow–Pell Mansion",
+      borough: "Bronx",
       description: "19th-century mansion in largest New York City park",
       image_caption: "Bartow-Pell Mansion, Shore Road, Pelham Bay Park, Bronx, Bronx County, NY. Library of Congress. 1933.",
       image_link: "https://www.loc.gov/item/ny0099/",
@@ -178,6 +187,7 @@ const landmarks = [
     properties: {
       id: 10,
       name: "Bayard-Condict Building",
+      borough: "Manhattan",
       bullets: [
         { key: 'Built', value: '1899' },
         { key: 'Architect', value: 'Louis H. Sullivan' },
@@ -201,6 +211,7 @@ const landmarks = [
     properties: {
       id: 11,
       name: "Bell Laboratories Building",
+      borough: "Manhattan",
       bullets: [
         { key: 'Period', value: '1898-1966' },
         { key: 'Significance', value: "Site of one of the world's most prestigious telecommunications research organizations; later became the artists housing project in the United States." },
@@ -220,6 +231,7 @@ const landmarks = [
     properties: {
       id: 12,
       name: "Brooklyn Bridge",
+      borough: "Brooklyn, Manhattan",
       bullets: [
         { key: 'Built', value: '1869–1883' },
         { key: 'Engineer', value: 'John A. Roebling; completed by Washington Roebling and Emily Warren Roebling.' },
@@ -241,6 +253,7 @@ const landmarks = [
     properties: {
       id: 13,
       name: "Brooklyn Heights Historic District",
+      borough: "Brooklyn",
       description:
         "Exemplary collection of 19th-century architectural styles; first historic district in New York City",
       image_caption: "Brooklyn Daily Eagle photographs, Brooklyn Public Library, Center for Brooklyn History, 1939",
@@ -255,6 +268,7 @@ const landmarks = [
     properties: {
       id: 14,
       name: "Center for Brooklyn History",
+      borough: "Brooklyn",
       description:
         "One of the few remaining buildings by George B. Post; innovative structural system",
       image_caption: "Irving I. Herzberg photograph collection, Brooklyn Public Library, Center for Brooklyn History, 1963",
@@ -270,6 +284,7 @@ const landmarks = [
     properties: {
       id: 15,
       name: "Ralph Johnson Bunche House",
+      borough: "Queens",
       bullet: [
         { key: 'Resident', value: 'Ralph Johnson Bunche (1904-1971)' },
         { key: 'Achievement', value: 'First African American to win Nobel Peace Prize (1950)' },
@@ -289,8 +304,7 @@ const landmarks = [
     properties: {
       id: 16,
       name: "Carnegie Hall",
-      quote: "Everywhere in the world, music enhances a hall, with one exception: Carnegie Hall enhances the music.",
-      quote_author: "Isaac Stern, violinist",
+      borough: "Manhattan",
       bullets: [
         { key: 'Built', value: '1889-1891' },
         { key: 'Architect', value: 'William Burnet Tuthill (with Richard Morris Hunt and Adler & Sullivan)' },
@@ -301,6 +315,8 @@ const landmarks = [
       link: "https://www.carnegiehall.org/",
       image_caption: 'Carnegie Music Hall, The New York Public Library Digital Collections, 1908',
       image_link: "https://digitalcollections.nypl.org/items/99d82cb0-c615-012f-0cf6-58d385a7bc34#/?uuid=510d47de-0fef-a3d9-e040-e00a18064a99",
+      quote: "Everywhere in the world, music enhances a hall, with one exception: Carnegie Hall enhances the music.",
+      quote_author: "Isaac Stern, violinist",
     },
   },
   {
@@ -318,6 +334,7 @@ const landmarks = [
         { key: 'Architectural style', value: 'Georgian Revival' },
         { key: 'Significance', value: "The first private residence in the U.S. with a steel frame and technological innovations like an early Otis elevator, central heating, and air-conditioning. It also featured one of Manhattan's rare private gardens." },
       ],
+      borough: "Manhattan",
       image_caption: "Carnegie House, Library of Congress, ca. 1920",
       image_link: "https://www.loc.gov/item/2014703975/",
       quote: "The most modest, plainest, and most roomy house in New York.",
@@ -341,6 +358,7 @@ const landmarks = [
         { key: 'Size', value: '843 acres' },
         { key: 'Significance', value: 'Created to provide all social classes access to nature amid rapid urbanization. Recognized as the first major landscaped public park in America.' },
       ],
+      borough: "Manhattan",
       link: "https://www.centralparknyc.org/",
       image_caption: "Outdoor Life and Sport in Central Park, New York Public Library Digital Collections, 1870",
       image_link: "https://digitalcollections.nypl.org/items/b12f9b80-c559-012f-387e-58d385a7bc34#/?uuid=510d47e1-ae3c-a3d9-e040-e00a18064a99",
@@ -357,6 +375,7 @@ const landmarks = [
     properties: {
       id: 19,
       name: "Central Synagogue",
+      borough: "Manhattan",
       description:
         "Oldest synagogue continuously in use by a New York City Jewish congregation; built in a Moorish Revival style to recognize importance of that period in Jewish history",
       link: "https://www.centralsynagogue.org/",
@@ -371,6 +390,7 @@ const landmarks = [
     properties: {
       id: 20,
       name: "Chamber of Commerce Building",
+      borough: "Manhattan",
       description:
         "Former home of the Chamber of Commerce of the State of New York, established in 1768; prototype for the chamber of commerce",
       image_caption: "66 Liberty Street (Broadway - Nassau Street). The New York Public Library Digital Collections. 1887 - 1964.",
@@ -386,6 +406,7 @@ const landmarks = [
     properties: {
       id: 21,
       name: "Chrysler Building",
+      borough: "Manhattan",
       bullets: [
         { key: 'Built', value: '1928-1930' },
         { key: 'Architect', value: 'William Van Alen' },
@@ -408,6 +429,7 @@ const landmarks = [
     properties: {
       id: 22,
       name: "Church of the Ascension",
+      borough: "Manhattan",
       bullets: [
         { key: 'Founded', value: '1827' },
         { key: 'Built', value: '1841 (current location)' },
@@ -431,6 +453,7 @@ const landmarks = [
     properties: {
       id: 23,
       name: "City Hall",
+      borough: "Manhattan",
       bullets: [
         { key: 'Built', value: '1803-1812' },
         { key: 'Architect', value: 'Joseph François Mangin and John McComb Jr.' },
@@ -451,6 +474,7 @@ const landmarks = [
     properties: {
       id: 24,
       name: "Conference House",
+      borough: "Staten Island",
       bullets: [
         { key: 'Built', value: "ca. 1670s" },
         { key: 'Architectural Style', value: "Colonial stone manor house with Dutch and English influences" },
@@ -470,8 +494,7 @@ const landmarks = [
     properties: {
       id: 25,
       name: "Will Marion Cook House",
-      description:
-        "Home of the leading black composer and musician Will Marion Cook",
+      borough: "Manhattan",
       image_caption: "Will Marion Cook House. Library of Congress. 1933.",
       image_link: "https://www.loc.gov/item/ny1334/",
     },
@@ -485,6 +508,7 @@ const landmarks = [
     properties: {
       id: 26,
       name: "Cooper Union",
+      borough: "Manhattan",
       bullets: [
         { key: 'Built', value: '1859' },
         { key: 'Architect', value: 'Frederick A. Petersen' },
@@ -505,6 +529,7 @@ const landmarks = [
     properties: {
       id: 27,
       name: "Daily News Building",
+      borough: "Manhattan",
       bullets: [
         { key: 'Built', value: '1930' },
         { key: 'Architect', value: 'Raymond Hood' },
@@ -526,6 +551,7 @@ const landmarks = [
     properties: {
       id: 28,
       name: "Dakota Apartments",
+      borough: "Manhattan",
       bullets: [
         { key: 'Built', value: '1884' },
         { key: 'Architect', value: 'Henry Janeway Hardenbergh' },
@@ -549,6 +575,7 @@ const landmarks = [
     properties: {
       id: 29,
       name: "Dyckman House",
+      borough: "Manhattan",
       bullets: [
         { key: 'Built', value: 'ca. 1784-1785' },
         { key: 'Builder', value: 'William Dyckman' },
@@ -570,6 +597,7 @@ const landmarks = [
     properties: {
       id: 30,
       name: "Eldridge Street Synagogue",
+      borough: "Manhattan",
       description:
         "One of the oldest synagogues in the U.S.; first built by Jews from Eastern Europe",
       link: "https://www.eldridgestreet.org/",
@@ -584,6 +612,7 @@ const landmarks = [
     properties: {
       id: 31,
       name: "Duke Ellington House",
+      borough: "Manhattan",
       description:
         "Ellington, the legendary jazz composer and bandleader, lived in Apartment 4A from 1939 to 1961",
     },
@@ -597,6 +626,7 @@ const landmarks = [
     properties: {
       id: 32,
       name: "Empire State Building",
+      borough: "Manhattan",
       bullets: [
         { key: 'Built', value: '1930-1931' },
         { key: 'Architect', value: 'William F. Lamb' },
@@ -620,6 +650,7 @@ const landmarks = [
     properties: {
       id: 33,
       name: "Equitable Building",
+      borough: "Manhattan",
       bullets: [
         { key: 'Built', value: '1913-1915' },
         { key: 'Architect', value: 'Ernest R. Graham' },
@@ -641,6 +672,7 @@ const landmarks = [
     properties: {
       id: 34,
       name: "Hamilton Fish House",
+      borough: "Manhattan",
       description:
         "Home of Hamilton Fish, future Governor and Senator of New York",
       image_caption: "Hamilton Fish House, 21 Stuyvesant Street, New York County, NY. Library of Congress. 1933.",
@@ -656,6 +688,7 @@ const landmarks = [
     properties: {
       id: 35,
       name: "Flatiron Building",
+      borough: "Manhattan",
       bullets: [
         { key: 'Built', value: '1902' },
         { key: 'Architect', value: 'Daniel Burnham (with Frederick P. Dinkelberg)' },
@@ -676,6 +709,7 @@ const landmarks = [
     properties: {
       id: 36,
       name: "Founder's Hall, The Rockefeller University",
+      borough: "Manhattan",
       bullets: [
         { key: 'Built', value: '1903-1906' },
         { key: 'Architect', value: 'Shepley, Rutan & Coolidge' },
@@ -698,6 +732,7 @@ const landmarks = [
     properties: {
       id: 37,
       name: "The Frick Collection and Frick Art Reference Library Building",
+      borough: "Manhattan",
       bullets: [
         { key: 'Built', value: '1935' },
         { key: 'Architect', value: 'Thomas Hastings of Carrère and Hastings' },
@@ -718,6 +753,7 @@ const landmarks = [
     properties: {
       id: 38,
       name: "Governors Island",
+      borough: "Manhattan",
       bullets: [
         { key: 'Built', value: '1794-1813 (fortifications), 1900s expansion (McKim plan)' },
         { key: 'Significance', value: 'Historic military fortress protecting New York Harbor for 200+ years (1794-1996); home to Fort Jay and Castle Williams National Monuments and over 50 historic buildings.' },
@@ -737,6 +773,7 @@ const landmarks = [
     properties: {
       id: 39,
       name: "Grace Church",
+      borough: "Manhattan",
       bullets: [
         { key: 'Founded', value: '1805' },
         { key: 'Built', value: '1846 (current location)' },
@@ -760,6 +797,7 @@ const landmarks = [
     properties: {
       id: 40,
       name: "Grand Central Terminal",
+      borough: "Manhattan",
       bullets: [
         { key: 'Built', value: '1913' },
         { key: 'Architect', value: 'Reed and Stem, Warren and Wetmore' },
@@ -781,6 +819,7 @@ const landmarks = [
     properties: {
       id: 41,
       name: "Green-Wood Cemetery",
+      borough: "Brooklyn",
       bullets: [
         { key: 'Founded', value: '1838' },
         { key: 'Designer', value: 'David Bates Douglass' },
@@ -801,6 +840,7 @@ const landmarks = [
     properties: {
       id: 42,
       name: "Hamilton Grange National Memorial",
+      borough: "Manhattan",
       bullets: [
       { key: 'Built', value: '1802' },
       { key: 'Architect', value: 'John McComb Jr.' },
@@ -821,6 +861,7 @@ const landmarks = [
     properties: {
       id: 43,
       name: "Solomon R. Guggenheim Museum",
+      borough: "Manhattan",
       bullets:[
         { key: 'Built', value: '1943-1959' },
         { key: 'Founder', value: 'Solomon R. Guggenheim' },
@@ -843,6 +884,7 @@ const landmarks = [
     properties: {
       id: 44,
       name: "Henry Street Settlement and Neighborhood Playhouse",
+      borough: "Manhattan",
       bullets: [
         { key: 'Founded', value: '1893'},
         { key: 'Founder', value: 'Lillian Wald, nurse and humanitarian'},
@@ -864,8 +906,7 @@ const landmarks = [
     properties: {
       id: 45,
       name: "Matthew Henson Residence",
-      description:
-        "Home of Matthew Henson, African-American polar explorer who may have been the first to reach the North Pole",
+      borough: "Manhattan",
     },
   },
   {
@@ -877,6 +918,7 @@ const landmarks = [
     properties: {
       id: 46,
       name: "Hispanic Society of America",
+      borough: "Manhattan",
       bullets: [
         { key: 'Built', value: '1905-1908' },
         { key: 'Architect', value: 'Charles Pratt Huntington' },
@@ -897,6 +939,7 @@ const landmarks = [
     properties: {
       id: 47,
       name: "Holland Tunnel",
+      borough: "Manhattan",
       bullets: [
         { key: 'Built', value: '1920-1927' },
         { key: 'Chief Engineer', value: 'Clifford Milburn Holland (completed by Ole Singstad after Holland\'s death in 1924)' },
@@ -918,6 +961,7 @@ const landmarks = [
     properties: {
       id: 48,
       name: "USS Intrepid",
+      borough: "Manhattan",
       description:
         "One of the most active U.S. ships during World War II; today the Intrepid Museum moored along the West Side",
       link: "https://intrepidmuseum.org/",
@@ -932,8 +976,7 @@ const landmarks = [
     properties: {
       id: 49,
       name: "James Weldon Johnson Residence",
-      description:
-        "Harlem home of African-American artist-activist James Weldon Johnson",
+      borough: "Manhattan",
     },
   },
   {
@@ -945,6 +988,7 @@ const landmarks = [
     properties: {
       id: 50,
       name: "King Manor",
+      borough: "Queens",
       image_caption: "Rufus King House. Library of Congress. 1933.",
       image_link: "https://www.loc.gov/resource/hhh.ny2046.photos/?sp=1&st=image",
       link: "https://www.kingmanor.org/",
@@ -959,6 +1003,7 @@ const landmarks = [
     properties: {
       id: 51,
       name: "Lettie G. Howard (schooner)",
+      borough: "Manhattan",
       bullets: [
         { key: 'Built', value: '1893' },
         { key: 'Builder', value: 'Arthur D. Story shipyard, Essex, Massachusetts' },
@@ -979,6 +1024,7 @@ const landmarks = [
     properties: {
       id: 52,
       name: "Lorillard Snuff Mill",
+      borough: "Bronx",
       description: "Oldest existing tobacco-manufacturing facility in U.S.",
       image_caption: "Lorillard Snuff Mill, Botanical Gardens, Bronx Park, Bronx, Bronx County, NY. Library of Congress. 1933.",
       image_link: "https://www.loc.gov/resource/hhh.ny0101.photos/?sp=1",
@@ -993,6 +1039,7 @@ const landmarks = [
     properties: {
       id: 53,
       name: "Low Memorial Library",
+      borough: "Manhattan",
       description:
         "First building on Morningside Heights campus; capped by largest freestanding granite dome in U.S.",
       link: "https://www.nps.gov/places/low-memorial-library.htm",
@@ -1010,6 +1057,7 @@ const landmarks = [
     properties: {
       id: 54,
       name: "R. H. Macy and Company Store (Macy's)",
+      borough: "Manhattan",
       bullets: [
         { key: 'Built', value: '1902 (with later expansions)' },
         { key: 'Architects', value: 'De Lemos & Cordes, Robert D. Kohn' },
@@ -1034,6 +1082,7 @@ const landmarks = [
     properties: {
       id: 55,
       name: "McGraw-Hill Building",
+      borough: "Manhattan",
       bullets: [
         { key: 'Built', value: '1931' },
         { key: 'Architect', value: 'Raymond Hood' },
@@ -1057,6 +1106,7 @@ const landmarks = [
     properties: {
       id: 56,
       name: "Claude McKay Residence",
+      borough: "Manhattan",
       description:
         "The Harlem YMCA, whose residents included African-American writer Claude McKay",
       link: "https://africanamericanheritagesites.stqry.app/en/story/44226",
@@ -1071,6 +1121,7 @@ const landmarks = [
     properties: {
       id: 57,
       name: "Metropolitan Life Insurance Company Tower",
+      borough: "Manhattan",
       description:
         "Tallest building in the world 1909-13; still part of the skyline a century later",
       image_caption: "Metropolitan Life Ins. Bldg.. Library of Congress. 1912.",
@@ -1086,6 +1137,7 @@ const landmarks = [
     properties: {
       id: 58,
       name: "Metropolitan Museum of Art",
+      borough: "Manhattan",
       bullets: [
         { key: 'Founded', value: '1870' },
         { key: 'Architect', value: 'Richard Morris Hunt' },
@@ -1109,6 +1161,7 @@ const landmarks = [
     properties: {
       id: 59,
       name: "J. Pierpont Morgan Library",
+      borough: "Manhattan",
       bullets: [
         { key: 'Built', value: '1902-1906' },
         { key: 'Architect', value: 'Charles McKim' },
@@ -1131,6 +1184,7 @@ const landmarks = [
     properties: {
       id: 60,
       name: "Morris-Jumel Mansion",
+      borough: "Manhattan",
       bullets: [
         { key: 'Built', value: '1765' },
         { key: 'Architectural Style', value: 'Georgian Colonial with Federal period modifications' },
@@ -1152,6 +1206,7 @@ const landmarks = [
     properties: {
       id: 61,
       name: "National City Bank Building",
+      borough: "Manhattan",
       description:
         "Home to one of the country's largest and most important banks since 1908",
       image_caption: "National City Bank, Wall St. Library of Congress. ca. 1909.",
@@ -1167,6 +1222,7 @@ const landmarks = [
     properties: {
       id: 62,
       name: "New York Amsterdam News Building",
+      borough: "Manhattan",
       description:
         "Influential black newspaper the New York Amsterdam News was published here 1916-38",
       image_caption: "New York Amsterdam News Building, Seventh Avenue. Library of Congress. 1933",
@@ -1182,6 +1238,7 @@ const landmarks = [
     properties: {
       id: 63,
       name: "New York Botanical Garden",
+      borough: "Bronx",
       description:
         "One of the world's leading botanical gardens, with the largest herbarium in the U.S. and second largest in the world after the French National Museum of Natural History and home to many plant laboratories",
       image_caption: "Bronx Park - Central Dome - Botanical Garden. The New York Public Library Digital Collections. 1938.",
@@ -1198,6 +1255,7 @@ const landmarks = [
     properties: {
       id: 64,
       name: "New York Cotton Exchange",
+      borough: "Manhattan",
       bullets: [
         { key: 'Built', value: '1854' },
         { key: 'NYCE Period', value: '1872 to 1885' },
@@ -1219,6 +1277,7 @@ const landmarks = [
     properties: {
       id: 65,
       name: "New York Life Building",
+      borough: "Manhattan",
       bullets: [
         { key: 'Built', value: '1926-1928' },
         { key: 'Architect', value: 'Cass Gilbert' },
@@ -1240,6 +1299,7 @@ const landmarks = [
     properties: {
       id: 66,
       name: "New York Public Library",
+      borough: "Manhattan",
       bullets: [
         { key: 'Built', value: '1901-1911' },
         { key: 'Architects', value: 'John Merven Carrère and Thomas Hastings' },
@@ -1260,6 +1320,7 @@ const landmarks = [
     properties: {
       id: 67,
       name: "New York Stock Exchange",
+      borough: "Manhattan",
       bullets: [
         { key: 'Built', value: '1903' },
         { key: 'Architect', value: 'George B. Post' },
@@ -1280,6 +1341,7 @@ const landmarks = [
     properties: {
       id: 68,
       name: "New York Studio School of Drawing, Painting and Sculpture",
+      borough: "Manhattan",
       description:
         "Original home of the Whitney Museum, the first devoted to 20th-century American art",
       link: "https://nyss.org/about/history-of-the-school/",
@@ -1294,6 +1356,7 @@ const landmarks = [
     properties: {
       id: 69,
       name: "New York Yacht Club",
+      borough: "Manhattan",
       bullets: [
         { key: 'Built', value: '1901' },
         { key: 'Architect', value: 'Whitney Warren' },
@@ -1314,6 +1377,7 @@ const landmarks = [
     properties: {
       id: 70,
       name: "Old Merchant House",
+      borough: "Manhattan",
       bullets: [
         { key: 'Built', value: '1832' },
         { key: 'Architect', value: 'Joseph Brewster (builder/developer)' },
@@ -1334,6 +1398,7 @@ const landmarks = [
     properties: {
       id: 71,
       name: "Old Quaker Meeting House",
+      borough: "Queens",
       bullets: [
         { key: 'Built', value: '1694' },
         { key: 'Architectural style', value: 'Dutch Colonial' },
@@ -1357,6 +1422,7 @@ const landmarks = [
     properties: {
       id: 72,
       name: "Philosophy Hall",
+      borough: "Manhattan",
       description:
         "Edwin Armstrong developed FM radio in this Columbia University building",
       image_caption: "Edwin Armstrong's laboratory in 102 Philosophy, Columbia University. Wikimedia Commons. 1930.",
@@ -1372,6 +1438,7 @@ const landmarks = [
     properties: {
       id: 73,
       name: "Players Club",
+      borough: "Manhattan",
       bullets: [
         { key: 'Built', value: '1847 (house), 1888 (clubhouse conversion)' },
         { key: 'Architect', value: 'Stanford White (McKim, Mead & White) - renovation and interior design' },
@@ -1392,6 +1459,7 @@ const landmarks = [
     properties: {
       id: 74,
       name: "Plaza Hotel",
+      borough: "Manhattan",
       bullets: [
         { key: 'Built', value: '1907' },
         { key: 'Architect', value: 'Henry Janeway Hardenbergh' },
@@ -1412,6 +1480,7 @@ const landmarks = [
     properties: {
       id: 75,
       name: "Plymouth Church of the Pilgrims",
+      borough: "Brooklyn",
       description:
         "Important station on Underground Railroad when Henry Ward Beecher was pastor",
       image_caption: "Plymouth Church. The New York Public Library Digital Collections. 1905–1907.",
@@ -1428,6 +1497,7 @@ const landmarks = [
     properties: {
       id: 76,
       name: "Pupin Physics Laboratory, Columbia University",
+      borough: "Manhattan",
       description: "Columbia University building; site of first splitting of uranium atom in U.S. and other milestones in development of atomic bomb",
       link: 'https://quantum.columbia.edu/videos/tour-columbia-physics-design-laboratory',
     },
@@ -1441,6 +1511,7 @@ const landmarks = [
     properties: {
       id: 77,
       name: "Quarters A, Brooklyn Navy Yard",
+      borough: "Brooklyn",
       description: "Home to Matthew Perry at the time of his opening of Japan",
       image_caption: "Quarters A, 1935 (Brooklyn Public Library Digital Collection)",
     },
@@ -1454,6 +1525,7 @@ const landmarks = [
     properties: {
       id: 78,
       name: "Paul Robeson Home",
+      borough: "Manhattan",
       description:
         "Home of legendary African-American actor and activist Paul Robeson",
       link: "https://www.nps.gov/places/new-york-paul-robeson-home.htm",
@@ -1470,6 +1542,7 @@ const landmarks = [
     properties: {
       id: 79,
       name: "Jackie Robinson House",
+      borough: "Brooklyn",
       description: "Home of baseball great Jackie Robinson",
     },
   },
@@ -1482,6 +1555,7 @@ const landmarks = [
     properties: {
       id: 80,
       name: "Rockefeller Center",
+      borough: "Manhattan",
       bullets: [
         { key: 'Built', value: '1930-1939' },
         { key: 'Architect', value: 'Raymond Hood' },
@@ -1503,6 +1577,7 @@ const landmarks = [
     properties: {
       id: 81,
       name: "Sailors' Snug Harbor",
+      borough: "Staten Island",
       bullets: [
         { key: 'Founded', value: '1801' },
         { key: 'Founder', value: 'Robert Richard Randall, wealthy merchant who left his fortune to establish the institution' },
@@ -1524,6 +1599,7 @@ const landmarks = [
     properties: {
       id: 82,
       name: "St. Ann and the Holy Trinity Church",
+      borough: "Brooklyn",
       description: "Site of first figural stained-glass windows in U.S.",
       link: "https://www.stannholytrinity.org/",
       image_caption: "St. Ann's Church, Brooklyn. The New York Public Library Digital Collections. 1850 - 1930.",
@@ -1539,6 +1615,7 @@ const landmarks = [
     properties: {
       id: 83,
       name: "St. George's Episcopal Church",
+      borough: "Manhattan",
       bullets: [
         { key: 'Founded', value: '1749 as St. George\'s Chapel of Trinity Church' },
         { key: 'Built', value: '1846–1856 (current building)' },
@@ -1560,6 +1637,7 @@ const landmarks = [
     properties: {
       id: 84,
       name: "St. Patrick's Cathedral",
+      borough: "Manhattan",
       bullets: [
         { key: 'Built', value: '1858-1878 (dedicated 1879)' },
         { key: 'Architect', value: 'James Renwick Jr.' },
@@ -1581,6 +1659,7 @@ const landmarks = [
     properties: {
       id: 85,
       name: "St. Paul's Chapel",
+      borough: "Manhattan",
       bullets: [
         { key: 'Built', value: '1766' },
         { key: 'Architect', value: 'Thomas McBean' },
@@ -1604,6 +1683,7 @@ const landmarks = [
     properties: {
       id: 86,
       name: "Margaret Sanger Clinic",
+      borough: "Manhattan",
       bullets: [
         { key: 'Founded', value: '1916 in Brooklyn, moved to Manhattan location 1930' },
         { key: 'Founder', value: 'Margaret Sanger' },
@@ -1628,6 +1708,7 @@ const landmarks = [
     properties: {
       id: 87,
       name: "Schomburg Center for Research in Black Culture",
+      borough: "Brooklyn",
       description:
         "Research library of the New York Public Library (NYPL) and an archive repository for information on people of African descent worldwide.",
     },
@@ -1641,8 +1722,7 @@ const landmarks = [
     properties: {
       id: 88,
       name: "Winfield Scott House",
-      description:
-        "Home of Winfield Scott, heroic general in the U.S.-Mexican War and later presidential candidate",
+      borough: "Manhattan",
       image_caption: "Manhattan: 12th Street (West). The New York Public Library Digital Collections. 1870 - 1980.",
       image_link: "https://digitalcollections.nypl.org/items/d7f72c70-c53f-012f-db8d-58d385a7bc34#/?uuid=510d47dc-f796-a3d9-e040-e00a18064a99",
     },
@@ -1656,6 +1736,7 @@ const landmarks = [
     properties: {
       id: 89,
       name: "Seventh Regiment Armory",
+      borough: "Manhattan",
       bullets: [
         { key: 'Built', value: '1877-1880' },
         { key: 'Architect', value: 'Charles W. Clinton' },
@@ -1676,6 +1757,7 @@ const landmarks = [
     properties: {
       id: 90,
       name: "Harry F. Sinclair House",
+      borough: "Manhattan",
       bullets: [
         { key: 'Built', value: '1897-1899' },
         { key: 'Architect', value: 'C.P.H. Gilbert' },
@@ -1696,6 +1778,7 @@ const landmarks = [
     properties: {
       id: 91,
       name: "Alfred E. Smith House",
+      borough: "Manhattan",
       description:
         "Home of four-time New York State governor Alfred E. Smith (and later presidential candidate) from 1907 to 1923",
     },
@@ -1709,6 +1792,7 @@ const landmarks = [
     properties: {
       id: 92,
       name: "SoHo-Cast Iron Historic District",
+      borough: "Manhattan",
       bullets: [
         { key: 'Original Purpose', value: 'Manufacturing district for textiles and light industrial goods (1800s)' },
         { key: 'Cast-Iron Benefits', value: 'Cheaper than stone, fire-resistant, allowed large windows and open floor plans' },
@@ -1729,6 +1813,7 @@ const landmarks = [
     properties: {
       id: 93,
       name: "A. T. Stewart Company Store",
+      borough: "Manhattan",
       bullets: [
         { key: 'Built', value: '1845-1846' },
         { key: 'Architects', value: 'Joseph Trench and John B. Snook' },
@@ -1754,6 +1839,7 @@ const landmarks = [
     properties: {
       id: 94,
       name: "Stonewall",
+      borough: "Manhattan",
       bullets: [
         { key: 'Date', value: 'June 28, 1969' },
         { key: 'Event', value: 'Police raid turned into six days of protests and demonstrations' },
@@ -1777,6 +1863,7 @@ const landmarks = [
     properties: {
       id: 95,
       name: "St. Bartholomew's Church and Community House",
+      borough: "Manhattan",
       bullets: [
         { key: 'Built', value: '1918-1930' },
         { key: 'Architect', value: 'Bertram Goodhue (with later additions by Mayers, Murray & Phillip)' },
@@ -1797,6 +1884,7 @@ const landmarks = [
     properties: {
       id: 96,
       name: "Surrogate's Court",
+      borough: "Manhattan",
       description: "Probate Courthouse across from City Hall",
       link: "https://ww2.nycourts.gov/courts/1jd/surrogates/historical.shtml",
       image_caption: "31 Chambers Street - Centre Street. The New York Public Library Digital Collections. 1887 - 1964.",
@@ -1812,6 +1900,7 @@ const landmarks = [
     properties: {
       id: 97,
       name: "Tenement Building at 97 Orchard Street",
+      borough: "Manhattan",
       bullets: [
         { key: 'Built', value: '1863 (active 1863-1935)' },
         { key: 'Residents', value: '7,000 people from 20+ nations' },
@@ -1833,6 +1922,7 @@ const landmarks = [
     properties: {
       id: 98,
       name: "Third Judicial District Courthouse",
+      borough: "Manhattan",
       description:
         "Originally built as the Third Judicial District Courthouse; faced with demolition, public outcry led to its reuse as a branch of the New York Public Library",
       image_caption: "Third Judicial District Courthouse. Library of Congress. 1933.",
@@ -1848,6 +1938,7 @@ const landmarks = [
     properties: {
       id: 99,
       name: "Tiffany and Company Building",
+      borough: "Manhattan",
       bullets: [
         { key: 'Built', value: '1903-1905' },
         { key: 'Architect', value: 'Stanford White of McKim, Mead & White' },
@@ -1867,8 +1958,7 @@ const landmarks = [
     properties: {
       id: 100,
       name: "Samuel J. Tilden House",
-      description:
-        "Home of Samuel J. Tilden, former New York State governor and loser of the bitter 1876 presidential election",
+      borough: "Manhattan",
       image_caption: "Samuel J. Tilden Residence. Wikimedia Commons. 1872",
       image_link: "https://en.wikipedia.org/wiki/Samuel_J._Tilden_House#/media/File:C.Vaux_-_Samuel_J.Tilden_residence_-_NY_-_Albert_Levy.jpg"
     },
@@ -1882,6 +1972,7 @@ const landmarks = [
     properties: {
       id: 101,
       name: "The Town Hall",
+      borough: "Manhattan",
       bullets: [
         { key: 'Built', value: '1919-1921' },
         { key: 'Architect', value: 'McKim, Mead & White' },
@@ -1902,6 +1993,7 @@ const landmarks = [
     properties: {
       id: 102,
       name: "Triangle Shirtwaist Factory",
+      borough: "Manhattan",
       bullets: [
         { key: 'Date', value: 'March 25, 1911' },
         { key: 'Event', value: 'Site of factory fire that killed 146 workers (mostly young, immigrant women)' },
@@ -1924,6 +2016,7 @@ const landmarks = [
     properties: {
       id: 103,
       name: "Trinity Church",
+      borough: "Manhattan",
       bullets: [
         { key: 'Founded', value: '1697' },
         { key: 'Built', value: '1846 (current building)' },
@@ -1945,6 +2038,7 @@ const landmarks = [
     properties: {
       id: 104,
       name: "Old New York County Courthouse",
+      borough: "Manhattan",
       bullets: [
         { key: 'Built', value: '1861-1881' },
         { key: 'Architect', value: 'John Kellum (1861-1871), Leopold Eidlitz (1876-1881)' },
@@ -1966,6 +2060,7 @@ const landmarks = [
     properties: {
       id: 105,
       name: "Union Square",
+      borough: "Manhattan",
       bullets: [
         { key: 'Established', value: '1833 (opened 1839)' },
         { key: 'Designer', value: 'Frederick Law Olmsted and Calvert Vaux' },
@@ -1987,6 +2082,7 @@ const landmarks = [
     properties: {
       id: 106,
       name: "United Charities Building",
+      borough: "Manhattan",
       bullets: [
         { key: 'Built', value: '1893' },
         { key: 'Architect', value: 'Robert H. Robertson (assisted by Rowe & Baker)' },
@@ -2008,6 +2104,7 @@ const landmarks = [
     properties: {
       id: 107,
       name: "United Workers Cooperatives",
+      borough: "Bronx",
       bullets: [
         { key: 'Built', value: '1926-1929' },
         { key: 'Architect', value: 'Springsteen & Goldhammer (1926-1927), Herman Jessor (1927-1929)' },
@@ -2025,6 +2122,7 @@ const landmarks = [
     properties: {
       id: 108,
       name: "U.S. Customhouse",
+      borough: "Manhattan",
       bullets: [
         { key: 'Built', value: '1902-1907' },
         { key: 'Period', value: '1907-1974' },
@@ -2047,6 +2145,7 @@ const landmarks = [
     properties: {
       id: 109,
       name: "University Heights Campus (Bronx Community College of the City University of New York)",
+      borough: "Manhattan",
       description:
         "Bronx - University Heights Campus. The New York Public Library Digital Collections. 1887 - 1964.",
       image_link: "https://digitalcollections.nypl.org/items/609c3240-c5ec-012f-5204-58d385a7bc34#/?uuid=510d47e2-c3e5-a3d9-e040-e00a18064a99",
@@ -2061,6 +2160,7 @@ const landmarks = [
     properties: {
       id: 110,
       name: "Van Cortlandt House",
+      borough: "Bronx",
       bullets: [
         { key: 'Built', value: '1748-1749' },
         { key: 'Builder', value: 'Frederick Van Cortlandt' },
@@ -2081,6 +2181,7 @@ const landmarks = [
     properties: {
       id: 111,
       name: "Voorlezer's House",
+      borough: "Staten Island",
       bullets: [
         { key: 'Built', value: "ca. 1695" },
         { key: 'Architectural Style', value: "Dutch Colonial vernacular with steep-pitched roof, stone construction, and simple rectangular form" },
@@ -2100,6 +2201,7 @@ const landmarks = [
     properties: {
       id: 112,
       name: "Wards Point Archeological Site",
+      borough: "Staten Island",
       description:
         "Archaeological site in Conference House Park containing prehistoric remains.",
     },
@@ -2113,6 +2215,7 @@ const landmarks = [
     properties: {
       id: 113,
       name: "Woodlawn Cemetery",
+      borough: "Bronx",
       bullets: [
         { key: 'Founded', value: '1863' },
         { key: 'Designer', value: 'James C. Sidney (original layout), with later contributions by McKim, Mead & White, John Russell Pope, Cass Gilbert, Carrère & Hastings, and Olmsted Brothers' },
@@ -2133,6 +2236,7 @@ const landmarks = [
     properties: {
       id: 114,
       name: "Woolworth Building",
+      borough: "Manhattan",
       bullets: [
         { key: 'Built', value: '1910 - 1913' },
         { key: 'Commissioner', value: 'Frank W. Woolworth' },
@@ -2157,6 +2261,7 @@ const landmarks = [
     properties: {
       id: 115,
       name: "Wyckoff House",
+      borough: "Brooklyn",
       description: "Oldest surviving Dutch saltbox frame house in America",
       image_caption: "Wyckoff home. Library of Congress. 1933.",
       image_link: "https://www.loc.gov/item/ny0257/",
@@ -2172,6 +2277,7 @@ const landmarks = [
     properties: {
       id: 116,
       name: "Wyckoff-Bennett Homestead",
+      borough: "Brooklyn",
       description: "Housed Hessian soldiers during the American Revolution",
       image_caption: "Wyckoff-Bennett House. Library of Congress. 1933.",
       image_link: "https://www.loc.gov/item/ny0256/",
