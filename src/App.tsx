@@ -44,7 +44,6 @@ const App = () => {
                     <div className={styles.searchIcon}>🔍</div>
                 </div>
             </div>
-            <div className={styles.resultsCount} id="resultsCount">Showing 97 of 116 landmarks</div>
                 <div className={styles.landmarksList}>
                   {landmarks.map((landmark) => (
                     <button className={styles.item} onClick={() => handleClick(landmark)} key={landmark.properties.id}>
