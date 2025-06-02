@@ -907,6 +907,13 @@ const landmarks = [
       id: 45,
       name: "Matthew Henson Residence",
       borough: "Manhattan",
+      bullets: [
+        { key: 'Built', value: '1926-1928 (Dunbar Apartments complex)' },
+        { key: 'Architect', value: 'Andrew J. Thomas (designed by)' },
+        { key: 'Architectural style', value: 'U-shaped residential complex designed to maximize air flow and sunlight, part of the landmark Dunbar Apartments' },
+        { key: 'Significance', value: 'Apartment 3F was home to Matthew Henson (1866-1955), African American polar explorer who was arguably the first person to reach the North Pole with Robert Peary in 1909. Henson lived here from 1929 until his death in 1955. Designated National Historic Landmark in 1975.' },
+        { key: 'Current', value: 'Part of the Dunbar Apartments residential complex' }
+      ],
     },
   },
   {
@@ -962,8 +969,13 @@ const landmarks = [
       id: 48,
       name: "USS Intrepid",
       borough: "Manhattan",
-      description:
-        "One of the most active U.S. ships during World War II; today the Intrepid Museum moored along the West Side",
+      bullets: [
+        { key: 'Built', value: '1941-1943 (keel laid December 1, 1941; launched April 26, 1943; commissioned August 16, 1943)' },
+        { key: 'Architect', value: 'Newport News Shipbuilding & Dry Dock Company, Virginia (shipbuilder)' },
+        { key: 'Architectural style', value: 'Essex-class aircraft carrier design; 872 feet overall length, 147.5-foot beam, displacement of 27,100 tonnes' },
+        { key: 'Significance', value: 'WWII Pacific Theater veteran, surviving torpedo strike and five kamikaze attacks. Nicknamed "The Fighting I" and "Ghost Ship" by Japanese forces. Served in Cold War, Vietnam War, and as NASA recovery vessel for Mercury and Gemini missions. National Historic Landmark since 1986.' },
+        { key: 'Current', value: 'Intrepid Sea, Air & Space Museum at Pier 86, Hudson River (since 1982)' }
+      ],
       link: "https://intrepidmuseum.org/",
     },
   },
@@ -1025,7 +1037,12 @@ const landmarks = [
       id: 52,
       name: "Lorillard Snuff Mill",
       borough: "Bronx",
-      description: "Oldest existing tobacco-manufacturing facility in U.S.",
+      bullets: [
+        { key: 'Built', value: 'ca. 1840 (third mill on the site; replaced earlier wooden mills from 1792 and c. 1800)' },
+        { key: 'Period', value: '1840-1870' },
+        { key: 'Significance', value: 'Oldest existing tobacco manufacturing building in the United States. Built by the Lorillard family for grinding tobacco into snuff using water-powered stone wheels. America\'s first major tobacco manufacturing enterprises.' },
+        { key: 'Current', value: 'Lillian and Amy Goldman Stone Mill, event venue within New York Botanical Garden' }
+      ],
       image_caption: "Lorillard Snuff Mill, Botanical Gardens, Bronx Park, Bronx, Bronx County, NY. Library of Congress. 1933.",
       image_link: "https://www.loc.gov/resource/hhh.ny0101.photos/?sp=1",
     },
@@ -1040,8 +1057,13 @@ const landmarks = [
       id: 53,
       name: "Low Memorial Library",
       borough: "Manhattan",
-      description:
-        "First building on Morningside Heights campus; capped by largest freestanding granite dome in U.S.",
+      bullets: [
+        { key: 'Built', value: '1895-1897' },
+        { key: 'Architect', value: 'Charles Follen McKim of McKim, Mead & White (assisted by William M. Kendall, Austin W. Lord, and Egerton Swartwout)' },
+        { key: 'Architectural style', value: 'Neoclassical/Beaux-Arts style, modeled on Rome\'s Pantheon and Baths of Caracalla; arranged in Greek cross plan with central octagonal hall and dome' },
+        { key: 'Significance', value: 'Centerpiece of Columbia University\'s Morningside Heights campus, considered a masterwork of American academic architecture. Funded by Seth Low in memory of his father Abiel Abbot Low. Features the largest freestanding granite dome in the United States. NYC landmark (1967) and National Historic Landmark.' },
+        { key: 'Current', value: 'Columbia University administrative offices and visitor center (converted from library use in 1934)' }
+      ],
       link: "https://www.nps.gov/places/low-memorial-library.htm",
       image_caption:
         "Low Memorial Library of Columbia University. Library of Congress. 1904.",
@@ -1107,8 +1129,13 @@ const landmarks = [
       id: 56,
       name: "Claude McKay Residence",
       borough: "Manhattan",
-      description:
-        "The Harlem YMCA, whose residents included African-American writer Claude McKay",
+      bullets: [
+        { key: 'Built', value: '1931-1932' },
+        { key: 'Architect', value: 'James C. Mackenzie Jr., Architectural Bureau of the National Council of the YMCA' },
+        { key: 'Architectural style', value: 'Red-brown brick building with neo-Georgian details' },
+        { key: 'Significance', value: 'Home to Claude McKay (1889-1948), Jamaican-American poet and central figure in the Harlem Renaissance, author of "If We Must Die" and "Home to Harlem." Also housed other notable Harlem Renaissance figures including Langston Hughes, Richard Wright, and Malcolm X. National Historic Landmark (1976).' },
+        { key: 'Current', value: 'Harlem YMCA, still operating as community center and guest accommodation' }
+      ],
       link: "https://africanamericanheritagesites.stqry.app/en/story/44226",
     },
   },
@@ -1122,8 +1149,13 @@ const landmarks = [
       id: 57,
       name: "Metropolitan Life Insurance Company Tower",
       borough: "Manhattan",
-      description:
-        "Tallest building in the world 1909-13; still part of the skyline a century later",
+      bullets: [
+        { key: 'Built', value: '1905-1909 (tower); 1893-1905 (original east wing base)' },
+        { key: 'Architect', value: 'Napoleon LeBrun & Sons (Pierre LeBrun and Michel LeBrun as lead architects)' },
+        { key: 'Architectural style', value: 'Neoclassical with Italian Renaissance motifs; modeled after the Campanile di San Marco in Venice' },
+        { key: 'Significance', value: 'World\'s tallest building from 1909-1913 at 700 feet tall. Features four monumental 26.5-foot diameter clocks on the tower faces. Built as headquarters for Metropolitan Life Insurance Company, then the nation\'s largest life insurer. NYC Landmark (1989).' },
+        { key: 'Current', value: 'Mixed-use commercial and residential building (converted to condominiums and hotel)' }
+      ],
       image_caption: "Metropolitan Life Ins. Bldg.. Library of Congress. 1912.",
       image_link: "https://www.loc.gov/item/00650139/",
     },
@@ -1709,6 +1741,13 @@ const landmarks = [
       id: 87,
       name: "Schomburg Center for Research in Black Culture",
       borough: "Brooklyn",
+      bullets: [
+        { key: 'Built', value: 'Original building: 1904 (McKim, Mead & White); Main building: 1980; Expansion: 1991' },
+        { key: 'Architect', value: 'McKim, Mead & White (1904 original building), J. Max Bond Jr. of Bond Ryder Associates (1980 main building), John James of Bond Ryder James Architects (1991 expansion)' },
+        { key: 'Architectural style', value: 'Carnegie library design (1904 original), Modern/Contemporary (1980 main building)' },
+        { key: 'Significance', value: 'World-leading research institution for African American, African Diaspora, and African experiences. Founded in 1925 with collection from scholar Arturo Alfonso Schomburg. Houses over 11 million items documenting Black history and culture.' },
+        { key: 'Current', value: 'Schomburg Center for Research in Black Culture (New York Public Library research division)' }
+      ],
       description:
         "Research library of the New York Public Library (NYPL) and an archive repository for information on people of African descent worldwide.",
     },
@@ -1723,6 +1762,13 @@ const landmarks = [
       id: 88,
       name: "Winfield Scott House",
       borough: "Manhattan",
+      bullets: [
+          { key: 'Built', value: '1851-1852' },
+          { key: 'Architect', value: 'Charles Partridge (developer/builder)' },
+          { key: 'Architectural style', value: 'Anglo-Italianate style, four-story brownstone with rusticated first floor and segmental-arch windows' },
+          { key: 'Significance', value: 'Home of General Winfield Scott (1853-1855), Civil War commander and 1852 Whig presidential candidate known as "Old Fuss and Feathers." Designated National Historic Landmark in 1973.' },
+          { key: 'Current', value: 'Casa Italiana Zerilli-Marimò, home to NYU Department of Italian Studies' }
+      ],
       image_caption: "Manhattan: 12th Street (West). The New York Public Library Digital Collections. 1870 - 1980.",
       image_link: "https://digitalcollections.nypl.org/items/d7f72c70-c53f-012f-db8d-58d385a7bc34#/?uuid=510d47dc-f796-a3d9-e040-e00a18064a99",
     },
@@ -1885,7 +1931,13 @@ const landmarks = [
       id: 96,
       name: "Surrogate's Court",
       borough: "Manhattan",
-      description: "Probate Courthouse across from City Hall",
+      bullets: [
+        { key: 'Built', value: '1899-1907' },
+        { key: 'Architect', value: 'John Rochester Thomas' },
+        { key: 'Architectural style', value: 'Beaux-Arts' },
+        { key: 'Significance', value: "One of the finest examples of Beaux-Arts architecture in the US; embodies the City Beautiful movement that transformed American civic architecture at the turn of the 20th century." },
+        { key: 'Current', value: "Surrogate's Court (probate and estate matters), NYC Municipal Archives, and Department of Records and Information Services" }
+      ],
       link: "https://ww2.nycourts.gov/courts/1jd/surrogates/historical.shtml",
       image_caption: "31 Chambers Street - Centre Street. The New York Public Library Digital Collections. 1887 - 1964.",
       image_link: "https://digitalcollections.nypl.org/items/2e6caaa0-c5ed-012f-1470-58d385a7bc34#/?uuid=510d47e2-eef9-a3d9-e040-e00a18064a99",
@@ -1923,8 +1975,13 @@ const landmarks = [
       id: 98,
       name: "Third Judicial District Courthouse",
       borough: "Manhattan",
-      description:
-        "Originally built as the Third Judicial District Courthouse; faced with demolition, public outcry led to its reuse as a branch of the New York Public Library",
+      bullets: [
+        { key: 'Built', value: '1874-1877' },
+        { key: 'Architect', value: 'Frederick Clarke Withers of Vaux and Withers (though Calvert Vaux was busy with other projects, design was primarily by Withers)' },
+        { key: 'Architectural style', value: 'American High Victorian Gothic (also called Venetian Gothic), faced in red brick with black brick and yellow Ohio sandstone trim' },
+        { key: 'Significance', value: 'Voted fifth among the ten most beautiful buildings in America by architects in the 1880s. Site of the country\'s first night court. Notable trials include Harry K. Thaw for the murder of Stanford White. Features 100-foot clock tower that served as fire watch tower.' },
+        { key: 'Current', value: 'Jefferson Market Library (New York Public Library branch since 1967)' }
+      ],
       image_caption: "Third Judicial District Courthouse. Library of Congress. 1933.",
       image_link: "https://www.loc.gov/item/ny0431/",
     },
@@ -1959,6 +2016,13 @@ const landmarks = [
       id: 100,
       name: "Samuel J. Tilden House",
       borough: "Manhattan",
+      bullets: [
+        { key: 'Built', value: '1845 (original townhouses); 1881-1884 (combined and renovated)' },
+        { key: 'Architect', value: 'Unknown (original 1845 construction); Calvert Vaux (1881-1884 renovation and combination)' },
+        { key: 'Architectural style', value: 'Originally Greek Revival (1845), extensively restyled by Vaux to Victorian Gothic with Italian Renaissance elements, described as "the height of Victorian Gothic in residential architecture"' },
+        { key: 'Significance', value: 'Home of Samuel J. Tilden (1860-1886), Governor of New York and 1876 presidential candidate who won popular vote but lost Electoral College to Rutherford B. Hayes. Featured rolling steel doors and secret escape tunnel due to political tensions.' },
+        { key: 'Current', value: 'National Arts Club headquarters (since 1906)' }
+      ],
       image_caption: "Samuel J. Tilden Residence. Wikimedia Commons. 1872",
       image_link: "https://en.wikipedia.org/wiki/Samuel_J._Tilden_House#/media/File:C.Vaux_-_Samuel_J.Tilden_residence_-_NY_-_Albert_Levy.jpg"
     },
@@ -2146,8 +2210,13 @@ const landmarks = [
       id: 109,
       name: "University Heights Campus (Bronx Community College of the City University of New York)",
       borough: "Manhattan",
-      description:
-        "Bronx - University Heights Campus. The New York Public Library Digital Collections. 1887 - 1964.",
+      bullets: [
+        { key: 'Built', value: '1894-1912 (Stanford White buildings); 1956-1967 (Marcel Breuer additions); 2012 (Robert A.M. Stern North Hall and Library)' },
+        { key: 'Architect', value: 'Stanford White of McKim, Mead & White (core campus 1894-1912); Marcel Breuer (1956-1967 additions); Robert A.M. Stern (2012 library)' },
+        { key: 'Architectural style', value: 'Beaux-Arts "American Renaissance" style (White buildings), Brutalist concrete (Breuer buildings), Contemporary contextual design (Stern building)' },
+        { key: 'Significance', value: 'Originally New York University\'s University Heights campus (1894-1973). Features the first Hall of Fame in America and houses one of the finest concentrations of Beaux-Arts architecture in the US. Designated National Historic Landmark in 2012. Only community college with NHL status.' },
+        { key: 'Current', value: 'Bronx Community College of the City University of New York (since 1973)' }
+      ],
       image_link: "https://digitalcollections.nypl.org/items/609c3240-c5ec-012f-5204-58d385a7bc34#/?uuid=510d47e2-c3e5-a3d9-e040-e00a18064a99",
     },
   },
@@ -2204,6 +2273,11 @@ const landmarks = [
       borough: "Staten Island",
       description:
         "Archaeological site in Conference House Park containing prehistoric remains.",
+        bullets: [
+          { key: 'Used', value: 'pre European contact' },
+          { key: 'Rediscovered', value: 'Add date'},
+          { key: 'Significance', value: "Archaeological site in Conference House Park containing prehistoric remains." },
+        ],
     },
   },
   {
@@ -2262,7 +2336,13 @@ const landmarks = [
       id: 115,
       name: "Wyckoff House",
       borough: "Brooklyn",
-      description: "Oldest surviving Dutch saltbox frame house in America",
+      bullets: [
+        { key: 'Built', value: 'c. 1652 (original section); enlarged 1750s; remodeled 1819' },
+        { key: 'Architect', value: 'Unknown (vernacular Dutch Colonial construction)' },
+        { key: 'Architectural style', value: 'Dutch Colonial with Flemish Medieval Survival elements; features H-frame structure, shingled walls, steep sloping roof, split Dutch doors, and deep flared "spring" eaves' },
+        { key: 'Significance', value: 'Oldest structure in New York City and New York State. First building designated as a NYC landmark (1965). Built by Pieter Claesen Wyckoff, indentured servant who became successful farmer. National Historic Landmark exemplifying Dutch-American farmhouse architecture.' },
+        { key: 'Current', value: 'Wyckoff House Museum, operated by Wyckoff House & Association' }
+      ],
       image_caption: "Wyckoff home. Library of Congress. 1933.",
       image_link: "https://www.loc.gov/item/ny0257/",
       link: "https://wyckoffmuseum.org/",
@@ -2278,7 +2358,13 @@ const landmarks = [
       id: 116,
       name: "Wyckoff-Bennett Homestead",
       borough: "Brooklyn",
-      description: "Housed Hessian soldiers during the American Revolution",
+      bullets: [
+        { key: 'Built', value: 'c. 1766 (confirmed by inscription in barn beam)' },
+        { key: 'Architect', value: 'Unknown (vernacular Dutch Colonial construction)' },
+        { key: 'Architectural style', value: 'Dutch Colonial; one-and-a-half-story frame dwelling with white-shingled walls, curved Dutch Colonial porch roof, split Dutch doors, and traditional Dutch farmhouse features' },
+        { key: 'Significance', value: 'National Historic Landmark (1976) considered "the best preserved and most beautiful example of Dutch Colonial architecture in Brooklyn." Built by Hendrick H. Wyckoff, descendant of Pieter Wyckoff. During Revolutionary War, housed Hessian soldiers who etched names on windowpanes (preserved). One of last privately owned 18th-century Dutch Colonial houses in NYC.' },
+        { key: 'Current', value: 'Private residence (owned by Mont family 1983-2022, sold to 22nd Street Investors LLC in 2022)' }
+      ],
       image_caption: "Wyckoff-Bennett House. Library of Congress. 1933.",
       image_link: "https://www.loc.gov/item/ny0256/",
       link: "https://hdc.org/buildings/wyckoff-bennett-homestead/",
