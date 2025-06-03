@@ -1073,17 +1073,18 @@ const landmarks = [
         { key: "Founded", value: "1838" },
         { key: "Designer", value: "David Bates Douglass" },
         { key: "Design Style", value: "Rural Cemetery Movement" },
+        { key: "Size", value: "478 acres" },
         {
           key: "Significance",
           value:
-            "One of America's first rural cemeteries and \"Brooklyn's first public park by default\" before Prospect Park existed. Pioneering naturalistic landscape design that inspired the competition to design Central Park and influenced the American parks movement. Spans 478 acres with over 600,000 graves, featuring Gothic Revival entrance gates by Richard Upjohn (1861) and notable architecture throughout its glacially-formed terrain.",
+            "One of America's first rural cemeteries, pioneering naturalistic landscape that influenced the American parks movement, with distinctive architecture and Gothic Revival entrance gates by Richard Upjohn.",
         },
       ],
       link: "https://www.green-wood.com/",
       image_caption:
-        "Entrance Green-Wood Cemetery, The New York Public Library Digital Collections, 1900–1999.",
+        "Entrance, Greenwood Cemetery. The New York Public Library Digital Collections, 1850–1930.",
       image_link:
-        "https://digitalcollections.nypl.org/items/bf685160-c6be-012f-19bd-58d385a7bc34#/?uuid=a44288b4-9c0c-b31f-e040-e00a18060314",
+        "https://digitalcollections.nypl.org/items/2f072ae0-c556-012f-1774-58d385a7bc34#/?uuid=510d47e1-e618-a3d9-e040-e00a18064a99",
     },
   },
   {
@@ -2382,12 +2383,12 @@ const landmarks = [
       bullets: [
         { key: "Built", value: "1897-1899" },
         { key: "Architect", value: "C.P.H. Gilbert" },
-        { key: "Architectural Style", value: "French Gothic" },
+        { key: "Architectural Style", value: "French Renaissance" },
         {
           key: "Significance",
-          value:
-            "Gilded Age mansion that housed prominent figures including oil magnate Harry F. Sinclair (involved in the Teapot Dome scandal) and descendants of Peter Stuyvesant. Now serves as the Ukrainian Institute of America, promoting Ukrainian culture and arts since 1955.",
+          value: "Surviving Gilded Age Fifth Avenue mansion that housed prominent figures including oil magnate Harry F. Sinclair and descendants of Peter Stuyvesant",
         },
+        { key: "Current", value: "Ukrainian Institute of America" },
       ],
       image_caption:
         "Harry F. Sinclair House, 2 East Seventy-ninth Street, New York County, NY. Library of Congress. 1930s",
@@ -2545,7 +2546,7 @@ const landmarks = [
         {
           key: "Significance",
           value:
-            "Represents innovative early 20th-century ecclesiastical design that that successfully departed from prevailing Gothic Revival traditions; known for its distinctive dome and beautiful combination of Romanesque and Byzantine styles.",
+            "Represents innovative early 20th-century ecclesiastical design that successfully departed from prevailing Gothic Revival traditions; known for its distinctive dome and beautiful combination of Romanesque and Byzantine styles.",
         },
       ],
       image_caption:
