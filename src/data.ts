@@ -1543,23 +1543,24 @@ const landmarks = [
         {
           key: "Architect",
           value:
-            "James C. Mackenzie Jr., Architectural Bureau of the National Council of the YMCA",
+            "James C. Mackenzie Jr.",
         },
         {
-          key: "Architectural style",
-          value: "Red-brown brick building with neo-Georgian details",
+          key: "Residents",
+          value: "Claude McKay (1941-1946) and other notable Harlem Renaissance figures including Langston Hughes, Richard Wright, and Malcolm X",
+        },
+        {
+          key: "McKay Legacy",
+          value: 'Jamaican-American poet known as the "Father of the Harlem Renaissance."',
         },
         {
           key: "Significance",
           value:
-            'Home to Claude McKay (1889-1948), Jamaican-American poet and central figure in the Harlem Renaissance, author of "If We Must Die" and "Home to Harlem." Also housed other notable Harlem Renaissance figures including Langston Hughes, Richard Wright, and Malcolm X. National Historic Landmark (1976).',
-        },
-        {
-          key: "Current",
-          value:
-            "Harlem YMCA, still operating as community center and guest accommodation",
+            "Served as a crucial cultural institution during segregation, providing housing for prominent African-American writers, artists, and performers who were denied lodging in mainstream New York hotels due to racial discrimination.",
         },
       ],
+      image_caption: "Harlem YMCA. Wikimedia Commons. 2014.",
+      image_link: "https://en.wikipedia.org/wiki/Harlem_YMCA#/media/File:Harlem_YMCA_180_West_135th_Street_top.jpg",
       link: "https://africanamericanheritagesites.stqry.app/en/story/44226",
     },
   },
@@ -2092,17 +2093,17 @@ const landmarks = [
           key: "Built",
           value: "1914-1916",
         },
-      { 
-        key: "Tenancy", 
-        value: "1939-1941" 
-      },
+        {
+          key: "Residenst",
+          value: "Paul Robeson from 1939-1941 and numerous other prominent African American figures including Duke Ellington and Langston Hughes.",
+        },
       {
         key: "Legacy",
-        value: "Paul Robeson (1898-1976) was a multi-talented individual who used his fame to fight for racial justice.",
+        value: "Robeson was a multi-talented individual who used his fame to fight for racial justice.",
       },
       {
         key: "Significance",
-        value: "Home to Robeson and numerous other prominent African American figures including Duke Ellington and Langston Hughes, it represents the achievements and community of Black Americans during the mid-20th century.",
+        value: "Represents the achievements and community of Black Americans during the mid-20th century.",
       },
       { 
         key: "Current", 
