@@ -34,7 +34,7 @@ const landmarks = [
     properties: {
       id: 2,
       name: "Admiral David Glasgow Farragut Gravesite",
-      borough: "Bronx",
+      borough: "The Bronx",
       bullets: [
         { key: "Admiral", value: "David Glasgow Farragut (1801-1870)" },
         {
@@ -233,7 +233,7 @@ const landmarks = [
     properties: {
       id: 9,
       name: "Bartow–Pell Mansion",
-      borough: "Bronx",
+      borough: "The Bronx",
       description: "19th-century mansion in largest New York City park",
       image_caption:
         "Bartow-Pell Mansion, Shore Road, Pelham Bay Park, Bronx, Bronx County, NY. Library of Congress. 1933.",
@@ -1073,17 +1073,18 @@ const landmarks = [
         { key: "Founded", value: "1838" },
         { key: "Designer", value: "David Bates Douglass" },
         { key: "Design Style", value: "Rural Cemetery Movement" },
+        { key: "Size", value: "478 acres" },
         {
           key: "Significance",
           value:
-            "One of America's first rural cemeteries and \"Brooklyn's first public park by default\" before Prospect Park existed. Pioneering naturalistic landscape design that inspired the competition to design Central Park and influenced the American parks movement. Spans 478 acres with over 600,000 graves, featuring Gothic Revival entrance gates by Richard Upjohn (1861) and notable architecture throughout its glacially-formed terrain.",
+            "One of America's first rural cemeteries, pioneering naturalistic landscape that influenced the American parks movement, with distinctive architecture and Gothic Revival entrance gates by Richard Upjohn.",
         },
       ],
       link: "https://www.green-wood.com/",
       image_caption:
-        "Entrance Green-Wood Cemetery, The New York Public Library Digital Collections, 1900–1999.",
+        "Entrance, Greenwood Cemetery. The New York Public Library Digital Collections, 1850–1930.",
       image_link:
-        "https://digitalcollections.nypl.org/items/bf685160-c6be-012f-19bd-58d385a7bc34#/?uuid=a44288b4-9c0c-b31f-e040-e00a18060314",
+        "https://digitalcollections.nypl.org/items/2f072ae0-c556-012f-1774-58d385a7bc34#/?uuid=510d47e1-e618-a3d9-e040-e00a18064a99",
     },
   },
   {
@@ -1366,7 +1367,7 @@ const landmarks = [
     properties: {
       id: 52,
       name: "Lorillard Snuff Mill",
-      borough: "Bronx",
+      borough: "The Bronx",
       bullets: [
         { key: "Built", value: "ca. 1840" },
         { key: "Period", value: "1840-1870" },
@@ -1685,7 +1686,7 @@ const landmarks = [
     properties: {
       id: 63,
       name: "New York Botanical Garden",
-      borough: "Bronx",
+      borough: "The Bronx",
       description:
         "One of the world's leading botanical gardens, with the largest herbarium in the U.S. and second largest in the world after the French National Museum of Natural History and home to many plant laboratories",
       image_caption:
@@ -1970,19 +1971,19 @@ const landmarks = [
         { key: "Architect", value: "Henry Janeway Hardenbergh" },
         {
           key: "Architectural Style",
-          value:
-            "French Renaissance château style with white brick and limestone facade",
+          value: "French Renaissance-inspired château style",
         },
         {
           key: "Significance",
-          value:
-            "Iconic luxury hotel at Fifth Avenue and Central Park South; designated New York City landmark in 1969; cultural landmark featured in numerous films, books, and as symbol of New York elegance and high society",
+          value: "Represents the pinnacle of American luxury hotel design from the early 20th century",
         },
       ],
       link: "https://www.theplazany.com/",
       image_caption:
         "Plaza Hotel, New York, N.Y. Library of Congress. [Between 1910 and 1920].",
       image_link: "https://www.loc.gov/item/2016815530/",
+      quote: "New York's most celebrated symbol of cosmopolitan and turn-of-the-century splendor, inside and out.",
+      quote_author: "Ada Louise Huxtable, New York Times, 1971",
     },
   },
   {
@@ -2382,12 +2383,12 @@ const landmarks = [
       bullets: [
         { key: "Built", value: "1897-1899" },
         { key: "Architect", value: "C.P.H. Gilbert" },
-        { key: "Architectural Style", value: "French Gothic" },
+        { key: "Architectural Style", value: "French Renaissance" },
         {
           key: "Significance",
-          value:
-            "Gilded Age mansion that housed prominent figures including oil magnate Harry F. Sinclair (involved in the Teapot Dome scandal) and descendants of Peter Stuyvesant. Now serves as the Ukrainian Institute of America, promoting Ukrainian culture and arts since 1955.",
+          value: "Surviving Gilded Age Fifth Avenue mansion that housed prominent figures including oil magnate Harry F. Sinclair and descendants of Peter Stuyvesant",
         },
+        { key: "Current", value: "Ukrainian Institute of America" },
       ],
       image_caption:
         "Harry F. Sinclair House, 2 East Seventy-ninth Street, New York County, NY. Library of Congress. 1930s",
@@ -2545,7 +2546,7 @@ const landmarks = [
         {
           key: "Significance",
           value:
-            "Represents innovative early 20th-century ecclesiastical design that that successfully departed from prevailing Gothic Revival traditions; known for its distinctive dome and beautiful combination of Romanesque and Byzantine styles.",
+            "Represents innovative early 20th-century ecclesiastical design that successfully departed from prevailing Gothic Revival traditions; known for its distinctive dome and beautiful combination of Romanesque and Byzantine styles.",
         },
       ],
       image_caption:
@@ -2733,11 +2734,10 @@ const landmarks = [
       bullets: [
         { key: "Built", value: "1919-1921" },
         { key: "Architect", value: "McKim, Mead & White" },
-        { key: "Architectural Style", value: "Georgian Revival" },
+        { key: "Architectural Style", value: "Neo-Federal" },
         {
           key: "Significance",
-          value:
-            'Built for the League for Political Education by suffragists as a venue for free speech and civic discourse. Historic performance space with exceptional acoustics that has hosted over a century of landmark cultural and political events, including the pioneering radio program "America\'s Town Meeting of the Air" (1935-1956). Designated National Historic Landmark in 2012.',
+          value: 'Built for the League for Political Education by suffragists as a venue for free speech and civic discourse. Historic performance space with exceptional acoustics that has hosted over a century of landmark cultural and political events.',
         },
       ],
       link: "https://www.thetownhall.org/",
@@ -2911,7 +2911,7 @@ const landmarks = [
     properties: {
       id: 107,
       name: "United Workers Cooperatives",
-      borough: "Bronx",
+      borough: "The Bronx",
       bullets: [
         { key: "Built", value: "1926-1929" },
         {
@@ -3007,7 +3007,7 @@ const landmarks = [
     properties: {
       id: 110,
       name: "Van Cortlandt House",
-      borough: "Bronx",
+      borough: "The Bronx",
       bullets: [
         { key: "Built", value: "1748-1749" },
         { key: "Builder", value: "Frederick Van Cortlandt" },
@@ -3065,17 +3065,12 @@ const landmarks = [
       id: 112,
       name: "Wards Point Archeological Site",
       borough: "Staten Island",
-      description:
-        "Archaeological site in Conference House Park containing prehistoric remains.",
       bullets: [
-        { key: "Used", value: "pre European contact" },
-        { key: "Rediscovered", value: "Add date" },
-        {
-          key: "Significance",
-          value:
-            "Archaeological site in Conference House Park containing prehistoric remains.",
-        },
+        { key: "Used", value: "Woodland period until Dutch colonization" },
+        { key: "Rediscovered", value: "1858" },
+        { key: "Significance", value: "One of the largest and best preserved Lenape burial sites in the New York area, offering insights into their culture and practices." },
       ],
+      link: "https://heritagetrails.tottenvillehistory.com/inside-beach-trail/site-5.html",
     },
   },
   {
@@ -3087,28 +3082,16 @@ const landmarks = [
     properties: {
       id: 113,
       name: "Woodlawn Cemetery",
-      borough: "Bronx",
+      borough: "The Bronx",
       bullets: [
         { key: "Founded", value: "1863" },
-        {
-          key: "Designer",
-          value:
-            "James C. Sidney (original layout), with later contributions by McKim, Mead & White, John Russell Pope, Cass Gilbert, Carrère & Hastings, and Olmsted Brothers",
-        },
-        {
-          key: "Architectural Style",
-          value:
-            "Rural Cemetery Movement, later transitioning to Lawn Cemetery style",
-        },
-        {
-          key: "Significance",
-          value:
-            "National Historic Landmark showcasing the evolution from 19th-century rural cemetery design to modern cemetery planning. Final resting place of over 300,000 people including numerous notable Americans, featuring the nation's finest collection of memorial architecture and funerary art across 400 acres of rolling landscape.",
-        },
+        { key: "Designer", value: "Olmstead Brothers" },
+        { key: "Design", value: "Rural Cemetery Movement, later transitioning to Lawn Cemetery style" },
+        { key: "Architects", value: "McKim, Mead & White, John Russell Pope, Cass Gilbert, and others" },
+        { key: "Significance", value: "Contains the largest collection of architecturally significant private mausoleums in the country and final resting place of over 300,000 people including numerous notable Americans." },
       ],
       link: "https://www.woodlawn.org/",
-      image_caption:
-        "Map of the Woodlawn Cemetery. The New York Public Library Digital Collections. 1870.",
+      image_caption: "Map of the Woodlawn Cemetery. The New York Public Library Digital Collections. 1870.",
       image_link:
         "https://digitalcollections.nypl.org/items/9a98d280-f948-0130-fd87-58d385a7b928#/?uuid=a6a42f20-f94a-0130-073e-58d385a7bbd0",
     },
