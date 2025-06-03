@@ -2734,11 +2734,10 @@ const landmarks = [
       bullets: [
         { key: "Built", value: "1919-1921" },
         { key: "Architect", value: "McKim, Mead & White" },
-        { key: "Architectural Style", value: "Georgian Revival" },
+        { key: "Architectural Style", value: "Neo-Federal" },
         {
           key: "Significance",
-          value:
-            'Built for the League for Political Education by suffragists as a venue for free speech and civic discourse. Historic performance space with exceptional acoustics that has hosted over a century of landmark cultural and political events, including the pioneering radio program "America\'s Town Meeting of the Air" (1935-1956). Designated National Historic Landmark in 2012.',
+          value: 'Built for the League for Political Education by suffragists as a venue for free speech and civic discourse. Historic performance space with exceptional acoustics that has hosted over a century of landmark cultural and political events.',
         },
       ],
       link: "https://www.thetownhall.org/",
