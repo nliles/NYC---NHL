@@ -2189,6 +2189,7 @@ const landmarks = [
       image_link: "https://digitalcollections.nypl.org/items/df3444c0-c557-012f-f6ba-58d385a7bc34#/?uuid=510d47e0-1f38-a3d9-e040-e00a18064a99",
       link: "https://saintpatrickscathedral.org/",
       quote: "America's Parish Church",
+      quote_author: "Nickname reflecting its national significance",
     },
   },
   {
