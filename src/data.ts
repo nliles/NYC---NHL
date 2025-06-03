@@ -234,7 +234,19 @@ const landmarks = [
       id: 9,
       name: "Bartow–Pell Mansion",
       borough: "The Bronx",
-      description: "19th-century mansion in largest New York City park",
+      bullets: [
+      { 
+        key: "Built", 
+        value: "1836–1842 by Robert and Maria Lorillard Bartow" 
+      },
+      { 
+        key: "Architectural style", 
+        value: "Greek Revival",
+      },
+      {
+        key: "Significance",
+        value: "One of the last surviving manor houses in the Bronx, it is an excellent example of a 19th-century country estate in NYC, offering social and architectural insights into that era.",
+      }],
       image_caption:
         "Bartow-Pell Mansion, Shore Road, Pelham Bay Park, Bronx, Bronx County, NY. Library of Congress. 1933.",
       image_link: "https://www.loc.gov/item/ny0099/",
