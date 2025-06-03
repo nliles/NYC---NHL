@@ -1,5 +1,6 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import landmarks from "../../data.ts";
+import cn from 'classnames';
 import styles from "./LandmarkList.module.css";
 
 const boroughs = ["All", "Manhattan", "Brooklyn", "Queens", "The Bronx", "Staten Island"];
@@ -10,10 +11,11 @@ const LandmarkList = ({
   handleClick: (landmark: any) => void;
 }) => {
   const [filteredLandmarks, setFilteredLandmarks] = useState(landmarks);
+  const [selectedBorough, setSelectedBorough] = useState('All');
   const inputRef = useRef<HTMLInputElement>(null);
 
-  const handleOnChange = (borough?: string) => {
-    let filteredLandmarks = borough === 'All' ? landmarks : landmarks.filter((landmark) => landmark.properties.borough.includes(borough || "")) || landmarks;
+  const handleOnChange = () => {
+    let filteredLandmarks = selectedBorough === 'All' ? landmarks : landmarks.filter((landmark) => landmark.properties.borough.includes(selectedBorough || "")) || landmarks;
     const searchTerm = inputRef.current?.value?.toLowerCase() || "";
 
     if (searchTerm === "") {
@@ -30,8 +32,14 @@ const LandmarkList = ({
 
   const handleClearSearch = () => {
     inputRef.current!.value = "";
-    handleOnChange();
   };
+
+  useEffect(() => {
+    if (inputRef.current!.value) handleOnChange();
+    if (selectedBorough) handleOnChange();
+  }, [inputRef.current?.value, selectedBorough]);
+
+  const filterCopy = landmarks.length === filteredLandmarks.length ? `Showing ${landmarks.length} landmarks` : `Showing ${filteredLandmarks.length} of ${landmarks.length} landmarks`
 
   return (
     <div className={styles.leftPanel}>
@@ -42,7 +50,7 @@ const LandmarkList = ({
             className={styles.searchInput}
             placeholder="Search landmarks..."
             ref={inputRef}
-            onChange={() => handleOnChange()}
+            onChange={handleOnChange}
           />
           {inputRef.current?.value && (
             <button onClick={handleClearSearch} className={styles.clearIcon}>
@@ -59,11 +67,13 @@ const LandmarkList = ({
         </div>
         <div className={styles.boroughsContainer}>
         {boroughs.map((borough) => (
-          <button className={styles.borough} onClick={() => handleOnChange(borough)}>{borough}</button>
+          <button className={cn(styles.boroughBtn, {
+            [styles.selected]: selectedBorough === borough,
+          })} onClick={() =>  setSelectedBorough(borough)}>{borough}</button>
         ))}
         </div>
       </div>
-      <div className={styles.resultsCount} aria-label="results-count" id="resultsCount">{`Showing ${filteredLandmarks.length} of ${landmarks.length} landmarks`}</div>
+      <div className={styles.resultsCount} aria-label="results-count" id="resultsCount">{filterCopy}</div>
       <div className={styles.landmarksList}>
         {filteredLandmarks.map((landmark) => (
           <button
