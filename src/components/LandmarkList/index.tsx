@@ -32,12 +32,12 @@ const LandmarkList = ({
 
   const handleClearSearch = () => {
     inputRef.current!.value = "";
+    handleOnChange();
   };
 
   useEffect(() => {
-    if (inputRef.current!.value) handleOnChange();
     if (selectedBorough) handleOnChange();
-  }, [inputRef.current?.value, selectedBorough]);
+  }, [selectedBorough]);
 
   const filterCopy = landmarks.length === filteredLandmarks.length ? `Showing ${landmarks.length} landmarks` : `Showing ${filteredLandmarks.length} of ${landmarks.length} landmarks`
 
