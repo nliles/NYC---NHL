@@ -14,7 +14,6 @@ const LandmarkList = ({
 
   const handleOnChange = (borough?: string) => {
     let filteredLandmarks = landmarks.filter((landmark) => landmark.properties.borough.includes(borough || "")) || landmarks;
-    console.log(filteredLandmarks)
     const searchTerm = inputRef.current?.value?.toLowerCase() || "";
 
     if (searchTerm === "") {
@@ -64,6 +63,7 @@ const LandmarkList = ({
         ))}
         </div>
       </div>
+      <div className={styles.resultsCount} aria-label="results-count" id="resultsCount">{`Showing ${filteredLandmarks.length} of ${landmarks.length} landmarks`}</div>
       <div className={styles.landmarksList}>
         {filteredLandmarks.map((landmark) => (
           <button

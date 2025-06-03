@@ -15,6 +15,7 @@
 
 .panelHeader {
   padding: 20px;
+  padding-bottom: 0;
   border-bottom: 1px solid #e0e0e0;
 }
 
@@ -104,7 +105,7 @@ item:active {
 
 .boroughsContainer {
   display: flex;
-  margin: 5px 0;
+  margin: 5px 0 10px 0;
 }
 
 .borough {
@@ -115,4 +116,15 @@ item:active {
   font-size: 10px;
   margin-top: 4px;
   margin-right: 2px;
+}
+
+.resultsCount {
+  padding: 12px 20px;
+  background: #f8f9fa;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 12px;
+  color: #666;
+  flex-shrink: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
