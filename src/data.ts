@@ -1971,19 +1971,19 @@ const landmarks = [
         { key: "Architect", value: "Henry Janeway Hardenbergh" },
         {
           key: "Architectural Style",
-          value:
-            "French Renaissance château style with white brick and limestone facade",
+          value: "French Renaissance-inspired château style",
         },
         {
           key: "Significance",
-          value:
-            "Iconic luxury hotel at Fifth Avenue and Central Park South; designated New York City landmark in 1969; cultural landmark featured in numerous films, books, and as symbol of New York elegance and high society",
+          value: "Represents the pinnacle of American luxury hotel design from the early 20th century",
         },
       ],
       link: "https://www.theplazany.com/",
       image_caption:
         "Plaza Hotel, New York, N.Y. Library of Congress. [Between 1910 and 1920].",
       image_link: "https://www.loc.gov/item/2016815530/",
+      quote: "New York's most celebrated symbol of cosmopolitan and turn-of-the-century splendor, inside and out.",
+      quote_author: "Ada Louise Huxtable, New York Times, 1971",
     },
   },
   {
