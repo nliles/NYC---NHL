@@ -2672,7 +2672,7 @@ const landmarks = [
         { key: "Architectural Style", value: "Renaissance Revival" },
         {
           key: "Significance",
-          value: "One of Stanford White’s most celebrated designs which helped establish Fifth Avenue as America's premier luxury shopping district.",
+          value: "One of White’s most celebrated designs which helped establish Fifth Avenue as America's premier luxury shopping district.",
         },
       ],
       image_caption:
