@@ -181,12 +181,29 @@ const landmarks = [
       id: 7,
       name: "Chester A. Arthur House",
       borough: "Manhattan",
-      description:
-        "Home of President Chester A. Arthur; site of his inaugural oath",
+      bullets: [
+        {
+          key: "Built",
+          value: "1855 as part of a row of nine similarly designed brownstone houses",
+        },
+        { 
+          key: "Architectural style", 
+          value: "Romanesque Revival" 
+        },
+        {
+          key: "Significance",
+          value: "Site of Chester A. Arthur's presidential swearing-in ceremony in 1881—the only private residence outside Washington D.C. where a President took the oath of office. Arthur's lifelong home until his death in 1886, it stands as a rare surviving presidential residence in New York City.",
+        },
+        { 
+          key: "Current", 
+          value: "Ground floor houses Kalustyan's grocery store; upper floors are apartments" 
+        },
+      ],
       image_description:
         "Home of President Chester A. Arthur, 123 Lexington Avenue. Wikimedia Commons.",
       image_link:
         "https://commons.wikimedia.org/wiki/File:Presidents_Chester_A_Arthur_123_Lexington_Ave.jpg",
+      link: "https://npgallery.nps.gov/NRHP/GetAsset/NHLS/66000534_text#:~:text=The%20Chester%20A.,brackets%20is%20the%20crowning%20feature.",
     },
   },
   {
@@ -237,7 +254,7 @@ const landmarks = [
       bullets: [
       { 
         key: "Built", 
-        value: "1836–1842 by Robert and Maria Lorillard Bartow" 
+        value: "1836-1842 by Robert and Maria Lorillard Bartow" 
       },
       { 
         key: "Architectural style", 
