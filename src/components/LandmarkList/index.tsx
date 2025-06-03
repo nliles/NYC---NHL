@@ -1,6 +1,9 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import landmarks from "../../data.ts";
+import cn from 'classnames';
 import styles from "./LandmarkList.module.css";
+
+const boroughs = ["All", "Manhattan", "Brooklyn", "Queens", "The Bronx", "Staten Island"];
 
 const LandmarkList = ({
   handleClick,
@@ -8,17 +11,19 @@ const LandmarkList = ({
   handleClick: (landmark: any) => void;
 }) => {
   const [filteredLandmarks, setFilteredLandmarks] = useState(landmarks);
+  const [selectedBorough, setSelectedBorough] = useState('All');
   const inputRef = useRef<HTMLInputElement>(null);
 
   const handleOnChange = () => {
+    let filteredLandmarks = selectedBorough === 'All' ? landmarks : landmarks.filter((landmark) => landmark.properties.borough.includes(selectedBorough || "")) || landmarks;
     const searchTerm = inputRef.current?.value?.toLowerCase() || "";
 
     if (searchTerm === "") {
       // If search is empty, show all landmarks
-      setFilteredLandmarks(landmarks); // Use original landmarks array
+      setFilteredLandmarks(filteredLandmarks); // Use original landmarks array
     } else {
       // Filter from the original landmarks array, not filteredLandmarks
-      const filtered = landmarks.filter((landmark) =>
+      const filtered = filteredLandmarks.filter((landmark) =>
         landmark.properties.name.toLowerCase().includes(searchTerm),
       );
       setFilteredLandmarks(filtered);
@@ -29,6 +34,12 @@ const LandmarkList = ({
     inputRef.current!.value = "";
     handleOnChange();
   };
+
+  useEffect(() => {
+    if (selectedBorough) handleOnChange();
+  }, [selectedBorough]);
+
+  const filterCopy = landmarks.length === filteredLandmarks.length ? `Showing ${landmarks.length} landmarks` : `Showing ${filteredLandmarks.length} of ${landmarks.length} landmarks`
 
   return (
     <div className={styles.leftPanel}>
@@ -54,7 +65,15 @@ const LandmarkList = ({
             height={30}
           />
         </div>
+        <div className={styles.boroughsContainer}>
+        {boroughs.map((borough) => (
+          <button className={cn(styles.boroughBtn, {
+            [styles.selected]: selectedBorough === borough,
+          })} onClick={() =>  setSelectedBorough(borough)}>{borough}</button>
+        ))}
+        </div>
       </div>
+      <div className={styles.resultsCount} aria-label="results-count" id="resultsCount">{filterCopy}</div>
       <div className={styles.landmarksList}>
         {filteredLandmarks.map((landmark) => (
           <button
