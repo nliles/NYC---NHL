@@ -102,6 +102,11 @@ item:active {
   font-size: 14px;
 }
 
+.boroughsContainer {
+  display: flex;
+  margin: 5px 0;
+}
+
 .borough {
   background: #2f4f4f;
   color: white;

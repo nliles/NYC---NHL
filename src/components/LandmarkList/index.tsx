@@ -2,6 +2,8 @@ import { useRef, useState } from "react";
 import landmarks from "../../data.ts";
 import styles from "./LandmarkList.module.css";
 
+const boroughs = ["Manhattan", "Brooklyn", "Queens", "The Bronx", "Staten Island"];
+
 const LandmarkList = ({
   handleClick,
 }: {
@@ -10,15 +12,17 @@ const LandmarkList = ({
   const [filteredLandmarks, setFilteredLandmarks] = useState(landmarks);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  const handleOnChange = () => {
+  const handleOnChange = (borough?: string) => {
+    let filteredLandmarks = landmarks.filter((landmark) => landmark.properties.borough.includes(borough || "")) || landmarks;
+    console.log(filteredLandmarks)
     const searchTerm = inputRef.current?.value?.toLowerCase() || "";
 
     if (searchTerm === "") {
       // If search is empty, show all landmarks
-      setFilteredLandmarks(landmarks); // Use original landmarks array
+      setFilteredLandmarks(filteredLandmarks); // Use original landmarks array
     } else {
       // Filter from the original landmarks array, not filteredLandmarks
-      const filtered = landmarks.filter((landmark) =>
+      const filtered = filteredLandmarks.filter((landmark) =>
         landmark.properties.name.toLowerCase().includes(searchTerm),
       );
       setFilteredLandmarks(filtered);
@@ -39,7 +43,7 @@ const LandmarkList = ({
             className={styles.searchInput}
             placeholder="Search landmarks..."
             ref={inputRef}
-            onChange={handleOnChange}
+            onChange={() => handleOnChange()}
           />
           {inputRef.current?.value && (
             <button onClick={handleClearSearch} className={styles.clearIcon}>
@@ -53,6 +57,11 @@ const LandmarkList = ({
             width={30}
             height={30}
           />
+        </div>
+        <div className={styles.boroughsContainer}>
+        {boroughs.map((borough) => (
+          <button className={styles.borough} onClick={() => handleOnChange(borough)}>{borough}</button>
+        ))}
         </div>
       </div>
       <div className={styles.landmarksList}>
