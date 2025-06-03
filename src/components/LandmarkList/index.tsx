@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import landmarks from "../../data.ts";
 import styles from "./LandmarkList.module.css";
 
-const boroughs = ["Manhattan", "Brooklyn", "Queens", "The Bronx", "Staten Island"];
+const boroughs = ["All", "Manhattan", "Brooklyn", "Queens", "The Bronx", "Staten Island"];
 
 const LandmarkList = ({
   handleClick,
@@ -13,7 +13,7 @@ const LandmarkList = ({
   const inputRef = useRef<HTMLInputElement>(null);
 
   const handleOnChange = (borough?: string) => {
-    let filteredLandmarks = landmarks.filter((landmark) => landmark.properties.borough.includes(borough || "")) || landmarks;
+    let filteredLandmarks = borough === 'All' ? landmarks : landmarks.filter((landmark) => landmark.properties.borough.includes(borough || "")) || landmarks;
     const searchTerm = inputRef.current?.value?.toLowerCase() || "";
 
     if (searchTerm === "") {
