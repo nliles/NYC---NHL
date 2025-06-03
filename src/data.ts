@@ -38,27 +38,21 @@ const landmarks = [
       bullets: [
         { key: "Admiral", value: "David Glasgow Farragut (1801-1870)" },
         {
+          key: "Legacy",
+          value: "First rear admiral, vice admiral, and admiral in U.S. Navy history, famous for capturing New Orleans (1862)."
+        },
+        {
           key: "Significance",
           value:
-            "First rear admiral, vice admiral, and admiral in U.S. Navy history",
-        },
-        {
-          key: "Famous For",
-          value:
-            'Battle of Mobile Bay (1864) - "Damn the torpedoes, full speed ahead!"',
-        },
-        {
-          key: "Major Victory",
-          value: "Captured New Orleans (1862), crucial Union Civil War victory",
-        },
-        {
-          key: "Notable",
-          value:
-            "Only intact known property directly associated with Admiral Farragut",
+          "Only intact known property directly associated with Admiral Farragut",
         },
       ],
+      image_caption: "Admiral David Farragut monument. Wikimedia Commons. 2008.",
       image_link:
         "https://en.wikipedia.org/wiki/Admiral_David_Glasgow_Farragut_Gravesite#/media/File:Admiral_David_Farragut_Monument_1024.jpg",
+      link: "https://6tocelebrate.org/site/woodlawn-cemetery-admiral-david-glasgow-farragut-gravesite/",
+      quote: "Damn the torpedoes, full speed ahead!",
+      quote_author: "Admiral David Glasgow Farragut, Battle of Mobile Bay (1864)"
     },
   },
   {
@@ -164,7 +158,22 @@ const landmarks = [
       id: 6,
       name: "Louis Armstrong House",
       borough: "Queens",
-      description: "Home of jazz legend Louis Armstrong for 28 years",
+      bullets: [
+        {
+          key: "Built",
+          value: "1910 by architect Robert W. Johnson, built by Thomas Daly",
+        },
+        { 
+          key: "Residents", 
+          value: "Louis Armstrong and his wife Lucille Wilson (1943-1971)" 
+        },
+        {
+          key: "Significance",
+          value: "Home to Louis Armstrong (1901-1971) during his most celebrated years, preserved exactly as the couple left it. The house represents Armstrong's choice to live modestly in an integrated working-class neighborhood despite his international fame. It houses the 60,000-piece Louis Armstrong Archive.",
+        },
+      ],
+      image_caption: "Louis Armstrong House. Wikimedia Commons. 2021.",
+      image_link: "https://en.wikipedia.org/wiki/Louis_Armstrong_House#/media/File:Louis_Armstrong_House_02_(cropped).jpg",
       link: "https://www.louisarmstronghouse.org/",
       quote:
         "There's so much in 'Wonderful World' that brings me back to my neighborhood where I live in Corona, New York.",
