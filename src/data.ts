@@ -34,7 +34,7 @@ const landmarks = [
     properties: {
       id: 2,
       name: "Admiral David Glasgow Farragut Gravesite",
-      borough: "Bronx",
+      borough: "The Bronx",
       bullets: [
         { key: "Admiral", value: "David Glasgow Farragut (1801-1870)" },
         {
@@ -233,7 +233,7 @@ const landmarks = [
     properties: {
       id: 9,
       name: "Bartow–Pell Mansion",
-      borough: "Bronx",
+      borough: "The Bronx",
       description: "19th-century mansion in largest New York City park",
       image_caption:
         "Bartow-Pell Mansion, Shore Road, Pelham Bay Park, Bronx, Bronx County, NY. Library of Congress. 1933.",
@@ -1366,7 +1366,7 @@ const landmarks = [
     properties: {
       id: 52,
       name: "Lorillard Snuff Mill",
-      borough: "Bronx",
+      borough: "The Bronx",
       bullets: [
         { key: "Built", value: "ca. 1840" },
         { key: "Period", value: "1840-1870" },
@@ -1685,7 +1685,7 @@ const landmarks = [
     properties: {
       id: 63,
       name: "New York Botanical Garden",
-      borough: "Bronx",
+      borough: "The Bronx",
       description:
         "One of the world's leading botanical gardens, with the largest herbarium in the U.S. and second largest in the world after the French National Museum of Natural History and home to many plant laboratories",
       image_caption:
@@ -2911,7 +2911,7 @@ const landmarks = [
     properties: {
       id: 107,
       name: "United Workers Cooperatives",
-      borough: "Bronx",
+      borough: "The Bronx",
       bullets: [
         { key: "Built", value: "1926-1929" },
         {
@@ -3007,7 +3007,7 @@ const landmarks = [
     properties: {
       id: 110,
       name: "Van Cortlandt House",
-      borough: "Bronx",
+      borough: "The Bronx",
       bullets: [
         { key: "Built", value: "1748-1749" },
         { key: "Builder", value: "Frederick Van Cortlandt" },
@@ -3065,17 +3065,12 @@ const landmarks = [
       id: 112,
       name: "Wards Point Archeological Site",
       borough: "Staten Island",
-      description:
-        "Archaeological site in Conference House Park containing prehistoric remains.",
       bullets: [
-        { key: "Used", value: "pre European contact" },
-        { key: "Rediscovered", value: "Add date" },
-        {
-          key: "Significance",
-          value:
-            "Archaeological site in Conference House Park containing prehistoric remains.",
-        },
+        { key: "Used", value: "Woodland period until Dutch colonization" },
+        { key: "Rediscovered", value: "1858" },
+        { key: "Significance", value: "One of the largest and best preserved Lenape burial sites in the New York area, offering insights into their culture and practices." },
       ],
+      link: "https://heritagetrails.tottenvillehistory.com/inside-beach-trail/site-5.html",
     },
   },
   {
@@ -3087,7 +3082,7 @@ const landmarks = [
     properties: {
       id: 113,
       name: "Woodlawn Cemetery",
-      borough: "Bronx",
+      borough: "The Bronx",
       bullets: [
         { key: "Founded", value: "1863" },
         {
