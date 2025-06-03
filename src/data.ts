@@ -3085,25 +3085,13 @@ const landmarks = [
       borough: "The Bronx",
       bullets: [
         { key: "Founded", value: "1863" },
-        {
-          key: "Designer",
-          value:
-            "James C. Sidney (original layout), with later contributions by McKim, Mead & White, John Russell Pope, Cass Gilbert, Carrère & Hastings, and Olmsted Brothers",
-        },
-        {
-          key: "Architectural Style",
-          value:
-            "Rural Cemetery Movement, later transitioning to Lawn Cemetery style",
-        },
-        {
-          key: "Significance",
-          value:
-            "National Historic Landmark showcasing the evolution from 19th-century rural cemetery design to modern cemetery planning. Final resting place of over 300,000 people including numerous notable Americans, featuring the nation's finest collection of memorial architecture and funerary art across 400 acres of rolling landscape.",
-        },
+        { key: "Designer", value: "Olmstead Brothers" },
+        { key: "Design", value: "Rural Cemetery Movement, later transitioning to Lawn Cemetery style" },
+        { key: "Architects", value: "McKim, Mead & White, John Russell Pope, Cass Gilbert, and others" },
+        { key: "Significance", value: "Contains the largest collection of architecturally significant private mausoleums in the country and final resting place of over 300,000 people including numerous notable Americans." },
       ],
       link: "https://www.woodlawn.org/",
-      image_caption:
-        "Map of the Woodlawn Cemetery. The New York Public Library Digital Collections. 1870.",
+      image_caption: "Map of the Woodlawn Cemetery. The New York Public Library Digital Collections. 1870.",
       image_link:
         "https://digitalcollections.nypl.org/items/9a98d280-f948-0130-fd87-58d385a7b928#/?uuid=a6a42f20-f94a-0130-073e-58d385a7bbd0",
     },
