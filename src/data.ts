@@ -832,8 +832,27 @@ const landmarks = [
       id: 31,
       name: "Duke Ellington House",
       borough: "Manhattan",
-      description:
-        "Ellington, the legendary jazz composer and bandleader, lived in Apartment 4A from 1939 to 1961",
+      bullets: [
+        {
+          key: "Built",
+          value: "1915",
+        },
+        { 
+          key: "Tenancy", 
+          value: "1939-1961" 
+        },
+        {
+          key: "Significance",
+          value: "Home to Duke Ellington during his most prolific creative period. The residence represents Ellington's impact on African-American culture and broader musical trends.",
+        },
+        { 
+          key: "Current", 
+          value: "Active apartment building, not open to public" 
+        },
+      ],
+      image_link: "https://en.wikipedia.org/wiki/Duke_Ellington_House#/media/File:Duke-ellington.jpg",
+      image_caption: "Duke Ellington House. Wikimedia Commons. 2007.",
+      link: "https://npgallery.nps.gov/NRHP/GetAsset/NHLS/76001239_text",
     },
   },
   {
@@ -1861,7 +1880,7 @@ const landmarks = [
         {
           key: "Significance",
           value:
-            "Headquarters of NYYC (founded 1844), held America's Cup for 132 years, National Historic Landmark (1987), features famous Model Room with yacht collection",
+            "Architectural masterpiece and home of the America's Cup from 1857-1983 (the longest winning streak in sports history); it also houses the world's most significant collection of yacht models documenting American yachting heritage.",
         },
       ],
       image_caption:
@@ -2068,8 +2087,30 @@ const landmarks = [
       id: 78,
       name: "Paul Robeson Home",
       borough: "Manhattan",
-      description:
-        "Home of legendary African-American actor and activist Paul Robeson",
+      bullets: [
+        {
+          key: "Built",
+          value: "1914-1916",
+        },
+      { 
+        key: "Tenancy", 
+        value: "1939-1941" 
+      },
+      {
+        key: "Legacy",
+        value: "Paul Robeson (1898-1976) was a multi-talented individual who used his fame to fight for racial justice.",
+      },
+      {
+        key: "Significance",
+        value: "Home to Robeson and numerous other prominent African American figures including Duke Ellington and Langston Hughes, it represents the achievements and community of Black Americans during the mid-20th century.",
+      },
+      { 
+        key: "Current", 
+        value: "Residential apartment building nicknamed 'The Triple Nickel'" 
+      },
+    ],
+      image_caption: "555 Edgecombe Avenue. Wikimedia Commons. 2014",
+      image_link: "https://commons.wikimedia.org/wiki/File:555_Edgecombe_Avenue_entrance.jpg",
       link: "https://www.nps.gov/places/new-york-paul-robeson-home.htm",
       quote:
         "To be free . . . to walk the good American earth as equal citizens, to live without fear, to enjoy the fruits of our toil, to give our children every opportunity in life–that dream which we have held so long in our hearts is today the destiny that we hold in our hands.",
