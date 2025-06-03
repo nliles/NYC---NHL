@@ -134,7 +134,7 @@ const landmarks = [
       bullets: [
         {
           key: "Built",
-          value: "1921 (original structure), enlarged 1929-1931",
+          value: "1921, enlarged 1929-1931",
         },
         { key: "Period", value: "1953-2008" },
         { key: "Architect", value: "Starrett & van Vleck" },
@@ -1940,7 +1940,7 @@ const landmarks = [
         {
           key: "Architect",
           value:
-            "Stanford White (McKim, Mead & White) - renovation and interior design",
+            "Stanford White (McKim, Mead & White)",
         },
         { key: "Architectural Style", value: "Greek Revival" },
         {
@@ -2667,17 +2667,20 @@ const landmarks = [
       borough: "Manhattan",
       bullets: [
         { key: "Built", value: "1903-1905" },
-        { key: "Architect", value: "Stanford White of McKim, Mead & White" },
+        { key: "Period", value: "Tiffany’s flagship store until 1940" },
+        { key: "Architect", value: "Stanford White (McKim, Mead & White)", },
         { key: "Architectural Style", value: "Renaissance Revival" },
         {
           key: "Significance",
-          value:
-            "Magnificent white marble \"palace\" based on Venice's Palazzo Grimani that helped establish Fifth Avenue as America's premier luxury shopping thoroughfare. Served as Tiffany's flagship store until 1940 and remains one of Stanford White's most celebrated designs.",
+          value: "One of Stanford White’s most celebrated designs which helped establish Fifth Avenue as America's premier luxury shopping district.",
         },
       ],
       image_caption:
         "Tiffany Building, New York, N.Y., Library of Congress, 1900–1906.",
       image_link: "https://www.loc.gov/item/2016805833/",
+      link: "https://www.tiffany.com/world-of-tiffany/",
+      quote: "If I could find a real-life place that made me feel like Tiffany's, then I'd buy some furniture and give the cat a name.",
+      quote_author: "Breakfast at Tiffany's, Truman Capote",
     },
   },
   {

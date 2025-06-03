@@ -149,6 +149,7 @@ const Map = ({
       (mapInstance?.current as any).flyTo({
         center: found?.geometry.coordinates,
         essential: true, // this animation is considered essential with respect to prefers-reduced-motion
+        zoom: 13,
       });
       setShouldZoom?.(false); // Reset zoom state after flying
     }
