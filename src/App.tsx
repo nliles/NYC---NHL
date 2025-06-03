@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import "./App.css";
 import Portal from "./components/Portal";
 import SidePanel from "./components/SidePanel";
