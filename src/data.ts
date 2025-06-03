@@ -134,7 +134,7 @@ const landmarks = [
       bullets: [
         {
           key: "Built",
-          value: "1921 (original structure), enlarged 1929-1931",
+          value: "1921, enlarged 1929-1931",
         },
         { key: "Period", value: "1953-2008" },
         { key: "Architect", value: "Starrett & van Vleck" },
@@ -1043,20 +1043,14 @@ const landmarks = [
         { key: "Built", value: "1913" },
         { key: "Architect", value: "Reed and Stem, Warren and Wetmore" },
         { key: "Architectural style", value: "Beaux-Arts" },
-        {
-          key: "Significance",
-          value: "Historic rail gateway to New York City",
-        },
-        {
-          key: "Notable",
-          value: "Largest train station in the world by number of platforms",
-        },
+        { key: "Significance", value: "Major transportation hub and architectural masterpiece that serves as a symbol of the city’s past and present. As part of the City Beautiful movement, it championed the idea that that civic architecture had to be beautiful.",},
       ],
       image_caption:
-        "Grand Central Terminal. The New York Public Library Digital Collections. 1860–1920.",
-      image_link:
-        "https://digitalcollections.nypl.org/items/9a3d4560-c612-012f-5050-58d385a7bc34#/?uuid=510d47d9-b19e-a3d9-e040-e00a18064a99",
-      link: "https://grandcentralterminal.com/",
+        "Pershing Square at Grand Central Terminal. Libary of Congress. 1919.",
+      image_link: "https://www.loc.gov/resource/stereo.1s07640/",
+      link: "https://grandcentralterminal.com/history/",
+      quote: "Not only the greatest station in the United States, but the greatest station, of any type, in the world.",
+      quote_author: "The New York Times, 1913",
     },
   },
   {
@@ -1940,7 +1934,7 @@ const landmarks = [
         {
           key: "Architect",
           value:
-            "Stanford White (McKim, Mead & White) - renovation and interior design",
+            "Stanford White (McKim, Mead & White)",
         },
         { key: "Architectural Style", value: "Greek Revival" },
         {
@@ -2188,21 +2182,14 @@ const landmarks = [
         { key: "Built", value: "1858-1878 (dedicated 1879)" },
         { key: "Architect", value: "James Renwick Jr." },
         { key: "Architectural style", value: "Gothic Revival" },
-        {
-          key: "Purpose",
-          value:
-            "Built to replace Old St. Patrick's Cathedral and accommodate growing Catholic population",
-        },
-        {
-          key: "Notable",
-          value:
-            "First large-scale medieval-style church built in U.S., largest Gothic Revival Catholic cathedral in North America",
-        },
+        { key: "Purpose", value: "Largest Roman Catholic cathedral in the United States, built to replace Old St. Patrick's Cathedral to accommodate the city's growing Catholic population. It represents a major symbol of Catholic faith in the city." },
       ],
       image_caption:
-        "St. Patrick's Cathedral, N.Y., Library of Congress, ca. 1890",
-      image_link: "https://www.loc.gov/item/91784416/",
+        "Cathedral prior to the installation of spires. The New York Public Library. 1858 - 1925",
+      image_link: "https://digitalcollections.nypl.org/items/df3444c0-c557-012f-f6ba-58d385a7bc34#/?uuid=510d47e0-1f38-a3d9-e040-e00a18064a99",
       link: "https://saintpatrickscathedral.org/",
+      quote: "America's Parish Church",
+      quote_author: "Nickname reflecting its national significance",
     },
   },
   {
@@ -2667,17 +2654,20 @@ const landmarks = [
       borough: "Manhattan",
       bullets: [
         { key: "Built", value: "1903-1905" },
-        { key: "Architect", value: "Stanford White of McKim, Mead & White" },
+        { key: "Period", value: "Tiffany’s flagship store until 1940" },
+        { key: "Architect", value: "Stanford White (McKim, Mead & White)", },
         { key: "Architectural Style", value: "Renaissance Revival" },
         {
           key: "Significance",
-          value:
-            "Magnificent white marble \"palace\" based on Venice's Palazzo Grimani that helped establish Fifth Avenue as America's premier luxury shopping thoroughfare. Served as Tiffany's flagship store until 1940 and remains one of Stanford White's most celebrated designs.",
+          value: "One of White’s most celebrated designs which helped establish Fifth Avenue as America's premier luxury shopping district.",
         },
       ],
       image_caption:
         "Tiffany Building, New York, N.Y., Library of Congress, 1900–1906.",
       image_link: "https://www.loc.gov/item/2016805833/",
+      link: "https://www.tiffany.com/world-of-tiffany/",
+      quote: "If I could find a real-life place that made me feel like Tiffany's, then I'd buy some furniture and give the cat a name.",
+      quote_author: "Breakfast at Tiffany's, Truman Capote",
     },
   },
   {

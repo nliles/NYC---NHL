@@ -15,8 +15,10 @@ const LandmarkList = ({
   const inputRef = useRef<HTMLInputElement>(null);
 
   const handleOnChange = () => {
+    const formatString = (str: string) => str.toLowerCase().replace(/[.,]/g, "").replace(/\s+/g, '');
+
     let filteredLandmarks = selectedBorough === 'All' ? landmarks : landmarks.filter((landmark) => landmark.properties.borough.includes(selectedBorough || "")) || landmarks;
-    const searchTerm = inputRef.current?.value?.toLowerCase() || "";
+    const searchTerm = formatString(inputRef.current?.value || "");
 
     if (searchTerm === "") {
       // If search is empty, show all landmarks
@@ -24,7 +26,7 @@ const LandmarkList = ({
     } else {
       // Filter from the original landmarks array, not filteredLandmarks
       const filtered = filteredLandmarks.filter((landmark) =>
-        landmark.properties.name.toLowerCase().includes(searchTerm),
+      formatString(landmark.properties.name).includes(searchTerm),
       );
       setFilteredLandmarks(filtered);
     }
