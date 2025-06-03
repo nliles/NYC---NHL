@@ -847,8 +847,8 @@ const landmarks = [
           value: "1915",
         },
         { 
-          key: "Tenancy", 
-          value: "1939-1961" 
+          key: "Resident", 
+          value: "Duke Ellington (Apt. A4) from 1939-1961" 
         },
         {
           key: "Significance",
