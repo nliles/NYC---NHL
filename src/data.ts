@@ -696,8 +696,18 @@ const landmarks = [
       id: 25,
       name: "Will Marion Cook House",
       borough: "Manhattan",
+      bullets: [
+        { key: "Built", value: "1891" },
+        { key: "Resident", value: " Will Marion Cook, a leading African-American musician and composer, from 1918-1944" },
+        { key: "Architectural Style", value: "Renaissance Revival" },
+        {
+          key: "Significance",
+          value: 'House where Cook created "In Dahomey" (1903), the first full-length Broadway musical written and performed entirely by African Americans; served as a creative hub where Cook mentored and influenced Duke Ellington and other legendary musicians.',
+        }
+      ],
       image_caption: "Will Marion Cook House. Library of Congress. 1933.",
       image_link: "https://www.loc.gov/item/ny1334/",
+      link: "https://npgallery.nps.gov/GetAsset/f01aa608-1c60-4bda-a75d-a3af816553cd#:~:text=The%20Will%20Marion%20Cook%20House,York%20Landmarks%20Commission%20in%201966.",
     },
   },
   {
@@ -859,8 +869,8 @@ const landmarks = [
           value: "Active apartment building, not open to public" 
         },
       ],
-      image_link: "https://en.wikipedia.org/wiki/Duke_Ellington_House#/media/File:Duke-ellington.jpg",
-      image_caption: "Duke Ellington House. Wikimedia Commons. 2007.",
+      image_link: "https://commons.wikimedia.org/wiki/File:FOYER_-_935_Saint_Nicholas_Avenue,_Apartment_4-A,_935_Saint_Nicholas_Avenue,_Apartment_4-A,_New_York,_New_York_County,_NY_HABS_NY,31-NEYO,119A-1.tif#/media/File:FOYER_-_935_Saint_Nicholas_Avenue,_Apartment_4-A,_935_Saint_Nicholas_Avenue,_Apartment_4-A,_New_York,_New_York_County,_NY_HABS_NY,31-NEYO,119A-1.tif",
+      image_caption: "Duke Ellington House. Wikimedia Commons.",
       link: "https://npgallery.nps.gov/NRHP/GetAsset/NHLS/76001239_text",
     },
   },
@@ -931,11 +941,17 @@ const landmarks = [
       id: 34,
       name: "Hamilton Fish House",
       borough: "Manhattan",
-      description:
-        "Home of Hamilton Fish, future Governor and Senator of New York",
-      image_caption:
-        "Hamilton Fish House, 21 Stuyvesant Street, New York County, NY. Library of Congress. 1933.",
+      bullets: [
+        { key: "Built", value: "c. 1803-1804; Built by Peter Stuyvesant for his daughter Elizabeth ane her husband Nicholas Fish" },
+        { key: "Architectural Style", value: "Federal Style" },
+        {
+          key: "Significance",
+          value: "Birthplace and home of Hamilton Fish (1808-1893), NY Governor, US Senator, and Secretary of State under Grant."
+        }
+      ],
+      image_caption: "Hamilton Fish House, 21 Stuyvesant Street, New York County, NY. Library of Congress. 1933.",
       image_link: "https://www.loc.gov/item/ny1278/",
+      link: "https://npgallery.nps.gov/GetAsset/dc84fd2d-09cf-4510-b37c-3ce5e399545f",
     },
   },
   {
@@ -1271,13 +1287,13 @@ const landmarks = [
         {
           key: "Significance",
           value:
-            "Founded by Archer M. Huntington in 1904, houses world-renowned collection of Hispanic art and literature, National Historic Landmark (2012), located on Audubon Terrace in Washington Heights, features works by Velázquez, Goya, El Greco, and Sorolla murals",
+            "Founded by Archer M. Huntington in 1904, houses world-renowned collection of Hispanic art and literature, located on Audubon Terrace in Washington Heights, features works by Velázquez, Goya, El Greco, and Sorolla murals",
         },
       ],
       image_caption:
-        "Manhattan: Broadway - 155th Street (West). The New York Public Library Digital Collections, 1929.",
+        "Hispanic Society of America building. Wikimedia Commons. 1909.",
       image_link:
-        "https://digitalcollections.nypl.org/search/index?q=Hispanic%20Society%20of%20America",
+        "https://commons.wikimedia.org/wiki/File:Hispanic_Society_of_America_building_in_1909.webp",
       link: "https://hispanicsociety.org/",
     },
   },
@@ -1294,21 +1310,21 @@ const landmarks = [
       bullets: [
         { key: "Built", value: "1920-1927" },
         {
-          key: "Chief Engineer",
+          key: "Engineer",
           value:
-            "Clifford Milburn Holland (completed by Ole Singstad after Holland's death in 1924)",
+            "Clifford Milburn Holland",
         },
         { key: "Engineering Type", value: "Underwater Vehicular Tunnel" },
         {
           key: "Significance",
           value:
-            "World's first mechanically ventilated underwater vehicular tunnel and longest underwater vehicular tunnel at time of completion. Revolutionary ventilation system designed by Norwegian architect Erling Owre became the standard for all subsequent vehicular tunnels. Engineering marvel that solved the problem of carbon monoxide evacuation, replacing tunnel air every 90 seconds with 84 massive fans.",
+            "World's first mechanically ventilated underwater vehicular tunnel and longest underwater vehicular tunnel at time of completion. Introduced an evolutionary ventilation system which became the standard for all subsequent vehicular tunnels.",
         },
       ],
       image_caption:
-        "Transportation - Motor vehicles - Holland Tunnel vehicular traffic. The New York Public Library Digital Collections, 1927.",
+        "Holland Tunnel Postcard. Wikimedia Commons. ca. 1927.",
       image_link:
-        "https://digitalcollections.nypl.org/items/a77a9f50-c562-012f-ce59-58d385a7bc34#/?uuid=510d47dd-a5c7-a3d9-e040-e00a18064a99",
+        "https://commons.wikimedia.org/wiki/File:Holland_Tunnel_--_1927_(53753501716).jpg",
       link: "https://www.panynj.gov/bridges-tunnels/en/holland-tunnel/history.html",
     },
   },
@@ -1600,8 +1616,8 @@ const landmarks = [
             "World's tallest building from 1909-1913. Features four monumental 26.5-foot diameter clocks on the tower faces. Built as headquarters for Metropolitan Life Insurance Company, then the nation's largest life insurer.",
         },
       ],
-      image_caption: "Metropolitan Life Ins. Bldg.. Library of Congress. 1912.",
-      image_link: "https://www.loc.gov/item/00650139/",
+      image_caption: "Metropolitan Life Ins. Bldg. Library of Congress. 1912.",
+      image_link: "https://commons.wikimedia.org/wiki/File:Metropolitan_Life_Insurance_Bldg.,_N.Y.C._LCCN2002712606.jpg#/media/File:Metropolitan_Life_Insurance_Bldg.,_N.Y.C._LCCN2002712606.jpg",
     },
   },
   {
@@ -1818,16 +1834,12 @@ const landmarks = [
         { key: "Built", value: "1901-1911" },
         { key: "Architects", value: "John Merven Carrère and Thomas Hastings" },
         { key: "Architectural Style", value: "Beaux-Arts" },
-        {
-          key: "Significance",
-          value:
-            'Flagship research library of NYPL system, National Historic Landmark (1965), one of largest marble buildings in US, features famous lions "Patience and Fortitude," contains Rose Main Reading Room (one of world\'s largest uncolumned interior spaces)',
-        },
+        { key: "Significance", value: "Architectural Beaux-Arts masterpiece and one of the world's leading research institutions with over four millions volumes." },
       ],
       image_caption:
-        "Stephen A. Schwarzman Building, interior, Rose Main Reading Room. The New York Public Library Digital Collections. 1999.",
+        "New York Public Library. Library of Congress. 1908.",
       image_link:
-        "https://digitalcollections.nypl.org/items/974cb990-c6be-012f-d6bc-3c075448cc4b#/?uuid=b153a765-7dca-f909-e040-e00a18062ff0",
+        "https://www.loc.gov/resource/det.4a28067/",
       link: "https://www.nypl.org/locations/schwarzman",
     },
   },
@@ -2103,7 +2115,7 @@ const landmarks = [
           value: "1914-1916",
         },
         {
-          key: "Residenst",
+          key: "Residents",
           value: "Paul Robeson from 1939-1941 and numerous other prominent African American figures including Duke Ellington and Langston Hughes.",
         },
       {
@@ -2119,9 +2131,9 @@ const landmarks = [
         value: "Residential apartment building nicknamed 'The Triple Nickel'" 
       },
     ],
-      image_caption: "555 Edgecombe Avenue. Wikimedia Commons. 2014",
+      image_caption: "555 Edgecombe Avenue. Libarary of Congress.",
       image_link: "https://commons.wikimedia.org/wiki/File:555_Edgecombe_Avenue_entrance.jpg",
-      link: "https://www.nps.gov/places/new-york-paul-robeson-home.htm",
+      link: "https://www.loc.gov/pictures/resource/hhh.ny0415.photos.118479p/",
       quote:
         "To be free . . . to walk the good American earth as equal citizens, to live without fear, to enjoy the fruits of our toil, to give our children every opportunity in life–that dream which we have held so long in our hearts is today the destiny that we hold in our hands.",
       quote_author: 'Paul Robeson, "Here I Stand"',
@@ -2152,19 +2164,20 @@ const landmarks = [
       borough: "Manhattan",
       bullets: [
         { key: "Built", value: "1930-1939" },
+        { key: "Commissioner", value: "John D. Rockefeller" },
         { key: "Architect", value: "Raymond Hood" },
         { key: "Architectural Style", value: "Art Deco" },
         { key: "Height", value: "850 ft. (70 stories)" },
         {
           key: "Significance",
           value:
-            "Iconic commercial complex featuring NBC studios, Radio City Music Hall, and renowned public spaces including the famous Christmas tree and ice rink",
+            "Iconic commercial complex built during the Great Depression serving as a symbol of American optimism and resilience.",
         },
       ],
       image_caption:
-        "30 Rockefeller Center Plaza, The New York Public Library Digital Collections, 1887–1964",
+        "Rockefeller Center. Wikimedia Commons. 1933.",
       image_link:
-        "https://digitalcollections.nypl.org/items/5b8a1e00-c5ed-012f-a5ae-58d385a7bc34#/?uuid=510d47e2-f267-a3d9-e040-e00a18064a99",
+        "https://en.wikipedia.org/wiki/Rockefeller_Center#/media/File:Rockefeller_Center,_December_1933.jpg",
       link: "https://www.rockefellercenter.com/",
     },
   },
@@ -2262,7 +2275,7 @@ const landmarks = [
         { key: "Built", value: "1858-1878 (dedicated 1879)" },
         { key: "Architect", value: "James Renwick Jr." },
         { key: "Architectural style", value: "Gothic Revival" },
-        { key: "Purpose", value: "Largest Roman Catholic cathedral in the United States, built to replace Old St. Patrick's Cathedral to accommodate the city's growing Catholic population. It represents a major symbol of Catholic faith in the city." },
+        { key: "Purpose", value: "Largest Roman Catholic cathedral in the United States, built to replace St. Patrick's Old Cathedral to accommodate the city's growing Catholic population. It represents a major symbol of Catholic faith in the city." },
       ],
       image_caption:
         "Cathedral prior to the installation of spires. The New York Public Library. 1858 - 1925",
@@ -2699,17 +2712,17 @@ const landmarks = [
         {
           key: "Architect",
           value:
-            "Frederick Clarke Withers of Vaux and Withers (though Calvert Vaux was busy with other projects, design was primarily by Withers)",
+            "Frederick Clarke Withers",
         },
         {
           key: "Architectural style",
           value:
-            "American High Victorian Gothic (also called Venetian Gothic), faced in red brick with black brick and yellow Ohio sandstone trim",
+            "American High Victorian Gothic",
         },
         {
           key: "Significance",
           value:
-            "Voted fifth among the ten most beautiful buildings in America by architects in the 1880s. Site of the country's first night court. Notable trials include Harry K. Thaw for the murder of Stanford White. Features 100-foot clock tower that served as fire watch tower.",
+            "Originally a courthouse and known for America's first night court. It was once voted fifth most beautiful building in America by architects in the 1880s.",
         },
         {
           key: "Current",
@@ -2720,6 +2733,7 @@ const landmarks = [
       image_caption:
         "Third Judicial District Courthouse. Library of Congress. 1933.",
       image_link: "https://www.loc.gov/item/ny0431/",
+      link: "https://www.nypl.org/locations/jefferson-market",
     },
   },
   {
@@ -2764,22 +2778,26 @@ const landmarks = [
         {
           key: "Built",
           value:
-            "1845 (original townhouses); 1881-1884 (combined and renovated)",
+            "1884, altered extensively 1885",
+        },
+        {
+          key: "Resident",
+          value:
+            "Samuel J. Tilden (1860-1886), Governor of New York and 1876 presidential candidate who lost to Rutherford B. Hayes",
         },
         {
           key: "Architect",
           value:
-            "Unknown (original 1845 construction); Calvert Vaux (1881-1884 renovation and combination)",
+            "Calvert Vaux",
         },
         {
           key: "Architectural style",
-          value:
-            'Originally Greek Revival (1845), extensively restyled by Vaux to Victorian Gothic with Italian Renaissance elements, described as "the height of Victorian Gothic in residential architecture"',
+          value: "Gothic Revival (original), Italianate Victorian style (altered)",
         },
         {
           key: "Significance",
           value:
-            "Home of Samuel J. Tilden (1860-1886), Governor of New York and 1876 presidential candidate who won popular vote but lost Electoral College to Rutherford B. Hayes. Featured rolling steel doors and secret escape tunnel due to political tensions.",
+            "Represents a crucial figure in American democracy while also embodying the architectural and social history of New York's elite.",
         },
         {
           key: "Current",
@@ -2789,6 +2807,7 @@ const landmarks = [
       image_caption: "Samuel J. Tilden Residence. Wikimedia Commons. 1872",
       image_link:
         "https://en.wikipedia.org/wiki/Samuel_J._Tilden_House#/media/File:C.Vaux_-_Samuel_J.Tilden_residence_-_NY_-_Albert_Levy.jpg",
+      link: "https://www.nacnyc.org/default.aspx?p=.NETEventView&ID=3865409&qfilter=&title=&type=0&ssid=0&chgs=",
     },
   },
   {
@@ -3140,6 +3159,8 @@ const landmarks = [
         { key: "Rediscovered", value: "1858" },
         { key: "Significance", value: "One of the largest and best preserved Lenape burial sites in the New York area, offering insights into their culture and practices." },
       ],
+      image_link: "https://commons.wikimedia.org/wiki/File:Vicinity-of-wards-point-site.JPG",
+      image_caption: "Vicinity of Wards Point Archeological site. Wikimedia Commons. 2008.",
       link: "https://heritagetrails.tottenvillehistory.com/inside-beach-trail/site-5.html",
     },
   },
