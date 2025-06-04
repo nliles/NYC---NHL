@@ -931,11 +931,17 @@ const landmarks = [
       id: 34,
       name: "Hamilton Fish House",
       borough: "Manhattan",
-      description:
-        "Home of Hamilton Fish, future Governor and Senator of New York",
-      image_caption:
-        "Hamilton Fish House, 21 Stuyvesant Street, New York County, NY. Library of Congress. 1933.",
+      bullets: [
+        { key: "Built", value: "c. 1803-1804; Built by Peter Stuyvesant for his daughter Elizabeth ane her husband Nicholas Fish" },
+        { key: "Architectural Style", value: "Federal Style" },
+        {
+          key: "Significance",
+          value: "Birthplace and home of Hamilton Fish (1808-1893), NY Governor, US Senator, and Secretary of State under Grant."
+        }
+      ],
+      image_caption: "Hamilton Fish House, 21 Stuyvesant Street, New York County, NY. Library of Congress. 1933.",
       image_link: "https://www.loc.gov/item/ny1278/",
+      link: "https://npgallery.nps.gov/GetAsset/dc84fd2d-09cf-4510-b37c-3ce5e399545f",
     },
   },
   {
@@ -1818,16 +1824,12 @@ const landmarks = [
         { key: "Built", value: "1901-1911" },
         { key: "Architects", value: "John Merven Carrère and Thomas Hastings" },
         { key: "Architectural Style", value: "Beaux-Arts" },
-        {
-          key: "Significance",
-          value:
-            'Flagship research library of NYPL system, National Historic Landmark (1965), one of largest marble buildings in US, features famous lions "Patience and Fortitude," contains Rose Main Reading Room (one of world\'s largest uncolumned interior spaces)',
-        },
+        { key: "Significance", value: "Architectural Beaux-Arts masterpiece and one of the world's leading research institutions with over four millions volumes." },
       ],
       image_caption:
-        "Stephen A. Schwarzman Building, interior, Rose Main Reading Room. The New York Public Library Digital Collections. 1999.",
+        "New York Public Library. Library of Congress. 1908.",
       image_link:
-        "https://digitalcollections.nypl.org/items/974cb990-c6be-012f-d6bc-3c075448cc4b#/?uuid=b153a765-7dca-f909-e040-e00a18062ff0",
+        "https://www.loc.gov/resource/det.4a28067/",
       link: "https://www.nypl.org/locations/schwarzman",
     },
   },
@@ -2152,19 +2154,20 @@ const landmarks = [
       borough: "Manhattan",
       bullets: [
         { key: "Built", value: "1930-1939" },
+        { key: "Commissioner", value: "John D. Rockefeller" },
         { key: "Architect", value: "Raymond Hood" },
         { key: "Architectural Style", value: "Art Deco" },
         { key: "Height", value: "850 ft. (70 stories)" },
         {
           key: "Significance",
           value:
-            "Iconic commercial complex featuring NBC studios, Radio City Music Hall, and renowned public spaces including the famous Christmas tree and ice rink",
+            "Iconic commercial complex built during the Great Depression serving as a symbol of American optimism and resilience.",
         },
       ],
       image_caption:
-        "30 Rockefeller Center Plaza, The New York Public Library Digital Collections, 1887–1964",
+        "Rockefeller Center. Wikimedia Commons. 1933.",
       image_link:
-        "https://digitalcollections.nypl.org/items/5b8a1e00-c5ed-012f-a5ae-58d385a7bc34#/?uuid=510d47e2-f267-a3d9-e040-e00a18064a99",
+        "https://en.wikipedia.org/wiki/Rockefeller_Center#/media/File:Rockefeller_Center,_December_1933.jpg",
       link: "https://www.rockefellercenter.com/",
     },
   },
@@ -2262,7 +2265,7 @@ const landmarks = [
         { key: "Built", value: "1858-1878 (dedicated 1879)" },
         { key: "Architect", value: "James Renwick Jr." },
         { key: "Architectural style", value: "Gothic Revival" },
-        { key: "Purpose", value: "Largest Roman Catholic cathedral in the United States, built to replace Old St. Patrick's Cathedral to accommodate the city's growing Catholic population. It represents a major symbol of Catholic faith in the city." },
+        { key: "Purpose", value: "Largest Roman Catholic cathedral in the United States, built to replace St. Patrick's Old Cathedral to accommodate the city's growing Catholic population. It represents a major symbol of Catholic faith in the city." },
       ],
       image_caption:
         "Cathedral prior to the installation of spires. The New York Public Library. 1858 - 1925",
@@ -2699,17 +2702,17 @@ const landmarks = [
         {
           key: "Architect",
           value:
-            "Frederick Clarke Withers of Vaux and Withers (though Calvert Vaux was busy with other projects, design was primarily by Withers)",
+            "Frederick Clarke Withers",
         },
         {
           key: "Architectural style",
           value:
-            "American High Victorian Gothic (also called Venetian Gothic), faced in red brick with black brick and yellow Ohio sandstone trim",
+            "American High Victorian Gothic",
         },
         {
           key: "Significance",
           value:
-            "Voted fifth among the ten most beautiful buildings in America by architects in the 1880s. Site of the country's first night court. Notable trials include Harry K. Thaw for the murder of Stanford White. Features 100-foot clock tower that served as fire watch tower.",
+            "Originally a courthouse and known for America’s first night court. It was once voted fifth most beautiful building in America by architects in the 1880s.",
         },
         {
           key: "Current",
