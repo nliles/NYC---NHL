@@ -228,7 +228,7 @@ const landmarks = [
       bullets: [
         {
           key: "Residents",
-          value: " Alice Austen and her partner Gertrude Tate (1866-1952)",
+          value: " Alice Austen (1866-1952) and her partner Gertrude Tate",
         },
         {
           key: "Significance",
@@ -1345,26 +1345,28 @@ const landmarks = [
             "1941-1943 (keel laid December 1, 1941; launched April 26, 1943; commissioned August 16, 1943)",
         },
         {
-          key: "Architect",
+          key: "Builder",
           value:
-            "Newport News Shipbuilding & Dry Dock Company, Virginia (shipbuilder)",
+            "Newport News Shipbuilding",
         },
         {
-          key: "Architectural style",
+          key: "Class & Type",
           value:
-            "Essex-class aircraft carrier design; 872 ft. overall length, 147.5-foot beam, displacement of 27,100 tonnes",
+            "Essex-class aircraft carrier design",
         },
         {
           key: "Significance",
           value:
-            'WWII Pacific Theater veteran, surviving torpedo strike and five kamikaze attacks. Nicknamed "The Fighting I" and "Ghost Ship" by Japanese forces. Served in Cold War, Vietnam War, and as NASA recovery vessel for Mercury and Gemini missions. National Historic Landmark since 1986.',
+            'Known as "the Fighting I," the aircraft carrier served in World War II, the Cold War, and Vietnam War.',
         },
         {
           key: "Current",
           value:
-            "Intrepid Sea, Air & Space Museum at Pier 86, Hudson River (since 1982)",
+            "Intrepid Sea, Air & Space Museum since 1982",
         },
       ],
+      image_caption: "USS Intrepid. Wikimedia Commons. 1955.",
+      image_url: "https://commons.wikimedia.org/wiki/File:USS_Intrepid_(CVA-11)_underway_1955.jpeg",
       link: "https://intrepidmuseum.org/",
     },
   },
@@ -1378,6 +1380,17 @@ const landmarks = [
       id: 49,
       name: "James Weldon Johnson Residence",
       borough: "Manhattan",
+      bullets: [
+        { key: "Built", value: "1925" },
+        { key: "Resident", value: "James Weldon Johnson (1871-1938) from 1925-1938" },
+        {
+          key: "Significance",
+          value: 'Home of one of America\'s most influential civil rights leaders and cultural figures and Harlem Renaissance leaders who composed "Lift Ev\'ry Voice and Sing" (the Black National Anthem) and led national anti-lynching campaigns and organized the historic Silent March of 1917.',
+        }
+      ],
+      image_link: "https://commons.wikimedia.org/wiki/File:FRONT_ELEVATION,_SHOWING_ENTRANCE_PORTICO_ON_135TH_STREET_-_187_West_135th_Street_(Apartment_Building),_187_West_One-hundred-thirty-fifth_Street,_New_York,_New_York_County,_NY_HABS_NY,31-NEYO,113-1.tif",
+      image_caption: "James Weldon Johnson Residence. Wikimedia Commons.",
+      link: "https://npgallery.nps.gov/NRHP/GetAsset/NHLS/76001241_text",
     },
   },
   {

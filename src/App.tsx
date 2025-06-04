@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import Portal from "./components/Portal";
 import SidePanel from "./components/SidePanel";
@@ -8,6 +8,7 @@ import ParkProfile from "./components/LandmarkProfile";
 import { getLocalStorage } from "./helpers/localStorage";
 import NavBar from "./components/NavBar";
 import styles from "./App.module.css";
+import { getBlogPosts } from "./services/contentful";
 
 const App = () => {
   const [selectedLocation, setSelectedLocation] = useState();
@@ -20,6 +21,15 @@ const App = () => {
     setSelectedLocation(item.properties);
     setShouldZoom(true);
   };
+
+  useEffect(() => {
+    async function fetchPosts() {
+      const blogPosts = await getBlogPosts()
+      console.log(blogPosts)
+    }
+    
+    fetchPosts()
+  }, [])
 
   return (
     <>
