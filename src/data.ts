@@ -1300,21 +1300,21 @@ const landmarks = [
       bullets: [
         { key: "Built", value: "1920-1927" },
         {
-          key: "Chief Engineer",
+          key: "Engineer",
           value:
-            "Clifford Milburn Holland (completed by Ole Singstad after Holland's death in 1924)",
+            "Clifford Milburn Holland",
         },
         { key: "Engineering Type", value: "Underwater Vehicular Tunnel" },
         {
           key: "Significance",
           value:
-            "World's first mechanically ventilated underwater vehicular tunnel and longest underwater vehicular tunnel at time of completion. Revolutionary ventilation system designed by Norwegian architect Erling Owre became the standard for all subsequent vehicular tunnels. Engineering marvel that solved the problem of carbon monoxide evacuation, replacing tunnel air every 90 seconds with 84 massive fans.",
+            "World's first mechanically ventilated underwater vehicular tunnel and longest underwater vehicular tunnel at time of completion. Introduced an evolutionary ventilation system which became the standard for all subsequent vehicular tunnels.",
         },
       ],
       image_caption:
-        "Transportation - Motor vehicles - Holland Tunnel vehicular traffic. The New York Public Library Digital Collections, 1927.",
+        "Holland Tunnel Postcard. Wikimedia Commons. ca. 1927.",
       image_link:
-        "https://digitalcollections.nypl.org/items/a77a9f50-c562-012f-ce59-58d385a7bc34#/?uuid=510d47dd-a5c7-a3d9-e040-e00a18064a99",
+        "https://commons.wikimedia.org/wiki/File:Holland_Tunnel_--_1927_(53753501716).jpg",
       link: "https://www.panynj.gov/bridges-tunnels/en/holland-tunnel/history.html",
     },
   },
@@ -1606,8 +1606,8 @@ const landmarks = [
             "World's tallest building from 1909-1913. Features four monumental 26.5-foot diameter clocks on the tower faces. Built as headquarters for Metropolitan Life Insurance Company, then the nation's largest life insurer.",
         },
       ],
-      image_caption: "Metropolitan Life Ins. Bldg.. Library of Congress. 1912.",
-      image_link: "https://www.loc.gov/item/00650139/",
+      image_caption: "Metropolitan Life Ins. Bldg. Library of Congress. 1912.",
+      image_link: "https://commons.wikimedia.org/wiki/File:Metropolitan_Life_Insurance_Bldg.,_N.Y.C._LCCN2002712606.jpg#/media/File:Metropolitan_Life_Insurance_Bldg.,_N.Y.C._LCCN2002712606.jpg",
     },
   },
   {
@@ -2712,7 +2712,7 @@ const landmarks = [
         {
           key: "Significance",
           value:
-            "Originally a courthouse and known for America’s first night court. It was once voted fifth most beautiful building in America by architects in the 1880s.",
+            "Originally a courthouse and known for America's first night court. It was once voted fifth most beautiful building in America by architects in the 1880s.",
         },
         {
           key: "Current",
@@ -2723,6 +2723,7 @@ const landmarks = [
       image_caption:
         "Third Judicial District Courthouse. Library of Congress. 1933.",
       image_link: "https://www.loc.gov/item/ny0431/",
+      link: "https://www.nypl.org/locations/jefferson-market",
     },
   },
   {
@@ -2767,22 +2768,26 @@ const landmarks = [
         {
           key: "Built",
           value:
-            "1845 (original townhouses); 1881-1884 (combined and renovated)",
+            "1884, altered extensively 1885",
+        },
+        {
+          key: "Resident",
+          value:
+            "Samuel J. Tilden (1860-1886), Governor of New York and 1876 presidential candidate who lost to Rutherford B. Hayes",
         },
         {
           key: "Architect",
           value:
-            "Unknown (original 1845 construction); Calvert Vaux (1881-1884 renovation and combination)",
+            "Calvert Vaux",
         },
         {
           key: "Architectural style",
-          value:
-            'Originally Greek Revival (1845), extensively restyled by Vaux to Victorian Gothic with Italian Renaissance elements, described as "the height of Victorian Gothic in residential architecture"',
+          value: "Gothic Revival (original), Italianate Victorian style (altered)",
         },
         {
           key: "Significance",
           value:
-            "Home of Samuel J. Tilden (1860-1886), Governor of New York and 1876 presidential candidate who won popular vote but lost Electoral College to Rutherford B. Hayes. Featured rolling steel doors and secret escape tunnel due to political tensions.",
+            "Represents a crucial figure in American democracy while also embodying the architectural and social history of New York's elite.",
         },
         {
           key: "Current",
@@ -2792,6 +2797,7 @@ const landmarks = [
       image_caption: "Samuel J. Tilden Residence. Wikimedia Commons. 1872",
       image_link:
         "https://en.wikipedia.org/wiki/Samuel_J._Tilden_House#/media/File:C.Vaux_-_Samuel_J.Tilden_residence_-_NY_-_Albert_Levy.jpg",
+      link: "https://www.nacnyc.org/default.aspx?p=.NETEventView&ID=3865409&qfilter=&title=&type=0&ssid=0&chgs=",
     },
   },
   {
@@ -3143,6 +3149,8 @@ const landmarks = [
         { key: "Rediscovered", value: "1858" },
         { key: "Significance", value: "One of the largest and best preserved Lenape burial sites in the New York area, offering insights into their culture and practices." },
       ],
+      image_link: "https://commons.wikimedia.org/wiki/File:Vicinity-of-wards-point-site.JPG",
+      image_caption: "Vicinity of Wards Point Archeological site. Wikimedia Commons. 2008.",
       link: "https://heritagetrails.tottenvillehistory.com/inside-beach-trail/site-5.html",
     },
   },
