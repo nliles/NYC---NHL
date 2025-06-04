@@ -702,7 +702,7 @@ const landmarks = [
         { key: "Architectural Style", value: "Renaissance Revival" },
         {
           key: "Significance",
-          value: 'House where Cook created "In Dahomey" (1903), the first full-length Broadway musical written and performed entirely by African Americans, and served as a creative hub where Cook mentored and influenced Duke Ellington and other legendary musicians.',
+          value: 'House where Cook created "In Dahomey" (1903), the first full-length Broadway musical written and performed entirely by African Americans; served as a creative hub where Cook mentored and influenced Duke Ellington and other legendary musicians.',
         }
       ],
       image_caption: "Will Marion Cook House. Library of Congress. 1933.",
@@ -869,8 +869,8 @@ const landmarks = [
           value: "Active apartment building, not open to public" 
         },
       ],
-      image_link: "https://en.wikipedia.org/wiki/Duke_Ellington_House#/media/File:Duke-ellington.jpg",
-      image_caption: "Duke Ellington House. Wikimedia Commons. 2007.",
+      image_link: "https://commons.wikimedia.org/wiki/File:FOYER_-_935_Saint_Nicholas_Avenue,_Apartment_4-A,_935_Saint_Nicholas_Avenue,_Apartment_4-A,_New_York,_New_York_County,_NY_HABS_NY,31-NEYO,119A-1.tif#/media/File:FOYER_-_935_Saint_Nicholas_Avenue,_Apartment_4-A,_935_Saint_Nicholas_Avenue,_Apartment_4-A,_New_York,_New_York_County,_NY_HABS_NY,31-NEYO,119A-1.tif",
+      image_caption: "Duke Ellington House. Wikimedia Commons.",
       link: "https://npgallery.nps.gov/NRHP/GetAsset/NHLS/76001239_text",
     },
   },
@@ -1287,13 +1287,13 @@ const landmarks = [
         {
           key: "Significance",
           value:
-            "Founded by Archer M. Huntington in 1904, houses world-renowned collection of Hispanic art and literature, National Historic Landmark (2012), located on Audubon Terrace in Washington Heights, features works by Velázquez, Goya, El Greco, and Sorolla murals",
+            "Founded by Archer M. Huntington in 1904, houses world-renowned collection of Hispanic art and literature, located on Audubon Terrace in Washington Heights, features works by Velázquez, Goya, El Greco, and Sorolla murals",
         },
       ],
       image_caption:
-        "Manhattan: Broadway - 155th Street (West). The New York Public Library Digital Collections, 1929.",
+        "Hispanic Society of America building. Wikimedia Commons. 1909.",
       image_link:
-        "https://digitalcollections.nypl.org/search/index?q=Hispanic%20Society%20of%20America",
+        "https://commons.wikimedia.org/wiki/File:Hispanic_Society_of_America_building_in_1909.webp",
       link: "https://hispanicsociety.org/",
     },
   },
@@ -2115,7 +2115,7 @@ const landmarks = [
           value: "1914-1916",
         },
         {
-          key: "Residenst",
+          key: "Residents",
           value: "Paul Robeson from 1939-1941 and numerous other prominent African American figures including Duke Ellington and Langston Hughes.",
         },
       {
@@ -2131,9 +2131,9 @@ const landmarks = [
         value: "Residential apartment building nicknamed 'The Triple Nickel'" 
       },
     ],
-      image_caption: "555 Edgecombe Avenue. Wikimedia Commons. 2014",
+      image_caption: "555 Edgecombe Avenue. Libarary of Congress.",
       image_link: "https://commons.wikimedia.org/wiki/File:555_Edgecombe_Avenue_entrance.jpg",
-      link: "https://www.nps.gov/places/new-york-paul-robeson-home.htm",
+      link: "https://www.loc.gov/pictures/resource/hhh.ny0415.photos.118479p/",
       quote:
         "To be free . . . to walk the good American earth as equal citizens, to live without fear, to enjoy the fruits of our toil, to give our children every opportunity in life–that dream which we have held so long in our hearts is today the destiny that we hold in our hands.",
       quote_author: 'Paul Robeson, "Here I Stand"',
