@@ -696,8 +696,18 @@ const landmarks = [
       id: 25,
       name: "Will Marion Cook House",
       borough: "Manhattan",
+      bullets: [
+        { key: "Built", value: "1891" },
+        { key: "Resident", value: " Will Marion Cook, a leading African-American musician and composer, from 1918-1944" },
+        { key: "Architectural Style", value: "Renaissance Revival" },
+        {
+          key: "Significance",
+          value: 'House where Cook created "In Dahomey" (1903), the first full-length Broadway musical written and performed entirely by African Americans, and served as a creative hub where Cook mentored and influenced Duke Ellington and other legendary musicians.',
+        }
+      ],
       image_caption: "Will Marion Cook House. Library of Congress. 1933.",
       image_link: "https://www.loc.gov/item/ny1334/",
+      link: "https://npgallery.nps.gov/GetAsset/f01aa608-1c60-4bda-a75d-a3af816553cd#:~:text=The%20Will%20Marion%20Cook%20House,York%20Landmarks%20Commission%20in%201966.",
     },
   },
   {
