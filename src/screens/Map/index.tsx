@@ -1,15 +1,17 @@
 import { Dispatch, SetStateAction, useEffect, useRef } from "react";
 import mapboxgl from "mapbox-gl/dist/mapbox-gl";
-import landmarks from "../../data.ts";
 import styles from "./Map.module.css";
+import { MapboxFeature } from "../../types";
 
 const Map = ({
+  landmarks,
   selectedLocation,
   setSelectedLocation,
   visitedLandmarks,
   shouldZoom,
   setShouldZoom,
 }: {
+  landmarks: MapboxFeature[];
   selectedLocation: any;
   setSelectedLocation: Dispatch<SetStateAction<undefined>>;
   visitedLandmarks: string[];

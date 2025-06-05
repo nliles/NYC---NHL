@@ -11,17 +11,30 @@ type Image = {
     }
 }
 
+type Fields = {
+    name: string;
+    borough: string;
+    location: {
+        lon: number;
+        lat: number;
+    };
+    bullets: Bullet[];
+    moreInfoUrl: string;
+    image: Image;
+    image_url: string;    
+};
+
 export type Landmark = {
-    fields: {
-        name: string;
-        borough: string;
-        location: {
-            lon: number;
-            lat: number;
-        };
-        bullets: Bullet[];
-        moreInfoUrl: string;
-        image: Image;
-        image_url: string;    
-    }
-}[];
+    fields: Fields
+};
+
+export type MapboxFeature = {
+    type: "Feature";
+    geometry: {
+      type: "Point";
+      coordinates: [number, number]; // [longitude, latitude]
+    };
+    properties: {
+      [key: string]: any; // All your other data goes here
+    };
+  }

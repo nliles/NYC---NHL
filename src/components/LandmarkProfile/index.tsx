@@ -23,9 +23,7 @@ const LandmarkProfile = ({
       saveToStorage(filtered);
     }
   };
-
-  console.log(landmark.image)
-
+  
   return (
     <div className={styles.container}>
       <div className={styles.content}>
