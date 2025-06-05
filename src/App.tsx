@@ -10,10 +10,11 @@ import NavBar from "./components/NavBar";
 import styles from "./App.module.css";
 import { getLandmarks } from "./services/contentful";
 import convertToMapboxFeature from "./helpers/convertToMapboxFeature";
-import { Landmark } from "./types";
+import { Landmark, MapboxFeature } from "./types";
 
 const App = () => {
   const [landmarks, setSelectedLandmarks] = useState<Landmark[]>([]);
+  const [mapInfo, setMapInfo] = useState<MapboxFeature[]>([]);
   const [selectedLocation, setSelectedLocation] = useState();
   const [shouldZoom, setShouldZoom] = useState(false);
   const [visitedLandmarks, setVisitedLandmarks] = useState(() =>
@@ -30,6 +31,7 @@ const App = () => {
         try {
           const response = await getLandmarks();
           setSelectedLandmarks(response.items as any);
+          setMapInfo(response.items.map((landmark: any) => convertToMapboxFeature(landmark)));
         } catch (error) {
           console.error('Error fetching content:', error)
           return []
@@ -39,15 +41,13 @@ const App = () => {
     fetchLandmarks();
   }, [])
 
-  const mapData = landmarks.map(landmark => convertToMapboxFeature(landmark))
-
   return (
     <>
       <NavBar count={visitedLandmarks.length} total={116} />
       <div className={styles.container}>
         <LandmarkList handleClick={handleClick} landmarks={landmarks}/>
         <Map
-          landmarks={mapData}
+          landmarks={mapInfo}
           selectedLocation={selectedLocation}
           setSelectedLocation={setSelectedLocation}
           visitedLandmarks={visitedLandmarks}

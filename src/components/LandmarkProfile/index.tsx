@@ -34,14 +34,14 @@ const LandmarkProfile = ({
             alt={landmark.name}
             className={styles.img}
           />
-          {landmark.image.fields.description && (
+          {landmark?.image?.fields?.description && (
             <a
               className={styles.caption}
               href={landmark.image_link}
               target="_blank"
               rel="noopener noreferrer"
             >
-              {landmark.image.fields.description}
+              {landmark?.image?.fields?.description}
             </a>
           )}
           {landmark?.bullets && (
