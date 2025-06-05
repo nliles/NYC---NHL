@@ -30,7 +30,7 @@ const LandmarkProfile = ({
         <div className={styles.info}>
           <h2 className={styles.header}>{landmark.name}</h2>
           <img
-            src={landmark.image.fields.file.url} // Update this path to your actual image path
+            src={landmark?.image?.fields?.file?.url} // Update this path to your actual image path
             alt={landmark.name}
             className={styles.img}
           />
