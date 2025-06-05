@@ -8,9 +8,10 @@ import ParkProfile from "./components/LandmarkProfile";
 import { getLocalStorage } from "./helpers/localStorage";
 import NavBar from "./components/NavBar";
 import styles from "./App.module.css";
-import { getBlogPosts } from "./services/contentful";
+import { getLandmarks } from "./services/contentful";
 
 const App = () => {
+  const [landmarks, setSelectedLandmarks] = useState<any>([]);
   const [selectedLocation, setSelectedLocation] = useState();
   const [shouldZoom, setShouldZoom] = useState(false);
   const [visitedLandmarks, setVisitedLandmarks] = useState(() =>
@@ -18,24 +19,31 @@ const App = () => {
   );
 
   const handleClick = (item: any) => {
-    setSelectedLocation(item.properties);
+    setSelectedLocation(item.fields);
     setShouldZoom(true);
   };
 
   useEffect(() => {
-    async function fetchPosts() {
-      const blogPosts = await getBlogPosts()
-      console.log(blogPosts)
+    const fetchLandmarks = async () => {
+        try {
+          const response = await getLandmarks();
+          setSelectedLandmarks(response.items);
+        } catch (error) {
+          console.error('Error fetching content:', error)
+          return []
+        }
     }
     
-    fetchPosts()
+    fetchLandmarks();
   }, [])
+
+  console.log('here', landmarks)
 
   return (
     <>
       <NavBar count={visitedLandmarks.length} total={116} />
       <div className={styles.container}>
-        <LandmarkList handleClick={handleClick} />
+        <LandmarkList handleClick={handleClick} landmarks={landmarks}/>
         <Map
           selectedLocation={selectedLocation}
           setSelectedLocation={setSelectedLocation}

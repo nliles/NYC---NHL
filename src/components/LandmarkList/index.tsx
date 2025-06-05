@@ -1,18 +1,23 @@
 import { useEffect, useRef, useState } from "react";
-import landmarks from "../../data.ts";
 import cn from 'classnames';
 import styles from "./LandmarkList.module.css";
-
+import { Landmark } from "../../types/Landmark";
 const boroughs = ["All", "Manhattan", "Brooklyn", "Queens", "The Bronx", "Staten Island"];
 
 const LandmarkList = ({
+  landmarks,
   handleClick,
 }: {
+  landmarks: Landmark[];
   handleClick: (landmark: any) => void;
 }) => {
   const [filteredLandmarks, setFilteredLandmarks] = useState(landmarks);
   const [selectedBorough, setSelectedBorough] = useState('All');
   const inputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    setFilteredLandmarks(landmarks);
+  }, [landmarks]);
 
   const handleOnChange = () => {
     const formatString = (str: string) => str.toLowerCase().replace(/[.,]/g, "").replace(/\s+/g, '');
@@ -77,15 +82,15 @@ const LandmarkList = ({
       </div>
       <div className={styles.resultsCount} aria-label="results-count" id="resultsCount">{filterCopy}</div>
       <div className={styles.landmarksList}>
-        {filteredLandmarks.map((landmark) => (
+        {filteredLandmarks.map((landmark: any) => (
           <button
             className={styles.item}
             onClick={() => handleClick(landmark)}
-            key={landmark.properties.name}
+            key={landmark.fields.name}
           >
-            <p className={styles.name}>{landmark.properties.name}</p>
+            <p className={styles.name}>{landmark.fields.name}</p>
             <div className={styles.landmarkDetails}>
-              {landmark.properties.borough.split(",").map((borough) => (
+              {landmark.fields.borough.split(",").map((borough: any) => (
                 <span className={styles.borough}>{borough}</span>
               ))}
             </div>

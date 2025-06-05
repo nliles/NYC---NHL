@@ -7,7 +7,7 @@ const LandmarkProfile = ({
   visitedLandmarks,
 }: any) => {
   // State for visited checkbox
-  const visited = visitedLandmarks.includes(landmark.id);
+  const visited = visitedLandmarks.includes(landmark.name);
 
   // Save visited status to localStorage when changed
   const handleVisitedChange = (e: any) => {
@@ -15,14 +15,16 @@ const LandmarkProfile = ({
 
     // Save to localStorage
     if (isVisited) {
-      setVisitedLandmarks([...visitedLandmarks, landmark.id]);
-      saveToStorage([...visitedLandmarks, landmark.id]);
+      setVisitedLandmarks([...visitedLandmarks, landmark.name]);
+      saveToStorage([...visitedLandmarks, landmark.name]);
     } else {
-      const filtered = visitedLandmarks.filter((id: any) => id !== landmark.id);
+      const filtered = visitedLandmarks.filter((name: any) => name !== landmark.name);
       setVisitedLandmarks(filtered);
       saveToStorage(filtered);
     }
   };
+
+  console.log(landmark.image)
 
   return (
     <div className={styles.container}>
@@ -30,18 +32,18 @@ const LandmarkProfile = ({
         <div className={styles.info}>
           <h2 className={styles.header}>{landmark.name}</h2>
           <img
-            src={`landmark-${landmark.id}.jpg`} // Update this path to your actual image path
+            src={landmark.image.fields.file.url} // Update this path to your actual image path
             alt={landmark.name}
             className={styles.img}
           />
-          {landmark.image_caption && (
+          {landmark.image.fields.description && (
             <a
               className={styles.caption}
               href={landmark.image_link}
               target="_blank"
               rel="noopener noreferrer"
             >
-              {landmark.image_caption}
+              {landmark.image.fields.description}
             </a>
           )}
           {landmark?.bullets && (
@@ -79,7 +81,7 @@ const LandmarkProfile = ({
           </label>
         </div>
         <a
-          href={landmark.link}
+          href={landmark.moreInfoUrl}
           className={styles.link}
           target="_blank"
           rel="noopener noreferrer"
