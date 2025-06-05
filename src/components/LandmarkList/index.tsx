@@ -22,7 +22,7 @@ const LandmarkList = ({
   const handleOnChange = () => {
     const formatString = (str: string) => str.toLowerCase().replace(/[.,]/g, "").replace(/\s+/g, '');
 
-    let filteredLandmarks = selectedBorough === 'All' ? landmarks : landmarks.filter((landmark) => landmark.properties.borough.includes(selectedBorough || "")) || landmarks;
+    let filteredLandmarks = selectedBorough === 'All' ? landmarks : landmarks.filter((landmark) => landmark.fields.borough.includes(selectedBorough || "")) || landmarks;
     const searchTerm = formatString(inputRef.current?.value || "");
 
     if (searchTerm === "") {
