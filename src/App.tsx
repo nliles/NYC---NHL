@@ -47,7 +47,7 @@ const App = () => {
       <div className={styles.container}>
         <LandmarkList handleClick={handleClick} landmarks={landmarks}/>
         <Map
-          landmarks={mapInfo}
+          landmarks={landmarks}
           selectedLocation={selectedLocation}
           setSelectedLocation={setSelectedLocation}
           visitedLandmarks={visitedLandmarks}

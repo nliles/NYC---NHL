@@ -1,7 +1,8 @@
 import { Dispatch, SetStateAction, useEffect, useRef } from "react";
 import mapboxgl from "mapbox-gl/dist/mapbox-gl";
 import styles from "./Map.module.css";
-import { MapboxFeature } from "../../types";
+import { Landmark, MapboxFeature } from "../../types";
+import convertToMapboxFeature from "../../helpers/convertToMapboxFeature";
 
 const Map = ({
   landmarks,
@@ -11,7 +12,7 @@ const Map = ({
   shouldZoom,
   setShouldZoom,
 }: {
-  landmarks: MapboxFeature[];
+  landmarks: Landmark[];
   selectedLocation: any;
   setSelectedLocation: Dispatch<SetStateAction<undefined>>;
   visitedLandmarks: string[];
@@ -22,7 +23,7 @@ const Map = ({
   const mapInstance = useRef(null);
 
   useEffect(() => {
-    if (mapboxgl && !mapInstance.current) {
+    if (mapboxgl && !mapInstance.current && landmarks) {
       mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_TOKEN;
 
       const map = new mapboxgl.Map({
@@ -40,7 +41,7 @@ const Map = ({
         // Convert landmarks to GeoJSON
         const geojson = {
           type: "FeatureCollection",
-          features: landmarks,
+          features: landmarks.map(landmark => convertToMapboxFeature(landmark)),
         };
 
         // Add landmarks as a source
@@ -111,7 +112,7 @@ const Map = ({
         mapInstance.current = null;
       }
     };
-  }, [setSelectedLocation]);
+  }, [setSelectedLocation, landmarks]);
 
   // EFFECT 2: Update colors when visitedLandmarks changes
   useEffect(() => {
