@@ -146,11 +146,8 @@ const Map = ({
 
   useEffect(() => {
     if (selectedLocation && shouldZoom) {
-      const found = landmarks.find(
-        (landmark) => landmark.properties.id === selectedLocation.id,
-      );
       (mapInstance?.current as any).flyTo({
-        center: found?.geometry.coordinates,
+        center: [selectedLocation?.location?.lon, selectedLocation?.location?.lat],
         essential: true, // this animation is considered essential with respect to prefers-reduced-motion
         zoom: 13,
       });
