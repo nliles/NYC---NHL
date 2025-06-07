@@ -30,23 +30,23 @@ const App = () => {
 
   useEffect(() => {
     const fetchLandmarks = async () => {
-        try {
-          const response = await getLandmarks();
-          setLandmarks(response.items as any);
-        } catch (error) {
-          console.error('Error fetching content:', error)
-          return []
-        }
-    }
-    
+      try {
+        const response = await getLandmarks();
+        setLandmarks(response.items as any);
+      } catch (error) {
+        console.error("Error fetching content:", error);
+        return [];
+      }
+    };
+
     fetchLandmarks();
-  }, [])
+  }, []);
 
   return (
     <>
       <NavBar count={visitedLandmarks.length} total={116} />
       <div className={styles.container}>
-        <LandmarkList handleClick={handleClick} landmarks={landmarks}/>
+        <LandmarkList handleClick={handleClick} landmarks={landmarks} />
         <Map
           landmarks={landmarks}
           selectedLocation={selectedLocation}

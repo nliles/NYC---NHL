@@ -41,7 +41,9 @@ const Map = ({
         // Convert landmarks to GeoJSON
         const geojson = {
           type: "FeatureCollection",
-          features: landmarks.map(landmark => convertToMapboxFeature(landmark)),
+          features: landmarks.map((landmark) =>
+            convertToMapboxFeature(landmark),
+          ),
         };
 
         // Add landmarks as a source
@@ -89,7 +91,7 @@ const Map = ({
         // Add popups on click
         map.on("click", "landmark-points", (e) => {
           const props = (e?.features?.[0] as any).properties;
-          console.log(props)
+          console.log(props);
           setSelectedLandmark({
             ...props,
             bullets: JSON.parse(props.bullets || "[]"),
@@ -148,7 +150,10 @@ const Map = ({
   useEffect(() => {
     if (selectedLocation && shouldZoom) {
       (mapInstance?.current as any).flyTo({
-        center: [selectedLocation?.location?.lon, selectedLocation?.location?.lat],
+        center: [
+          selectedLocation?.location?.lon,
+          selectedLocation?.location?.lat,
+        ],
         essential: true, // this animation is considered essential with respect to prefers-reduced-motion
         zoom: 13,
       });

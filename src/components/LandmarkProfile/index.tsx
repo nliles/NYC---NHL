@@ -18,14 +18,16 @@ const LandmarkProfile = ({
       setVisitedLandmarks([...visitedLandmarks, landmark.name]);
       saveToStorage([...visitedLandmarks, landmark.name]);
     } else {
-      const filtered = visitedLandmarks.filter((name: any) => name !== landmark.name);
+      const filtered = visitedLandmarks.filter(
+        (name: any) => name !== landmark.name,
+      );
       setVisitedLandmarks(filtered);
       saveToStorage(filtered);
     }
   };
 
-  console.log(landmark)
-  
+  console.log(landmark);
+
   return (
     <div className={styles.container}>
       <div className={styles.content}>
