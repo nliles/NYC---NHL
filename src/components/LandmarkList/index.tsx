@@ -44,7 +44,7 @@ const LandmarkList = ({
     } else {
       // Filter from the original landmarks array, not filteredLandmarks
       const filtered = filteredLandmarks.filter((landmark) =>
-        formatString(landmark.properties.name).includes(searchTerm),
+        formatString(landmark.fields.name).includes(searchTerm),
       );
       setFilteredLandmarks(filtered);
     }
