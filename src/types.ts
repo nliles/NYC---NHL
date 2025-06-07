@@ -34,9 +34,9 @@ export type MapboxFeature = {
     type: "Feature";
     geometry: {
       type: "Point";
-      coordinates: [number, number]; // [longitude, latitude]
+      coordinates: [number, number];
     };
     properties: {
-      [key: string]: any; // All your other data goes here
+      [key: string]: any;
     };
   }
