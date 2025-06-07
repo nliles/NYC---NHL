@@ -15,8 +15,10 @@ function convertToMapboxFeature(landmark: Landmark): MapboxFeature {
         borough: landmark.fields.borough,
         bullets: landmark.fields.bullets,
         moreInfoUrl: landmark.fields.moreInfoUrl,
-        image: landmark.fields.image,
-        image_url: landmark.fields.image_url
+        image: landmark.fields.image?.fields?.file?.url,
+        image_url: landmark.fields.image_url,
+        quote: landmark.fields.quote,
+        quoteAuthor: landmark.fields.quoteAuthor,
       }
     };
   }

@@ -7,14 +7,14 @@ import convertToMapboxFeature from "../../helpers/convertToMapboxFeature";
 const Map = ({
   landmarks,
   selectedLocation,
-  setSelectedLocation,
+  setSelectedLandmark,
   visitedLandmarks,
   shouldZoom,
   setShouldZoom,
 }: {
   landmarks: Landmark[];
   selectedLocation: any;
-  setSelectedLocation: Dispatch<SetStateAction<undefined>>;
+  setSelectedLandmark: Dispatch<SetStateAction<undefined>>;
   visitedLandmarks: string[];
   shouldZoom?: boolean;
   setShouldZoom?: (value: boolean) => void;
@@ -89,7 +89,8 @@ const Map = ({
         // Add popups on click
         map.on("click", "landmark-points", (e) => {
           const props = (e?.features?.[0] as any).properties;
-          setSelectedLocation({
+          console.log(props)
+          setSelectedLandmark({
             ...props,
             bullets: JSON.parse(props.bullets || "[]"),
           });
@@ -112,7 +113,7 @@ const Map = ({
         mapInstance.current = null;
       }
     };
-  }, [setSelectedLocation, landmarks]);
+  }, [setSelectedLandmark, landmarks]);
 
   // EFFECT 2: Update colors when visitedLandmarks changes
   useEffect(() => {

@@ -23,6 +23,8 @@ const LandmarkProfile = ({
       saveToStorage(filtered);
     }
   };
+
+  console.log(landmark)
   
   return (
     <div className={styles.container}>
@@ -30,7 +32,7 @@ const LandmarkProfile = ({
         <div className={styles.info}>
           <h2 className={styles.header}>{landmark.name}</h2>
           <img
-            src={landmark?.image?.fields?.file?.url} // Update this path to your actual image path
+            src={landmark?.image}
             alt={landmark.name}
             className={styles.img}
           />
@@ -58,7 +60,7 @@ const LandmarkProfile = ({
             <blockquote className={styles.quoteBlock}>
               <p className={styles.quoteText}>&ldquo;{landmark.quote}&rdquo;</p>
               <p className={styles.quoteAttribution}>
-                — {landmark.quote_author}
+                — {landmark.quoteAuthor}
               </p>
             </blockquote>
           )}

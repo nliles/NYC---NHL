@@ -20,7 +20,11 @@ const App = () => {
   );
 
   const handleClick = (item: any) => {
-    setSelectedLocation(item.fields);
+    console.log('here', item)
+    setSelectedLocation({
+      ...item.fields,
+      image: item.fields.image.fields.file.url,
+    });
     setShouldZoom(true);
   };
 
@@ -46,7 +50,7 @@ const App = () => {
         <Map
           landmarks={landmarks}
           selectedLocation={selectedLocation}
-          setSelectedLocation={setSelectedLocation}
+          setSelectedLandmark={setSelectedLocation}
           visitedLandmarks={visitedLandmarks}
           shouldZoom={shouldZoom}
           setShouldZoom={setShouldZoom}

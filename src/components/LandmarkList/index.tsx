@@ -9,7 +9,7 @@ const LandmarkList = ({
   handleClick,
 }: {
   landmarks: Landmark[];
-  handleClick: (landmark: any) => void;
+  handleClick: (landmark: Landmark) => void;
 }) => {
   const [filteredLandmarks, setFilteredLandmarks] = useState(landmarks);
   const [selectedBorough, setSelectedBorough] = useState('All');
@@ -82,7 +82,7 @@ const LandmarkList = ({
       </div>
       <div className={styles.resultsCount} aria-label="results-count" id="resultsCount">{filterCopy}</div>
       <div className={styles.landmarksList}>
-        {filteredLandmarks.map((landmark: any) => (
+        {filteredLandmarks.map((landmark: Landmark) => (
           <button
             className={styles.item}
             onClick={() => handleClick(landmark)}
@@ -90,7 +90,7 @@ const LandmarkList = ({
           >
             <p className={styles.name}>{landmark.fields.name}</p>
             <div className={styles.landmarkDetails}>
-              {landmark.fields.borough.split(",").map((borough: any) => (
+              {landmark.fields.borough.split(",").map((borough: string) => (
                 <span className={styles.borough}>{borough}</span>
               ))}
             </div>

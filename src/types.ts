@@ -21,7 +21,9 @@ type Fields = {
     bullets: Bullet[];
     moreInfoUrl: string;
     image: Image;
-    image_url: string;    
+    image_url: string;  
+    quote?: string;
+    quoteAuthor?: string;
 };
 
 export type Landmark = {
