@@ -12,7 +12,7 @@ import { getLandmarks } from "./services/contentful";
 import { Landmark } from "./types";
 
 const App = () => {
-  const [landmarks, setSelectedLandmarks] = useState<Landmark[]>([]);
+  const [landmarks, setLandmarks] = useState<Landmark[]>([]);
   const [selectedLocation, setSelectedLocation] = useState();
   const [shouldZoom, setShouldZoom] = useState(false);
   const [visitedLandmarks, setVisitedLandmarks] = useState(() =>
@@ -32,7 +32,7 @@ const App = () => {
     const fetchLandmarks = async () => {
         try {
           const response = await getLandmarks();
-          setSelectedLandmarks(response.items as any);
+          setLandmarks(response.items as any);
         } catch (error) {
           console.error('Error fetching content:', error)
           return []

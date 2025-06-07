@@ -59,7 +59,7 @@ const Map = ({
             "circle-radius": 8,
             "circle-color": [
               "case",
-              ["in", ["get", "id"], ["literal", visitedLandmarks || []]],
+              ["in", ["get", "name"], ["literal", visitedLandmarks || []]],
               "#2F4F4F", // visited
               "#C0C0C0", // not visited
             ],
@@ -127,7 +127,7 @@ const Map = ({
         "circle-color",
         [
           "case",
-          ["in", ["get", "id"], ["literal", visitedLandmarks || []]],
+          ["in", ["get", "name"], ["literal", visitedLandmarks || []]],
           "#2F4F4F", // visited
           "#C0C0C0", // not visited
         ],
@@ -137,7 +137,7 @@ const Map = ({
         "circle-stroke-color",
         [
           "case",
-          ["==", ["get", "id"], selectedLocation?.id || null],
+          ["==", ["get", "name"], selectedLocation?.name || null],
           "#d4924a", // Highlighted outline for selected point
           "#f5f0e8", // Default cream outline
         ],
