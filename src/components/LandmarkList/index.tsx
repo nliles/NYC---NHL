@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import cn from "classnames";
 import styles from "./LandmarkList.module.css";
-import { Landmark } from "../../types/Landmark";
+import { Landmark } from "../../types";
 const boroughs = [
   "All",
   "Manhattan",
