@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import Portal from "./components/Portal";
 import SidePanel from "./components/SidePanel";
-import Map from "./screens/Map";
+import Map from "./components/Map";
 import LandmarkList from "./components/LandmarkList";
 import LandmarkProfile from "./components/LandmarkProfile";
 import { getLocalStorage } from "./helpers/localStorage";
