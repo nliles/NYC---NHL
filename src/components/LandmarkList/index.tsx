@@ -1,23 +1,41 @@
 import { useEffect, useRef, useState } from "react";
-import landmarks from "../../data.ts";
-import cn from 'classnames';
+import cn from "classnames";
 import styles from "./LandmarkList.module.css";
-
-const boroughs = ["All", "Manhattan", "Brooklyn", "Queens", "The Bronx", "Staten Island"];
+import { Landmark } from "../../types";
+const boroughs = [
+  "All",
+  "Manhattan",
+  "Brooklyn",
+  "Queens",
+  "The Bronx",
+  "Staten Island",
+];
 
 const LandmarkList = ({
+  landmarks,
   handleClick,
 }: {
-  handleClick: (landmark: any) => void;
+  landmarks: Landmark[];
+  handleClick: (landmark: Landmark) => void;
 }) => {
   const [filteredLandmarks, setFilteredLandmarks] = useState(landmarks);
-  const [selectedBorough, setSelectedBorough] = useState('All');
+  const [selectedBorough, setSelectedBorough] = useState("All");
   const inputRef = useRef<HTMLInputElement>(null);
 
-  const handleOnChange = () => {
-    const formatString = (str: string) => str.toLowerCase().replace(/[.,]/g, "").replace(/\s+/g, '');
+  useEffect(() => {
+    setFilteredLandmarks(landmarks);
+  }, [landmarks]);
 
-    let filteredLandmarks = selectedBorough === 'All' ? landmarks : landmarks.filter((landmark) => landmark.properties.borough.includes(selectedBorough || "")) || landmarks;
+  const handleOnChange = () => {
+    const formatString = (str: string) =>
+      str.toLowerCase().replace(/[.,]/g, "").replace(/\s+/g, "");
+
+    let filteredLandmarks =
+      selectedBorough === "All"
+        ? landmarks
+        : landmarks.filter((landmark) =>
+            landmark.fields.borough.includes(selectedBorough || ""),
+          ) || landmarks;
     const searchTerm = formatString(inputRef.current?.value || "");
 
     if (searchTerm === "") {
@@ -26,7 +44,7 @@ const LandmarkList = ({
     } else {
       // Filter from the original landmarks array, not filteredLandmarks
       const filtered = filteredLandmarks.filter((landmark) =>
-      formatString(landmark.properties.name).includes(searchTerm),
+        formatString(landmark.fields.name).includes(searchTerm),
       );
       setFilteredLandmarks(filtered);
     }
@@ -41,7 +59,10 @@ const LandmarkList = ({
     if (selectedBorough) handleOnChange();
   }, [selectedBorough]);
 
-  const filterCopy = landmarks.length === filteredLandmarks.length ? `Showing ${landmarks.length} landmarks` : `Showing ${filteredLandmarks.length} of ${landmarks.length} landmarks`
+  const filterCopy =
+    landmarks.length === filteredLandmarks.length
+      ? `Showing ${landmarks.length} landmarks`
+      : `Showing ${filteredLandmarks.length} of ${landmarks.length} landmarks`;
 
   return (
     <div className={styles.leftPanel}>
@@ -68,24 +89,35 @@ const LandmarkList = ({
           />
         </div>
         <div className={styles.boroughsContainer}>
-        {boroughs.map((borough) => (
-          <button className={cn(styles.boroughBtn, {
-            [styles.selected]: selectedBorough === borough,
-          })} onClick={() =>  setSelectedBorough(borough)}>{borough}</button>
-        ))}
+          {boroughs.map((borough) => (
+            <button
+              className={cn(styles.boroughBtn, {
+                [styles.selected]: selectedBorough === borough,
+              })}
+              onClick={() => setSelectedBorough(borough)}
+            >
+              {borough}
+            </button>
+          ))}
         </div>
       </div>
-      <div className={styles.resultsCount} aria-label="results-count" id="resultsCount">{filterCopy}</div>
+      <div
+        className={styles.resultsCount}
+        aria-label="results-count"
+        id="resultsCount"
+      >
+        {filterCopy}
+      </div>
       <div className={styles.landmarksList}>
-        {filteredLandmarks.map((landmark) => (
+        {filteredLandmarks.map((landmark: Landmark) => (
           <button
             className={styles.item}
             onClick={() => handleClick(landmark)}
-            key={landmark.properties.name}
+            key={landmark.fields.name}
           >
-            <p className={styles.name}>{landmark.properties.name}</p>
+            <p className={styles.name}>{landmark.fields.name}</p>
             <div className={styles.landmarkDetails}>
-              {landmark.properties.borough.split(",").map((borough) => (
+              {landmark.fields.borough.split(",").map((borough: string) => (
                 <span className={styles.borough}>{borough}</span>
               ))}
             </div>

@@ -1,15 +1,18 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import Portal from "./components/Portal";
 import SidePanel from "./components/SidePanel";
-import Map from "./screens/Map";
+import Map from "./components/Map";
 import LandmarkList from "./components/LandmarkList";
-import ParkProfile from "./components/LandmarkProfile";
+import LandmarkProfile from "./components/LandmarkProfile";
 import { getLocalStorage } from "./helpers/localStorage";
 import NavBar from "./components/NavBar";
 import styles from "./App.module.css";
+import { getLandmarks } from "./services/contentful";
+import { Landmark } from "./types";
 
 const App = () => {
+  const [landmarks, setLandmarks] = useState<Landmark[]>([]);
   const [selectedLocation, setSelectedLocation] = useState();
   const [shouldZoom, setShouldZoom] = useState(false);
   const [visitedLandmarks, setVisitedLandmarks] = useState(() =>
@@ -17,18 +20,37 @@ const App = () => {
   );
 
   const handleClick = (item: any) => {
-    setSelectedLocation(item.properties);
+    setSelectedLocation({
+      ...item.fields,
+      image: item.fields.image.fields.file.url,
+      imageDescription: item.fields.image.fields.description,
+    });
     setShouldZoom(true);
   };
+
+  useEffect(() => {
+    const fetchLandmarks = async () => {
+      try {
+        const response = await getLandmarks();
+        setLandmarks(response.items as any);
+      } catch (error) {
+        console.error("Error fetching content:", error);
+        return [];
+      }
+    };
+
+    fetchLandmarks();
+  }, []);
 
   return (
     <>
       <NavBar count={visitedLandmarks.length} total={116} />
       <div className={styles.container}>
-        <LandmarkList handleClick={handleClick} />
+        <LandmarkList handleClick={handleClick} landmarks={landmarks} />
         <Map
+          landmarks={landmarks}
           selectedLocation={selectedLocation}
-          setSelectedLocation={setSelectedLocation}
+          setSelectedLandmark={setSelectedLocation}
           visitedLandmarks={visitedLandmarks}
           shouldZoom={shouldZoom}
           setShouldZoom={setShouldZoom}
@@ -38,7 +60,7 @@ const App = () => {
         <Portal containerId="portal-root">
           {selectedLocation && (
             <SidePanel onClose={() => setSelectedLocation(undefined)}>
-              <ParkProfile
+              <LandmarkProfile
                 landmark={selectedLocation}
                 setVisitedLandmarks={setVisitedLandmarks}
                 visitedLandmarks={visitedLandmarks}
