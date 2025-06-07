@@ -20,10 +20,10 @@ const App = () => {
   );
 
   const handleClick = (item: any) => {
-    console.log('here', item)
     setSelectedLocation({
       ...item.fields,
       image: item.fields.image.fields.file.url,
+      imageDescription: item.fields.image.fields.description,
     });
     setShouldZoom(true);
   };

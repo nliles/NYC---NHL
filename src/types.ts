@@ -21,7 +21,7 @@ type Fields = {
     bullets: Bullet[];
     moreInfoUrl: string;
     image: Image;
-    image_url: string;  
+    imageUrl: string;  
     quote?: string;
     quoteAuthor?: string;
 };
