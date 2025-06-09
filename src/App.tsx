@@ -23,6 +23,7 @@ const App = () => {
     setSelectedLocation({
       ...item.fields,
       image: item.fields.image.fields.file.url,
+      imageTitle: item.fields.image.fields.title,
       imageDescription: item.fields.image.fields.description,
     });
     setShouldZoom(true);

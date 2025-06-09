@@ -14,7 +14,7 @@ function convertToMapboxFeature(landmark: Landmark): MapboxFeature {
       moreInfoUrl: landmark.fields.moreInfoUrl,
       image: landmark.fields.image?.fields?.file?.url,
       imageDescription: landmark.fields.image?.fields?.description,
-      imageUrl: landmark.fields.imageUrl,
+      imageTitle: landmark.fields.image?.fields?.title,
       quote: landmark.fields.quote,
       quoteAuthor: landmark.fields.quoteAuthor,
     },
