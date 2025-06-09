@@ -4,6 +4,7 @@ type Bullet = {
 
 type Image = {
   fields: {
+    title: string;
     description: string;
     file: {
       url: string;
@@ -21,7 +22,6 @@ type Fields = {
   bullets: Bullet[];
   moreInfoUrl: string;
   image: Image;
-  imageUrl: string;
   quote?: string;
   quoteAuthor?: string;
 };
