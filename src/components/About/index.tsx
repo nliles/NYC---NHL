@@ -29,12 +29,7 @@ const About = () => (
     <div className={styles.aboutSection}>
       <h3>About Me</h3>
       <p>
-        Hi, I'm <span className={styles.highlight}>Natalie</span>! I created
-        this interactive map to help people explore and discover the incredible
-        historic landmarks that make New York City such a unique place. Whether
-        you're a history buff, a tourist, or a longtime New Yorker, I hope this
-        tool helps you appreciate the remarkable heritage that surrounds us in
-        this amazing city.
+        Hi, I'm <span className={styles.highlight}>Natalie</span>!
       </p>
     </div>
   </div>
