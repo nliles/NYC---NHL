@@ -78,6 +78,7 @@
   flex: 1;
   overflow-y: auto;
   padding: 0;
+  margin: 0;
 }
 
 .item {
@@ -89,6 +90,10 @@
   padding: 0.5rem 1.5rem;
   width: 100%;
   border-bottom: 1px solid #f0f0f0;
+
+  &:focus {
+    outline-color: #2f4f4f;
+  }
 }
 
 .item:focus,
