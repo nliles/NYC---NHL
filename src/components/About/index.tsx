@@ -64,7 +64,7 @@ const About = () => (
         Hi, I'm Natalie, a front-end developer in the greater NYC area with a
         love of technology, travel, and the great outdoors.
       </p>
-      <a href="https://www.linkedin.com/in/nliles/">Connect with me</a>
+      <a href="https://www.linkedin.com/in/nliles/" target="_blank" rel="noopener noreferrer">Connect with me</a>
     </section>
   </div>
 );
