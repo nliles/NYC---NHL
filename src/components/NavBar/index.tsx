@@ -1,6 +1,7 @@
 import { useState } from "react";
 import SidePanel from "../SidePanel";
 import styles from "./NavBar.module.css";
+import About from "../About";
 
 const NavBar = ({ count, total }: { count: number; total: number }) => {
   const [showAbout, setShowAbout] = useState(false);
@@ -21,7 +22,11 @@ const NavBar = ({ count, total }: { count: number; total: number }) => {
           </div>
         </div>
       </nav>
-      {showAbout && <SidePanel onClose={toggleAbout}>ADD CONTENT</SidePanel>}
+      {showAbout && (
+        <SidePanel onClose={toggleAbout}>
+          <About />
+        </SidePanel>
+      )}
     </>
   );
 };
