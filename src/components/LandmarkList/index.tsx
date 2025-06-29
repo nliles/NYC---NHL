@@ -108,22 +108,24 @@ const LandmarkList = ({
       >
         {filterCopy}
       </div>
-      <div className={styles.landmarksList}>
+      <ul className={styles.landmarksList}>
         {filteredLandmarks.map((landmark: Landmark) => (
-          <button
-            className={styles.item}
-            onClick={() => handleClick(landmark)}
-            key={landmark.fields.name}
-          >
-            <p className={styles.name}>{landmark.fields.name}</p>
-            <div className={styles.landmarkDetails}>
-              {landmark.fields.borough.split(",").map((borough: string) => (
-                <span className={styles.borough}>{borough}</span>
-              ))}
-            </div>
-          </button>
+          <li>
+            <button
+              className={styles.item}
+              onClick={() => handleClick(landmark)}
+              key={landmark.fields.name}
+            >
+              <p className={styles.name}>{landmark.fields.name}</p>
+              <div className={styles.landmarkDetails}>
+                {landmark.fields.borough.split(",").map((borough: string) => (
+                  <span className={styles.borough}>{borough}</span>
+                ))}
+              </div>
+            </button>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 };
