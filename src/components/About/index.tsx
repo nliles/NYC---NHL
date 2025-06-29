@@ -3,7 +3,7 @@ import styles from "./About.module.css";
 const About = () => (
   <div className={styles.container}>
     <div className={styles.aboutSection}>
-      <h3>National Historic Landmarks in NYC</h3>
+      <h2>National Historic Landmarks in NYC</h2>
       <p>
         <a href="https://www.nps.gov/orgs/1582/index.htm" target="_blank">
           National Historic Landmarks (NHLs)
@@ -20,22 +20,14 @@ const About = () => (
         <span className={styles.highlight}>
           116 National Historic Landmarks
         </span>
-        , more than any other city in the United States. These landmarks
-        represent the rich tapestry of American history, from colonial
-        settlements and revolutionary battlegrounds to architectural marvels and
-        cultural institutions that shaped the nation.
-      </p>
-
-      <p>
-        Many of these locations also carry additional designations such as
-        National Monuments, National Historic Sites, entries on the National
-        Register of Historic Places, or New York City Landmarks. This layered
-        recognition reflects their extraordinary importance to both local and
-        national heritage.
+        , more than any other city in the United States. Many of these locations
+        also carry additional designations such as National Monuments, National
+        Historic Sites, entries on the National Register of Historic Places, or
+        New York City Landmarks.
       </p>
     </div>
     <div className={styles.aboutSection}>
-      <h3>About the Creator</h3>
+      <h3>About Me</h3>
       <p>
         Hi, I'm <span className={styles.highlight}>Natalie</span>! I created
         this interactive map to help people explore and discover the incredible

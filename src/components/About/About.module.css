@@ -7,11 +7,9 @@
   margin-bottom: 24px;
 }
 
-.aboutSection h3 {
-  font-size: 18px;
-  font-weight: 600;
-  color: #333;
+.aboutSection h2 {
   margin-bottom: 12px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .aboutSection p {
