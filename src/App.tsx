@@ -9,11 +9,13 @@ import { getLocalStorage } from "./helpers/localStorage";
 import NavBar from "./components/NavBar";
 import styles from "./App.module.css";
 import { getLandmarks } from "./services/contentful";
+import About from "./components/About";
 import { Landmark } from "./types";
 
 const App = () => {
   const [landmarks, setLandmarks] = useState<Landmark[]>([]);
   const [selectedLocation, setSelectedLocation] = useState();
+  const [showAbout, setShowAbout] = useState(false);
   const [shouldZoom, setShouldZoom] = useState(false);
   const [visitedLandmarks, setVisitedLandmarks] = useState(() =>
     getLocalStorage(),
@@ -43,9 +45,18 @@ const App = () => {
     fetchLandmarks();
   }, []);
 
+  const handleClose = () => {
+    setSelectedLocation(undefined);
+    setShowAbout(false);
+  };
+
   return (
     <>
-      <NavBar count={visitedLandmarks.length} total={116} />
+      <NavBar
+        count={visitedLandmarks.length}
+        total={116}
+        toggleAbout={() => setShowAbout(true)}
+      />
       <div className={styles.container}>
         <LandmarkList handleClick={handleClick} landmarks={landmarks} />
         <Map
@@ -59,13 +70,17 @@ const App = () => {
       </div>
       <div>
         <Portal containerId="portal-root">
-          {selectedLocation && (
-            <SidePanel onClose={() => setSelectedLocation(undefined)}>
-              <LandmarkProfile
-                landmark={selectedLocation}
-                setVisitedLandmarks={setVisitedLandmarks}
-                visitedLandmarks={visitedLandmarks}
-              />
+          {(selectedLocation || showAbout) && (
+            <SidePanel onClose={handleClose}>
+              {selectedLocation ? (
+                <LandmarkProfile
+                  landmark={selectedLocation}
+                  setVisitedLandmarks={setVisitedLandmarks}
+                  visitedLandmarks={visitedLandmarks}
+                />
+              ) : (
+                <About />
+              )}
             </SidePanel>
           )}
         </Portal>
