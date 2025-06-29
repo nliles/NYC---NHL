@@ -30,40 +30,46 @@ const LandmarkProfile = ({
     <div className={styles.container}>
       <div className={styles.content}>
         <div className={styles.info}>
-          <h2 className={styles.header}>{landmark.name}</h2>
-          <img
-            src={landmark?.image}
-            alt={landmark.name}
-            className={styles.img}
-          />
-          {landmark?.imageTitle && landmark?.imageDescription && (
-            <a
-              className={styles.caption}
-              href={landmark.imageDescription}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {landmark.imageTitle}
-            </a>
-          )}
-          {landmark?.bullets && (
-            <ul className={styles.bulletList}>
-              {landmark.bullets.map((item: any, index: number) => (
-                <li key={index} className={styles.bulletItem}>
-                  <p className={styles.key}>{item.key}</p>
-                  <p className={styles.value}>{item.value}</p>
-                </li>
-              ))}
-            </ul>
-          )}
-          {landmark.quote && (
-            <blockquote className={styles.quoteBlock}>
-              <p className={styles.quoteText}>&ldquo;{landmark.quote}&rdquo;</p>
-              <p className={styles.quoteAttribution}>
-                — {landmark.quoteAuthor}
-              </p>
-            </blockquote>
-          )}
+          <div className={styles.fixedHeader}>
+            <h2 className={styles.header}>{landmark.name}</h2>
+          </div>
+          <div className={styles.scrollableContent}>
+            <img
+              src={landmark?.image}
+              alt={landmark.name}
+              className={styles.img}
+            />
+            {landmark?.imageTitle && landmark?.imageDescription && (
+              <a
+                className={styles.caption}
+                href={landmark.imageDescription}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {landmark.imageTitle}
+              </a>
+            )}
+            {landmark?.bullets && (
+              <ul className={styles.bulletList}>
+                {landmark.bullets.map((item: any, index: number) => (
+                  <li key={index} className={styles.bulletItem}>
+                    <p className={styles.key}>{item.key}</p>
+                    <p className={styles.value}>{item.value}</p>
+                  </li>
+                ))}
+              </ul>
+            )}
+            {landmark.quote && (
+              <blockquote className={styles.quoteBlock}>
+                <p className={styles.quoteText}>
+                  &ldquo;{landmark.quote}&rdquo;
+                </p>
+                <p className={styles.quoteAttribution}>
+                  — {landmark.quoteAuthor}
+                </p>
+              </blockquote>
+            )}
+          </div>
         </div>
       </div>
       <div className={styles.learnMore}>
