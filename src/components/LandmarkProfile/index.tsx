@@ -32,6 +32,8 @@ const LandmarkProfile = ({
         <div className={styles.info}>
         <div className={styles.fixedHeader}>
           <h2 className={styles.header}>{landmark.name}</h2>
+        </div>
+        <div className={styles.scrollableContent}>
           <img
             src={landmark?.image}
             alt={landmark.name}
@@ -47,8 +49,6 @@ const LandmarkProfile = ({
               {landmark.imageTitle}
             </a>
           )}
-        </div>
-        <div className={styles.scrollableContent}>
           {landmark?.bullets && (
             <ul className={styles.bulletList}>
               {landmark.bullets.map((item: any, index: number) => (
