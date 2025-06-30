@@ -1,12 +1,20 @@
 import styles from "./About.module.css";
 
 const technologies = [
-    { key: "Frontend", value: "React (Vite)", url: "https://vite.dev/" },
-    { key: "Mapping", value: "Mapbox", url: "https://www.mapbox.com/" },
-    { key: "Content Management", value: "Contentful", url: "https://www.contentful.com/" },
-    { key: "Data Storage", value: "Local Storage", url: "https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage" },
-    { key: "Deployment", value: "Netlify", url: "https://www.netlify.com/" },
-]
+  { key: "Frontend", value: "React (Vite)", url: "https://vite.dev/" },
+  { key: "Mapping", value: "Mapbox", url: "https://www.mapbox.com/" },
+  {
+    key: "Content Management",
+    value: "Contentful",
+    url: "https://www.contentful.com/",
+  },
+  {
+    key: "Data Storage",
+    value: "Local Storage",
+    url: "https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage",
+  },
+  { key: "Deployment", value: "Netlify", url: "https://www.netlify.com/" },
+];
 
 const About = () => (
   <div className={styles.container}>
@@ -38,17 +46,13 @@ const About = () => (
     <section className={styles.aboutSection}>
       <h3>Technology Used</h3>
       <ul>
-        {technologies.map(tech => (
-            <li key={tech.key} className={styles.techItem}>
-                <span className={styles.highlight}>{tech.key}</span>:{" "}
-                <a
-                href={tech.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                >
-                {tech.value}
-                </a>
-            </li>
+        {technologies.map((tech) => (
+          <li key={tech.key} className={styles.techItem}>
+            <span className={styles.highlight}>{tech.key}</span>:{" "}
+            <a href={tech.url} target="_blank" rel="noopener noreferrer">
+              {tech.value}
+            </a>
+          </li>
         ))}
       </ul>
       <a href="https://www.linkedin.com/in/nliles/">Connect with me</a>
@@ -59,7 +63,13 @@ const About = () => (
         Hi, I'm Natalie, a front-end developer in the greater NYC area with a
         love of technology, travel, and the great outdoors.
       </p>
-      <a href="https://www.linkedin.com/in/nliles/" target="_blank" rel="noopener noreferrer">Connect with me</a>
+      <a
+        href="https://www.linkedin.com/in/nliles/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Connect with me
+      </a>
     </section>
   </div>
 );
