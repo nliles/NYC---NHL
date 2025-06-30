@@ -19,8 +19,8 @@ const technologies = [
 
 const About = () => (
   <div className={styles.container}>
-    <div>
       <h2 className={styles.fixedHeader}>About</h2>
+      <div className={styles.scrollableContent}>
       <section className={styles.aboutSection}>
         <h3>The Project</h3>
         <p>
@@ -46,7 +46,6 @@ const About = () => (
           their history, and keep track of the landmarks you've discovered.
         </p>
       </section>
-    </div>
     <section className={styles.aboutSection}>
       <h3>Technology Used</h3>
       <ul>
@@ -76,6 +75,7 @@ const About = () => (
         Connect with me
       </a>
     </section>
+    </div>
   </div>
 );
 
