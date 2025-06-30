@@ -1,3 +1,4 @@
+import { FaLinkedin } from "react-icons/fa";
 import styles from "./About.module.css";
 
 const technologies = [
@@ -55,7 +56,6 @@ const About = () => (
           </li>
         ))}
       </ul>
-      <a href="https://www.linkedin.com/in/nliles/">Connect with me</a>
     </section>
     <section className={styles.aboutSection}>
       <h3>About Me</h3>
@@ -65,9 +65,11 @@ const About = () => (
       </p>
       <a
         href="https://www.linkedin.com/in/nliles/"
+        className={styles.connectLink}
         target="_blank"
         rel="noopener noreferrer"
       >
+        <FaLinkedin className={styles.icon} width={30} height={30} />
         Connect with me
       </a>
     </section>

@@ -57,3 +57,13 @@ h3 {
 .techItem {
   padding-bottom: 0.5rem;
 }
+
+.connectLink {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+
+  svg {
+    margin-right: 0.2rem;
+  }
+}
