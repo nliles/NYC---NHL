@@ -1,5 +1,13 @@
 import styles from "./About.module.css";
 
+const technologies = [
+    { key: "Frontend", value: "React (Vite)", url: "https://vite.dev/" },
+    { key: "Mapping", value: "Mapbox", url: "https://www.mapbox.com/" },
+    { key: "Content Management", value: "Contentful", url: "https://www.contentful.com/" },
+    { key: "Data Storage", value: "Local Storage", url: "https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage" },
+    { key: "Deployment", value: "Netlify", url: "https://www.netlify.com/" },
+]
+
 const About = () => (
   <div className={styles.container}>
     <div>
@@ -30,31 +38,18 @@ const About = () => (
     <section className={styles.aboutSection}>
       <h3>Technology Used</h3>
       <ul>
-        <li>
-          <span className={styles.highlight}>Frontend</span>: React (Vite)
-        </li>
-        <li>
-          <span className={styles.highlight}>Mapping</span>:{" "}
-          <a
-            href="https://www.mapbox.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Mapbox
-          </a>
-        </li>
-        <li>
-          <span className={styles.highlight}>Content Management</span>:{" "}
-          <a
-            href="https://www.contentful.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Contentful
-          </a>
-        </li>
-        <li>Data Storage: Local Storage</li>
-        <li>Deployment: Netlify</li>
+        {technologies.map(tech => (
+            <li key={tech.key} className={styles.techItem}>
+                <span className={styles.highlight}>{tech.key}</span>:{" "}
+                <a
+                href={tech.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                >
+                {tech.value}
+                </a>
+            </li>
+        ))}
       </ul>
       <a href="https://www.linkedin.com/in/nliles/">Connect with me</a>
     </section>
