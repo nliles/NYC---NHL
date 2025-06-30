@@ -16,7 +16,7 @@ const NavBar = ({
           <h1 className={styles.title}>National Historic Landmarks of NYC</h1>
           <div className={styles.rightContent}>
             <div className={styles.progress}>
-              <img src="progress.svg" />
+              <img src="progress2.svg" width="45px" height="auto" />
               <span>{`${count} out of ${total}`}</span>
             </div>
             <button className={styles.buttonLink} onClick={toggleAbout}>
