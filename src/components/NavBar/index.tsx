@@ -1,4 +1,4 @@
-import styles from "./NavBar.module.css";
+import styles from "./NavBar.module.scss";
 import cn from "classnames";
 
 const Progress = ({
