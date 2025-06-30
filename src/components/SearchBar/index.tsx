@@ -1,11 +1,9 @@
 import { useRef } from "react";
 import styles from "./SearchBar.module.scss";
-import { Landmark } from "../../types";
 
 const SearchBar = ({
   onChange,
 }: {
-  landmarks: Landmark[];
   onChange: (inputValue: string) => void;
 }) => {
   const inputRef = useRef<HTMLInputElement>(null);
