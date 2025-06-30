@@ -30,50 +30,6 @@
   margin-bottom: 15px;
 }
 
-.searchContainer {
-  position: relative;
-  width: 100%;
-}
-
-.searchInput {
-  box-sizing: border-box;
-  width: 100%;
-  padding: 10px 40px 10px 12px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  font-size: 14px;
-  outline: none;
-}
-
-.searchInput:focus {
-  border-color: gray;
-  box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.1);
-}
-
-.clearIcon {
-  all: unset;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 15px;
-  height: 15px;
-  border: 1px solid black;
-  border-radius: 50%;
-  position: absolute;
-  right: 45px; /* Position between text and search icon */
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-}
-
-/* Update search icon position */
-.searchIcon {
-  position: absolute;
-  right: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
 .landmarksList {
   flex: 1;
   overflow-y: auto;

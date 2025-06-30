@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import cn from "classnames";
 import styles from "./LandmarkList.module.scss";
 import { Landmark } from "../../types";
+import SearchBar from "../SearchBar";
 const boroughs = [
   "All",
   "Manhattan",
@@ -20,13 +21,14 @@ const LandmarkList = ({
 }) => {
   const [filteredLandmarks, setFilteredLandmarks] = useState(landmarks);
   const [selectedBorough, setSelectedBorough] = useState("All");
-  const inputRef = useRef<HTMLInputElement>(null);
+  const [inputValue, setInputValue] = useState("");
 
   useEffect(() => {
     setFilteredLandmarks(landmarks);
   }, [landmarks]);
 
-  const handleOnChange = () => {
+  const handleOnChange = (inputValue: string) => {
+    setInputValue(inputValue);
     const formatString = (str: string) =>
       str.toLowerCase().replace(/[.,]/g, "").replace(/\s+/g, "");
 
@@ -36,7 +38,7 @@ const LandmarkList = ({
         : landmarks.filter((landmark) =>
             landmark.fields.borough.includes(selectedBorough || ""),
           ) || landmarks;
-    const searchTerm = formatString(inputRef.current?.value || "");
+    const searchTerm = formatString(inputValue || "");
 
     if (searchTerm === "") {
       // If search is empty, show all landmarks
@@ -50,13 +52,8 @@ const LandmarkList = ({
     }
   };
 
-  const handleClearSearch = () => {
-    inputRef.current!.value = "";
-    handleOnChange();
-  };
-
   useEffect(() => {
-    if (selectedBorough) handleOnChange();
+    if (selectedBorough) handleOnChange(inputValue);
   }, [selectedBorough]);
 
   const filterCopy =
@@ -67,27 +64,7 @@ const LandmarkList = ({
   return (
     <div className={styles.leftPanel}>
       <div className={styles.panelHeader}>
-        <div className={styles.searchContainer}>
-          <input
-            type="text"
-            className={styles.searchInput}
-            placeholder="Search landmarks..."
-            ref={inputRef}
-            onChange={handleOnChange}
-          />
-          {inputRef.current?.value && (
-            <button onClick={handleClearSearch} className={styles.clearIcon}>
-              <img src="close.png" alt="Clear search" width={10} height={10} />
-            </button>
-          )}
-          <img
-            className={styles.searchIcon}
-            src="search.png"
-            alt="Search"
-            width={30}
-            height={30}
-          />
-        </div>
+        <SearchBar onChange={handleOnChange} />
         <div className={styles.boroughsContainer}>
           {boroughs.map((borough) => (
             <button
