@@ -64,7 +64,7 @@ const About = () => (
       <h3>About Me</h3>
       <p>
         Hi, I'm Natalie, a front-end developer in the greater NYC area with a
-        love of technology, travel, and the great outdoors.
+        love of technology, travel, and urban exploration.
       </p>
       <a
         href="https://www.linkedin.com/in/nliles/"
