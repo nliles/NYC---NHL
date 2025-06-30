@@ -40,12 +40,11 @@
 
 .aboutContent {
   @media (max-width: 768px) {
-      margin: 10px;
-      padding: 24px;
-      max-height: 90vh;
+    margin: 10px;
+    padding: 24px;
+    max-height: 90vh;
   }
 }
-
 
 .rightContent {
   display: flex;
@@ -66,12 +65,10 @@
   }
 
   &.desktop {
-
     @media (max-width: 500px) {
       display: none;
     }
   }
-
 }
 
 .leftContent {
