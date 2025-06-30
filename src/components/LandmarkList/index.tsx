@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import cn from "classnames";
-import styles from "./LandmarkList.module.css";
+import styles from "./LandmarkList.module.scss";
 import { Landmark } from "../../types";
 const boroughs = [
   "All",

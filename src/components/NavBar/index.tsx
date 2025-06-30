@@ -11,7 +11,7 @@ const Progress = ({
   className?: string;
 }) => (
   <div className={cn(styles.progress, className)}>
-    <img src="progress2.svg" width="45px" height="auto" />
+    <img src="progress.svg" width="45px" height="auto" />
     <span>{`${count} out of ${total}`}</span>
   </div>
 );

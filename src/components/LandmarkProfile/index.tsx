@@ -1,5 +1,5 @@
 import { saveToStorage } from "../../helpers/localStorage";
-import styles from "./LandmarkProfile.module.css";
+import styles from "./LandmarkProfile.module.scss";
 
 const LandmarkProfile = ({
   landmark,

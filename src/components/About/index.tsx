@@ -1,5 +1,5 @@
 import { FaLinkedin } from "react-icons/fa";
-import styles from "./About.module.css";
+import styles from "./About.module.scss";
 
 const technologies = [
   { key: "Frontend", value: "React (Vite)", url: "https://vite.dev/" },

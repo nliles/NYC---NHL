@@ -114,22 +114,22 @@
   padding: 1rem 0;
   background-color: #c7b9a0;
   width: 100%;
-}
 
-.learnMore a {
-  display: flex;
-  align-items: center;
-  margin-right: 1rem;
-  color: black;
-}
+  a {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+    color: black;
 
-.learnMore a:hover {
-  color: black;
-  text-decoration: underline;
-}
+    &:hover {
+      color: black;
+      text-decoration: underline;
+    }
 
-.learnMore a img {
-  padding-left: 5px;
+    img {
+      padding-left: 5px;
+    }
+  }
 }
 
 .checkbox {
@@ -215,10 +215,10 @@
   align-items: flex-start;
   padding: 12px 0;
   margin: 0;
-}
 
-.bulletItem:last-child {
-  border-bottom: none;
+  &:last-child {
+    border-bottom: none;
+  }
 }
 
 .key {
