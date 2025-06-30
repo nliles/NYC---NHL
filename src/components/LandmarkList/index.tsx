@@ -98,7 +98,9 @@ const LandmarkList = ({
               <p className={styles.name}>{landmark.fields.name}</p>
               <div className={styles.landmarkDetails}>
                 {landmark.fields.borough.split(",").map((borough: string) => (
-                  <span key={borough} className={styles.borough}>{borough}</span>
+                  <span key={borough} className={styles.borough}>
+                    {borough}
+                  </span>
                 ))}
               </div>
             </button>
@@ -110,12 +112,8 @@ const LandmarkList = ({
 
   return (
     <>
-      <div className={styles.leftPanel}>
-        {getListPanel()}
-      </div>
-      <MobileDrawer>
-        {getListPanel()}
-      </MobileDrawer>
+      <div className={styles.leftPanel}>{getListPanel()}</div>
+      <MobileDrawer>{getListPanel()}</MobileDrawer>
     </>
   );
 };

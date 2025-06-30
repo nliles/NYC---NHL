@@ -1,8 +1,8 @@
 // MobileDrawer.jsx
-import React, { useState } from 'react';
-import { useSwipeable } from 'react-swipeable';
-import styles from './MobileDrawer.module.scss';
-import cn from 'classnames';
+import React, { useState } from "react";
+import { useSwipeable } from "react-swipeable";
+import styles from "./MobileDrawer.module.scss";
+import cn from "classnames";
 
 const MobileDrawer = ({ children }: { children: React.ReactNode }) => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -28,10 +28,7 @@ const MobileDrawer = ({ children }: { children: React.ReactNode }) => {
       })}
     >
       {/* Handle/Header */}
-      <div
-        onClick={handleHeaderClick}
-        className={styles.handle}
-      >
+      <div onClick={handleHeaderClick} className={styles.handle}>
         <div className={styles.handleBtn} />
       </div>
 
