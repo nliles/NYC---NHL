@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { useSwipeable } from 'react-swipeable';
 import styles from './MobileDrawer.module.scss';
-import cn from 'classnames'; // You'll need this for conditional classes
+import cn from 'classnames';
 
 const MobileDrawer = ({ children }: { children: React.ReactNode }) => {
   const [isExpanded, setIsExpanded] = useState(false);

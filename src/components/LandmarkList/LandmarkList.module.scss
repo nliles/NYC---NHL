@@ -17,10 +17,19 @@
   }
 }
 
+/* New container for proper flex layout */
+.listContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+}
+
 .panelHeader {
   padding: 20px;
   padding-bottom: 0;
   border-bottom: 1px solid #e0e0e0;
+  flex-shrink: 0;
 }
 
 .panelTitle {
@@ -74,8 +83,7 @@
   margin: 5px 0 10px 0;
 }
 
-.borough,
-.boroughBtn {
+.borough, .boroughBtn {
   background: #2f4f4f;
   color: white;
   padding: 2px 6px;
