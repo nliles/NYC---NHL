@@ -35,11 +35,11 @@ h3 {
 }
 
 .aboutSection a {
-  color: #2f4f4f;
+  color: #5a7a7a;
 }
 
 .aboutSection a:hover {
-  color: #1a2f2f;
+  color: #2f4f4f;
 }
 
 .aboutSection p:last-child {
