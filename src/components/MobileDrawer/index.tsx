@@ -12,7 +12,6 @@ const MobileDrawer = ({ children }: { children: React.ReactNode }) => {
     onSwipedDown: () => setIsExpanded(false),
     trackMouse: true,
     delta: 30,
-    preventDefaultTouchmoveEvent: false,
     trackTouch: true,
   });
 
