@@ -16,7 +16,7 @@
   font-size: 1.6rem;
   margin: 0;
   padding: 0.7rem;
-  text-align: center;
+  text-align: left;
   align-self: center;
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
@@ -29,6 +29,18 @@
   justify-content: space-between;
 }
 
+@media (max-width: 768px) {
+  .aboutContent {
+    margin: 10px;
+    padding: 24px;
+    max-height: 90vh;
+  }
+
+  .content {
+    margin: 0;
+  }
+}
+
 .rightContent {
   display: flex;
   margin-right: 1rem;
@@ -38,6 +50,33 @@
   display: flex;
   align-items: center;
   margin-right: 1rem;
+}
+
+.progress.mobile {
+  padding-left: 0.5rem;
+}
+
+@media (max-width: 500px) {
+  .progress.desktop {
+    display: none
+  }
+
+  .title {
+    margin: 0;
+    padding-bottom: 0;
+  }
+
+  .leftContent {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+}
+
+@media (min-width: 500px) {
+  .progress.mobile {
+    display: none
+  }
 }
 
 .buttonLink {
