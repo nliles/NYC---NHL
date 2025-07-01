@@ -19,7 +19,9 @@ const technologies = [
 
 const About = () => (
   <div className={styles.container}>
-      <h2 className={styles.fixedHeader}>About</h2>
+      <div className={styles.fixedHeader}>
+        <h2 className={styles.header}>About</h2>
+      </div>
       <div className={styles.scrollableContent}>
       <section className={styles.aboutSection}>
         <h3>The Project</h3>
@@ -37,7 +39,7 @@ const About = () => (
         </p>
         <p>
           New York City boasts 116 National Historic Landmarks, more than any
-          other city in the United States. These landmarks illustrate 10,000
+          other city in the United States. These landmarks illustrate over 8,000
           years of history, from Ward's Point's ancient burial grounds to
           Stonewall Inn's modern civil rights legacy.
         </p>

@@ -5,6 +5,15 @@
   font-family: "Roboto", sans-serif;
 }
 
+/* Fixed header and image section */
+.fixedHeader {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
 .header {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
@@ -27,15 +36,6 @@
   flex-direction: column;
   overflow: hidden;
   min-height: 0;
-}
-
-/* Fixed header and image section */
-.fixedHeader {
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
 }
 
 /* Scrollable content section */
