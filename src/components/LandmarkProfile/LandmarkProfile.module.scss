@@ -141,12 +141,8 @@
   }
 }
 
-.checkbox {
-  display: none;
-}
-
 /* Hide the native checkbox */
-.native-checkbox {
+.checkbox , .native-checkbox {
   display: none;
 }
 
@@ -165,6 +161,7 @@
   margin-right: 8px;
   display: inline-block;
   position: relative;
+  background: white;
 }
 
 /* Checked state styling */
