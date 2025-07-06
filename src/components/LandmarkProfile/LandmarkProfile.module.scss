@@ -125,11 +125,17 @@
     font-weight: 500;
     font-size: 14px;
     transition: background-color 0.2s;
+    border: 2px solid transparent;
 
     &:hover {
-      background-color: $grayBlue;
-      color: $white;
+      background-color: $white;
+      color: $grayBlue;
       text-decoration: none;
+      border: 2px solid $grayBlue;
+
+      img {
+        filter: none;
+      }
     }
 
     img {
