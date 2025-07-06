@@ -62,7 +62,7 @@ const Map = ({
             "circle-color": [
               "case",
               ["in", ["get", "name"], ["literal", visitedLandmarks || []]],
-              "#2F4F4F", // visited
+              "#34495e", // visited
               "#C0C0C0", // not visited
             ],
             "circle-stroke-width": 2,
@@ -130,7 +130,7 @@ const Map = ({
         [
           "case",
           ["in", ["get", "name"], ["literal", visitedLandmarks || []]],
-          "#2F4F4F", // visited
+          "#34495e", // visited
           "#C0C0C0", // not visited
         ],
       );
