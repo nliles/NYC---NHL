@@ -8,18 +8,8 @@ const MobileDrawer = ({ children }: { children: React.ReactNode }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const handlers = useSwipeable({
-    onSwipedUp: (eventData) => {
-      eventData.event.stopPropagation();
-      setIsExpanded(true);
-    },
-    onSwipedDown: (eventData) => {
-      eventData.event.stopPropagation();
-      setIsExpanded(false);
-    },
-    onSwiping: (eventData) => {
-      eventData.event.stopPropagation();
-      eventData.event.preventDefault();
-    },
+    onSwipedUp: () => setIsExpanded(true),
+    onSwipedDown: () => setIsExpanded(false),
     trackMouse: true,
     delta: 30,
     trackTouch: true,
@@ -32,13 +22,12 @@ const MobileDrawer = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <div
-      {...handlers}
       className={cn(styles.mobileDrawer, {
         [styles.isExpanded]: isExpanded,
       })}
     >
       {/* Handle/Header */}
-      <div onClick={handleHeaderClick} className={styles.handle}>
+      <div onClick={handleHeaderClick} className={styles.handle}  {...handlers}>
         <div className={styles.handleBtn} />
       </div>
 
