@@ -1,5 +1,7 @@
 import { saveToStorage } from "../../helpers/localStorage";
 import styles from "./LandmarkProfile.module.scss";
+import ReactMarkdown from 'react-markdown'
+import remarkBreaks from 'remark-breaks'
 
 const LandmarkProfile = ({
   landmark,
@@ -25,6 +27,8 @@ const LandmarkProfile = ({
       saveToStorage(filtered);
     }
   };
+
+  console.log(landmark.quote)
 
   return (
     <div className={styles.container}>
@@ -61,9 +65,7 @@ const LandmarkProfile = ({
             )}
             {landmark.quote && (
               <blockquote className={styles.quoteBlock}>
-                <p className={styles.quoteText}>
-                  &ldquo;{landmark.quote}&rdquo;
-                </p>
+                <ReactMarkdown className={styles.quoteText} remarkPlugins={[remarkBreaks]}>{landmark.quote}</ReactMarkdown>
                 <p className={styles.quoteAttribution}>
                   — {landmark.quoteAuthor}
                 </p>
