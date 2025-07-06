@@ -19,10 +19,10 @@ const technologies = [
 
 const About = () => (
   <div className={styles.container}>
-      <div className={styles.fixedHeader}>
-        <h2 className={styles.header}>About</h2>
-      </div>
-      <div className={styles.scrollableContent}>
+    <div className={styles.fixedHeader}>
+      <h2 className={styles.header}>About</h2>
+    </div>
+    <div className={styles.scrollableContent}>
       <section className={styles.aboutSection}>
         <h3>The Project</h3>
         <p>
@@ -48,35 +48,35 @@ const About = () => (
           their history, and keep track of the landmarks you've discovered.
         </p>
       </section>
-    <section className={styles.aboutSection}>
-      <h3>Technology Used</h3>
-      <ul>
-        {technologies.map((tech) => (
-          <li key={tech.key} className={styles.techItem}>
-            <span className={styles.highlight}>{tech.key}</span>:{" "}
-            <a href={tech.url} target="_blank" rel="noopener noreferrer">
-              {tech.value}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </section>
-    <section className={styles.aboutSection}>
-      <h3>About Me</h3>
-      <p>
-        Hi, I'm Natalie, a front-end developer in the greater NYC area with a
-        love of technology, travel, and urban exploration.
-      </p>
-      <a
-        href="https://www.linkedin.com/in/nliles/"
-        className={styles.connectLink}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <FaLinkedin className={styles.icon} width={30} height={30} />
-        Connect with me
-      </a>
-    </section>
+      <section className={styles.aboutSection}>
+        <h3>Technology Used</h3>
+        <ul>
+          {technologies.map((tech) => (
+            <li key={tech.key} className={styles.techItem}>
+              <span className={styles.highlight}>{tech.key}</span>:{" "}
+              <a href={tech.url} target="_blank" rel="noopener noreferrer">
+                {tech.value}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+      <section className={styles.aboutSection}>
+        <h3>About Me</h3>
+        <p>
+          Hi, I'm Natalie, a front-end developer in the greater NYC area with a
+          love of technology, travel, and urban exploration.
+        </p>
+        <a
+          href="https://www.linkedin.com/in/nliles/"
+          className={styles.connectLink}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaLinkedin className={styles.icon} width={30} height={30} />
+          Connect with me
+        </a>
+      </section>
     </div>
   </div>
 );
