@@ -13,7 +13,7 @@
   outline: none;
 
   &:focus {
-    outline-color: $gray-blue;
+    outline-color: $grayBlue;
     box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.1);
   }
 }
@@ -34,7 +34,7 @@
   cursor: pointer;
 
   &:focus {
-    outline-color: $gray-blue;
+    outline-color: $grayBlue;
   }
 }
 

@@ -118,7 +118,7 @@
     align-items: center;
     margin-right: 2rem;
     color: $white;
-    background-color: $gray-blue;
+    background-color: $grayBlue;
     padding: 8px 16px;
     border-radius: 4px;
     text-decoration: none;
@@ -127,7 +127,7 @@
     transition: background-color 0.2s;
 
     &:hover {
-      background-color: $gray-blue;
+      background-color: $grayBlue;
       color: $white;
       text-decoration: none;
     }
@@ -160,7 +160,7 @@
 .customCheckbox {
   width: 20px;
   height: 20px;
-  border: 2px solid $gray-blue;
+  border: 2px solid $grayBlue;
   border-radius: 3px;
   margin-right: 8px;
   display: inline-block;
@@ -169,8 +169,8 @@
 
 /* Checked state styling */
 .checkbox:checked + .customCheckbox {
-  background-color: $gray-blue;
-  border-color: $gray-blue;
+  background-color: $grayBlue;
+  border-color: $grayBlue;
 }
 
 .checkbox:checked + .customCheckbox::after {
@@ -195,7 +195,7 @@
   background-color: #fafaf9;
   padding: 12px 16px;
   border-radius: 8px;
-  border-left: 4px solid $gray-blue;
+  border-left: 4px solid $grayBlue;
 }
 
 .quoteText {
@@ -239,7 +239,7 @@
   margin: 0;
   font-weight: 600;
   text-transform: uppercase;
-  color: $gray-blue;
+  color: $grayBlue;
 }
 
 .value {
