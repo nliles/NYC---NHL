@@ -33,7 +33,10 @@ const About = () => (
           >
             National Historic Landmarks (NHLs)
           </a>{" "}
-          are historic properties of exceptional national significance, designated by the Secretary of the Interior for their outstanding value in illustrating American heritage and culture. They represent the highest level of federal historic recognition.
+          are historic properties of exceptional national significance,
+          designated by the Secretary of the Interior for their outstanding
+          value in illustrating American heritage and culture. They represent
+          the highest level of federal historic recognition.
         </p>
         <p>
           New York City boasts 116 National Historic Landmarks, more than any
@@ -62,8 +65,8 @@ const About = () => (
       <section className={styles.aboutSection}>
         <h3>About Me</h3>
         <p>
-          Hi, I'm Natalie, a front-end developer in the New York City area with a
-          love of technology, travel, and urban exploration.
+          Hi, I'm Natalie, a front-end developer in the New York City area with
+          a love of technology, travel, and urban exploration.
         </p>
         <a
           href="https://www.linkedin.com/in/nliles/"
