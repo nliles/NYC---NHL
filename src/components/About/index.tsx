@@ -33,9 +33,9 @@ const About = () => (
           >
             National Historic Landmarks (NHLs)
           </a>{" "}
-          are historic properties designated by the Secretary of the Interior as
-          the highest level of federal historic recognition for their value in
-          illustrating American heritage and culture.
+          are historic properties designated by the Secretary of the Interior
+          for their exceptional value in illustrating American heritage and
+          culture.
         </p>
         <p>
           New York City boasts 116 National Historic Landmarks, more than any
