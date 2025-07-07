@@ -39,8 +39,8 @@ const About = () => (
         </p>
         <p>
           New York City boasts 116 National Historic Landmarks, more than any
-          other city in the United States. These landmarks illustrate over 8,000
-          years of history, from Ward's Point's ancient burial grounds to
+          other city in the United States. These landmarks illustrate over 3,000
+          years of history, from Wards Point's ancient burial grounds to
           Stonewall Inn's modern civil rights legacy.
         </p>
         <p>

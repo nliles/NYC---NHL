@@ -27,7 +27,7 @@ const MobileDrawer = ({ children }: { children: React.ReactNode }) => {
       })}
     >
       {/* Handle/Header */}
-      <div onClick={handleHeaderClick} className={styles.handle}  {...handlers}>
+      <div onClick={handleHeaderClick} className={styles.handle} {...handlers}>
         <div className={styles.handleBtn} />
       </div>
 
