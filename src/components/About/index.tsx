@@ -20,11 +20,10 @@ const technologies = [
 const About = () => (
   <div className={styles.container}>
     <div className={styles.fixedHeader}>
-      <h2 className={styles.header}>About</h2>
+      <h2 className={styles.header}>About This Project</h2>
     </div>
     <div className={styles.scrollableContent}>
       <section className={styles.aboutSection}>
-        <h3>The Project</h3>
         <p>
           <a
             href="https://www.nps.gov/orgs/1582/index.htm"
