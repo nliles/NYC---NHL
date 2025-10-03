@@ -208,6 +208,7 @@
   margin: 0;
 }
 
+/* ONLY THIS SECTION UPDATED - Bullet list to match design */
 .bulletList {
   padding: 0;
   list-style: none;
@@ -217,31 +218,29 @@
 
 .bulletItem {
   display: flex;
-  align-items: flex-start;
-  padding: 12px 0;
+  flex-direction: column;
+  padding: 1rem 0;
   margin: 0;
+  border-bottom: 1px solid #e7e5e4;
 
   &:last-child {
-    border-bottom: none;
+    border-bottom: 1px solid #e7e5e4;
   }
 }
 
 .key {
-  min-width: 160px;
-  margin-right: 12px;
-  padding-right: 12px;
-  font-size: 14px;
-  flex-shrink: 0;
-  margin: 0;
+  font-size: 11px;
   font-weight: 600;
   text-transform: uppercase;
-  color: $grayBlue;
+  letter-spacing: 0.5px;
+  color: #a8a29e;
+  margin: 0 0 0.35rem 0;
 }
 
 .value {
-  color: #555;
-  font-size: 14px;
-  line-height: 1.4;
-  flex: 1;
+  color: #1c1917;
+  font-size: 15px;
+  line-height: 1.5;
   margin: 0;
+  font-weight: 400;
 }
