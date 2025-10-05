@@ -1,4 +1,5 @@
 import styles from "./SidePanel.module.scss";
+import { X } from "lucide-react";
 
 const SidePanel = ({
   onClose,
@@ -10,7 +11,7 @@ const SidePanel = ({
   return (
     <div className={styles.container}>
       <button className={styles.button} onClick={onClose}>
-        <img src="close.svg" alt="Close" width="17px" height="17px" />
+        <X size={28} strokeWidth={1}/>
       </button>
       <div className="side-panel-content">{children}</div>
     </div>

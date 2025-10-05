@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import styles from "./SearchBar.module.scss";
+import { CircleX, X } from "lucide-react";
 
 const SearchBar = ({
   onChange,
@@ -24,7 +25,7 @@ const SearchBar = ({
       />
       {inputRef.current?.value && (
         <button onClick={handleClearSearch} className={styles.clearIcon}>
-          <img src="close.svg" alt="Clear search" width={10} height={10} />
+          <CircleX size={20} strokeWidth={1}/>
         </button>
       )}
       <img
