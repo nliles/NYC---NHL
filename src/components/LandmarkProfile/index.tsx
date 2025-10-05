@@ -99,7 +99,7 @@ const LandmarkProfile = ({
           rel="noopener noreferrer"
         >
           Learn More
-          <ArrowRight strokeWidth={1} size={20} color="#6b8e8e"/>
+          <ArrowRight strokeWidth={1} size={20} color="#6b8e8e" />
         </a>
       </div>
     </div>

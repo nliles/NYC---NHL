@@ -10,7 +10,6 @@
   display: flex;
   flex-direction: column;
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
-  font-family: "Roboto", sans-serif;
 
   @media (max-width: 500px) {
     display: none;
@@ -28,7 +27,7 @@
 .panelHeader {
   padding: 20px;
   padding-bottom: 0;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid $mauve;
   flex-shrink: 0;
 }
 
@@ -90,9 +89,10 @@
 }
 
 .boroughBtn {
-  background: #f0f0f0;
-  color: #666;
+  background: #fafaf9;
+  color: $mauve;
   padding: 3px 6px;
+  border: 1px solid $mauve;
 
   &.selected {
     background: $grayBlue;
@@ -102,10 +102,10 @@
 
 .resultsCount {
   padding: 12px 20px;
-  background: #f8f9fa;
-  border-bottom: 1px solid #e0e0e0;
+  background: #fafaf9;
+  border-bottom: 1px solid $mauve;
   font-size: 12px;
-  color: #666;
+  color: $mauve;
   flex-shrink: 0;
   width: 100%;
   box-sizing: border-box;

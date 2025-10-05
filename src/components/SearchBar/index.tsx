@@ -25,10 +25,10 @@ const SearchBar = ({
       />
       {inputRef.current?.value && (
         <button onClick={handleClearSearch} className={styles.clearIcon}>
-          <CircleX size={20} strokeWidth={1}/>
+          <CircleX size={20} strokeWidth={1} />
         </button>
       )}
-      <Search size={20} className={styles.searchIcon} strokeWidth={1}/>
+      <Search size={20} className={styles.searchIcon} strokeWidth={1} />
     </div>
   );
 };

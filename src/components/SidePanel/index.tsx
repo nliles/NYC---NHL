@@ -11,7 +11,7 @@ const SidePanel = ({
   return (
     <div className={styles.container}>
       <button className={styles.button} onClick={onClose}>
-        <X size={28} strokeWidth={1}/>
+        <X size={28} strokeWidth={1} />
       </button>
       <div className="side-panel-content">{children}</div>
     </div>
