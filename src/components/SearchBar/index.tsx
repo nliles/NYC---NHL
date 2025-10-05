@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import styles from "./SearchBar.module.scss";
-import { CircleX, X } from "lucide-react";
+import { CircleX, Search } from "lucide-react";
 
 const SearchBar = ({
   onChange,
@@ -28,13 +28,7 @@ const SearchBar = ({
           <CircleX size={20} strokeWidth={1}/>
         </button>
       )}
-      <img
-        className={styles.searchIcon}
-        src="search.png"
-        alt="Search"
-        width={30}
-        height={30}
-      />
+      <Search size={20} className={styles.searchIcon} strokeWidth={1}/>
     </div>
   );
 };

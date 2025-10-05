@@ -1,3 +1,4 @@
+import { ArrowRight } from "lucide-react";
 import { saveToStorage } from "../../helpers/localStorage";
 import styles from "./LandmarkProfile.module.scss";
 import ReactMarkdown from "react-markdown";
@@ -98,7 +99,7 @@ const LandmarkProfile = ({
           rel="noopener noreferrer"
         >
           Learn More
-          <img src="arrow.png" width="20px" height="20px" />
+          <ArrowRight strokeWidth={1} size={20} color="#6b8e8e"/>
         </a>
       </div>
     </div>

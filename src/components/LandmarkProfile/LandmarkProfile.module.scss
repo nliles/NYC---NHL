@@ -2,7 +2,6 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  font-family: "Roboto", sans-serif;
 }
 
 /* Fixed header and image section */
@@ -102,15 +101,15 @@
   align-items: center;
   justify-content: space-between;
   padding: 0.75rem;
-  background-color: $lightGray;
+  background-color: $lightBlue;
   width: 100%;
 
   .link {
     display: flex;
     align-items: center;
     margin-right: 2rem;
-    color: $white;
-    background-color: $grayBlue;
+    color: $lightBlue;
+    background-color: $offWhite;
     padding: 8px 16px;
     border-radius: 4px;
     text-decoration: none;
@@ -119,22 +118,13 @@
     transition: background-color 0.2s;
     border: 2px solid transparent;
 
-    &:hover {
-      background-color: $white;
-      color: $grayBlue;
-      text-decoration: none;
-      border: 2px solid $grayBlue;
-
-      img {
-        filter: none;
-      }
+    svg {
+      padding-left: 5px;
     }
 
-    img {
-      padding-left: 5px;
-      width: 20px;
-      height: 20px;
-      filter: brightness(0) invert(1); // Makes arrow white
+    &:hover {
+      text-decoration: none;
+      border: 2px solid $grayBlue;
     }
   }
 }
@@ -150,23 +140,23 @@
   display: flex;
   align-items: center;
   cursor: pointer;
+  color: $offWhite;
 }
 
 .customCheckbox {
   width: 20px;
   height: 20px;
-  border: 2px solid $grayBlue;
+  border: 2px solid transparent;
   border-radius: 3px;
   margin-right: 8px;
   display: inline-block;
   position: relative;
-  background: white;
+  background: $offWhite;
 }
 
 /* Checked state styling */
 .checkbox:checked + .customCheckbox {
-  background-color: $grayBlue;
-  border-color: $grayBlue;
+  background-color: $offWhite;
 }
 
 .checkbox:checked + .customCheckbox::after {
@@ -176,7 +166,7 @@
   left: 7px;
   width: 6px;
   height: 12px;
-  border: solid $white;
+  border: solid $lightBlue;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
 }
@@ -195,7 +185,7 @@
 }
 
 .quoteText {
-  font-family: "Lato", serif;
+  font-family: "Lora", serif;
   font-size: 14px;
   color: #57534e;
   margin-bottom: 4px;
