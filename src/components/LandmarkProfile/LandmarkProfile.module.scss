@@ -1,3 +1,5 @@
+@use "../../styles/colors.module.scss";
+
 .container {
   height: 100vh;
   display: flex;
@@ -58,7 +60,7 @@
 }
 
 .caption {
-  color: #9b9186;
+  color: colors.$mauve;
   font-size: 12px;
   font-style: italic;
   margin: 0 0 1rem 0;
@@ -75,7 +77,7 @@
   max-width: 99%;
   max-height: 400px;
   height: auto;
-  border: 2px solid #5e4b3c;
+  border: 2px solid colors.$vintageBrown;
   margin-bottom: 0.1rem;
   display: block;
   object-fit: contain;
@@ -101,15 +103,15 @@
   align-items: center;
   justify-content: space-between;
   padding: 0.75rem;
-  background-color: $lightBlue;
+  background-color: colors.$lightBlue;
   width: 100%;
 
   .link {
     display: flex;
     align-items: center;
     margin-right: 2rem;
-    color: $lightBlue;
-    background-color: $offWhite;
+    color: colors.$lightBlue;
+    background-color: colors.$offWhite;
     padding: 8px 16px;
     border-radius: 4px;
     text-decoration: none;
@@ -124,7 +126,7 @@
 
     &:hover {
       text-decoration: none;
-      border: 2px solid $grayBlue;
+      border: 2px solid colors.$grayBlue;
     }
   }
 }
@@ -140,7 +142,7 @@
   display: flex;
   align-items: center;
   cursor: pointer;
-  color: $offWhite;
+  color: colors.$offWhite;
 }
 
 .customCheckbox {
@@ -151,12 +153,12 @@
   margin-right: 8px;
   display: inline-block;
   position: relative;
-  background: $offWhite;
+  background: colors.$offWhite;
 }
 
 /* Checked state styling */
 .checkbox:checked + .customCheckbox {
-  background-color: $offWhite;
+  background-color: colors.$offWhite;
 }
 
 .checkbox:checked + .customCheckbox::after {
@@ -166,7 +168,7 @@
   left: 7px;
   width: 6px;
   height: 12px;
-  border: solid $lightBlue;
+  border: solid colors.$lightBlue;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
 }
@@ -178,26 +180,25 @@
   margin: 1rem 0;
   width: 100%;
   box-sizing: border-box;
-  background-color: #fafaf9;
+  background-color: colors.$lightGray2;
   padding: 12px 16px;
   border-radius: 8px;
-  border-left: 4px solid $mauve;
+  border-left: 4px solid colors.$mauve;
 }
 
 .quoteText {
   font-family: "Lora", serif;
   font-size: 14px;
-  color: #57534e;
+  color: colors.$vintageBrown;
   margin-bottom: 4px;
 }
 
 .quoteAttribution {
   font-size: 12px;
-  color: #68645e;
+  color: colors.$vintageBrown;
   margin: 0;
 }
 
-/* ONLY THIS SECTION UPDATED - Bullet list to match design */
 .bulletList {
   padding: 0;
   list-style: none;
@@ -210,7 +211,7 @@
   flex-direction: column;
   padding: 1rem 0;
   margin: 0;
-  border-bottom: 1px solid #e7e5e4;
+  border-bottom: 1px solid colors.$pearl;
 
   &:last-child {
     border-bottom: none;
@@ -223,12 +224,12 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1.2px;
-  color: $mauve;
+  color: colors.$vintageBrown;
   margin: 0 0 0.35rem 0;
 }
 
 .value {
-  color: #1c1917;
+  color: colors.$black;
   font-size: 15px;
   line-height: 1.5;
   margin: 0;

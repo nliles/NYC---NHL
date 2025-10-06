@@ -1,7 +1,6 @@
-/* AboutPanel.module.css */
+@use "../../styles/colors.module.scss";
 
 .container {
-  font-family: "Roboto", sans-serif;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -50,10 +49,10 @@
   }
 
   a {
-    color: #6b8e8e;
+    color: colors.$lightBlue;
 
     &:hover {
-      color: $grayBlue;
+      color: colors.$grayBlue;
     }
   }
 }

@@ -1,3 +1,5 @@
+@use "../../styles/colors.module.scss";
+
 /* Left Panel */
 .leftPanel {
   margin-top: 50px;
@@ -5,8 +7,8 @@
   overflow: scroll;
   min-width: 400px;
   max-width: 400px;
-  background: $white;
-  border-right: 1px solid $lightGray;
+  background: colors.$white;
+  border-right: 1px solid colors.$lightGray;
   display: flex;
   flex-direction: column;
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
@@ -27,7 +29,7 @@
 .panelHeader {
   padding: 20px;
   padding-bottom: 0;
-  border-bottom: 1px solid $mauve;
+  border-bottom: 1px solid colors.$grayBlue;;
   flex-shrink: 0;
 }
 
@@ -53,10 +55,10 @@
   text-align: left;
   padding: 0.5rem 1.5rem;
   width: 100%;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid colors.$pearl;
 
   &:focus {
-    outline-color: $grayBlue;
+    outline-color: colors.$grayBlue;
   }
 
   &:hover {
@@ -79,8 +81,8 @@
 
 .borough,
 .boroughBtn {
-  background: $grayBlue;
-  color: $white;
+  background: colors.$grayBlue;
+  color: colors.$white;
   padding: 2px 6px;
   border-radius: 10px;
   font-size: 10px;
@@ -89,23 +91,28 @@
 }
 
 .boroughBtn {
-  background: #fafaf9;
-  color: $mauve;
+  background: colors.$lightGray2;
+  color: colors.$grayBlue;
   padding: 3px 6px;
-  border: 1px solid $mauve;
+  border: 1px solid colors.$grayBlue;
 
   &.selected {
-    background: $grayBlue;
-    color: $white;
+    background: colors.$grayBlue;
+    color: colors.$white;
+  }
+
+  &:hover {
+    border: 1px solid colors.$black;
   }
 }
 
 .resultsCount {
   padding: 12px 20px;
-  background: #fafaf9;
-  border-bottom: 1px solid $mauve;
-  font-size: 12px;
-  color: $mauve;
+  background: colors.$lightGray2;
+  border-bottom: 1px solid colors.$grayBlue;
+  font-size: 14px;
+  font-weight: 500;
+  color: colors.$grayBlue;
   flex-shrink: 0;
   width: 100%;
   box-sizing: border-box;

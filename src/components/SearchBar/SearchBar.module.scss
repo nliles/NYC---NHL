@@ -1,3 +1,5 @@
+@use "../../styles/colors.module.scss";
+
 .searchContainer {
   position: relative;
   width: 100%;
@@ -13,7 +15,7 @@
   outline: none;
 
   &:focus {
-    outline-color: $grayBlue;
+    outline-color: colors.$grayBlue;
     box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.1);
   }
 }
@@ -30,7 +32,7 @@
   cursor: pointer;
 
   &:focus {
-    outline-color: $grayBlue;
+    outline-color: colors.$grayBlue;
   }
 }
 

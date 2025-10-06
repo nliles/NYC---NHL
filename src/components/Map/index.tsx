@@ -1,6 +1,7 @@
 import { Dispatch, SetStateAction, useEffect, useRef } from "react";
 import mapboxgl from "mapbox-gl/dist/mapbox-gl";
 import styles from "./Map.module.css";
+import colors from '../../styles/colors.module.scss';
 import { Landmark } from "../../types";
 import convertToMapboxFeature from "../../helpers/convertToMapboxFeature";
 
@@ -62,11 +63,11 @@ const Map = ({
             "circle-color": [
               "case",
               ["in", ["get", "name"], ["literal", visitedLandmarks || []]],
-              "#34495e", // visited
-              "#C0C0C0", // not visited
+              colors.grayBlue, // visited
+              colors.gray, // not visited
             ],
             "circle-stroke-width": 2,
-            "circle-stroke-color": "#f5f0e8", // Cream color matching your background
+            "circle-stroke-color": colors.cream,
           },
         });
 
@@ -82,8 +83,8 @@ const Map = ({
             "text-anchor": "top",
           },
           paint: {
-            "text-color": "#5a4d3f", // Vintage brown text
-            "text-halo-color": "#f5f0e8", // Cream halo matching your background
+            "text-color": colors.vintageBrown,
+            "text-halo-color": colors.cream,
             "text-halo-width": 1,
           },
         });
@@ -130,8 +131,8 @@ const Map = ({
         [
           "case",
           ["in", ["get", "name"], ["literal", visitedLandmarks || []]],
-          "#34495e", // visited
-          "#C0C0C0", // not visited
+          colors.grayBlue, // visited
+          colors.gray, // not visited
         ],
       );
       (mapInstance.current as any).setPaintProperty(
@@ -140,8 +141,8 @@ const Map = ({
         [
           "case",
           ["==", ["get", "name"], selectedLocation?.name || null],
-          "#d4924a", // Highlighted outline for selected point
-          "#f5f0e8", // Default cream outline
+          colors.golden, // Highlighted outline for selected point
+          colors.cream, // Default outline
         ],
       );
     }
