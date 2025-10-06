@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction, useEffect, useRef } from "react";
 import mapboxgl from "mapbox-gl/dist/mapbox-gl";
 import styles from "./Map.module.css";
-import colors from '../../styles/colors.module.scss';
+import colors from "../../styles/colors.module.scss";
 import { Landmark } from "../../types";
 import convertToMapboxFeature from "../../helpers/convertToMapboxFeature";
 
