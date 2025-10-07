@@ -2,6 +2,7 @@ import { ArrowRight } from "lucide-react";
 import { saveToStorage } from "../../helpers/localStorage";
 import styles from "./LandmarkProfile.module.scss";
 import ReactMarkdown from "react-markdown";
+import colors from "../../styles/colors.module.scss";
 import remarkBreaks from "remark-breaks";
 
 const LandmarkProfile = ({
@@ -99,7 +100,7 @@ const LandmarkProfile = ({
           rel="noopener noreferrer"
         >
           Learn More
-          <ArrowRight strokeWidth={1} size={20} color="#6b8e8e" />
+          <ArrowRight strokeWidth={1} size={20} color={colors.lightBlue} />
         </a>
       </div>
     </div>

@@ -13,7 +13,7 @@ const Progress = ({
   className?: string;
 }) => (
   <div className={cn(styles.progress, className)}>
-    <Check color={colors.lightBlue} />
+    <Check color={colors.lightBlue} size={20} />
     <span>Visited: {`${count} out of ${total}`}</span>
   </div>
 );

@@ -1,3 +1,5 @@
+@use "../../styles/colors.module.scss";
+
 .mobileDrawer {
   position: fixed;
   display: flex;
@@ -6,7 +8,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: white;
+  background: colors.$white;
   border-top-right-radius: 16px;
   border-top-left-radius: 16px;
   z-index: 3;
@@ -31,7 +33,7 @@
   align-items: center;
   padding: 15px 20px;
   cursor: pointer;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid colors.$lightGray;
   flex-shrink: 0;
   user-select: none;
 }
@@ -39,7 +41,7 @@
 .handleBtn {
   width: 40px;
   height: 4px;
-  background: #d1d5db;
+  background: colors.$mauve;
   border-radius: 2px;
   margin-bottom: 12px;
 }
