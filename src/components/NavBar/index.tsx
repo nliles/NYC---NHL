@@ -1,5 +1,7 @@
+import { Check } from "lucide-react";
 import styles from "./NavBar.module.scss";
 import cn from "classnames";
+import colors from "../../styles/colors.module.scss";
 
 const Progress = ({
   count,
@@ -11,8 +13,8 @@ const Progress = ({
   className?: string;
 }) => (
   <div className={cn(styles.progress, className)}>
-    <img src="progress.svg" width="45px" height="auto" />
-    <span>{`${count} out of ${total}`}</span>
+    <Check color={colors.lightBlue} />
+    <span>Visited: {`${count} out of ${total}`}</span>
   </div>
 );
 
