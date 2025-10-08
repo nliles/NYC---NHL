@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import styles from "./SearchBar.module.scss";
-import { CircleX, Search } from "lucide-react";
+import { CircleX } from "lucide-react";
 import colors from "../../styles/colors.module.scss";
 
 const SearchBar = ({
@@ -26,7 +26,7 @@ const SearchBar = ({
       />
       {inputRef.current?.value && (
         <button onClick={handleClearSearch} className={styles.clearIcon}>
-          <CircleX size={18} strokeWidth={1} color={colors.grayBlue}/>
+          <CircleX size={18} strokeWidth={1} color={colors.grayBlue} />
         </button>
       )}
     </div>
