@@ -14,6 +14,10 @@ $golden: #d4924a;
 $vintageBrown: #5a4d3f;
 $mauve: #a8a29e;
 $pearl: #e7e5e4;
+// boroughs
+$queens: #5a7a6a; // Sage green
+$bronx: #6b5b7a; // Dusty purple
+$statenIsland: #6e4040; // Warm taupe
 
 // Export them for JavaScript
 :export {
@@ -29,4 +33,8 @@ $pearl: #e7e5e4;
   mauve: $mauve;
   golden: $golden;
   vintageBrown: $vintageBrown;
+  // BOROUGHS
+  queens: $queens;
+  bronx: $bronx;
+  statenIsland: $statenIsland;
 }

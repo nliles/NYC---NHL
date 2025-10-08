@@ -14,6 +14,10 @@
   font-size: 16px;
   outline: none;
 
+  &::placeholder {
+    font-family: "Karla", sans-serif;
+  }
+
   &:focus {
     outline-color: colors.$grayBlue;
     box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.1);

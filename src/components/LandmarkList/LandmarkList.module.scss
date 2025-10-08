@@ -1,6 +1,5 @@
 @use "../../styles/colors.module.scss";
 
-/* Left Panel */
 .leftPanel {
   margin-top: 50px;
   height: calc(100vh - 50px);
@@ -31,12 +30,6 @@
   padding-bottom: 0;
   border-bottom: 1px solid colors.$grayBlue;
   flex-shrink: 0;
-}
-
-.panelTitle {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 15px;
 }
 
 .landmarksList {
@@ -75,8 +68,10 @@
 }
 
 .boroughsContainer {
-  display: flex;
-  margin: 5px 0 10px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin: 10px 0 15px 0;
 }
 
 .borough,
@@ -85,20 +80,50 @@
   color: colors.$white;
   padding: 2px 6px;
   border-radius: 10px;
-  font-size: 10px;
+  font-size: 12px;
   margin-top: 4px;
   margin-right: 2px;
+}
+
+.borough,
+.boroughBtn.selected {
+  &.manhattan {
+    background: colors.$grayBlue;
+  }
+
+  &.brooklyn {
+    background: colors.$lightBlue;
+  }
+
+  &.queens {
+    background: colors.$queens;
+  }
+
+  &.theBronx {
+    background: colors.$bronx;
+  }
+
+  &.statenIsland {
+    background: colors.$statenIsland;
+  }
 }
 
 .boroughBtn {
   background: colors.$lightGray2;
   color: colors.$grayBlue;
   padding: 3px 6px;
-  border: 1px solid colors.$grayBlue;
+  border: 1px solid colors.$gray;
+
+  &:focus {
+    outline-color: colors.$grayBlue;
+  }
 
   &.selected {
-    background: colors.$grayBlue;
     color: colors.$white;
+
+    &:hover {
+      border: 1px solid colors.$black;
+    }
   }
 
   &:hover {

@@ -4,9 +4,16 @@ import styles from "./LandmarkList.module.scss";
 import { Landmark } from "../../types";
 import SearchBar from "../SearchBar";
 import MobileDrawer from "../MobileDrawer";
+import camelCase from "lodash/camelCase";
 
-const boroughs = [
-  "All",
+type Borough =
+  | "Manhattan"
+  | "Brooklyn"
+  | "Queens"
+  | "The Bronx"
+  | "Staten Island";
+
+const boroughs: Borough[] = [
   "Manhattan",
   "Brooklyn",
   "Queens",
@@ -22,41 +29,48 @@ const LandmarkList = ({
   handleClick: (landmark: Landmark) => void;
 }) => {
   const [filteredLandmarks, setFilteredLandmarks] = useState(landmarks);
-  const [selectedBorough, setSelectedBorough] = useState("All");
+  const [selectedBorough, setSelectedBorough] = useState<Borough>();
   const [inputValue, setInputValue] = useState("");
 
-  useEffect(() => {
-    setFilteredLandmarks(landmarks);
-  }, [landmarks]);
+  const formatString = (str: string) =>
+    str.toLowerCase().replace(/[.,]/g, "").replace(/\s+/g, "");
 
-  const handleOnChange = (inputValue: string) => {
-    setInputValue(inputValue);
-    const formatString = (str: string) =>
-      str.toLowerCase().replace(/[.,]/g, "").replace(/\s+/g, "");
+  // Single source of truth for filtering logic
+  const applyFilters = (searchTerm: string, borough?: Borough) => {
+    let filtered = landmarks;
 
-    let filteredLandmarks =
-      selectedBorough === "All"
-        ? landmarks
-        : landmarks.filter((landmark) =>
-            landmark.fields.borough.includes(selectedBorough || ""),
-          ) || landmarks;
-    const searchTerm = formatString(inputValue || "");
-
-    if (searchTerm === "") {
-      // If search is empty, show all landmarks
-      setFilteredLandmarks(filteredLandmarks); // Use original landmarks array
-    } else {
-      // Filter from the original landmarks array, not filteredLandmarks
-      const filtered = filteredLandmarks.filter((landmark) =>
-        formatString(landmark.fields.name).includes(searchTerm),
+    // Apply borough filter
+    if (borough) {
+      filtered = filtered.filter((landmark) =>
+        landmark.fields.borough.includes(borough),
       );
-      setFilteredLandmarks(filtered);
     }
+
+    // Apply search filter
+    const formattedSearchTerm = formatString(searchTerm);
+    if (formattedSearchTerm !== "") {
+      filtered = filtered.filter((landmark) =>
+        formatString(landmark.fields.name).includes(formattedSearchTerm),
+      );
+    }
+
+    setFilteredLandmarks(filtered);
   };
 
   useEffect(() => {
-    if (selectedBorough) handleOnChange(inputValue);
-  }, [selectedBorough]);
+    applyFilters(inputValue, selectedBorough);
+  }, [landmarks, selectedBorough]);
+
+  const handleOnChange = (inputValue: string) => {
+    setInputValue(inputValue);
+    applyFilters(inputValue, selectedBorough);
+  };
+
+  const toggleBorough = (borough: Borough) => {
+    const newBorough = borough === selectedBorough ? undefined : borough;
+    setSelectedBorough(newBorough);
+    applyFilters(inputValue, newBorough);
+  };
 
   const filterCopy =
     landmarks.length === filteredLandmarks.length
@@ -71,10 +85,10 @@ const LandmarkList = ({
           {boroughs.map((borough) => (
             <button
               key={borough}
-              className={cn(styles.boroughBtn, {
+              className={cn(styles.boroughBtn, styles[camelCase(borough)], {
                 [styles.selected]: selectedBorough === borough,
               })}
-              onClick={() => setSelectedBorough(borough)}
+              onClick={() => toggleBorough(borough)}
             >
               {borough}
             </button>
@@ -98,7 +112,10 @@ const LandmarkList = ({
               <p className={styles.name}>{landmark.fields.name}</p>
               <div className={styles.landmarkDetails}>
                 {landmark.fields.borough.split(",").map((borough: string) => (
-                  <span key={borough} className={styles.borough}>
+                  <span
+                    key={borough}
+                    className={cn(styles.borough, styles[camelCase(borough)])}
+                  >
                     {borough}
                   </span>
                 ))}
