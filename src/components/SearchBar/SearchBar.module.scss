@@ -27,10 +27,11 @@
 .clearIcon {
   all: unset;
   display: flex;
+  border-radius: 50%;
   align-items: center;
   justify-content: center;
   position: absolute;
-  right: 36px;
+  right: 12px;
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
@@ -38,11 +39,4 @@
   &:focus {
     outline-color: colors.$grayBlue;
   }
-}
-
-.searchIcon {
-  position: absolute;
-  right: 12px;
-  top: 50%;
-  transform: translateY(-50%);
 }
