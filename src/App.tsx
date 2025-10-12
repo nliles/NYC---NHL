@@ -5,24 +5,24 @@ import SidePanel from "./components/SidePanel";
 import Map from "./components/Map";
 import LandmarkList from "./components/LandmarkList";
 import LandmarkProfile from "./components/LandmarkProfile";
-import { getLocalStorage } from "./helpers/localStorage";
+import { getLocalStorage, saveToStorage } from "./helpers/localStorage";
 import NavBar from "./components/NavBar";
 import styles from "./App.module.css";
 import { getLandmarks } from "./services/contentful";
 import About from "./components/About";
-import { Landmark } from "./types";
+import { Landmark, SelectedLandmark } from "./types";
 
 const App = () => {
   const [landmarks, setLandmarks] = useState<Landmark[]>([]);
-  const [selectedLocation, setSelectedLocation] = useState();
+  const [selectedLandmark, setSelectedLandmark] = useState<SelectedLandmark>();
   const [showAbout, setShowAbout] = useState(false);
   const [shouldZoom, setShouldZoom] = useState(false);
   const [visitedLandmarks, setVisitedLandmarks] = useState(() =>
     getLocalStorage(),
   );
 
-  const handleClick = (item: any) => {
-    setSelectedLocation({
+  const handleClick = (item: Landmark) => {
+    setSelectedLandmark({
       ...item.fields,
       image: item.fields.image.fields.file.url,
       imageTitle: item.fields.image.fields.title,
@@ -38,7 +38,6 @@ const App = () => {
         setLandmarks(response.items as any);
       } catch (error) {
         console.error("Error fetching content:", error);
-        return [];
       }
     };
 
@@ -46,8 +45,22 @@ const App = () => {
   }, []);
 
   const handleClose = () => {
-    setSelectedLocation(undefined);
+    setSelectedLandmark(undefined);
     setShowAbout(false);
+  };
+
+  const onVisitedChange = (isVisited: boolean) => {
+    // Save to localStorage
+    if (isVisited) {
+      setVisitedLandmarks([...visitedLandmarks, selectedLandmark?.name]);
+      saveToStorage([...visitedLandmarks, selectedLandmark?.name]);
+    } else {
+      const filtered = visitedLandmarks.filter(
+        (name: string) => name !== selectedLandmark?.name,
+      );
+      setVisitedLandmarks(filtered);
+      saveToStorage(filtered);
+    }
   };
 
   return (
@@ -58,11 +71,15 @@ const App = () => {
         toggleAbout={() => setShowAbout(true)}
       />
       <div className={styles.container}>
-        <LandmarkList handleClick={handleClick} landmarks={landmarks} />
+        <LandmarkList
+          handleClick={handleClick}
+          landmarks={landmarks}
+          selectedLandmark={selectedLandmark}
+        />
         <Map
           landmarks={landmarks}
-          selectedLocation={selectedLocation}
-          setSelectedLandmark={setSelectedLocation}
+          selectedLandmark={selectedLandmark}
+          setSelectedLandmark={setSelectedLandmark}
           visitedLandmarks={visitedLandmarks}
           shouldZoom={shouldZoom}
           setShouldZoom={setShouldZoom}
@@ -70,13 +87,15 @@ const App = () => {
       </div>
       <div>
         <Portal containerId="portal-root">
-          {(selectedLocation || showAbout) && (
+          {(selectedLandmark || showAbout) && (
             <SidePanel onClose={handleClose}>
-              {selectedLocation ? (
+              {selectedLandmark ? (
                 <LandmarkProfile
-                  landmark={selectedLocation}
-                  setVisitedLandmarks={setVisitedLandmarks}
-                  visitedLandmarks={visitedLandmarks}
+                  landmark={selectedLandmark}
+                  isVisited={visitedLandmarks.includes(
+                    selectedLandmark?.name || "",
+                  )}
+                  onChange={onVisitedChange}
                 />
               ) : (
                 <About />

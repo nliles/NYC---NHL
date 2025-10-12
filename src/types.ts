@@ -1,4 +1,4 @@
-type Bullet = {
+export type Bullet = {
   [key: string]: string;
 };
 
@@ -12,13 +12,28 @@ type Image = {
   };
 };
 
-type Fields = {
+type LatLong = {
+  lon: number;
+  lat: number;
+};
+
+export type SelectedLandmark = {
   name: string;
   borough: string;
-  location: {
-    lon: number;
-    lat: number;
-  };
+  location: LatLong;
+  image: string;
+  imageTitle?: string;
+  imageDescription?: string;
+  bullets: Bullet[];
+  moreInfoUrl: string;
+  quote?: string;
+  quoteAuthor?: string;
+};
+
+export type LandmarkFields = {
+  name: string;
+  borough: string;
+  location: LatLong;
   bullets: Bullet[];
   moreInfoUrl: string;
   image: Image;
@@ -27,7 +42,7 @@ type Fields = {
 };
 
 export type Landmark = {
-  fields: Fields;
+  fields: LandmarkFields;
 };
 
 export type MapboxFeature = {

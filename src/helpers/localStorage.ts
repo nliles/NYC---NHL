@@ -1,4 +1,4 @@
-export const saveToStorage = (landmarks: any) => {
+export const saveToStorage = (landmarks: string[]) => {
   try {
     localStorage.setItem("visitedLandmarks", JSON.stringify(landmarks));
   } catch (error) {
@@ -12,6 +12,5 @@ export const getLocalStorage = () => {
     return storedLandmarks ? JSON.parse(storedLandmarks) : [];
   } catch (error) {
     console.warn("Failed to load visited landmarks from localStorage:", error);
-    return [];
   }
 };
