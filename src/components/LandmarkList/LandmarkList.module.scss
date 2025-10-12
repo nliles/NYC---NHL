@@ -137,11 +137,10 @@
 }
 
 .resultsCount {
-  padding: 12px 20px;
+  padding: 12px 0;
   background: colors.$lightGray2;
   border-bottom: 1px solid colors.$grayBlue;
   font-size: 14px;
   font-weight: 500;
   color: colors.$grayBlue;
-  flex-shrink: 0;
 }
