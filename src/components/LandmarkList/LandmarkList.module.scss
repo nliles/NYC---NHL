@@ -50,6 +50,11 @@
   width: 100%;
   border-bottom: 1px solid colors.$pearl;
 
+  &.selected {
+    background-color: colors.$lightGray2;
+    border: 1px solid colors.$grayBlue;
+  }
+
   &:focus {
     outline-color: colors.$grayBlue;
   }
@@ -139,6 +144,4 @@
   font-weight: 500;
   color: colors.$grayBlue;
   flex-shrink: 0;
-  width: 100%;
-  box-sizing: border-box;
 }

@@ -2,19 +2,19 @@ import { Dispatch, SetStateAction, useEffect, useRef } from "react";
 import mapboxgl from "mapbox-gl/dist/mapbox-gl";
 import styles from "./Map.module.css";
 import colors from "../../styles/colors.module.scss";
-import { Landmark } from "../../types";
+import { Landmark, LandmarkFields } from "../../types";
 import convertToMapboxFeature from "../../helpers/convertToMapboxFeature";
 
 const Map = ({
   landmarks,
-  selectedLocation,
+  selectedLandmark,
   setSelectedLandmark,
   visitedLandmarks,
   shouldZoom,
   setShouldZoom,
 }: {
   landmarks: Landmark[];
-  selectedLocation: any;
+  selectedLandmark?: LandmarkFields;
   setSelectedLandmark: Dispatch<SetStateAction<undefined>>;
   visitedLandmarks: string[];
   shouldZoom?: boolean;
@@ -92,7 +92,6 @@ const Map = ({
         // Add popups on click
         map.on("click", "landmark-points", (e) => {
           const props = (e?.features?.[0] as any).properties;
-          console.log(props);
           setSelectedLandmark({
             ...props,
             bullets: JSON.parse(props.bullets || "[]"),
@@ -140,27 +139,27 @@ const Map = ({
         "circle-stroke-color",
         [
           "case",
-          ["==", ["get", "name"], selectedLocation?.name || null],
+          ["==", ["get", "name"], selectedLandmark?.name || null],
           colors.golden, // Highlighted outline for selected point
           colors.cream, // Default outline
         ],
       );
     }
-  }, [visitedLandmarks, selectedLocation]);
+  }, [visitedLandmarks, selectedLandmark]);
 
   useEffect(() => {
-    if (selectedLocation && shouldZoom) {
+    if (selectedLandmark && shouldZoom) {
       (mapInstance?.current as any).flyTo({
         center: [
-          selectedLocation?.location?.lon,
-          selectedLocation?.location?.lat,
+          selectedLandmark?.location?.lon,
+          selectedLandmark?.location?.lat,
         ],
         essential: true, // this animation is considered essential with respect to prefers-reduced-motion
         zoom: 13,
       });
       setShouldZoom?.(false); // Reset zoom state after flying
     }
-  }, [selectedLocation, shouldZoom, setShouldZoom]);
+  }, [selectedLandmark, shouldZoom, setShouldZoom]);
 
   return (
     <div className={styles.container}>

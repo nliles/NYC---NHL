@@ -12,6 +12,5 @@ export const getLocalStorage = () => {
     return storedLandmarks ? JSON.parse(storedLandmarks) : [];
   } catch (error) {
     console.warn("Failed to load visited landmarks from localStorage:", error);
-    return [];
   }
 };

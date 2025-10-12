@@ -12,7 +12,7 @@ type Image = {
   };
 };
 
-type Fields = {
+export type LandmarkFields = {
   name: string;
   borough: string;
   location: {
@@ -27,7 +27,7 @@ type Fields = {
 };
 
 export type Landmark = {
-  fields: Fields;
+  fields: LandmarkFields;
 };
 
 export type MapboxFeature = {

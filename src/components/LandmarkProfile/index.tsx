@@ -55,8 +55,8 @@ const LandmarkProfile = ({
             )}
             {landmark?.bullets && (
               <ul className={styles.bulletList}>
-                {landmark.bullets.map((item: any, index: number) => (
-                  <li key={index} className={styles.bulletItem}>
+                {landmark.bullets.map((item: any) => (
+                  <li key={item.key} className={styles.bulletItem}>
                     <p className={styles.key}>{item.key}</p>
                     <p className={styles.value}>{item.value}</p>
                   </li>

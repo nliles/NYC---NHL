@@ -14,7 +14,7 @@ import { Landmark } from "./types";
 
 const App = () => {
   const [landmarks, setLandmarks] = useState<Landmark[]>([]);
-  const [selectedLocation, setSelectedLocation] = useState();
+  const [selectedLandmark, setSelectedLandmark] = useState();
   const [showAbout, setShowAbout] = useState(false);
   const [shouldZoom, setShouldZoom] = useState(false);
   const [visitedLandmarks, setVisitedLandmarks] = useState(() =>
@@ -22,7 +22,7 @@ const App = () => {
   );
 
   const handleClick = (item: any) => {
-    setSelectedLocation({
+    setSelectedLandmark({
       ...item.fields,
       image: item.fields.image.fields.file.url,
       imageTitle: item.fields.image.fields.title,
@@ -38,7 +38,6 @@ const App = () => {
         setLandmarks(response.items as any);
       } catch (error) {
         console.error("Error fetching content:", error);
-        return [];
       }
     };
 
@@ -46,7 +45,7 @@ const App = () => {
   }, []);
 
   const handleClose = () => {
-    setSelectedLocation(undefined);
+    setSelectedLandmark(undefined);
     setShowAbout(false);
   };
 
@@ -58,11 +57,15 @@ const App = () => {
         toggleAbout={() => setShowAbout(true)}
       />
       <div className={styles.container}>
-        <LandmarkList handleClick={handleClick} landmarks={landmarks} />
+        <LandmarkList
+          handleClick={handleClick}
+          landmarks={landmarks}
+          selectedLandmark={selectedLandmark}
+        />
         <Map
           landmarks={landmarks}
-          selectedLocation={selectedLocation}
-          setSelectedLandmark={setSelectedLocation}
+          selectedLandmark={selectedLandmark}
+          setSelectedLandmark={setSelectedLandmark}
           visitedLandmarks={visitedLandmarks}
           shouldZoom={shouldZoom}
           setShouldZoom={setShouldZoom}
@@ -70,11 +73,11 @@ const App = () => {
       </div>
       <div>
         <Portal containerId="portal-root">
-          {(selectedLocation || showAbout) && (
+          {(selectedLandmark || showAbout) && (
             <SidePanel onClose={handleClose}>
-              {selectedLocation ? (
+              {selectedLandmark ? (
                 <LandmarkProfile
-                  landmark={selectedLocation}
+                  landmark={selectedLandmark}
                   setVisitedLandmarks={setVisitedLandmarks}
                   visitedLandmarks={visitedLandmarks}
                 />

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import cn from "classnames";
 import styles from "./LandmarkList.module.scss";
-import { Landmark } from "../../types";
+import { Landmark, LandmarkFields } from "../../types";
 import SearchBar from "../SearchBar";
 import MobileDrawer from "../MobileDrawer";
 import camelCase from "lodash/camelCase";
@@ -24,9 +24,11 @@ const boroughs: Borough[] = [
 const LandmarkList = ({
   landmarks,
   handleClick,
+  selectedLandmark,
 }: {
   landmarks: Landmark[];
   handleClick: (landmark: Landmark) => void;
+  selectedLandmark?: LandmarkFields;
 }) => {
   const [filteredLandmarks, setFilteredLandmarks] = useState(landmarks);
   const [selectedBorough, setSelectedBorough] = useState<Borough>();
@@ -67,9 +69,8 @@ const LandmarkList = ({
   };
 
   const toggleBorough = (borough: Borough) => {
-    const newBorough = borough === selectedBorough ? undefined : borough;
-    setSelectedBorough(newBorough);
-    applyFilters(inputValue, newBorough);
+    setSelectedBorough(borough);
+    applyFilters(inputValue, borough);
   };
 
   const filterCopy =
@@ -106,7 +107,10 @@ const LandmarkList = ({
         {filteredLandmarks.map((landmark: Landmark) => (
           <li key={landmark.fields.name}>
             <button
-              className={styles.item}
+              className={cn(styles.item, {
+                [styles.selected]:
+                  landmark.fields.name === selectedLandmark?.name,
+              })}
               onClick={() => handleClick(landmark)}
             >
               <p className={styles.name}>{landmark.fields.name}</p>
