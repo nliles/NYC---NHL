@@ -20,8 +20,6 @@ const LandmarkProfile = ({
     onChange(isVisited);
   };
 
-  console.log(landmark);
-
   return (
     <div className={styles.container}>
       <div className={styles.content}>

@@ -2,7 +2,7 @@ import { Dispatch, SetStateAction, useEffect, useRef } from "react";
 import mapboxgl from "mapbox-gl/dist/mapbox-gl";
 import styles from "./Map.module.css";
 import colors from "../../styles/colors.module.scss";
-import { Landmark, LandmarkFields } from "../../types";
+import { Landmark, SelectedLandmark } from "../../types";
 import convertToMapboxFeature from "../../helpers/convertToMapboxFeature";
 
 const Map = ({
@@ -14,8 +14,8 @@ const Map = ({
   setShouldZoom,
 }: {
   landmarks: Landmark[];
-  selectedLandmark?: LandmarkFields;
-  setSelectedLandmark: Dispatch<SetStateAction<undefined>>;
+  selectedLandmark?: SelectedLandmark;
+  setSelectedLandmark: Dispatch<SetStateAction<SelectedLandmark | undefined>>;
   visitedLandmarks: string[];
   shouldZoom?: boolean;
   setShouldZoom?: (value: boolean) => void;

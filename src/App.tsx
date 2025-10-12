@@ -49,8 +49,6 @@ const App = () => {
     setShowAbout(false);
   };
 
-  console.log(landmarks);
-
   const onVisitedChange = (isVisited: boolean) => {
     // Save to localStorage
     if (isVisited) {
@@ -94,8 +92,6 @@ const App = () => {
               {selectedLandmark ? (
                 <LandmarkProfile
                   landmark={selectedLandmark}
-                  setVisitedLandmarks={setVisitedLandmarks}
-                  visitedLandmarks={visitedLandmarks}
                   isVisited={visitedLandmarks.includes(
                     selectedLandmark?.name || "",
                   )}
