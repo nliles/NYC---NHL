@@ -5,23 +5,23 @@ import SidePanel from "./components/SidePanel";
 import Map from "./components/Map";
 import LandmarkList from "./components/LandmarkList";
 import LandmarkProfile from "./components/LandmarkProfile";
-import { getLocalStorage } from "./helpers/localStorage";
+import { getLocalStorage, saveToStorage } from "./helpers/localStorage";
 import NavBar from "./components/NavBar";
 import styles from "./App.module.css";
 import { getLandmarks } from "./services/contentful";
 import About from "./components/About";
-import { Landmark } from "./types";
+import { Landmark, SelectedLandmark } from "./types";
 
 const App = () => {
   const [landmarks, setLandmarks] = useState<Landmark[]>([]);
-  const [selectedLandmark, setSelectedLandmark] = useState();
+  const [selectedLandmark, setSelectedLandmark] = useState<SelectedLandmark>();
   const [showAbout, setShowAbout] = useState(false);
   const [shouldZoom, setShouldZoom] = useState(false);
   const [visitedLandmarks, setVisitedLandmarks] = useState(() =>
     getLocalStorage(),
   );
 
-  const handleClick = (item: any) => {
+  const handleClick = (item: Landmark) => {
     setSelectedLandmark({
       ...item.fields,
       image: item.fields.image.fields.file.url,
@@ -47,6 +47,22 @@ const App = () => {
   const handleClose = () => {
     setSelectedLandmark(undefined);
     setShowAbout(false);
+  };
+
+  console.log(landmarks);
+
+  const onVisitedChange = (isVisited: boolean) => {
+    // Save to localStorage
+    if (isVisited) {
+      setVisitedLandmarks([...visitedLandmarks, selectedLandmark?.name]);
+      saveToStorage([...visitedLandmarks, selectedLandmark?.name]);
+    } else {
+      const filtered = visitedLandmarks.filter(
+        (name: string) => name !== selectedLandmark?.name,
+      );
+      setVisitedLandmarks(filtered);
+      saveToStorage(filtered);
+    }
   };
 
   return (
@@ -80,6 +96,10 @@ const App = () => {
                   landmark={selectedLandmark}
                   setVisitedLandmarks={setVisitedLandmarks}
                   visitedLandmarks={visitedLandmarks}
+                  isVisited={visitedLandmarks.includes(
+                    selectedLandmark?.name || "",
+                  )}
+                  onChange={onVisitedChange}
                 />
               ) : (
                 <About />

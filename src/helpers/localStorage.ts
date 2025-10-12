@@ -1,4 +1,4 @@
-export const saveToStorage = (landmarks: any) => {
+export const saveToStorage = (landmarks: string[]) => {
   try {
     localStorage.setItem("visitedLandmarks", JSON.stringify(landmarks));
   } catch (error) {

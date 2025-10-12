@@ -1,34 +1,26 @@
 import { ArrowRight } from "lucide-react";
-import { saveToStorage } from "../../helpers/localStorage";
 import styles from "./LandmarkProfile.module.scss";
 import ReactMarkdown from "react-markdown";
 import colors from "../../styles/colors.module.scss";
 import remarkBreaks from "remark-breaks";
+import { SelectedLandmark } from "../../types";
 
 const LandmarkProfile = ({
   landmark,
-  setVisitedLandmarks,
-  visitedLandmarks,
-}: any) => {
-  // State for visited checkbox
-  const visited = visitedLandmarks.includes(landmark.name);
-
+  isVisited,
+  onChange,
+}: {
+  landmark: SelectedLandmark;
+  isVisited?: boolean;
+  onChange: (visited: boolean) => void;
+}) => {
   // Save visited status to localStorage when changed
   const handleVisitedChange = (e: any) => {
     const isVisited = e.target.checked;
-
-    // Save to localStorage
-    if (isVisited) {
-      setVisitedLandmarks([...visitedLandmarks, landmark.name]);
-      saveToStorage([...visitedLandmarks, landmark.name]);
-    } else {
-      const filtered = visitedLandmarks.filter(
-        (name: any) => name !== landmark.name,
-      );
-      setVisitedLandmarks(filtered);
-      saveToStorage(filtered);
-    }
+    onChange(isVisited);
   };
+
+  console.log(landmark);
 
   return (
     <div className={styles.container}>
@@ -55,7 +47,7 @@ const LandmarkProfile = ({
             )}
             {landmark?.bullets && (
               <ul className={styles.bulletList}>
-                {landmark.bullets.map((item: any) => (
+                {landmark.bullets.map((item) => (
                   <li key={item.key} className={styles.bulletItem}>
                     <p className={styles.key}>{item.key}</p>
                     <p className={styles.value}>{item.value}</p>
@@ -86,7 +78,7 @@ const LandmarkProfile = ({
               className={styles.checkbox}
               type="checkbox"
               id="visited"
-              checked={visited}
+              checked={isVisited}
               onChange={handleVisitedChange}
             />
             <span className={styles.customCheckbox}></span>
