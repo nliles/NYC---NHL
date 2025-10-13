@@ -1,3 +1,5 @@
+import { EntrySkeletonType } from "contentful";
+
 export type Bullet = {
   [key: string]: string;
 };
@@ -30,7 +32,7 @@ export type SelectedLandmark = {
   quoteAuthor?: string;
 };
 
-export type LandmarkFields = {
+type LandmarkFields = {
   name: string;
   borough: string;
   location: LatLong;
@@ -41,7 +43,8 @@ export type LandmarkFields = {
   quoteAuthor?: string;
 };
 
-export type Landmark = {
+export type Landmark = EntrySkeletonType &{
+  contentTypeId: "nycNhl";
   fields: LandmarkFields;
 };
 

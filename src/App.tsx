@@ -35,6 +35,7 @@ const App = () => {
     const fetchLandmarks = async () => {
       try {
         const response = await getLandmarks();
+        console.log("Fetched landmarks:", response);
         setLandmarks(response.items as any);
       } catch (error) {
         console.error("Error fetching content:", error);
@@ -67,7 +68,7 @@ const App = () => {
     <>
       <NavBar
         count={visitedLandmarks.length}
-        total={116}
+        total={landmarks.length}
         toggleAbout={() => setShowAbout(true)}
       />
       <div className={styles.container}>
