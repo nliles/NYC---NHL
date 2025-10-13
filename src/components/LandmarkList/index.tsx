@@ -34,8 +34,6 @@ const LandmarkList = ({
   const [selectedBorough, setSelectedBorough] = useState<Borough>();
   const [inputValue, setInputValue] = useState("");
 
-  console.log(landmarks);
-
   const formatString = (str: string) =>
     str.toLowerCase().replace(/[.,]/g, "").replace(/\s+/g, "");
 

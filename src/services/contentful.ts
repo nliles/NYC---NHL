@@ -3,7 +3,7 @@ import type { EntryCollection } from "contentful";
 import { LandmarkSkeleton } from "../types";
 
 export const getLandmarks = (): Promise<EntryCollection<LandmarkSkeleton>> => {
-  return client.getEntries<LandmarkSkeleton>({
+  return client.withoutUnresolvableLinks.getEntries<LandmarkSkeleton>({
     content_type: "nycNhl",
     limit: 120,
     include: 2,

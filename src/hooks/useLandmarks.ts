@@ -14,6 +14,8 @@ export const useLandmarks = () => {
         setLoading(true);
         const response = await getLandmarks();
 
+        console.log(response?.items?.[0]);
+
         const parsedLandmarks = response.items.map(
           (entry: Entry<LandmarkSkeleton>) => ({
             id: entry.sys.id,
@@ -28,7 +30,7 @@ export const useLandmarks = () => {
               : [],
             moreInfoUrl: String(entry.fields.moreInfoUrl),
             image: {
-              url: (entry.fields.image as any)?.fields?.file?.url || "",
+              url: (entry?.fields.image?.fields as any)?.file?.url || "",
               title: (entry.fields.image as any)?.fields?.title || "",
               description:
                 (entry.fields.image as any)?.fields?.description || "",
