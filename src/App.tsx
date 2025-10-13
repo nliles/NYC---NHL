@@ -9,8 +9,6 @@ import { getLocalStorage, saveToStorage } from "./helpers/localStorage";
 import NavBar from "./components/NavBar";
 import styles from "./App.module.css";
 import About from "./components/About";
-import { LandmarkSkeleton } from "./types";
-import { Entry } from "contentful";
 import { useLandmarks } from "./hooks/useLandmarks";
 
 const App = () => {
