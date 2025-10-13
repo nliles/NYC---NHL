@@ -23,10 +23,12 @@
     "react-map-gl": "^8.0.4",
     "react-markdown": "^8.0.6",
     "react-swipeable": "^7.0.2",
-    "remark-breaks": "^4.0.0"
+    "remark-breaks": "^4.0.0",
+    "vite-tsconfig-paths": "^5.1.4"
   },
   "devDependencies": {
     "@types/lodash": "^4.17.20",
+    "@types/node": "^24.7.2",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
     "@typescript-eslint/eslint-plugin": "^7.2.0",

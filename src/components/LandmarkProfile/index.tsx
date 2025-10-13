@@ -1,9 +1,9 @@
 import { ArrowRight } from "lucide-react";
 import styles from "./LandmarkProfile.module.scss";
 import ReactMarkdown from "react-markdown";
-import colors from "../../styles/colors.module.scss";
+import colors from "@/styles/colors.module.scss";
 import remarkBreaks from "remark-breaks";
-import { Landmark } from "../../types";
+import { Landmark } from "@/types";
 
 const LandmarkProfile = ({
   selectedLandmark,

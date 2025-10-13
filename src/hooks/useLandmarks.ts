@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Entry } from "contentful";
-import { getLandmarks } from "../services/contentful";
+import { getLandmarks } from "@/services/contentful";
 import { LandmarkSkeleton, Landmark } from "../types";
 
 export const useLandmarks = () => {

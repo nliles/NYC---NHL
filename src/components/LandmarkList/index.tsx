@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import cn from "classnames";
 import styles from "./LandmarkList.module.scss";
-import { Landmark } from "../../types";
-import SearchBar from "../SearchBar";
-import MobileDrawer from "../MobileDrawer";
+import { Landmark } from "@/types";
+import SearchBar from "@/components/SearchBar";
+import MobileDrawer from "@/components/MobileDrawer";
 import camelCase from "lodash/camelCase";
 
 type Borough =
