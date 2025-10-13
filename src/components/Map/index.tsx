@@ -51,7 +51,7 @@ const Map = ({
           type: "geojson",
           data: geojson,
           cluster: true,
-          clusterMaxZoom: 14, // Max zoom to cluster points
+          clusterMaxZoom: 12, // Max zoom to cluster points
           clusterRadius: 50, // Radius of each cluster in pixels
         });
 
