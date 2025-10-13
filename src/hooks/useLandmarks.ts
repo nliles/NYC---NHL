@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Entry } from "contentful";
+import { Asset, Entry } from "contentful";
 import { getLandmarks } from "@/services/contentful";
 import { LandmarkSkeleton, Landmark } from "../types";
 
@@ -15,27 +15,30 @@ export const useLandmarks = () => {
         const response = await getLandmarks();
 
         const parsedLandmarks = response.items.map(
-          (entry: Entry<LandmarkSkeleton>) => ({
-            id: entry.sys.id,
-            name: String(entry.fields.name),
-            borough: String(entry.fields.borough),
-            location: {
-              lat: Number(entry.fields.location.lat),
-              lon: Number(entry.fields.location.lon),
-            },
-            bullets: Array.isArray(entry.fields.bullets)
-              ? entry.fields.bullets
-              : [],
-            moreInfoUrl: String(entry.fields.moreInfoUrl),
-            image: {
-              url: (entry?.fields.image?.fields as any)?.file?.url || "",
-              title: (entry.fields.image as any)?.fields?.title || "",
-              description:
-                (entry.fields.image as any)?.fields?.description || "",
-            },
-            quote: entry.fields.quote ? String(entry.fields.quote) : undefined,
-            quoteAuthor: entry.fields.quoteAuthor ? String(entry.fields.quoteAuthor) : undefined,
-          }),
+          (entry: Entry<LandmarkSkeleton>) => {
+            const imageData = entry.fields.image as unknown as Asset;
+            
+            return {
+              id: entry.sys.id,
+              name: String(entry.fields.name),
+              borough: String(entry.fields.borough),
+              location: {
+                lat: Number(entry.fields.location.lat),
+                lon: Number(entry.fields.location.lon),
+              },
+              bullets: Array.isArray(entry.fields.bullets)
+                ? entry.fields.bullets
+                : [],
+              moreInfoUrl: String(entry.fields.moreInfoUrl),
+              image: {
+                url: String(imageData?.fields?.file?.url),
+                title: imageData?.fields?.title ? String(imageData?.fields?.title) : undefined,
+                description: imageData?.fields?.description ? String(imageData?.fields?.description) : undefined,
+              },
+              quote: entry.fields.quote ? String(entry.fields.quote) : undefined,
+              quoteAuthor: entry.fields.quoteAuthor ? String(entry.fields.quoteAuthor) : undefined,
+            };
+          },
         );
 
         setLandmarks(parsedLandmarks);
