@@ -143,13 +143,15 @@ const Map = ({
             source.getClusterExpansionZoom(clusterId, (err, zoom) => {
               if (err) return;
 
-              map.easeTo({
-                center: (features[0].geometry as GeoJSON.Point).coordinates as [
-                  number,
-                  number,
-                ],
-                zoom: zoom,
-              });
+              if (zoom) {
+                map.easeTo({
+                  center: (features[0].geometry as GeoJSON.Point).coordinates as [
+                    number,
+                    number,
+                  ],
+                  zoom: zoom,
+                });
+              }
             });
           }
         });
