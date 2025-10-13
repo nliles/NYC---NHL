@@ -5,7 +5,7 @@ import { LandmarkSkeleton, Landmark } from "../types";
 
 export const useLandmarks = () => {
   const [landmarks, setLandmarks] = useState<Landmark[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState<Error | null>(null);
 
   useEffect(() => {
@@ -20,8 +20,8 @@ export const useLandmarks = () => {
             name: String(entry.fields.name),
             borough: String(entry.fields.borough),
             location: {
-              lat: Number(entry.fields.location?.lat),
-              lon: Number(entry.fields.location?.lon),
+              lat: Number(entry.fields.location.lat),
+              lon: Number(entry.fields.location.lon),
             },
             bullets: Array.isArray(entry.fields.bullets)
               ? entry.fields.bullets
