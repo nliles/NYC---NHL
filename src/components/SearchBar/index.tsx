@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import styles from "./SearchBar.module.scss";
 import { CircleX } from "lucide-react";
-import colors from "../../styles/colors.module.scss";
+import colors from "@/styles/colors.module.scss";
 
 const SearchBar = ({
   onChange,

@@ -1,7 +1,7 @@
 import { Check } from "lucide-react";
 import styles from "./NavBar.module.scss";
 import cn from "classnames";
-import colors from "../../styles/colors.module.scss";
+import colors from "@/styles/colors.module.scss";
 
 const Progress = ({
   count,
