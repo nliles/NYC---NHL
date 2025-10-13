@@ -139,8 +139,8 @@ const Map = ({
   }, [visitedLandmarks, selectedLandmark]);
 
   useEffect(() => {
-    if (selectedLandmark && shouldZoom) {
-      (mapInstance?.current as any).flyTo({
+    if (selectedLandmark && shouldZoom && mapInstance.current) {
+      mapInstance.current.flyTo({
         center: [
           selectedLandmark?.location?.lon,
           selectedLandmark?.location?.lat,
