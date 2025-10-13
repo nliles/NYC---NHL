@@ -17,7 +17,7 @@ export const useLandmarks = () => {
         const parsedLandmarks = response.items.map(
           (entry: Entry<LandmarkSkeleton>) => {
             const imageData = entry.fields.image as unknown as Asset;
-            
+
             return {
               id: entry.sys.id,
               name: String(entry.fields.name),
@@ -32,11 +32,19 @@ export const useLandmarks = () => {
               moreInfoUrl: String(entry.fields.moreInfoUrl),
               image: {
                 url: String(imageData?.fields?.file?.url),
-                title: imageData?.fields?.title ? String(imageData?.fields?.title) : undefined,
-                description: imageData?.fields?.description ? String(imageData?.fields?.description) : undefined,
+                title: imageData?.fields?.title
+                  ? String(imageData?.fields?.title)
+                  : undefined,
+                description: imageData?.fields?.description
+                  ? String(imageData?.fields?.description)
+                  : undefined,
               },
-              quote: entry.fields.quote ? String(entry.fields.quote) : undefined,
-              quoteAuthor: entry.fields.quoteAuthor ? String(entry.fields.quoteAuthor) : undefined,
+              quote: entry.fields.quote
+                ? String(entry.fields.quote)
+                : undefined,
+              quoteAuthor: entry.fields.quoteAuthor
+                ? String(entry.fields.quoteAuthor)
+                : undefined,
             };
           },
         );
