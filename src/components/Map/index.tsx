@@ -46,17 +46,60 @@ const Map = ({
           ),
         };
 
-        // Add landmarks as a source
+        // Add landmarks as a source with clustering enabled
         map.addSource("landmarks", {
           type: "geojson",
           data: geojson,
+          cluster: true,
+          clusterMaxZoom: 14, // Max zoom to cluster points
+          clusterRadius: 50, // Radius of each cluster in pixels
         });
 
-        // Add a circle layer for the landmarks
+        // Add a circle layer for clusters
+        map.addLayer({
+          id: "clusters",
+          type: "circle",
+          source: "landmarks",
+          filter: ["has", "point_count"],
+          paint: {
+            "circle-radius": [
+              "step",
+              ["get", "point_count"],
+              15, // Small clusters
+              10,
+              20, // Medium clusters
+              30,
+              25, // Large clusters
+            ],
+            "circle-color": colors.grayBlue,
+            "circle-stroke-width": 2,
+            "circle-stroke-color": colors.cream,
+          },
+        });
+
+        // Add cluster count labels
+        map.addLayer({
+          id: "cluster-count",
+          type: "symbol",
+          source: "landmarks",
+          filter: ["has", "point_count"],
+          layout: {
+            "text-field": ["get", "point_count_abbreviated"],
+            "text-font": ["DIN Offc Pro Medium", "Arial Unicode MS Bold"],
+            "text-size": 12,
+            "text-allow-overlap": true,
+          },
+          paint: {
+            "text-color": colors.cream,
+          },
+        });
+
+        // Add a circle layer for unclustered landmarks
         map.addLayer({
           id: "landmark-points",
           type: "circle",
           source: "landmarks",
+          filter: ["!", ["has", "point_count"]],
           paint: {
             "circle-radius": 8,
             "circle-color": [
@@ -70,11 +113,12 @@ const Map = ({
           },
         });
 
-        // Add a text layer for landmark names
+        // Add a text layer for landmark names (unclustered only)
         map.addLayer({
           id: "landmark-labels",
           type: "symbol",
           source: "landmarks",
+          filter: ["!", ["has", "point_count"]],
           layout: {
             "text-field": ["get", "name"],
             "text-size": 12,
@@ -88,9 +132,41 @@ const Map = ({
           },
         });
 
-        // Add popups on click
+        // Click handler for clusters - zoom in
+        map.on("click", "clusters", (e) => {
+          const features = map.queryRenderedFeatures(e.point, {
+            layers: ["clusters"],
+          });
+          const clusterId = features[0].properties?.cluster_id;
+
+          if (clusterId) {
+            const source = map.getSource("landmarks") as mapboxgl.GeoJSONSource;
+            source.getClusterExpansionZoom(clusterId, (err, zoom) => {
+              if (err) return;
+
+              map.easeTo({
+                center: (features[0].geometry as GeoJSON.Point).coordinates as [
+                  number,
+                  number,
+                ],
+                zoom: zoom,
+              });
+            });
+          }
+        });
+
+        // Click handler for unclustered points
         map.on("click", "landmark-points", (e) => {
           setSelectedLandmarkId(e?.features?.[0]?.properties?.id);
+        });
+
+        // Change cursor to pointer when hovering clusters
+        map.on("mouseenter", "clusters", () => {
+          map.getCanvas().style.cursor = "pointer";
+        });
+
+        map.on("mouseleave", "clusters", () => {
+          map.getCanvas().style.cursor = "";
         });
 
         // Change cursor to pointer when hovering landmarks
