@@ -1,4 +1,4 @@
-import { FaLinkedin } from "react-icons/fa";
+import linkedInIcon from "@/assets/linkedIn.png";
 import styles from "./About.module.scss";
 
 const technologies = [
@@ -71,8 +71,8 @@ const About = () => (
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaLinkedin className={styles.icon} width={30} height={30} />
-          Connect with me
+          <img src={linkedInIcon} width={20} />
+          <span>Connect with me</span>
         </a>
       </section>
     </div>

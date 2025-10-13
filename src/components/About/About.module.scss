@@ -50,6 +50,10 @@
   a {
     color: colors.$lightBlue;
 
+    img {
+      margin-right: 0.25rem;
+    }
+
     &:hover {
       color: colors.$grayBlue;
     }
