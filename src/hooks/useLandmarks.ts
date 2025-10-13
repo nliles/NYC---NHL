@@ -14,8 +14,6 @@ export const useLandmarks = () => {
         setLoading(true);
         const response = await getLandmarks();
 
-        console.log(response?.items?.[0]);
-
         const parsedLandmarks = response.items.map(
           (entry: Entry<LandmarkSkeleton>) => ({
             id: entry.sys.id,
