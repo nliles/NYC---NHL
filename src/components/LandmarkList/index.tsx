@@ -69,7 +69,7 @@ const LandmarkList = ({
   };
 
   const toggleBorough = (borough: Borough) => {
-    setSelectedBorough(borough);
+    setSelectedBorough(borough === selectedBorough ? undefined : borough);
     applyFilters(inputValue, borough);
   };
 
