@@ -1,3 +1,5 @@
+@use "../../styles/colors.module.scss";
+
 .container {
   position: fixed;
   background-color: white;
@@ -26,4 +28,10 @@
   position: absolute;
   top: 0.8rem;
   right: 10px;
+  height: 28px;
+
+  &:focus {
+    outline: 2px solid colors.$grayBlue;
+    outline-offset: 2px;
+  }
 }
