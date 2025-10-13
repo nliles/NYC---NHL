@@ -47,8 +47,6 @@ const App = () => {
     }
   };
 
-  console.log(selectedLandmark?.id)
-
   return (
     <>
       <NavBar

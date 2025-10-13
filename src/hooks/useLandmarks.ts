@@ -33,8 +33,8 @@ export const useLandmarks = () => {
               description:
                 (entry.fields.image as any)?.fields?.description || "",
             },
-            quote: String(entry.fields.quote),
-            quoteAuthor: String(entry.fields.quoteAuthor),
+            quote: entry.fields.quote ? String(entry.fields.quote) : undefined,
+            quoteAuthor: entry.fields.quoteAuthor ? String(entry.fields.quoteAuthor) : undefined,
           }),
         );
 
