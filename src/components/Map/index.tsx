@@ -145,10 +145,8 @@ const Map = ({
 
               if (zoom) {
                 map.easeTo({
-                  center: (features[0].geometry as GeoJSON.Point).coordinates as [
-                    number,
-                    number,
-                  ],
+                  center: (features[0].geometry as GeoJSON.Point)
+                    .coordinates as [number, number],
                   zoom: zoom,
                 });
               }
