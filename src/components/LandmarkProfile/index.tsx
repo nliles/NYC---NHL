@@ -3,49 +3,42 @@ import styles from "./LandmarkProfile.module.scss";
 import ReactMarkdown from "react-markdown";
 import colors from "../../styles/colors.module.scss";
 import remarkBreaks from "remark-breaks";
-import { SelectedLandmark } from "../../types";
+import { Landmark } from "../../types";
 
 const LandmarkProfile = ({
-  landmark,
-  isVisited,
+  selectedLandmark,
   onChange,
+  isVisited,
 }: {
-  landmark: SelectedLandmark;
-  isVisited?: boolean;
+  selectedLandmark: Landmark;
   onChange: (visited: boolean) => void;
+  isVisited?: boolean;
 }) => {
-  // Save visited status to localStorage when changed
-  const handleVisitedChange = (e: any) => {
-    const isVisited = e.target.checked;
-    onChange(isVisited);
-  };
-
+  const { name, bullets, moreInfoUrl, quote, quoteAuthor, image } =
+    selectedLandmark;
+  const { url, title, description } = image;
   return (
     <div className={styles.container}>
       <div className={styles.content}>
         <div className={styles.info}>
           <div className={styles.fixedHeader}>
-            <h2 className={styles.header}>{landmark.name}</h2>
+            <h2 className={styles.header}>{name}</h2>
           </div>
           <div className={styles.scrollableContent}>
-            <img
-              src={landmark?.image}
-              alt={landmark.name}
-              className={styles.img}
-            />
-            {landmark?.imageTitle && landmark?.imageDescription && (
+            <img src={url} alt={name} className={styles.img} />
+            {title && description && (
               <a
                 className={styles.caption}
-                href={landmark.imageDescription}
+                href={description}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {landmark.imageTitle}
+                {title}
               </a>
             )}
-            {landmark?.bullets && (
+            {bullets && (
               <ul className={styles.bulletList}>
-                {landmark.bullets.map((item) => (
+                {bullets.map((item) => (
                   <li key={item.key} className={styles.bulletItem}>
                     <p className={styles.key}>{item.key}</p>
                     <p className={styles.value}>{item.value}</p>
@@ -53,17 +46,15 @@ const LandmarkProfile = ({
                 ))}
               </ul>
             )}
-            {landmark.quote && (
+            {quote && quoteAuthor && (
               <blockquote className={styles.quoteBlock}>
                 <ReactMarkdown
                   className={styles.quoteText}
                   remarkPlugins={[remarkBreaks]}
                 >
-                  {landmark.quote}
+                  {quote}
                 </ReactMarkdown>
-                <p className={styles.quoteAttribution}>
-                  — {landmark.quoteAuthor}
-                </p>
+                <p className={styles.quoteAttribution}>— {quoteAuthor}</p>
               </blockquote>
             )}
           </div>
@@ -77,14 +68,14 @@ const LandmarkProfile = ({
               type="checkbox"
               id="visited"
               checked={isVisited}
-              onChange={handleVisitedChange}
+              onChange={(e) => onChange(e.target.checked)}
             />
             <span className={styles.customCheckbox}></span>
             I've visited this landmark
           </label>
         </div>
         <a
-          href={landmark.moreInfoUrl}
+          href={moreInfoUrl}
           className={styles.link}
           target="_blank"
           rel="noopener noreferrer"

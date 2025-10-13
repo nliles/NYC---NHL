@@ -9,11 +9,11 @@ const Portal = ({
   children: ReactNode;
   containerId: string;
 }) => {
-  const [container, setContainer] = useState(null);
+  const [container, setContainer] = useState<HTMLElement | null>(null);
 
   useEffect(() => {
     const domContainer = document.getElementById(containerId);
-    setContainer(domContainer as any);
+    setContainer(domContainer);
   }, [containerId]);
 
   return container ? ReactDOM.createPortal(children, container) : null;

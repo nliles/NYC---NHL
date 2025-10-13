@@ -5,18 +5,11 @@ function convertToMapboxFeature(landmark: Landmark): MapboxFeature {
     type: "Feature",
     geometry: {
       type: "Point",
-      coordinates: [landmark.fields.location.lon, landmark.fields.location.lat],
+      coordinates: [landmark.location.lon, landmark.location.lat],
     },
     properties: {
-      name: landmark.fields.name,
-      borough: landmark.fields.borough,
-      bullets: landmark.fields.bullets,
-      moreInfoUrl: landmark.fields.moreInfoUrl,
-      image: landmark.fields.image?.fields?.file?.url,
-      imageDescription: landmark.fields.image?.fields?.description,
-      imageTitle: landmark.fields.image?.fields?.title,
-      quote: landmark.fields.quote,
-      quoteAuthor: landmark.fields.quoteAuthor,
+      id: landmark.id,
+      name: landmark.name,
     },
   };
 }

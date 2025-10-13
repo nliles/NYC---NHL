@@ -1,10 +1,10 @@
-// src/services/contentful.js
 import client from "../lib/contentful";
+import type { EntryCollection } from "contentful";
+import { LandmarkSkeleton } from "../types";
 
-export const getLandmarks = () => {
-  return client.getEntries({
+export const getLandmarks = (): Promise<EntryCollection<LandmarkSkeleton>> => {
+  return client.withoutUnresolvableLinks.getEntries<LandmarkSkeleton>({
     content_type: "nycNhl",
-    order: ["fields.name"],
     limit: 120,
     include: 2,
   });

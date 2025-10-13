@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import cn from "classnames";
 import styles from "./LandmarkList.module.scss";
-import { Landmark, LandmarkFields, SelectedLandmark } from "../../types";
+import { Landmark } from "../../types";
 import SearchBar from "../SearchBar";
 import MobileDrawer from "../MobileDrawer";
 import camelCase from "lodash/camelCase";
@@ -24,11 +24,11 @@ const boroughs: Borough[] = [
 const LandmarkList = ({
   landmarks,
   handleClick,
-  selectedLandmark,
+  selectedLandmarkId,
 }: {
   landmarks: Landmark[];
-  handleClick: (landmark: Landmark) => void;
-  selectedLandmark?: SelectedLandmark;
+  handleClick: (landmarkId: string) => void;
+  selectedLandmarkId?: string;
 }) => {
   const [filteredLandmarks, setFilteredLandmarks] = useState(landmarks);
   const [selectedBorough, setSelectedBorough] = useState<Borough>();
@@ -43,8 +43,8 @@ const LandmarkList = ({
 
     // Apply borough filter
     if (borough) {
-      filtered = filtered.filter((landmark) =>
-        landmark.fields.borough.includes(borough),
+      filtered = filtered.filter((landmark: Landmark) =>
+        landmark.borough.includes(borough),
       );
     }
 
@@ -52,7 +52,7 @@ const LandmarkList = ({
     const formattedSearchTerm = formatString(searchTerm);
     if (formattedSearchTerm !== "") {
       filtered = filtered.filter((landmark) =>
-        formatString(landmark.fields.name).includes(formattedSearchTerm),
+        formatString(landmark.name).includes(formattedSearchTerm),
       );
     }
 
@@ -105,17 +105,16 @@ const LandmarkList = ({
       </div>
       <ul className={styles.landmarksList}>
         {filteredLandmarks.map((landmark: Landmark) => (
-          <li key={landmark.fields.name}>
+          <li key={landmark.id}>
             <button
               className={cn(styles.item, {
-                [styles.selected]:
-                  landmark.fields.name === selectedLandmark?.name,
+                [styles.selected]: landmark.id === selectedLandmarkId,
               })}
-              onClick={() => handleClick(landmark)}
+              onClick={() => handleClick(landmark.id)}
             >
-              <p className={styles.name}>{landmark.fields.name}</p>
+              <p className={styles.name}>{landmark.name}</p>
               <div className={styles.landmarkDetails}>
-                {landmark.fields.borough.split(",").map((borough: string) => (
+                {landmark.borough.split(",").map((borough: string) => (
                   <span
                     key={borough}
                     className={cn(styles.borough, styles[camelCase(borough)])}

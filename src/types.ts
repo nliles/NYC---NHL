@@ -1,48 +1,39 @@
+import { Asset, EntrySkeletonType, EntryFieldTypes } from "contentful";
+
 export type Bullet = {
-  [key: string]: string;
-};
-
-type Image = {
-  fields: {
-    title: string;
-    description: string;
-    file: {
-      url: string;
-    };
-  };
-};
-
-type LatLong = {
-  lon: number;
-  lat: number;
-};
-
-export type SelectedLandmark = {
-  name: string;
-  borough: string;
-  location: LatLong;
-  image: string;
-  imageTitle?: string;
-  imageDescription?: string;
-  bullets: Bullet[];
-  moreInfoUrl: string;
-  quote?: string;
-  quoteAuthor?: string;
+  key: string;
+  value: string;
 };
 
 export type LandmarkFields = {
+  name: EntryFieldTypes.Symbol;
+  borough: EntryFieldTypes.Symbol;
+  location: EntryFieldTypes.Location;
+  bullets: EntryFieldTypes.Object<Bullet[]>;
+  moreInfoUrl: EntryFieldTypes.Symbol;
+  image: Asset;
+  quote?: EntryFieldTypes.Text;
+  quoteAuthor?: EntryFieldTypes.Symbol;
+};
+
+export type LandmarkSkeleton = EntrySkeletonType<LandmarkFields, "nycNhl">;
+
+type Image = {
+  url: string;
+  title?: string;
+  description?: string;
+};
+
+export type Landmark = {
+  id: string;
   name: string;
   borough: string;
-  location: LatLong;
+  location: { lat: number; lon: number };
   bullets: Bullet[];
   moreInfoUrl: string;
   image: Image;
   quote?: string;
   quoteAuthor?: string;
-};
-
-export type Landmark = {
-  fields: LandmarkFields;
 };
 
 export type MapboxFeature = {
@@ -52,6 +43,7 @@ export type MapboxFeature = {
     coordinates: [number, number];
   };
   properties: {
-    [key: string]: any;
+    id: string;
+    name: string;
   };
 };
