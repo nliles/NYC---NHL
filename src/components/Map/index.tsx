@@ -2,45 +2,44 @@ import { Dispatch, SetStateAction, useEffect, useRef } from "react";
 import mapboxgl from "mapbox-gl/dist/mapbox-gl";
 import styles from "./Map.module.css";
 import colors from "../../styles/colors.module.scss";
-import { Landmark, SelectedLandmark } from "../../types";
+import { Landmark } from "../../types";
 import convertToMapboxFeature from "../../helpers/convertToMapboxFeature";
 
 const Map = ({
   landmarks,
   selectedLandmark,
-  setSelectedLandmark,
+  setSelectedLandmarkId,
   visitedLandmarks,
   shouldZoom,
   setShouldZoom,
 }: {
   landmarks: Landmark[];
-  selectedLandmark?: SelectedLandmark;
-  setSelectedLandmark: Dispatch<SetStateAction<SelectedLandmark | undefined>>;
+  selectedLandmark?: Landmark;
+  setSelectedLandmarkId: Dispatch<SetStateAction<string | undefined>>;
   visitedLandmarks: string[];
   shouldZoom?: boolean;
   setShouldZoom?: (value: boolean) => void;
 }) => {
-  const mapContainer = useRef(null);
-  const mapInstance = useRef(null);
+  const mapContainer = useRef<HTMLDivElement>(null);
+  const mapInstance = useRef<mapboxgl.Map | null>(null);
 
   useEffect(() => {
     if (mapboxgl && !mapInstance.current && landmarks) {
       mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_TOKEN;
 
       const map = new mapboxgl.Map({
-        container: mapContainer.current as any,
+        container: mapContainer.current as HTMLDivElement,
         style: "mapbox://styles/nmliles16/cmb4gmtey00bh01qv7evy8qr0",
         center: [-73.9699, 40.7528],
         zoom: 12,
         minZoom: 9.5,
       });
 
-      // @ts-ignore
       mapInstance.current = map;
 
       map.on("load", () => {
         // Convert landmarks to GeoJSON
-        const geojson = {
+        const geojson: GeoJSON.FeatureCollection = {
           type: "FeatureCollection",
           features: landmarks.map((landmark) =>
             convertToMapboxFeature(landmark),
@@ -50,10 +49,10 @@ const Map = ({
         // Add landmarks as a source
         map.addSource("landmarks", {
           type: "geojson",
-          data: geojson as any,
+          data: geojson,
         });
 
-        // Add a circle layer for the landmarks with vintage colors
+        // Add a circle layer for the landmarks
         map.addLayer({
           id: "landmark-points",
           type: "circle",
@@ -62,7 +61,7 @@ const Map = ({
             "circle-radius": 8,
             "circle-color": [
               "case",
-              ["in", ["get", "name"], ["literal", visitedLandmarks || []]],
+              ["in", ["get", "id"], ["literal", visitedLandmarks || []]],
               colors.grayBlue, // visited
               colors.gray, // not visited
             ],
@@ -71,7 +70,7 @@ const Map = ({
           },
         });
 
-        // Add a text layer for landmark names with vintage styling
+        // Add a text layer for landmark names
         map.addLayer({
           id: "landmark-labels",
           type: "symbol",
@@ -91,11 +90,7 @@ const Map = ({
 
         // Add popups on click
         map.on("click", "landmark-points", (e) => {
-          const props = (e?.features?.[0] as any).properties;
-          setSelectedLandmark({
-            ...props,
-            bullets: JSON.parse(props.bullets || "[]"),
-          });
+          setSelectedLandmarkId(e?.features?.[0]?.properties?.id);
         });
 
         // Change cursor to pointer when hovering landmarks
@@ -111,35 +106,31 @@ const Map = ({
 
     return () => {
       if (mapInstance.current) {
-        (mapInstance.current as any).remove();
+        mapInstance.current.remove();
         mapInstance.current = null;
       }
     };
-  }, [setSelectedLandmark, landmarks]);
+  }, [setSelectedLandmarkId, landmarks]);
 
   // EFFECT 2: Update colors when visitedLandmarks changes
   useEffect(() => {
     if (
       mapInstance.current &&
-      (mapInstance.current as any).isStyleLoaded() &&
-      (mapInstance.current as any).getLayer("landmark-points")
+      mapInstance.current.isStyleLoaded() &&
+      mapInstance.current.getLayer("landmark-points")
     ) {
-      (mapInstance.current as any).setPaintProperty(
-        "landmark-points",
-        "circle-color",
-        [
-          "case",
-          ["in", ["get", "name"], ["literal", visitedLandmarks || []]],
-          colors.grayBlue, // visited
-          colors.gray, // not visited
-        ],
-      );
-      (mapInstance.current as any).setPaintProperty(
+      mapInstance.current.setPaintProperty("landmark-points", "circle-color", [
+        "case",
+        ["in", ["get", "id"], ["literal", visitedLandmarks || []]],
+        colors.grayBlue, // visited
+        colors.gray, // not visited
+      ]);
+      mapInstance.current.setPaintProperty(
         "landmark-points",
         "circle-stroke-color",
         [
           "case",
-          ["==", ["get", "name"], selectedLandmark?.name || null],
+          ["==", ["get", "id"], selectedLandmark?.id || null],
           colors.golden, // Highlighted outline for selected point
           colors.cream, // Default outline
         ],
@@ -154,7 +145,7 @@ const Map = ({
           selectedLandmark?.location?.lon,
           selectedLandmark?.location?.lat,
         ],
-        essential: true, // this animation is considered essential with respect to prefers-reduced-motion
+        essential: true,
         zoom: 13,
       });
       setShouldZoom?.(false); // Reset zoom state after flying
