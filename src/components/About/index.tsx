@@ -71,7 +71,7 @@ const About = () => (
           target="_blank"
           rel="noopener noreferrer"
         >
-        <img src={linkedInIcon} width={20}/>
+          <img src={linkedInIcon} width={20} />
           <span>Connect with me</span>
         </a>
       </section>
