@@ -48,7 +48,7 @@
   }
 
   a {
-    color: colors.$lightBlue;
+    color: colors.$grayBlue;
 
     img {
       margin-right: 0.25rem;
@@ -56,6 +56,7 @@
 
     &:hover {
       color: colors.$grayBlue;
+      text-decoration: underline;
     }
   }
 }
