@@ -33,7 +33,7 @@ const Map = ({
       const map = new mapboxgl.Map({
         container: mapContainer.current as HTMLDivElement,
         style: "mapbox://styles/nmliles16/cmb4gmtey00bh01qv7evy8qr0",
-        center:  DEFAULT_CENTER,
+        center: DEFAULT_CENTER,
         zoom: 12,
         minZoom: 9.5,
       });
