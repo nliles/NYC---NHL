@@ -1,0 +1,33 @@
+@use "../../styles/colors.module.scss";
+
+.container {
+  width: 100%;
+  position: relative;
+  touch-action: pan-x pan-y pinch-zoom; /* Allow map gestures but be more specific */
+}
+
+.zoomControls {
+  position: absolute;
+  top: 65px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 1;
+
+  @media (max-width: 500px) {
+    top: 120px;
+  }
+}
+
+.zoomButton {
+  padding: 0.3rem;
+  background: colors.$grayBlue;
+  border: 2px solid colors.$vintageBrown;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: colors.$white;
+}

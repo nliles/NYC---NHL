@@ -1,9 +1,12 @@
 import { Dispatch, SetStateAction, useEffect, useRef } from "react";
 import mapboxgl from "mapbox-gl/dist/mapbox-gl";
-import styles from "./Map.module.css";
+import { Plus, Minus, RotateCcw } from "lucide-react";
+import styles from "./Map.module.scss";
 import colors from "@/styles/colors.module.scss";
 import { Landmark } from "@/types";
 import convertToMapboxFeature from "@/helpers/convertToMapboxFeature";
+
+const DEFAULT_CENTER: [number, number] = [-73.9699, 40.7528];
 
 const Map = ({
   landmarks,
@@ -30,7 +33,7 @@ const Map = ({
       const map = new mapboxgl.Map({
         container: mapContainer.current as HTMLDivElement,
         style: "mapbox://styles/nmliles16/cmb4gmtey00bh01qv7evy8qr0",
-        center: [-73.9699, 40.7528],
+        center:  DEFAULT_CENTER,
         zoom: 12,
         minZoom: 9.5,
       });
@@ -227,9 +230,58 @@ const Map = ({
     }
   }, [selectedLandmark, shouldZoom, setShouldZoom]);
 
+  const handleZoomIn = () => {
+    if (mapInstance.current) {
+      mapInstance.current.zoomIn();
+    }
+  };
+
+  const handleZoomOut = () => {
+    if (mapInstance.current) {
+      mapInstance.current.zoomOut();
+    }
+  };
+
+  const handleZoomReset = () => {
+    if (mapInstance.current) {
+      mapInstance.current.flyTo({
+        center: DEFAULT_CENTER,
+        zoom: 12,
+        essential: true,
+      });
+    }
+  };
+
   return (
     <div className={styles.container}>
       <div ref={mapContainer} style={{ height: "100vh", width: "100%" }} />
+
+      {/* Zoom Controls */}
+      <div className={styles.zoomControls}>
+        <button
+          onClick={handleZoomIn}
+          className={styles.zoomButton}
+          title="Zoom In"
+        >
+          <Plus size={20} />
+        </button>
+
+        <button
+          onClick={handleZoomOut}
+          className={styles.zoomButton}
+          title="Zoom Out"
+        >
+          <Minus size={20} />
+        </button>
+
+        <button
+          onClick={handleZoomReset}
+          className={styles.zoomButton}
+          title="Reset Zoom"
+        >
+          <RotateCcw size={20} />
+        </button>
+      </div>
     </div>
   );
 };
