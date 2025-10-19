@@ -254,7 +254,7 @@ const Map = ({
 
   return (
     <div className={styles.container}>
-      <div ref={mapContainer} style={{ height: "100vh", width: "100%" }} />
+      <div ref={mapContainer} className={styles.mapContainer} />
 
       {/* Zoom Controls */}
       <div className={styles.zoomControls}>
