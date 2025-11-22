@@ -20,7 +20,7 @@ const SearchBar = ({
       <input
         type="text"
         className={styles.searchInput}
-        placeholder="Search landmarks..."
+        placeholder="Search landmarks by name, architect..."
         ref={inputRef}
         onChange={() => onChange(inputRef.current!.value)}
       />

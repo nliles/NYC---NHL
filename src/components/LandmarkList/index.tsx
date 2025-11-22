@@ -40,24 +40,44 @@ const LandmarkList = ({
   // Single source of truth for filtering logic
   const applyFilters = (searchTerm: string, borough?: Borough) => {
     let filtered = landmarks;
-
+  
     // Apply borough filter
     if (borough) {
       filtered = filtered.filter((landmark: Landmark) =>
-        landmark.borough.includes(borough),
+        landmark.borough.includes(borough)
       );
     }
-
-    // Apply search filter
+  
     const formattedSearchTerm = formatString(searchTerm);
+  
     if (formattedSearchTerm !== "") {
-      filtered = filtered.filter((landmark) =>
-        formatString(landmark.name).includes(formattedSearchTerm),
-      );
+      filtered = filtered.filter((landmark) => {
+        const nameMatch = formatString(landmark.name).includes(formattedSearchTerm);
+  
+        // Normalize bullets array regardless of Contentful format
+        const bulletsArray = Array.isArray(landmark.bullets)
+          ? landmark.bullets
+          : Array.isArray((landmark.bullets as any)?.bullets)
+          ? (landmark.bullets as any).bullets
+          : [];
+  
+        const architectEntry = bulletsArray.find(
+          (b: any) => b.key.toLowerCase() === "architect"
+        );
+  
+        const architectValue = architectEntry ? formatString(architectEntry.value) : "";
+  
+        const architectMatch =
+          architectValue !== "" &&
+          architectValue.includes(formattedSearchTerm);
+  
+        return nameMatch || architectMatch;
+      });
     }
-
+  
     setFilteredLandmarks(filtered);
   };
+  
 
   useEffect(() => {
     applyFilters(inputValue, selectedBorough);
