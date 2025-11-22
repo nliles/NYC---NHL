@@ -5,6 +5,8 @@ import { Landmark } from "@/types";
 import SearchBar from "@/components/SearchBar";
 import MobileDrawer from "@/components/MobileDrawer";
 import camelCase from "lodash/camelCase";
+import { Check } from "lucide-react";
+import colors from "@/styles/colors.module.scss";
 
 type Borough =
   | "Manhattan"
@@ -25,10 +27,12 @@ const LandmarkList = ({
   landmarks,
   handleClick,
   selectedLandmarkId,
+  visitedLandmarks = [],
 }: {
   landmarks: Landmark[];
   handleClick: (landmarkId: string) => void;
   selectedLandmarkId?: string;
+  visitedLandmarks: string[];
 }) => {
   const [filteredLandmarks, setFilteredLandmarks] = useState(landmarks);
   const [selectedBorough, setSelectedBorough] = useState<Borough>();
@@ -145,17 +149,22 @@ const LandmarkList = ({
               })}
               onClick={() => handleClick(landmark.id)}
             >
-              <p className={styles.name}>{landmark.name}</p>
-              <div className={styles.landmarkDetails}>
-                {landmark.borough.split(",").map((borough: string) => (
-                  <span
-                    key={borough}
-                    className={cn(styles.borough, styles[camelCase(borough)])}
-                  >
-                    {borough}
-                  </span>
-                ))}
+              <div>
+                <p className={styles.name}>{landmark.name}</p>
+                <div className={styles.landmarkDetails}>
+                  {landmark.borough.split(",").map((borough: string) => (
+                    <span
+                      key={borough}
+                      className={cn(styles.borough, styles[camelCase(borough)])}
+                    >
+                      {borough}
+                    </span>
+                  ))}
+                </div>
               </div>
+              {visitedLandmarks.includes(landmark.id) && (
+                <Check color={colors.lightBlue} size={20} />
+              )}
             </button>
           </li>
         ))}

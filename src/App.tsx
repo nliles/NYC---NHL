@@ -59,6 +59,7 @@ const App = () => {
           handleClick={handleClick}
           landmarks={landmarks}
           selectedLandmarkId={selectedLandmarkId}
+          visitedLandmarks={visitedLandmarks}
         />
         <Map
           landmarks={landmarks}
