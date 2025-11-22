@@ -40,44 +40,57 @@ const LandmarkList = ({
   // Single source of truth for filtering logic
   const applyFilters = (searchTerm: string, borough?: Borough) => {
     let filtered = landmarks;
-  
+
     // Apply borough filter
     if (borough) {
       filtered = filtered.filter((landmark: Landmark) =>
-        landmark.borough.includes(borough)
+        landmark.borough.includes(borough),
       );
     }
-  
+
     const formattedSearchTerm = formatString(searchTerm);
-  
+
     if (formattedSearchTerm !== "") {
       filtered = filtered.filter((landmark) => {
-        const nameMatch = formatString(landmark.name).includes(formattedSearchTerm);
-  
+        const nameMatch = formatString(landmark.name).includes(
+          formattedSearchTerm,
+        );
+
         // Normalize bullets array regardless of Contentful format
         const bulletsArray = Array.isArray(landmark.bullets)
           ? landmark.bullets
           : Array.isArray((landmark.bullets as any)?.bullets)
-          ? (landmark.bullets as any).bullets
-          : [];
-  
+            ? (landmark.bullets as any).bullets
+            : [];
+
         const architectEntry = bulletsArray.find(
-          (b: any) => b.key.toLowerCase() === "architect"
+          (b: any) => b.key.toLowerCase() === "architect",
         );
-  
-        const architectValue = architectEntry ? formatString(architectEntry.value) : "";
-  
+
+        const landscapeArchitectEntry = bulletsArray.find(
+          (b: any) => b.key.toLowerCase() === "landscape architect",
+        );
+
+        const architectValue = architectEntry
+          ? formatString(architectEntry.value)
+          : "";
+        const landscapeArchitectValue = landscapeArchitectEntry
+          ? formatString(landscapeArchitectEntry.value)
+          : "";
+
         const architectMatch =
-          architectValue !== "" &&
-          architectValue.includes(formattedSearchTerm);
-  
-        return nameMatch || architectMatch;
+          architectValue !== "" && architectValue.includes(formattedSearchTerm);
+
+        const landscapeArchitectMatch =
+          landscapeArchitectValue !== "" &&
+          landscapeArchitectValue.includes(formattedSearchTerm);
+
+        return nameMatch || architectMatch || landscapeArchitectMatch;
       });
     }
-  
+
     setFilteredLandmarks(filtered);
   };
-  
 
   useEffect(() => {
     applyFilters(inputValue, selectedBorough);
