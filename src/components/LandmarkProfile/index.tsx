@@ -3,7 +3,6 @@ import styles from "./LandmarkProfile.module.scss";
 import ReactMarkdown from "react-markdown";
 import colors from "@/styles/colors.module.scss";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import { Document } from "@contentful/rich-text-types";
 import remarkBreaks from "remark-breaks";
 import { Landmark } from "@/types";
 import { useState } from "react";
@@ -22,13 +21,9 @@ const LandmarkProfile = ({
   const { name, architect, bullets, moreInfoUrl, quote, quoteAuthor, image } =
     selectedLandmark;
 
-  console.log(selectedItem);
-
-  console.log(architect);
   const { url, title, description } = image;
 
   const openModal = (item: any) => {
-    console.log(item);
     setSelectedItem(item);
   };
 

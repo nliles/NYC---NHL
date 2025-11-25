@@ -43,7 +43,7 @@ const Modal = ({ isOpen, onClose, title, children }: ModalProps) => {
           >
             <X size={28} strokeWidth={1} />
           </button>
-          <p className={styles.copy}>{children}</p>
+          {children}
         </div>
       </div>
     </div>
