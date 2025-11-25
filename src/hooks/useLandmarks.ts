@@ -26,7 +26,7 @@ export const useLandmarks = () => {
                 lat: Number(entry.fields.location.lat),
                 lon: Number(entry.fields.location.lon),
               },
-              architect: entry.fields.architects,
+              architect: entry.fields.architects as any[],
               bullets: Array.isArray(entry.fields.bullets)
                 ? entry.fields.bullets
                 : [],
