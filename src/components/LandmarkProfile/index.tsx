@@ -130,7 +130,6 @@ const LandmarkProfile = ({
       <Modal
         isOpen={!!selectedItem}
         onClose={() => setSelectedItem(undefined)}
-        title={selectedItem?.name}
       >
         {documentToReactComponents(selectedItem?.summary)}
       </Modal>
