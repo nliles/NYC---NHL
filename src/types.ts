@@ -9,6 +9,7 @@ export type LandmarkFields = {
   name: EntryFieldTypes.Symbol;
   borough: EntryFieldTypes.Symbol;
   location: EntryFieldTypes.Location;
+  architects?: EntryFieldTypes.Array<any>;
   bullets: EntryFieldTypes.Object<Bullet[]>;
   moreInfoUrl: EntryFieldTypes.Symbol;
   image: Asset;
@@ -28,6 +29,7 @@ export type Landmark = {
   id: string;
   name: string;
   borough: string;
+  architect?: any[];
   location: { lat: number; lon: number };
   bullets: Bullet[];
   moreInfoUrl: string;

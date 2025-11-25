@@ -237,3 +237,12 @@
   margin: 0;
   font-weight: 400;
 }
+
+.modalButton {
+  all: unset;
+  color: colors.$lightBlue;
+
+  &:focus {
+    outline: none;
+  }
+}

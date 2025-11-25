@@ -1,9 +1,13 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Info } from "lucide-react";
 import styles from "./LandmarkProfile.module.scss";
 import ReactMarkdown from "react-markdown";
 import colors from "@/styles/colors.module.scss";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { Document } from "@contentful/rich-text-types";
 import remarkBreaks from "remark-breaks";
 import { Landmark } from "@/types";
+import { useState } from "react";
+import Modal from "../Modal";
 
 const LandmarkProfile = ({
   selectedLandmark,
@@ -14,9 +18,20 @@ const LandmarkProfile = ({
   onChange: (visited: boolean) => void;
   isVisited?: boolean;
 }) => {
-  const { name, bullets, moreInfoUrl, quote, quoteAuthor, image } =
+  const [selectedItem, setSelectedItem] = useState<any>();
+  const { name, architect, bullets, moreInfoUrl, quote, quoteAuthor, image } =
     selectedLandmark;
+
+  console.log(selectedItem);
+
+  console.log(architect);
   const { url, title, description } = image;
+
+  const openModal = (item: any) => {
+    console.log(item);
+    setSelectedItem(item);
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.content}>
@@ -38,12 +53,45 @@ const LandmarkProfile = ({
             )}
             {bullets && (
               <ul className={styles.bulletList}>
-                {bullets.map((item) => (
-                  <li key={item.key} className={styles.bulletItem}>
-                    <p className={styles.key}>{item.key}</p>
-                    <p className={styles.value}>{item.value}</p>
-                  </li>
-                ))}
+                {bullets.map((item) => {
+                  if (
+                    (item.key === "Architect" || item.key === "Architects") &&
+                    architect?.length
+                  ) {
+                    return (
+                      <li key="architect1" className={styles.bulletItem}>
+                        <p className={styles.key}>
+                          {architect.length === 1 ? "Architect" : "Architects"}
+                        </p>
+                        <div className={styles.value}>
+                          {architect.map((a: any) =>
+                            a.fields.summary ? (
+                              <button
+                                type="button"
+                                key={a.fields.name}
+                                onClick={() => openModal(a.fields)}
+                                className={styles.modalButton}
+                              >
+                                {a.fields.name}
+                                <sup>
+                                  <Info color="#6b8e8e" size={12} />
+                                </sup>
+                              </button>
+                            ) : (
+                              <span key={a.fields.name}>{a.fields.name}</span>
+                            ),
+                          )}
+                        </div>
+                      </li>
+                    );
+                  }
+                  return (
+                    <li key={item.key} className={styles.bulletItem}>
+                      <p className={styles.key}>{item.key}</p>
+                      <p className={styles.value}>{item.value}</p>
+                    </li>
+                  );
+                })}
               </ul>
             )}
             {quote && quoteAuthor && (
@@ -84,6 +132,13 @@ const LandmarkProfile = ({
           <ArrowRight strokeWidth={1} size={20} color={colors.lightBlue} />
         </a>
       </div>
+      <Modal
+        isOpen={!!selectedItem}
+        onClose={() => setSelectedItem(undefined)}
+        title={selectedItem?.name}
+      >
+        {documentToReactComponents(selectedItem?.summary)}
+      </Modal>
     </div>
   );
 };
