@@ -17,8 +17,6 @@ export const useLandmarks = () => {
         setLoading(true);
         const response = await getLandmarks();
 
-        console.log(response);
-
         const parsedLandmarks = response.items.map(
           (entry: Entry<LandmarkSkeleton>) => {
             const imageData = entry.fields.image as unknown as Asset;
@@ -27,6 +25,8 @@ export const useLandmarks = () => {
               id: entry.sys.id,
               name: String(entry.fields.name),
               borough: String(entry.fields.borough),
+              built: transformStringField(entry.fields.built as string),
+              founded: transformStringField(entry.fields.founded as string),
               location: {
                 lat: Number(entry.fields.location.lat),
                 lon: Number(entry.fields.location.lon),

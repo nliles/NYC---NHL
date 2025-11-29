@@ -238,9 +238,15 @@
   font-weight: 400;
 }
 
+.link {
+  color: colors.$lightBlue;
+}
+
 .modalButton {
   all: unset;
   color: colors.$lightBlue;
+  cursor: pointer;
+  font-weight: 500;
 
   &:focus {
     outline: none;

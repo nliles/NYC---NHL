@@ -22,7 +22,9 @@ const LandmarkProfile = ({
     name,
     architect,
     architectAttribution,
+    built,
     bullets,
+    founded,
     moreInfoUrl,
     quote,
     quoteAuthor,
@@ -46,6 +48,8 @@ const LandmarkProfile = ({
     { key: "Current", value: current },
   ].filter((item) => item.value);
 
+  console.log(built);
+
   return (
     <div className={styles.container}>
       <div className={styles.content}>
@@ -67,6 +71,18 @@ const LandmarkProfile = ({
             )}
             {bullets && (
               <ul className={styles.bulletList}>
+                {founded && (
+                  <li className={styles.bulletItem}>
+                    <p className={styles.key}>Founded</p>
+                    <p className={styles.value}>{founded}</p>
+                  </li>
+                )}
+                {built && (
+                  <li className={styles.bulletItem}>
+                    <p className={styles.key}>Built</p>
+                    <p className={styles.value}>{built}</p>
+                  </li>
+                )}
                 {bullets.map((item) => {
                   if (
                     (item.key === "Architect" || item.key === "Architects") &&
@@ -98,9 +114,6 @@ const LandmarkProfile = ({
                               ) : (
                                 <span>{a.fields.name}</span>
                               )}
-                              {(index < architect.length - 1 ||
-                                architectAttribution?.length) &&
-                                ", "}
                             </React.Fragment>
                           ))}
 
@@ -126,9 +139,8 @@ const LandmarkProfile = ({
                                 ) : (
                                   <span>{a.fields.architect.fields.name}</span>
                                 )}
-                                {a.fields.attribution &&
-                                  ` (${a.fields.attribution})`}
-                                {index < architectAttribution.length - 1 &&
+                                {(index < architectAttribution.length - 1 ||
+                                  (architectAttribution?.length ?? 0) > 0) &&
                                   ", "}
                               </React.Fragment>
                             ),
@@ -145,9 +157,30 @@ const LandmarkProfile = ({
                   );
                 })}
                 {lastBullets.map((item) => (
-                  <li className={styles.bulletItem} key={item?.key}>
-                    <p className={styles.key}>{item?.key}</p>
-                    <p className={styles.value}>{item?.value}</p>
+                  <li key={item.key} className={styles.bulletItem}>
+                    <p className={styles.key}>{item.key}</p>
+                    {item.key === "Significance" ? (
+                      <div className={styles.value}>
+                        <ReactMarkdown
+                          remarkPlugins={[remarkBreaks]}
+                          components={{
+                            a: ({ node, ...props }) => (
+                              <a
+                                {...props}
+                                className={styles.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              />
+                            ),
+                            p: ({ node, ...props }) => <p {...props} className={styles.value}/>,
+                          }}
+                        >
+                          {item.value as string}
+                        </ReactMarkdown>
+                      </div>
+                    ) : (
+                      <p className={styles.value}>{item.value}</p>
+                    )}
                   </li>
                 ))}
               </ul>

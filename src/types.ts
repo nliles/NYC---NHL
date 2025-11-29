@@ -8,6 +8,8 @@ export type Bullet = {
 export type LandmarkFields = {
   name: EntryFieldTypes.Symbol;
   borough: EntryFieldTypes.Symbol;
+  built: EntryFieldTypes.Symbol;
+  founded?: EntryFieldTypes.Symbol;
   location: EntryFieldTypes.Location;
   architects?: EntryFieldTypes.Array<any>;
   architectAttribution?: EntryFieldTypes.Array<any>;
@@ -31,21 +33,23 @@ type Image = {
 };
 
 export type Landmark = {
-  id: string;
-  name: string;
-  borough: string;
   architect?: any[];
   architectAttribution?: any[];
-  location: { lat: number; lon: number };
+  borough: string;
+  built?: string;
   bullets: Bullet[];
-  moreInfoUrl: string;
+  current?: string;
+  founded?: string;
+  location: { lat: number; lon: number };
+  id: string;
   image: Image;
+  moreInfoUrl: string;
+  name: string;
+  notable?: string;
+  notableFeatures?: string;
   quote?: string;
   quoteAuthor?: string;
-  notableFeatures?: string;
   significance: string;
-  notable?: string;
-  current?: string;
 };
 
 export type MapboxFeature = {
