@@ -14,6 +14,8 @@ export const useLandmarks = () => {
         setLoading(true);
         const response = await getLandmarks();
 
+        console.log(response);
+
         const parsedLandmarks = response.items.map(
           (entry: Entry<LandmarkSkeleton>) => {
             const imageData = entry.fields.image as unknown as Asset;
@@ -26,7 +28,7 @@ export const useLandmarks = () => {
                 lat: Number(entry.fields.location.lat),
                 lon: Number(entry.fields.location.lon),
               },
-              architect: entry.fields.architects as any[],
+              architect: (entry.fields.architectAttribution as any[]) || [],
               bullets: Array.isArray(entry.fields.bullets)
                 ? entry.fields.bullets
                 : [],
@@ -46,6 +48,7 @@ export const useLandmarks = () => {
               quoteAuthor: entry.fields.quoteAuthor
                 ? String(entry.fields.quoteAuthor)
                 : undefined,
+              current: entry.fields.current ? String(entry.fields.current): undefined,
             };
           },
         );

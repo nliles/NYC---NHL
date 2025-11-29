@@ -9,12 +9,13 @@ export type LandmarkFields = {
   name: EntryFieldTypes.Symbol;
   borough: EntryFieldTypes.Symbol;
   location: EntryFieldTypes.Location;
-  architects?: EntryFieldTypes.Array<any>;
+  architectAttribution?: EntryFieldTypes.Array<any>;
   bullets: EntryFieldTypes.Object<Bullet[]>;
   moreInfoUrl: EntryFieldTypes.Symbol;
   image: Asset;
   quote?: EntryFieldTypes.Text;
   quoteAuthor?: EntryFieldTypes.Symbol;
+  current?: EntryFieldTypes.Symbol;
 };
 
 export type LandmarkSkeleton = EntrySkeletonType<LandmarkFields, "nycNhl">;
@@ -36,6 +37,7 @@ export type Landmark = {
   image: Image;
   quote?: string;
   quoteAuthor?: string;
+  current?: string;
 };
 
 export type MapboxFeature = {

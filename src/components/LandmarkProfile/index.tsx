@@ -5,7 +5,7 @@ import colors from "@/styles/colors.module.scss";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import remarkBreaks from "remark-breaks";
 import { Landmark } from "@/types";
-import { useState } from "react";
+import React, { useState } from "react";
 import Modal from "../Modal";
 
 const LandmarkProfile = ({
@@ -18,14 +18,24 @@ const LandmarkProfile = ({
   isVisited?: boolean;
 }) => {
   const [selectedItem, setSelectedItem] = useState<any>();
-  const { name, architect, bullets, moreInfoUrl, quote, quoteAuthor, image } =
-    selectedLandmark;
+  const {
+    name,
+    architect,
+    bullets,
+    moreInfoUrl,
+    quote,
+    quoteAuthor,
+    image,
+    current,
+  } = selectedLandmark;
 
   const { url, title, description } = image;
 
   const openModal = (item: any) => {
     setSelectedItem(item);
   };
+
+  console.log('current value:', current, 'type:', typeof current);
 
   return (
     <div className={styles.container}>
@@ -56,26 +66,36 @@ const LandmarkProfile = ({
                     return (
                       <li key="architect1" className={styles.bulletItem}>
                         <p className={styles.key}>
-                          {architect.length === 1 ? "Architect" : "Architects"}
+                          {architect.length === 1
+                            ? "Architect"
+                            : "Architects"}
                         </p>
                         <div className={styles.value}>
-                          {architect.map((a: any) =>
-                            a.fields.summary ? (
-                              <button
-                                type="button"
-                                key={a.fields.name}
-                                onClick={() => openModal(a.fields)}
-                                className={styles.modalButton}
-                              >
-                                {a.fields.name}
-                                <sup>
-                                  <Info color="#6b8e8e" size={12} />
-                                </sup>
-                              </button>
-                            ) : (
-                              <span key={a.fields.name}>{a.fields.name}</span>
-                            ),
-                          )}
+                          {architect.map((a: any, index: number) => (
+                            <React.Fragment
+                              key={a.fields.architect.fields.name}
+                            >
+                              {a.fields.architect.fields.summary ? (
+                                <button
+                                  type="button"
+                                  onClick={() =>
+                                    openModal(a.fields.architect.fields)
+                                  }
+                                  className={styles.modalButton}
+                                >
+                                  {a.fields.architect.fields.name}
+                                  <sup>
+                                    <Info color="#6b8e8e" size={12} />
+                                  </sup>
+                                </button>
+                              ) : (
+                                <span>{a.fields.architect.fields.name}</span>
+                              )}
+                              {a.fields.attribution &&
+                                ` (${a.fields.attribution})`}
+                              {index < architect.length - 1 && ", "}
+                            </React.Fragment>
+                          ))}
                         </div>
                       </li>
                     );
@@ -87,6 +107,12 @@ const LandmarkProfile = ({
                     </li>
                   );
                 })}
+                {current && (
+                  <li className={styles.bulletItem}>
+                    <p className={styles.key}>Current</p>
+                    <p className={styles.value}>{current}</p>
+                  </li>
+                )}
               </ul>
             )}
             {quote && quoteAuthor && (
@@ -127,10 +153,7 @@ const LandmarkProfile = ({
           <ArrowRight strokeWidth={1} size={20} color={colors.lightBlue} />
         </a>
       </div>
-      <Modal
-        isOpen={!!selectedItem}
-        onClose={() => setSelectedItem(undefined)}
-      >
+      <Modal isOpen={!!selectedItem} onClose={() => setSelectedItem(undefined)}>
         {documentToReactComponents(selectedItem?.summary)}
       </Modal>
     </div>
