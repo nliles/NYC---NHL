@@ -16,6 +16,9 @@ export type LandmarkFields = {
   image: Asset;
   quote?: EntryFieldTypes.Text;
   quoteAuthor?: EntryFieldTypes.Symbol;
+  notableFeatures?: EntryFieldTypes.Symbol;
+  significance: EntryFieldTypes.Symbol;
+  notable?: EntryFieldTypes.Symbol;
   current?: EntryFieldTypes.Symbol;
 };
 
@@ -39,6 +42,9 @@ export type Landmark = {
   image: Image;
   quote?: string;
   quoteAuthor?: string;
+  notableFeatures?: string;
+  significance: string;
+  notable?: string;
   current?: string;
 };
 

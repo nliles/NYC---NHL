@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Asset, Entry } from "contentful";
+import { Asset, Entry, EntryFieldTypes } from "contentful";
 import { getLandmarks } from "@/services/contentful";
 import { LandmarkSkeleton, Landmark } from "../types";
 
@@ -9,6 +9,9 @@ export const useLandmarks = () => {
   const [error, setError] = useState<Error | null>(null);
 
   useEffect(() => {
+    const transformStringField = (field?: string) =>
+      field ? String(field) : undefined;
+
     const fetchLandmarks = async () => {
       try {
         setLoading(true);
@@ -44,15 +47,16 @@ export const useLandmarks = () => {
                   ? String(imageData?.fields?.description)
                   : undefined,
               },
-              quote: entry.fields.quote
-                ? String(entry.fields.quote)
-                : undefined,
-              quoteAuthor: entry.fields.quoteAuthor
-                ? String(entry.fields.quoteAuthor)
-                : undefined,
-              current: entry.fields.current
-                ? String(entry.fields.current)
-                : undefined,
+              quote: transformStringField(entry.fields.quote as string),
+              quoteAuthor: transformStringField(
+                entry.fields.quoteAuthor as string,
+              ),
+              notableFeatures: transformStringField(
+                entry.fields.notableFeatures as string,
+              ),
+              significance: String(entry.fields.significance),
+              notable: transformStringField(entry.fields.notable as string),
+              current: transformStringField(entry.fields.current as string),
             };
           },
         );

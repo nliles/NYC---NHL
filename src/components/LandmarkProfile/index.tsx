@@ -27,7 +27,10 @@ const LandmarkProfile = ({
     quote,
     quoteAuthor,
     image,
+    notableFeatures,
+    notable,
     current,
+    significance,
   } = selectedLandmark;
 
   const { url, title, description } = image;
@@ -36,7 +39,12 @@ const LandmarkProfile = ({
     setSelectedItem(item);
   };
 
-  console.log(architect);
+  const lastBullets = [
+    { key: "Notable Features", value: notableFeatures },
+    { key: "Significance", value: significance },
+    { key: "Notable", value: notable },
+    { key: "Current", value: current },
+  ].filter((item) => item.value);
 
   return (
     <div className={styles.container}>
@@ -136,12 +144,12 @@ const LandmarkProfile = ({
                     </li>
                   );
                 })}
-                {current && (
-                  <li className={styles.bulletItem}>
-                    <p className={styles.key}>Current</p>
-                    <p className={styles.value}>{current}</p>
+                {lastBullets.map((item) => (
+                  <li className={styles.bulletItem} key={item?.key}>
+                    <p className={styles.key}>{item?.key}</p>
+                    <p className={styles.value}>{item?.value}</p>
                   </li>
-                )}
+                ))}
               </ul>
             )}
             {quote && quoteAuthor && (
