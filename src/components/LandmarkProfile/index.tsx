@@ -82,9 +82,9 @@ const LandmarkProfile = ({
               <ul className={styles.bulletList}>
                 {firstBullets.map((item) => (
                   <li className={styles.bulletItem}>
-                  <p className={styles.key}>{item.key}</p>
-                  <p className={styles.value}>{item.value}</p>
-                </li>
+                    <p className={styles.key}>{item.key}</p>
+                    <p className={styles.value}>{item.value}</p>
+                  </li>
                 ))}
                 {bullets.map((item) => {
                   if (
@@ -117,6 +117,9 @@ const LandmarkProfile = ({
                               ) : (
                                 <span>{a.fields.name}</span>
                               )}
+                              {(index < architect.length - 1 ||
+                                (architect?.length ?? 0) > 0) &&
+                                ", "}
                             </React.Fragment>
                           ))}
 
@@ -175,7 +178,9 @@ const LandmarkProfile = ({
                                 rel="noopener noreferrer"
                               />
                             ),
-                            p: ({ node, ...props }) => <p {...props} className={styles.value}/>,
+                            p: ({ node, ...props }) => (
+                              <p {...props} className={styles.value} />
+                            ),
                           }}
                         >
                           {item.value as string}
