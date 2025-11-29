@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Asset, Entry, EntryFieldTypes } from "contentful";
+import { Asset, Entry } from "contentful";
 import { getLandmarks } from "@/services/contentful";
 import { LandmarkSkeleton, Landmark } from "../types";
 
