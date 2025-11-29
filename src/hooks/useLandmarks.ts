@@ -47,10 +47,12 @@ export const useLandmarks = () => {
                   ? String(imageData?.fields?.description)
                   : undefined,
               },
+              height: transformStringField(entry.fields.height as string),
               quote: transformStringField(entry.fields.quote as string),
               quoteAuthor: transformStringField(
                 entry.fields.quoteAuthor as string,
               ),
+              size: transformStringField(entry.fields.size as string),
               notableFeatures: transformStringField(
                 entry.fields.notableFeatures as string,
               ),

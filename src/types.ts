@@ -15,6 +15,8 @@ export type LandmarkFields = {
   architectAttribution?: EntryFieldTypes.Array<any>;
   bullets: EntryFieldTypes.Object<Bullet[]>;
   moreInfoUrl: EntryFieldTypes.Symbol;
+  height?: EntryFieldTypes.Symbol;
+  size?: EntryFieldTypes.Symbol;
   image: Asset;
   quote?: EntryFieldTypes.Text;
   quoteAuthor?: EntryFieldTypes.Symbol;
@@ -41,6 +43,8 @@ export type Landmark = {
   current?: string;
   founded?: string;
   location: { lat: number; lon: number };
+  height?: string;
+  size?: string;
   id: string;
   image: Image;
   moreInfoUrl: string;

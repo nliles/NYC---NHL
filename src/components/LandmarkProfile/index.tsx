@@ -25,9 +25,11 @@ const LandmarkProfile = ({
     built,
     bullets,
     founded,
+    height,
     moreInfoUrl,
     quote,
     quoteAuthor,
+    size,
     image,
     notableFeatures,
     notable,
@@ -47,6 +49,8 @@ const LandmarkProfile = ({
   ].filter((item) => item.value);
 
   const lastBullets = [
+    { key: "Height", value: height },
+    { key: "Size", value: size },
     { key: "Notable Features", value: notableFeatures },
     { key: "Significance", value: significance },
     { key: "Notable", value: notable },
