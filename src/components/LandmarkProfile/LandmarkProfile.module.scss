@@ -240,6 +240,11 @@
 
 .link {
   color: colors.$lightBlue;
+
+  &:hover {
+    color: colors.$lightBlue;
+    text-decoration: underline;
+  }
 }
 
 .modalButton {

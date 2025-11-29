@@ -41,6 +41,11 @@ const LandmarkProfile = ({
     setSelectedItem(item);
   };
 
+  const firstBullets = [
+    { key: "Founded", value: founded },
+    { key: "Built", value: built },
+  ].filter((item) => item.value);
+
   const lastBullets = [
     { key: "Notable Features", value: notableFeatures },
     { key: "Significance", value: significance },
@@ -71,18 +76,12 @@ const LandmarkProfile = ({
             )}
             {bullets && (
               <ul className={styles.bulletList}>
-                {founded && (
+                {firstBullets.map((item) => (
                   <li className={styles.bulletItem}>
-                    <p className={styles.key}>Founded</p>
-                    <p className={styles.value}>{founded}</p>
-                  </li>
-                )}
-                {built && (
-                  <li className={styles.bulletItem}>
-                    <p className={styles.key}>Built</p>
-                    <p className={styles.value}>{built}</p>
-                  </li>
-                )}
+                  <p className={styles.key}>{item.key}</p>
+                  <p className={styles.value}>{item.value}</p>
+                </li>
+                ))}
                 {bullets.map((item) => {
                   if (
                     (item.key === "Architect" || item.key === "Architects") &&
