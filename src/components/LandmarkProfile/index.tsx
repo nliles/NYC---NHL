@@ -21,6 +21,7 @@ const LandmarkProfile = ({
   const {
     name,
     architect,
+    architectAttribution,
     bullets,
     moreInfoUrl,
     quote,
@@ -35,7 +36,7 @@ const LandmarkProfile = ({
     setSelectedItem(item);
   };
 
-  console.log('current value:', current, 'type:', typeof current);
+  console.log(architect);
 
   return (
     <div className={styles.container}>
@@ -61,41 +62,69 @@ const LandmarkProfile = ({
                 {bullets.map((item) => {
                   if (
                     (item.key === "Architect" || item.key === "Architects") &&
-                    architect?.length
+                    (architect?.length || architectAttribution?.length)
                   ) {
+                    const totalArchitects =
+                      (architect?.length || 0) +
+                      (architectAttribution?.length || 0);
                     return (
                       <li key="architect1" className={styles.bulletItem}>
                         <p className={styles.key}>
-                          {architect.length === 1
-                            ? "Architect"
-                            : "Architects"}
+                          {totalArchitects === 1 ? "Architect" : "Architects"}
                         </p>
                         <div className={styles.value}>
-                          {architect.map((a: any, index: number) => (
-                            <React.Fragment
-                              key={a.fields.architect.fields.name}
-                            >
-                              {a.fields.architect.fields.summary ? (
+                          {/* Render simple architects first */}
+                          {architect?.map((a: any, index: number) => (
+                            <React.Fragment key={a.fields.name}>
+                              {a.fields.summary ? (
                                 <button
                                   type="button"
-                                  onClick={() =>
-                                    openModal(a.fields.architect.fields)
-                                  }
+                                  onClick={() => openModal(a.fields)}
                                   className={styles.modalButton}
                                 >
-                                  {a.fields.architect.fields.name}
+                                  {a.fields.name}
                                   <sup>
                                     <Info color="#6b8e8e" size={12} />
                                   </sup>
                                 </button>
                               ) : (
-                                <span>{a.fields.architect.fields.name}</span>
+                                <span>{a.fields.name}</span>
                               )}
-                              {a.fields.attribution &&
-                                ` (${a.fields.attribution})`}
-                              {index < architect.length - 1 && ", "}
+                              {(index < architect.length - 1 ||
+                                architectAttribution?.length) &&
+                                ", "}
                             </React.Fragment>
                           ))}
+
+                          {/* Render architects with attributions */}
+                          {architectAttribution?.map(
+                            (a: any, index: number) => (
+                              <React.Fragment
+                                key={a.fields.architect.fields.name}
+                              >
+                                {a.fields.architect.fields.summary ? (
+                                  <button
+                                    type="button"
+                                    onClick={() =>
+                                      openModal(a.fields.architect.fields)
+                                    }
+                                    className={styles.modalButton}
+                                  >
+                                    {a.fields.architect.fields.name}
+                                    <sup>
+                                      <Info color="#6b8e8e" size={12} />
+                                    </sup>
+                                  </button>
+                                ) : (
+                                  <span>{a.fields.architect.fields.name}</span>
+                                )}
+                                {a.fields.attribution &&
+                                  ` (${a.fields.attribution})`}
+                                {index < architectAttribution.length - 1 &&
+                                  ", "}
+                              </React.Fragment>
+                            ),
+                          )}
                         </div>
                       </li>
                     );

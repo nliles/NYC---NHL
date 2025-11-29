@@ -28,7 +28,9 @@ export const useLandmarks = () => {
                 lat: Number(entry.fields.location.lat),
                 lon: Number(entry.fields.location.lon),
               },
-              architect: (entry.fields.architectAttribution as any[]) || [],
+              architect: (entry.fields.architects as any[]) || [],
+              architectAttribution:
+                (entry.fields.architectAttribution as any[]) || [],
               bullets: Array.isArray(entry.fields.bullets)
                 ? entry.fields.bullets
                 : [],
@@ -48,7 +50,9 @@ export const useLandmarks = () => {
               quoteAuthor: entry.fields.quoteAuthor
                 ? String(entry.fields.quoteAuthor)
                 : undefined,
-              current: entry.fields.current ? String(entry.fields.current): undefined,
+              current: entry.fields.current
+                ? String(entry.fields.current)
+                : undefined,
             };
           },
         );
