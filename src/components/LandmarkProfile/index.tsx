@@ -8,39 +8,50 @@ import { Landmark } from "@/types";
 import React, { useState } from "react";
 import Modal from "../Modal";
 
-const ArchitectListItem = ({
+const ReferenceList = ({
   name,
   summary,
   attribution,
   onClick,
   isLastItem,
+  showParenthesis,
 }: {
   name: string;
   summary: string;
   attribution?: string;
   onClick: () => void;
   isLastItem?: boolean;
-}) => (
-  <React.Fragment key={name}>
-    {summary ? (
-      <>
-        <button type="button" onClick={onClick} className={styles.modalButton}>
-          {name}
-          <sup>
-            <Info color="#6b8e8e" size={12} />
-          </sup>
-        </button>
-        {attribution && <span> ({attribution})</span>}
-      </>
-    ) : (
-      <div>
-        <span>{name}</span>
-        {attribution && <span> ({attribution})</span>}
-      </div>
-    )}
-    {!isLastItem && ", "}
-  </React.Fragment>
-);
+  showParenthesis?: boolean;
+}) => {
+  const attributionText = showParenthesis
+    ? ` (${attribution})`
+    : ` ${attribution}`;
+  return (
+    <React.Fragment key={name}>
+      {summary ? (
+        <>
+          <button
+            type="button"
+            onClick={onClick}
+            className={styles.modalButton}
+          >
+            {name}
+            <sup>
+              <Info color="#6b8e8e" size={12} />
+            </sup>
+          </button>
+          {attribution && <span>{attributionText}</span>}
+        </>
+      ) : (
+        <span className={styles.noWrap}>
+          <span>{name}</span>
+          {attribution && <span>{attributionText}</span>}
+        </span>
+      )}
+      {!isLastItem && ", "}
+    </React.Fragment>
+  );
+};
 
 const LandmarkProfile = ({
   selectedLandmark,
@@ -56,9 +67,11 @@ const LandmarkProfile = ({
     name,
     architect,
     architectAttribution,
+    architecturalStyle,
     built,
     bullets,
     founded,
+    founder,
     height,
     moreInfoUrl,
     nickname,
@@ -67,6 +80,7 @@ const LandmarkProfile = ({
     size,
     image,
     lenapeName,
+    residentAttribution,
     otherNames,
     notableFeatures,
     notable,
@@ -86,6 +100,7 @@ const LandmarkProfile = ({
     { key: "Nickname", value: nickname },
     { key: "Other Names", value: otherNames },
     { key: "Founded", value: founded },
+    { key: "Founder", value: founder },
     { key: "Built", value: built },
     { key: "Rediscovered", value: rediscovered },
   ].filter((item) => item.value);
@@ -98,6 +113,8 @@ const LandmarkProfile = ({
     { key: "Notable", value: notable },
     { key: "Current", value: current },
   ].filter((item) => item.value);
+
+  console.log(architecturalStyle);
 
   return (
     <div className={styles.container}>
@@ -126,7 +143,7 @@ const LandmarkProfile = ({
                 </li>
               ))}
               {(!!architect?.length || !!architectAttribution?.length) && (
-                <li key="architects" className={styles.bulletItem}>
+                <li className={styles.bulletItem}>
                   <p className={styles.key}>
                     {(architect?.length || 0) +
                       (architectAttribution?.length || 0) ===
@@ -136,25 +153,63 @@ const LandmarkProfile = ({
                   </p>
                   <div className={styles.value}>
                     {architect?.map((a: any, index: number) => (
-                      <ArchitectListItem
+                      <ReferenceList
                         key={a.fields.name}
                         name={a.fields.name}
                         summary={a.fields.summary}
                         onClick={() => openModal(a.fields)}
-                        isLastItem={
-                          index === architect.length - 1 &&
-                          (architectAttribution?.length ?? 0) === 0
-                        }
+                        isLastItem={index === architect.length - 1}
+                        showParenthesis
                       />
                     ))}
                     {architectAttribution?.map((a: any, index: number) => (
-                      <ArchitectListItem
+                      <ReferenceList
                         key={a.fields.architect.fields.name}
                         name={a.fields.architect.fields.name}
                         summary={a.fields.architect.fields.summary}
                         attribution={a.fields.attribution}
                         onClick={() => openModal(a.fields.architect.fields)}
                         isLastItem={index === architectAttribution.length - 1}
+                        showParenthesis
+                      />
+                    ))}
+                  </div>
+                </li>
+              )}
+              {!!architecturalStyle?.length && (
+                <li className={styles.bulletItem}>
+                  <p className={styles.key}>Architectural Style</p>
+                  <div className={styles.value}>
+                    {architecturalStyle?.map((a: any, index: number) => (
+                      <ReferenceList
+                        key={a.fields.name}
+                        name={a.fields.name}
+                        summary={a.fields.summary}
+                        onClick={() => openModal(a.fields.resident.fields)}
+                        isLastItem={index === architecturalStyle.length - 1}
+                      />
+                    ))}
+                  </div>
+                </li>
+              )}
+              {!!residentAttribution?.length && (
+                <li className={styles.bulletItem}>
+                  <p className={styles.key}>
+                    {(residentAttribution?.length || 0) +
+                      (residentAttribution?.length || 0) ===
+                    1
+                      ? "Resident"
+                      : "Residents"}
+                  </p>
+                  <div className={styles.value}>
+                    {residentAttribution?.map((a: any, index: number) => (
+                      <ReferenceList
+                        key={a.fields.resident.fields.name}
+                        name={a.fields.resident.fields.name}
+                        summary={a.fields.resident.fields.summary}
+                        attribution={a.fields.attribution}
+                        onClick={() => openModal(a.fields.resident.fields)}
+                        isLastItem={index === residentAttribution.length - 1}
                       />
                     ))}
                   </div>

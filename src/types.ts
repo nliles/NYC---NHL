@@ -5,15 +5,24 @@ export type Bullet = {
   value: string;
 };
 
+type ArchitectEntry = {
+  fields: {
+    name: string;
+    summary: any; // Contentful Rich Text or string
+  };
+};
+
 export type LandmarkFields = {
   name: EntryFieldTypes.Symbol;
   borough: EntryFieldTypes.Symbol;
   built: EntryFieldTypes.Symbol;
   founded?: EntryFieldTypes.Symbol;
+  founder?: EntryFieldTypes.Symbol;
   location: EntryFieldTypes.Location;
   architects?: EntryFieldTypes.Array<any>;
   architectAttribution?: EntryFieldTypes.Array<any>;
   architecturalStyle?: EntryFieldTypes.Array<any>;
+  residentAttribution?: EntryFieldTypes.Array<any>;
   bullets: EntryFieldTypes.Object<Bullet[]>;
   moreInfoUrl: EntryFieldTypes.Symbol;
   nickname?: EntryFieldTypes.Symbol;
@@ -40,7 +49,7 @@ type Image = {
 };
 
 export type Landmark = {
-  architect?: any[];
+  architect?: ArchitectEntry[];
   architectAttribution?: any[];
   architecturalStyle?: any[];
   borough: string;
@@ -48,6 +57,8 @@ export type Landmark = {
   bullets: Bullet[];
   current?: string;
   founded?: string;
+  founder?: string;
+  residentAttribution?: any[];
   location: { lat: number; lon: number };
   height?: string;
   size?: string;

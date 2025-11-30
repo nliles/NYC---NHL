@@ -28,6 +28,7 @@ export const useLandmarks = () => {
               borough: String(borough),
               built: transformStringField(entry.fields.built as string),
               founded: transformStringField(entry.fields.founded as string),
+              founder: transformStringField(entry.fields.founder as string),
               location: {
                 lat: Number(location.lat),
                 lon: Number(location.lon),
@@ -65,6 +66,8 @@ export const useLandmarks = () => {
               rediscovered: transformStringField(
                 entry.fields.rediscovered as string,
               ),
+              residentAttribution:
+                (entry.fields.residentAttribution as any[]) || [],
               size: transformStringField(entry.fields.size as string),
               notableFeatures: transformStringField(
                 entry.fields.notableFeatures as string,
