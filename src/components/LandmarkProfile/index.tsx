@@ -114,8 +114,6 @@ const LandmarkProfile = ({
     { key: "Current", value: current },
   ].filter((item) => item.value);
 
-  console.log(architecturalStyle);
-
   return (
     <div className={styles.container}>
       <div className={styles.content}>
