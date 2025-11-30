@@ -41,7 +41,11 @@ const LandmarkList = ({
   const formatString = (str: string) =>
     str.toLowerCase().replace(/[.,]/g, "").replace(/\s+/g, "");
 
-  // Single source of truth for filtering logic
+  const isSearchTermMatch = (value: string | undefined, searchTerm: string): boolean => {
+    if (!value) return false;
+    return formatString(value).includes(searchTerm);
+  };
+  
   const applyFilters = (searchTerm: string, borough?: Borough) => {
     let filtered = landmarks;
 
@@ -56,40 +60,29 @@ const LandmarkList = ({
 
     if (formattedSearchTerm !== "") {
       filtered = filtered.filter((landmark) => {
-        const nameMatch = formatString(landmark.name).includes(
-          formattedSearchTerm,
+        // 1. Check Landmark Name
+        const nameMatch = isSearchTermMatch(landmark.name, formattedSearchTerm);
+        if (nameMatch) return true;
+
+        // Check direct 'architect' references
+        const architectMatch = landmark.architect?.some((a: any) => 
+          isSearchTermMatch(a.fields.name, formattedSearchTerm)
         );
+        if (architectMatch) return true;
 
-        // Normalize bullets array regardless of Contentful format
-        const bulletsArray = Array.isArray(landmark.bullets)
-          ? landmark.bullets
-          : Array.isArray((landmark.bullets as any)?.bullets)
-            ? (landmark.bullets as any).bullets
-            : [];
-
-        const architectEntry = bulletsArray.find(
-          (b: any) => b.key.toLowerCase() === "architect",
+        // Check 'architectAttribution' references
+        const attributionArchitectMatch = landmark.architectAttribution?.some((a: any) => 
+          isSearchTermMatch(a.fields.architect?.fields?.name, formattedSearchTerm)
         );
+        if (attributionArchitectMatch) return true;
 
-        const landscapeArchitectEntry = bulletsArray.find(
-          (b: any) => b.key.toLowerCase() === "landscape architect",
+        // Check 'residentAttribution' references
+        const residentMatch = landmark.residentAttribution?.some((r: any) => 
+          isSearchTermMatch(r.fields.resident?.fields?.name, formattedSearchTerm)
         );
-
-        const architectValue = architectEntry
-          ? formatString(architectEntry.value)
-          : "";
-        const landscapeArchitectValue = landscapeArchitectEntry
-          ? formatString(landscapeArchitectEntry.value)
-          : "";
-
-        const architectMatch =
-          architectValue !== "" && architectValue.includes(formattedSearchTerm);
-
-        const landscapeArchitectMatch =
-          landscapeArchitectValue !== "" &&
-          landscapeArchitectValue.includes(formattedSearchTerm);
-
-        return nameMatch || architectMatch || landscapeArchitectMatch;
+        if (residentMatch) return true;
+        
+        return false;
       });
     }
 
@@ -102,12 +95,14 @@ const LandmarkList = ({
 
   const handleOnChange = (inputValue: string) => {
     setInputValue(inputValue);
-    applyFilters(inputValue, selectedBorough);
+    // Passing the current state of selectedBorough ensures it's used in the filter
+    applyFilters(inputValue, selectedBorough); 
   };
 
   const toggleBorough = (borough: Borough) => {
-    setSelectedBorough(borough === selectedBorough ? undefined : borough);
-    applyFilters(inputValue, borough);
+    const newBorough = borough === selectedBorough ? undefined : borough;
+    setSelectedBorough(newBorough);
+    applyFilters(inputValue, newBorough);
   };
 
   const filterCopy =
