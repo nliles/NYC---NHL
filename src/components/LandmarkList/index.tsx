@@ -41,11 +41,14 @@ const LandmarkList = ({
   const formatString = (str: string) =>
     str.toLowerCase().replace(/[.,]/g, "").replace(/\s+/g, "");
 
-  const isSearchTermMatch = (value: string | undefined, searchTerm: string): boolean => {
+  const isSearchTermMatch = (
+    value: string | undefined,
+    searchTerm: string,
+  ): boolean => {
     if (!value) return false;
     return formatString(value).includes(searchTerm);
   };
-  
+
   const applyFilters = (searchTerm: string, borough?: Borough) => {
     let filtered = landmarks;
 
@@ -65,17 +68,21 @@ const LandmarkList = ({
         if (nameMatch) return true;
 
         // Check direct 'architect' references
-        const architectMatch = landmark.architect?.some((a: any) => 
-          isSearchTermMatch(a.fields.name, formattedSearchTerm)
+        const architectMatch = landmark.architect?.some((a: any) =>
+          isSearchTermMatch(a.fields.name, formattedSearchTerm),
         );
         if (architectMatch) return true;
 
         // Check 'architectAttribution' references
-        const attributionArchitectMatch = landmark.architectAttribution?.some((a: any) => 
-          isSearchTermMatch(a.fields.architect?.fields?.name, formattedSearchTerm)
+        const attributionArchitectMatch = landmark.architectAttribution?.some(
+          (a: any) =>
+            isSearchTermMatch(
+              a.fields.architect?.fields?.name,
+              formattedSearchTerm,
+            ),
         );
         if (attributionArchitectMatch) return true;
-        
+
         return false;
       });
     }
@@ -90,7 +97,7 @@ const LandmarkList = ({
   const handleOnChange = (inputValue: string) => {
     setInputValue(inputValue);
     // Passing the current state of selectedBorough ensures it's used in the filter
-    applyFilters(inputValue, selectedBorough); 
+    applyFilters(inputValue, selectedBorough);
   };
 
   const toggleBorough = (borough: Borough) => {
