@@ -11,24 +11,32 @@ import Modal from "../Modal";
 const ArchitectListItem = ({
   name,
   summary,
+  attribution,
   onClick,
   isLastItem,
 }: {
   name: string;
   summary: string;
+  attribution?: string;
   onClick: () => void;
   isLastItem?: boolean;
 }) => (
   <React.Fragment key={name}>
     {summary ? (
-      <button type="button" onClick={onClick} className={styles.modalButton}>
-        {name}
-        <sup>
-          <Info color="#6b8e8e" size={12} />
-        </sup>
-      </button>
+      <>
+        <button type="button" onClick={onClick} className={styles.modalButton}>
+          {name}
+          <sup>
+            <Info color="#6b8e8e" size={12} />
+          </sup>
+        </button>
+        {attribution && <span> ({attribution})</span>}
+      </>
     ) : (
-      <span>{name}</span>
+      <div>
+        <span>{name}</span>
+        {attribution && <span> ({attribution})</span>}
+      </div>
     )}
     {!isLastItem && ", "}
   </React.Fragment>
@@ -48,7 +56,6 @@ const LandmarkProfile = ({
     name,
     architect,
     architectAttribution,
-    architecturalStyle,
     built,
     bullets,
     founded,
@@ -67,8 +74,6 @@ const LandmarkProfile = ({
     rediscovered,
     significance,
   } = selectedLandmark;
-
-  console.log(architecturalStyle);
 
   const { url, title, description } = image;
 
@@ -115,7 +120,7 @@ const LandmarkProfile = ({
             )}
             <ul className={styles.bulletList}>
               {firstBullets.map((item) => (
-                <li className={styles.bulletItem}>
+                <li className={styles.bulletItem} key={item.value}>
                   <p className={styles.key}>{item.key}</p>
                   <p className={styles.value}>{item.value}</p>
                 </li>
@@ -147,6 +152,7 @@ const LandmarkProfile = ({
                         key={a.fields.architect.fields.name}
                         name={a.fields.architect.fields.name}
                         summary={a.fields.architect.fields.summary}
+                        attribution={a.fields.attribution}
                         onClick={() => openModal(a.fields.architect.fields)}
                         isLastItem={index === architectAttribution.length - 1}
                       />

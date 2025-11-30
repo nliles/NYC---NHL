@@ -6,7 +6,6 @@ export const getLandmarks = (): Promise<EntryCollection<LandmarkSkeleton>> => {
   return client.withoutUnresolvableLinks.getEntries<LandmarkSkeleton>({
     content_type: "nycNhl",
     limit: 120,
-    include: 2,
     order: ["fields.name"],
   });
 };

@@ -20,16 +20,17 @@ export const useLandmarks = () => {
         const parsedLandmarks = response.items.map(
           (entry: Entry<LandmarkSkeleton>) => {
             const imageData = entry.fields.image as unknown as Asset;
+            const { name, borough, location, significance } = entry.fields;
 
             return {
               id: entry.sys.id,
-              name: String(entry.fields.name),
-              borough: String(entry.fields.borough),
+              name: String(name),
+              borough: String(borough),
               built: transformStringField(entry.fields.built as string),
               founded: transformStringField(entry.fields.founded as string),
               location: {
-                lat: Number(entry.fields.location.lat),
-                lon: Number(entry.fields.location.lon),
+                lat: Number(location.lat),
+                lon: Number(location.lon),
               },
               architect: (entry.fields.architects as any[]) || [],
               architectAttribution:
@@ -68,7 +69,7 @@ export const useLandmarks = () => {
               notableFeatures: transformStringField(
                 entry.fields.notableFeatures as string,
               ),
-              significance: String(entry.fields.significance),
+              significance: String(significance),
               notable: transformStringField(entry.fields.notable as string),
               current: transformStringField(entry.fields.current as string),
             };
