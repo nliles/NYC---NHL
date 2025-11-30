@@ -60,7 +60,7 @@ const LandmarkList = ({
 
     if (formattedSearchTerm !== "") {
       filtered = filtered.filter((landmark) => {
-        // 1. Check Landmark Name
+        // Check Landmark Name
         const nameMatch = isSearchTermMatch(landmark.name, formattedSearchTerm);
         if (nameMatch) return true;
 
@@ -75,12 +75,6 @@ const LandmarkList = ({
           isSearchTermMatch(a.fields.architect?.fields?.name, formattedSearchTerm)
         );
         if (attributionArchitectMatch) return true;
-
-        // Check 'residentAttribution' references
-        const residentMatch = landmark.residentAttribution?.some((r: any) => 
-          isSearchTermMatch(r.fields.resident?.fields?.name, formattedSearchTerm)
-        );
-        if (residentMatch) return true;
         
         return false;
       });
