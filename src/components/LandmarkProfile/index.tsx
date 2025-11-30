@@ -8,6 +8,40 @@ import { Landmark } from "@/types";
 import React, { useState } from "react";
 import Modal from "../Modal";
 
+const ArchitectListItem = ({
+  name,
+  summary,
+  attribution,
+  onClick,
+  isLastItem,
+}: {
+  name: string;
+  summary: string;
+  attribution?: string;
+  onClick: () => void;
+  isLastItem?: boolean;
+}) => (
+  <React.Fragment key={name}>
+    {summary ? (
+      <>
+        <button type="button" onClick={onClick} className={styles.modalButton}>
+          {name}
+          <sup>
+            <Info color="#6b8e8e" size={12} />
+          </sup>
+        </button>
+        {attribution && <span> ({attribution})</span>}
+      </>
+    ) : (
+      <div>
+        <span>{name}</span>
+        {attribution && <span> ({attribution})</span>}
+      </div>
+    )}
+    {!isLastItem && ", "}
+  </React.Fragment>
+);
+
 const LandmarkProfile = ({
   selectedLandmark,
   onChange,
@@ -27,13 +61,17 @@ const LandmarkProfile = ({
     founded,
     height,
     moreInfoUrl,
+    nickname,
     quote,
     quoteAuthor,
     size,
     image,
+    lenapeName,
+    otherNames,
     notableFeatures,
     notable,
     current,
+    rediscovered,
     significance,
   } = selectedLandmark;
 
@@ -44,8 +82,12 @@ const LandmarkProfile = ({
   };
 
   const firstBullets = [
+    { key: "Lenape Name", value: lenapeName },
+    { key: "Nickname", value: nickname },
+    { key: "Other Names", value: otherNames },
     { key: "Founded", value: founded },
     { key: "Built", value: built },
+    { key: "Rediscovered", value: rediscovered },
   ].filter((item) => item.value);
 
   const lastBullets = [
@@ -56,8 +98,6 @@ const LandmarkProfile = ({
     { key: "Notable", value: notable },
     { key: "Current", value: current },
   ].filter((item) => item.value);
-
-  console.log(built);
 
   return (
     <div className={styles.container}>
@@ -78,121 +118,84 @@ const LandmarkProfile = ({
                 {title}
               </a>
             )}
-            {bullets && (
-              <ul className={styles.bulletList}>
-                {firstBullets.map((item) => (
-                  <li className={styles.bulletItem}>
-                    <p className={styles.key}>{item.key}</p>
+            <ul className={styles.bulletList}>
+              {firstBullets.map((item) => (
+                <li className={styles.bulletItem} key={item.value}>
+                  <p className={styles.key}>{item.key}</p>
+                  <p className={styles.value}>{item.value}</p>
+                </li>
+              ))}
+              {(!!architect?.length || !!architectAttribution?.length) && (
+                <li key="architects" className={styles.bulletItem}>
+                  <p className={styles.key}>
+                    {(architect?.length || 0) +
+                      (architectAttribution?.length || 0) ===
+                    1
+                      ? "Architect"
+                      : "Architects"}
+                  </p>
+                  <div className={styles.value}>
+                    {architect?.map((a: any, index: number) => (
+                      <ArchitectListItem
+                        key={a.fields.name}
+                        name={a.fields.name}
+                        summary={a.fields.summary}
+                        onClick={() => openModal(a.fields)}
+                        isLastItem={
+                          index === architect.length - 1 &&
+                          (architectAttribution?.length ?? 0) === 0
+                        }
+                      />
+                    ))}
+                    {architectAttribution?.map((a: any, index: number) => (
+                      <ArchitectListItem
+                        key={a.fields.architect.fields.name}
+                        name={a.fields.architect.fields.name}
+                        summary={a.fields.architect.fields.summary}
+                        attribution={a.fields.attribution}
+                        onClick={() => openModal(a.fields.architect.fields)}
+                        isLastItem={index === architectAttribution.length - 1}
+                      />
+                    ))}
+                  </div>
+                </li>
+              )}
+              {bullets.map((item) => (
+                <li key={item.key} className={styles.bulletItem}>
+                  <p className={styles.key}>{item.key}</p>
+                  <p className={styles.value}>{item.value}</p>
+                </li>
+              ))}
+              {lastBullets.map((item) => (
+                <li key={item.key} className={styles.bulletItem}>
+                  <p className={styles.key}>{item.key}</p>
+                  {item.key === "Significance" ? (
+                    <div className={styles.value}>
+                      <ReactMarkdown
+                        remarkPlugins={[remarkBreaks]}
+                        components={{
+                          a: ({ node, ...props }) => (
+                            <a
+                              {...props}
+                              className={styles.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            />
+                          ),
+                          p: ({ node, ...props }) => (
+                            <p {...props} className={styles.value} />
+                          ),
+                        }}
+                      >
+                        {item.value as string}
+                      </ReactMarkdown>
+                    </div>
+                  ) : (
                     <p className={styles.value}>{item.value}</p>
-                  </li>
-                ))}
-                {bullets.map((item) => {
-                  if (
-                    (item.key === "Architect" || item.key === "Architects") &&
-                    (architect?.length || architectAttribution?.length)
-                  ) {
-                    const totalArchitects =
-                      (architect?.length || 0) +
-                      (architectAttribution?.length || 0);
-                    return (
-                      <li key="architect1" className={styles.bulletItem}>
-                        <p className={styles.key}>
-                          {totalArchitects === 1 ? "Architect" : "Architects"}
-                        </p>
-                        <div className={styles.value}>
-                          {/* Render simple architects first */}
-                          {architect?.map((a: any, index: number) => (
-                            <React.Fragment key={a.fields.name}>
-                              {a.fields.summary ? (
-                                <button
-                                  type="button"
-                                  onClick={() => openModal(a.fields)}
-                                  className={styles.modalButton}
-                                >
-                                  {a.fields.name}
-                                  <sup>
-                                    <Info color="#6b8e8e" size={12} />
-                                  </sup>
-                                </button>
-                              ) : (
-                                <span>{a.fields.name}</span>
-                              )}
-                              {(index < architect.length - 1 ||
-                                (architect?.length ?? 0) > 0) &&
-                                ", "}
-                            </React.Fragment>
-                          ))}
-
-                          {/* Render architects with attributions */}
-                          {architectAttribution?.map(
-                            (a: any, index: number) => (
-                              <React.Fragment
-                                key={a.fields.architect.fields.name}
-                              >
-                                {a.fields.architect.fields.summary ? (
-                                  <button
-                                    type="button"
-                                    onClick={() =>
-                                      openModal(a.fields.architect.fields)
-                                    }
-                                    className={styles.modalButton}
-                                  >
-                                    {a.fields.architect.fields.name}
-                                    <sup>
-                                      <Info color="#6b8e8e" size={12} />
-                                    </sup>
-                                  </button>
-                                ) : (
-                                  <span>{a.fields.architect.fields.name}</span>
-                                )}
-                                {(index < architectAttribution.length - 1 ||
-                                  (architectAttribution?.length ?? 0) > 0) &&
-                                  ", "}
-                              </React.Fragment>
-                            ),
-                          )}
-                        </div>
-                      </li>
-                    );
-                  }
-                  return (
-                    <li key={item.key} className={styles.bulletItem}>
-                      <p className={styles.key}>{item.key}</p>
-                      <p className={styles.value}>{item.value}</p>
-                    </li>
-                  );
-                })}
-                {lastBullets.map((item) => (
-                  <li key={item.key} className={styles.bulletItem}>
-                    <p className={styles.key}>{item.key}</p>
-                    {item.key === "Significance" ? (
-                      <div className={styles.value}>
-                        <ReactMarkdown
-                          remarkPlugins={[remarkBreaks]}
-                          components={{
-                            a: ({ node, ...props }) => (
-                              <a
-                                {...props}
-                                className={styles.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                              />
-                            ),
-                            p: ({ node, ...props }) => (
-                              <p {...props} className={styles.value} />
-                            ),
-                          }}
-                        >
-                          {item.value as string}
-                        </ReactMarkdown>
-                      </div>
-                    ) : (
-                      <p className={styles.value}>{item.value}</p>
-                    )}
-                  </li>
-                ))}
-              </ul>
-            )}
+                  )}
+                </li>
+              ))}
+            </ul>
             {quote && quoteAuthor && (
               <blockquote className={styles.quoteBlock}>
                 <ReactMarkdown

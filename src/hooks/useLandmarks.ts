@@ -20,20 +20,23 @@ export const useLandmarks = () => {
         const parsedLandmarks = response.items.map(
           (entry: Entry<LandmarkSkeleton>) => {
             const imageData = entry.fields.image as unknown as Asset;
+            const { name, borough, location, significance } = entry.fields;
 
             return {
               id: entry.sys.id,
-              name: String(entry.fields.name),
-              borough: String(entry.fields.borough),
+              name: String(name),
+              borough: String(borough),
               built: transformStringField(entry.fields.built as string),
               founded: transformStringField(entry.fields.founded as string),
               location: {
-                lat: Number(entry.fields.location.lat),
-                lon: Number(entry.fields.location.lon),
+                lat: Number(location.lat),
+                lon: Number(location.lon),
               },
               architect: (entry.fields.architects as any[]) || [],
               architectAttribution:
                 (entry.fields.architectAttribution as any[]) || [],
+              architecturalStyle:
+                (entry.fields.architecturalStyle as any[]) || [],
               bullets: Array.isArray(entry.fields.bullets)
                 ? entry.fields.bullets
                 : [],
@@ -48,15 +51,25 @@ export const useLandmarks = () => {
                   : undefined,
               },
               height: transformStringField(entry.fields.height as string),
+              nickname: transformStringField(entry.fields.nickname as string),
+              lenapeName: transformStringField(
+                entry.fields.lenapeName as string,
+              ),
+              otherNames: transformStringField(
+                entry.fields.otherNames as string,
+              ),
               quote: transformStringField(entry.fields.quote as string),
               quoteAuthor: transformStringField(
                 entry.fields.quoteAuthor as string,
+              ),
+              rediscovered: transformStringField(
+                entry.fields.rediscovered as string,
               ),
               size: transformStringField(entry.fields.size as string),
               notableFeatures: transformStringField(
                 entry.fields.notableFeatures as string,
               ),
-              significance: String(entry.fields.significance),
+              significance: String(significance),
               notable: transformStringField(entry.fields.notable as string),
               current: transformStringField(entry.fields.current as string),
             };
