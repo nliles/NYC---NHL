@@ -34,6 +34,7 @@ export const useLandmarks = () => {
               architect: (entry.fields.architects as any[]) || [],
               architectAttribution:
                 (entry.fields.architectAttribution as any[]) || [],
+              architecturalStyle: (entry.fields.architecturalStyle as any[]) || [],
               bullets: Array.isArray(entry.fields.bullets)
                 ? entry.fields.bullets
                 : [],
@@ -48,10 +49,14 @@ export const useLandmarks = () => {
                   : undefined,
               },
               height: transformStringField(entry.fields.height as string),
+              nickname: transformStringField(entry.fields.nickname as string),
+              lenapeName: transformStringField(entry.fields.lenapeName as string),
+              otherNames: transformStringField(entry.fields.otherNames as string),
               quote: transformStringField(entry.fields.quote as string),
               quoteAuthor: transformStringField(
                 entry.fields.quoteAuthor as string,
               ),
+              rediscovered: transformStringField(entry.fields.rediscovered as string),
               size: transformStringField(entry.fields.size as string),
               notableFeatures: transformStringField(
                 entry.fields.notableFeatures as string,
