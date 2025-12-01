@@ -9,6 +9,31 @@ import React, { useState } from "react";
 import Modal from "../Modal";
 
 const ReferenceList = ({
+  title,
+  items,
+  onClick,
+}: {
+  title: string;
+  items: any[];
+  onClick: (item: any) => void;
+}) => (
+  <li className={styles.bulletItem}>
+    <p className={styles.key}>{title}</p>
+    <div className={styles.value}>
+      {items?.map((a: any, index: number) => (
+        <ReferenceListItem
+          key={a.fields.name}
+          name={a.fields.name}
+          summary={a.fields.summary}
+          onClick={() => onClick(a.fields)}
+          isLastItem={index === items.length - 1}
+        />
+      ))}
+    </div>
+  </li>
+);
+
+const ReferenceListItem = ({
   name,
   summary,
   attribution,
@@ -151,7 +176,7 @@ const LandmarkProfile = ({
                   </p>
                   <div className={styles.value}>
                     {architect?.map((a: any, index: number) => (
-                      <ReferenceList
+                      <ReferenceListItem
                         key={a.fields.name}
                         name={a.fields.name}
                         summary={a.fields.summary}
@@ -161,7 +186,7 @@ const LandmarkProfile = ({
                       />
                     ))}
                     {architectAttribution?.map((a: any, index: number) => (
-                      <ReferenceList
+                      <ReferenceListItem
                         key={a.fields.architect.fields.name}
                         name={a.fields.architect.fields.name}
                         summary={a.fields.architect.fields.summary}
@@ -175,20 +200,11 @@ const LandmarkProfile = ({
                 </li>
               )}
               {!!architecturalStyle?.length && (
-                <li className={styles.bulletItem}>
-                  <p className={styles.key}>Architectural Style</p>
-                  <div className={styles.value}>
-                    {architecturalStyle?.map((a: any, index: number) => (
-                      <ReferenceList
-                        key={a.fields.name}
-                        name={a.fields.name}
-                        summary={a.fields.summary}
-                        onClick={() => openModal(a.fields.resident.fields)}
-                        isLastItem={index === architecturalStyle.length - 1}
-                      />
-                    ))}
-                  </div>
-                </li>
+                <ReferenceList
+                  title="Architectural Style"
+                  items={architecturalStyle}
+                  onClick={(item: any) => openModal(item)}
+                />
               )}
               {!!residentAttribution?.length && (
                 <li className={styles.bulletItem}>
@@ -201,7 +217,7 @@ const LandmarkProfile = ({
                   </p>
                   <div className={styles.value}>
                     {residentAttribution?.map((a: any, index: number) => (
-                      <ReferenceList
+                      <ReferenceListItem
                         key={a.fields.resident.fields.name}
                         name={a.fields.resident.fields.name}
                         summary={a.fields.resident.fields.summary}
