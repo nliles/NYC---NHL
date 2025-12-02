@@ -99,6 +99,7 @@ const LandmarkProfile = ({
     founded,
     founder,
     commissioner,
+    classType,
     height,
     moreInfoUrl,
     length,
@@ -134,6 +135,7 @@ const LandmarkProfile = ({
   ].filter((item) => item.value);
 
   const lastBullets = [
+    { key: "Class & Type", value: classType },
     { key: "Height", value: height },
     { key: "Size", value: size },
     { key: "Length", value: length },

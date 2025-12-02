@@ -37,6 +37,7 @@ export const useLandmarks = () => {
                 lat: Number(location.lat),
                 lon: Number(location.lon),
               },
+              classType: String(entry.fields.classType),
               architect: (entry.fields.architects as any[]) || [],
               architectAttribution:
                 (entry.fields.architectAttribution as any[]) || [],

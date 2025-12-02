@@ -19,6 +19,7 @@ export type LandmarkFields = {
   builder?: EntryFieldTypes.Symbol;
   founded?: EntryFieldTypes.Symbol;
   founder?: EntryFieldTypes.Symbol;
+  classType?: EntryFieldTypes.Symbol;
   commissioner?: EntryFieldTypes.Symbol;
   location: EntryFieldTypes.Location;
   architects?: EntryFieldTypes.Array<any>;
@@ -62,6 +63,7 @@ export type Landmark = {
   founded?: string;
   founder?: string;
   commissioner?: string;
+  classType?: string;
   residentAttribution?: any[];
   location: { lat: number; lon: number };
   height?: string;
