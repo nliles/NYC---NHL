@@ -94,12 +94,14 @@ const LandmarkProfile = ({
     architectAttribution,
     architecturalStyle,
     built,
+    builder,
     bullets,
     founded,
     founder,
+    commissioner,
     height,
     moreInfoUrl,
-    nickname,
+    length,
     quote,
     quoteAuthor,
     size,
@@ -122,17 +124,19 @@ const LandmarkProfile = ({
 
   const firstBullets = [
     { key: "Lenape Name", value: lenapeName },
-    { key: "Nickname", value: nickname },
     { key: "Other Names", value: otherNames },
     { key: "Founded", value: founded },
     { key: "Founder", value: founder },
     { key: "Built", value: built },
+    { key: "Builder", value: builder },
+    { key: "Commissioner", value: commissioner },
     { key: "Rediscovered", value: rediscovered },
   ].filter((item) => item.value);
 
   const lastBullets = [
     { key: "Height", value: height },
     { key: "Size", value: size },
+    { key: "Length", value: length },
     { key: "Notable Features", value: notableFeatures },
     { key: "Significance", value: significance },
     { key: "Notable", value: notable },
@@ -209,9 +213,7 @@ const LandmarkProfile = ({
               {!!residentAttribution?.length && (
                 <li className={styles.bulletItem}>
                   <p className={styles.key}>
-                    {(residentAttribution?.length || 0) +
-                      (residentAttribution?.length || 0) ===
-                    1
+                    {(residentAttribution?.length || 0) === 1
                       ? "Resident"
                       : "Residents"}
                   </p>

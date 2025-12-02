@@ -29,6 +29,10 @@ export const useLandmarks = () => {
               built: transformStringField(entry.fields.built as string),
               founded: transformStringField(entry.fields.founded as string),
               founder: transformStringField(entry.fields.founder as string),
+              commissioner: transformStringField(
+                entry.fields.commissioner as string,
+              ),
+              builder: transformStringField(entry.fields.builder as string),
               location: {
                 lat: Number(location.lat),
                 lon: Number(location.lon),
@@ -52,7 +56,7 @@ export const useLandmarks = () => {
                   : undefined,
               },
               height: transformStringField(entry.fields.height as string),
-              nickname: transformStringField(entry.fields.nickname as string),
+              length: transformStringField(entry.fields.length as string),
               lenapeName: transformStringField(
                 entry.fields.lenapeName as string,
               ),
