@@ -25,7 +25,7 @@ export const useLandmarks = () => {
             return {
               id: entry.sys.id,
               name: String(name),
-              benefactor: transformStringField(entry.fields.built as string),
+              benefactor: transformStringField(entry.fields.benefactor as string),
               borough: String(borough),
               built: transformStringField(entry.fields.built as string),
               founded: transformStringField(entry.fields.founded as string),
