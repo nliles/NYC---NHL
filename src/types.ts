@@ -72,7 +72,7 @@ export type Landmark = {
   height?: string;
   id: string;
   image: Image;
-  landscapeArchitects?: any[];
+  landscapeArchitect?: any[];
   lenapeName?: string;
   length?: string;
   location: { lat: number; lon: number };
