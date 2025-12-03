@@ -25,6 +25,7 @@ export const useLandmarks = () => {
             return {
               id: entry.sys.id,
               name: String(name),
+              benefactor: transformStringField(entry.fields.built as string),
               borough: String(borough),
               built: transformStringField(entry.fields.built as string),
               founded: transformStringField(entry.fields.founded as string),
@@ -47,6 +48,8 @@ export const useLandmarks = () => {
               bullets: Array.isArray(entry.fields.bullets)
                 ? entry.fields.bullets
                 : [],
+              landscapeArchitect:
+                (entry.fields.architecturalStyle as any[]) || [],
               moreInfoUrl: String(entry.fields.moreInfoUrl),
               image: {
                 url: String(imageData?.fields?.file?.url),

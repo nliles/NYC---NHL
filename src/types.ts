@@ -19,11 +19,13 @@ export type LandmarkFields = {
   builder?: EntryFieldTypes.Symbol;
   founded?: EntryFieldTypes.Symbol;
   founder?: EntryFieldTypes.Symbol;
+  benefactor?: EntryFieldTypes.Symbol;
   classType?: EntryFieldTypes.Symbol;
   commissioner?: EntryFieldTypes.Symbol;
   location: EntryFieldTypes.Location;
   architects?: EntryFieldTypes.Array<any>;
   architectAttribution?: EntryFieldTypes.Array<any>;
+  landscapeArchitect?: EntryFieldTypes.Array<any>;
   engineer?: EntryFieldTypes.Array<any>;
   architecturalStyle?: EntryFieldTypes.Array<any>;
   residentAttribution?: EntryFieldTypes.Array<any>;
@@ -56,6 +58,7 @@ export type Landmark = {
   architect?: ArchitectEntry[];
   architectAttribution?: any[];
   architecturalStyle?: any[];
+  benefactor?: string;
   builder?: string;
   borough: string;
   built?: string;
@@ -65,24 +68,25 @@ export type Landmark = {
   founder?: string;
   commissioner?: string;
   classType?: string;
-  residentAttribution?: any[];
   engineer: any[];
-  location: { lat: number; lon: number };
   height?: string;
-  size?: string;
-  length?: string;
   id: string;
   image: Image;
-  moreInfoUrl: string;
+  landscapeArchitect?: any[];
   lenapeName?: string;
+  length?: string;
+  location: { lat: number; lon: number };
+  moreInfoUrl: string;
   name: string;
   notable?: string;
   notableFeatures?: string;
   otherNames?: string;
-  rediscovered?: string;
   quote?: string;
   quoteAuthor?: string;
+  rediscovered?: string;
+  residentAttribution?: any[];
   significance: string;
+  size?: string;
 };
 
 export type MapboxFeature = {

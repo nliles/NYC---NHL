@@ -93,6 +93,7 @@ const LandmarkProfile = ({
     architect,
     architectAttribution,
     architecturalStyle,
+    benefactor,
     built,
     builder,
     bullets,
@@ -103,6 +104,7 @@ const LandmarkProfile = ({
     height,
     engineer,
     moreInfoUrl,
+    landscapeArchitect,
     length,
     quote,
     quoteAuthor,
@@ -131,6 +133,7 @@ const LandmarkProfile = ({
     { key: "Founder", value: founder },
     { key: "Built", value: built },
     { key: "Builder", value: builder },
+    { key: "Benefactor", value: benefactor },
     { key: "Commissioner", value: commissioner },
     { key: "Rediscovered", value: rediscovered },
   ].filter((item) => item.value);
@@ -219,6 +222,13 @@ const LandmarkProfile = ({
                 <ReferenceList
                   title="Architectural Style"
                   items={architecturalStyle}
+                  onClick={(item: any) => openModal(item)}
+                />
+              )}
+              {!!landscapeArchitect?.length && (
+                <ReferenceList
+                  title={landscapeArchitect?.length === 1 ? "Landscape Architect" : "Landscape Architects"}
+                  items={landscapeArchitect}
                   onClick={(item: any) => openModal(item)}
                 />
               )}
