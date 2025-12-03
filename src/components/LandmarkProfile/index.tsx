@@ -193,7 +193,7 @@ const LandmarkProfile = ({
                   onClick={(item: any) => openModal(item)}
                 />
               )}
-              {!!combinedArchitects && (
+              {!!combinedArchitects.length && (
                 <li className={styles.bulletItem}>
                   <p className={styles.key}>
                     {(combinedArchitects?.length || 0) === 1
