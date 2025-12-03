@@ -25,7 +25,7 @@ export type LandmarkFields = {
   location: EntryFieldTypes.Location;
   architects?: EntryFieldTypes.Array<any>;
   architectAttribution?: EntryFieldTypes.Array<any>;
-  landscapeArchitect?: EntryFieldTypes.Array<any>;
+  landscapeArchitects?: EntryFieldTypes.Array<any>;
   engineer?: EntryFieldTypes.Array<any>;
   architecturalStyle?: EntryFieldTypes.Array<any>;
   residentAttribution?: EntryFieldTypes.Array<any>;
@@ -72,7 +72,7 @@ export type Landmark = {
   height?: string;
   id: string;
   image: Image;
-  landscapeArchitect?: any[];
+  landscapeArchitects?: any[];
   lenapeName?: string;
   length?: string;
   location: { lat: number; lon: number };

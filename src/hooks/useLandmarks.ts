@@ -49,7 +49,7 @@ export const useLandmarks = () => {
                 ? entry.fields.bullets
                 : [],
               landscapeArchitect:
-                (entry.fields.architecturalStyle as any[]) || [],
+                (entry.fields.landscapeArchitects as any[]) || [],
               moreInfoUrl: String(entry.fields.moreInfoUrl),
               image: {
                 url: String(imageData?.fields?.file?.url),
