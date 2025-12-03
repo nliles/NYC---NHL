@@ -43,6 +43,7 @@ export const useLandmarks = () => {
                 (entry.fields.architectAttribution as any[]) || [],
               architecturalStyle:
                 (entry.fields.architecturalStyle as any[]) || [],
+              engineer: (entry.fields.engineer as any[]) || [],
               bullets: Array.isArray(entry.fields.bullets)
                 ? entry.fields.bullets
                 : [],

@@ -101,6 +101,7 @@ const LandmarkProfile = ({
     commissioner,
     classType,
     height,
+    engineer,
     moreInfoUrl,
     length,
     quote,
@@ -145,6 +146,20 @@ const LandmarkProfile = ({
     { key: "Current", value: current },
   ].filter((item) => item.value);
 
+  const combinedArchitects = [
+    ...(architect || []).map((a: any) => ({
+      name: a.fields.name,
+      summary: a.fields.summary,
+      fields: a.fields,
+    })),
+    ...(architectAttribution || []).map((a: any) => ({
+      name: a.fields.architect.fields.name,
+      summary: a.fields.architect.fields.summary,
+      fields: a.fields.architect.fields,
+      attribution: a.fields.attribution,
+    })),
+  ];
+
   return (
     <div className={styles.container}>
       <div className={styles.content}>
@@ -171,34 +186,29 @@ const LandmarkProfile = ({
                   <p className={styles.value}>{item.value}</p>
                 </li>
               ))}
-              {(!!architect?.length || !!architectAttribution?.length) && (
+              {!!engineer?.length && (
+                <ReferenceList
+                  title="Engineer"
+                  items={engineer}
+                  onClick={(item: any) => openModal(item)}
+                />
+              )}
+              {!!combinedArchitects && (
                 <li className={styles.bulletItem}>
                   <p className={styles.key}>
-                    {(architect?.length || 0) +
-                      (architectAttribution?.length || 0) ===
-                    1
+                    {(combinedArchitects?.length || 0) === 1
                       ? "Architect"
                       : "Architects"}
                   </p>
                   <div className={styles.value}>
-                    {architect?.map((a: any, index: number) => (
+                    {combinedArchitects?.map((a: any, index: number) => (
                       <ReferenceListItem
-                        key={a.fields.name}
-                        name={a.fields.name}
-                        summary={a.fields.summary}
+                        key={a.name}
+                        name={a.name}
+                        summary={a.summary}
+                        attribution={a.attribution}
                         onClick={() => openModal(a.fields)}
-                        isLastItem={index === architect.length - 1}
-                        showParenthesis
-                      />
-                    ))}
-                    {architectAttribution?.map((a: any, index: number) => (
-                      <ReferenceListItem
-                        key={a.fields.architect.fields.name}
-                        name={a.fields.architect.fields.name}
-                        summary={a.fields.architect.fields.summary}
-                        attribution={a.fields.attribution}
-                        onClick={() => openModal(a.fields.architect.fields)}
-                        isLastItem={index === architectAttribution.length - 1}
+                        isLastItem={index === combinedArchitects.length - 1}
                         showParenthesis
                       />
                     ))}

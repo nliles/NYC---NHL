@@ -24,6 +24,7 @@ export type LandmarkFields = {
   location: EntryFieldTypes.Location;
   architects?: EntryFieldTypes.Array<any>;
   architectAttribution?: EntryFieldTypes.Array<any>;
+  engineer?: EntryFieldTypes.Array<any>;
   architecturalStyle?: EntryFieldTypes.Array<any>;
   residentAttribution?: EntryFieldTypes.Array<any>;
   bullets: EntryFieldTypes.Object<Bullet[]>;
@@ -65,6 +66,7 @@ export type Landmark = {
   commissioner?: string;
   classType?: string;
   residentAttribution?: any[];
+  engineer: any[];
   location: { lat: number; lon: number };
   height?: string;
   size?: string;
