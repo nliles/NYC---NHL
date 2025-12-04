@@ -96,7 +96,6 @@ const LandmarkProfile = ({
     benefactor,
     built,
     builder,
-    bullets,
     date,
     event,
     founded,
@@ -257,12 +256,6 @@ const LandmarkProfile = ({
                   </div>
                 </li>
               )}
-              {bullets.map((item) => (
-                <li key={item.key} className={styles.bulletItem}>
-                  <p className={styles.key}>{item.key}</p>
-                  <p className={styles.value}>{item.value}</p>
-                </li>
-              ))}
               {lastBullets.map((item) => (
                 <li key={item.key} className={styles.bulletItem}>
                   <p className={styles.key}>{item.key}</p>

@@ -1,10 +1,5 @@
 import { Asset, EntrySkeletonType, EntryFieldTypes } from "contentful";
 
-export type Bullet = {
-  key: string;
-  value: string;
-};
-
 type ArchitectEntry = {
   fields: {
     name: string;
@@ -31,7 +26,6 @@ export type LandmarkFields = {
   engineer?: EntryFieldTypes.Array<any>;
   architecturalStyle?: EntryFieldTypes.Array<any>;
   residentAttribution?: EntryFieldTypes.Array<any>;
-  bullets: EntryFieldTypes.Object<Bullet[]>;
   moreInfoUrl: EntryFieldTypes.Symbol;
   lenapeName?: EntryFieldTypes.Symbol;
   height?: EntryFieldTypes.Symbol;
@@ -64,7 +58,6 @@ export type Landmark = {
   builder?: string;
   borough: string;
   built?: string;
-  bullets: Bullet[];
   event?: string;
   current?: string;
   date?: string;

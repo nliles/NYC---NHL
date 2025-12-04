@@ -47,9 +47,6 @@ export const useLandmarks = () => {
               architecturalStyle:
                 (entry.fields.architecturalStyle as any[]) || [],
               engineer: (entry.fields.engineer as any[]) || [],
-              bullets: Array.isArray(entry.fields.bullets)
-                ? entry.fields.bullets
-                : [],
               landscapeArchitect:
                 (entry.fields.landscapeArchitects as any[]) || [],
               moreInfoUrl: String(entry.fields.moreInfoUrl),
