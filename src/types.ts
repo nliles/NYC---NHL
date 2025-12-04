@@ -16,6 +16,7 @@ export type LandmarkFields = {
   name: EntryFieldTypes.Symbol;
   borough: EntryFieldTypes.Symbol;
   built: EntryFieldTypes.Symbol;
+  event?: EntryFieldTypes.Symbol;
   builder?: EntryFieldTypes.Symbol;
   founded?: EntryFieldTypes.Symbol;
   founder?: EntryFieldTypes.Symbol;
@@ -63,6 +64,7 @@ export type Landmark = {
   borough: string;
   built?: string;
   bullets: Bullet[];
+  event?: string;
   current?: string;
   founded?: string;
   founder?: string;
