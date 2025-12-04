@@ -97,6 +97,7 @@ const LandmarkProfile = ({
     built,
     builder,
     bullets,
+    date,
     event,
     founded,
     founder,
@@ -137,6 +138,7 @@ const LandmarkProfile = ({
     { key: "Benefactor", value: benefactor },
     { key: "Commissioner", value: commissioner },
     { key: "Rediscovered", value: rediscovered },
+    { key: "Event Date", value: date },
     { key: "Event", value: event },
   ].filter((item) => item.value);
 
