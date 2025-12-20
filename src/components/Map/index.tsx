@@ -15,6 +15,7 @@ const Map = ({
   visitedLandmarks,
   shouldZoom,
   setShouldZoom,
+  interactive = true,
 }: {
   landmarks: Landmark[];
   selectedLandmark?: Landmark;
@@ -22,6 +23,7 @@ const Map = ({
   visitedLandmarks: string[];
   shouldZoom?: boolean;
   setShouldZoom?: (value: boolean) => void;
+  interactive?: boolean;
 }) => {
   const mapContainer = useRef<HTMLDivElement>(null);
   const mapInstance = useRef<mapboxgl.Map | null>(null);
@@ -36,6 +38,7 @@ const Map = ({
         center: DEFAULT_CENTER,
         zoom: 12,
         minZoom: 9.5,
+        interactive: interactive, 
       });
 
       mapInstance.current = map;

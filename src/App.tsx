@@ -1,94 +1,97 @@
-import { useState } from "react";
+// import { useNavigate } from "react-router-dom";
+import styles from "./App.module.scss";
+// ... (Your image imports)
+import empire from './assets/empire.jpg'
+import trinity from './assets/trinity.jpg'
+import life from './assets/life.jpg'
+import dakota from './assets/dakota.jpg';
+import woolworth from './assets/woolworth.jpg';
+import map from './assets/map.jpg';
+import met from './assets/met.jpg';
+import stock from './assets/stock.jpg';
+import centralpark from './assets/central-park.jpg';
+import greenwood from './assets/flatiron.jpg';
 import "./App.css";
-import Portal from "./components/Portal";
-import SidePanel from "./components/SidePanel";
-import Map from "./components/Map";
-import LandmarkList from "./components/LandmarkList";
-import LandmarkProfile from "./components/LandmarkProfile";
-import { getLocalStorage, saveToStorage } from "./helpers/localStorage";
-import NavBar from "./components/NavBar";
-import styles from "./App.module.css";
-import About from "./components/About";
-import { useLandmarks } from "./hooks/useLandmarks";
 
 const App = () => {
-  const [selectedLandmarkId, setSelectedLandmarkId] = useState<string>();
-  const [showAbout, setShowAbout] = useState(false);
-  const [shouldZoom, setShouldZoom] = useState(false);
-  const [visitedLandmarks, setVisitedLandmarks] = useState(() =>
-    getLocalStorage(),
-  );
-  const { landmarks } = useLandmarks();
-  const selectedLandmark = landmarks.find(
-    (landmark) => landmark.id === selectedLandmarkId,
-  );
-
-  const handleClick = (landmarkId: string) => {
-    setSelectedLandmarkId(landmarkId);
-    setShouldZoom(true);
-  };
-
-  const handleClose = () => {
-    setSelectedLandmarkId(undefined);
-    setShowAbout(false);
-  };
-
-  const onVisitedChange = (isVisited: boolean) => {
-    // Save to localStorage
-    if (isVisited) {
-      setVisitedLandmarks([...visitedLandmarks, selectedLandmarkId]);
-      saveToStorage([...visitedLandmarks, selectedLandmarkId]);
-    } else {
-      const filtered = visitedLandmarks.filter(
-        (id: string) => id !== selectedLandmarkId,
-      );
-      setVisitedLandmarks(filtered);
-      saveToStorage(filtered);
-    }
+  // const navigate = useNavigate();
+  const handleViewMap = () => {
+    // navigate("/map"); // Adjust this route to match your map page route
   };
 
   return (
-    <>
-      <NavBar
-        count={visitedLandmarks.length}
-        total={landmarks.length}
-        toggleAbout={() => setShowAbout(true)}
-      />
-      <div className={styles.container}>
-        <LandmarkList
-          handleClick={handleClick}
-          landmarks={landmarks}
-          selectedLandmarkId={selectedLandmarkId}
-          visitedLandmarks={visitedLandmarks}
+    <div className={styles.container}>
+      <div className={styles.leftPanel}>
+        <h1 className={styles.title}>
+          National Historic Landmarks<br/> of NYC
+        </h1>
+        <button onClick={handleViewMap} className={styles.viewMapButton}>
+          View Interactive Map
+        </button>
+      </div>
+      
+      {/* New thin left column */}
+      <div className={styles.leftImageColumn}>
+        <img 
+          src={dakota} 
+          alt="The Dakota" 
+          className={`${styles.collageImage} ${styles.photoDakota}`} 
         />
-        <Map
-          landmarks={landmarks}
-          selectedLandmark={selectedLandmark}
-          setSelectedLandmarkId={setSelectedLandmarkId}
-          visitedLandmarks={visitedLandmarks}
-          shouldZoom={shouldZoom}
-          setShouldZoom={setShouldZoom}
+        <img 
+          src={life} 
+          alt="Life Magazine Building" 
+          className={`${styles.collageImage} ${styles.photoLifeLeft}`} 
+        />
+        <img 
+          src={stock} 
+          alt="The Dakota" 
+          className={`${styles.collageImage} ${styles.photoDakota}`} 
+        />
+       <img 
+          src={greenwood} 
+          alt="The Dakota" 
+          className={`${styles.collageImage} ${styles.photoDakota}`} 
+        />
+        <img 
+          src={met} 
+          alt="The Dakota" 
+          className={`${styles.collageImage} ${styles.photoDakota}`} 
         />
       </div>
-      <div>
-        <Portal containerId="portal-root">
-          {showAbout && (
-            <SidePanel onClose={handleClose}>
-              <About />
-            </SidePanel>
-          )}
-          {selectedLandmark && (
-            <SidePanel onClose={handleClose}>
-              <LandmarkProfile
-                selectedLandmark={selectedLandmark}
-                isVisited={visitedLandmarks.includes(selectedLandmark.id)}
-                onChange={onVisitedChange}
-              />
-            </SidePanel>
-          )}
-        </Portal>
+
+      {/* Main collage - right panel */}
+      <div className={styles.rightPanel}>
+        <img 
+          src={trinity} 
+          alt="Trinity Church" 
+          className={`${styles.collageImage} ${styles.photoTrinity}`} 
+        />
+
+        <img 
+          src={map} 
+          alt="New York City Map" 
+          className={`${styles.collageImage} ${styles.photoMap}`} 
+        />
+
+        <img 
+          src={woolworth} 
+          alt="Woolworth Building" 
+          className={`${styles.collageImage} ${styles.photoWoolworth}`} 
+        />
+        
+        <img 
+          src={empire} 
+          alt="Empire State Building" 
+          className={`${styles.collageImage} ${styles.photoLife}`} 
+        />
+
+        <img 
+          src={centralpark} 
+          alt="Central Park" 
+          className={`${styles.collageImage} ${styles.photoCentralPark}`} 
+        />
       </div>
-    </>
+    </div>
   );
 };
 
