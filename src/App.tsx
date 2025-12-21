@@ -22,13 +22,19 @@ const App = () => {
   return (
     <div className={styles.container}>
       <div className={styles.leftPanel}>
+      <div className={styles.textPanel}>
         <h1 className={styles.title}>
-          National Historic Landmarks<br/> of NYC
+          National Historic Landmarks of NYC
         </h1>
+        <p className={styles.paragraph}>
+          Explore over 116 landmarks illustrating 3,000 years of history.
+        </p>
         <button onClick={handleViewMap} className={styles.viewMapButton}>
           View Interactive Map
         </button>
       </div>
+      </div>
+      <div className={styles.imageContainer}>
       
       {/* New thin left column */}
       <div className={styles.leftImageColumn}>
@@ -91,6 +97,7 @@ const App = () => {
           className={`${styles.collageImage} ${styles.photoCentralPark}`} 
         />
       </div>
+    </div>
     </div>
   );
 };
