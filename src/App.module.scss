@@ -1,32 +1,32 @@
 @use "./styles/colors.module.scss";
 
-/* Container for the split screen layout */
 .container {
   display: flex;
   box-sizing: border-box;
   background-color: colors.$grayBlue;
   height: 100vh;
+  width: 100vw;
   overflow: hidden;
 }
 
-/* Left side (Text Content) */
+/* Left side (Text Content) stays consistent */
 .leftPanel {
-  width: 40%;
+  width: 50%;
   padding: 2rem;
   display: flex;
   justify-content: center;
-  flex: 1;
+  flex-shrink: 0;
 }
 
+/* The Image Container now takes up the remaining 70% */
 .imageContainer {
-  width: 60%;
+  width: 50%;
   display: flex;
+  background-color: black; /* Fills gaps between images */
+  border-left: 5px solid black;
 }
 
-
-/* Left text panel - floating card */
 .textPanel {
-  flex: 0 0 400px;
   background: rgba(255, 255, 255, 0.95);
   padding: 3rem;
   border-radius: 12px;
@@ -35,116 +35,49 @@
   flex-direction: column;
   justify-content: center;
   align-self: center;
-  max-height: 80vh;
-  max-width: 500px
-}
-
-.title {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-  text-align: left;
-  color: #2c3e50;
-  line-height: 1.2;
-}
-
-.paragraph {
-  color: #495057;
-  margin-bottom: 1.5rem;
-  line-height: 1.6;
-  font-size: 1rem;
-}
-
-.viewMapButton {
-  padding: 14px 32px;
-  background-color: colors.$grayBlue;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 1.05rem;
-  font-weight: 600;
-  transition: background-color 0.2s;
-  align-self: flex-start;
-}
-
-.viewMapButton:hover {
-  background-color: #0056b3;
-}
-
-/* --- LEFT NARROW COLUMN --- */
-.leftImageColumn {
-  width: 200px;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-auto-rows: min-content;
-  // gap: 5px;
-  border: 5px solid black;
-  border-right: none;
-  background-color: black;
-  height: 100vh;
-  // overflow-y: auto;
-  // flex-shrink: 0;
-  // align-content: start;
-}
-
-.photoDakota,
-.photoLifeLeft {
   width: 100%;
-  height: auto;
-  object-fit: contain;
+  max-width: 450px;
 }
 
-/* --- RIGHT MAIN COLLAGE --- */
-.rightPanel {
-  width: 400px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  // gap: 5px;
-  border: 5px solid black;
-  background-color: black;
-  height: 100vh;
-  // overflow-y: auto;
-  // flex-shrink: 0;
+/* --- COLUMN 1: NARROW --- */
+.leftImageColumn {
+  width: 25%; /* Fixed ratio for the thin strip */
+  display: flex;
+  flex-direction: column;
+  border-right: 2.5px solid black;
 }
 
-/* Styles for all images in the collage */
+/* --- COLUMN 2: WIDE --- */
+.middleImageColumn {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  border-right: 2.5px solid black;
+}
+
+/* --- COLUMN 3: NEW RIGHT COLUMN --- */
+.rightImageColumn {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+}
+
 .collageImage {
   width: 100%;
-  height: 100%;
-  // object-fit: cover;
+  height: auto;
+  object-fit: cover;
   display: block;
+  border-bottom: 5px solid black;
 }
 
-/* --- GRID PLACEMENT --- */
-
-/* Trinity - Full width, row 1 */
-.photoTrinity {
-  grid-column: 1 / -1;
-  grid-row: 1;
-}
-
-/* Map - Full width, row 2 */
-.photoMap {
-  grid-column: 1 / -1;
-  grid-row: 2;
-  object-fit: contain;
-  background-color: colors.$grayBlue;
-}
-
-/* Woolworth - Left column, row 3 */
-.photoWoolworth {
-  grid-column: 1;
-  grid-row: 3;
-}
-
-/* Empire - Right column, row 3 */
-.photoLife {
-  grid-column: 2;
-  grid-row: 3;
-}
-
-/* Central Park - Full width, row 4 */
-.photoCentralPark {
-  grid-column: 1 / -1;
-  grid-row: 4;
+/* Standard button/text styles remain the same... */
+.title { font-size: 2.5rem; color: #2c3e50; line-height: 1.2; margin-bottom: 1.5rem; }
+.paragraph { color: #495057; line-height: 1.6; margin-bottom: 1.5rem; }
+.viewMapButton { 
+    padding: 14px 32px; 
+    background-color: colors.$grayBlue; 
+    color: white; 
+    border-radius: 6px; 
+    border: none;
+    cursor: pointer;
 }

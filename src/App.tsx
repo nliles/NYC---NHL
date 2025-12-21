@@ -14,90 +14,41 @@ import greenwood from './assets/flatiron.jpg';
 import "./App.css";
 
 const App = () => {
-  // const navigate = useNavigate();
-  const handleViewMap = () => {
-    // navigate("/map"); // Adjust this route to match your map page route
-  };
-
   return (
     <div className={styles.container}>
       <div className={styles.leftPanel}>
-      <div className={styles.textPanel}>
-        <h1 className={styles.title}>
-          National Historic Landmarks of NYC
-        </h1>
-        <p className={styles.paragraph}>
-          Explore over 116 landmarks illustrating 3,000 years of history.
-        </p>
-        <button onClick={handleViewMap} className={styles.viewMapButton}>
-          View Interactive Map
-        </button>
+        <div className={styles.textPanel}>
+          <h1 className={styles.title}>National Historic Landmarks of NYC</h1>
+          <p className={styles.paragraph}>
+          NYC boasts 116 National Historic Landmarks, more than any other city in the United States. These landmarks illustrate over 3,000 years of history, from Wards Point's ancient burial grounds to Stonewall Inn's modern civil rights legacy.
+          </p>
+          <button className={styles.viewMapButton}>Explore Landmarks</button>
+        </div>
       </div>
-      </div>
+
       <div className={styles.imageContainer}>
-      
-      {/* New thin left column */}
-      <div className={styles.leftImageColumn}>
-        <img 
-          src={dakota} 
-          alt="The Dakota" 
-          className={`${styles.collageImage} ${styles.photoDakota}`} 
-        />
-        <img 
-          src={life} 
-          alt="Life Magazine Building" 
-          className={`${styles.collageImage} ${styles.photoLifeLeft}`} 
-        />
-        <img 
-          src={stock} 
-          alt="The Dakota" 
-          className={`${styles.collageImage} ${styles.photoDakota}`} 
-        />
-       <img 
-          src={greenwood} 
-          alt="The Dakota" 
-          className={`${styles.collageImage} ${styles.photoDakota}`} 
-        />
-        <img 
-          src={met} 
-          alt="The Dakota" 
-          className={`${styles.collageImage} ${styles.photoDakota}`} 
-        />
+        {/* COLUMN 1: Narrow vertical shots */}
+        <div className={styles.leftImageColumn}>
+          <img src={dakota} alt="Dakota" className={styles.collageImage} />
+          <img src={life} alt="Life Building" className={styles.collageImage} />
+          <img src={stock} alt="Stock Exchange" className={styles.collageImage} />
+        </div>
+
+        {/* COLUMN 2: Wide featured shots */}
+        <div className={styles.middleImageColumn}>
+          <img src={trinity} alt="Trinity Church" className={styles.collageImage} />
+          <img src={map} alt="City Map" className={styles.collageImage} />
+          <img src={centralpark} alt="Central Park" className={styles.collageImage} />
+          <img src={greenwood} alt="Flatiron" className={styles.collageImage} />
+        </div>
+
+        {/* COLUMN 3: The "Filler" column to fix the empty space */}
+        <div className={styles.rightImageColumn}>
+          <img src={woolworth} alt="Woolworth" className={styles.collageImage} />
+          <img src={empire} alt="Empire State" className={styles.collageImage} />
+
+        </div>
       </div>
-
-      {/* Main collage - right panel */}
-      <div className={styles.rightPanel}>
-        <img 
-          src={trinity} 
-          alt="Trinity Church" 
-          className={`${styles.collageImage} ${styles.photoTrinity}`} 
-        />
-
-        <img 
-          src={map} 
-          alt="New York City Map" 
-          className={`${styles.collageImage} ${styles.photoMap}`} 
-        />
-
-        <img 
-          src={woolworth} 
-          alt="Woolworth Building" 
-          className={`${styles.collageImage} ${styles.photoWoolworth}`} 
-        />
-        
-        <img 
-          src={empire} 
-          alt="Empire State Building" 
-          className={`${styles.collageImage} ${styles.photoLife}`} 
-        />
-
-        <img 
-          src={centralpark} 
-          alt="Central Park" 
-          className={`${styles.collageImage} ${styles.photoCentralPark}`} 
-        />
-      </div>
-    </div>
     </div>
   );
 };
