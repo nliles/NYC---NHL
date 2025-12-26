@@ -2,7 +2,7 @@
 
 .container {
   display: flex;
-  min-height: 100vh;
+  height: 100vh;
   width: 100vw;
   background-color: colors.$grayBlue;
   overflow: hidden;
@@ -10,6 +10,8 @@
   @media (max-width: 1024px) {
     flex-direction: column;
     overflow-y: auto;
+    height: auto;
+    min-height: 100vh;
   }
 }
 
@@ -123,6 +125,7 @@
   border-left: 5px solid black;
   overflow-y: auto;
   overflow-x: hidden;
+  height: 100vh;
 
   &::-webkit-scrollbar {
     display: none;
@@ -134,6 +137,7 @@
     border-top: 5px solid black;
     min-height: 50vh;
     max-height: 60vh;
+    height: auto;
   }
 
   @media (max-width: 768px) {
@@ -148,6 +152,7 @@
   display: flex;
   flex-direction: column;
   border-right: 5px solid black;
+  height: 100%;
 
   @media (max-width: 768px) {
     width: 40%;
@@ -158,6 +163,8 @@
   width: 100%;
   display: block;
   border-bottom: 10px solid black;
+  flex: 1;
+  object-fit: cover;
 
   &:first-child {
     border-top: 5px solid black;
@@ -171,6 +178,7 @@
     &:first-child {
       border-top: none;
     }
+    flex: none;
   }
 
   @media (max-width: 768px) {
@@ -183,6 +191,7 @@
   width: 67%;
   display: flex;
   flex-direction: column;
+  height: 100%;
 
   @media (max-width: 768px) {
     width: 60%;
@@ -196,7 +205,9 @@
 
   img {
     width: 100%;
+    height: 100%;
     display: block;
+    object-fit: cover;
   }
 
   img:first-child {
@@ -211,23 +222,30 @@
 
   img {
     width: 100%;
+    height: 100%;
     display: block;
+    object-fit: cover;
   }
 }
 
 /* COLUMN STACK */
 .columnStack {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .stackCell {
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
 
 .stackCell img {
   width: 100%;
+  height: 100%;
   display: block;
+  object-fit: cover;
   border-bottom: 5px solid black;
 }
 
