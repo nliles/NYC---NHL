@@ -2,124 +2,156 @@
 
 .container {
   display: flex;
-  box-sizing: border-box;
-  background-color: colors.$grayBlue;
   height: 100vh;
   width: 100vw;
+  background-color: colors.$grayBlue;
   overflow: hidden;
 }
 
-/* --- THE 50/50 SPLIT --- */
+/* LEFT PANEL — LAYOUT UNCHANGED */
 .leftPanel {
   width: 50%;
-  padding: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-shrink: 0;
 }
 
+/* LEFT PANEL CONTENT — CARD REMOVED (FIX 1) */
+.textPanel {
+  max-width: 520px;
+  padding: 0; // no card padding
+  background: none;
+  border-radius: 0;
+  color: #f4f1ec;
+}
+
+.kicker {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  opacity: 0.8;
+}
+
+.title {
+  font-size: 3.2rem;
+  line-height: 1.05;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.paragraph {
+  margin-bottom: 2.75rem;
+  line-height: 1.7;
+  font-size: 1.05rem;
+  max-width: 460px;
+  opacity: 0.95;
+
+  strong {
+    font-weight: 600;
+  }
+}
+
+.viewMapButton {
+  padding: 14px 30px;
+  font-size: 0.95rem;
+  background: transparent;
+  color: #f4f1ec;
+  border: 1px solid rgba(244, 241, 236, 0.4);
+  border-radius: 6px;
+  cursor: pointer;
+
+  &:hover {
+    border-color: rgba(244, 241, 236, 0.8);
+  }
+}
+
+/* RIGHT PANEL — SINGLE SCROLL CONTEXT (UNCHANGED) */
 .imageContainer {
   width: 50%;
   display: flex;
-  background-color: black;
+  background: black;
   border-left: 5px solid black;
-  height: 100vh;
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
-/* --- INTERNAL IMAGE COLUMNS --- */
+/* LEFT COLUMN */
 .narrowColumn {
-  flex: 1; /* This is the 1/3 width */
+  width: 33%;
   display: flex;
   flex-direction: column;
   border-right: 5px solid black;
-  overflow-y: auto;
-  scrollbar-width: none;
-  &::-webkit-scrollbar { display: none; }
 }
 
-.wideGridColumn {
-  flex: 2; /* This is the 2/3 width */
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* Allows the side-by-side split */
-  grid-auto-rows: min-content;
-  overflow-y: auto;
-  scrollbar-width: none;
-  &::-webkit-scrollbar { display: none; }
-}
-
-/* --- IMAGE STYLES --- */
 .collageImage {
   width: 100%;
-  height: auto;
   display: block;
-  border-bottom: 5px solid black;
+  border-bottom: 1px solid black;
+
+  &:last-child {
+    border-bottom: none;
+  }
 }
 
-/* Wide Column specific image logic */
-.spanFull {
-  grid-column: span 2;
-  width: 100%;
-  height: auto;
-  display: block;
-  border-bottom: 5px solid black;
+/* RIGHT COLUMN */
+.wideGridColumn {
+  width: 67%;
+  display: flex;
+  flex-direction: column;
 }
 
-.splitImage {
-  grid-column: span 1;
-  width: 100%;
-  height: auto;
-  display: block;
-  border-bottom: 5px solid black;
-  
-  // Right border for the left image in a split pair
-  &:nth-child(odd) {
+/* STANDARD SPLIT ROW */
+.splitRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  img {
+    width: 100%;
+    display: block;
+  }
+
+  img:first-child {
     border-right: 2.5px solid black;
   }
 }
 
-/* --- TEXT PANEL UI --- */
-.textPanel {
-  background: rgba(255, 255, 255, 0.95);
-  padding: 3.5rem;
-  border-radius: 12px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  max-width: 500px;
-}
+/* MAP ROW */
+.mapRow {
+  display: grid;
+  grid-template-columns: 2fr;
 
-.title {
-  font-size: 2.8rem;
-  margin-bottom: 1.5rem;
-  color: #2c3e50;
-  line-height: 1.1;
-  font-family: serif; 
-}
-
-.paragraph {
-  color: #495057;
-  margin-bottom: 2rem;
-  line-height: 1.7;
-  font-size: 1.1rem;
-}
-
-.viewMapButton {
-  padding: 16px 32px;
-  background-color: #2c3e50;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 1.1rem;
-  font-weight: 600;
-  align-self: flex-start;
-  transition: background-color 0.2s;
-
-  &:hover {
-    background-color: #1a252f;
+  img {
+    width: 100%;
+    display: block;
   }
 }
+
+/* COLUMN STACK */
+.columnStack {
+  display: grid;
+}
+
+.stackCell {
+  display: flex;
+  flex-direction: column;
+}
+
+.stackCell img {
+  width: 100%;
+  display: block;
+  border-bottom: 5px solid black;
+}
+
+.stackCell img:last-child {
+  border-bottom: none;
+}
+
+
+
+
