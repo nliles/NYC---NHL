@@ -95,3 +95,13 @@
     outline: none;
   }
 }
+
+.titleLink {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover .title {
+    opacity: 0.8;
+    color: black;
+  }
+}
