@@ -8,6 +8,7 @@ $gray: #c0c0c0;
 $grayBlue: #34495e;
 $lightBlue: #6b8e8e;
 $white: #ffffff;
+$whiteSmoke: #f4f1ec;
 $offWhite: #fdfbf5;
 $cream: #f5f0e8;
 $golden: #d4924a;
@@ -15,9 +16,9 @@ $vintageBrown: #5a4d3f;
 $mauve: #a8a29e;
 $pearl: #e7e5e4;
 // boroughs
-$queens: #5a7a6a; // Sage green
-$bronx: #6b5b7a; // Dusty purple
-$statenIsland: #6e4040; // Warm taupe
+$queens: #5a7a6a;
+$bronx: #6b5b7a;
+$statenIsland: #6e4040;
 
 // Export them for JavaScript
 :export {
@@ -29,6 +30,7 @@ $statenIsland: #6e4040; // Warm taupe
   grayBlue: $grayBlue;
   lightBlue: $lightBlue;
   white: $white;
+  whiteSmoke: $whiteSmoke;
   offWhite: $offWhite;
   mauve: $mauve;
   golden: $golden;

@@ -35,7 +35,7 @@ const Home = () => {
         </div>
       </div>
 
-      {/* RIGHT PANEL — SINGLE SCROLL UNIT */}
+      {/* RIGHT PANEL */}
       <div className={styles.imageContainer}>
         {/* LEFT NARROW COLUMN */}
         <div className={styles.narrowColumn}>
@@ -56,9 +56,7 @@ const Home = () => {
           </div>
 
           <div className={styles.columnStack}>
-            <div className={styles.stackCell}>
               <img src={trinity} />
-            </div>
           </div>
         </div>
       </div>

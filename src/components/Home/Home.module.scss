@@ -37,7 +37,7 @@
   padding: 0;
   background: none;
   border-radius: 0;
-  color: #f4f1ec;
+  color: colors.$whiteSmoke;
 
   @media (max-width: 768px) {
     max-width: 100%;
@@ -79,7 +79,6 @@
   line-height: 1.7;
   font-size: 1.05rem;
   max-width: 460px;
-  opacity: 0.95;
 
   strong {
     font-weight: 600;
@@ -97,7 +96,7 @@
   padding: 14px 30px;
   font-size: 0.95rem;
   background: transparent;
-  color: #f4f1ec;
+  color: colors.$whiteSmoke;
   border: 1px solid rgba(244, 241, 236, 0.4);
   border-radius: 6px;
   cursor: pointer;
@@ -105,7 +104,7 @@
 
   &:hover {
     border-color: rgba(244, 241, 236, 0.8);
-    color: white;
+    color: colors.$white;
   }
 
   @media (max-width: 768px) {
@@ -118,17 +117,15 @@
 .imageContainer {
   width: 50%;
   display: flex;
-  background: black;
-  border-left: 5px solid black;
+  background: colors.$black;
+  border-left: 5px solid colors.$black;
   overflow-y: auto;
   height: 100vh;
 
   @media (max-width: 1024px) {
     width: 100%;
     border-left: none;
-    border-top: 5px solid black;
-    // min-height: 50vh;
-    // max-height: 60vh;
+    border-top: 5px solid colors.$black;
     height: auto;
   }
 
@@ -142,7 +139,7 @@
   width: 33%;
   display: flex;
   flex-direction: column;
-  border-right: 5px solid black;
+  border-right: 5px solid colors.$black;
   height: 100%;
 
   @media (min-width: 1024px) and (max-width: 1450px) {
@@ -157,12 +154,12 @@
 .collageImage {
   width: 100%;
   display: block;
-  border-bottom: 10px solid black;
+  border-bottom: 10px solid colors.$black;
   flex: 1;
   object-fit: cover;
 
   &:first-child {
-    border-top: 5px solid black;
+    border-top: 5px solid colors.$black;
   }
 
   &:last-child {
@@ -177,7 +174,7 @@
   }
 
   @media (max-width: 768px) {
-    border-bottom: 5px solid black;
+    border-bottom: 5px solid colors.$black;
   }
 }
 
@@ -210,7 +207,7 @@
   }
 
   img:first-child {
-    border-right: 2.5px solid black;
+    border-right: 2.5px solid colors.$black;
   }
 }
 
@@ -232,22 +229,16 @@
   display: flex;
   flex-direction: column;
   flex: 1;
-}
 
-.stackCell {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
+  img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-bottom: 5px solid colors.$black;
 
-.stackCell img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-  border-bottom: 5px solid black;
-}
-
-.stackCell img:last-child {
-  border-bottom: none;
+    &:last-child {
+      border-bottom: none;
+    }
+  }
 }
