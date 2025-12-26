@@ -38,7 +38,7 @@ const Map = ({
         center: DEFAULT_CENTER,
         zoom: 12,
         minZoom: 9.5,
-        interactive: interactive, 
+        interactive: interactive,
       });
 
       mapInstance.current = map;

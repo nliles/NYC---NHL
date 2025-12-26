@@ -230,7 +230,11 @@ const LandmarkProfile = ({
               )}
               {!!landscapeArchitect?.length && (
                 <ReferenceList
-                  title={landscapeArchitect?.length === 1 ? "Landscape Architect" : "Landscape Architects"}
+                  title={
+                    landscapeArchitect?.length === 1
+                      ? "Landscape Architect"
+                      : "Landscape Architects"
+                  }
                   items={landscapeArchitect}
                   onClick={(item: any) => openModal(item)}
                 />

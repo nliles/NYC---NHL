@@ -1,4 +1,5 @@
 import { Check } from "lucide-react";
+import { Link } from "react-router-dom";
 import styles from "./NavBar.module.scss";
 import cn from "classnames";
 import colors from "@/styles/colors.module.scss";
@@ -28,22 +29,22 @@ const NavBar = ({
   toggleAbout: () => void;
 }) => {
   return (
-    <>
-      <nav className={styles.nav}>
-        <div className={styles.content}>
-          <div className={styles.leftContent}>
+    <nav className={styles.nav}>
+      <div className={styles.content}>
+        <div className={styles.leftContent}>
+          <Link to="/" className={styles.titleLink}>
             <h1 className={styles.title}>National Historic Landmarks of NYC</h1>
-            <Progress count={count} total={total} className={styles.mobile} />
-          </div>
-          <div className={styles.rightContent}>
-            <Progress count={count} total={total} className={styles.desktop} />
-            <button className={styles.buttonLink} onClick={toggleAbout}>
-              About
-            </button>
-          </div>
+          </Link>
+          <Progress count={count} total={total} className={styles.mobile} />
         </div>
-      </nav>
-    </>
+        <div className={styles.rightContent}>
+          <Progress count={count} total={total} className={styles.desktop} />
+          <button className={styles.buttonLink} onClick={toggleAbout}>
+            About
+          </button>
+        </div>
+      </div>
+    </nav>
   );
 };
 

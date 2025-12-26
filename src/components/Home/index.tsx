@@ -11,7 +11,7 @@ import map from "../../assets/map.jpg";
 import stock from "../../assets/stock.jpg";
 // import stewart from "./assets/stewart.jpg";
 // import flatiron from "./assets/flatiron.jpg";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -28,8 +28,10 @@ const Home = () => {
           </h1>
 
           <p className={styles.paragraph}>
-            NYC is home to <strong>116 National Historic Landmarks</strong>, more
-            than any other city in the United States. Explore over 3,000 years of history, from Wards Point's ancient burial grounds to Stonewall Inn's modern civil rights legacy.
+            NYC is home to <strong>116 National Historic Landmarks</strong>,
+            more than any other city in the United States. Explore over 3,000
+            years of history, from Wards Point's ancient burial grounds to
+            Stonewall Inn's modern civil rights legacy.
           </p>
 
           <Link to="/explore-landmarks" className={styles.viewMapButton}>

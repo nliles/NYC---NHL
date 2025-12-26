@@ -25,7 +25,9 @@ export const useLandmarks = () => {
             return {
               id: entry.sys.id,
               name: String(name),
-              benefactor: transformStringField(entry.fields.benefactor as string),
+              benefactor: transformStringField(
+                entry.fields.benefactor as string,
+              ),
               borough: String(borough),
               built: transformStringField(entry.fields.built as string),
               founded: transformStringField(entry.fields.founded as string),
@@ -40,7 +42,7 @@ export const useLandmarks = () => {
               },
               classType: transformStringField(entry.fields.classType as string),
               date: transformStringField(entry.fields.date as string),
-              event : transformStringField(entry.fields.event as string),
+              event: transformStringField(entry.fields.event as string),
               architect: (entry.fields.architects as any[]) || [],
               architectAttribution:
                 (entry.fields.architectAttribution as any[]) || [],

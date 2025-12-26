@@ -1,7 +1,7 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './components/Home';
-import LandmarkFinder from './components/LandmarkFinder';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./components/Home";
+import LandmarkFinder from "./components/LandmarkFinder";
+import "./App.css";
 
 function App() {
   return (
@@ -15,9 +15,3 @@ function App() {
 }
 
 export default App;
-
-
-
-
-
-
