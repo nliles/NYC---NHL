@@ -8,6 +8,11 @@ import { Landmark } from "@/types";
 import React, { useState } from "react";
 import Modal from "../Modal";
 
+const pluralize = ({ text, count = 0 }: { text: string; count?: number }) => {
+  if (count === 1) return text;
+  return text + "s";
+};
+
 const ReferenceList = ({
   title,
   items,
@@ -18,7 +23,12 @@ const ReferenceList = ({
   onClick: (item: any) => void;
 }) => (
   <li className={styles.bulletItem}>
-    <p className={styles.key}>{title}</p>
+    <p className={styles.key}>
+      {pluralize({
+        text: title,
+        count: items?.length,
+      })}
+    </p>
     <div className={styles.value}>
       {items?.map((a: any, index: number) => (
         <ReferenceListItem
@@ -202,9 +212,10 @@ const LandmarkProfile = ({
               {!!combinedArchitects.length && (
                 <li className={styles.bulletItem}>
                   <p className={styles.key}>
-                    {(combinedArchitects?.length || 0) === 1
-                      ? "Architect"
-                      : "Architects"}
+                    {pluralize({
+                      text: "Architect",
+                      count: combinedArchitects?.length,
+                    })}
                   </p>
                   <div className={styles.value}>
                     {combinedArchitects?.map((a: any, index: number) => (
@@ -230,11 +241,7 @@ const LandmarkProfile = ({
               )}
               {!!landscapeArchitect?.length && (
                 <ReferenceList
-                  title={
-                    landscapeArchitect?.length === 1
-                      ? "Landscape Architect"
-                      : "Landscape Architects"
-                  }
+                  title="Landscape Architect"
                   items={landscapeArchitect}
                   onClick={(item: any) => openModal(item)}
                 />
@@ -242,9 +249,10 @@ const LandmarkProfile = ({
               {!!residentAttribution?.length && (
                 <li className={styles.bulletItem}>
                   <p className={styles.key}>
-                    {(residentAttribution?.length || 0) === 1
-                      ? "Resident"
-                      : "Residents"}
+                    {pluralize({
+                      text: "Resident",
+                      count: residentAttribution?.length,
+                    })}
                   </p>
                   <div className={styles.value}>
                     {residentAttribution?.map((a: any, index: number) => (
