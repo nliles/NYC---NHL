@@ -10,6 +10,7 @@ const ReferenceListItem = ({
   onClick,
   isLastItem,
   showParenthesis,
+  useSemiColon,
 }: {
   name: string;
   summary: string;
@@ -17,6 +18,7 @@ const ReferenceListItem = ({
   onClick: () => void;
   isLastItem?: boolean;
   showParenthesis?: boolean;
+  useSemiColon?: boolean;
 }) => {
   const attributionText = showParenthesis
     ? ` (${attribution})`
@@ -43,7 +45,7 @@ const ReferenceListItem = ({
           {attribution && <span>{attributionText}</span>}
         </span>
       )}
-      {!isLastItem && ", "}
+      {!isLastItem && `${useSemiColon ? ";" : ","} `}
     </React.Fragment>
   );
 };
