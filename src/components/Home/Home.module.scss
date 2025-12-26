@@ -91,7 +91,7 @@
 .viewMapButton {
   display: inline-block;
   padding: 14px 30px;
-  font-size: 0.95rem;
+  font-size: typography.$fontMd;
   background: transparent;
   color: colors.$whiteSmoke;
   border: 1px solid rgba(244, 241, 236, 0.4);
