@@ -143,6 +143,7 @@
   @media (max-width: 768px) {
     min-height: 40vh;
     max-height: 50vh;
+    width: 100%;
   }
 }
 
@@ -155,7 +156,7 @@
   height: 100%;
 
   @media (max-width: 768px) {
-    width: 40%;
+    display: none;
   }
 }
 
@@ -194,7 +195,7 @@
   height: 100%;
 
   @media (max-width: 768px) {
-    width: 60%;
+    width: 100%;
   }
 }
 
