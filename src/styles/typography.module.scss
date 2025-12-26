@@ -1,0 +1,23 @@
+// Base size
+$baseSize: 16px;
+
+// Font size scale
+$fontXs: 0.75rem; // 12px
+$fontSm: 0.875rem; // 14px
+$fontMd: 1rem; // 16px
+$fontLg: 1.125rem; // 18px
+$fontXl: 1.25rem; // 20px
+$font2xl: 1.5rem; // 24px
+$font3xl: 2rem; // 32px
+
+// Export them for JavaScript
+:export {
+  baseSize: $baseSize;
+  fontXs: $fontXs;
+  fontSm: $fontSm;
+  fontMd: $fontMd;
+  fontLg: $fontLg;
+  fontXl: $fontXl;
+  font2xl: $font2xl;
+  font3xl: $font3xl;
+}

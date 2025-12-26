@@ -1,4 +1,5 @@
 @use "../../styles/colors.module.scss";
+@use "../../styles/typography.module.scss";
 
 .leftPanel {
   margin-top: 50px;
@@ -71,7 +72,7 @@
   margin: 0;
   font-weight: 600;
   margin-bottom: 4px;
-  font-size: 14px;
+  font-size: typography.$fontSm;
 }
 
 .boroughsContainer {
@@ -87,7 +88,7 @@
   color: colors.$white;
   padding: 2px 6px;
   border-radius: 10px;
-  font-size: 12px;
+  font-size: typography.$fontXs;
   margin-top: 4px;
   margin-right: 2px;
 }
@@ -142,7 +143,7 @@
   padding: 12px 0;
   background: colors.$lightGray2;
   border-bottom: 1px solid colors.$grayBlue;
-  font-size: 14px;
+  font-size: typography.$fontSm;
   font-weight: 500;
   color: colors.$grayBlue;
   text-align: center;

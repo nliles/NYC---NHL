@@ -1,3 +1,6 @@
+@use "../../styles/colors.module.scss";
+@use "../../styles/typography.module.scss";
+
 .modalOverlay {
   position: fixed;
   top: 0;
@@ -29,7 +32,7 @@
 .modalClose {
   background: none;
   border: none;
-  font-size: 2rem;
+  font-size: typography.$font3xl;
   cursor: pointer;
   color: #666;
   padding: 0;
@@ -42,7 +45,7 @@
   flex-shrink: 0;
 
   &:hover {
-    color: #000;
+    color: colors.$black;
   }
 }
 
