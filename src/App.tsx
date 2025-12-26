@@ -30,7 +30,7 @@ const App = () => {
 
           <p className={styles.paragraph}>
             NYC is home to <strong>116 National Historic Landmarks</strong>, more
-            than any other city in the United States.
+            than any other city in the United States. Explore over 3,000 years of history, from Wards Point's ancient burial grounds to Stonewall Inn's modern civil rights legacy.
           </p>
 
           <button className={styles.viewMapButton}>
