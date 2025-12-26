@@ -61,7 +61,6 @@ const Home = () => {
           </div>
 
           <div className={styles.columnStack}>
-            <div />
             <div className={styles.stackCell}>
               <img src={trinity} />
             </div>
