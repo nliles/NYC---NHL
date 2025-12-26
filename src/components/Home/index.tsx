@@ -1,16 +1,11 @@
 import styles from "./Home.module.scss";
 import empire from "../../assets/empire.jpg";
-// import brooklyn from "./assets/brooklyn.jpg";
+import brooklyn from "../../assets/brooklyn.jpg";
 import trinity from "../../assets/trinity.jpg";
 import life from "../../assets/life.jpg";
-import dakota from "../../assets/dakota.jpg";
 import woolworth from "../../assets/woolworth.jpg";
-// import dakota3 from "./assets/dakota3.jpg";
 import map from "../../assets/map.jpg";
-// import equitable from "./assets/equitable.jpg";
 import stock from "../../assets/stock.jpg";
-// import stewart from "./assets/stewart.jpg";
-// import flatiron from "./assets/flatiron.jpg";
 import { Link } from "react-router-dom";
 
 const Home = () => {
@@ -34,7 +29,7 @@ const Home = () => {
             Stonewall Inn's modern civil rights legacy.
           </p>
 
-          <Link to="/explore-landmarks" className={styles.viewMapButton}>
+          <Link to="/explore" className={styles.viewMapButton}>
             View interactive map
           </Link>
         </div>
@@ -44,7 +39,7 @@ const Home = () => {
       <div className={styles.imageContainer}>
         {/* LEFT NARROW COLUMN */}
         <div className={styles.narrowColumn}>
-          <img src={dakota} className={styles.collageImage} />
+          <img src={brooklyn} className={styles.collageImage} />
           <img src={life} className={styles.collageImage} />
           <img src={stock} className={styles.collageImage} />
         </div>
