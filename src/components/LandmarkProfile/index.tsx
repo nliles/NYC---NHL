@@ -68,7 +68,7 @@ const ReferenceListItem = ({
           {attribution && <span>{attributionText}</span>}
         </>
       ) : (
-        <span className={styles.noWrap}>
+        <span>
           <span>{name}</span>
           {attribution && <span>{attributionText}</span>}
         </span>
