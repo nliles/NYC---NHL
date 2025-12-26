@@ -1,11 +1,12 @@
-import { ArrowRight, Info } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import styles from "./LandmarkProfile.module.scss";
 import ReactMarkdown from "react-markdown";
 import colors from "@/styles/colors.module.scss";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import remarkBreaks from "remark-breaks";
+import ReferenceListItem from "./ReferenceListItem";
 import { Landmark } from "@/types";
-import React, { useState } from "react";
+import { useState } from "react";
 import Modal from "../Modal";
 
 const pluralize = ({ text, count = 0 }: { text: string; count?: number }) => {
@@ -42,51 +43,6 @@ const ReferenceList = ({
     </div>
   </li>
 );
-
-const ReferenceListItem = ({
-  name,
-  summary,
-  attribution,
-  onClick,
-  isLastItem,
-  showParenthesis,
-}: {
-  name: string;
-  summary: string;
-  attribution?: string;
-  onClick: () => void;
-  isLastItem?: boolean;
-  showParenthesis?: boolean;
-}) => {
-  const attributionText = showParenthesis
-    ? ` (${attribution})`
-    : ` ${attribution}`;
-  return (
-    <React.Fragment key={name}>
-      {summary ? (
-        <>
-          <button
-            type="button"
-            onClick={onClick}
-            className={styles.modalButton}
-          >
-            {name}
-            <sup>
-              <Info color="#6b8e8e" size={12} />
-            </sup>
-          </button>
-          {attribution && <span>{attributionText}</span>}
-        </>
-      ) : (
-        <span>
-          <span>{name}</span>
-          {attribution && <span>{attributionText}</span>}
-        </span>
-      )}
-      {!isLastItem && ", "}
-    </React.Fragment>
-  );
-};
 
 const LandmarkProfile = ({
   selectedLandmark,
