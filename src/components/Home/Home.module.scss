@@ -2,27 +2,47 @@
 
 .container {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   background-color: colors.$grayBlue;
   overflow: hidden;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    overflow-y: auto;
+  }
 }
 
-/* LEFT PANEL — LAYOUT UNCHANGED */
+/* LEFT PANEL */
 .leftPanel {
   width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    min-height: 60vh;
+    padding: 60px 40px;
+  }
+
+  @media (max-width: 768px) {
+    min-height: 50vh;
+    padding: 40px 24px;
+  }
 }
 
-/* LEFT PANEL CONTENT — CARD REMOVED (FIX 1) */
 .textPanel {
   max-width: 520px;
-  padding: 0; // no card padding
+  padding: 0;
   background: none;
   border-radius: 0;
   color: #f4f1ec;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
 }
 
 .kicker {
@@ -32,6 +52,11 @@
   text-transform: uppercase;
   margin-bottom: 1.5rem;
   opacity: 0.8;
+
+  @media (max-width: 768px) {
+    font-size: 0.65rem;
+    margin-bottom: 1rem;
+  }
 }
 
 .title {
@@ -39,6 +64,15 @@
   line-height: 1.05;
   margin-bottom: 2rem;
   font-weight: 500;
+
+  @media (max-width: 1024px) {
+    font-size: 2.8rem;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+  }
 }
 
 .paragraph {
@@ -51,6 +85,12 @@
   strong {
     font-weight: 600;
   }
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    max-width: 100%;
+  }
 }
 
 .viewMapButton {
@@ -62,15 +102,20 @@
   border: 1px solid rgba(244, 241, 236, 0.4);
   border-radius: 6px;
   cursor: pointer;
-  text-decoration: none; // Remove underline
+  text-decoration: none;
 
   &:hover {
     border-color: rgba(244, 241, 236, 0.8);
     color: white;
   }
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+    padding: 12px 24px;
+  }
 }
 
-/* RIGHT PANEL — SINGLE SCROLL CONTEXT (UNCHANGED) */
+/* RIGHT PANEL */
 .imageContainer {
   width: 50%;
   display: flex;
@@ -82,6 +127,19 @@
   &::-webkit-scrollbar {
     display: none;
   }
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    border-left: none;
+    border-top: 5px solid black;
+    min-height: 50vh;
+    max-height: 60vh;
+  }
+
+  @media (max-width: 768px) {
+    min-height: 40vh;
+    max-height: 50vh;
+  }
 }
 
 /* LEFT COLUMN */
@@ -90,6 +148,10 @@
   display: flex;
   flex-direction: column;
   border-right: 5px solid black;
+
+  @media (max-width: 768px) {
+    width: 40%;
+  }
 }
 
 .collageImage {
@@ -104,6 +166,16 @@
   &:last-child {
     border-bottom: none;
   }
+
+  @media (max-width: 1024px) {
+    &:first-child {
+      border-top: none;
+    }
+  }
+
+  @media (max-width: 768px) {
+    border-bottom: 5px solid black;
+  }
 }
 
 /* RIGHT COLUMN */
@@ -111,6 +183,10 @@
   width: 67%;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 768px) {
+    width: 60%;
+  }
 }
 
 /* STANDARD SPLIT ROW */
