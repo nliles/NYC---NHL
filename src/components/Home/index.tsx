@@ -56,7 +56,7 @@ const Home = () => {
           </div>
 
           <div className={styles.columnStack}>
-              <img src={trinity} />
+            <img src={trinity} />
           </div>
         </div>
       </div>

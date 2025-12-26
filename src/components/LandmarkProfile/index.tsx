@@ -263,30 +263,26 @@ const LandmarkProfile = ({
               {lastBullets.map((item) => (
                 <li key={item.key} className={styles.bulletItem}>
                   <p className={styles.key}>{item.key}</p>
-                  {item.key === "Significance" ? (
-                    <div className={styles.value}>
-                      <ReactMarkdown
-                        remarkPlugins={[remarkBreaks]}
-                        components={{
-                          a: ({ node, ...props }) => (
-                            <a
-                              {...props}
-                              className={styles.link}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            />
-                          ),
-                          p: ({ node, ...props }) => (
-                            <p {...props} className={styles.value} />
-                          ),
-                        }}
-                      >
-                        {item.value as string}
-                      </ReactMarkdown>
-                    </div>
-                  ) : (
-                    <p className={styles.value}>{item.value}</p>
-                  )}
+                  <div className={styles.value}>
+                    <ReactMarkdown
+                      remarkPlugins={[remarkBreaks]}
+                      components={{
+                        a: ({ node, ...props }) => (
+                          <a
+                            {...props}
+                            className={styles.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          />
+                        ),
+                        p: ({ node, ...props }) => (
+                          <p {...props} className={styles.value} />
+                        ),
+                      }}
+                    >
+                      {item.value as string}
+                    </ReactMarkdown>
+                  </div>
                 </li>
               ))}
             </ul>
