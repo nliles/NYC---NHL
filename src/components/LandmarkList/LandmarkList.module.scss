@@ -17,7 +17,6 @@
   }
 }
 
-/* New container for proper flex layout */
 .listContainer {
   display: flex;
   flex-direction: column;
@@ -146,4 +145,5 @@
   font-size: 14px;
   font-weight: 500;
   color: colors.$grayBlue;
+  text-align: center;
 }

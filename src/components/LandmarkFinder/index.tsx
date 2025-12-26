@@ -48,7 +48,7 @@ const LandmarkFinder = () => {
   };
 
   return (
-    <>
+    <div>
       <NavBar
         count={visitedLandmarks.length}
         total={landmarks.length}
@@ -88,7 +88,7 @@ const LandmarkFinder = () => {
           )}
         </Portal>
       </div>
-    </>
+    </div>
   );
 };
 
