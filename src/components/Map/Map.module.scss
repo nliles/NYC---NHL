@@ -1,9 +1,10 @@
+@use "../../styles/borders.module.scss";
 @use "../../styles/colors.module.scss";
 
 .container {
   width: 100%;
   position: relative;
-  touch-action: pan-x pan-y pinch-zoom; /* Allow map gestures but be more specific */
+  touch-action: pan-x pan-y pinch-zoom;
 }
 
 .mapContainer {
@@ -29,7 +30,7 @@
   padding: 0.3rem;
   background: colors.$grayBlue;
   border: 2px solid colors.$vintageBrown;
-  border-radius: 4px;
+  border-radius: borders.$radiusMd;
   cursor: pointer;
   display: flex;
   align-items: center;

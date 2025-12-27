@@ -1,5 +1,7 @@
+@use "../../styles/borders.module.scss";
 @use "../../styles/colors.module.scss";
 @use "../../styles/shadows.module.scss";
+@use "../../styles/spacing.module.scss";
 @use "../../styles/typography.module.scss";
 
 .modalOverlay {
@@ -13,14 +15,14 @@
   align-items: center;
   justify-content: center;
   z-index: 1000;
-  padding: 20px;
+  padding: spacing.$spaceXl;
   overflow-y: auto; // Add this
 }
 
 .modalContent {
   position: relative;
   background: white;
-  border-radius: 8px;
+  border-radius: borders.$radiusLg;
   max-width: 500px;
   width: 100%;
   max-height: 80vh;
@@ -55,7 +57,7 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
-  padding: 20px;
+  padding: spacing.$spaceXl;
   overflow-y: auto;
 
   > p {

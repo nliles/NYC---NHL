@@ -1,5 +1,7 @@
+@use "../../styles/borders.module.scss";
 @use "../../styles/colors.module.scss";
 @use "../../styles/shadows.module.scss";
+@use "../../styles/spacing.module.scss";
 @use "../../styles/typography.module.scss";
 
 .leftPanel {
@@ -28,7 +30,7 @@
 }
 
 .panelHeader {
-  padding: 20px;
+  padding: spacing.$spaceXl;
   padding-bottom: 0;
   border-bottom: 1px solid colors.$grayBlue;
   flex-shrink: 0;
@@ -51,7 +53,7 @@
   flex: 1;
   min-width: 0;
   text-align: left;
-  padding: 0.5rem 1.5rem;
+  padding: spacing.$spaceSm spacing.$space2xl;
   width: 100%;
   border-bottom: 1px solid colors.$pearl;
 
@@ -73,26 +75,26 @@
 .name {
   margin: 0;
   font-weight: 600;
-  margin-bottom: 4px;
+  margin-bottom: spacing.$spaceXs;
   font-size: typography.$fontSm;
 }
 
 .boroughsContainer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
-  margin: 10px 0 15px 0;
+  gap: spacing.$spaceSm;
+  margin: spacing.$spaceMd 0 spacing.$spaceLg 0;
 }
 
 .borough,
 .boroughBtn {
   background: colors.$grayBlue;
   color: colors.$white;
-  padding: 2px 6px;
-  border-radius: 10px;
+  padding: spacing.$spaceXxs 6px;
+  border-radius: borders.$radiusXl;
   font-size: typography.$fontXs;
-  margin-top: 4px;
-  margin-right: 2px;
+  margin-top: spacing.$spaceXs;
+  margin-right: spacing.$spaceXxs;
 }
 
 .borough,
@@ -142,7 +144,7 @@
 }
 
 .resultsCount {
-  padding: 12px 0;
+  padding: spacing.$spaceMd 0;
   background: colors.$lightGray2;
   border-bottom: 1px solid colors.$grayBlue;
   font-size: typography.$fontSm;

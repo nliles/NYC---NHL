@@ -1,4 +1,6 @@
+@use "../../styles/borders.module.scss";
 @use "../../styles/colors.module.scss";
+@use "../../styles/spacing.module.scss";
 @use "../../styles/typography.module.scss";
 
 .container {
@@ -25,11 +27,11 @@
 
   @media (max-width: 1024px) {
     width: 100%;
-    padding: 60px 40px;
+    padding: 60px spacing.$space4xl;
   }
 
   @media (max-width: 768px) {
-    padding: 40px 24px;
+    padding: spacing.$space4xl spacing.$space2xl;
   }
 }
 
@@ -47,17 +49,17 @@
   font-size: typography.$fontSm;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  margin-bottom: 1.5rem;
+  margin-bottom: spacing.$space2xl;
 
   @media (max-width: 768px) {
-    margin-bottom: 1rem;
+    margin-bottom: spacing.$spaceLg;
   }
 }
 
 .title {
   font-size: 3.2rem;
   line-height: 1.05;
-  margin-bottom: 2rem;
+  margin-bottom: spacing.$space3xl;
   font-weight: 500;
 
   @media (max-width: 1024px) {
@@ -66,7 +68,7 @@
 
   @media (max-width: 768px) {
     font-size: 2.2rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: spacing.$space2xl;
   }
 }
 
@@ -82,7 +84,7 @@
 
   @media (max-width: 768px) {
     font-size: typography.$fontMd;
-    margin-bottom: 2rem;
+    margin-bottom: spacing.$space3xl;
     max-width: 100%;
   }
 }
@@ -94,7 +96,7 @@
   background: transparent;
   color: colors.$whiteSmoke;
   border: 1px solid rgba(colors.$whiteSmoke, 0.4);
-  border-radius: 6px;
+  border-radius: borders.$radiusMd;
   cursor: pointer;
   text-decoration: none;
 
@@ -105,7 +107,7 @@
 
   @media (max-width: 768px) {
     font-size: typography.$fontSm;
-    padding: 12px 24px;
+    padding: spacing.$spaceMd spacing.$space2xl;
   }
 }
 

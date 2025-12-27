@@ -1,0 +1,20 @@
+$spaceXxs: 0.125rem; // 2px
+$spaceXs: 0.25rem; // 4px
+$spaceSm: 0.5rem; // 8px
+$spaceMd: 0.75rem; // 12px
+$spaceLg: 1rem; // 16px
+$spaceXl: 1.25rem; // 20px
+$space2xl: 1.5rem; // 24px
+$space3xl: 2rem; // 32px
+$space4xl: 2.5rem; // 40px
+
+:export {
+  spaceXs: $spaceXs;
+  spaceSm: $spaceSm;
+  spaceMd: $spaceMd;
+  spaceLg: $spaceLg;
+  spaceXl: $spaceXl;
+  space2xl: $space2xl;
+  space3xl: $space3xl;
+  space4xl: $space4xl;
+}

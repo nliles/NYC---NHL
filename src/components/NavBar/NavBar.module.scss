@@ -1,5 +1,6 @@
 @use "../../styles/colors.module.scss";
 @use "../../styles/shadows.module.scss";
+@use "../../styles/spacing.module.scss";
 @use "../../styles/typography.module.scss";
 
 .nav {
@@ -29,7 +30,7 @@
 }
 
 .content {
-  margin: 0 1rem;
+  margin: 0 spacing.$spaceLg;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -42,28 +43,28 @@
 .aboutContent {
   @media (max-width: 768px) {
     margin: 10px;
-    padding: 24px;
+    padding: spacing.$space2xl;
     max-height: 90vh;
   }
 }
 
 .rightContent {
   display: flex;
-  margin-right: 1rem;
+  margin-right: spacing.$spaceLg;
 }
 
 .progress {
   display: flex;
   align-items: center;
-  margin-right: 1rem;
+  margin-right: spacing.$spaceLg;
   font-size: typography.$fontLg;
 
   svg {
-    margin-right: 0.5rem;
+    margin-right: spacing.$spaceSm;
   }
 
   &.mobile {
-    padding: 0.5rem;
+    padding: spacing.$spaceSm;
 
     @media (min-width: 500px) {
       display: none;

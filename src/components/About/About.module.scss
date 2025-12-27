@@ -1,4 +1,5 @@
 @use "../../styles/colors.module.scss";
+@use "../../styles/spacing.module.scss";
 @use "../../styles/typography.module.scss";
 
 .container {
@@ -23,13 +24,13 @@
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  padding: 0 2rem;
-  padding-bottom: 1rem;
+  padding: 0 spacing.$space3xl;
+  padding-bottom: spacing.$spaceLg;
 }
 
 .aboutSection {
   @media (max-width: 768px) {
-    margin: 10px;
+    margin: spacing.$spaceSm;
     max-height: 90vh;
   }
 
@@ -41,7 +42,7 @@
 
   p {
     line-height: 1.6;
-    margin-bottom: 12px;
+    margin-bottom: spacing.$spaceMd;
 
     &:last-child {
       margin-bottom: 0;
@@ -52,7 +53,7 @@
     color: colors.$grayBlue;
 
     img {
-      margin-right: 0.25rem;
+      margin-right: spacing.$spaceXs;
     }
 
     &:hover {
@@ -62,22 +63,8 @@
   }
 }
 
-.aboutTitle {
-  @media (max-width: 768px) {
-    font-size: typography.$fontXl;
-  }
-}
-
-.aboutContent {
-  @media (max-width: 768px) {
-    margin: 10px;
-    padding: 24px;
-    max-height: 90vh;
-  }
-}
-
 .techItem:not(:last-child) {
-  padding-bottom: 0.5rem;
+  padding-bottom: spacing.$spaceSm;
 }
 
 .connectLink {
@@ -86,6 +73,6 @@
   text-decoration: none;
 
   svg {
-    margin-right: 0.2rem;
+    margin-right: spacing.$spaceXs;
   }
 }

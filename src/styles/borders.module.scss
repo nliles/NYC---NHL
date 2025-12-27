@@ -1,0 +1,16 @@
+/* src/styles/borders.module.scss */
+
+// Border radius scale
+$radiusXs: 2px;
+$radiusSm: 4px;
+$radiusMd: 6px;
+$radiusLg: 8px;
+$radiusXl: 10px;
+
+:export {
+  radiusXs: $radiusXs;
+  radiusSm: $radiusSm;
+  radiusMd: $radiusMd;
+  radiusLg: $radiusLg;
+  radiusXl: $radiusXl;
+}

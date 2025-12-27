@@ -1,5 +1,7 @@
+@use "../../styles/borders.module.scss";
 @use "../../styles/colors.module.scss";
 @use "../../styles/shadows.module.scss";
+@use "../../styles/spacing.module.scss";
 @use "../../styles/typography.module.scss";
 
 .searchContainer {
@@ -10,9 +12,9 @@
 .searchInput {
   box-sizing: border-box;
   width: 100%;
-  padding: 10px 40px 10px 12px;
+  padding: 10px spacing.$space4xl 10px spacing.$spaceMd;
   border: 1px solid colors.$mediumGray;
-  border-radius: 6px;
+  border-radius: borders.$radiusMd;
   font-size: typography.$fontMd;
   outline: none;
 
