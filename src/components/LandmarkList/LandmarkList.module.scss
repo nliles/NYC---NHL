@@ -30,7 +30,7 @@
 }
 
 .panelHeader {
-  padding: spacing.$spaceXl;
+  padding: spacing.$space10;
   padding-bottom: 0;
   border-bottom: 1px solid colors.$grayBlue;
   flex-shrink: 0;
@@ -53,7 +53,7 @@
   flex: 1;
   min-width: 0;
   text-align: left;
-  padding: spacing.$spaceSm spacing.$space2xl;
+  padding: spacing.$space4 spacing.$space12;
   width: 100%;
   border-bottom: 1px solid colors.$pearl;
 
@@ -75,26 +75,26 @@
 .name {
   margin: 0;
   font-weight: 600;
-  margin-bottom: spacing.$spaceXs;
+  margin-bottom: spacing.$space2;
   font-size: typography.$fontSm;
 }
 
 .boroughsContainer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: spacing.$spaceSm;
-  margin: spacing.$spaceMd 0 spacing.$spaceLg 0;
+  gap: spacing.$space4;
+  margin: spacing.$space6 0 spacing.$space8 0;
 }
 
 .borough,
 .boroughBtn {
   background: colors.$grayBlue;
   color: colors.$white;
-  padding: spacing.$spaceXxs 6px;
+  padding: spacing.$space1 spacing.$space3;
   border-radius: borders.$radiusXl;
   font-size: typography.$fontXs;
-  margin-top: spacing.$spaceXs;
-  margin-right: spacing.$spaceXxs;
+  margin-top: spacing.$space2;
+  margin-right: spacing.$space1;
 }
 
 .borough,
@@ -123,7 +123,7 @@
 .boroughBtn {
   background: colors.$lightGray2;
   color: colors.$grayBlue;
-  padding: 3px 6px;
+  padding: 3px spacing.$space3;;
   border: 1px solid colors.$gray;
 
   &:focus {
@@ -144,7 +144,7 @@
 }
 
 .resultsCount {
-  padding: spacing.$spaceMd 0;
+  padding: spacing.$space6 0;
   background: colors.$lightGray2;
   border-bottom: 1px solid colors.$grayBlue;
   font-size: typography.$fontSm;
