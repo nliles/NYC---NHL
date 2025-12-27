@@ -1,14 +1,15 @@
-$space1: 0.125rem;  // 2px
-$space2: 0.25rem;   // 4px
-$space3: 0.375rem;  // 6px
-$space4: 0.5rem;    // 8px
-$space5: 0.625rem;  // 10px
-$space6: 0.75rem;   // 12px
-$space8: 1rem;      // 16px
-$space10: 1.25rem;  // 20px
-$space12: 1.5rem;   // 24px
-$space16: 2rem;     // 32px
-$space20: 2.5rem;   // 40px
+$space1: 0.125rem; // 2px
+$space2: 0.25rem; // 4px
+$space3: 0.375rem; // 6px
+$space4: 0.5rem; // 8px
+$space5: 0.625rem; // 10px
+$space6: 0.75rem; // 12px
+$space8: 1rem; // 16px
+$space10: 1.25rem; // 20px
+$space12: 1.5rem; // 24px
+$space16: 2rem; // 32px
+$space20: 2.5rem; // 40px
+$space22: 2.75rem; // 44px
 
 :export {
   space1: $space1;
@@ -22,4 +23,5 @@ $space20: 2.5rem;   // 40px
   space12: $space12;
   space16: $space16;
   space20: $space20;
+  space22: $space22;
 }

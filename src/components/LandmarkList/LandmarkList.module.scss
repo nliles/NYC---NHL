@@ -123,7 +123,7 @@
 .boroughBtn {
   background: colors.$lightGray2;
   color: colors.$grayBlue;
-  padding: 3px spacing.$space3;;
+  padding: spacing.$space2 spacing.$space3;
   border: 1px solid colors.$gray;
 
   &:focus {
