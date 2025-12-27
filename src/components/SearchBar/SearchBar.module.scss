@@ -1,4 +1,5 @@
 @use "../../styles/colors.module.scss";
+@use "../../styles/shadows.module.scss";
 @use "../../styles/typography.module.scss";
 
 .searchContainer {
@@ -21,7 +22,7 @@
 
   &:focus {
     outline-color: colors.$grayBlue;
-    box-shadow: colors.$boxShadowFocus;
+    box-shadow: shadows.$boxShadowFocus;
   }
 }
 

@@ -1,4 +1,5 @@
 @use "../../styles/colors.module.scss";
+@use "../../styles/shadows.module.scss";
 @use "../../styles/typography.module.scss";
 
 .leftPanel {
@@ -11,7 +12,8 @@
   border-right: 1px solid colors.$lightGray;
   display: flex;
   flex-direction: column;
-  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: shadows.$shadowRight;
+  list-style-type: none;
 
   @media (max-width: 500px) {
     display: none;

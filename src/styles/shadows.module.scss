@@ -1,0 +1,24 @@
+// Elevation shadows (from light to heavy)
+$shadowSm: 0 2px 4px rgba(0, 0, 0, 0.1);
+$shadowMd: 0 4px 20px rgba(0, 0, 0, 0.15);
+$shadowLg: 0 10px 25px rgba(0, 0, 0, 0.2);
+$shadowXl:
+  0px 8px 10px -5px rgba(0, 0, 0, 0.2),
+  0px 16px 24px 2px rgba(0, 0, 0, 0.14),
+  0px 6px 30px 5px rgba(0, 0, 0, 0.12);
+
+// Directional shadows
+$shadowRight: 2px 0 10px rgba(0, 0, 0, 0.1); // Side panels
+$shadowTop: 0 -4px 20px rgba(0, 0, 0, 0.15); // Bottom sheets
+
+// Focus shadow
+$boxShadowFocus: 0 0 0 3px rgba(0, 122, 255, 0.1);
+
+:export {
+  shadowSm: $shadowSm;
+  shadowMd: $shadowMd;
+  shadowLg: $shadowLg;
+  shadowRight: $shadowRight;
+  shadowTop: $shadowTop;
+  shadowFocus: $boxShadowFocus;
+}
