@@ -37,6 +37,7 @@
   border-bottom: 1px solid colors.$lightGray;
   flex-shrink: 0;
   user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .handleBtn {
