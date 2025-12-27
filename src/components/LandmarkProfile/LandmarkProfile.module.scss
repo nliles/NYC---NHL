@@ -16,7 +16,7 @@
   flex-direction: column;
   align-items: center;
   width: auto;
-  padding: 0 spacing.$space3xl;
+  padding: 0 spacing.$space16;
 }
 
 .content {
@@ -47,8 +47,8 @@
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
-  padding: 0 spacing.$space3xl;
-  padding-bottom: spacing.$space2xl;
+  padding: 0 spacing.$space16;
+  padding-bottom: spacing.$space12;
 }
 
 .description {
@@ -81,14 +81,14 @@
   max-height: 400px;
   height: auto;
   border: 2px solid colors.$vintageBrown;
-  margin-bottom: spacing.$spaceXxs;
+  margin-bottom: spacing.$space1;
   display: block;
   object-fit: contain;
 }
 
 .details {
   display: flex;
-  margin-top: spacing.$space2xl;
+  margin-top: spacing.$space12;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
@@ -97,7 +97,7 @@
 .location {
   display: flex;
   align-items: center;
-  margin-bottom: spacing.$spaceLg;
+  margin-bottom: spacing.$space8;
 }
 
 .learnMore {
@@ -105,17 +105,17 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.75rem;
+  padding: spacing.$space6;
   background-color: colors.$lightBlue;
   width: 100%;
 
   .link {
     display: flex;
     align-items: center;
-    margin-right: spacing.$space3xl;
+    margin-right: spacing.$space16;
     color: colors.$lightBlue;
     background-color: colors.$offWhite;
-    padding: spacing.$spaceSm spacing.$spaceLg;
+    padding: spacing.$space4 spacing.$space8;
     border-radius: borders.$radiusMd;
     text-decoration: none;
     font-weight: 500;
@@ -153,7 +153,7 @@
   height: 20px;
   border: 2px solid transparent;
   border-radius: borders.$radiusSm;
-  margin-right: spacing.$spaceSm;
+  margin-right: spacing.$space4;
   display: inline-block;
   position: relative;
   background: colors.$offWhite;
@@ -185,7 +185,7 @@
   margin-block-start: 0;
   margin-block-end: 0;
   background-color: colors.$lightGray2;
-  padding: spacing.$spaceMd spacing.$spaceLg;
+  padding: spacing.$space6 spacing.$space8;
   border-radius: borders.$radiusLg;
   border-left: 4px solid colors.$mauve;
 }
@@ -194,7 +194,7 @@
   font-family: typography.$fontFamilyHeading;
   font-size: typography.$fontSm;
   color: colors.$vintageBrown;
-  margin-bottom: spacing.$spaceXs;
+  margin-bottom: spacing.$space2;
 }
 
 .quoteAttribution {
@@ -213,13 +213,13 @@
 .bulletItem {
   display: flex;
   flex-direction: column;
-  padding: spacing.$spaceLg spacing.$spaceSm spacing.$spaceLg 0;
+  padding: spacing.$space8 spacing.$space4 spacing.$space8 0;
   margin: 0;
   border-bottom: 1px solid colors.$pearl;
 
   &:last-child {
     border-bottom: none;
-    padding-bottom: spacing.$space2xl;
+    padding-bottom: spacing.$space12;
   }
 }
 

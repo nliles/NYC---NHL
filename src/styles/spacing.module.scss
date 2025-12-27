@@ -1,20 +1,27 @@
-$spaceXxs: 0.125rem; // 2px
-$spaceXs: 0.25rem; // 4px
-$spaceSm: 0.5rem; // 8px
-$spaceMd: 0.75rem; // 12px
-$spaceLg: 1rem; // 16px
-$spaceXl: 1.25rem; // 20px
-$space2xl: 1.5rem; // 24px
-$space3xl: 2rem; // 32px
-$space4xl: 2.5rem; // 40px
+$space1: 0.125rem; // 2px
+$space2: 0.25rem; // 4px
+$space3: 0.375rem; // 6px
+$space4: 0.5rem; // 8px
+$space5: 0.625rem; // 10px
+$space6: 0.75rem; // 12px
+$space8: 1rem; // 16px
+$space10: 1.25rem; // 20px
+$space12: 1.5rem; // 24px
+$space16: 2rem; // 32px
+$space20: 2.5rem; // 40px
+$space22: 2.75rem; // 44px
 
 :export {
-  spaceXs: $spaceXs;
-  spaceSm: $spaceSm;
-  spaceMd: $spaceMd;
-  spaceLg: $spaceLg;
-  spaceXl: $spaceXl;
-  space2xl: $space2xl;
-  space3xl: $space3xl;
-  space4xl: $space4xl;
+  space1: $space1;
+  space2: $space2;
+  space3: $space3;
+  space4: $space4;
+  space5: $space5;
+  space6: $space6;
+  space8: $space8;
+  space10: $space10;
+  space12: $space12;
+  space16: $space16;
+  space20: $space20;
+  space22: $space22;
 }

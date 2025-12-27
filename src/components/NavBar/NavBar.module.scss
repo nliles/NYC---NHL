@@ -19,7 +19,7 @@
 .title {
   font-size: typography.$font2xl;
   margin: 0;
-  padding: 0.7rem;
+  padding: spacing.$space6;
   text-align: left;
   align-self: center;
 
@@ -30,7 +30,7 @@
 }
 
 .content {
-  margin: 0 spacing.$spaceLg;
+  margin: 0 spacing.$space8;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -42,21 +42,21 @@
 
 .rightContent {
   display: flex;
-  margin-right: spacing.$spaceLg;
+  margin-right: spacing.$space8;
 }
 
 .progress {
   display: flex;
   align-items: center;
-  margin-right: spacing.$spaceLg;
+  margin-right: spacing.$space8;
   font-size: typography.$fontLg;
 
   svg {
-    margin-right: spacing.$spaceSm;
+    margin-right: spacing.$space4;
   }
 
   &.mobile {
-    padding: spacing.$spaceSm;
+    padding: spacing.$space4;
 
     @media (min-width: 500px) {
       display: none;

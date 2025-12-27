@@ -15,7 +15,7 @@
   align-items: center;
   justify-content: center;
   z-index: 1000;
-  padding: spacing.$spaceXl;
+  padding: spacing.$space10;
   overflow-y: auto; // Add this
 }
 
@@ -57,7 +57,7 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
-  padding: spacing.$spaceXl;
+  padding: spacing.$space10;
   overflow-y: auto;
 
   > p {

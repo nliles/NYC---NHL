@@ -24,13 +24,13 @@
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  padding: 0 spacing.$space3xl;
-  padding-bottom: spacing.$spaceLg;
+  padding: 0 spacing.$space16;
+  padding-bottom: spacing.$space8;
 }
 
 .aboutSection {
   @media (max-width: 768px) {
-    margin: spacing.$spaceSm;
+    margin: spacing.$space4;
     max-height: 90vh;
   }
 
@@ -42,7 +42,7 @@
 
   p {
     line-height: 1.6;
-    margin-bottom: spacing.$spaceMd;
+    margin-bottom: spacing.$space6;
 
     &:last-child {
       margin-bottom: 0;
@@ -53,7 +53,7 @@
     color: colors.$grayBlue;
 
     img {
-      margin-right: spacing.$spaceXs;
+      margin-right: spacing.$space2;
     }
 
     &:hover {
@@ -64,7 +64,7 @@
 }
 
 .techItem:not(:last-child) {
-  padding-bottom: spacing.$spaceSm;
+  padding-bottom: spacing.$space4;
 }
 
 .connectLink {
@@ -73,6 +73,6 @@
   text-decoration: none;
 
   svg {
-    margin-right: spacing.$spaceXs;
+    margin-right: spacing.$space2;
   }
 }
