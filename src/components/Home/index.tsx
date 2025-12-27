@@ -1,11 +1,11 @@
 import styles from "./Home.module.scss";
-import empire from "../../assets/empire.jpg";
-import brooklyn from "../../assets/brooklyn.jpg";
-import trinity from "../../assets/trinity.jpg";
-import life from "../../assets/life.jpg";
-import woolworth from "../../assets/woolworth.jpg";
-import map from "../../assets/map.jpg";
-import stock from "../../assets/stock.jpg";
+import empire from "@/assets/img/empire.jpg";
+import brooklyn from "@/assets/img/brooklyn.jpg";
+import trinity from "@/assets/img/trinity.jpg";
+import life from "@/assets/img/life.jpg";
+import woolworth from "@/assets/img/woolworth.jpg";
+import map from "@/assets/img/map.jpg";
+import stock from "@/assets/img/stock.jpg";
 import { Link } from "react-router-dom";
 
 const Home = () => {

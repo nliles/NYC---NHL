@@ -1,4 +1,4 @@
-import linkedInIcon from "@/assets/linkedIn.png";
+import linkedInIcon from "@/assets/img/linkedIn.png";
 import styles from "./About.module.scss";
 
 const technologies = [
