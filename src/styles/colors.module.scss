@@ -18,6 +18,9 @@ $queens: #5a7a6a;
 $bronx: #6b5b7a;
 $statenIsland: #6e4040;
 
+// Box shadows
+$boxShadowFocus: 0 0 0 3px rgba(0, 122, 255, 0.1);
+
 :export {
   black: $black;
   cream: $cream;
@@ -36,4 +39,6 @@ $statenIsland: #6e4040;
   queens: $queens;
   bronx: $bronx;
   statenIsland: $statenIsland;
+  // box shadow
+  boxShadowFocus: $boxShadowFocus;
 }
