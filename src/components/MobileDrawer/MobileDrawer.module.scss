@@ -19,7 +19,7 @@
   touch-action: pan-y; // Only allow vertical panning
 
   &.isExpanded {
-    height: 60vh;
+    height: 80vh;
   }
 
   @media (min-width: 500px) {
