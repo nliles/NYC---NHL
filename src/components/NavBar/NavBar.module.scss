@@ -40,14 +40,6 @@
   }
 }
 
-.aboutContent {
-  @media (max-width: 768px) {
-    margin: 10px;
-    padding: spacing.$space2xl;
-    max-height: 90vh;
-  }
-}
-
 .rightContent {
   display: flex;
   margin-right: spacing.$spaceLg;
