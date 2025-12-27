@@ -16,7 +16,7 @@
   outline: none;
 
   &::placeholder {
-    font-family: "Karla", sans-serif;
+    font-family: typography.$fontFamilyBody
   }
 
   &:focus {
