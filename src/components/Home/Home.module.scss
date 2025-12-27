@@ -44,13 +44,12 @@
 
 .kicker {
   display: block;
-  font-size: 0.8rem;
+  font-size: typography.$fontSm;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   margin-bottom: 1.5rem;
 
   @media (max-width: 768px) {
-    font-size: 0.65rem;
     margin-bottom: 1rem;
   }
 }
@@ -94,7 +93,7 @@
   font-size: typography.$fontMd;
   background: transparent;
   color: colors.$whiteSmoke;
-  border: 1px solid rgba(244, 241, 236, 0.4);
+  border: 1px solid rgba(colors.$whiteSmoke, 0.4);
   border-radius: 6px;
   cursor: pointer;
   text-decoration: none;
@@ -105,7 +104,7 @@
   }
 
   @media (max-width: 768px) {
-    font-size: 0.9rem;
+    font-size: typography.$fontSm;
     padding: 12px 24px;
   }
 }
