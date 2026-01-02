@@ -234,7 +234,10 @@
     display: block;
     object-fit: cover;
     border-bottom: 5px solid colors.$black;
-    margin-bottom: -15px;
+
+    @media (min-width: 1024px) {
+      margin-bottom: -15px;
+    }
 
     &:last-child {
       border-bottom: none;
