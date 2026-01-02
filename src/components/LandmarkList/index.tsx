@@ -83,6 +83,13 @@ const LandmarkList = ({
         );
         if (attributionArchitectMatch) return true;
 
+        // Check 'landscapeArchitect' references
+        const landscapeArchitectMatch = landmark.landscapeArchitect?.some(
+          (a: any) =>
+            isSearchTermMatch(a.fields.name, formattedSearchTerm),
+        );
+        if (landscapeArchitectMatch) return true;
+
         return false;
       });
     }
