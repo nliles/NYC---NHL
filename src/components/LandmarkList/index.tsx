@@ -67,6 +67,14 @@ const LandmarkList = ({
         const nameMatch = isSearchTermMatch(landmark.name, formattedSearchTerm);
         if (nameMatch) return true;
 
+        // Check other names
+        const otherNamesMatch = landmark.otherNames
+          ?.split(",")
+          .some((name: string) =>
+            isSearchTermMatch(name.trim(), formattedSearchTerm),
+          );
+        if (otherNamesMatch) return true;
+
         // Check direct 'architect' references
         const architectMatch = landmark.architect?.some((a: any) =>
           isSearchTermMatch(a.fields.name, formattedSearchTerm),
@@ -85,8 +93,7 @@ const LandmarkList = ({
 
         // Check 'landscapeArchitect' references
         const landscapeArchitectMatch = landmark.landscapeArchitect?.some(
-          (a: any) =>
-            isSearchTermMatch(a.fields.name, formattedSearchTerm),
+          (a: any) => isSearchTermMatch(a.fields.name, formattedSearchTerm),
         );
         if (landscapeArchitectMatch) return true;
 
