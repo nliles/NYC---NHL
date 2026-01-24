@@ -219,7 +219,6 @@ const LandmarkProfile = ({
                         attribution={a.fields.attribution}
                         onClick={() => openModal(a.fields.resident.fields)}
                         isLastItem={index === residentAttribution.length - 1}
-                        useSemiColon
                       />
                     ))}
                   </div>
