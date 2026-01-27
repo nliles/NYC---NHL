@@ -112,8 +112,8 @@ const LandmarkProfile = ({
     { key: "Height", value: height },
     { key: "Size", value: size },
     { key: "Length", value: length },
-    { key: "Notable Features", value: notableFeatures },
     { key: "Significance", value: significance },
+    { key: "Notable Features", value: notableFeatures },
     { key: "Notable", value: notable },
     { key: "Current", value: current },
   ].filter((item) => item.value);
