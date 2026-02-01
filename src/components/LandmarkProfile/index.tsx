@@ -98,7 +98,7 @@ const LandmarkProfile = ({
     { key: "Other Names", value: otherNames },
     { key: "Founded", value: founded },
     { key: "Founder", value: founder },
-    { key: "Built", value: built },
+    { key: name === "African Burial Ground" ? "Used" : "Built", value: built },
     { key: "Builder", value: builder },
     { key: "Benefactor", value: benefactor },
     { key: "Commissioner", value: commissioner },
