@@ -1,13 +1,11 @@
-@use "../../styles/borders.module.scss";
-@use "../../styles/colors.module.scss";
-@use "../../styles/spacing.module.scss";
-@use "../../styles/typography.module.scss";
+// Removed all @use statements that imported external configurations
 
 .container {
   display: flex;
   height: 100vh;
   width: 100vw;
-  background-color: colors.$grayBlue;
+  background-color: #fdfbf7; // Warm cream background
+  font-family: sans-serif;
 
   @media (max-width: 1024px) {
     flex-direction: column;
@@ -21,45 +19,50 @@
 .leftPanel {
   width: 50%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column; 
+  height: 100%;
   box-sizing: border-box;
 
   @media (max-width: 1024px) {
     width: 100%;
-    padding: 60px spacing.$space20;
-  }
-
-  @media (max-width: 768px) {
-    padding: spacing.$space20 spacing.$space12;
+    height: auto;
   }
 }
 
+/* Top Cream Section */
 .textPanel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 40px;
   max-width: 520px;
-  color: colors.$whiteSmoke;
+  margin: 0 auto;
+  color: #2d4256; // Dark slate blue text color
 
   @media (max-width: 768px) {
     max-width: 100%;
+    padding: 40px 20px;
   }
 }
 
 .kicker {
   display: block;
-  font-size: typography.$fontSm;
+  font-size: 0.875rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  margin-bottom: spacing.$space12;
+  margin-bottom: 16px;
+  opacity: 0.8;
 
   @media (max-width: 768px) {
-    margin-bottom: spacing.$space8;
+    margin-bottom: 12px;
   }
 }
 
 .title {
   font-size: 3.2rem;
   line-height: 1.05;
-  margin-bottom: spacing.$space16;
+  margin-bottom: 24px;
   font-weight: 500;
 
   @media (max-width: 1024px) {
@@ -68,12 +71,12 @@
 
   @media (max-width: 768px) {
     font-size: 2.2rem;
-    margin-bottom: spacing.$space12;
+    margin-bottom: 16px;
   }
 }
 
 .paragraph {
-  margin-bottom: spacing.$space22;
+  margin-bottom: 32px;
   line-height: 1.7;
   font-size: 1.05rem;
   max-width: 460px;
@@ -83,164 +86,127 @@
   }
 
   @media (max-width: 768px) {
-    font-size: typography.$fontMd;
-    margin-bottom: spacing.$space16;
+    font-size: 1rem;
+    margin-bottom: 24px;
     max-width: 100%;
   }
 }
 
 .viewMapButton {
   display: inline-block;
-  padding: spacing.$space6 spacing.$space16;
-  font-size: typography.$fontMd;
+  align-self: flex-start;
+  padding: 10px 24px;
+  font-size: 1rem;
   background: transparent;
-  color: colors.$whiteSmoke;
-  border: 1px solid rgba(colors.$whiteSmoke, 0.4);
-  border-radius: borders.$radiusMd;
+  color: #2d4256;
+  border: 1px solid rgba(45, 66, 86, 0.4);
+  border-radius: 6px;
   cursor: pointer;
   text-decoration: none;
+  transition: all 0.2s ease;
 
   &:hover {
-    border-color: colors.$white;
-    color: colors.$white;
+    border-color: #2d4256;
+    background-color: rgba(45, 66, 86, 0.05);
   }
 
   @media (max-width: 768px) {
-    font-size: typography.$fontSm;
-    padding: spacing.$space6 spacing.$space12;
+    font-size: 0.875rem;
+    padding: 8px 16px;
   }
+}
+
+/* Bottom Dark Section */
+.quotePanel {
+  background-color: #2d4256; // Dark slate blue panel background
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 250px;
+  box-sizing: border-box;
+
+  @media (max-width: 1024px) {
+    min-height: auto;
+    padding: 40px 20px;
+  }
+}
+
+.quotePanelRight {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 265px;
+  background-color: #2d4256; // Dark slate blue panel background
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 250px;
+  box-sizing: border-box;
+
+  @media (max-width: 1024px) {
+    min-height: auto;
+    padding: 40px 20px;
+  }
+}
+
+.quoteText {
+  max-width: 520px;
+  margin: 0 auto 16px auto;
+  font-family: Georgia, serif; 
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #fdfbf7; // Cream text color for contrast
+  font-style: italic;
+}
+
+.quoteSource {
+  max-width: 520px;
+  margin: 0 auto;
+  width: 100%;
+  font-size: 0.875rem;
+  color: #fdfbf7;
+  opacity: 0.7;
 }
 
 /* RIGHT PANEL */
-.imageContainer {
+.rightPanel {
   width: 50%;
   display: flex;
-  background: colors.$black;
-  border-left: 5px solid colors.$black;
-  overflow-y: auto;
+  justify-content: center;
+  align-items: center;
+  background-color: #fdfbf7; // Matches the cream layout background
   height: 100vh;
+  position: relative;
 
   @media (max-width: 1024px) {
     width: 100%;
-    border-left: none;
-    border-top: 5px solid colors.$black;
     height: auto;
-  }
-
-  @media (max-width: 768px) {
-    width: 100%;
+    padding: 60px 0;
   }
 }
 
-/* LEFT COLUMN */
-.narrowColumn {
-  width: 33%;
+.imageWrapper {
+  position: relative;
   display: flex;
-  flex-direction: column;
-  border-right: 5px solid colors.$black;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   height: 100%;
-
-  @media (min-width: 1024px) and (max-width: 1450px) {
-    display: none;
-  }
-
-  @media (max-width: 768px) {
-    display: none;
-  }
 }
 
-.collageImage {
-  width: 100%;
+.singleImage {
+  max-width: 55%; // Bounded size so it remains smaller on the screen
+  max-height: 75vh;
+  width: auto;
+  height: auto;
   display: block;
-  border-bottom: 10px solid colors.$black;
-  flex: 1;
-  object-fit: cover;
-
-  &:first-child {
-    border-top: 5px solid colors.$black;
-  }
-
-  &:last-child {
-    border-bottom: none;
-  }
+  object-fit: contain;
+  z-index: 2;
 
   @media (max-width: 1024px) {
-    &:first-child {
-      border-top: none;
-    }
-    flex: none;
-  }
-
-  @media (max-width: 768px) {
-    border-bottom: 5px solid colors.$black;
-  }
-}
-
-/* RIGHT COLUMN */
-.wideGridColumn {
-  width: 67%;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-
-  @media (min-width: 1024px) and (max-width: 1450px) {
-    width: 100%;
-  }
-
-  @media (max-width: 768px) {
-    width: 100%;
-  }
-}
-
-/* STANDARD SPLIT ROW */
-.splitRow {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-
-  img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-  }
-
-  img:first-child {
-    border-right: 2.5px solid colors.$black;
-  }
-}
-
-/* MAP ROW */
-.mapRow {
-  display: grid;
-  grid-template-columns: 2fr;
-
-  img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-  }
-}
-
-/* COLUMN STACK */
-.columnStack {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-
-  img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-    border-bottom: 5px solid colors.$black;
-
-    @media (min-width: 1024px) {
-      margin-bottom: -15px;
-    }
-
-    &:last-child {
-      border-bottom: none;
-    }
+    max-width: 70%;
+    max-height: 60vh;
   }
 }

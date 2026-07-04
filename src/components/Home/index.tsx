@@ -1,11 +1,5 @@
 import styles from "./Home.module.scss";
 import empire from "@/assets/img/empire.jpg";
-import brooklyn from "@/assets/img/brooklyn.jpg";
-import trinity from "@/assets/img/trinity.jpg";
-import life from "@/assets/img/life.jpg";
-import woolworth from "@/assets/img/woolworth.jpg";
-import map from "@/assets/img/map.jpg";
-import stock from "@/assets/img/stock.jpg";
 import { Link } from "react-router-dom";
 
 const Home = () => {
@@ -13,6 +7,7 @@ const Home = () => {
     <div className={styles.container}>
       {/* LEFT PANEL */}
       <div className={styles.leftPanel}>
+        {/* Top Cream Section */}
         <div className={styles.textPanel}>
           <span className={styles.kicker}>New York City</span>
 
@@ -33,32 +28,31 @@ const Home = () => {
             View interactive map
           </Link>
         </div>
+
+        {/* Bottom Dark Navy Section */}
+        <div className={styles.quotePanel}>
+          <blockquote className={styles.quoteText}>
+            "My heart pounded with joy when I saw New York in the distance. It
+            was like coming out of the darkness when I left my town. I came to
+            the Big City where I sensed the freedom..."
+          </blockquote>
+          <cite className={styles.quoteSource}>
+            — L.D., letter to the Jewish Daily Forward advice column, 1915
+          </cite>
+        </div>
       </div>
 
       {/* RIGHT PANEL */}
-      <div className={styles.imageContainer}>
-        {/* LEFT NARROW COLUMN */}
-        <div className={styles.narrowColumn}>
-          <img src={brooklyn} className={styles.collageImage} />
-          <img src={life} className={styles.collageImage} />
-          <img src={stock} className={styles.collageImage} />
+      <div className={styles.rightPanel}>
+        <div className={styles.imageWrapper}>
+          <img 
+            src={empire} 
+            alt="Empire State Building vintage photograph" 
+            className={styles.singleImage} 
+          />
+          {/* Decorative ephemera / elements can be layered behind/around this wrapper later */}
         </div>
-
-        {/* RIGHT WIDE COLUMN */}
-        <div className={styles.wideGridColumn}>
-          <div className={styles.splitRow}>
-            <img src={empire} />
-            <img src={woolworth} />
-          </div>
-
-          <div className={styles.mapRow}>
-            <img src={map} />
-          </div>
-
-          <div className={styles.columnStack}>
-            <img src={trinity} />
-          </div>
-        </div>
+        <div className={styles.quotePanelRight}/>
       </div>
     </div>
   );
