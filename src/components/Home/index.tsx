@@ -44,6 +44,8 @@ const Home = () => {
       {/* RIGHT PANEL */}
       <div className={styles.rightPanel}>
         <div className={styles.imageWrapper}>
+        <div className={styles.outline} />
+        <div className={styles.year}>1931</div>
           <img 
             src={empire} 
             alt="Empire State Building vintage photograph" 
