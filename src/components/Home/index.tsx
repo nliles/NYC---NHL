@@ -1,6 +1,23 @@
 import styles from "./Home.module.scss";
 import empire from "@/assets/img/empire.jpg";
 import { Link } from "react-router-dom";
+import cn from "classnames";
+
+const Quote = ({ isDesktop }: { isDesktop?: boolean}) => (
+  <div className={cn(styles.quotePanel, {
+    [styles.isDesktop]: isDesktop,
+    [styles.isMobile]: !isDesktop,
+  })}>
+  <blockquote className={styles.quoteText}>
+    "My heart pounded with joy when I saw New York in the distance. It
+    was like coming out of the darkness when I left my town. I came to
+    the Big City where I sensed the freedom..."
+  </blockquote>
+  <cite className={styles.quoteSource}>
+    — L.D., letter to the Jewish Daily Forward advice column, 1915
+  </cite>
+</div>
+);
 
 const Home = () => {
   return (
@@ -27,18 +44,7 @@ const Home = () => {
             View interactive map
           </Link>
         </div>
-
-        {/* Bottom Dark Navy Section */}
-        <div className={styles.quotePanel}>
-          <blockquote className={styles.quoteText}>
-            "My heart pounded with joy when I saw New York in the distance. It
-            was like coming out of the darkness when I left my town. I came to
-            the Big City where I sensed the freedom..."
-          </blockquote>
-          <cite className={styles.quoteSource}>
-            — L.D., letter to the Jewish Daily Forward advice column, 1915
-          </cite>
-        </div>
+        <Quote isDesktop/>
       </div>
 
       {/* RIGHT PANEL */}
@@ -54,6 +60,7 @@ const Home = () => {
         </div>
         <div className={styles.quotePanelRight}/>
       </div>
+      <Quote />
     </div>
   );
 };
