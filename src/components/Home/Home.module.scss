@@ -80,7 +80,7 @@
     font-weight: 600;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     font-size: 1rem;
     margin-bottom: 24px;
     max-width: 100%;
@@ -113,27 +113,26 @@
 
 /* Bottom Dark Section */
 .quotePanel {
+  height: 265px;
   background-color: #2d4256; // Dark slate blue panel background
   padding: 50px 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 250px;
   box-sizing: border-box;
 
   @media (max-width: 1024px) {
-    min-height: auto;
     padding: 40px 20px;
   }
 
   &.isDesktop {
-    @media (max-width: 767px) {
+    @media (max-width: 1024px) {
       display: none;
     }
   }
 
   &.isMobile {
-    @media (min-width: 768px) {
+    @media (min-width: 1025px) {
       display: none;
     }
   }
@@ -183,6 +182,10 @@
   @media (max-width: 1024px) {
     width: 100%;
     height: auto;
+    padding-top: 60px;
+  }
+
+  @media (max-width: 767px) {
     padding: 60px 0;
   }
 }
@@ -190,7 +193,6 @@
 .imageWrapper {
   position: relative;
   margin-right: 32px;
-  width: 55%;
   z-index: 2;
 
   @media (max-width: 767px) {
