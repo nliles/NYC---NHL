@@ -51,12 +51,7 @@
   font-size: 0.875rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  margin-bottom: 16px;
   opacity: 0.8;
-
-  @media (max-width: 768px) {
-    margin-bottom: 12px;
-  }
 }
 
 .title {
@@ -210,3 +205,4 @@
     max-height: 60vh;
   }
 }
+

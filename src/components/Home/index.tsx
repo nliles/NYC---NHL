@@ -10,7 +10,6 @@ const Home = () => {
         {/* Top Cream Section */}
         <div className={styles.textPanel}>
           <span className={styles.kicker}>New York City</span>
-
           <h1 className={styles.title}>
             National Historic
             <br />
@@ -50,7 +49,6 @@ const Home = () => {
             alt="Empire State Building vintage photograph" 
             className={styles.singleImage} 
           />
-          {/* Decorative ephemera / elements can be layered behind/around this wrapper later */}
         </div>
         <div className={styles.quotePanelRight}/>
       </div>
