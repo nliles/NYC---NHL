@@ -206,7 +206,8 @@ const LandmarkProfile = ({
                 <li className={styles.bulletItem}>
                   <p className={styles.key}>
                     {pluralize({
-                      text: name === "The Players" ? "Notable Member" : "Resident",
+                      text:
+                        name === "The Players" ? "Notable Member" : "Resident",
                       count: residentAttribution?.length,
                     })}
                   </p>

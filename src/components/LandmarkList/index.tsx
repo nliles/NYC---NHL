@@ -9,11 +9,7 @@ import { Check } from "lucide-react";
 import colors from "@/styles/colors.module.scss";
 
 type Borough =
-  | "Manhattan"
-  | "Brooklyn"
-  | "Queens"
-  | "The Bronx"
-  | "Staten Island";
+  "Manhattan" | "Brooklyn" | "Queens" | "The Bronx" | "Staten Island";
 
 const boroughs: Borough[] = [
   "Manhattan",
