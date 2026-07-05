@@ -1,10 +1,11 @@
+@use "../../styles/colors.module.scss";
 @use "../../styles/typography.module.scss";
 
 .container {
   display: flex;
   height: 100vh;
   width: 100vw;
-  background-color: #fdfbf7; // Warm cream background
+  background-color: colors.$offWhite;
   font-family: sans-serif;
 
   @media (max-width: 1024px) {
@@ -38,7 +39,7 @@
   padding: 60px 40px;
   max-width: 520px;
   margin: 0 auto;
-  color: #2d4256; // Dark slate blue text color
+  color: colors.$navy;
 
   @media (max-width: 768px) {
     max-width: 100%;
@@ -93,7 +94,7 @@
   padding: 10px 24px;
   font-size: 1rem;
   background: transparent;
-  color: #2d4256;
+  color: colors.$navy;
   border: 1px solid rgba(45, 66, 86, 0.4);
   border-radius: 6px;
   cursor: pointer;
@@ -101,7 +102,7 @@
   transition: all 0.2s ease;
 
   &:hover {
-    border-color: #2d4256;
+    border-color: colors.$navy;
     background-color: rgba(45, 66, 86, 0.05);
   }
 
@@ -114,7 +115,7 @@
 /* Bottom Dark Section */
 .quotePanel {
   height: 265px;
-  background-color: #2d4256; // Dark slate blue panel background
+  background-color: colors.$navy;
   padding: 50px 40px;
   display: flex;
   flex-direction: column;
@@ -143,7 +144,7 @@
   bottom: 0;
   width: 100%;
   height: 265px;
-  background-color: #2d4256; // Dark slate blue panel background
+  background-color: colors.$navy;
 
   @media (max-width: 767px) {
     display: none;
@@ -156,7 +157,7 @@
   font-family: Georgia, serif;
   font-size: 1.25rem;
   line-height: 1.6;
-  color: #fdfbf7; // Cream text color for contrast
+  color: colors.$offWhite;
   font-style: italic;
 }
 
@@ -165,7 +166,7 @@
   margin: 0 auto;
   width: 100%;
   font-size: 0.875rem;
-  color: #fdfbf7;
+  color: colors.$offWhite;
   opacity: 0.7;
 }
 
@@ -175,7 +176,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fdfbf7; // Matches the cream layout background
+  background-color: colors.$offWhite;
   height: 100vh;
   position: relative;
 
@@ -207,8 +208,7 @@
   left: -32px;
   right: 32px;
   bottom: 32px;
-  border: 3px double #2d4256;
-  z-index: 1;
+  border: 3px double colors.$navy;
 }
 
 .singleImage {
@@ -222,15 +222,15 @@
 .year {
   font-family: typography.$fontFamilyHeading;
   position: absolute;
-  top: -60px;
+  top: -55px;
   left: 10%;
 
   padding: 0 12px;
-  background: #fdfbf7;
+  background: colors.$offWhite;
 
-  font-size: 2.5rem;
+  font-size: 2rem;
   line-height: 1;
   font-weight: 500;
-  color: #2d4256;
+  color: colors.$navy;
   z-index: 3;
 }
