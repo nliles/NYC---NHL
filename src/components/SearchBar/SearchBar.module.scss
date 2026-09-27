@@ -12,7 +12,7 @@
 .searchInput {
   box-sizing: border-box;
   width: 100%;
-  padding: spacing.$space5 spacing.$space20 spacing.$space5 spacing.$space6;
+  padding: spacing.$space5 spacing.$space20;
   border: 1px solid colors.$mediumGray;
   border-radius: borders.$radiusMd;
   font-size: typography.$fontMd;
@@ -43,4 +43,12 @@
   &:focus {
     outline-color: colors.$grayBlue;
   }
+}
+
+.searchIcon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
 }
