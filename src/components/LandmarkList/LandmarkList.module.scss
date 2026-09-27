@@ -7,7 +7,7 @@
 .leftPanel {
   margin-top: 50px;
   height: calc(100vh - 50px);
-  overflow: scroll;
+  overflow: hidden;
   min-width: 400px;
   max-width: 400px;
   background: colors.$white;
@@ -30,60 +30,16 @@
 }
 
 .panelHeader {
-  padding: spacing.$space10;
-  padding-bottom: 0;
-  border-bottom: 1px solid colors.$grayBlue;
-  flex-shrink: 0;
-}
-
-.landmarksList {
-  flex: 1;
-  min-height: 0;
-  overflow-y: auto;
-  padding: 0;
-  margin: 0;
-}
-
-.item {
-  all: unset;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex: 1;
-  min-width: 0;
-  text-align: left;
-  padding: spacing.$space4 spacing.$space12;
-  width: 100%;
+  padding: spacing.$space10 spacing.$space12 spacing.$space6;
   border-bottom: 1px solid colors.$pearl;
-
-  &.selected {
-    background-color: colors.$lightGray2;
-    border: 1px solid colors.$grayBlue;
-  }
-
-  &:focus {
-    outline-color: colors.$grayBlue;
-  }
-
-  &:hover {
-    background: colors.$lightGray2;
-    border-bottom: 1px solid colors.$lightGray;
-  }
-}
-
-.name {
-  margin: 0;
-  font-weight: 600;
-  margin-bottom: spacing.$space2;
-  font-size: typography.$fontSm;
+  flex-shrink: 0;
 }
 
 .boroughsContainer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: spacing.$space4;
-  margin: spacing.$space6 0 spacing.$space8 0;
+  margin: spacing.$space6 0;
 }
 
 .borough,
@@ -93,10 +49,17 @@
   padding: spacing.$space1 spacing.$space3;
   border-radius: borders.$radiusXl;
   font-size: typography.$fontXs;
+}
+
+.borough {
   margin-top: spacing.$space2;
   margin-right: spacing.$space1;
 }
 
+/*
+ * Preserve the existing borough colors for landmark badges
+ * and selected filter buttons.
+ */
 .borough,
 .boroughBtn.selected {
   &.manhattan {
@@ -121,34 +84,84 @@
 }
 
 .boroughBtn {
-  background: colors.$lightGray2;
+  background: colors.$white;
   color: colors.$grayBlue;
-  padding: spacing.$space2 spacing.$space3;
+  padding: spacing.$space2 spacing.$space6;
   border: 1px solid colors.$gray;
+  margin: 0;
+  cursor: pointer;
 
   &:focus {
     outline-color: colors.$grayBlue;
   }
 
-  &.selected {
-    color: colors.$white;
-
-    &:hover {
-      border: 1px solid colors.$black;
-    }
+  &:hover {
+    border-color: colors.$grayBlue;
   }
 
-  &:hover {
-    border: 1px solid colors.$black;
+  &.selected {
+    color: colors.$white;
+    border-color: transparent;
+
+    &:hover {
+      border-color: colors.$black;
+    }
   }
 }
 
 .resultsCount {
-  padding: spacing.$space6 0;
-  background: colors.$lightGray2;
-  border-bottom: 1px solid colors.$grayBlue;
-  font-size: typography.$fontSm;
+  padding-top: spacing.$space2;
+  font-size: typography.$fontXs;
   font-weight: 500;
   color: colors.$grayBlue;
-  text-align: center;
+}
+
+.landmarksList {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 0;
+  margin: 0;
+}
+
+.item {
+  all: unset;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+  text-align: left;
+  padding: spacing.$space4 spacing.$space12;
+  width: 100%;
+  border-bottom: 1px solid colors.$pearl;
+  cursor: pointer;
+
+  &.selected {
+    background-color: colors.$lightGray2;
+    border: 1px solid colors.$grayBlue;
+  }
+
+  &:focus {
+    outline-color: colors.$grayBlue;
+  }
+
+  &:hover {
+    background: colors.$lightGray2;
+    border-bottom: 1px solid colors.$lightGray;
+  }
+}
+
+.name {
+  margin: 0;
+  margin-bottom: spacing.$space2;
+  font-weight: 600;
+  font-size: typography.$fontSm;
+}
+
+.landmarkDetails {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
